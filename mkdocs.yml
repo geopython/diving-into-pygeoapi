@@ -1,0 +1,21 @@
+site_name: Diving into pygeoapi
+site_description: "pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards."
+site_author: GeoPython
+copyright: "&copy; 2021 GeoPython"
+site_url: https://GeoPython.org
+repo_url: https://github.com/geopython/diving-into-pygeoapi
+docs_dir: docs
+nav:
+    - Home: index.md
+
+# use_directory_urls: true
+
+theme:
+  name: material
+  palette:
+      # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
+      # Default is indigo (blue)
+      primary: light green
+
+plugins:
+    - search
