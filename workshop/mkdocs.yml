@@ -1,10 +1,10 @@
 site_name: Diving into pygeoapi
 site_description: "pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards."
-site_author: geopython
+site_author: The pygeoapi community
 copyright: "&copy; 2022 GeoPython"
-site_url: https://geopython.github.io
+site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
-docs_dir: docs
+docs_dir: workshop
 nav:
     - Home: index.md
 
