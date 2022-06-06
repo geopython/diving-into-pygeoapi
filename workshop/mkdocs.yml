@@ -4,7 +4,6 @@ site_author: The pygeoapi community
 copyright: "&copy; 2022 GeoPython"
 site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
-docs_dir: workshop
 nav:
     - Home: index.md
 
