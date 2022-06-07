@@ -1,3 +1,7 @@
+---
+title: Setup of the workshop environment
+---
+
 # Setup
 
 There are multiple options to follow the workshop. It is important to understand the limitations of each of the options:

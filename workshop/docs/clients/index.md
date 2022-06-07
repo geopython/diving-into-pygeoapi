@@ -1,3 +1,7 @@
+---
+title: Client access and development to interact with pygeoapi
+---
+
 # Client access and development to interact with pygeoapi
 
 Since pygeoapi provides standardised web services to data, a range of clients and software libraries are available to interact with web services provided by pygeoapi. In this paragraph we highlight some common client (libraries) and provide some exercises to try them out. The topic is split up by each of the supported OGC API standards.
@@ -14,7 +18,7 @@ QGIS was one of the first GIS Desktop clients to add support for OGC API Feature
 
 Besides OGC API Features, QGIS also supports OGC API Records via the Metasearch plugin.
 
-!!! exersize
+!!! question "Query OGC API Records"
 
     query a ogc-api-records catalogue (would be nice to be able to open a map service from a record, status?)
   - add a ogc-api features layer
@@ -26,7 +30,7 @@ OGC API Features
 OGC API Coverages
 - GDAL - https://gdal.org/drivers/raster/ogcapi.html
 
-!!! exersize
+!!! question "OGC API in GDAL"
 
   - connect to a ogc api features service (ogrinfo; ogr2ogr)
   - connect to a ogc api coverages service (gdalinfo)
@@ -48,7 +52,7 @@ OGC API Coverages
 - https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 - https://openlayers.org/en/latest/examples/ogc-map-tiles.html
 
-!!! exersize
+!!! question "OGC API in Openlayers"
 
   - Add a ogc-api-tiles layer; 
   - Add a ogc-api-Features layer;

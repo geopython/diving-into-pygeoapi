@@ -1,3 +1,7 @@
+---
+title: Standards
+---
+
 # Standards
 
 This topic highlights some of the supported standards in pygeoapi.
@@ -13,11 +17,11 @@ This topic highlights some of the supported standards in pygeoapi.
 
 Typical for all OGC API's is that the core functionality is kept minimal and extra functionalities are added using extensions. The /conformance endpoint indicates which standards and extensions are supported by a deployment of OGC API.
 
-!!! exersize
+!!! question "Use web browser to access OGC API"
 
     Use your web browser to navigate to http://demo.pygeoapi.org/master. A browser opens any OGC API in html due to the accept header sent by the browser: 'text/html'. On the right top corner you will notice the `json` link. The link adds the parameter `?f=json`, which is a mechanism of pygeoapi to override the accept header sent by the browser.
 
-!!! exersize 
+!!! question "Restfull client within a browser" 
 
     An common alternative approach to interact with API's, and to set for example the accept header, is to use a program like [Postman](https://www.postman.com/). Also there are browser plugins which enable you to define api requests interactively. For firefox download the plugin [poster](https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon). For Chrome and Edge use [Boomerang](https://microsoftedge.microsoft.com/addons/detail/boomerang-soap-rest-c/bhmdjpobkcdcompmlhiigoidknlgghfo?hl=en-US). In Boomerang you can create individual web requests, but also load the open api definition (Capabilities in WFS) and interact with any of the advertised endpoints. The open api definition of any OGC API is available at http://demo.pygeoapi.org/master/openapi.
 

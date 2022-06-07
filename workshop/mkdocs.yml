@@ -18,3 +18,8 @@ theme:
 
 plugins:
     - search
+markdown_extensions:
+    - meta
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences

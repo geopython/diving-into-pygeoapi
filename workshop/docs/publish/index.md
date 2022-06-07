@@ -1,3 +1,7 @@
+---
+title: Publish your first dataset with pygeoapi
+---
+
 # Publish your first dataset with pygeoapi
 
 In this exersize you are going to publish a vector dataset using pygeoapi. You can use any dataset or select one of the datasets available in the [/tests/data](https://github.com/geopython/pygeoapi/tree/master/tests/data) folder of the pygeoapi repository.

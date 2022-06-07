@@ -1,3 +1,7 @@
+---
+title: Diving into pygeoapi
+---
+
 # Diving into pygeoapi
 
 A 4 hour workshop to get familiarised with the pygeoapi software. A python package providing standardised web api's for querying, vizualising and processing spatial datasets.
