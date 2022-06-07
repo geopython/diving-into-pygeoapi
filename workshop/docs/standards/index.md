@@ -21,11 +21,15 @@ Typical for all OGC API's is that the core functionality is kept minimal and ext
 
     Use your web browser to navigate to http://demo.pygeoapi.org/master. A browser opens any OGC API in html due to the accept header sent by the browser: 'text/html'. On the right top corner you will notice the `json` link. The link adds the parameter `?f=json`, which is a mechanism of pygeoapi to override the accept header sent by the browser.
 
-!!! question "Restfull client within a browser" 
+## Open API
 
-    An common alternative approach to interact with API's, and to set for example the accept header, is to use a program like [Postman](https://www.postman.com/). Also there are browser plugins which enable you to define api requests interactively. For firefox download the plugin [poster](https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon). For Chrome and Edge use [Boomerang](https://microsoftedge.microsoft.com/addons/detail/boomerang-soap-rest-c/bhmdjpobkcdcompmlhiigoidknlgghfo?hl=en-US). In Boomerang you can create individual web requests, but also load the open api definition (Capabilities in WFS) and interact with any of the advertised endpoints. The open api definition of any OGC API is available at http://demo.pygeoapi.org/master/openapi.
+OGC API Common adopted the conventions of the [Open API initiative](https://www.openapis.org/about) as a starting point. Any Open API defines its structure in an Open Api Specification document. OGC API Common suggests this document is located at `/openapi`. With pygeoapi in a browser [this url](http://demo.pygeoapi.org/master/openapi) opens an interactive html page which facilitates to query the api. Append ?f=json to view the document in json. The Open API Specification (OAS) document indicates which endpoints are available in the service, which parameters it accepts and what type of responses can be expected. You can compare it to the GetCapabilities operation in the OWS standards. 
 
+!!! question "OpenAPI Specification parsing in a browser" 
 
+    A common approach to interact with Open API's is to use a program like [Postman](https://www.postman.com/). Also there are browser plugins which enable you to define api requests interactively within a browser. For firefox download the plugin [poster](https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon). For Chrome and Edge use [Boomerang](https://microsoftedge.microsoft.com/addons/detail/boomerang-soap-rest-c/bhmdjpobkcdcompmlhiigoidknlgghfo?hl=en-US). In Boomerang you can create individual web requests, but also load the open api specification document and interact with any of the advertised endpoints. 
+
+The OpenAPI community provides various tools, such as a validator for OAS documents or [generate code](https://swagger.io/tools/swagger-codegen/) as a starting point for client development.
 
 ## OGC API Features
 

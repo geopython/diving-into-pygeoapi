@@ -15,7 +15,7 @@ In this workshop we'll discuss the following topics:
 - Building blocks
 - [Publishing data](publish/index.md)
 - [Client access](clients/index.md)
-- HTML templating
+- [HTML templating](templates/index.md)
 - JSON-LD
 - Search engines 
 - Advanced topics
