@@ -23,3 +23,4 @@ In this workshop we'll discuss the following topics:
   - Multilingual support/i18n
   - Custom plugins
   - DevOps/GitOps
+  - [pygeoapi and INSPIRE](advanced/inspire.md)
