@@ -1,0 +1,224 @@
+lat,lon,codice,name-it,name-en,name-de,indirizzo,stato
+43.761080000000000,11.242213000000000,UAP-PiazzaCalza,Rete Piazza della Calza,Network in Piazza della Calza,Netzwerk auf der Piazza della Calza,Piazza della Calza,Attivo
+43.781111000000000,11.222869000000000,Cisco-IppodromoRistorante-L,Cascine-Ippodromo,Cascine-Hippodrome,Cascine-Hippodrom,Via delle Cascine,Attivo
+43.765795000000000,11.270192000000000,comuPercoriGiraldi-r29587_bulletM2,Giardino L.no Pecori Giraldi,Garden L.no Pecori Giraldi,Garten L.no Pecori Giraldi,L.no Pecori Giraldi,Attivo
+43.798229000000000,11.252890000000000,Universita,Universit Firenze - Collegamento Layer2,University of Florence - Layer2 connection,Universität Florenz - Layer2-Verbindung,Via delle Gore 2c,Attivo
+43.798227000000000,11.218972000000000,UAP-Guidoni-Elettorale,Rete Ufficio Elettorale - Guidoni,Electoral Office Network - Guidoni,Wahlbüronetzwerk - Guidoni,Viale Guidoni 174,Attivo
+43.789318000000000,11.200353000000000,Cisco-Cascine03-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.779441000000000,11.286096000000000,comuBaseballGradinate-r29587_picoM2,Stadio Baseball Campo di Marte,Field of Mars Baseball Stadium,Field of Mars Baseballstadion,"V.le Fanti, 18",Attivo
+43.784149000000000,11.210975000000000,Cisco-Cascine17-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.774176000000000,11.250061000000000,Cisco-SMNovella-Avelli-MAP,Stazione SM Novella,SM Novella station,SM-Novella-Station,P.za SM Novella,Inattivo
+43.780428000000000,11.218994000000000,Cisco-Cascine27-RAP(chiosco-pwr),Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.771301000000000,11.262109000000000,ccomIGhibellini-r29587_picoM2,I Ghibellini,The Ghibellines,Die Ghibellinen,Via San Pier Maggiore 8,NonConosciuto
+43.778969000000000,11.223062000000000,Cisco-Cascine30-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.771464000000000,11.262437000000000,comuVerdiSalvemini-r29587_picoM2,P.zza Salvemini,P.zza Salvemini,P.zza Salvemini,P.zza Salvemini,Attivo
+43.782452000000000,11.216456000000000,Cisco-CascinePratoQuercione-MAP2,Cascine-Quercione,Cascine-Quercione,Cascine-Quercione,Piazzale Cascine 12,Inattivo
+43.794090000000000,11.171358000000000,paasBrozzi-r29587_picoM2,Circolo di Brozzi,Circle of Brozzi,Zirkel von Brozzi,Via di Brozzi 312,Inattivo
+43.798456000000000,11.216157000000000,UAP-Biblio-Buonarroti,Rete Biblioteca Buonarroti - Guidoni,Buonarroti Library Network - Guidoni,Buonarroti-Bibliotheksnetzwerk - Guidoni,V.le Guidoni 188 (Pozzolini),Attivo
+43.809198000000000,11.233678000000000,## Magazzino,## Magazzino,## Warehouse,## Lagerhaus,## Magazzino,Attivo
+43.769433000000000,11.267663000000000,comuMurateSucEsterno-r29587_locoM2,Le Murate,Le Murate,Le Murate,P.za delle Murate,Attivo
+43.751235000000000,11.305482000000000,UAP-Q3-Tagliamento,Rete Quartiere 3 - Sorgane,District 3 Network - Sorgane,Distrikt 3 Netzwerk - Sorgane,Via Tagliamento 4,Attivo
+43.788037000000000,11.206299000000000,Cisco-CascineAnfiteatro-L,Ascine-Anfiteatro,Ascine-Amphitheater,Ascine-Amphitheater,Piazzale Cascine 12,Attivo
+43.773652000000000,11.250205000000000,tobedefined,Il Grillo,The Grillo,Der Grillo,P.zza Santa Maria Novella,NonConosciuto
+43.768070000000000,11.253258000000000,comuPonteVecchioCentrale-r29587_picoM2,Ponte Vecchio,Old Bridge,Alte Brücke,Ponte Vecchio,Inattivo
+43.778853000000000,11.237609000000000,parcLeopolda-r29587_rspro,Parcheggio Porta al Prato / Leopolda,Porta al Prato / Leopolda car park,Parkplatz Porta al Prato / Leopolda,P.za Porta al Prato,Attivo
+43.780979000000000,11.246678000000000,parcFortezza-r29587_rspro,Parcheggio Fortezza Fiera,Fortezza Fiera car park,Parkplatz Fortezza Fiera,Fortezza da Basso,Attivo
+43.777361000000000,11.237486000000000,Cisco-ParcoMusica-RAP1,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.788078000000000,11.202828000000000,Cisco-Cascine06-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.771495000000000,11.262830000000000,paasGiovPietrap-r29587_picoM2,Centro giovani Java,Java Youth Center,Java-Jugendzentrum,Via Pietrapiana,Attivo
+43.770272000000000,11.285742000000000,MaternaDelSarto-r29587_picoM2,Scuola Materna Andrea Del Sarto,Andrea Del Sarto Nursery School,Andrea-Del-Sarto-Kindergarten,Via di San Salvi,Attivo
+43.783477000000000,11.212494000000000,Cisco-Cascine19-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.772823000000000,11.255335000000000,comuDuomoBigallo-r29587_bulletM2,Duomo,Duomo,Dom,P.za Duomo,Attivo
+43.768156000000000,11.243739000000000,comuCappellaBrancacci-r29587_bulletM2,Cappella Brancacci,Brancacci Chapel,Brancacci-Kapelle,P.za del Carmine,Attivo
+43.783767000000000,11.216319000000000,Cisco-CascinePratoQuercione-RAP,Cascine-Quercione,Cascine-Quercione,Cascine-Quercione,Piazzale Cascine 12,Attivo
+43.770004000000000,11.254240000000000,UAP-MercatoPorcellino,Rete Mercato del Porcellino,Pig Market Network,Schweinemarkt-Netzwerk,Loggia del Porcellino,Attivo
+43.779935000000000,11.253873000000000,UAP-PiazzaIndipendenza,Rete Piazza Indipendenza,Independence Square Network,Netzwerk des Unabhängigkeitsplatzes,Piazza Indipendenza,Attivo
+43.809190000000000,11.233969000000000,UAP-PiazzaVittoria,Rete Piazza della Vittoria,Victory Square Network,Victory Square Netzwerk,Piazza della Vittoria,Attivo
+43.779034000000000,11.215062000000000,biblioIsolottoEsterno-r29587_picoM2,Biblioteca Isolotto,Isolotto Library,Isolotto-Bibliothek,V.le dei Pini 54,Attivo
+43.776049000000000,11.260640000000000,UAP-SSAnnunziata,Rete SS.Annunziata,Network of the Holy Annunciation,Netzwerk der Heiligen Verkündigung,Piazza SS. Annunziata,Attivo
+43.770391000000000,11.249855000000000,uffParioneFrontOffice-r29587_bulletM2,Front Office Pian T.,Front Office Pian T.,Rezeption Pian T.,"Via del Parione, 7",Inattivo
+43.770187000000000,11.252710000000000,ccomLaBussolaEnanStemi-r29587_picoM2,La Bussola,The compass,Der Kompass,Via Porta Rossa 58R,NonConosciuto
+43.785879000000000,11.264123000000000,parcParterre-r29587_rspro,Parcheggio Parterre,Parterre parking,Parterre-Parkplatz,Via Madonna della Tosse,Attivo
+43.768249000000000,11.261440000000000,comuInfoBorgoSCroce-r29587_bulletM2,Infopoint Borgo S. Croce,Infopoint Borgo S. Croce,Infopunkt Borgo S. Croce,Borgo S. Croce,Inattivo
+43.766973000000000,11.247512000000000,UAP-SSpirito,Rete Santo Spirito,Holy Spirit Network,Netzwerk Heiliger Geist,Piazza Santo Spirito,Attivo
+43.762948000000000,11.263085000000000,comuGiardinoRoseEsterno-r29587_picoM2,Giardino delle Rose,Rose Garden,Rosengarten,V.le Poggi 2,Attivo
+43.780060000000000,11.220363000000000,Cisco-Cascine28-RAP-(pwr),Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.784461000000000,11.210267000000000,Cisco-Cascine16-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.769218000000000,11.260606000000000,UAP-Q1-SCroce,Rete Quartiere 1 - Santa Croce,District Network 1 - Santa Croce,Bezirksnetz 1 - Santa Croce,Piazza Santa Croce 1,Attivo
+43.767643000000000,11.255748000000000,comuMuseoGalileoLungarno-r29587_locoM2,Museo Storia della Scienza G. Galilei,Museum of the History of Science G. Galilei,Museum für Wissenschaftsgeschichte G. Galilei,P.za dei Giudici 1,Attivo
+43.770659000000000,11.267711000000000,UAP-Annigoni,Rete Annigoni Mercato Pulci,Annigoni Flea Market Network,Annigoni-Flohmarkt-Netzwerk,Piazza Annigoni,Attivo
+43.773229000000000,11.261515000000000,teatroPergola-r29587_picoM2,Teatro della Pergola,Teatro della Pergola,Teatro della Pergola,Via della Pergola,Inattivo
+43.780556000000000,11.237474000000000,biblioCarraEsterno-r29587_picoM2,Biblioteca De Andre',De Andre 'Library,De Andre 'Bibliothek,Via delle Carra 2,Inattivo
+43.771708000000000,11.240199000000000,comuLnoSRosaGiardino-r29587_locoM2,Giardino L.no Santa Rosa,Garden L.no Santa Rosa,Garten L.no Santa Rosa,L.no Santa Rosa,Attivo
+43.778356000000000,11.236103000000000,Cisco-ParcoMusica-RAP3(pwr),ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.770194000000000,11.261547000000000,comueVerdiGhibellina-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Inattivo
+43.767684000000000,11.256071000000000,comuMuseoGalileoGiudici-r29587_locoM2,Museo Storia della Scienza G. Galilei,Museum of the History of Science G. Galilei,Museum für Wissenschaftsgeschichte G. Galilei,P.za dei Giudici 1,Attivo
+43.777823000000000,11.235418000000000,UAP-ParcoMusica-Sferisterio,Rete ParcoMusica-Sferisterio,ParcoMusica-Sferisterio Network,ParcoMusica-Sferisterio-Netzwerk,Viale F.lli Rosselli,Attivo
+43.791788000000000,11.269500000000000,comuFaentinaGiovani-r29587_picoM2,Spazio Giovani Cure,Youth Cure Space,Raum für Jugendheilung,Via Faentina 145,Inattivo
+43.778450000000000,11.235367000000000,Cisco-ParcoMusica-MAP7(Foyer),ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.783342000000000,11.218835000000000,UAP-Cascine-CentroVisite,Rete Centro Visite - Cascine,Visitor Center Network - Cascine,Besucherzentrumsnetzwerk - Cascine,P.le delle Cascine,Attivo
+43.784743000000000,11.236371000000000,PaasSalaGiallaVFontana-r29587_picoM2,Sala Gialla del Centro Giovani,Yellow Room of the Youth Center,Gelbes Zimmer des Jugendzentrums,"Via Felice Fontana, 22",Attivo
+43.755830000000000,11.306211000000000,parcEuropa-r29587_rspro,Parcheggio Europa,Europe parking,Parken in Europa,V.le Europa,Inattivo
+43.778360000000000,11.272103000000000,vigiliFuocoFarina-r29587_rspro,Vigili del Fuoco La Farina,La Farina Fire Brigade,Feuerwehr La Farina,Via La Farina 18,Attivo
+43.770728000000000,11.228325000000000,limonaiaVillaStrozziInt-r29587_bulletM2,Limonaia Villa Strozzi,Limonaia Villa Strozzi,Limonaia Villa Strozzi,Via Pisana 77,Attivo
+43.796385000000000,11.204348000000000,UAP-Q5-Pallini,Rete Quartiere 5 - Rifredi/Novoli,District Network 5 - Rifredi / Novoli,Distrikt 5 Netzwerk - Rifredi / Novoli,Via Baracca 150 (Pallini),Attivo
+43.782142000000000,11.221264000000000,Cisco-IppodromoPesa-L,Cascine-Ippodromo,Cascine-Hippodrome,Cascine-Hippodrom,Via delle Cascine,Attivo
+43.772539000000000,11.260262000000000,UAP-Biblio-Oblate,Rete Biblioteca Oblate - Oriuolo,Oblate Library Network - Oriuolo,Bibliotheksnetzwerk der Oblaten - Oriuolo,Via dell'Oriuolo 24,Attivo
+43.778590000000000,11.232101000000000,Cisco-Velodromo-MAP3,Velodromo,Velodrome,Velodrom,V.le fratelli Rosselli,Inattivo
+43.795826000000000,11.225179000000000,UAP-PalazzoGiustizia,Rete Palazzo Giustizia - Guidoni,Palazzo Giustizia Network - Guidoni,Netzwerk Palazzo Giustizia - Guidoni,Viale Guidoni,Attivo
+43.760110000000000,11.279302000000000,uffRuscianoCortile-r29587_picoM2,Cortile interno sopra porta assessore,Inner courtyard above the councilor's door,Innenhof über der Tür des Ratsherrn,"Via Fortini, 37",Attivo
+43.770599000000000,11.249968000000000,UffParioneCorridoioP1-r29587_picoM2,Corridoio 1P accanto Usciere,Corridor 1P next to Usher,Korridor 1P neben Usher,Via del Parione 7,Attivo
+43.766876000000000,11.262043000000000,UAP-Cavalleggeri,Rete Piazza Cavalleggeri,Cavalleggeri Square Network,Netzwerk der Cavalleggeri-Plätze,Piazza Cavalleggeri,Attivo
+43.803826000000000,11.246188000000000,Careggi,Ospedale Careggi - Collegamento Layer 2,Careggi Hospital - Layer 2 link,Careggi-Krankenhaus - Layer-2-Verbindung,Largo Brambilla 3,Attivo
+43.781976000000000,11.220282000000000,Cisco-Cascine-MAP-TLC-DelRe,Cascine-Del Re,Cascine-Del Re,Cascine-Del Re,Piazzale Cascine 12,Attivo
+43.772869000000000,11.265405000000000,ristorante-Ruth-r29587_locoM2,Ristorante Ruth,Ruth restaurant,Rut Restaurant,Via Carlo Farini 2a,NonConosciuto
+43.780864000000000,11.223019000000000,Cisco-IppodromoRegia-RAP,Cascine-Ippodromo,Cascine-Hippodrome,Cascine-Hippodrom,Via delle Cascine,Attivo
+43.769156000000000,11.268276000000000,Cisco-MurateCarceri-MAP,Le Murate,Le Murate,Le Murate,P.za Madonna Neve,Attivo
+43.758916000000000,11.284805000000000,UAP-EliaDallaCosta,Rete Elia dalla Costa,Elia dalla Costa network,Elia dalla Costa-Netzwerk,Piazza Elia dalla Costa,Attivo
+43.769747000000000,11.270772000000000,parcBeccaria-r29587_rspro,Parcheggio Beccaria,Beccaria parking,Beccaria-Parkplatz,P.za Beccaria,Attivo
+43.778111000000000,11.236628000000000,Cisco-ParcoMusica-MAP5,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.786237000000000,11.225677000000000,comeTeatroPuccini-r29587_bulletM2,Teatro Puccini,Puccini Theater,Puccini-Theater,Via delle Cascine 41,Attivo
+43.767697000000000,11.242696000000000,PaasLaFenice--r29587_bulletM2,Paas la Fenice presso Albergo popolare,Paas la Fenice at a popular hotel,Paas la Fenice in einem beliebten Hotel,"Via Leone, 35",Attivo
+43.781029000000000,11.218001000000000,Cisco-Cascine26-RAP(Kennedy),Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.768959000000000,11.262271000000000,comuSCroceDante-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Attivo
+43.778477000000000,11.224399000000000,Cisco-Cascine31-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.765073000000000,11.258442000000000,comuMuseoBardini-r29587_bulletM2,Museo Bardini,Bardini Museum,Bardini-Museum,Via dei Renai 37,Attivo
+43.764833000000000,11.265865000000000,comuPoggiSNiccolo-r29587_bulletM2,P.za Poggi San Niccol,P.za Poggi San Niccol,P.za Poggi San Niccol,P.za Poggi,Attivo
+43.795638000000000,11.225565000000000,comuPalaGiustiziaMaxiAula-r29587_locoM2,Palazzo di Giustizia,Justice palace,Justizpalast,V.le Guidoni,Attivo
+43.809207000000000,11.233678000000000,##Magazzino,##Magazzino,##Warehouse,##Lagerhaus,##Magazzino,Attivo
+43.768947000000000,11.268674000000000,Cisco-MurateNeve-RAP1,Le Murate,Le Murate,Le Murate,P.za Madonna Neve,Attivo
+43.779404000000000,11.224066000000000,comuPiscinaPavoniereSX-r29587_locoM2,Piscina Pavoniere,Peacock pool,Pfauenbecken,V.le della Catena 2,Attivo
+43.768752000000000,11.246435000000000,paasIreos-r29587_bulletM2,PAAS Associazione IREOS,PAAS IREOS Association,PAAS IREOS-Vereinigung,Via dei Serragli 3,Inattivo
+43.770124000000000,11.280632000000000,UAP-Q2-Alberti,Rete Quartiere 2 - Alberti,District Network 2 - Alberti,Bezirksnetz 2 - Alberti,Piazza Alberti 1/a,Attivo
+43.827048000000000,11.286568000000000,comuTrespianoPratiche-r29587_picoM2,Cimitero Trespiano,Trespiano Cemetery,Trespiano-Friedhof,Via Bolognese 449,Attivo
+43.776458000000000,11.231364000000000,Cisco-Cascine-36-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.777629000000000,11.227206000000000,Cisco-Cascine33-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.771301000000000,11.252715000000000,ccomDomesco-r29587_picoM2,Domesco,I ask,Ich frage,Via Faenza 2a,NonConosciuto
+43.777287000000000,11.228452000000000,Cisco-Cascine34-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.779480000000000,11.221733000000000,Cisco-Cascine29-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.774615000000000,11.254988000000000,comuSLorenzoXimeniano-r29587_locoM2,P.za S. Lorenzo,P.za S. Lorenzo,P.za S. Lorenzo,P.za S. Lorenzo,Attivo
+43.776812000000000,11.230128000000000,Cisco-Cascine35-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.775685000000000,11.240381000000000,elementareNencioni-r29587_picoM2,Scuola Elementare Nencioni,Nencioni Elementary School,Nencioni-Grundschule,Via Montebello 68,Attivo
+43.772663000000000,11.219385000000000,UAP-Dosio-Legnaia,Rete Campo Sportivo Legnaia,Woodshed Sports Field Network,Woodshed-Sportplatz-Netzwerk,Via Dosio - Campo Legnaia,Attivo
+43.781698000000000,11.216337000000000,Cisco-Cascine24-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.785317000000000,11.262945000000000,UAP-Parterre,Rete PAD Parterre - Libert�,PAD Parterre Network - Freedom,PAD Parterre Netzwerk - Freiheit,Piazza Liberta' 12 (Parterre),Attivo
+43.768881000000000,11.298319000000000,EXFila-Gignoro_PT-BAR_r29587_picoM2,Centro Commerciale (ex-Fila),Shopping Center (ex-Fila),Einkaufszentrum (ex-Fila),Via Leto Casini 11,Inattivo
+43.769198000000000,11.268347000000000,Cisco-MadonnaNeve-Vetrate-L,Sala Vetrate,Stained glass room,Buntglasraum,Piazza Madonna della Neve,Attivo
+43.771766000000000,11.254360000000000,comuRepubblica-r29587_picoM2,P.za Repubblica,P.za Repubblica,P.za Repubblica,P.za Repubblica,Inattivo
+43.769361000000000,11.268150000000000,Cisco-Agnolo-ANCI-L,Saloncino ANCI - EcoEquo,Saloncino ANCI - EcoEquo,Saloncino ANCI - EcoEquo,Via dell'Agnolo,Attivo
+43.775485000000000,11.256218000000000,infoPrvViaCavour-r29587_locoM2,Infopoint Provincia,Infopoint Provincia,Infopoint Provinz,Via Cavour,Attivo
+43.770129000000000,11.254462000000000,comuMercatoNuovoCalimala-r29587_picoM2,Loggia del Porcellino P.za Mercato Nuovo,Loggia del Porcellino P.za New Market,Loggia del Porcellino P.za Neuer Markt,P.za Mercato Nuovo,Attivo
+43.760110000000000,11.279302000000000,ComuRuscianoBrogioni-r29587_bulletM2,Direzione Ambiente,Environment Department,Umweltabteilung,Via Fortini 37,Attivo
+43.777889000000000,11.235639000000000,Cisco-ParcoMusica-MAP4,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.787755000000000,11.203492000000000,Cisco-Cascine07-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.735887000000000,11.224978000000000,comuPzzaAcciaiuoliGalluzzo-r29587_rspro,Piazza Acciaiuoli - Galluzzo,Piazza Acciaiuoli - Galluzzo,Piazza Acciaiuoli - Galluzzo,Piazza Acciaiuoli - Galluzzo,Inattivo
+43.776700000000000,11.284530000000000,UAP-PiscinaCostoli,Rete Piscina Costoli,Costoli Swimming Pool Network,Costoli-Schwimmbadnetzwerk,P.zza Berlinguer,Attivo
+43.784545000000000,11.187874000000000,vigiliFuocoIsolotto-r29587_rspro,Sede Comando VVFF ISOLOTTO,Headquarters VVFF ISOLOTTO,Hauptsitz VVFF ISOLOTTO,Viuzzo dei Sarti,Attivo
+43.770728000000000,11.228325000000000,limonaiaVillaStrozziEst-r29587_bulletM2,Limonaia Villa Strozzi,Limonaia Villa Strozzi,Limonaia Villa Strozzi,Via Pisana 77,Attivo
+43.773525000000000,11.255492000000000,comuDuomoTlcMartelli-r29587_locoM2,P.za Duomo Via Martelli,P.za Duomo Via Martelli,P.za Dom Via Martelli,P.za Duomo,Inattivo
+43.766844000000000,11.263696000000000,biblioRagazziEsterno-r29587_picoM2,Biblioteca Ragazzi,Boys Library,Jungenbibliothek,Via Tripoli 34,Attivo
+43.772816000000000,11.227324000000000,paasBronzino-r29587_picoM2,Circolo 25 Aprile,Circle April 25,Kreisen Sie den 25. April ein,Via Bronzino 117,Attivo
+43.776874000000000,11.223517000000000,UAP-Montagnola,Rete Giardini Montagnola,Montagnola Gardens Network,Netzwerk der Montagnola-Gärten,Via Montorsoli,Attivo
+43.790047000000000,11.171588000000000,UAP-Lazio-Piagge,Rete Stazione Piagge,Piagge Station Network,Piagge-Stationsnetz,Via Lazio - Stazione Piagge,Attivo
+43.767123000000000,11.261073000000000,comuTintoriMagliabechi-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Attivo
+43.786256000000000,11.206460000000000,Cisco-Cascine11-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.783818000000000,11.211722000000000,Cisco-Cascine18-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.773124000000000,11.176500000000000,comuCanileComunale-r29587_rspro,Sede Canile Comunale,Municipal Kennel Headquarters,Städtisches Zwingerhauptquartier,Viuzzo del Pantanino 11,Attivo
+43.775167000000000,11.249010000000000,comuInfoStazione-P1-r29587_picoM2,InfoPoint Stazione - Piano 1,InfoPoint Station - Floor 1,InfoPoint-Station - Etage 1,P.zza Stazione,Attivo
+43.779400000000000,11.257945000000000,ccomFlorensFoodCompSrl-r29587_locoM2,Florence Food Comp,Florence Food Comp,Florence Food Comp,Via San Gallo 42,NonConosciuto
+43.774640000000000,11.255762000000000,comuPilomatDuomo-r29587_locoM2,P.za Duomo,P.za Duomo,P.za Duomo,P.za Duomo,Inattivo
+43.775752000000000,11.205524000000000,UAP-Q4-Vogel,Rete Quartiere 4 - Isolotto,District Network 4 - Isolotto,Bezirksnetz 4 - Isolotto,Via delle Torri 23 (Vogel),Attivo
+43.769383000000000,11.281839000000000,parcAlberti-r29587_rspro,Parcheggio Alberti,Alberti parking,Alberti-Parkplatz,P.za Alberti,Attivo
+43.769736000000000,11.274587000000000,PAAS-CentroSocialeBellarivaS-Salvi-r29587_picoM2,Centro Sociale Bellariva San Salvi,Bellariva San Salvi Social Center,Sozialzentrum Bellariva San Salvi,"Via Luna, 16",Inattivo
+43.775699000000000,11.233786000000000,Cisco-Cascine38-RAP(pwr),Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.788474000000000,11.202069000000000,Cisco-Cascine05-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.783137000000000,11.213234000000000,Cisco-Cascine20-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.776570000000000,11.253153000000000,UAP-MercatoCentrale,Rete MercatoCentrale,Central Market Network,Zentrales Marktnetz,P.zza Mercato Centrale,Attivo
+43.767673000000000,11.267112000000000,giarInveMontedomi-r29587_picoM2,Sede Montedomini,Montedomini headquarters,Montedomini-Hauptquartier,Via de Malcontenti 6,Inattivo
+43.781380000000000,11.217090000000000,Cisco-Cascine25-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.757108000000000,11.289790000000000,UAP-GinoBartali,Rete Gino Bartali,Gino Bartali network,Gino Bartali-Netzwerk,Piazza Gino Bartali,Attivo
+43.772873000000000,11.254394000000000,comuDuomoSGiovanni-r29587_bulletM2,P.za Duomo P.za S. Giovanni,P.za Duomo P.za S. Giovanni,P.za Dom P.za S. Giovanni,P.za S.Giovanni,Attivo
+43.768881000000000,11.298319000000000,paasExFilaPT-r29587_picoM2,Centro Commerciale (ex-Fila ? Asilo ? Bar),Shopping Center (ex-Fila? Asilo? Bar),Einkaufszentrum (ex-Fila? Asilo? Bar),Via Leto Casini 11,Inattivo
+43.769018000000000,11.269096000000000,Cisco-MurateOttagonale-L,Le Murate,Le Murate,Le Murate,P.za Madonna Neve,Attivo
+43.777414000000000,11.236831000000000,Cisco-ParcoMusica-RAP2,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.738938000000000,11.224129000000000,biblioGalluzzoEsternoP-r29587_picoM2,Biblioteca del Galluzzo,Galluzzo Library,Galluzzo-Bibliothek,"Via Senese, 206",Attivo
+43.767632000000000,11.259397000000000,comuTintoriBenci-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Attivo
+43.778528000000000,11.233498000000000,Cisco-Velodromo-RAP,Velodromo,Velodrome,Velodrom,V.le fratelli Rosselli,Attivo
+43.777856000000000,11.237147000000000,Cisco-ParcoMusica-MAP1,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.775316000000000,11.259301000000000,comuServiAnnunziata-r29587_locoM2,P.za SS Annunziata,P.za SS Annunziata,P.za SS Annunziata,Via de' Servi,Attivo
+43.785155000000000,11.208722000000000,Cisco-Cascine14-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.764955000000000,11.260311000000000,comuRenaiDemidoff-r29587_bulletM2,Giardino P.za Demidoff,P.za Demidoff Garden,P.za Demidoff Garten,P.za Demidoff,Inattivo
+43.775814000000000,11.248359000000000,parcSmarianovella-r29587_rspro,Parcheggio Santa Maria Novella,Santa Maria Novella car park,Parkplatz Santa Maria Novella,P.za Stazione,Attivo
+43.778088000000000,11.232961000000000,Cisco-Velodromo-MAP2,Velodromo,Velodrome,Velodrom,V.le fratelli Rosselli,Inattivo
+43.764857000000000,11.265260000000000,UAP-Poggi-SNiccolo,Rete Piazza Poggi (Torre S.Niccolo),Piazza Poggi Network (Torre S.Niccolo),Piazza Poggi Netzwerk (Torre S.Niccolo),Piazza Poggi,Attivo
+43.787064000000000,11.204904000000000,Cisco-Cascine09-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.763114000000000,11.297270000000000,UAP-ParcoAnconella,Rete Parco Anconella,Anconella Park Network,Anconella-Park-Netzwerk,Via Villamagna,Attivo
+43.780901000000000,11.223328000000000,Cisco-Ippodromo-Tribuna-L,Cascine-Ippodromo,Cascine-Hippodrome,Cascine-Hippodrom,Via delle Cascine,Inattivo
+43.784901000000000,11.209272000000000,Cisco-Cascine15-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.787574000000000,11.210973000000000,Cisco-CascinePegasoAeronautica-L,Cascine-Pegaso,Cascine-Pegaso,Cascine-Pegaso,Piazzale Cascine 12,Attivo
+43.773964000000000,11.249116000000000,Cisco-SMNovella-latoPM-RAP,Stazione SM Novella,SM Novella station,SM-Novella-Station,P.za SM Novella,Attivo
+43.786632000000000,11.205741000000000,Cisco-Cascine10-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.779405000000000,11.223485000000000,Cisco-Cascine-MAP-TLC-Piscina,Cascine-Pavoniere,Cascine-Pavoniere,Cascine-Pavoniere,Piazzale Cascine 12,Inattivo
+43.787237000000000,11.262022000000000,biblioOrticolturaEsterno-r29587_picoM2,Biblioteca Orticoltura,Horticulture Library,Bibliothek Gartenbau,Via V. Emanuele II 17,Attivo
+43.794497000000000,11.241061000000000,UAP-Bini,Rete PAD e URP Bini - Dalmazia,PAD network and URP Bini - Dalmatia,PAD-Netzwerk und URP Bini - Dalmatien,Via Carlo Bini 5,Attivo
+43.768438000000000,11.256747000000000,cameraCommercio_r29587_picoM2,Camera di Commercio,Chamber of Commerce,Handelskammer,Piazza del Grano,Attivo
+43.776392000000000,11.253629000000000,parcSlorenzo-r29587_rspro,Parcheggio San Lorenzo / Mercato Centrale,Parking San Lorenzo / Central Market,Parkplatz San Lorenzo / Zentralmarkt,P.za Mercato Centrale,Attivo
+43.794062000000000,11.169864000000000,Brozzi-1Maggio-AssInsieme-r29587_picoM2,Associazione Insieme,Association Together,Verein zusammen,Piazza 1� Maggio - Brozzi,Attivo
+43.795638000000000,11.225565000000000,comuPalaGiustiziaSalaStampa-r29587_locoM2,Palazzo di Giustizia,Justice palace,Justizpalast,V.le Guidoni,Attivo
+43.782086000000000,11.215498000000000,Cisco-Cascine23-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.789722000000000,11.199338000000000,Cisco-Cascine02-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.774985000000000,11.255173000000000,comuSLorenzoGori-r29587_picoM2,P.za S. Lorenzo,P.za S. Lorenzo,P.za S. Lorenzo,P.za S. Lorenzo,Inattivo
+43.770459000000000,11.250162000000000,comuParioneChiostro-r29587_picoM2,Chiostro Via del Parione,Cloister Via del Parione,Kreuzgang Via del Parione,Via del Parione 7,Attivo
+43.770928000000000,11.312588000000000,paasBracci-r29587_x86,Centro Anziani Villa Bracci,Villa Bracci Elderly Center,Seniorenzentrum Villa Bracci,Stradone di Rovezzano 33,Attivo
+43.772183000000000,11.262853000000000,casaspa2_443_r29587_locoM2,CasaSpa-AP-FiWiFi-2,CasaSpa-AP-FiWiFi-2,CasaSpa-AP-FiWiFi-2,Via Fiesolana 5,Inattivo
+43.770398000000000,11.242108000000000,ccomCambiFabioStefanoSaS-r29587_picoM2,Antico Ristoro Cambi,Ancient Cambi Refreshments,Alte Cambi-Erfrischungen,P.za del Tiratoio,Inattivo
+43.769752000000000,11.253900000000000,UAP-Canacci-Palagio-Terme,Rete Canacci-Palagio-Terme,Canacci-Palagio-Terme network,Netzwerk Canacci-Palagio-Terme,P.za parte Guelfa,Attivo
+43.773072000000000,11.249002000000000,Cisco-Museo900(esterno)-L,Museo 900,Museum 900,Museum 900,P.za SM Novella,Attivo
+43.780459000000000,11.250165000000000,UAP-Beslan,Rete Beslan,Beslan network,Beslan-Netzwerk,P.zza Beslan,Attivo
+43.764234000000000,11.270754000000000,comuPzzaFerrucci-r29587_locoM2,P.za Ferrucci,P.za Ferrucci,P.za Ferrucci,P.za Ferrucci,Attivo
+43.811004000000000,11.252310000000000,MeyerConc-x86_64-18,Concenrtatore c/O DSI Ospedale Meyer,Concenrtatore c / O DSI Meyer Hospital,Concentratore c / O DSI Meyer-Krankenhaus,V.le Gaetano Pieraccini 24,Attivo
+43.768881000000000,11.298319000000000,paasExFilaFoyer-r29587_bulletM2,Ex Fila ? Foyer,Ex Fila? Foyer,Ex Fila? Foyer,Via Leto Casini 11,Attivo
+43.768450000000000,11.261778000000000,comuSCroceBasilica-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Inattivo
+43.771355000000000,11.261339000000000,ccomBesBolognaSrL-r29587_picoM2,Bes Bologna,Bes Bologna,Als Bologna,P.za San Pier Maggiore,Inattivo
+43.786836000000000,11.268508000000000,UAP-MercatoCure,Rete Mercato delle Cure,Healthcare Market Network,Netzwerk Gesundheitsmarkt,Piazza delle Cure,Attivo
+43.777603000000000,11.237147000000000,Cisco-ParcoMusica-MAP2,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Attivo
+43.785575000000000,11.207807000000000,Cisco-Cascine13-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.774640000000000,11.255762000000000,comuPilomatSMarco-r29587_locoM2,P.za Duomo,P.za Duomo,P.za Duomo,P.za Duomo,Inattivo
+43.787237000000000,11.262022000000000,biblioOrticolturaInterno-r29587_picoM2,Biblioteca Orticoltura,Horticulture Library,Bibliothek Gartenbau,Via V. Emanuele II 17,Attivo
+43.764588000000000,11.260223000000000,ccomEnosisSrL-r29587_picoM2,Osteria San Niccol�,Osteria San Niccol ,Osteria San Nicol ,Via San Niccol� 60R,NonConosciuto
+43.780306000000000,11.196178000000000,UAP-Biblio-Canova,Rete Biblioteca Canova,Canova Library Network,Canova-Bibliotheksnetzwerk,Via Chiusi 4/3A,Attivo
+43.770011000000000,11.255339000000000,comuPVSignoriaPerseo-r29587_bulletM2,Signoria,Lordship,Lordschaft,P.za Signoria,Attivo
+43.775316000000000,11.259301000000000,comuServiDuomo-r29587_locoM2,P.za Duomo Via de' Servi,P.za Duomo Via de 'Servi,P.za Dom Via de 'Servi,Via de' Servi,Attivo
+43.782433000000000,11.214747000000000,Cisco-Cascine22-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.781900000000000,11.261351000000000,ccomCapannaMoini-r29587_picoM2,Pizzeria La Capanna,Pizzeria La Capanna,Pizzeria La Capanna,Via Cavour 112,NonConosciuto
+43.779592000000000,11.223561000000000,comuPiscinaPavoniereDX-r29587_locoM2,Piscina Pavoniere,Peacock pool,Pfauenbecken,V.le della Catena 2,Inattivo
+43.762345000000000,11.265540000000000,UAP-PiazzaleMichelangelo,Rete Piazzale Michelangelo,Piazzale Michelangelo network,Piazzale Michelangelo-Netzwerk,Piazzale Michelangelo,Attivo
+43.770654000000000,11.268087000000000,parcSambrogio-r29587_rspro,Parcheggio S.Ambrogio,S.Ambrogio car park,Parkplatz S.Ambrogio,P.za Ghiberti,Attivo
+43.785952000000000,11.206987000000000,Cisco-Cascine12-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.778639000000000,11.236189000000000,Cisco-ParcoMusica-MAP6,ParcoMusica,Park Music,Parkmusik,V.le fratelli Rosselli,Inattivo
+43.769265000000000,11.256398000000000,Cisco-PV-Conc-x86_64,Palazzo Vecchio,Palazzo Vecchio,Palazzo Vecchio,Piazza Signoria 1,Inattivo
+43.788968000000000,11.201193000000000,Cisco-Cascine04-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.779052000000000,11.232581000000000,Cisco-Velodromo-MAP1,Velodromo,Velodrome,Velodrom,V.le fratelli Rosselli,Attivo
+43.782614000000000,11.216298000000000,Cisco-CascinePratoQuercione-MAP1,Cascine-Quercione,Cascine-Quercione,Cascine-Quercione,Piazzale Cascine 12,Inattivo
+43.738938000000000,11.224129000000000,biblioGalluzzoInterno-r29587_picoM2,Biblioteca Galluzzo,Galluzzo Library,Galluzzo-Bibliothek,Via Senese 206,Attivo
+43.772183000000000,11.262853000000000,casaspa1_442_r29587_locoM2,CasaSpa-AP-FiWiFi-1,CasaSpa-AP-FiWiFi-1,CasaSpa-AP-FiWiFi-1,Via Fiesolana 5,Attivo
+43.778036000000000,11.225757000000000,Cisco-Cascine32-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.770451000000000,11.266907000000000,UAP-MercatoSantAmbrogio,Rete Mercato Sant'Ambrogio,Sant'Ambrogio Market Network,Sant'Ambrogio Market Network,Piazza Lorenzo Ghiberti,Attivo
+43.767590000000000,11.240114000000000,UAP-Biblio-Thouar,Rete Biblioteca Thouar - Tasso,Thouar Library Network - Tasso,Thouar Bibliotheksnetzwerk - Tasso,Piazza Tasso 1,Attivo
+43.770528000000000,11.255247000000000,comuOrsanmichele-r29587_rspro,Orsanmichele,Orsanmichele,Orsanmichele,Via dell'Arte della Lana,Attivo
+43.782775000000000,11.214008000000000,Cisco-Cascine21-RAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.783431000000000,11.166860000000000,casaPopoloUgnano-r29587_picoM2,Casa del popolo Ugnano,House of the Ugnano people,Haus der Ugnano,Via di Ugnano 69,Inattivo
+43.771472000000000,11.261174000000000,ccomInItinereSrL-r29587_picoM2,In Itinere,Ongoing,Laufend,Borgo Albizi 15r,Attivo
+43.776024000000000,11.290201000000000,biblioLuziEsterno-r29587_picoM2,Biblioteca Mario Luzi,Mario Luzi Library,Mario-Luzi-Bibliothek,Via Schiff 8,Inattivo
+43.790064000000000,11.198529000000000,Cisco-Cascine01-RAP(Indianino),Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.766882000000000,11.262014000000000,comuTintoriCavalleggeri-r29587_bulletM2,Santa Croce,Holy Cross,heiliges Kreuz,P.za S. Croce,Inattivo
+43.768442000000000,11.253519000000000,comuPonteVecchioPorSMaria-r29587_picoM2,Ponte Vecchio,Old Bridge,Alte Brücke,Ponte Vecchio,Attivo
+43.804885000000000,11.236733000000000,PaasP.zaVittorioVeneto-r29587_picoM2,"Centro Sociale ""Cavalieri di Vittorio Veneto""","Social Center ""Cavalieri di Vittorio Veneto""","Sozialzentrum ""Cavalieri di Vittorio Veneto""","P.za Cavalieri di Vittorio Veneto, 11",Inattivo
+43.786765000000000,11.210939000000000,Cisco-CascinePratoCornacchie-L,Cascine-Cornacchie,Cascine-Cornacchie,Cascine-Cornacchie,Piazzale Cascine 12,Attivo
+43.787391000000000,11.204243000000000,Cisco-Cascine08-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Attivo
+43.769433000000000,11.267663000000000,comuMurateSucInterno-r29587_bulletM2,Le Murate,Le Murate,Le Murate,P.za delle Murate,Attivo
+43.776078000000000,11.232733000000000,Cisco-Cascine37-MAP,Cascine-Arno,Cascine-Arno,Cascine-Arno,Piazzale Cascine 12,Inattivo
+43.780556000000000,11.237474000000000,biblioCarraInterno-r29587_picoM2,Biblioteca De Andre',De Andre 'Library,De Andre 'Bibliothek,Via delle Carra 2,Attivo
+43.755924000000000,11.289730000000000,UAP-Biblio-Gavinana,Rete Biblioteca Gavinana - Bandini,Gavinana Library Network - Bandini,Gavinana-Bibliotheksnetzwerk - Bandini,Via di Ripoli 118,Attivo
+43.767744000000000,11.255174000000000,comuLnoArchibusieri-r29587_bulletM2,Uffizi / Archibusieri,Uffizi / Archibusieri,Uffizien / Archibusieri,Lungarno Archibusieri,Inattivo
+43.798951000000000,11.194997000000000,paasPeretola-r29587_picoM2,Circolo di Peretola,Circle of Peretola,Kreis von Peretola,Via Pratese 48,Attivo
