@@ -10,11 +10,11 @@ nav:
 # use_directory_urls: true
 
 theme:
-  name: material
-  palette:
-      # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
-      # Default is indigo (blue)
-      primary: light green
+    name: material
+    palette:
+        # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
+        # Default is indigo (blue)
+        scheme: pygeoapi
 
 plugins:
     - search
@@ -23,3 +23,8 @@ markdown_extensions:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+
+extra_css:
+    # pygeoapi primary color with light and dark variations from material.io
+    # https://material.io/resources/color/#!/?view.left=0&view.right=1
+    - assets/stylesheets/pygeoapi.css
