@@ -4,13 +4,7 @@ title: Customising layout with jinja2 templates
 
 # Customising layout
 
-Because OGC API adopted HTML as a preferable output format, users can easily browse an OGC API from within a browser. An aspect to consider is that an API becomes a webpage. And common practices for web development become relevant. Is the API accessable [WCAG](https://www.w3.org/TR/WCAG21/). Does the website have to include a company logo, privacy statement, cookie warning, etc. Having a flexible customising option is more importent for API tools these days. 
-
-!!! tip
-
-    Notice that the pygeoapi configuration also has an option to disable html output. In that scenario only the json output is available.
-
-pygeoapi adopted the jinja2 templating concept. Each element visualised on the html output is customisable by overriding the relevant template. Templates are located in the [/pygeoapi/templates](https://github.com/geopython/pygeoapi/tree/master/pygeoapi/templates) folder. It is possible to override any template by copying it into a separate folder and adjust it to your needs. In the pygeoapi-config.yml file you indicate the path to the override folder. Notice that for files which are not placed in the override folder, the original file is used.
+pygeoapi adopted the jinja2 templating mechanism to style the html output. Each element visualised on the html output is customisable by overriding the relevant template. Templates are located in the [/pygeoapi/templates](https://github.com/geopython/pygeoapi/tree/master/pygeoapi/templates) folder. It is possible to override any template by copying it into a separate folder and adjust it to your needs. In the pygeoapi-config.yml file you indicate the path to the override folder. Notice that for files which are not placed in the override folder, the original file is used.
 
 For any customisation, mind that with a new version of pygeoapi changes on the default templates are not automatically available on the overriden files. Upgrades need to be carefully tested.
 

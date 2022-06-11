@@ -17,7 +17,7 @@ In this workshop we'll discuss the following topics:
 - [Client access](clients/index.md)
 - [HTML templating](templates/index.md)
 - JSON-LD
-- Search engines 
+- [Search Engine Optimisation](seo/index.md) 
 - Advanced topics
   - Security/access control
   - Multilingual support/i18n
