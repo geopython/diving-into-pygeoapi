@@ -18,11 +18,13 @@ theme:
 
 plugins:
     - search
+
 markdown_extensions:
     - meta
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+    - footnotes
 
 extra_css:
     # pygeoapi primary color with light and dark variations from material.io
