@@ -20,7 +20,7 @@ In this workshop we'll discuss the following topics:
 - [Search Engine Optimisation](seo/index.md) 
 - Advanced topics
   - Security/access control
-  - Multilingual support/i18n
+  - [Multilingual support](i18n/index.md)
   - Custom plugins
-  - DevOps/GitOps
+  - Cloud deployment (DevOps)
   - [pygeoapi and INSPIRE](advanced/inspire.md)

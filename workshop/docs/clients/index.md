@@ -21,7 +21,7 @@ Besides OGC API Features, QGIS also supports OGC API Records via the Metasearch 
 !!! question "Query OGC API Records"
 
     query a ogc-api-records catalogue (would be nice to be able to open a map service from a record, status?)
-  - add a ogc-api features layer
+    add a ogc-api features layer
 
 ## GDAL
 
@@ -32,8 +32,11 @@ OGC API Coverages
 
 !!! question "OGC API in GDAL"
 
-  - connect to a ogc api features service (ogrinfo; ogr2ogr)
-  - connect to a ogc api coverages service (gdalinfo)
+    connect to a ogc api features service (ogrinfo; ogr2ogr)
+    
+!!! question "OGC API in GDAL"
+    
+    connect to a ogc api coverages service (gdalinfo)
 
 ## OWSLIB
 
