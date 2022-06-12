@@ -19,7 +19,7 @@ Typical for all OGC API's is that the core functionality is kept minimal and ext
 
 !!! question "Use web browser to access OGC API"
 
-    Use your web browser to navigate to http://demo.pygeoapi.org/master. A browser opens any OGC API in html due to the accept header sent by the browser: 'text/html'. On the right top corner you will notice the `json` link. The link adds the parameter `?f=json`, which is a mechanism of pygeoapi to override the accept header sent by the browser.
+    Use your web browser to navigate to http://demo.pygeoapi.org/master. A browser by default opens any OGC API in html (as a webpage) due to the [accept header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) sent by the browser: 'text/html'. On the right top corner you will notice a `json` link. The link adds the parameter to the url: `?f=json`, which is a mechanism of pygeoapi to override the accept header sent by the browser.
 
 ## Open API
 
