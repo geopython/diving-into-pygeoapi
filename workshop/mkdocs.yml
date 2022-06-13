@@ -24,6 +24,7 @@ markdown_extensions:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+    - footnotes
 
 extra_css:
     # pygeoapi primary color with light and dark variations from material.io
@@ -35,4 +36,3 @@ extra_css:
 extra_javascript:
     - assets/javascripts/termynal.js
     - assets/javascripts/custom.js
-    - footnotes
