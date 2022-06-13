@@ -12,46 +12,65 @@ There are multiple options to follow the workshop. It is important to understand
 
 ## Deploy with a package manager
 
+<div class="termy">
+
+```console
+$ pip install pygeoapi
+$ curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/pygeoapi-config.yml
+$ vi pygeoapi-config.yml
+$ export PYGEOAPI_CONFIG=pygeoapi-config.yml
+$ export PYGEOAPI_OPENAPI=pygeoapi-openapi.yml
+$ pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
+$ pygeoapi serve
+$ curl http://localhost:5000
+---> 100%
+Successfully installed pygeoapi
 ```
-pip install pygeoapi
-wget https://raw.githubusercontent.com/geopython/pygeoapi/master/pygeoapi-config.yml
-vi pygeoapi-config.yml
-export PYGEOAPI_CONFIG=pygeoapi-config.yml
-export PYGEOAPI_OPENAPI=pygeoapi-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
-pygeoapi serve
-curl http://localhost:5000
-```
+
+</div>
 
 ## Build from sources
 
+<div class="termy">
+
+```console
+$ python -m venv pygeoapi
+$ cd pygeoapi
+$ . bin/activate
+$ git clone https://github.com/geopython/pygeoapi.git
+$ cd pygeoapi
+$ pip install -r requirements.txt
+$ python setup.py install
+$ cp pygeoapi-config.yml example-config.yml
+$ vi example-config.yml
+$ export PYGEOAPI_CONFIG=example-config.yml
+$ export PYGEOAPI_OPENAPI=example-openapi.yml
+$ pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
+$ pygeoapi serve
+$ curl http://localhost:5000
+---> 100%
+pygeoapi is up and running
 ```
-python -m venv pygeoapi
-cd pygeoapi
-. bin/activate
-git clone https://github.com/geopython/pygeoapi.git
-cd pygeoapi
-pip install -r requirements.txt
-python setup.py install
-cp pygeoapi-config.yml example-config.yml
-vi example-config.yml
-export PYGEOAPI_CONFIG=example-config.yml
-export PYGEOAPI_OPENAPI=example-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
-pygeoapi serve
-curl http://localhost:5000
-```
+
+</div>
 
 ## Deploy as docker container
 
-```
-wget https://raw.githubusercontent.com/geopython/pygeoapi/master/pygeoapi-config.yml
-vi pygeoapi-config.yml
-docker run -p 5000:5000 \
+<div class="termy">
+
+```console
+$ curl https://raw.githubusercontent.com/geopython/pygeoapi/master/pygeoapi-config.yml
+$ vi pygeoapi-config.yml
+$ docker run -p 5000:5000 \
     -v {$pwd}/pygeoapi-config.yml:/pygeoapi/pygeoapi-config.xml \
     -v {$pwd}/data:/pygeoapi/data \
     -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
     geopython:pygeoapi:latest
+$ curl http://localhost:5000
+---> 100%
+pygeoapi is up and running
 ```
+
+</div>
 
 ## Deploy docker container at a cloud provider
