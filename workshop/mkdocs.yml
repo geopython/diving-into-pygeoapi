@@ -20,11 +20,13 @@ plugins:
     - search
 
 markdown_extensions:
-    - meta
-    - admonition
-    - pymdownx.details
-    - pymdownx.superfences
-    - footnotes
+    - meta # option to add some meta tags on top, title, author, date, etc
+    - admonition # adds the note, question, tip boxes, eg: !!! tip "my tip"
+    - pymdownx.details # advanced collapsible panels
+    - pymdownx.superfences # advanced features; such as line number, flow chart, python shell
+    - footnotes # notes bottom of page
+    - attr_list # used to size images
+    - md_in_html # used to size images
 
 extra_css:
     # pygeoapi primary color with light and dark variations from material.io
