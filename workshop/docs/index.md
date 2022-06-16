@@ -15,12 +15,8 @@ In this workshop we'll discuss the following topics:
 - Building blocks
 - [Publishing data](publish/index.md)
 - [Client access](clients/index.md)
-- [HTML templating](templates/index.md)
+- [HTML templating](jinja-templates/index.md)
 - JSON-LD
 - [Search Engine Optimisation](seo/index.md) 
-- Advanced topics
-  - Security/access control
-  - [Multilingual support](i18n/index.md)
-  - Custom plugins
-  - Cloud deployment (DevOps)
-  - [pygeoapi and INSPIRE](advanced/inspire.md)
+- [Advanced topics](advanced/index.md)
+
