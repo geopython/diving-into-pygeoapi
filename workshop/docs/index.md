@@ -16,7 +16,7 @@ In this workshop we'll discuss the following topics:
 - [Publishing data](publish/index.md)
 - [Client access](clients/index.md)
 - [HTML templating](jinja-templates/index.md)
-- JSON-LD
+- [JSON-LD](json-ld/index.md)
 - [Search Engine Optimisation](seo/index.md) 
 - [Advanced topics](advanced/index.md)
 
