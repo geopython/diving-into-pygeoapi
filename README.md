@@ -1,6 +1,10 @@
 # Diving into pygeoapi
 pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards.
 
+## Setting up pygeoapi environment
+
+TODO
+
 ## Building the manual
 
 The workshop manual is powered by
@@ -13,9 +17,9 @@ of content and publishing.
 # build a virtual Python environment in isolation
 python3 -m venv .
 . bin/activate
-# download the website from GitHub
+# clone from GitHub
 git clone https://github.com/geopython/diving-into-pygeoapi.git
-cd diving-into-pygeoapi/workshop
+cd diving-into-pygeoapi/workshop/content
 # install required dependencies
 pip install -r requirements.txt
 # build the website

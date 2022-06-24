@@ -4,7 +4,9 @@ title: Diving into pygeoapi
 
 # Diving into pygeoapi
 
-A 4 hour workshop to get familiarised with the pygeoapi software. A python package providing standardised web api's for querying, vizualising and processing spatial datasets.
+[pygeoapi](https://pygeoapi.io) is an OGC Reference Implementation supporting numerous [OGC API](https://ogcapi.ogc.org) specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards.
+
+*Diving into pygeoapi* is a 4 hour workshop to get familiar with installing, configuring, publishing and extending the pygeoapi software.
 
 In this workshop we'll discuss the following topics:
 
