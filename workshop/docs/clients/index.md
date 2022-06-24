@@ -113,25 +113,99 @@ OGC API Coverages is still under development at OGC. The GDAL team however alrea
 
 ## OWSLIB
 
-- https://geopython.github.io/OWSLib/usage.html#ogc-api (+jupyter)
+[OWSlib](https://geopython.github.io/OWSLib/) is a python library to interact with OGC services. Recently support for OGC API Features, Records and Coverages has been added.
 
-## OpenLayers
+!!! question "Interact with OGC API Features from python"
 
-- https://github.com/openlayers/openlayers/issues/12387
+    If you do not have python installed, consider to run this exercise in a docker container or in a cloud environment. From console install owslib:
+    
+    ```
+    pip install owslib
+    ```
 
-!!! note
+    Then start a python console session with: `python` (stop the session by typing `exit()`).
 
-    [Leaflet](https://github.com/opengeospatial/ogcapi-features/blob/master/implementations/clients/leaflet.md)
-    [ESRI](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html)
+    ```python
+    >>> from owslib.ogcapi.features import Features
+    >>> w = Features('https://demo.pygeoapi.io/master')
+    >>> w.url
+    'https://demo.pygeoapi.io/master'
+    >>> conformance = w.conformance()
+    {u'conformsTo': [u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson']}
+    >>> api = w.api()  # OpenAPI document/
+    >>> collections = w.collections()
+    >>> len(collections['collections'])
+    13
+    >>> feature_collections = w.feature_collections()
+    >>> len(feature_collections)
+    13
+    >>> lakes = w.collection('lakes')
+    >>> lakes['id']
+    'lakes'
+    >>> lakes['title']
+    'Large Lakes'
+    >>> lakes['description']
+    'lakes of the world, public domain'
+    >>> lakes_queryables = w.collection_queryables('lakes')
+    >>> len(lakes_queryables['queryables'])
+    6
+    >>> lakes_query = w.collection_items('lakes')
+    >>> lakes_query['features'][0]['properties']
+    {u'scalerank': 0, u'name_alt': None, u'admin': None, u'featureclass': u'Lake', u'id': 0, u'name': u'Lake Baikal'}
+    ```
+
+## LeafletJS
+
+[LeafletJS](https://leafletjs.com) is a popular javascript library to add interactive maps to websites. LeafletJS does not support OGC API's explicitely, leafletJS can however interact with OGC API by using the results of the API directly.
+
+!!! question "Add OGC API Tiles to a website with LeafletJS"
+
+    Copy the html below to a file called 'vector-tiles.html'. Open the file in a web browser.
+    The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API Tile service on top of an Open Street Map background.
+
+    ```html
+    <html>
+    <head><title>OGC API Tiles exercise</title></head>
+    <body>
+    <div id="map" style="width:100vw;height:100vh;"></div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.2.0"></script>
+    <script>
+    map = L.map('map').setView({ lat: 62, lng: 30 }, 5);
+    map.addLayer(new L.TileLayer(
+        'https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
+        {maxZoom: 11,attribution: '&copy; OpenStreetMap'}));
+    map.addLayer(new L.vectorGrid.protobuf(
+        'https://demo.pygeoapi.io/master/collections/lakes/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt', 
+        { rendererFactory: L.canvas.tile }));
+    </script>
+    </body>
+    </html>
+    ```
+
+!!! tip 
+
+    Openlayers is another javascript library with support for OGC API Tiles. Check out their [vector tile example](https://openlayers.org/en/latest/examples/ogc-vector-tiles.html).
+
+!!! question "Display OGC API Features with LeafletJS"
+
+    Open `vector-tiles.html` and add the following code after the creation of the vector tile layer. The code fetches features from pygeoapi and adds them to the map.
+
+    ```javascript
+    (async () => {
+        const windmills = await fetch('https://demo.pygeoapi.io/master/collections/dutch_windmills/items?limit=100', {
+        headers: { 'Accept': 'application/geo+json' }
+        }).then(response => response.json());
+        L.geoJSON(windmills).addTo(map);
+    })();
+    ```
+
+!!! tip 
+
+    Also ESRI supports the [OGC API Features layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html) in their javascript client.
 
 
-- https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
-- https://openlayers.org/en/latest/examples/ogc-map-tiles.html
-
-!!! question "OGC API in Openlayers"
-
-  - Add a ogc-api-tiles layer; 
-  - Add a ogc-api-Features layer;
 
 
 
