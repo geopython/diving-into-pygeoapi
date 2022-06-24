@@ -33,11 +33,26 @@ The OpenAPI community provides various tools, such as a validator for OAS docume
 
 ## OGC API Features
 
-[OGC API Features'](https://ogcapi.ogc.org/features/) aim is to provide a standardised API to exchange vector features and their attributes.
+[OGC API Features'](https://ogcapi.ogc.org/features/) aim is to provide a standardised API to exchange vector geometries and their attributes. Up till now the GeoJSON format is mainly used to express items in json. The GeoJSON format has been enriched with some properties to facilitate linkage, pagination and filters. AT OGC a group works on a new json format for vector geometries, which improves some of the current limitations of GeoJSON, such as the limitation of using ESSG:4326 only.
+
+Some plugins are available for OGC API Features:
+
+- The tranformations plugin enables the import and expot of any data according to dedicated projections.
+- The CQL extension adds CQL filtering options. Basic filtering options are available in OGC API common. CQL adds filters such as AND, OR, smaller/bigger then, within.
+
+Support for CQL is currently under development in pygeoapi. Verify which filter capabilities are available for which backends in [the documentation](https://docs.pygeoapi.io/en/latest/cql.html). 
 
 ## OGC API Tiles
 
 [OGC API Tiles](https://ogcapi.ogc.org/tiles/) offers a standardised API for accessing repositories of tiled imagery. Either in bitmap or vector format.
+
+OGC API Tiles extends the collection/* url structure. In stead of items, the tilesets are listed under collection/example/tiles/*, eg.
+
+```
+https://demo.pygeoapi.io/collections/lakes/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt
+```
+
+pygeoapi is able to advertise an existing tileset as OGC API Tiles. pygeoapi itself does not render tiles from source data. Use Mapproxy or QGIS to generate the tileset.
 
 ## OGC API Coverages
 
