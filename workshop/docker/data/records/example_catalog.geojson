@@ -8,6 +8,7 @@
     },
     "features": [
       {
+        "identifier": "c_d612:fb5b7bac-bcb0-4326-9388-7e3f3d671d71:1",
         "mcf": {
           "version": "1.0"
         },
@@ -144,6 +145,7 @@
         }
       },
       {
+        "identifier": "cmfi:9c92966b-ae6b-42d4-9729-592b016e4b82",
         "mcf": {
           "version": "1.0"
         },
