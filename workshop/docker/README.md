@@ -9,7 +9,7 @@ To start the docker composition, from ./workshop/docker folder, use the command:
 docker-compose up -d
 ```
 
-This will start two docker containers, one with our pygeoapi (reachable from the browser at this address) and one with Elasticsearch, which can be used as storage backend.
+This will start two docker containers, one with our pygeoapi (reachable from the browser at [this address](http://localhost:5000/)) and one with Elasticsearch (localhost:9200), which can be used as storage backend.
 
 To stop, without deleting the data stored on Elasticsearch, use the command:
 
