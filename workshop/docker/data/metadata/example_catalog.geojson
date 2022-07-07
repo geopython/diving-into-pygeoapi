@@ -1,0 +1,250 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "features": [
+      {
+        "mcf": {
+          "version": "1.0"
+        },
+        "metadata": {
+          "identifier": "c_d612:fb5b7bac-bcb0-4326-9388-7e3f3d671d71:1",
+          "hierarchylevel": "dataset",
+          "datestamp": "2022-06-10"
+        },
+        "identification": {
+          "title": "Wifi",
+          "abstract": "Il dataset mostra la georeferenziazione puntuale su mappa dei luoghi nel Comune di Firenze in cui è disponibile un servizio gratuito di connessione ad internet in modalità senza fili (Wifi).",
+          "dates": {
+            "creation": "2011-06-01"
+          },
+          "keywords": {
+            "keywords-0": {
+              "type": "None",
+              "keywords": [
+                "EU"
+              ]
+            },
+            "keywords-1": {
+              "type": "None",
+              "keywords": [
+                "wifi"
+              ]
+            },
+            "keywords-2": {
+              "type": "None",
+              "keywords": [
+                "connessione internet"
+              ]
+            },
+            "keywords-3": {
+              "type": "None",
+              "keywords": [
+                "reti"
+              ]
+            },
+            "keywords-4": {
+              "type": "None",
+              "keywords": [
+                "Servizi di pubblica utilità e servizi amministrativi"
+              ]
+            },
+            "keywords-5": {
+              "type": "None",
+              "keywords": [
+                "open data"
+              ]
+            }
+          },
+          "topiccategory": [
+            "utilitiesCommunication"
+          ],
+          "extents": {
+            "spatial": [
+              {
+                "bbox": [
+                  11.145,
+                  43.718,
+                  11.348,
+                  43.84
+                ]
+              }
+            ],
+            "temporal": [
+              {
+                "begin": "2022-06-10",
+                "end": "2022-06-10"
+              }
+            ]
+          },
+          "accessconstraints": "otherRestrictions",
+          "status": "None"
+        },
+        "contact": {
+          "pointOfContact": {
+            "organization": "Comune di Firenze",
+            "individualname": "None",
+            "positionname": "None",
+            "phone": "+39 055 328 3858",
+            "fax": "None",
+            "address": "None",
+            "city": "None",
+            "administrativearea": "None",
+            "postalcode": "None",
+            "country": "None",
+            "email": "sit@comune.fi.it"
+          },
+          "distributor": {
+            "organization": "Comune di Firenze",
+            "individualname": "None",
+            "positionname": "None",
+            "phone": "+39 055 328 3858",
+            "fax": "None",
+            "address": "None",
+            "city": "None",
+            "administrativearea": "None",
+            "postalcode": "None",
+            "country": "None",
+            "email": "sit@comune.fi.it"
+          }
+        },
+        "distribution": {
+          "link-0": {
+            "url": "http://opendata.comune.fi.it/?q=metarepo/datasetinfo&id=fb5b7bac-bcb0-4326-9388-7e3f3d671d71",
+            "type": "None",
+            "name": "None",
+            "description": "None",
+            "function": "None"
+          },
+          "link-1": {
+            "url": "https://datigis.comune.fi.it/shp/wifi.zip",
+            "type": "None",
+            "name": "None",
+            "description": "None",
+            "function": "None"
+          },
+          "link-2": {
+            "url": "https://datigis.comune.fi.it/kml/wifi.kmz",
+            "type": "None",
+            "name": "None",
+            "description": "None",
+            "function": "None"
+          },
+          "link-3": {
+            "url": "http://tms.comune.fi.it/tiles/service/wms?request=GetCapabilities&service=WMS&tiled=TRUE&version=1.3.0",
+            "type": "OGC:WMS",
+            "name": "catastoreti:access_point_wifi",
+            "description": "None",
+            "function": "None"
+          }
+        }
+      },
+      {
+        "mcf": {
+          "version": "1.0"
+        },
+        "metadata": {
+          "identifier": "cmfi:9c92966b-ae6b-42d4-9729-592b016e4b82",
+          "hierarchylevel": "dataset",
+          "datestamp": "2021-11-25"
+        },
+        "identification": {
+          "title": "Carsharing (anno 2012) - Città Metropolitana di Firenze",
+          "abstract": "Posizionamento puntuale delle attività di carsharing della Città Metropolitana di Firenze",
+          "dates": {
+            "publication": "2012-12-14"
+          },
+          "keywords": {
+            "keywords-0": {
+              "type": "None",
+              "keywords": [
+                "Carsharing",
+                "Mobilità",
+                "Viabilità"
+              ]
+            },
+            "keywords-1": {
+              "type": "theme",
+              "keywords": []
+            },
+            "keywords-2": {
+              "type": "None",
+              "keywords": [
+                "Trasporti"
+              ]
+            },
+            "keywords-3": {
+              "type": "theme",
+              "keywords": []
+            },
+            "keywords-4": {
+              "type": "theme",
+              "keywords": []
+            },
+            "keywords-5": {
+              "type": "None",
+              "keywords": [
+                "opendata",
+                "EU"
+              ]
+            }
+          },
+          "topiccategory": [
+            "transportation"
+          ],
+          "extents": {
+            "spatial": [
+              {
+                "bbox": [
+                  10.7,
+                  43.43,
+                  11.76,
+                  44.25
+                ]
+              }
+            ],
+            "temporal": [
+              {}
+            ]
+          },
+          "accessconstraints": "otherRestrictions",
+          "status": "completed"
+        },
+        "contact": {
+          "pointOfContact": {
+            "organization": "Città Metropolitana di Firenze",
+            "individualname": "None",
+            "positionname": "Direzione SIT e reti informative",
+            "phone": "None",
+            "fax": "None",
+            "address": "Via Cavour 9",
+            "city": "Firenze",
+            "administrativearea": "None",
+            "postalcode": "50129",
+            "country": "Italia",
+            "email": "sit@cittametropolitana.fi.it"
+          }
+        },
+        "distribution": {
+          "link-0": {
+            "url": "http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:9c92966b-ae6b-42d4-9729-592b016e4b82/attachments/Carsharing.zip",
+            "type": "None",
+            "name": "Carsharing.zip",
+            "description": "None",
+            "function": "None"
+          },
+          "link-1": {
+            "url": "http://pubblicazioni.cittametropolitana.fi.it/geoserver/trasporti/infomob_poi_carsharing/wms?request=getCapabilities&service=WMS&version=1.3.0",
+            "type": "None",
+            "name": "infomob_poi_carsharing",
+            "description": "None",
+            "function": "None"
+          }
+        }
+      }
+    ]
+}
