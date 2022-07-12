@@ -11,6 +11,12 @@ This directory provides sample data to demonstrate functionality.
 - copyright: Comune di Firenze
 - license: CC-BY 4.0
 
+### Cycle Circulation Area in Florence
+- title: [cycle-lanes-firenze.geojson](cycle-lanes-firenze.geojson)
+- url: http://opendata.comune.firenze.it/?q=metarepo/datasetinfo&id=52d8d3ab-eae5-400e-8561-d974f8612de0
+- description: The dataset contains: acCic_s: Cycle Circulation Area with PolygonZ geometry (class acCic, has two spatial components, acCic_c with PolylineZ ring geometry and acCic_s with PolygonZ geometry). It consists of the longitudinal part of the road reserved for the circulation of cycles. It can be carried out: on its own when it is physically separated from the area reserved for motor vehicles and from that reserved for pedestrians, through suitable traffic dividers placed in the longitudinal direction and impassable; on a reserved lane, obtained from the roadway, separated from the lane reserved for motor vehicles simply by a longitudinal strip or by lane delimiters; on a reserved lane created on the pavement space.
+- copyright: Comune di Firenze
+- license: CC-BY 4.0
 
 ## Metadata/Records
 
