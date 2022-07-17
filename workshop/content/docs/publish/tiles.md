@@ -67,12 +67,6 @@ Add the cycle collection to the ```resources``` section of docker.config.yml:
                     mimetype: application/vnd.mapbox-vector-tile
 ```
 
-Or use the provided ```docker.config.vtiles.yml``` file:
-
-```
-cp pygeoapi/docker.config.vtiles.yml pygeoapi/docker.config.yml
-```
-
 Start pygeoapi with:
 ```
 docker-compose up
