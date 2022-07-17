@@ -15,6 +15,5 @@ In this workshop we'll discuss the following topics:
 - Configuration / administration / running
 - [Standards & building blocks](standards/index.md)
 - [Publishing data](publish/index.md)
-- [Client access](clients/index.md)
 - [Advanced topics](advanced/index.md)
 
