@@ -10,9 +10,6 @@ nav:
     - Set up the training environment: setup/index.md
     - Standards: standards/index.md
     - Publishing data: publish/index.md
-    - Client access: clients/index.md
-    - HTML templating: jinja-templates/index.md
-    - Search Engine Optimisation: seo/index.md 
     - Advanced topics: advanced/index.md
 
 # use_directory_urls: true
