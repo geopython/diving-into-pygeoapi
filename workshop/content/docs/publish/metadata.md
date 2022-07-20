@@ -7,7 +7,7 @@ title: Metadata
 
 ## Client Access
 
-QGIS supports OGC API Records via the [Metasearch plugin](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). Metasearch originally focussed on Web Catalgue Service (OGC:WCS) only, but has been extended to OGC API Records last year. Metasearch is a default plugin in QGIS (no installation required).
+QGIS supports OGC API Records via the [Metasearch plugin](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). Metasearch originally focussed on Catalogue Service for the Web (OGC:CSW) only, but has been extended to OGC API Records last year. Metasearch is a default plugin in QGIS (no installation required).
 
 !!! question "Query OGC API Records from QGIS"
 
