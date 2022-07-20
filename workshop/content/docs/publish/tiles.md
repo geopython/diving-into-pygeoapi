@@ -85,6 +85,34 @@ And the tile metadata at this endpoint:
 
 ## Client Access
 
+!!! question "Access OGC API Vector Tiles from QGIS"
+
+    QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
+
+    Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
+
+    - Access the collection page of the tiles dataset: http://localhost:5000/collections/Cycle
+    - From there, navigate to the tiles page by clicking on `tiles`: http://localhost:5000/collections/Cycle/tiles
+    - Click in `Tiles metadata in tilejson format`: http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/metadata
+    - Take note of the url in `tiles`: `http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt)` and of the values of minZoom and maxZoom.
+
+    Follow these steps to connect to a service and access vector tiles:
+
+    - Locate the vector tiles service, on the left hand side browser panel. In alternative, you can also go to the top menu and navigate to Layer->Add Layer->Vector Tile Layer.
+
+    ![](img/qgis-vtiles1.png){ width=100% }
+
+    - Right-click to bring up the context menu and choose `New Generic connection`.  
+    - Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}. 
+    - Press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, bellow "Vector Tiles".
+    - Double-click in the collection to add it to the map. 
+    - Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner. 
+    - Zoom in to Florence, to see your dataset.
+
+    ![](img/qgis-vtiles2.png){ width=100% }
+    ![](img/qgis-vtiles3.png){ width=100% }
+    ![](img/qgis-vtiles4.png){ width=100% }
+
 [LeafletJS](https://leafletjs.com) is a popular javascript library to add interactive maps to websites. LeafletJS does not support OGC API's explicitely, leafletJS can however interact with OGC API by using the results of the API directly.
 
 !!! question "Add OGC API Tiles to a website with LeafletJS"
