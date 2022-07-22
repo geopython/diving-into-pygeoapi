@@ -1,7 +1,7 @@
 site_name: Diving into pygeoapi
 site_description: "pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards."
 site_author: The pygeoapi community
-copyright: "&copy; 2022 GeoPython"
+copyright: "&copy; 2022 pygeoapi community"
 site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
 nav:
@@ -10,9 +10,6 @@ nav:
     - Set up the training environment: setup/index.md
     - Standards: standards/index.md
     - Publishing data: publish/index.md
-    - Client access: clients/index.md
-    - HTML templating: jinja-templates/index.md
-    - Search Engine Optimisation: seo/index.md 
     - Advanced topics: advanced/index.md
 
 # use_directory_urls: true

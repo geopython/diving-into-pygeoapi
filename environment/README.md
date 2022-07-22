@@ -1,3 +1,0 @@
-# Environment
-
-Docker compose environment.

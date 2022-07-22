@@ -3,11 +3,11 @@ name: Deploy documentation ⚙️
 on:
   push:
     paths:
-      - 'workshop/**'
+      - 'workshop/content/**'
 
 defaults:
   run:
-    working-directory: workshop
+    working-directory: workshop/content
 
 jobs:
   build:
