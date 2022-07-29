@@ -37,12 +37,12 @@ You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is availab
               hreflang: it
         extents:
             spatial: 
-                bbox: [11.1,43.7,11.3,43.9] 
+                bbox: [11.23,43.75,11.28,43.78] 
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
               name: SQLiteGPKG
-              data: ./data/firenze_terrains.gpkg # place correct path here
+              data: /data/firenze_terrains.gpkg # place correct path here
               id_field: fid
               table: firenze_terrains
     ```
