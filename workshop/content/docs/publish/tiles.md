@@ -25,7 +25,7 @@ tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-d
 
 Add the cycle collection to the ```resources``` section of docker.config.yml:
 
-```
+``` {.yaml linenums="1"}
     Cycle:
         type: collection
         title: Cycle Circulation Area in Florence 
@@ -92,7 +92,7 @@ And the tile metadata at this endpoint:
     Copy the html below to a file called 'vector-tiles.html'. Open the file in a web browser.
     The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API Tile service on top of an Open Street Map background.
 
-    ```html
+    ``` {.html linenums="1"}
     <html>
     <head><title>OGC API Tiles exercise</title></head>
     <body>
@@ -121,7 +121,7 @@ And the tile metadata at this endpoint:
 
     Open `vector-tiles.html` and add the following code after the creation of the vector tile layer. The code fetches features from pygeoapi and adds them to the map.
 
-    ```javascript
+    ``` {.js linenums="1"}
     (async () => {
         const windmills = await fetch('https://demo.pygeoapi.io/master/collections/dutch_windmills/items?limit=100', {
         headers: { 'Accept': 'application/geo+json' }

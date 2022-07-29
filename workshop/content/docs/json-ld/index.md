@@ -24,7 +24,7 @@ OGC API Common adopted a number of W3C conventions, which brings the API's close
     [SPARQL](https://en.wikipedia.org/wiki/SPARQL) is commonly known as the query language to query triple stores. However you can also use SPARQL to query graphs of linked web resources. The SPARQL client traverses links between the resources to locate the requested triples. [Jena ARQ](https://jena.apache.org/documentation/query/) is a command line SPARQL client which is able to run such queries. Jena is quite difficult to set up, although there is a [Docker Image](https://hub.docker.com/r/stain/jena) available. As an alternative we'll use a webbased implementation of the ARQ engine. Navigate to https://demos.isl.ics.forth.gr/sparql-ld-endpoint/ and replace the query in the textbox with:
 
 
-    ```
+    ``` {.sql linenums="1"}
     SELECT * WHERE { 
       SERVICE <https://demo.pygeoapi.io/master/collections/lakes> { 
         { 
@@ -36,7 +36,7 @@ OGC API Common adopted a number of W3C conventions, which brings the API's close
 
     A query to an item returns the item with its geometry:
 
-    ```
+    ``` {.sql linenums="1"}
     SELECT * WHERE { 
       SERVICE <https://demo.pygeoapi.io/master/collections/lakes/items/1> {
         {{ ?s ?p ?o }}
@@ -46,7 +46,7 @@ OGC API Common adopted a number of W3C conventions, which brings the API's close
 
     Notice that the SPARQL client fails if you hardcode the html format (which has the jsonld snippet embedded). 
 
-    ```
+    ``` {.sql linenums="1"}
     SELECT * WHERE { 
       SERVICE <https://demo.pygeoapi.io/master/collections/lakes?f=html> {
         { ?s ?p ?o }
@@ -58,7 +58,7 @@ OGC API Common adopted a number of W3C conventions, which brings the API's close
 
 pygeoapi adopted conventions of the [json-ld](https://json-ld.org) community to annotate json as RDF. Each property (column in a source table) is annotated by a semantic concept. The configuration how to apply the annotations is managed in the context element in the pygeoapi config file. Read more in the [pygeoapi documentation](https://docs.pygeoapi.io/configuration#Linked_data).
 
-```yaml
+``` {.yaml linenums="1"}
 context:
     - schema: https://schema.org/
     stn_id: schema:identifer

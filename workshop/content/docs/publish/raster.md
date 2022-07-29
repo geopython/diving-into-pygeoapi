@@ -4,6 +4,10 @@ title: Raster data
 
 # Raster Data
 
+## Publish a raster dataset
+
+Download and unzip the tiff file [53.tif](http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip). Add it to pygeoapi.
+
 ## Client Access
 
 OGC API Coverages is still under development at OGC. The GDAL team however already implemented an experimental plugin to interact with OGC API Coverages (maps, tiles and processes).
