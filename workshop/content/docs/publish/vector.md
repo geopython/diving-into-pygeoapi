@@ -4,6 +4,55 @@ title: Vector data
 
 # Vector Data
 
+## Publish a vector dataset
+
+In the previous section you have seen in general which steps are involved to change the pygeoapi configuration file to load a dataset. In this section we are going to apply these steps to an actual data file.
+
+!!! tip
+
+    It can be helpfull to open the dataset in QGIS while you're updating the pygeoapi configuration. So you can easily evaluate aspects such as: what are the attribute names of the dataset, what is the bounding box and in which projection is the file?
+
+You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is available in the workshop data folder. 
+
+!!! question "Move the file so it is available to pygeoapi"
+
+    Download and unzip the firenze-terrains.gpkg.zip file and place it in a folder accessible for pygeoapi. If you run pygeoapi in a container, you can mount the folder with the datafile of the host system into the container.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor. Add a new dataset section, defined by:
+
+    ``` {.yaml linenums="1"}
+    firenze-terrains:
+        type: collection 
+        title: Catasto - Terreni - Firenze
+        description: Limiti catastali (terreni) dal catasto. Agenzia del Territorio; SIT e Reti Informative;
+        keywords:  
+            - Cadaster
+        links:
+            - type: text/html
+              rel: canonical  
+              title: Limiti amministrativi comunali ante 2014
+              href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
+              hreflang: it
+        extents:
+            spatial: 
+                bbox: [11.23,43.75,11.28,43.78] 
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            - type: feature
+              name: SQLiteGPKG
+              data: /data/firenze_terrains.gpkg # place correct path here
+              id_field: fid
+              table: firenze_terrains
+    ```
+
+Save the file and restart the service. Navigate to localhost:5000/pygeoapi/collections to evaluate if the new dataset is available.
+
+!!! tip 
+
+    The sqlite driver incidentally has challenges to open the geopackage extension on MacOS. Read [this thread](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) or try with an alternative data format.
+ 
 
 ## Client Access
 
@@ -77,7 +126,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API Fea
 
     Then start a python console session with: `python` (stop the session by typing `exit()`).
 
-    ```python
+    ```
     >>> from owslib.ogcapi.features import Features
     >>> w = Features('https://demo.pygeoapi.io/master')
     >>> w.url

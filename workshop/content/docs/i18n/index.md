@@ -19,7 +19,7 @@ Language negotiation is triggered by the `Accept-Language` header sent by the cl
 
 In the pygeoapi configuration file you can indicate the languages supported by the instance. The first language is the default language. For most of the textual configuration properties you can provide a translation in alternative languages.
 
-```
+``` {.yaml linenums="1"}
 lakes:
   type: collection
   title:
@@ -41,7 +41,7 @@ lakes:
 
 Most of the text strings exist within the jinja2 templates. Text strings to be translated are placed in a `trans` tag:
 
-```
+``` {.html linenums="1"}
 <title>{% trans %}Page title{% endtrans %}</title>
 ```
 
@@ -71,7 +71,7 @@ pygeoapi has some features to influence the api responses based on the requested
 
     In the workshop data folder we've prepared a multilingual dataset of `free wifi hotspots in Florence`. Add the dataset to the pygeoapi configuration using the CSV provider. Add a title-field configuration with for each translated column the relevant language.
 
-    ```
+    ``` {.yaml linenums="1"}
     data: ./data/free-wifi-florence.csv
     id_field: id
     title_field: 

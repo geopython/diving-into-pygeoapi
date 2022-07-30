@@ -11,6 +11,13 @@ This directory provides sample data to demonstrate functionality.
 - copyright: Comune di Firenze
 - license: CC-BY 4.0
 
+### Administrative boundaries (terrains) Florence
+- title: [firenze_terrains.gpkg.zip](./firenze_terrains.gpkg.zip)
+- url: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
+- description: The data fragment shows the border of terrains in the Municipality of Florence.
+- copyright: Città Metropolitana di Firenze
+- license: CC-BY 4.0
+
 ### Cycle Circulation Area in Florence
 - title: [cycle-lanes-firenze.geojson](cycle-lanes-firenze.geojson)
 - url: http://opendata.comune.firenze.it/?q=metarepo/datasetinfo&id=52d8d3ab-eae5-400e-8561-d974f8612de0

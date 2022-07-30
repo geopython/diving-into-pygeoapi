@@ -27,6 +27,8 @@ we welcome you to click through the following applications.
 
 - [GeoMet-OGC-API](https://api.weather.gc.ca) provides public access to the Meteorological Service of Canada (MSC) and Environment and Climate Change Canada (ECCC) data via interoperable web services and application programming interfaces (APIs).
 - British Geological Survey provides an [instance of pygeoapi](https://ogcapi.bgs.ac.uk) with a selection of geological data.
+- [GeoE3](https://geoe3.eu) is a project to improve governmental geo date sharing in Europe, focusessed on buildings and infrastructure. [Multiple instances](https://geoe3platform.eu/geoe3/roads/) of pygeoapi are used for various themes.
+- [geoplatform.gov](https://sit-geoapi.geoplatform.info), a United States federal geospatial data platform, uses amongst others pygeoapi as a data endpoint.
 - [demo.pygeoapi.io](https://demo.pygeoapi.io/), the project demo site by the `pygeoapi` development team. Check the [main instance](https://demo.pygeoapi.io/master) which runs the latest GitHub `pygeoapi` version.
 
 The demo.pygeoapi.io site is developed in [a GitHub repository](https://github.com/geopython/demo.pygeoapi.io) using modern "devops" (GitOps) techniques.
