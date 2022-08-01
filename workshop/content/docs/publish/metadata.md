@@ -4,11 +4,15 @@ title: Metadata
 
 # Metadata
 
-To use OGC API Record we will use OGC API Records as data provider.
+## Configuration
 
-We will use the file workshop/docker/data/records/records.geojson
+To use OGC API Record we will use Elasticsearch as data provider.
 
-docker exec elastic /add_data.sh ./data/records/records.geojson id
+We will use this *workshop/docker/data/records/records.geojson*
+
+To add data to elasticsearch instance we can use the command `docker exec elastic /add_data.sh ./data/records/records.geojson id`
+
+Then we can uncomment the section related to example_catalog dataset in the `docker.config.yml`
 
 ## Client Access
 
