@@ -1,0 +1,23 @@
+    <html>
+    <head><title>OGC API Tiles exercise</title></head>
+    <body>
+    <div id="map" style="width:100vw;height:100vh;"></div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.2.0"></script>
+    <script>
+    map = L.map('map').setView({ lat: 43.79, lng: 11.25 }, 12);
+    map.addLayer(
+        new L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abcd',
+        minZoom: 1,
+        maxZoom: 16,
+        ext: 'jpg'
+        }));
+    map.addLayer(new L.vectorGrid.protobuf(
+        'http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt', 
+        { rendererFactory: L.canvas.tile }));
+    </script>
+    </body>
+    </html>

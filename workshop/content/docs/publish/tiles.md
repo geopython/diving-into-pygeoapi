@@ -117,7 +117,7 @@ And the tile metadata at this endpoint:
 
 !!! question "Add OGC API Tiles to a website with LeafletJS"
 
-    Copy the html below to a file called 'vector-tiles.html'. Open the file in a web browser.
+    Copy the html below to a file called 'vector-tiles.html', or locate this file on folder `./workshop/html` . Open the file in a web browser.
     The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API Tile service on top of an Open Street Map background.
 
     ``` {.html linenums="1"}
@@ -129,36 +129,28 @@ And the tile metadata at this endpoint:
     <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.2.0"></script>
     <script>
-    map = L.map('map').setView({ lat: 62, lng: 30 }, 5);
-    map.addLayer(new L.TileLayer(
-        'https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
-        {maxZoom: 11,attribution: '&copy; OpenStreetMap'}));
+    map = L.map('map').setView({ lat: 43.79, lng: 11.25 }, 12);
+    map.addLayer(
+        new L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abcd',
+        minZoom: 1,
+        maxZoom: 16,
+        ext: 'jpg'
+        }));
     map.addLayer(new L.vectorGrid.protobuf(
-        'https://demo.pygeoapi.io/master/collections/lakes/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt', 
+        'http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt', 
         { rendererFactory: L.canvas.tile }));
     </script>
     </body>
     </html>
     ```
 
+   ![](img/leaflet.png){ width=100% }
+
+!!! tip 
+    Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata), by updating the code on 'vector-tiles.html'.
+
 !!! tip 
 
     Openlayers is another javascript library with support for OGC API Tiles. Check out their [vector tile example](https://openlayers.org/en/latest/examples/ogc-vector-tiles.html).
-
-!!! question "Display OGC API Features with LeafletJS"
-
-    Open `vector-tiles.html` and add the following code after the creation of the vector tile layer. The code fetches features from pygeoapi and adds them to the map.
-
-    ``` {.js linenums="1"}
-    (async () => {
-        const windmills = await fetch('https://demo.pygeoapi.io/master/collections/dutch_windmills/items?limit=100', {
-        headers: { 'Accept': 'application/geo+json' }
-        }).then(response => response.json());
-        L.geoJSON(windmills).addTo(map);
-    })();
-    ```
-
-!!! tip 
-
-    Also ESRI supports the [OGC API Features layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html) in their javascript client.
-
