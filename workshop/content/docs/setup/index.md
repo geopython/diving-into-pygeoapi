@@ -4,15 +4,22 @@ title: Setup of the workshop environment
 
 # Setup
  
-In this workshop we will (only) use Docker and Docker Compose.
-So the first requirement is to install these on your system.
-We strongly advise to do the installation before the workshop starts.
+In this workshop we use the following materials:
+
+1) **Documentation** - (like this page): access latest on [dive.pygeoapi.io](https://dive.pygeoapi.io)
+2) **Exercises** - [download this zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises under `workshop/docker` 
+3) **Docker** - all examples/exercises run using Docker (and Docker Compose). 
+
+ad 2) alternatively you can fork/clone the GitHub repository of this workshop from https://github.com/geopython/diving-into-pygeoapi.
+
+The main requirement is to install Docker and/with Docker Compose on your system.
+We strongly advise to do the Docker installation before the workshop starts.
 
 Although several custom installation-methods for `pygeoapi` are available and well-documented 
 at [pygeoapi.io](https://pygeoapi.io), these
 will *not* be considered in this workshop. 
 Exercises will also be based on Docker, hence a custom installation would at least be 'challenging'. 
-The good news that only a single installation (Docker) is needed! The Docker Images
+The good news that only a single installation (Docker) is needed! The Docker Images used
 will contain the latest `pygeoapi` and all its dependencies and external services like PostGIS.
 
 ## About Docker
@@ -32,13 +39,24 @@ the orchestration of one or more Docker 'Containers' (a Container is a running i
 using a configuration convention, "The Docker Compose YAML File", usually named `docker-compose.yml`.
 
 Stepping up further are even more sophisticated Docker Orchestrators like Rancher and Kubernetes, but for
-our workshop Docker and Docker Compose is all we need.
+our workshop Docker and Docker Compose are all we need.
 
 ## Installation
 
 Docker installation has greatly progressed over the years. This is the only part of the workshop
 which is dependent on the system/OS you are running: Windows, Mac or Linux. For each
 system the Docker website provides detailed installation instructions. Please follow these consistently.
+
+> **⚠ NOTICE: Docker Compose variants.**  
+> Docker Compose in older (pre Compose v2) versions was a separate (Python) program to install,
+> though it was usually present in Docker Desktop. 
+> The Docker Compose command in that case is `docker-compose` (hyphened).
+> Very recent (since 2021) Docker (Desktop)-versions include Compose in the Docker CLI.
+> The command is then `docker compose` (space).
+> In our texts we will use `docker-compose`. Dependent on your installation you may need to 
+> replace the hyphen (-) with a space. But you can always install the original Compose, 
+> (`docker-compose`) e.g. with `pip install docker-compose`.
+
 The product is called Docker Desktop and includes Docker Compose:
 
 * Windows [installation](https://docs.docker.com/desktop/install/windows-install/)
@@ -54,9 +72,8 @@ Some notes:
 If all goes well, you should be able to run Docker from the commandline like:
 
 * `docker --version`
-* `docker-compose --version`
+* `docker-compose --version` or `docker compose version` (recent versions)
 
-The actual versions are not extremely important.
 
 ## Quickstart
 
