@@ -3,13 +3,15 @@ pygeoapi is an OGC Reference Implementation supporting numerous OGC API specific
 
 ## Setting up pygeoapi environment
 
-TODO
+This workshop uses Docker-technology all-over (Docker, Docker Compose). As a workshop-author you need to 
+have Docker running on your system, like the participants. For this you can follow the [Workshop Setup Guide](https://dive.pygeoapi.io/setup/).
+Only for the workshop content you need to fork/clone this repo as to make contributions via PRs etc.
 
 ## Building the manual
 
 The workshop manual is powered by
 by [MkDocs](https://www.mkdocs.org) which facilitates easy management
-of content and publishing.
+of content and publishing. On push/commit changes under [workshop/content](workshop/content) the site [dive.pygeoapi.io](https://dive.pygeoapi.io/) is re-generated and published (in GH Pages).
 
 ### Setting up the manual environment locally
 
