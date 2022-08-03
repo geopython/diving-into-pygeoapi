@@ -22,18 +22,33 @@ supported by a deployment of OGC API.
 
 !!! question "Use web browser to access OGC API"
 
-    Use your web browser to navigate to http://demo.pygeoapi.org/master. A browser by default opens 
+    Use your web browser to navigate to [demo.pygeoapi.io](https://demo.pygeoapi.io/master). A browser by default opens 
     any OGC API in html (as a webpage) due to the [accept header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) 
     sent by the browser: 'text/html'. On the right top corner you will notice a `json` link. The link 
     adds the parameter to the url: `?f=json`, which is a mechanism of pygeoapi to override the accept 
     header sent by the browser.
+
+!!! note 
+
+    When calling an OGC API from javascript, and the aim is to receive json. You can use the `?f=json` pygeoapi convention, or the content 
+    negotiation as provided by the standard; include a header `accept:"application/json"` in your request.
+    In jquery for example, this is represented by the dataType property
+
+    ``` {.js linenums="1"}
+    $.ajax({
+        method: "GET",
+        url: "https://demo.pygeoapi.io/master",
+        dataType: "json"
+    });
+    ```
+
 
 ## Open API
 
 OGC API Common adopted the conventions of the [Open API initiative](https://www.openapis.org/about) 
 as a starting point. Any Open API defines its structure in an Open Api Specification document. 
 OGC API Common suggests this document to be located at `/openapi`. With pygeoapi in a browser 
-[this url](http://demo.pygeoapi.org/master/openapi) opens an interactive html page which facilitates 
+[this url](http://demo.pygeoapi.io/master/openapi) opens an interactive html page which facilitates 
 to query the api. Append ?f=json to view the document in json. The Open API Specification (OAS) 
 document indicates which endpoints are available in the service, which parameters it accepts and 
 what type of responses can be expected. You can compare it to the GetCapabilities operation in the 
@@ -41,7 +56,7 @@ OWS standards.
 
 !!! question "OpenAPI Specification parsing in a browser" 
 
-    A common approach to interact with Open API's is to use a program like 
+    A common approach to interact with Open API's using json is to use a program like 
     [Postman](https://www.postman.com/). Also there are browser plugins which enable to define api 
     requests interactively within a browser. For firefox download the plugin 
     [poster](https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon). For Chrome 
@@ -57,14 +72,15 @@ The OpenAPI community provides various tools, such as a validator for OAS docume
 [OGC API Features'](https://ogcapi.ogc.org/features/) provides a standardised API to exchange vector 
 geometries and their attributes. Up till now the GeoJSON format is mainly used. The GeoJSON format 
 has been enriched with some properties to facilitate linkage, pagination and filters. AT OGC a group 
-works on a new json format for vector geometries, which improves some of the current limitations of 
-GeoJSON, such as the limitation of using ESSG:4326 only.
+works on a new json format for [features and geometries](https://www.ogc.org/projects/groups/featgeojsonswg), 
+which will improve some of the current limitations of GeoJSON, such as the limitation of using ESSG:4326 only.
 
 Some plugins are available for OGC API Features:
 
-- The tranformations plugin enables the import and expot of any data according to dedicated projections.
-- The CQL extension adds CQL filtering options. Basic filtering options are available in OGC API common. 
-CQL adds filters such as AND, OR, smaller/bigger then, within.
+- The [coordinate reference systems plugin](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections.
+- The [filtering extension](http://docs.ogc.org/DRAFTS/19-079r1.html) adds CQL filtering options. Basic filtering options are available in OGC API common. 
+CQL adds filters such as AND, OR, smaller/bigger then, within. *draft*
+- The [CRUD](http://docs.ogc.org/DRAFTS/20-002.html) plugin adds create, update, delete capabilities to OGC API. *draft*
 
 Support for CQL is currently under development in pygeoapi. Verify which filter capabilities are
  available for which backends in [the documentation](https://docs.pygeoapi.io/en/latest/cql.html). 
@@ -97,7 +113,8 @@ Access to coverage datasets (grids) is managed through the
 ## OGC API Records
 
 [OGC API Records](https://ogcapi.ogc.org/records/) provides access to repositories of 
-metadata records. The API is still under development at the OGC.
+metadata records. The API definition is likely to be adopted by OGC soon. pygeoapi contains an early implementation of the standard. 
+We'll look at an example in one of the exersizes.
 
 ## OGC API EDR
 
@@ -106,6 +123,10 @@ metadata records. The API is still under development at the OGC.
 ## OGC API Processes
 
 [OGC API Processes](https://ogcapi.ogc.org/processes/)
+
+## OGC API Routes
+
+[OGC API Routes](https://ogcapi.ogc.org/routes/)
 
 ## STAC
 
