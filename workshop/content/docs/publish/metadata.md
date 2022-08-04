@@ -4,7 +4,11 @@ title: Metadata
 
 # Metadata
 
-## Configuration
+[OGC API Records](https://ogcapi.ogc.org/records/) provides access to repositories of metadata records. 
+The API definition is likely to be adopted by OGC soon. pygeoapi contains an early implementation of the standard. 
+
+
+## Publish a set of metadata records in pygeoapi
 
 To use OGC API Record we will use Elasticsearch as data provider.
 

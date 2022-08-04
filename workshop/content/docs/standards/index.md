@@ -4,7 +4,8 @@ title: Standards
 
 # Standards
 
-This topic highlights some of the supported standards in pygeoapi.
+pygeoapi is build around the recent set of [API standards](https://ogcapi.ogc.org) emerging at the [Open Geospatial Consortium](https://www.ogc.org/) (OGC).
+This section introduces you in an interactive way to the core set of standards on which the new API standards are build.
 
 ## OGC API Common
 
@@ -13,11 +14,11 @@ Common defines aspects such as:
 
 - OGC API's are based on [Open API 3.0](https://spec.openapis.org/oas/latest.html)
 - HTML and JSON are dominant encodings, alternative encodings are possible
-- OGC API's have common endpoints such as /conformance, /collections/xxx/items/yyy 
-- Manages aspects such as pagination, links between endpoints and basic filters.
+- OGC API's have common endpoints such as /conformance, /openapi, /collections/xxx/items/yyy 
+- Manages aspects such as pagination, links between resources and basic filters.
 
 Typical for all OGC API's is that the core functionality is kept minimal and extra functionalities 
-are added using extensions. The /conformance endpoint indicates which standards and extensions are 
+are added using extensions. The `/conformance` endpoint indicates which standards and extensions are 
 supported by a deployment of OGC API.
 
 !!! question "Use web browser to access OGC API"
@@ -48,7 +49,7 @@ supported by a deployment of OGC API.
 OGC API Common adopted the conventions of the [Open API initiative](https://www.openapis.org/about) 
 as a starting point. Any Open API defines its structure in an Open Api Specification document. 
 OGC API Common suggests this document to be located at `/openapi`. With pygeoapi in a browser 
-[this url](http://demo.pygeoapi.io/master/openapi) opens an interactive html page which facilitates 
+[this url](https://demo.pygeoapi.io/master/openapi) opens an interactive html page which facilitates 
 to query the api. Append ?f=json to view the document in json. The Open API Specification (OAS) 
 document indicates which endpoints are available in the service, which parameters it accepts and 
 what type of responses can be expected. You can compare it to the GetCapabilities operation in the 
@@ -67,67 +68,55 @@ OWS standards.
 The OpenAPI community provides various tools, such as a validator for OAS documents or 
 [generate code](https://swagger.io/tools/swagger-codegen/) as a starting point for client development.
 
-## OGC API Features
+## GeoJSON
 
-[OGC API Features'](https://ogcapi.ogc.org/features/) provides a standardised API to exchange vector 
-geometries and their attributes. Up till now the GeoJSON format is mainly used. The GeoJSON format 
-has been enriched with some properties to facilitate linkage, pagination and filters. AT OGC a group 
-works on a new json format for [features and geometries](https://www.ogc.org/projects/groups/featgeojsonswg), 
-which will improve some of the current limitations of GeoJSON, such as the limitation of using ESSG:4326 only.
+Up till now the [GeoJSON](https://geojson.org/) format is mainly used as output format of OGC API. The GeoJSON format 
+has been enriched with some properties to facilitate linkage, pagination and filters. A minimal example of the GeoJSON output of OGC API Features is shown below:
 
-Some plugins are available for OGC API Features:
-
-- The [coordinate reference systems plugin](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections.
-- The [filtering extension](http://docs.ogc.org/DRAFTS/19-079r1.html) adds CQL filtering options. Basic filtering options are available in OGC API common. 
-CQL adds filters such as AND, OR, smaller/bigger then, within. *draft*
-- The [CRUD](http://docs.ogc.org/DRAFTS/20-002.html) plugin adds create, update, delete capabilities to OGC API. *draft*
-
-Support for CQL is currently under development in pygeoapi. Verify which filter capabilities are
- available for which backends in [the documentation](https://docs.pygeoapi.io/en/latest/cql.html). 
-
-## OGC API Tiles
-
-[OGC API Tiles](https://ogcapi.ogc.org/tiles/) offers a standardised API for accessing repositories 
-of tiled imagery. Either in bitmap or vector format.
-
-OGC API Tiles extends the collection/* url structure. In stead of items, the tilesets are listed under 
-collection/example/tiles/*, eg.
-
-```
-https://demo.pygeoapi.io/collections/lakes/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt
+``` {.json  linenums="1"}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "371",
+            "geometry": { "type": "Point", "coordinates": [-75.0, 45.0] },
+            "properties": { "stn_id": "35", "value": "89.9" }
+        }
+    ],
+    "numberMatched": 1,
+    "numberReturned": 1,
+    "links": [
+        { "type": "application/geo+json", "rel": "self", "title": "This document as GeoJSON", "href": "https://demo.pygeoapi.io/master/collections/obs/items?f=json&limit=1" },
+        { "type": "text/html", "rel": "alternate", "title": "This document as HTML", "href": "https://demo.pygeoapi.io/master/collections/obs/items?f=html&limit=1" },
+        { "type": "application/geo+json", "rel": "next", "title": "items (next)", "href": "https://demo.pygeoapi.io/master/collections/obs/items?offset=1&limit=1" },
+        { "type": "application/json", "title": "Observations", "rel": "collection","href": "https://demo.pygeoapi.io/master/collections/obs/items"}
+    ],
+    "timeStamp": "2022-08-04T12:11:19.236327Z"
+}
 ```
 
-pygeoapi is able to advertise an existing tileset as OGC API Tiles. pygeoapi itself does not render 
-tiles from source data. Use [tilemill](https://tilemill-project.github.io/tilemill/), 
-[Mapproxy](https://mapproxy.org/) or 
-[QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html) to generate the tileset.
+At OGC a group works on a new json format for [features and geometries](https://www.ogc.org/projects/groups/featgeojsonswg), 
+which will improve some of the current limitations of GeoJSON, such as the limitation of using ESSG:4326 only. 
 
-Notice that the OGC API Tiles url structure is compatible with XYZ layers in common libraries, 
-such as OpenLayers, Leaflet and MapML.
+## Dedicated OGC API's
 
-## OGC API Coverages
+In the next section we will dive into the dedicated API's related to specific types of information. Notice that multiple of these dedicated api's are combined into a single OGC API endpoint.
 
-Access to coverage datasets (grids) is managed through the 
-[OGC Coverage API](https://ogcapi.ogc.org/coverages/). The API is still under development at the OGC.
+- [OGC API Features](../publish/vector.md) provides access to vector features.
+- [OGC API Tiles](../publish/tiles.md) provides access to sets of tile imagery or vector
+- [OGC API Coverages](../publish/raster.md) provides access to raster data
+- [OGC API Records](../publish/metadata.md) provides access to repositories of metadata records. 
+- [OGC API EDR](../publish/env.md) provides access to environmental data
 
-## OGC API Records
+In the OGC community, new extensions to OGC API emerge regularly. Some of those have an initial phase of implementation in pygeoapi, but we'll not introduce them in this training. Have a look at the software manual to follow their progress.
 
-[OGC API Records](https://ogcapi.ogc.org/records/) provides access to repositories of 
-metadata records. The API definition is likely to be adopted by OGC soon. pygeoapi contains an early implementation of the standard. 
-We'll look at an example in one of the exersizes.
-
-## OGC API EDR
-
-[OGC APi EDR](https://ogcapi.ogc.org/edr/)
-
-## OGC API Processes
-
-[OGC API Processes](https://ogcapi.ogc.org/processes/)
-
-## OGC API Routes
-
-[OGC API Routes](https://ogcapi.ogc.org/routes/)
-
-## STAC
-
-[Spatiotemporal Asset Catalog](https://stacspec.org/) 
+- [Maps](https://ogcapi.ogc.org/maps) can serve spatially referenced and dynamically rendered map imagery.
+- [Processes](https://ogcapi.ogc.org/processes) provides a standardised processing interface as part of OGC API.
+- [Routes](https://ogcapi.ogc.org/routes) provides acces to routing data.
+- [Spatiotemporal Asset Catalog](https://stacspec.org) provides access to metadata and data about Earth Observation data.
+- [Styles](https://ogcapi.ogc.org/styles) defines a Web API that enables map servers, clients as well as visual style editors, to manage and fetch styles.
+- [3D GeoVolumes](https://ogcapi.ogc.org/geovolumes) facilitates efficient discovery of and access to 3D content in multiple formats based on a space-centric perspective.
+- [Moving Features](https://ogcapi.ogc.org/movingfeatures) defines an API that provides access to data representing features that move as rigid bodies.
+- [Joins](https://ogcapi.ogc.org/joins)  supports the joining of data, from multiple sources, with feature collections or directly with other input files.
+- [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS).

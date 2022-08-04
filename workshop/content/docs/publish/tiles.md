@@ -6,6 +6,26 @@ title: Tiles of geospatial information
 
 On  this section, you will learn how to publish and consume vector tiles using the [OGC API - Tiles](https://github.com/opengeospatial/ogcapi-tiles) candidate standard.
 
+[OGC API Tiles](https://ogcapi.ogc.org/tiles/) offers a standardised API for accessing repositories 
+of tiled imagery. Either in bitmap or vector format.
+
+OGC API Tiles extends the collection/* url structure. In stead of items, the tilesets are listed under 
+collection/example/tiles/*, eg.
+
+```
+https://demo.pygeoapi.io/collections/lakes/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt
+```
+
+pygeoapi is able to advertise an existing tileset as OGC API Tiles. pygeoapi itself does not render 
+tiles from source data. Use [tilemill](https://tilemill-project.github.io/tilemill/), 
+[Mapproxy](https://mapproxy.org/) or 
+[QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html) to generate the tileset.
+
+Notice that the OGC API Tiles url structure is compatible with XYZ layers in common libraries, 
+such as OpenLayers, Leaflet and MapML.
+
+## Publish a tile dataset
+
 You will publish a vector [dataset](.../../../docker/data/cycle-lanes-firenze.geojson) with cycle paths, from the city of Florence. [Here](.../../../docker/data/cycle-lanes-firenze.qmd) you can find more information about the dataset.
 
 Change to docker directory:
