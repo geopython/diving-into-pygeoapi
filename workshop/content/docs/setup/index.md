@@ -6,22 +6,19 @@ title: Setup of the workshop environment
  
 In this workshop we use the following materials:
 
-1) **Documentation** - (like this page): access latest on [dive.pygeoapi.io](https://dive.pygeoapi.io)
+1. **Documentation** - (like this page): access latest on [dive.pygeoapi.io](https://dive.pygeoapi.io)
+1. **Exercises** - [download this zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises under `workshop/docker` [^1]
+1. **Docker** - all examples/exercises are run in a `Docker container` 
 
-2) **Exercises** - [download this zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises under `workshop/docker`
- 
-3) **Docker** - all examples/exercises run using Docker (and Docker Compose). 
+[^1]: alternatively you can fork/clone the GitHub repository of this workshop from https://github.com/geopython/diving-into-pygeoapi.
 
-ad 2) alternatively you can fork/clone the GitHub repository of this workshop from https://github.com/geopython/diving-into-pygeoapi.
-
-The main requirement is to install Docker and/with Docker Compose on your system.
-We strongly advise to do the Docker installation before the workshop starts.
+The main requirement for the training is, to install Docker and/with Docker Compose on your system.
+We strongly advise to install Docker before the workshop starts.
 
 Although several custom installation-methods for `pygeoapi` are available and well-documented 
-at [pygeoapi.io](https://pygeoapi.io), these
-will *not* be considered in this workshop. 
+at [pygeoapi.io](https://pygeoapi.io), these will *not* be considered in this workshop. 
 Exercises will also be based on Docker, hence a custom installation would at least be 'challenging'. 
-The good news that only a single installation (Docker) is needed! The Docker Images used
+The good news is that only a single installation (Docker) is needed! The Docker Images used
 will contain the latest `pygeoapi` and all its dependencies and external services like PostGIS.
 
 ## About Docker
@@ -49,15 +46,15 @@ Docker installation has greatly progressed over the years. This is the only part
 which is dependent on the system/OS you are running: Windows, Mac or Linux. For each
 system the Docker website provides detailed installation instructions. Please follow these consistently.
 
-> **⚠ NOTICE: Docker Compose variants.**  
-> Docker Compose in older (pre Compose v2) versions was a separate (Python) program to install,
-> though it was usually present in Docker Desktop. 
-> The Docker Compose command in that case is `docker-compose` (hyphened).
-> Very recent (since 2021) Docker (Desktop)-versions include Compose in the Docker CLI.
-> The command is then `docker compose` (space).
-> In our texts we will use `docker-compose`. Dependent on your installation you may need to 
-> replace the hyphen (-) with a space. But you can always install the original Compose, 
-> (`docker-compose`) e.g. with `pip install docker-compose`.
+!!! Note "Docker Compose variants."
+
+    Docker Compose in older (pre Compose v2) versions was a separate (Python) program to install,
+    though it was usually present in Docker Desktop. 
+    The Docker Compose command in that case is `docker-compose` (hyphened).
+    Very recent (since 2021) Docker (Desktop)-versions include Compose in the Docker CLI. The command is then `docker compose` (space).
+    In our texts we will use `docker-compose`. Dependent on your installation you may need
+    to replace the hyphen (-) with a space. But you can always install the original
+    Compose, (`docker-compose`) e.g. with `pip install docker-compose`.
 
 The product is called Docker Desktop and includes Docker Compose:
 
@@ -67,19 +64,20 @@ The product is called Docker Desktop and includes Docker Compose:
 
 Some notes:
 
-* on Windows we recommend using the WSL, Windows Subsystem for Linux as it also provides a powerful (Bash) commandline
+* on Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) as it also provides a powerful (Bash) commandline
 * on Mac, if you are already using Homebrew, consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/docker)
-* on Linux you need to choose your platform. You could also use Virtualbox with a Ubuntu Image or have on a cloud VM.
+* on Linux you need to choose the relevant installer for your platform. You could also use Virtualbox with a Ubuntu Image or have on a cloud VM.
 
 If all goes well, you should be able to run Docker from the commandline like:
 
-* `docker --version`
-* `docker-compose --version` or `docker compose version` (recent versions)
-
+```
+`docker --version`
+`docker-compose --version` or `docker compose version` (recent versions)
+```
 
 ## Quickstart
 
-Once Docker is available on your system, running `pygeoapi` with its built-in configuration and 
+Once Docker is available on your system, running the `pygeoapi` container with its built-in configuration and 
 data is a one-liner. Open a terminal session:
 
 <div class="termy">
@@ -107,24 +105,23 @@ Next, you can override the default configuration and add your own data using *Do
 
 ### Custom Configuration
 
-Here we override the default configuration which resides at `/pygeoapi/local.config.yml` within the Container 
-with our local file [default.config.yml](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml) 
-by using Docker Volume Mount (`-v` option). A Docker Volume mount attaches, 'mounts', a 
+In the upcoming exercises we are going to update the configuration file multiple times.
+For ease of development we suggest to override the default configuration which resides at `/pygeoapi/local.config.yml` within the Container 
+by a local file (download it from [default.config.yml](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml)) 
+by using a Docker Volume Mount (`-v` option). A Docker Volume mount attaches, 'mounts', a 
 directory or single file from your host/local system into the Docker Container.
 
 <div class="termy">
 
 ```console
-$ curl -O https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml
-$ vi default.config.yml
 $ docker run -p 5000:80 \
     -v $(pwd)/default.config.yml:/pygeoapi/local.config.xml \
     geopython/pygeoapi:latest
-$ curl http://localhost:5000
-# or open http://localhost:5000 with your browser
 ```
 
 </div>
+
+In above snippet `$(pwd)` indicates the working folder from which you start the docker container. Test the new configuration by navigating to http://localhost:5000/pygeoapi
 
 ### Adding Data
 
@@ -144,15 +141,11 @@ Below we also see that the configuration is explictly set to `pygeoapi-config.ym
 <div class="termy">
 
 ```console
-$ curl -O https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml
-$ vi default.config.yml
 $ docker run -p 5000:80 \
     -v $(pwd)/data:/pygeoapi/mydata \
     -v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.xml \
     -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
     geopython/pygeoapi:latest
-$ curl http://localhost:5000
-# or open http://localhost:5000 with your browser
 ```
 
 </div>
