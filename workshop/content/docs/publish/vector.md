@@ -4,13 +4,24 @@ title: Vector data
 
 # Vector Data
 
+[OGC API Features'](https://ogcapi.ogc.org/features/) provides a standardised API to exchange vector 
+geometries and their attributes. Some plugins are available for OGC API Features:
+
+- The [coordinate reference systems plugin](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections.
+- The [filtering extension](http://docs.ogc.org/DRAFTS/19-079r1.html) adds CQL filtering options. Basic filtering options are available in OGC API common. 
+CQL adds filters such as AND, OR, smaller/bigger then, within. *draft*
+- The [CRUD](http://docs.ogc.org/DRAFTS/20-002.html) plugin adds create, update, delete capabilities to OGC API. *draft*
+
+Support for CQL is currently under development in pygeoapi. Verify which filter capabilities are
+ available for which backends in [the documentation](https://docs.pygeoapi.io/en/latest/cql.html). 
+
 ## Publish a vector dataset
 
-In the previous section you have seen in general which steps are involved to change the pygeoapi configuration file to load a dataset. In this section we are going to apply these steps to an actual data file.
+In the previous section you have seen in general which steps are involved to change the pygeoapi configuration file to load a dataset. In this section we are going to publish another vector file, this time from a [Geopackage](https://www.geopackage.org/) (sqlite) source.
 
 !!! tip
 
-    It can be helpfull to open the dataset in QGIS while you're updating the pygeoapi configuration. So you can easily evaluate aspects such as: what are the attribute names of the dataset, what is the bounding box and in which projection is the file?
+    It can be helpfull to open the dataset in QGIS while you're updating the pygeoapi configuration. So you can easily evaluate aspects such as: what are the table and attribute names of the dataset, what is the bounding box and in which projection is the file?
 
 You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is available in the workshop data folder. 
 
@@ -25,14 +36,20 @@ You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is availab
     ``` {.yaml linenums="1"}
     firenze-terrains:
         type: collection 
-        title: Catasto - Terreni - Firenze
-        description: Limiti catastali (terreni) dal catasto. Agenzia del Territorio; SIT e Reti Informative;
+        title: 
+            it: Limiti amministrativi comunali ante 2014
+            en: Administrative boundaries before 2014
+        description: 
+            it: Limiti catastali (terreni) dal catasto. Agenzia del Territorio; SIT e Reti Informative;
+            en: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
         keywords:  
-            - Cadaster
+            - Cadastral parcels
         links:
             - type: text/html
               rel: canonical  
-              title: Limiti amministrativi comunali ante 2014
+              title: 
+                it: Limiti amministrativi comunali ante 2014
+                en: Administrative boundaries before 2014
               href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
               hreflang: it
         extents:
