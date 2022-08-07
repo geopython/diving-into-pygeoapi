@@ -61,6 +61,50 @@ Save the file and restart the docker compose. Navigate to localhost:5000/collect
 
     The sqlite driver incidentally has challenges to open the geopackage extension on MacOS. Read [this thread](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) or try with an alternative data format.
  
+## pygeoapi as a WFS proxy
+
+An interesting use case for pygeoapi is to provide a OGC API Features interface over existing WFS endpoints. In this scenario you increase the usability of existing services to a wider audience. In this exersize we are setting op a API on top of an existing WFS hosted by the municipality of Florence.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor. Add a new dataset section, defined by:
+
+    ``` {.yaml linenums="1"}
+    suol_uso_suolo:
+        type: collection 
+        title: Uso del suolo (anno 2009)
+        description: Carta dell'Uso del Suolo del 2009 relativa al territorio della Città Metropolitana di Firenze. Il dato è stato promosso dall'amministrazione provinciale e realizzato come aggiornamento dell'UCS della Regione Toscana realizzato dal Consorzio LAMMA nel 2007
+        keywords:  
+            - suolo
+        links:
+            -   type: text/html
+                rel: canonical  
+                title: Uso del suolo
+                href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/suol_uso_suolo/wfs?request=getCapabilities&service=WFS&version=2.0.0
+                hreflang: it
+        extents:
+            spatial: 
+                bbox: [11.23,43.75,11.28,43.78] 
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            -   type: feature
+                name: OGR
+                data:
+                    source_type: WFS
+                    source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/suol_uso_suolo/wfs?
+                    source_srs: EPSG:3003
+                    target_srs: EPSG:4326
+                    source_capabilities:
+                        paging: True
+                    source_options:
+                        OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
+                    gdal_ogr_options:
+                        EMPTY_AS_NULL: NO
+                        GDAL_CACHEMAX: 64
+                        CPL_DEBUG: NO
+                id_field: gml_id
+                layer: suol_uso_suolo
+    ```
 
 ## Client Access
 
