@@ -10,13 +10,45 @@ The API definition is likely to be adopted by OGC soon. pygeoapi contains an ear
 
 ## Publish a set of metadata records in pygeoapi
 
-To use OGC API Record we will use Elasticsearch as data provider.
+With pygeoapi we can setup an OGC API Record using any data provider. In this example we will use [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html).
 
-We will use this *workshop/docker/data/records/records.geojson*
+To use the example database *workshop/docker/data/records/catalogue.tinydb* we must configure it in `docker.config.yml` with following configuration:
 
-To add data to elasticsearch instance we can use the command `docker exec elastic /add_data.sh ./data/records/records.geojson id`
+``` {.yaml linenums="1"}
+    example_catalog:
+        type: collection
+        title: FOSS4G Florence Record catalog
+        description: FOSS4G Florence Record catalog (OGC API Records)
+        keywords:
+            - Services
+            - Infrastructures
+            - Florence
+            - FOSS4G
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: http://opendata.comune.firenze.it
+              hreflang: en-US
+        extents:
+            spatial:
+                bbox: [11.145, 43.718, 11.348, 43.84]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            - type: record
+              name: TinyDBCatalogue
+              data: ../data/records/catalogue.tinydb
+              id_field: externalId
+              time_field: recordCreated
+              title_field: title
+```
+Then restast the instance.
 
-Then we can uncomment the section related to example_catalog dataset in the `docker.config.yml`
+It's possible to load more example ISO19139 metadata in a TinyDB database with [this script](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)
+
+``` {.bash linenums="1"}
+python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
+```
 
 ## Client Access
 
