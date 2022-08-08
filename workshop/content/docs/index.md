@@ -10,10 +10,10 @@ title: Diving into pygeoapi
 
 In this workshop we'll discuss the following topics:
 
-- [Introduction to pygeoapi](intro/index.md)
-- [Set up the training environment](setup/index.md)
+- [Introduction to pygeoapi](intro.md)
+- [Set up the training environment](setup.md)
 - Configuration / administration / running
-- [Standards & building blocks](standards/index.md)
+- [Standards & building blocks](standards.md)
 - [Publishing data](publish/index.md)
 - [Advanced topics](advanced/index.md)
 

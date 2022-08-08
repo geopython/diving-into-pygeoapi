@@ -1,8 +1,8 @@
 ---
-Title: pygeoapi and the semantic web
+Title: Semantic Web and Linked Data
 ---
 
-# pygeoapi and the semantic web
+# Semantic Web and Linked Data
 
 The work on pygeoapi touches on 3 aspects of semantic web:
 
