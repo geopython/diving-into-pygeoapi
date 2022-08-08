@@ -19,12 +19,14 @@ nav:
         - Environmental data via OGC - Environmental Data Retrieval: publish/ogcedr.md
     - Advanced topics:
         - advanced/index.md
-        - Cloud deployment: advanced/cloud.md
         - Multilingual support: advanced/i18n.md
-        - INSPIRE support: advanced/inspire.md
         - UI customization and templating: advanced/ui-custom-templates.md
-        - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
+        - Custom plugins: advanced/custom-plugins.md
+        - Security and access control: advanced/security-access-control.md
         - Search Engine Optimization (SEO): advanced/seo.md
+        - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
+        - Cloud deployment: advanced/cloud.md
+        - INSPIRE support: advanced/inspire.md
 
 use_directory_urls: true
 
