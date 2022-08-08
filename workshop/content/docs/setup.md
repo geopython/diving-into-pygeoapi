@@ -1,5 +1,5 @@
 ---yml
-title: Setup of the workshop environment
+title: Workshop environment:setup
 ---
 
 # Setup

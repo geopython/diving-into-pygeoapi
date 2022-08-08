@@ -5,7 +5,7 @@ In this 4-hour workshop we will give you an introduction to `pygeoapi`.
 
 Although `pygeoapi` is written in Python (v3) and very customizable and extensible (Plugins) 
 for Python developers, Python skills are not required to enjoy the product and this workshop.
-Your favorite text-editor (and Docker, more in the [setup section](../setup/index.md)) is all you need!
+Your favorite text-editor (and Docker, more in the [setup section](setup.md)) is all you need!
 
 ## Background reading
 

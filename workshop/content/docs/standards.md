@@ -103,11 +103,11 @@ which will improve some of the current limitations of GeoJSON, such as the limit
 
 In the next section we will dive into the dedicated API's related to specific types of information. Notice that multiple of these dedicated api's are combined into a single OGC API endpoint.
 
-- [OGC API Features](../publish/vector.md) provides access to vector features.
-- [OGC API Tiles](../publish/tiles.md) provides access to sets of tile imagery or vector
-- [OGC API Coverages](../publish/raster.md) provides access to raster data
-- [OGC API Records](../publish/metadata.md) provides access to repositories of metadata records. 
-- [OGC API EDR](../publish/env.md) provides access to environmental data
+- [OGC API Features](publish/ogcfeat.md) provides access to vector features.
+- [OGC API Tiles](publish/ogctile.md) provides access to sets of tile imagery or vector
+- [OGC API Coverages](publish/ogccov.md) provides access to raster data
+- [OGC API Records](publish/ogcrec.md) provides access to repositories of metadata records. 
+- [OGC API EDR](publish/ogcedr.md) provides access to environmental data
 
 In the OGC community, new extensions to OGC API emerge regularly. Some of those have an initial phase of implementation in pygeoapi, but we'll not introduce them in this training. Have a look at the software manual to follow their progress.
 

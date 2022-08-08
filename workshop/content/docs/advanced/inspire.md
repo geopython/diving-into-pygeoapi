@@ -1,8 +1,8 @@
 ---
-title: pygeoapi and INSPIRE
+title: INSPIRE support
 ---
 
-# pygeoapi and INSPIRE
+# INSPIRE support
 
 [INSPIRE](https://inspire.ec.europa.eu/) is a European directive on data sharing in the environmental domain. EU memberstates 
 have invested almost 20 years of effort to harmonize data in the environmental domain and publish it using OGC standards. 

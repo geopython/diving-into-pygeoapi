@@ -4,11 +4,11 @@ title: Advanced topics
 
 # Advanced topics
 
-- Security/access control
+- Security and access control
 - [Multilingual support](i18n.md)
+- [INSPIRE support](inspire.md)
 - Custom plugins
-- [Cloud deployment (DevOps)](cloud.md)
-- [pygeoapi and INSPIRE](inspire.md)
-- [HTML templating](jinja-templates.md)
-- [JSON-LD](json-ld.md)
-- [Search Engine Optimisation](seo.md) 
+- [Cloud deployment](cloud.md)
+- [UI customization and templating](ui-custom-templates.md)
+- [Semantic Web and Linked Data](semantic-web-linked-data.md)
+- [Search Engine Optimization (SEO)](seo.md) 
