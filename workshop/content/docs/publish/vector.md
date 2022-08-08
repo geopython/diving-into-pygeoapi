@@ -23,11 +23,7 @@ In the previous section you have seen in general which steps are involved to cha
 
     It can be helpfull to open the dataset in QGIS while you're updating the pygeoapi configuration. So you can easily evaluate aspects such as: what are the table and attribute names of the dataset, what is the bounding box and in which projection is the file?
 
-You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is available in the workshop data folder. 
-
-!!! question "Move the file so it is available to pygeoapi"
-
-    Download and unzip the firenze-terrains.gpkg.zip file and place it in a folder accessible for pygeoapi. If you run pygeoapi in a container, you can mount the folder with the datafile of the host system into the container.
+You are going to add a file `firenze_terrains.gpkg` to pygeoapi which is available in the workshop data folder. Unzip the file as firenze_terrains.gpkg.
 
 !!! question "Update the pygeoapi configuration"
 
@@ -36,42 +32,84 @@ You are going to add a file `firenze-terrains.gpkg` to pygeoapi which is availab
     ``` {.yaml linenums="1"}
     firenze-terrains:
         type: collection 
-        title: 
-            it: Limiti amministrativi comunali ante 2014
-            en: Administrative boundaries before 2014
-        description: 
-            it: Limiti catastali (terreni) dal catasto. Agenzia del Territorio; SIT e Reti Informative;
-            en: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
+        title: Administrative boundaries before 2014
+        description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
         keywords:  
             - Cadastral parcels
         links:
-            - type: text/html
-              rel: canonical  
-              title: 
-                it: Limiti amministrativi comunali ante 2014
-                en: Administrative boundaries before 2014
-              href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
-              hreflang: it
+            -   type: text/html
+                rel: canonical  
+                title: Administrative boundaries before 2014
+                href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
+                hreflang: it
         extents:
             spatial: 
                 bbox: [11.23,43.75,11.28,43.78] 
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
-            - type: feature
-              name: SQLiteGPKG
-              data: /data/firenze_terrains.gpkg # place correct path here
-              id_field: fid
-              table: firenze_terrains
+            -   type: feature
+                name: SQLiteGPKG
+                data: /data/firenze_terrains.gpkg # place correct path here
+                id_field: fid
+                title_field: codbo
+                table: firenze_terrains
     ```
 
-Save the file and restart the service. Navigate to localhost:5000/pygeoapi/collections to evaluate if the new dataset is available.
+Save the file and restart the docker compose. Navigate to localhost:5000/collections to evaluate if the new dataset is available.
 
 !!! tip 
 
     The sqlite driver incidentally has challenges to open the geopackage extension on MacOS. Read [this thread](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) or try with an alternative data format.
  
+## pygeoapi as a WFS proxy
+
+An interesting use case for pygeoapi is to provide a OGC API Features interface over existing WFS endpoints or even ESRI FeatureServer APIs. In this scenario you increase the usability of existing services to a wider audience. In this exersize we are setting op an API on top of an existing WFS hosted by the city of Florence.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor. Add a new dataset section, defined by:
+
+    ``` {.yaml linenums="1"}
+    suol_epicentri_storici:
+        type: collection 
+        title: Epicenters of the main historical earthquakes
+        description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
+        keywords:  
+            - earthquakes
+        links:
+            -   type: text/xml
+                rel: canonical  
+                title: Epicenters of the main historical earthquakes
+                href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
+                hreflang: it
+        extents:
+            spatial: 
+                bbox: [10.94, 43.52, 11.65, 44.17] 
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            -   type: feature
+                name: OGR
+                data:
+                    source_type: WFS
+                    source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
+                    source_srs: EPSG:3003
+                    target_srs: EPSG:4326
+                    source_capabilities:
+                        paging: True
+                    source_options:
+                        OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
+                    gdal_ogr_options:
+                        EMPTY_AS_NULL: NO
+                        GDAL_CACHEMAX: 64
+                        CPL_DEBUG: NO
+                id_field: cpti_id
+                title_field: d
+                layer: territorio:suol_epicentri_storici
+    ```
 
 ## Client Access
+
+### QGIS
 
 QGIS is one of the first GIS Desktop clients which added support for OGC API Features. The support has been integrated into the WFS connection panel.
 
@@ -107,6 +145,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API Fea
 
     An increasing number of GIS Desktop clients add support for OGC API's in subsequent releases. For example ArcGIS Pro [supports OGC API Features](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) since release 2.8.
 
+### GDAL/OGR
 
 [GDAL/OGR](https://gdal.org) provides mechanisms to interact with [OGC API Features](https://gdal.org/drivers/vector/oapif.html) as well as [OGC API Coverages](https://gdal.org/drivers/raster/ogcapi.html). It means you can use the popular client commands to interact with OGC API's; ogrinfo, gdalinfo, ogr2ogr, etc. Also you can make connections to OGC API's from any software which has an interface to gdal, such as Mapserver, GeoServer, Manifold, FME, ArcGIS, etc.
 
@@ -130,6 +169,8 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API Fea
 !!! Note
 
     You can even use OGR to append new features to an OGC API Features collection. However at this moment in time pygeoapi does not support transactions yet.
+
+### OWSLIB
 
 [OWSlib](https://geopython.github.io/OWSLib/) is a python library to interact with OGC services. Recently support for OGC API Features, Records and Coverages has been added.
 
