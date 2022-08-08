@@ -38,6 +38,7 @@ theme:
         scheme: pygeoapi
     features:
         - navigation.indexes 
+    favicon: assets/favicon.ico
 
 
 
