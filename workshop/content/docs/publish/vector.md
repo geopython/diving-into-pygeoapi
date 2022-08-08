@@ -63,35 +63,35 @@ Save the file and restart the docker compose. Navigate to localhost:5000/collect
  
 ## pygeoapi as a WFS proxy
 
-An interesting use case for pygeoapi is to provide a OGC API Features interface over existing WFS endpoints. In this scenario you increase the usability of existing services to a wider audience. In this exersize we are setting op a API on top of an existing WFS hosted by the municipality of Florence.
+An interesting use case for pygeoapi is to provide a OGC API Features interface over existing WFS endpoints or even ESRI FeatureServer APIs. In this scenario you increase the usability of existing services to a wider audience. In this exersize we are setting op an API on top of an existing WFS hosted by the city of Florence.
 
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration file in a text editor. Add a new dataset section, defined by:
 
     ``` {.yaml linenums="1"}
-    suol_uso_suolo:
+    suol_epicentri_storici:
         type: collection 
-        title: Uso del suolo (anno 2009)
-        description: Carta dell'Uso del Suolo del 2009 relativa al territorio della Città Metropolitana di Firenze. Il dato è stato promosso dall'amministrazione provinciale e realizzato come aggiornamento dell'UCS della Regione Toscana realizzato dal Consorzio LAMMA nel 2007
+        title: Epicenters of the main historical earthquakes
+        description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
         keywords:  
-            - suolo
+            - earthquakes
         links:
-            -   type: text/html
+            -   type: text/xml
                 rel: canonical  
-                title: Uso del suolo
-                href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/suol_uso_suolo/wfs?request=getCapabilities&service=WFS&version=2.0.0
+                title: Epicenters of the main historical earthquakes
+                href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
                 hreflang: it
         extents:
             spatial: 
-                bbox: [11.23,43.75,11.28,43.78] 
+                bbox: [10.94, 43.52, 11.65, 44.17] 
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             -   type: feature
                 name: OGR
                 data:
                     source_type: WFS
-                    source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/suol_uso_suolo/wfs?
+                    source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
                     source_srs: EPSG:3003
                     target_srs: EPSG:4326
                     source_capabilities:
@@ -102,8 +102,9 @@ An interesting use case for pygeoapi is to provide a OGC API Features interface 
                         EMPTY_AS_NULL: NO
                         GDAL_CACHEMAX: 64
                         CPL_DEBUG: NO
-                id_field: gml_id
-                layer: suol_uso_suolo
+                id_field: cpti_id
+                title_field: d
+                layer: territorio:suol_epicentri_storici
     ```
 
 ## Client Access
