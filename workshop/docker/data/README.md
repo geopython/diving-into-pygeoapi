@@ -40,3 +40,10 @@ This directory provides sample data to demonstrate functionality.
 - description: Punctual positioning of the car-sharing activities of the Metropolitan City of Florence.
 - copyright: Comune di Firenze
 - license: CC-BY 4.0
+
+### German Soil Types
+- title: [bodenart.en.csv](bodenart.en.csv)
+- url: https://registry.gdi-de.org/codelist/de.bund.thuenen/bodenart/bodenart.en.csv
+- description: Bodenarten auf Basis der Bodenkundlichen Kartieranleitung 5. Auflage (KA5)
+- copyright: Johann Heinrich von Thünen-Institut
+- license: CC-BY 4.0
