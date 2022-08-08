@@ -26,7 +26,10 @@ such as OpenLayers, Leaflet and MapML.
 
 ## Publish a tile dataset
 
-You will publish a vector [dataset](.../../../docker/data/cycle-lanes-firenze.geojson) with cycle paths, from the city of Florence. [Here](.../../../docker/data/cycle-lanes-firenze.qmd) you can find more information about the dataset.
+For this exercise, you will publish a vector dataset of cycle paths, from the city of Florence.
+
+* data:  `../../../docker/data/cycle-lanes-firenze.geojson`
+* metadata:  `../../../docker/data/cycle-lanes-firenze.qmd`
 
 Change to docker directory:
 
