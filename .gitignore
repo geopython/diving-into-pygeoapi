@@ -1,3 +1,2 @@
 .DS_Store
-./workshop/.DS_Store
-./workshop/docker/data/tiles
+workshop/docker/data/tiles
