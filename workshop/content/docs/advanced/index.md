@@ -4,10 +4,10 @@ title: Advanced topics
 
 # Advanced topics
 
-- Security and access control
+- [Security and access control](security-access-control.md)
 - [Multilingual support](i18n.md)
 - [INSPIRE support](inspire.md)
-- Custom plugins
+- [Custom plugins](custom-plugins.md)
 - [Cloud deployment](cloud.md)
 - [UI customization and templating](ui-custom-templates.md)
 - [Semantic Web and Linked Data](semantic-web-linked-data.md)
