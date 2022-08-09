@@ -11,7 +11,7 @@ Access to coverage datasets (grids) is managed through the
 
 In the previous section you have seen in general which steps are involved to change the pygeoapi configuration file to load a dataset. In this section we are going to publish a GeoTiff raster file, from a [rasterio](https://rasterio.readthedocs.io) source.
 
-Download and unzip a tiff file, eg. [53.tif](http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip).
+Download and unzip a GeoTiff file, eg. [53.tif](http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip).
 
 You are going to add a file `53_ED1_G.tif` to pygeoapi which is available in the workshop data folder.
 
@@ -47,7 +47,7 @@ You are going to add a file `53_ED1_G.tif` to pygeoapi which is available in the
 
 !!! question "The rasterio provider ``format.name`` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)"
 
-Save the file and restart the docker compose. Navigate to localhost:5000/collections to evaluate if the new dataset is available.
+Save the file and restart the docker compose. Navigate to ``http://localhost:5000/collections`` to evaluate if the new dataset is available.
 
 
 ## Client Access
