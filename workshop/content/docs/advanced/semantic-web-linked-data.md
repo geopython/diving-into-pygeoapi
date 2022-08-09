@@ -17,7 +17,7 @@ Search engines use technology similar to semantic web, to facilitate capturing s
 
 ## Publish spatial data in the semantic web
 
-OGC API Common adopted a number of W3C conventions, which bring the API's closer to the standards of semantic web, compared to the OWS standards.
+OGC API - Common adopted a number of W3C conventions, which bring the API's closer to the standards of semantic web, compared to the OWS standards.
 At this moment pygeaopi does not aim to be a full implementation of semantic web, however it is possible to advertise some aspects of semantic web,
 so the data can be traversed by semantic aware clients.
 
@@ -89,4 +89,4 @@ A group within the pygeoapi community aims to facilitate semantic web access for
 between the typical GIS clients and the semantic web.
 
 A [new feature](https://github.com/geopython/pygeoapi/pull/615) is being prepared which introduces a SPARQL provider to pygeoapi. 
-The provider enables to browse the results of a SPARQL query as an OGC API Features collection.
+The provider enables to browse the results of a SPARQL query as an OGC API - Features collection.

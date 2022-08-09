@@ -253,7 +253,7 @@ resources:
 #    example_catalog:
 #        type: collection
 #        title: FOSS4G Florence Record catalog
-#        description: FOSS4G Florence Record catalog (OGC API Records)
+#        description: FOSS4G Florence Record catalog (OGC API - Records)
 #        keywords:
 #            - Services
 #            - Infrastructures

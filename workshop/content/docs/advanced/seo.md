@@ -4,7 +4,7 @@ title: Search Engine Optimisation (SEO)
 
 # Search Engine Optimisation (SEO)
 
-OGC API Features adopted the Spatial Data on the Web [Best Practice 2: Make your spatial data indexable by search engines](https://www.w3.org/TR/sdw-bp/#indexable-by-search-engines) with the recommendation to [include HTML as an output format of any OGC API](http://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_html). It means that users can navigate an OGC API from within their browser and Search Engines are able to crawl the content.
+OGC API - Features adopted the Spatial Data on the Web [Best Practice 2: Make your spatial data indexable by search engines](https://www.w3.org/TR/sdw-bp/#indexable-by-search-engines) with the recommendation to [include HTML as an output format of any OGC API](http://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_html). It means that users can navigate an OGC API from within their browser and Search Engines are able to crawl the content.
 
 An aspect to consider is that the API becomes a webpage and common practices for web development become relevant: 
 

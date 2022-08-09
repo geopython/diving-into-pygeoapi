@@ -16,14 +16,22 @@ more informaiton on Docker in the [setup section](setup.md)). If you need some i
 
 ## Text editor
 
-Your text editor needs to be able to edit configuration files in **plain text**. Examples include, but are
-not limited to:
+Your text editor needs to be able to edit configuration files in **plain text**. Below are some choices
+for text editors (there may be others), along with what some of the pygeoapi developers prefer to use:
 
 * Notepad or Notepad++ (Windows)
-* Sublime Text (Linux/Mac/Windows)
-* TextEdit (Mac)
-* Visual Studio Code (Linux/Mac/Windows)
-* `/usr/bin/vim` (aka [Tom's](https://twitter.com/tomkralidis) favourite :))
+* Sublime Text (all): Angelos
+* IntelliJ IDEA (all): Just
+* Emacs (all): Just
+* Visual Studio Code (all): Francesco, Angelos
+* `/usr/bin/vim` (all): Tom, Angelos
+
+Having said this, please feel free to use what works for you :)
+
+## YAML
+
+Most exercises will focus on editing the pygeoapi [configuration](https://docs.pygeoapi.io/en/latest/configuration.html),
+which is in the [YAML](https://yaml.org) format. If you are not familiar with YAML, it is worth reading through a [tutorial](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) to become aware of YAML syntax and indentation.
 
 ## Background reading
 

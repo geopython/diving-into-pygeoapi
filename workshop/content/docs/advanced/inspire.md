@@ -15,9 +15,9 @@ series of [Good Practices](https://inspire.ec.europa.eu/portfolio/good-practice-
 
 Some of the recent and upcoming good practices focus on the developments in the OGC API domain. 
 One good practice has already been adopted on providing 
-[download services using OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features) 
+[download services using OGC API - Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features) 
 and others are in preparation, such as the 
-[discovery service using OGC API Records](https://github.com/INSPIRE-MIF/gp-ogc-api-records). 
+[discovery service using OGC API - Records](https://github.com/INSPIRE-MIF/gp-ogc-api-records). 
 These developments make pygeoapi an interesting option 
 for providing INSPIRE services.
 
@@ -32,22 +32,22 @@ recommendation and the relevant Good Practices.
 
 | Service type                     | TG     | OGC API                           | Good practice status |
 | -------------------------------- | ------ | --------------------------------- | -------------------- | 
-| Discovery service                | CSW    | OGC API Records                   | [In preparation](https://github.com/INSPIRE-MIF/gp-ogc-api-records) |
-| View service                     | WM(T)S | OGC API Maps<br>OGC API Tiles     | Not scheduled<br> [In preparation](https://wikis.ec.europa.eu/display/InspireMIG/69th+MIG-T+meeting+2022-04-01) |
-| Download service - Vector        | WFS    | OGC API Features                  | [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-api-features) |
-| Download service - Coverage      | WCS    | OGC API Coverages<br> STAC        | Not scheduled<br> [In preparation](https://github.com/INSPIRE-MIF/gp-stac) | 
-| Download service - Sensor        | SOS    | OGC API EDR<br> Sensorthings API [^1]  | Not scheduled<br> [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api) |
+| Discovery service                | CSW    | OGC API - Records                   | [In preparation](https://github.com/INSPIRE-MIF/gp-ogc-api-records) |
+| View service                     | WM(T)S | OGC API - Maps / OGC API - Tiles     | Not scheduled<br> [In preparation](https://wikis.ec.europa.eu/display/InspireMIG/69th+MIG-T+meeting+2022-04-01) |
+| Download service - Vector        | WFS    | OGC API - Features                  | [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-api-features) |
+| Download service - Coverage      | WCS    | OGC API - Coverages / STAC        | Not scheduled<br> [In preparation](https://github.com/INSPIRE-MIF/gp-stac) | 
+| Download service - Sensor        | SOS    | OGC API - EDR / Sensorthings API [^1]  | Not scheduled<br> [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api) |
 
 [^1]: Sensorthings API is not an OGC API standard and is currently not supported by pygeoapi. It is listed here for completeness. 
 
 !!! note
 
     When adopting Good Practices, consider that the documentation and tools for validation are still limited. 
-    Also the INSPIRE GeoPortal may not be ready to harvest records from an OGC API Records endpoint yet. 
+    Also the INSPIRE GeoPortal may not be ready to harvest records from an OGC API - Records endpoint yet. 
 
 !!! question "Publish metadata documents as an INSPIRE discovery service"
 
-    In this exercise wel will import a folder of metadata documents into a TinyDB database and configure the database as an OGC API Records endpoint. 
+    In this exercise wel will import a folder of metadata documents into a TinyDB database and configure the database as an OGC API - Records endpoint. 
     Download the zipfile 'inspire-records.zip' from the repository. Expand the zipfile. The `/tests` folder contains a script 
     [load_tinydb_records.py](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py). The script has 2 parameters:
 
@@ -55,7 +55,7 @@ recommendation and the relevant Good Practices.
     python3 load_tinydb_records.py <path/to/xml-files> <output.db>
     ```
 
-    Now configure [TinyDB as a provider for OGC API Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the xml output of some of the records. 
+    Now configure [TinyDB as a provider for OGC API - Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the xml output of some of the records. 
 
 
 ## OGC API and the INSPIRE data models
@@ -73,9 +73,9 @@ approach to publish datasets using a relational datamodel (GeoPackage), which fi
 ## OGC API as a codelist registry
 
 A typical use case in INSPIRE is the option to extend an INSPIRE codelist to match a local situation. For that use case the 
-extended codelist has to be published in a registry. OGC API Common provides mechanisms to publish lists of concepts as items 
+extended codelist has to be published in a registry. OGC API - Common provides mechanisms to publish lists of concepts as items 
 in collections. pygeoapi provides also a mechanism to advertise the concepts using the SKOS ontology via its json-ld 
-encoding. In the coincidence that a concept has a geometry property, the codelist can even be published as OGC API Features 
+encoding. In the coincidence that a concept has a geometry property, the codelist can even be published as OGC API - Features 
 (on a map).
 
 !!! question "Publish a codelist via OGC API"
