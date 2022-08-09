@@ -233,7 +233,7 @@ resources:
 #            - type: feature
 #              name: GeoJSON
 #              data: /data/cycle-lanes-firenze.geojson
-#              #id_field: field_1
+#              id_field: accicid
 #            - type: tile
 #              name: MVT
 #              data: /data/tiles
