@@ -80,4 +80,31 @@ encoding. In the coincidence that a concept has a geometry property, the codelis
 
 !!! question "Publish a codelist via OGC API"
 
-    An extended codelist `soil-types.csv` has been prepared in CSV format. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
+    An German Soiltype codelist `bodenart.en.csv` has been made available in CSV format. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
+
+``` {.yaml linenums="1"}
+SoilTypes:
+    type: collection
+    title: Soil types of Germany
+    description: Bodenarten auf Basis der Bodenkundlichen Kartieranleitung 5. Auflage (KA5)
+    keywords:
+        - soiltype
+    links:
+        -   type: text/html
+            rel: canonical
+            title: Soil types of Germany
+            href: https://registry.gdi-de.org/codelist/de.bund.thuenen/bodenart
+            hreflang: de
+    extents:
+        spatial:
+            bbox: [0,0,0,0]
+            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+        -   type: feature
+            name: CSV
+            data: /data/bodenart.en.csv
+            id_field: Label
+            geometry:
+                x_field: x
+                y_field: y
+```
