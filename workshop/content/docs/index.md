@@ -2,7 +2,7 @@
 title: Diving into pygeoapi
 ---
 
-# Diving into pygeoapi
+# Welcome to the Diving into pygeoapi workshop!
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
