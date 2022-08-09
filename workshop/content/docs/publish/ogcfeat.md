@@ -4,7 +4,7 @@ title: Exercise 2 - Vector data via OGC API - Features
 
 # Exercise 2 - Vector data via OGC API - Features
 
-[OGC API - Features](https://ogcapi.ogc.org/features) provides a Web API to exchange vector 
+[OGC API - Features](https://ogcapi.ogc.org/features) provides a Web API to access vector 
 data (geometries and their attributes). While the core specification covers basic data access and query,
 additional related standards and extensions are in development for the following capabilities:
 
@@ -135,7 +135,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! question "Open an OGC API - Features collection in QGIS"
 
-    Follow the steps to add some collections from an OGC API Features enpoint: 
+    Follow the steps to add some collections from an OGC API - Features enpoint: 
 
     - Open QGIS (if you don't have QGIS, you can use OSGeoLive)
     - From the Layer menu, select `Add Layer` > `Add WFS layer`
@@ -168,16 +168,16 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 ### GDAL/OGR
 
-[GDAL/OGR](https://gdal.org) provides support for [OGC API - Features](https://gdal.org/drivers/vector/oapif.html) and. ml). This means you can use `ogrinfo`, `ogr2ogr` to query and convert data from OGC API - Features endpoints just like any other vector data source.  This also means you can make connections to OGC API - Features endpoints from any software which has an interface to GDAL, such as MapServer, GeoServer, Manifold, FME, ArcGIS, etc.
+[GDAL/OGR](https://gdal.org) provides support for [OGC API - Features](https://gdal.org/drivers/vector/oapif.html). This means you can use `ogrinfo`, `ogr2ogr` to query and convert data from OGC API - Features endpoints just like any other vector data source.  This also means you can make connections to OGC API - Features endpoints from any software which has an interface to GDAL, such as MapServer, GeoServer, Manifold, FME, ArcGIS, etc.
 
-!!! question "Use OGR to interact with OGC API Features"
+!!! question "Use OGR to interact with OGC API - Features"
 
     - Verify you have a recent GDAL installed, else use GDAL from OSGeoLive
     - Run `ogrinfo` on the command line to verify a connection to OGC API - Features
 
     <div class="termy">
     ```bash
-    ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
+    $ ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
     ```
     </div>
     
@@ -185,7 +185,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     <div class="termy">
     ```bash
-    ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
+    $ ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
     ```
     </div>
 
@@ -195,15 +195,15 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 ### OWSlib
 
-[OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services. Recent support for OGC API - Features, Coverages, Records and Processes has been added.
+[OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
-!!! question "Interact with OGC API Features via OWSLib"
+!!! question "Interact with OGC API - Features via OWSLib"
 
-    If you do not have python installed, consider to run this exercise in a docker container or in a cloud environment. From console install owslib:
+    If you do not have Python installed, consider running this exercise in a Docker container or in a cloud environment.
 
     <div class="termy">
     ```bash
-    pip3 install owslib
+    $ pip3 install owslib
     ```
     </div>
 

@@ -4,13 +4,13 @@ title: Metadata
 
 # Metadata
 
-[OGC API Records](https://ogcapi.ogc.org/records/) provides access to repositories of metadata records. 
+[OGC API - /Records](https://ogcapi.ogc.org/records/) provides access to repositories of metadata records. 
 The API definition is likely to be adopted by OGC soon. pygeoapi contains an early implementation of the standard. 
 
 
 ## Publish a set of metadata records in pygeoapi
 
-With pygeoapi we can setup an OGC API Record using any data provider. In this example we will use [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html).
+With pygeoapi we can setup OGC API - Records using any data provider. In this example we will use [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html).
 
 To use the example database *workshop/docker/data/records/catalogue.tinydb* we must configure it in `docker.config.yml` with following configuration:
 
@@ -18,7 +18,7 @@ To use the example database *workshop/docker/data/records/catalogue.tinydb* we m
     example_catalog:
         type: collection
         title: FOSS4G Florence Record catalog
-        description: FOSS4G Florence Record catalog (OGC API Records)
+        description: FOSS4G Florence Record catalog (OGC API - Records)
         keywords:
             - Services
             - Infrastructures
@@ -52,9 +52,9 @@ python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
 
 ## Client Access
 
-QGIS supports OGC API Records via the [Metasearch plugin](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). Metasearch originally focused on Catalogue Service for the Web (OGC:CSW) only, but has been extended to OGC API Records last year. Metasearch is a default plugin in QGIS (no installation required).
+QGIS supports OGC API - Records via the [Metasearch plugin](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). Metasearch originally focused on Catalogue Service for the Web (OGC:CSW) only, but has been extended to OGC API - Records last year. Metasearch is a default plugin in QGIS (no installation required).
 
-!!! question "Query OGC API Records from QGIS"
+!!! question "Query OGC API - Records from QGIS"
 
     Follow these steps to connect to a service and query datasets:
 
@@ -74,4 +74,4 @@ QGIS supports OGC API Records via the [Metasearch plugin](https://docs.qgis.org/
 
 !!! note
 
-    In optimal cases Metasearch will locate a file or service link on the metadata and enable the `add data` button (like it does for CSW). Unfortunately the OGC group is still discussing how to implement this in the standard. OGC API Records is not final yet, so its functionality may be subject to change.
+    In optimal cases Metasearch will locate a file or service link on the metadata and enable the `add data` button (like it does for CSW). Unfortunately the OGC group is still discussing how to implement this in the standard. OGC API - Records is not final yet, so its functionality may be subject to change.
