@@ -50,7 +50,7 @@ It's possible to load more example ISO19139 metadata in a TinyDB database with [
 python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
 ```
 
-## Client Access
+## Client access
 
 QGIS supports OGC API - Records via the [Metasearch plugin](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). Metasearch originally focused on Catalogue Service for the Web (OGC:CSW) only, but has been extended to OGC API - Records last year. Metasearch is a default plugin in QGIS (no installation required).
 

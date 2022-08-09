@@ -72,7 +72,7 @@ You can now add `53_ED1_G.tif` to pygeoapi:
 
 Save the configuration and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
-## Client Access
+## Client access
 
 ### GDAL/OGR
 
