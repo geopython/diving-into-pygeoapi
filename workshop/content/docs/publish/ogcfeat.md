@@ -151,7 +151,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API Fea
 
 !!! question "Use OGR to interact with OGC API Features"
 
-    - Verify you have a recent GDAL installed, else use GDAL from OSGEO Live.
+    - Verify you have a recent GDAL installed, else use GDAL from OSGeoLive.
     - Run OGRINFO on command line to verify a connection to OGC API Features
 
     ```

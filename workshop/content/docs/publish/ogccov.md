@@ -56,7 +56,7 @@ OGC API Coverages is still under development at OGC. The GDAL team however alrea
 
 !!! question "Use GDAL to interact with OGC API Coverages"
 
-    - Verify you have a recent GDAL installed, else use GDAL from OSGEO Live.
+    - Verify you have a recent GDAL installed, else use GDAL from OSGeoLive.
     - Run GDALINFO on command line to verify a connection to OGC API Coverages:
 
     ```
