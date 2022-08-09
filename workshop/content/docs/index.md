@@ -52,8 +52,9 @@ Also you will notice tips and notes setions within the text:
 
     Tips share additional help on how to best achieve tasks
 
-Code samples are indicated as:
+Examples are indicated as follows:
 
+Code
 ``` {.html linenums="1"}
 <html>
     <head>
@@ -62,6 +63,7 @@ Code samples are indicated as:
 </html>
 ```
 
+Configuration
 ``` {.yaml linenums="1"}
 my-collection:
     type: collection
@@ -72,13 +74,10 @@ my-collection:
 Snippets which need to be typed in a on a terminal/console are indicated as:
 
 <div class="termy">
-
-``` 
-echo 'Hello world'
+```bash
+$ echo 'Hello world'
 ```
-
 </div>
-
 
 # Workshop location and materials
 

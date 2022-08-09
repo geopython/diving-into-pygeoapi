@@ -1,19 +1,20 @@
 ---
-title: Exercise 1 - Publish your first dataset with pygeoapi
+title: Exercise 1 - Your first dataset
 ---
 
-# Exercise 1 - Publish your first dataset with pygeoapi
+# Exercise 1 - Your first dataset
 
-In this section you are going to publish a vector dataset using `pygeoapi`.
+In this section you are going to publish a vector dataset.
 
-We will use the CSV dataset [free-wifi-florence.csv](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/docker/data/free-wifi-florence.csv), free WIFI
-access points in Florence, kindly provided by [opendata.comune.fi.it](https://opendata.comune.fi.it).
-You can find this dataset in the `workshop/docker/data` folder.
+For this exercise, we will use a CSV dataset of [free Wifi locations in Florence](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/docker/data/free-wifi-florence.csv),
+kindly provided by [opendata.comune.fi.it](https://opendata.comune.fi.it).
 
-This exercise consists of two major steps:
+You can find this dataset in `workshop/docker/data/free-wifi-florence.csv`.
 
-* Adapt the `docker.config.yml` to define this dataset as an OGC API Features *Collection*
-* Make sure that pygeoapi can find the data file
+This exercise consists of two key steps:
+
+* adapt the `docker.config.yml` to define this dataset as an OGC API - Features *collection*
+* ensure that pygeoapi can find and connec to the data file
 
 We will use the `docker-compose.yml` file provided.
 
@@ -30,29 +31,36 @@ To test:
 !!! question "Test the workshop configuration"
 
     1. In a terminal shell navigate to the workshop folder and type:
-    ```console 
-    docker-compose up`
+
+    <div class="termy">
+    ```bash
+    $ docker-compose up
     ```
+    </div>
     1. Open `http://localhost:5000` in your browser, verify some collections
-    1. Close by typing Control-C
+    1. Close by typing `CTRL-C`
 
-NB you may also run the Docker container in the background (detached):
+!!! note
 
-!!! question "Docker in the background"
+    You may also run the Docker container in the background (detached) as follows:
 
-    1. Type `docker-compose up -d`
-    1. Type `docker ls`; verify that the pygeoapi container is running
-    1. open http://localhost:5000 in your browser, verify some collections
-    1. view logging: `docker logs --follow pygeoapi`
-    1. `docker-compose stop`
+    <div class="termy">
+    ```bash
+    $ docker-compose up -d
+    $ docker ls  # verify that the pygeoapi container is running
+    $ # visit http://localhost:5000 in your browser, verify some collections
+    $ docker logs --follow pygeoapi  # view logs
+    $ docker-compose stop
+    ```
+    </div>
 
 ## Publish first dataset
 
-You are ready to publish your first dataset.
+You are now ready to publish your first dataset.
 
 !!! question "Setting up the pygeoapi config file"
 
-    1. Open the file `workshop/docker/pygeoapi/docker.config.yml` in a text editor.
+    1. Open the file `workshop/docker/pygeoapi/docker.config.yml` in your text editor
     1. Look for the commented config section starting with `# START - EXERCISE 1 - Your First Collection`
     1. Uncomment all lines until `# END - EXERCISE 1 - Your First Collection`
 
@@ -70,10 +78,10 @@ free_wifi_florence:
         - florence
     links:
         - type: text/csv
-        rel: canonical
-        title: data
-        href: https://opendata.comune.fi.it/?q=metarepo/datasetinfo&id=fb5b7bac-bcb0-4326-9388-7e3f3d671d71
-        hreflang: it-IT
+          rel: canonical
+          title: data
+          href: https://opendata.comune.fi.it/?q=metarepo/datasetinfo&id=fb5b7bac-bcb0-4326-9388-7e3f3d671d71
+          hreflang: it-IT
     extents:
         spatial:
             bbox: [11, 43.6, 11.4, 43.9]
@@ -88,26 +96,30 @@ free_wifi_florence:
             y_field: lat
 ```
 
-The most relevant part is the `providers` section. Here we define a `CSV Provider`,
+The most relevant part is the `providers` section. Here, we define a `CSV Provider`,
 pointing the file path to the `/data` directory we will mount (see next) from the local
-dir into the Docker container above. Because a CSV is not a spatial file, we tell `pygeoapi`
-that the longitude and latitude (x,y) is mapped from the columns `lon` and `lat`.
+directory into the Docker container above. Because a CSV is not a spatial file, we explicitly
+configure pygeoapi so that the longitude and latitude (x and y) is mapped from the columns `lon`
+and `lat` in the CSV file.
 
 !!! Tip
 
-    To learn more about the `pygeoapi` configuration syntax and conventions see
+    To learn more about the pygeoapi configuration syntax and conventions see
     the [relevant chapter in the documentation](https://docs.pygeoapi.io/en/latest/configuration.html).
 
 !!! Tip
 
-    pygeoapi includes a [number of data providers](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) which enable access to a variety of data formats. Via the OGR/GDAL plugin the number of supported formats is almost limitless.
-    Read on the [data provider page](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) how you can set up a connection to your dataset of choice. You can always copy a relevant example configuration and place it in the datasets section of the pygeoapi config file for your future project.
+    pygeoapi includes [numerous data providers](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) which
+    enable access to a variety of data formats. Via the OGR/GDAL plugin the number of supported formats is almost limitless.
+    Consult the [data provider page](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) how you can set up
+    a connection to your dataset of choice. You can always copy a relevant example configuration and place it in the datasets section of
+    the pygeoapi configuration file for your future project.
 
 ## Making data available in the Docker container
 
-As the Docker container, here named `pygeoapi`, cannot directly access files on your
-local host system, we will use `Docker volume mounts`. This can be defined 
-in the `docker-compose.yml` file:
+As the Docker container (named `pygeoapi`) cannot directly access files on your
+local host system, we will use Docker volume mounts. This can be defined 
+in the `docker-compose.yml` file as follows:
 
 !!! question "Configure access to the data"
 
@@ -133,24 +145,34 @@ we have also mounted (made available) the entire local directory `./data`.
     1. Start by typing `docker-compose up` 
     1. Observe logging output
     1. If no errors: open http://localhost:5000
-    1. Look for the Free WIFI Collection
+    1. Look for the Free Wifi Collection
     1. Browse through the collection
 
 ## Debugging configuration errors
 
 Incidentally you may run into errors, briefly discussed here:
 
-* A file can not be found, a typo in the configuration. 
-* The format or structure of the spatial file is not fully supported. 
-* The port (5000) is already taken. Is a previous pygeoapi still running? If you change the port, consider that you also have to update the pygeoapi config file.
+* A file cannot be found, a typo in the configuration
+* The format or structure of the spatial file is not fully supported
+* The port (5000) is already taken. Is a previous pygeoapi still running? If you change the port, consider that you also have to update the pygeoapi config file
 
-There are 2 parameters in the config file which help to address these issues. 
-You can set the logging level to `DEBUG` and indicate a path to a log file. 
-
-!!! tip
-
-    On docker, set the path of the logfile to the mounted folder, so you can easily access it from your host system. You can also view the console logs from your docker container using `docker logs --follow pygoapi`
+There are two parameters in the configuration file which help to address these issues. 
+Set the logging level to `DEBUG` and indicate a path to a log file. 
 
 !!! tip
 
-    Errors related to file paths likely happen at incidental setup. However they can also happen at unexpected moments, resulting in a broken service. Products like [GeoHealthCheck](https://github.com/geopython/GeoHealthCheck) aim to detect this type of unexpected errors. The OGC APi Features test in GeoHealthCheck polls the availability of the service at intervals.  
+    On Docker, set the path of the logfile to the mounted folder, so you can easily access it from your host system. You can also view the console logs from
+    your Docker container as follows:
+
+    <div class="termy">
+    ```bash
+    $ docker logs --follow pygeoapi
+    ```
+    </div>
+
+!!! tip
+
+    Errors related to file paths typically happen on initial setup. However, they may also happen at unexpected moments, resulting in a broken service.
+    Products such as [GeoHealthCheck](https://geohealthcheck.org) aim to monitor, detect and notify service health and availability. The OGC APi - Features
+    tests in GeoHealthCheck poll the availability of the service at intervals. Consult the [GeoHealthCheck documentation](https://docs.geohealthcheck.org) for more
+    information. 

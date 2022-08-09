@@ -4,8 +4,12 @@ title: Publishing data
 
 # Publishing Data
 
-In this section, you will learn how-to publish different types of geospatial information
-through the Exercises below.
+!!! note
+
+    Ensure that you have pygeoapi setup and can navigate the default configuration and service (`http://localhost:5000`).
+
+In this section, you will learn how to publish different types of geospatial data and metadata
+through the following exercises:
 
 - [Exercise 1 - Your first dataset](first.md)
 - [Exercise 2 - Vector data via OGC API - Features](ogcfeat.md)

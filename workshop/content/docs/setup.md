@@ -26,7 +26,7 @@ contain the latest pygeoapi and all its dependencies and external services (e.g.
 ## About Docker
 
 Docker has been available for almost 10 years, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
-era of computing, chances are that you have heard of Docker and `containerization`. Or, perhaps are already familiar and hopefully using Docker already.
+era of computing, chances are that you have heard of Docker and *containerization*. Or, perhaps are already familiar and hopefully using Docker already.
 If not, there is a wide array of introductory materials that can be found online ([example from IBM](https://www.ibm.com/in-en/cloud/learn/Docker).
 
 FOSS4G software has benefitted greatly from Docker (consistent packaging, isolation, integration and upgrade patterns) in
@@ -68,17 +68,21 @@ For many platforms a product called `Docker Desktop` is available, which include
 
 Some notes:
 
-* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) commandline and has optimal integration with Docker
+* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker
 * On Mac, if you are using [Homebrew](https://brew.sh), consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
 * On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu Image or use a cloud VM
 * Docker desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
-If all goes well, you should be able to run Docker from the commandline as follows: [^2]
+If all goes well, you should be able to run Docker from the command line as follows: [^2]
 
-```console
-docker --version
-docker-compose --version  
-``` 
+<div class="termy">
+```bash
+$ docker --version
+Docker version 20.10.17, build 100c701
+$ docker-compose --version  
+Docker Compose version v2.6.1
+```
+</div>
 
 [^2]: For recent version of Docker run `docker compose version`
 
@@ -92,13 +96,41 @@ data is a one-liner.
 
     Open a terminal session and run:
 
-    ```console
-    docker run --rm -p 5000:80 geopython/pygeoapi:latest
+    <div class="termy">
+    ```bash
+    $ docker run --rm -p 5000:80 geopython/pygeoapi:latest
+    Unable to find image 'geopython/pygeoapi:latest' locally
+    latest: Pulling from geopython/pygeoapi
+    d7bfe07ed847: Already exists 
+    d5d0144a7164: Already exists 
+    afe0923a0fa0: Already exists 
+    75f8618c4e86: Already exists 
+    c603397fd6ad: Already exists 
+    6584a95328b3: Already exists 
+    fd93e44631d9: Already exists 
+    6a3201071a5d: Already exists 
+    4f4fb700ef54: Already exists 
+    Digest: sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+    Status: Downloaded newer image for geopython/pygeoapi:latest
+    START /entrypoint.sh
+    Trying to generate openapi.yml
+    openapi.yml generated continue to pygeoapi
+    make SCRIPT_NAME empty from /
+    Start gunicorn name=pygeoapi on 0.0.0.0:80 with 4 workers and SCRIPT_NAME=
+    [2022-08-09 12:59:00 +0000] [1] [INFO] Starting gunicorn 20.0.4
+    [2022-08-09 12:59:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)
+    [2022-08-09 12:59:00 +0000] [1] [INFO] Using worker: gevent
+    [2022-08-09 12:59:00 +0000] [18] [INFO] Booting worker with pid: 18
+    [2022-08-09 12:59:00 +0000] [19] [INFO] Booting worker with pid: 19
+    [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
+    [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
     ```
+    </div>
+
 
 That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
 As part of the initial `docker run`, Docker will download the `pygeoapi` Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
-This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is only once for the entire workshop, or
+This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
 you may want to do this beforehand. 
 
 Some notes:
@@ -120,9 +152,11 @@ within the container by a local file which you can edit in your favourite text e
 
     Download pygeoapi's default Docker configuration from [default.config.yml](https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml) to the current folder (or navigate to the folder where you downloaded the file), for example with:
 
+    <div class="termy">
     ```bash
-    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/Docker/default.config.yml
+    $ curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/Docker/default.config.yml
     ```
+    </div>
 
     Open the file in your favourite text editor and change the title and description of the API:
 
@@ -135,11 +169,13 @@ within the container by a local file which you can edit in your favourite text e
 
     Now run the container with the overridden config file:
 
+    <div class="termy">
     ```bash
-    docker run -p 5000:80 \
+    $ docker run -p 5000:80 \
         -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
         geopython/pygeoapi:latest
     ```
+    </div>
 
     At this point, navigate to `http://localhost:5000` to verify the new title and description.
 
@@ -160,15 +196,13 @@ Within the data directory you can store vector data, raster files or sets of ima
 The below example shows an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
 <div class="termy">
-
 ```bash
-docker run -p 5000:80 \
+$ docker run -p 5000:80 \
     -v $(pwd)/data:/pygeoapi/mydata \
     -v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.xml \
     -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
     geopython/pygeoapi:latest
 ```
-
 </div>
 
 In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/Docker/examples).
