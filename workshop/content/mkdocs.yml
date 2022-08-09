@@ -6,8 +6,8 @@ site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
 nav:
     - Home: index.md
-    - Introduction to pygeoapi: introduction.md
     - Workshop environment setup: setup.md
+    - Introduction to pygeoapi: introduction.md
     - Standards: standards.md
     - Publishing data:
         - publish/index.md
