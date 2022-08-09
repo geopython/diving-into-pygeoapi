@@ -9,7 +9,7 @@ and query metadata on the Web:
 
 * [OGC API - Records: Part 1: Core](https://docs.ogc.org/DRAFTS/20-004.html) (**draft**)
 
-OGC API - Records uses OGC API - Features as a building block, thus enabling fast deployment and integration
+OGC API - Records uses OGC API - Features as a building block, thus enabling streamlined deployment and integration
 for clients and users.
 
 ## pygeoapi support

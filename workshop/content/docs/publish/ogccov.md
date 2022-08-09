@@ -2,7 +2,7 @@
 title: Exercise 3 - Raster data via OGC API - Coverages
 ---
 
-# title: Exercise 3 - Raster data via OGC API - Coverages
+# Exercise 3 - Raster data via OGC API - Coverages
 
 [OGC API - Coverages](https://ogcapi.ogc.org/coverages) provides a Web API to access raster
 data (grids, remote sensing data, multidimensional data cubes):
