@@ -126,7 +126,7 @@ And the tile metadata at this endpoint:
     ![](img/qgis-vtiles1.png){ width=100% }
 
     - Right-click to bring up the context menu and choose `New Generic connection`.  
-    - Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}. 
+    - Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {z}/{x}/{y}.
     - Press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, bellow "Vector Tiles".
     - Double-click in the collection to add it to the map. 
     - Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner. 

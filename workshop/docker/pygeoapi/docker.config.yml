@@ -62,7 +62,7 @@ metadata:
             - api
         keywords_type: theme
         terms_of_service: https://creativecommons.org/licenses/by/4.0/
-        url: http://example.org
+        url: https://example.org
     license:
         name: CC-BY 4.0 license
         url: https://creativecommons.org/licenses/by/4.0/
@@ -233,7 +233,7 @@ resources:
 #            - type: feature
 #              name: GeoJSON
 #              data: /data/cycle-lanes-firenze.geojson
-#              #id_field: field_1
+#              id_field: accicid
 #            - type: tile
 #              name: MVT
 #              data: /data/tiles
