@@ -9,7 +9,46 @@ Access to coverage datasets (grids) is managed through the
 
 ## Publish a raster dataset
 
-Download and unzip the tiff file [53.tif](http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip). Add it to pygeoapi.
+In the previous section you have seen in general which steps are involved to change the pygeoapi configuration file to load a dataset. In this section we are going to publish a GeoTiff raster file, from a [rasterio](https://rasterio.readthedocs.io) source.
+
+Download and unzip a tiff file, eg. [53.tif](http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip).
+
+You are going to add a file `53_ED1_G.tif` to pygeoapi which is available in the workshop data folder.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor. Add a new dataset section, defined by:
+
+    ``` {.yaml linenums="1"}
+    firenze-terrains:
+        type: collection
+        title: Administrative boundaries before 2014
+        description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
+        keywords:
+            -   Cadastral parcels
+        links:
+            -   type: text/html
+                rel: canonical
+                title: Administrative boundaries before 2014
+                href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:419774cb-e812-4ca4-991d-97f0b747e017
+                hreflang: it
+        extents:
+            spatial:
+                bbox: [10.70,43.43,11.76,44.25]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            -   type: coverage
+                name: rasterio
+                data: /data/53_ED1_G.tif # place correct path here
+                format:
+                    name: GTiff
+                    mimetype: application/tiff
+    ```
+
+!!! question "The rasterio provider ``format.name`` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)"
+
+Save the file and restart the docker compose. Navigate to localhost:5000/collections to evaluate if the new dataset is available.
+
 
 ## Client Access
 
