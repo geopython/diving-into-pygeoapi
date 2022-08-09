@@ -10,7 +10,7 @@ For any customisation, mind that with a new version of pygeoapi changes on the d
 
 ## jinja2
 
-The [jinja2](https://jinja.palletsprojects.com/en/2.9.x/intro/) is a common templating concept in the python community. With a minimal background on HTML you'll be able to make small customisations. Most likely to override is the [_base.html](https://github.com/geopython/pygeoapi/blob/master/pygeoapi/templates/_base.html) template, which defines the header and footer of the page. The fragment below defines the footer of the page, notice the parameters in curly braces, which are replaced by dynamic content. 
+The [jinja2](https://jinja.palletsprojects.com/en/2.9.x/intro/) is a common templating concept in the Python community. With a minimal background on HTML you'll be able to make small customisations. Most likely to override is the [_base.html](https://github.com/geopython/pygeoapi/blob/master/pygeoapi/templates/_base.html) template, which defines the header and footer of the page. The fragment below defines the footer of the page, notice the parameters in curly braces, which are replaced by dynamic content. 
 
 ``` {.html linenums="1"}
  <footer class="sticky">

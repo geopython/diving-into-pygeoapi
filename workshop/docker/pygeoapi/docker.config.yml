@@ -250,10 +250,10 @@ resources:
 #                    name: pbf
 #                    mimetype: application/vnd.mapbox-vector-tile
 
-#    example_catalog:
+#    example_catalogue/:
 #        type: collection
-#        title: FOSS4G Florence Record catalog
-#        description: FOSS4G Florence Record catalog (OGC API - Records)
+#        title: FOSS4G Florence Record catalogue
+#        description: FOSS4G Florence Record catalogue (OGC API - Records)
 #        keywords:
 #            - Services
 #            - Infrastructures

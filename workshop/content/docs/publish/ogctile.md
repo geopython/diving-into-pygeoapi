@@ -4,8 +4,8 @@ title: Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 
 # Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 
-[OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API with extended functionality
-to other OGC API standards to deliver tiled data (bitmaps or vectors), such as Map Tiles:
+[OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiled data (bitmaps or vectors),
+extending the functionalty other OGC API standards:
  
 * [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/DRAFTS/20-057.html) (**draft**)
 
@@ -128,7 +128,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     - right-click to bring up the context menu and choose `New Generic connection`
     - fill the required values. For URL, use the URL you noted from the previous step, replacing `{tileMatrix}/{tileRow}/{tileCol}` with `{z}/{x}/{y}`.
-    - press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
+    - press `OK` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
     - double-click in the collection to add it to the map
     - remember to set the CRS of the map to `EPSG:4326` by clicking in the button on the lower right corner
     - zoom in to Florence to visualize your dataset
@@ -186,3 +186,8 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 !!! tip 
 
     See the [official OpenLayers documentation](https://openlayers.org/en/latest/examples/ogc-vector-tiles.html)
+
+
+# Summary
+
+Congratulations! You are now able to publish tiles to pygeoapi.

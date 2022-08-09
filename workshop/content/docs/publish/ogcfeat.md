@@ -149,7 +149,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     - QGIS facilitates to set page size (request is split in multiple requests)
         - for points you can easily set it to 2500
         - for some polygons with high density, 100 can already be slow
-    - Press `Ok` to save the connection and return to the previous screen
+    - Press `OK` to save the connection and return to the previous screen
     - Now click the `Connect` button to retireve the collections of the service
     
     ![Collection list](img/collection-list.png){ width=50% }
@@ -208,7 +208,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
 
-    Then start a python console session with: `python` (stop the session by typing `exit()`).
+    Then start a Python console session with: `python` (stop the session by typing `exit()`).
 
     <div class="termy">
     ```python
@@ -247,5 +247,4 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 # Summary
 
-Congratulations!  You are now able to publish vector data to pygeoapi.
-
+Congratulations! You are now able to publish vector data to pygeoapi.
