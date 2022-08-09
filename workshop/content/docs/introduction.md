@@ -20,10 +20,11 @@ Your text editor needs to be able to edit configuration files in **plain text**.
 not limited to:
 
 * Notepad or Notepad++ (Windows)
-* Sublime Text (Linux/Mac/Windows)
-* TextEdit (Mac)
-* Visual Studio Code (Linux/Mac/Windows)
-* `/usr/bin/vim` (aka [Tom's](https://twitter.com/tomkralidis) favourite :))
+* Sublime Text (Linux/Mac/Windows): Angelos
+* TextEdit (Mac): Just
+* Emacs (all): Just
+* Visual Studio Code (Linux/Mac/Windows): Francesco, Angelos
+* `/usr/bin/vim` (all): Tom, Angelos
 
 ## Background reading
 

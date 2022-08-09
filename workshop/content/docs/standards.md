@@ -2,12 +2,30 @@
 title: Standards
 ---
 
+# Overview
+
+This section provides a high level overview of pygeoapi standards support.
+
 # Standards
 
-pygeoapi is build around the recent set of [API standards](https://ogcapi.ogc.org) emerging at the [Open Geospatial Consortium](https://www.ogc.org/) (OGC).
-This section introduces you in an interactive way to the core set of standards on which the new API standards are build.
+Open standards are core to pygeoapi. Open standards allow for broad interoperability and plug and play capability. pygeoapi supports
+a number of open standards (both formal and defacto or community driven).
+
+## OGC API
+
+pygeoapi implements the [OGC API](https://ogcapi.ogc.org) suite of standards from the [Open Geospatial Consortium](https://www.ogc.org/) (OGC). From the OGC API website:
+
+!!! cite
+
+    The OGC API family of standards are being developed to make it easy for anyone to provide geospatial data to the web. These standards build upon the legacy of the OGC Web Service standards (WMS, WFS, WCS, WPS, etc.), but define resource-centric APIs that take advantage of modern web development practices. This web page provides information on these standards in a consolidated location.
+
+    These standards are being constructed as "building blocks" that can be used to assemble novel APIs for web access to geospatial content. The building blocks are defined not only by the requirements of the specific standards, but also through interoperability prototyping and testing in OGC's Innovation Program. 
+
 
 ## OGC API Common
+
+
+
 
 [OGC API Common](https://ogcapi.ogc.org/common/) is a common framework used in all OGC API's. 
 Common defines aspects such as:
