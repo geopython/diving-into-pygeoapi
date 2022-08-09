@@ -1,3 +1,7 @@
+---
+title: Introduction to pygeoapi
+---
+
 # Introduction to pygeoapi
 
 The development team of `pygeoapi` (yes, spelled in lowercase) is excited to welcome you in this workshop! 
