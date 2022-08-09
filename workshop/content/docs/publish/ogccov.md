@@ -45,9 +45,9 @@ You are going to add a file `53_ED1_G.tif` to pygeoapi which is available in the
                     mimetype: application/tiff
     ```
 
-!!! tip "The rasterio provider ``format.name`` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)"
+!!! tip "The rasterio provider `format.name` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)"
 
-Save the file and restart the docker compose. Navigate to ``http://localhost:5000/collections`` to evaluate if the new dataset is available.
+Save the file and restart the docker compose. Navigate to `http://localhost:5000/collections` to evaluate if the new dataset is available.
 
 
 ## Client Access
