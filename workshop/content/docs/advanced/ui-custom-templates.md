@@ -27,7 +27,7 @@ which are replaced by dynamic content.
  <footer class="sticky">
     {% trans %}Powered by {% endtrans %} 
     <a title="pygeoapi" href="https://pygeoapi.io">
-        <img src="{{ config['server']['url'] }}/static/img/pygeoapi.png" title="pygeoapi logo" style="height:24px;vertical-align: middle;"/></a> 
+        <img src="{{ config['server']['url'] }}/assets/images/pygeoapi.png" title="pygeoapi logo" style="height:24px;vertical-align: middle;"/></a> 
     {{ version }}
 </footer>
 ```

@@ -89,7 +89,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
     - Locate the MetaSearch plugin in the Web menu or on the Toolbar ![MetaSearch icon](https://docs.qgis.org/latest/en/_images/MetaSearch.png "MetaSearch icon"). The main search panel will appear with the default MetaSearch catalogue list already populated.
 
-    ![Pre-populated catalogues](img/prepopulated-catalogues.png){ width=50% }
+    ![Pre-populated catalogues](../assets/images/prepopulated-catalogues.png){ width=50% }
 
     - open the `Services` tab, to find the `New` button to create a new connection
     - add a connection to `https://demo.pygeoapi.io/master`
@@ -99,7 +99,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
     - type a search term and click `search`
     - notice that when you select a search result, a red footprint is drawn on the map highlighting the location of the dataset
 
-    ![Search results](img/search-results.png){ width=50% }
+    ![Search results](../assets/images/search-results.png){ width=50% }
 
 [OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Records.
 

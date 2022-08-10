@@ -142,7 +142,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     - From the Layer menu, select `Add Layer` > `Add WFS layer`
     - From the `Data source manager` panel, choose 'New connection'
     
-    ![New connection](img/new-connection.png){ width=50% }
+    ![New connection](../assets/images/new-connection.png){ width=50% }
     
     - Add the URL https://demo.pygeoapi.io/master (or the address of a local server)
     - You can now click the `detect` button and QGIS will notice you are configuring an OGC API - Features endpoint
@@ -152,7 +152,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     - Press `OK` to save the connection and return to the previous screen
     - Now click the `Connect` button to retireve the collections of the service
     
-    ![Collection list](img/collection-list.png){ width=50% }
+    ![Collection list](../assets/images/collection-list.png){ width=50% }
     
     - You can now add collections to your QGIS project
     - You can also build a query to add a subset of the collection

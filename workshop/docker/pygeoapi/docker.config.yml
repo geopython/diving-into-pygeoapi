@@ -131,7 +131,7 @@ resources:
             - type: text/html
               rel: canonical
               title: information
-              href: http://www.naturalearthdata.com/
+              href: https://www.naturalearthdata.com/
               hreflang: en-US
         extents:
             spatial:
@@ -158,7 +158,7 @@ resources:
             - type: text/html
               rel: canonical
               title: information
-              href: http://www.naturalearthdata.com/
+              href: https://www.naturalearthdata.com/
               hreflang: en-US
         extents:
             spatial:

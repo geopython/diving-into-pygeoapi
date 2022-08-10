@@ -103,7 +103,7 @@ Additional check for the following tile specific endpoints in the `Cycle` collec
 - tile links in `http://localhost:5000/collections/Cycle](http://localhost:5000/collections/Cycle`
 - tile metadata in `http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/metadata`
 
-![TileSet](img/vtiles.png)
+![TileSet](../assets/images/vtiles.png)
 
 ## Client access
 
@@ -124,7 +124,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     - locate the vector tiles service on the left hand side browser panel. Note that you can also use the top menu and navigate to `Layer > Add Layer > Vector Tile Layer`
 
-    ![](img/qgis-vtiles1.png){ width=100% }
+    ![](../assets/images/qgis-vtiles1.png){ width=100% }
 
     - right-click to bring up the context menu and choose `New Generic connection`
     - fill the required values. For URL, use the URL you noted from the previous step, replacing `{tileMatrix}/{tileRow}/{tileCol}` with `{z}/{x}/{y}`.
@@ -133,9 +133,9 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     - remember to set the CRS of the map to `EPSG:4326` by clicking in the button on the lower right corner
     - zoom in to Florence to visualize your dataset
 
-    ![](img/qgis-vtiles2.png){ width=100% }
-    ![](img/qgis-vtiles3.png){ width=100% }
-    ![](img/qgis-vtiles4.png){ width=100% }
+    ![](../assets/images/qgis-vtiles2.png){ width=100% }
+    ![](../assets/images/qgis-vtiles3.png){ width=100% }
+    ![](../assets/images/qgis-vtiles4.png){ width=100% }
 
 ### LeafletJS
 
@@ -160,7 +160,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     map = L.map('map').setView({ lat: 43.79, lng: 11.25 }, 12);
     map.addLayer(
         new L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains: 'abcd',
         minZoom: 1,
         maxZoom: 16,
@@ -174,7 +174,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     </html>
     ```
 
-   ![](img/leaflet.png){ width=100% }
+   ![](../assets/images/leaflet.png){ width=100% }
 
 !!! tip 
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/html/vector-tiles.html`.
