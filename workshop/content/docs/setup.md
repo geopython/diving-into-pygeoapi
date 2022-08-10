@@ -193,7 +193,7 @@ remote data services like PostGIS or WFS.
 You can also mount a local directory such as `data/` to `/pygeoapi/mydata` within the Container.
 Within the data directory you can store vector data, raster files or sets of image of vector tiles.
 
-The below shows an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
+Below is an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
 <div class="termy">
 ```bash
