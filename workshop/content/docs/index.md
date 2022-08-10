@@ -58,7 +58,7 @@ Code
 ``` {.html linenums="1"}
 <html>
     <head>
-        <title>This is a html sample</title>
+        <title>This is an HTML sample</title>
     </head>
 </html>
 ```
