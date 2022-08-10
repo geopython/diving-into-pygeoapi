@@ -89,7 +89,7 @@ Docker Compose version v2.6.1
 
 ## Quickstart
 
-Once Docker is available on your system, running the `pygeoapi` container with its built-in configuration and 
+Once Docker is available on your system, running the pygeoapi container with its built-in configuration and 
 data is a one-liner. 
 
 !!! question "First run via Docker"
@@ -129,13 +129,13 @@ data is a one-liner.
 
 
 That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
-As part of the initial `docker run`, Docker will download the `pygeoapi` Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
+As part of the initial `docker run`, Docker will download the pygeoapi Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
 This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
 you may want to do this beforehand. 
 
 Some notes:
 
-* Docker runs a `pygeoapi` container on your local system on port 5000, which is mapped to port 80 inside the container
+* Docker runs a pygeoapi container on your local system on port 5000, which is mapped to port 80 inside the container
 * the pygeoapi Docker container runs with the [default configuration](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml) and data from the GitHub repo
 * the `--rm` option removes the Docker Container (but not the image), after execution
 * type `CTRL-C` to stop the container and return to the terminal
@@ -193,7 +193,7 @@ remote data services like PostGIS or WFS.
 You can also mount a local directory such as `data/` to `/pygeoapi/mydata` within the Container.
 Within the data directory you can store vector data, raster files or sets of image of vector tiles.
 
-The below example shows an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
+The below shows an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
 <div class="termy">
 ```bash

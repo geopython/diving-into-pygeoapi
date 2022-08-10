@@ -42,7 +42,7 @@ COPY ./my.config.yml /pygeoapi/local.config.yml
 You may have noticed that the pygeoapi configuration file includes a reference to the endpoint on which pygeoapi is published. This configuration should
 match the public endpoint of the service (domain, path and port).
 
-By default the, `pygeoapi` Docker Image will run from the `root` path `/`. If you need to run from a sub-path and have all internal URLs correct you can
+By default the pygeoapi Docker Image will run from the `root` path `/`. If you need to run from a sub-path and have all internal URLs correct you can
 set the `SCRIPT_NAME` environment variable.
 
 <div class="termy"> 
