@@ -114,4 +114,4 @@ SoilTypes:
 
 # Summary
 
-Congrtulations! You have worked with pygoeapi for INSPIRE compliance
+Congratulations! You have worked with pygeoapi for INSPIRE compliance
