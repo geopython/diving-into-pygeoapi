@@ -2,7 +2,7 @@
 title: Diving into pygeoapi
 ---
 
-# Diving into pygeoapi
+# Welcome to the Diving into pygeoapi workshop!
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
@@ -58,7 +58,7 @@ Code
 ``` {.html linenums="1"}
 <html>
     <head>
-        <title>This is a html sample</title>
+        <title>This is an HTML sample</title>
     </head>
 </html>
 ```

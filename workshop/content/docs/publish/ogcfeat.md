@@ -8,6 +8,7 @@ title: Exercise 2 - Vector data via OGC API - Features
 data (geometries and their attributes). While the core specification covers basic data access and query,
 additional related standards and extensions are in development for the following capabilities:
 
+- [OGC API - Features - Part 1: Core](https://docs.opengeospatial.org/is/17-069r4/17-069r4.html) provides basic access and query capabilities
 - [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections
 - [OGC API - Features - Part 3: Filtering](https://docs.ogc.org/DRAFTS/19-079r1.html) (**draft**) adds the ability for complex queries using Common Query Language (CQL)
 - [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002.html) (**draft**) adds transactional capabilities
@@ -127,7 +128,7 @@ An interesting use case for pygeoapi is to provide OGC API - Features interface 
 
 Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
-## Client Access
+## Client access
 
 ### QGIS
 
@@ -148,7 +149,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     - QGIS facilitates to set page size (request is split in multiple requests)
         - for points you can easily set it to 2500
         - for some polygons with high density, 100 can already be slow
-    - Press `Ok` to save the connection and return to the previous screen
+    - Press `OK` to save the connection and return to the previous screen
     - Now click the `Connect` button to retireve the collections of the service
     
     ![Collection list](img/collection-list.png){ width=50% }
@@ -207,7 +208,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
 
-    Then start a python console session with: `python` (stop the session by typing `exit()`).
+    Then start a Python console session with: `python` (stop the session by typing `exit()`).
 
     <div class="termy">
     ```python
@@ -246,5 +247,4 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 # Summary
 
-Congratulations!  You are now able to publish vector data to pygeoapi.
-
+Congratulations! You are now able to publish vector data to pygeoapi.

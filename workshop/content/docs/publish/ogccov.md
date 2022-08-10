@@ -2,7 +2,7 @@
 title: Exercise 3 - Raster data via OGC API - Coverages
 ---
 
-# title: Exercise 3 - Raster data via OGC API - Coverages
+# Exercise 3 - Raster data via OGC API - Coverages
 
 [OGC API - Coverages](https://ogcapi.ogc.org/coverages) provides a Web API to access raster
 data (grids, remote sensing data, multidimensional data cubes):
@@ -72,7 +72,7 @@ You can now add `53_ED1_G.tif` to pygeoapi:
 
 Save the configuration and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
-## Client Access
+## Client access
 
 ### GDAL/OGR
 
@@ -106,45 +106,31 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
     <div class="termy">
     ```python
-    from owslib.ogcapi.coverages import Coverages
-
-    SERVICE_URL = 'https://demo.pygeoapi.io/master/'
-    w = Coverages(SERVICE_URL)
-
-    assert w.url == SERVICE_URL
-    assert w.url_query_string is None
-
-    api = w.api()
-    assert api['components']['parameters'] is not None
-    paths = api['paths']
-    assert paths is not None
-    assert paths['/collections/gdps-temperature'] is not None
-
-    conformance = w.conformance()
-    assert len(conformance['conformsTo']) > 1
-
-    collections = w.collections()
-    assert len(collections) > 0
-
-    coverages = w.coverages()
-    assert len(coverages) > 0
-
-    gdps = w.collection('gdps-temperature')
-    assert gdps['id'] == 'gdps-temperature'
-    assert gdps['title'] == 'Global Deterministic Prediction System sample'
-    assert gdps['description'] == 'Global Deterministic Prediction System sample'  # noqa
-
-    domainset = w.coverage_domainset('gdps-temperature')
-
-    assert domainset['generalGrid']['axisLabels'] == ['Long', 'Lat']
-
-    assert domainset['generalGrid']['gridLimits']['axisLabels'] == ['i', 'j']
-
-    rangetype = w.coverage_rangetype('gdps-temperature')
-    assert len(rangetype['field']) == 1
-    assert rangetype['field'][0]['name'] == 'Temperature [C]'
-    assert rangetype['field'][0]['uom']['code'] == '[C]'
-    assert rangetype['field'][0]['encodingInfo']['dataType'] == 'http://www.opengis.net/def/dataType/OGC/0/float64'  # noqa
+    >>> from owslib.ogcapi.coverages import Coverages
+    >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+    >>> w.url
+    'https://demo.pygeoapi.io/master/'
+    >>> gdps = w.collection('gdps-temperature')
+    >>> gdps['id']
+    'gdps-temperature'
+    >>> gdps['title']
+    'Global Deterministic Prediction System sample'
+    >>> gdps['description']
+    'Global Deterministic Prediction System sample'
+    >>> domainset = w.coverage_domainset('gdps-temperature')
+    >>> domainset['generalGrid']['axisLabels']
+    ['Long', 'Lat']
+    >>> domainset['generalGrid']['gridLimits']['axisLabels']
+    ['i', 'j']
+    >>> rangetype = w.coverage_rangetype('gdps-temperature')
+    >>> len(rangetype['field'])
+    1
+    >>> rangetype['field'][0]['name']
+    'Temperature [C]'
+    >>> rangetype['field'][0]['uom']['code']
+    '[C]'
+    >>> rangetype['field'][0]['encodingInfo']['dataType']
+    'http://www.opengis.net/def/dataType/OGC/0/float64'
     ```
     </div>
 
@@ -154,4 +140,4 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
 # Summary
 
-Congratulations!  You are now able to publish raster data to pygeoapi.
+Congratulations! You are now able to publish raster data to pygeoapi.

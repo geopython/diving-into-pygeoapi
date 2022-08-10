@@ -25,6 +25,13 @@ This directory provides sample data to demonstrate functionality.
 - copyright: Comune di Firenze
 - license: CC-BY 4.0
 
+### ICOADS
+- title: [coads_sst.nc](coads_sst.nc)
+- description: The International Comprehensive Ocean-Atmosphere Data Set (ICOADS) offers surface marine data spanning the past three centuries, and simple gridded monthly summary products for 2° latitude x 2° longitude boxes back to 1800 (and 1x1 boxes since 1960)° these data and products are freely distributed worldwide. As it contains observations from many different observing systems encompassing the evolution of measurement technology over hundreds of years, ICOADS is probably the most complete and heterogeneous collection of surface marine data in existence.
+- copyright: NOAA Physical Sciences Library
+- license: ICOADS data provided by the NOAA/OAR/ESRL PSL, Boulder, Colorado, USA, from their Web site at https://psl.noaa.gov.
+
+
 ## Metadata/Records
 
 ### Free Wifi Hotspots in Florence
