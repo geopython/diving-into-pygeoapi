@@ -38,9 +38,6 @@ ARG DATA_FOLDER=/usr/share/elasticsearch/data
 
 USER root
 
-COPY docker-entrypoint.sh  /docker-entrypoint.sh
-COPY add_data.sh /add_data.sh
-
 RUN yum install -y wget
 
 RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O bin/wait-for-it.sh
@@ -56,6 +53,9 @@ RUN yum --enablerepo=extras -y install epel-release \
         && yum install -y python3 python3-pip python3-setuptools python-typing \
         && pip3 install --upgrade pip elasticsearch==7.17.1 elasticsearch-dsl \
         && yum clean packages
+
+COPY docker-entrypoint.sh  /docker-entrypoint.sh
+COPY add_data.sh /add_data.sh
 
 USER elasticsearch
 
