@@ -24,7 +24,7 @@ pygeoapi supports the OGC API - Records draft specification, using Elasticsearch
 ## Publish metadata records in pygeoapi
 
 With pygeoapi we can setup OGC API - Records using any supported data provider. In this exercise we will use the [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html)
-Catalogue backend. We will use the sample catalogue in `workshop/docker/data/records/catalogue.tinydb`.
+Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/records/catalogue.tinydb`.
 
 !!! question "Update the pygeoapi configuration"
 

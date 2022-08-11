@@ -6,14 +6,14 @@ title: Exercise 1 - Your first dataset
 
 In this section you are going to publish a vector dataset.
 
-For this exercise, we will use a CSV dataset of [free Wifi locations in Florence](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/docker/data/free-wifi-florence.csv),
+For this exercise, we will use a CSV dataset of [free Wifi locations in Florence](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/exercises/data/free-wifi-florence.csv),
 kindly provided by [opendata.comune.fi.it](https://opendata.comune.fi.it).
 
-You can find this dataset in `workshop/docker/data/free-wifi-florence.csv`.
+You can find this dataset in `workshop/exercises/data/free-wifi-florence.csv`.
 
 This exercise consists of two key steps:
 
-* adapt the `docker.config.yml` to define this dataset as an OGC API - Features *collection*
+* adapt the `pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
 * ensure that pygeoapi can find and connec to the data file
 
 We will use the `docker-compose.yml` file provided.
@@ -23,7 +23,7 @@ We will use the `docker-compose.yml` file provided.
 Before making any changes, we will make sure that the initial Docker Compose
 setup provided to you is actually working. Two files are relevant:
 
-* `workshop/docker/docker-compose.yml`
+* `workshop/exercises/docker-compose.yml`
 * `pygeoapi/docker.pygeoapi.config`
 
 To test:
@@ -60,7 +60,7 @@ You are now ready to publish your first dataset.
 
 !!! question "Setting up the pygeoapi config file"
 
-    1. Open the file `workshop/docker/pygeoapi/docker.config.yml` in your text editor
+    1. Open the file `workshop/exercises/pygeoapi/pygeoapi.config.yml` in your text editor
     1. Look for the commented config section starting with `# START - EXERCISE 1 - Your First Collection`
     1. Uncomment all lines until `# END - EXERCISE 1 - Your First Collection`
 
@@ -123,7 +123,7 @@ in the `docker-compose.yml` file as follows:
 
 !!! question "Configure access to the data"
 
-    1. Open the file `workshop/docker/docker-compose.yml`
+    1. Open the file `workshop/exercises/docker-compose.yml`
     1. Look for the commented section `# Exercise 1 - `
     1. Uncomment that line  `- ./data:/data`
 
@@ -131,11 +131,11 @@ The relevant lines read:
 
 ``` {.yml linenums="43"}
 volumes:
-    - ./pygeoapi/docker.config.yml:/pygeoapi/local.config.yml
+    - ./pygeoapi/pygeoapi.config.yml:/pygeoapi/local.config.yml
     - ./data:/data # Exercise 1 - Ready to pull data from here
 ```
 
-The local `./pygeoapi/docker.config.yml` file was already mounted. Now
+The local `./pygeoapi/pygeoapi.config.yml` file was already mounted. Now
 we have also mounted (made available) the entire local directory `./data`.
 
 ## Test

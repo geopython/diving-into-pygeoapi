@@ -37,14 +37,14 @@ include, but are not limited to:
 
 For this exercise, you will publish a vector dataset of cycle paths, from the city of Florence, from the locations below:
 
-* data: `workshop/docker/data/cycle-lanes-firenze.geojson`
-* metadata: `workshop/docker/data/cycle-lanes-firenze.qmd`
+* data: `workshop/exercises/data/cycle-lanes-firenze.geojson`
+* metadata: `workshop/exercises/data/cycle-lanes-firenze.qmd`
 
 Let's generate the tiles as the first step using tippecanoe:
 
 <div class="termy">
 ```bash
-$ cd workshop/docker
+$ cd workshop/exercises
 $ docker run -it --rm -v ${PWD}/data:/data emotionalcities/tippecanoe \
   tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/cycle-lanes-firenze.geojson
 ```
@@ -143,7 +143,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
 !!! question "Add OGC API - Tiles to a website with LeafletJS"
 
-    * copy the HTML below to a file called `vector-tiles.html`, or locate this file in `workshop/html`
+    * copy the HTML below to a file called `vector-tiles.html`, or locate this file in `workshop/exercises/html`
     * open the file in a web browser
 
     The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of an OpenStreetMap base layer.
@@ -177,7 +177,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
    ![](../assets/images/leaflet.png){ width=100% }
 
 !!! tip 
-    Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/html/vector-tiles.html`.
+    Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
 
 ### OpenLayers
 

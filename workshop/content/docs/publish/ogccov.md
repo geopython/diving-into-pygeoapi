@@ -28,7 +28,7 @@ Download and unzip the GeoTIFF file:
 
 <div class="termy">
 ```bash
-$ cd workshop/docker/data
+$ cd workshop/exercises/data
 $ curl -O http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip
 $ unzip 53.zip
 ```

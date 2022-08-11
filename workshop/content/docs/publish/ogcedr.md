@@ -25,7 +25,7 @@ and coverage provider plugins.
 
 ## Publish environmental data in pygeoapi
 
-Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOADS data can be found in `workshop/docker/data/coads_sst.nc`:
+Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOADS data can be found in `workshop/exercises/data/coads_sst.nc`:
 
 
 !!! question "Update the pygeoapi configuration"
