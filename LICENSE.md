@@ -1,6 +1,8 @@
-MIT License
+# The MIT License (MIT)
 
-Copyright (c) 2022 pygeoapi community
+Copyright &copy; 2018-2022 The pygeoapi community
+
+* * *
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
