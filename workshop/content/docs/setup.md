@@ -7,8 +7,8 @@ title: Workshop environment setup
 In this workshop we use the following materials:
 
 1. **Documentation** - (like this page): access latest on [dive.pygeoapi.io](https://dive.pygeoapi.io)
-1. **Exercises** - download the [latest zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises in `workshop/docker` [^1]
-1. **Docker** - all examples/exercises are run in a `Docker container`  in `workshop/docker`
+1. **Exercises** - download the [latest zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises in `workshop/exercises` [^1]
+1. **Docker** - all examples/exercises are run in a `Docker container` in `workshop/exercises`
 
 [^1]: alternatively, you can fork/clone the GitHub repository of this workshop directly from https://github.com/geopython/diving-into-pygeoapi.
 

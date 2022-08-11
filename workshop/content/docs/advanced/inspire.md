@@ -83,7 +83,7 @@ encoding. In the coincidence that a concept has a geometry property, the codelis
 
 !!! question "Publish a codelist via OGC API"
 
-    A German Soiltype codelist has been made available in CSV format in `workshop/docker/data/bodenart.en.csv`. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
+    A German Soiltype codelist has been made available in CSV format in `workshop/exercises/data/bodenart.en.csv`. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
 
 ``` {.yaml linenums="1"}
 SoilTypes:

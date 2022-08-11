@@ -35,11 +35,11 @@ In the previous section we demonstrated the steps involved to add a dataset to p
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/docker/data/firenze_terrains.gpkg.zip`:
+Let's add the file `workshop/exercises/data/firenze_terrains.gpkg.zip`:
 
 <div class="termy">
 ```bash
-$ cd workshop/docker/data
+$ cd workshop/exercises/data
 $ unzip firenze_terrains.gpkg.zip
 ```
 </div>

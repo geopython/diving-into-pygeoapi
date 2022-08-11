@@ -35,7 +35,7 @@ set +e
 apt-get update -y &&
 apt-get install curl -y &&
 
-echo  "Waiting for ElasticSearch container..."
+echo  "Waiting for Elasticsearch container..."
 
 # First wait for ES to be up and then execute the original pygeoapi entrypoint.
-/wait-for-elasticsearch.sh http://elastic_search:9200 /entrypoint.sh || echo "ES failed: $?, exit" && exit 1
+/wait-for-elasticsearch.sh http://elasticsearch:9200 /entrypoint.sh || echo "Elasticsearch failed: $?, exit" && exit 1
