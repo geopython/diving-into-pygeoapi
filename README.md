@@ -20,7 +20,7 @@ the [Workshop environment setup](https://dive.pygeoapi.io/setup).
 
 ### Building the workshop content locally
 
-The workshop manual is powered by by [MkDocs](https://www.mkdocs.org) which facilitates easy management
+The workshop manual is powered by [MkDocs](https://www.mkdocs.org) which facilitates easy management
 of content and publishing. Workshop content is written in Markdown.
 
 
