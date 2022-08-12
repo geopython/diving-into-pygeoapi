@@ -1,43 +1,37 @@
-# Environment
+# pygeoapi with Elasticsearch (ES)
 
-## Docker compose environment
+These folders contain a Docker Compose configuration 
+necessary to setup a minimal
+pygeoapi server that uses a local ES backend service.
 
-### Start
-To start Docker Compose, from `workshop/exercises`, run the following command:
+This config is only for local development and testing.
 
-```bash
-docker-compose up -d
+## Elasticsearch
+
+- official Elasticsearch: **5.6.8** on **CentosOS 7**
+- ports **9300** and **9200**
+
+ES requires the host system to have its virtual memory
+parameter (**max_map_count**) [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
+set as follows:
+
 ```
-
-This will start two Docker containers, one with our pygeoapi (reachable from the browser at [this address](http://localhost:5000/)) and one with Elasticsearch (localhost:9200), which can be used as storage backend.
-
-To stop, without deleting the data stored on Elasticsearch, use the command:
-
-```bash
-docker-compose down
-```
-
-To stop and delete the data stored on Elasticsearch, use the command:
-
-```bash
-docker-compose down -v
-```
-
-### Push data in Elasticsearch
-
-Elasticsearch can be reached at `http://localhost:9200`. But to make it easier to load the data you can run the following script:
-
-```bash
-docker exec elastic /add_data.sh /path/myfile.geojson geojson_id
-```
-
-Which will put the data into a new Elasticsearch index named as the file (*myfile*), identified by the id `geojson_id`
-
-
-### Troubleshooting
-
-The Elasticsearch container may not work on some Linux distributions. The following command may help fix deployment errors:
-
-```bash
 sudo sysctl -w vm.max_map_count=262144
+```
+
+If the docker composition fails with the following error:
+```
+docker_elastic_search_1 exited with code 78
+```
+
+it is very likely that you forgot to setup the `sysctl`.
+
+## Building and Running
+
+To build and run the [Docker compose file](docker-compose.yml) in localhost:
+
+```
+sudo sysctl -w vm.max_map_count=262144
+docker-compose build
+docker-compose up
 ```

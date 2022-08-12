@@ -1,4 +1,3 @@
-#!/bin/sh
 # =================================================================
 #
 # Authors: Just van den Broecke <justb4@gmail.com>>
@@ -30,17 +29,45 @@
 #
 # =================================================================
 
-echo "Starting script to add geojson"
-# move to the directory of this setup script
-cd "$(dirname "$0")"
+version: '3.3'
 
-# for some reason even when port 9200 is open Elasticsearch is unable to be accessed as authentication fails
-# a few seconds later it works
-# incresing to 50s for wait in a slow system /_cluster/health?wait_for_status=yellow&timeout=50s
-until $(curl -sSf -XGET --insecure 'http://localhost:9200/_cluster/health?wait_for_status=yellow' > /dev/null); do
-    printf 'No status yellow from ES, trying again in 10 seconds \n'
-    sleep 10
-done
+services:
+  pygeoapi:
+    image: geopython/pygeoapi:latest
 
-python3 /load_es_data.py $1 $2
+    container_name: pygeoapi_es
 
+    entrypoint:
+      - /es-entrypoint.sh
+
+    ports:
+      - 5000:80
+
+    volumes:
+      - ./pygeoapi/docker.config.yml:/pygeoapi/local.config.yml
+      - ./pygeoapi/es-entrypoint.sh:/es-entrypoint.sh
+      - ./pygeoapi/wait-for-elasticsearch.sh:/wait-for-elasticsearch.sh
+
+    links:
+      - elasticsearch
+
+    depends_on:
+      - elasticsearch
+
+  elasticsearch:
+    build: ./ES
+
+    container_name: elastic
+
+    ports:
+      - 9300:9300
+      - 9200:9200
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+      - ./../data:/data # Ready to pull data from here
+
+volumes:
+  elasticsearch_data: { }
+
+#NOTE: Host requires changes in configuration to run ES
+#sudo sysctl -w vm.max_map_count=262144

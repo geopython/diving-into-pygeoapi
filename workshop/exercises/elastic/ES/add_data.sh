@@ -1,12 +1,11 @@
+#!/bin/sh
 # =================================================================
 #
 # Authors: Just van den Broecke <justb4@gmail.com>>
 #          Jorge Samuel Mendes de Jesus <jorge.dejesus@geocat.net>
-#          Tom Kralidis <tomkralidis@gmail.com>
 #
 # Copyright (c) 2019 Just van den Broecke
 # Copyright (c) 2019 Jorge Samuel Mendes de Jesus
-# Copyright (c) 2022 Tom Kralidis
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -31,17 +30,20 @@
 #
 # =================================================================
 
-version: '3.3'
+echo "Starting script to add geojson"
+# move to the directory of this setup script
+cd "$(dirname "$0")"
 
-services:
-  pygeoapi:
-    image: geopython/pygeoapi:latest
+# for some reason even when port 9200 is open Elasticsearch is unable to be accessed as authentication fails
+# a few seconds later it works
+# incresing to 50s for wait in a slow system /_cluster/health?wait_for_status=yellow&timeout=50s
+until $(curl -sSf -XGET --insecure 'http://localhost:9200/_cluster/health?wait_for_status=yellow' > /dev/null); do
+    printf 'No status yellow from ES, trying again in 10 seconds \n'
+    sleep 10
+done
 
-    container_name: pygeoapi
+# TODO - explicit data loading from /data
+# python3 /load_es_data.py $1 $2
 
-    ports:
-      - 5000:80
-
-    volumes:
-      - ./pygeoapi.config.yml:/pygeoapi/local.config.yml
-     # - ./data:/data # Exercise 1 - First - Ready to pull data from here
+# For now: use the built-in data (see Dockerfile)
+python3 /load_es_data.py /usr/share/elasticsearch/data/ne_110m_populated_places_simple.geojson geonameid
