@@ -44,18 +44,25 @@ allows for OGC API client software to be more streamlined.
 
 The `/conformance` endpoint indicates which standards and extensions are supported by a deployment of OGC API.
 
+#### OGC API building blocks
+
+The OGC API approach allows for modularity and "profiling" of APIs depending on your requirements.  This means you
+can mix and match OGC APIs together.
+
+![OGC API building blocks](assets/images/ogc-api-building-blocks.png)
+
 #### More OGC APIs
 
 The OGC API effort is rapidly evolving. Numerous OGC API standards are in development, and will be implemented in
 pygeoapi over time:
 
-- [Maps](https://ogcapi.ogc.org/maps) can serve spatially referenced and dynamically rendered map imagery.
-- [Routes](https://ogcapi.ogc.org/routes) provides acces to routing data.
-- [Styles](https://ogcapi.ogc.org/styles) defines a Web API that enables map servers, clients as well as visual style editors, to manage and fetch styles.
-- [3D GeoVolumes](https://ogcapi.ogc.org/geovolumes) facilitates efficient discovery of and access to 3D content in multiple formats based on a space-centric perspective.
-- [Moving Features](https://ogcapi.ogc.org/movingfeatures) defines an API that provides access to data representing features that move as rigid bodies.
-- [Joins](https://ogcapi.ogc.org/joins)  supports the joining of data, from multiple sources, with feature collections or directly with other input files.
-- [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS).
+- [Maps](https://ogcapi.ogc.org/maps) can serve spatially referenced and dynamically rendered map imagery
+- [Routes](https://ogcapi.ogc.org/routes) provides acces to routing data
+- [Styles](https://ogcapi.ogc.org/styles) defines a Web API that enables map servers, clients as well as visual style editors, to manage and fetch styles
+- [3D GeoVolumes](https://ogcapi.ogc.org/geovolumes) facilitates efficient discovery of and access to 3D content in multiple formats based on a space-centric perspective
+- [Moving Features](https://ogcapi.ogc.org/movingfeatures) defines an API that provides access to data representing features that move as rigid bodies
+- [Joins](https://ogcapi.ogc.org/joins)  supports the joining of data, from multiple sources, with feature collections or directly with other input files
+- [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS)
 
 #### OGC APIs supported by pygeoapi
 
