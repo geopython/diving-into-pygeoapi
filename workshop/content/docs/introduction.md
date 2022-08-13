@@ -12,26 +12,7 @@ resources and tips for future reading and reference (i.e. where to go when you d
 Although pygeoapi is written in Python and can be customizable and extensible (plugins) 
 for Python developers, Python skills are not required to install, setup and publish your geospatial
 data as part of this workshop. All you need for the workshop is your favorite text editor and Docker (we will
-more informaiton on Docker in the [setup section](setup.md)). If you need some ideas for a text editor
-
-## Text editor
-
-Your text editor needs to be able to edit configuration files in **plain text**. Below are some choices
-for text editors (there may be others), along with what some of the pygeoapi developers prefer to use:
-
-* Notepad or Notepad++ (Windows)
-* Sublime Text (all): Angelos
-* IntelliJ IDEA (all): Just
-* Emacs (all): Just
-* Visual Studio Code (all): Francesco, Angelos
-* `/usr/bin/vim` (all): Tom, Angelos
-
-Having said this, please feel free to use what works for you :)
-
-## YAML
-
-Most exercises will focus on editing the pygeoapi [configuration](https://docs.pygeoapi.io/en/latest/configuration.html),
-which is in the [YAML](https://yaml.org) format. If you are not familiar with YAML, it is worth reading through a [tutorial](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) to become aware of YAML syntax and indentation.
+more information in the [setup section](setup.md)).
 
 ## Background reading
 
