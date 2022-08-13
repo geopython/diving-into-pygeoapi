@@ -73,5 +73,22 @@ def my_def():
 
 ## Extending through a web framework
 
+For certain web frameworks, pygeoapi can also be embedded at the web routing level. Below is an example
+using Flask blueprints (which are natively supported in the pygeoapi Flask application):
 
-TODO: Flask blueprints
+```python
+from flask import Flask
+
+from pygeoapi.flask_app import BLUEPRINT as pygeoapi_blueprint
+
+my_flask_app = Flask(__name__, static_url_path='/static')
+my_flask_app.url_map.strict_slashes = False
+
+# mount all pygeoapi endpoints to /oapi
+my_flask_app.register_blueprint(pygeoapi_blueprint, url_prefix='/oapi')
+
+
+@my_flask_app.route('/')
+def home():
+    return '<p>home page</p>'
+```
