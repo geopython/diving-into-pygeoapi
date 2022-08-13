@@ -11,6 +11,11 @@ diagram provides an overview of how pygeoapi is designed and architected:
 
 [![how pygeoapi works](https://docs.pygeoapi.io/en/latest/_images/how-pygeoapi-works.png)](https://docs.pygeoapi.io/en/latest/how-pygeoapi-works.html)
 
+There are two main ways to create a downstream application:
+
+- Using the core API
+- Extending through the web interface of the frameworks supported out-of-the box
+
 ## Using the core API directly
 
 The core pygeoapi Python API entrypoint is `pygeoapi.api.API`, which is initialized with the pygeoapi configuration
@@ -20,7 +25,6 @@ as a Python `dict`.
 
     The pygeoapi core API enables the developer to manage pygeoapi configuration in any number of ways
     (file on disk, object storage, database driven, etc.)
-
 
 From here, API objects provide a number of functions, most of which require a [`pygeoapi.api.APIRequest`](https://docs.pygeoapi.io/en/latest/api-documentation.html#pygeoapi.api.APIRequest) object
 according to the web framework. Examples include:
@@ -35,7 +39,6 @@ according to the web framework. Examples include:
     See the [official documentation](https://docs.pygeoapi.io/en/latest/api-documentation.html#pygeoapi.api.APIRequest)
     for more information about `pygeoapi.api.APIRequest` (you can even use your own custom request object as long as it
     satisfies the interface requirements of `pygeoapi.api.APIRequest`.
-
 
 Let's take a look at what a bare bones API integration would look like, using Flask as an example:
 
@@ -73,8 +76,19 @@ def my_def():
 
 ## Extending through a web framework
 
-For certain web frameworks, pygeoapi can also be embedded at the web routing level. Below is an example
-using Flask blueprints (which are natively supported in the pygeoapi Flask application):
+pygeoapi can be installed and used at the web routing level as a dependency in your project. This is pretty much the easier way to leverage the flexibility and the modularity of its architecture.
+Once the interfaces are available then the developer can use the preferred framework for serving the frontend application. In practice
+the following modules:
+
+- `pygeoapi.flask_app.py` for Flask blueprints
+- `pygeoapi.starlette_app.py` for Starlette/FastAPI
+- `pygeoapi.django_app.py` for Django (ongoing [PR](https://github.com/geopython/pygeoapi/pull/630))
+
+Some examples are available below for developers.
+
+### Examples
+
+#### Flask blueprints
 
 ```python
 from flask import Flask
@@ -91,4 +105,49 @@ my_flask_app.register_blueprint(pygeoapi_blueprint, url_prefix='/oapi')
 @my_flask_app.route('/')
 def home():
     return '<p>home page</p>'
+```
+
+#### Starlette and FastAPI
+
+```python
+
+import uvicorn
+from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
+from starlette.exceptions import HTTPException as StarletteHTTPException
+from starlette.middleware.cors import CORSMiddleware
+
+from pygeoapi.starlette_app import app as pygeoapi_app
+
+
+def create_app() -> FastAPI:
+    """Handle application creation."""
+    app = FastAPI(title="my_pygeoapi", root_path="", debug=True)
+
+    # Set all CORS enabled origins
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
+    @app.exception_handler(StarletteHTTPException)
+    async def custom_http_exception_handler(request, e):
+        return await http_exception_handler(request, e)
+
+    @app.exception_handler(RequestValidationError)
+    async def custom_validation_exception_handler(request, e):
+        return await request_validation_exception_handler(request, e)
+
+    # mount all pygeoapi endpoints to /oapi
+    app.mount(path="/oapi", app=pygeoapi_app)
+
+    return app
+
+app = create_app()
+
+if __name__ == "__main__":
+    uvicorn.run(app, port=5000)
 ```
