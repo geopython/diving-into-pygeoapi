@@ -51,6 +51,8 @@ can mix and match OGC APIs together.
 
 ![OGC API building blocks](assets/images/ogc-api-building-blocks.png)
 
+You can read more about this topic in the [building blocks website](https://opengeospatial.github.io/bblocks/).
+
 #### More OGC APIs
 
 The OGC API effort is rapidly evolving. Numerous OGC API standards are in development, and will be implemented in
@@ -63,6 +65,8 @@ pygeoapi over time:
 - [Moving Features](https://ogcapi.ogc.org/movingfeatures) defines an API that provides access to data representing features that move as rigid bodies
 - [Joins](https://ogcapi.ogc.org/joins)  supports the joining of data, from multiple sources, with feature collections or directly with other input files
 - [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS)
+
+![Approved and candidate OGC API standards](assets/images/ogcapis.png)
 
 #### OGC APIs supported by pygeoapi
 

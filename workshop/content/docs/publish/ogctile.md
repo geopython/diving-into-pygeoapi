@@ -100,8 +100,8 @@ Save the file and restart docker compose. Navigate to `http://localhost:5000/col
 
 Additional check for the following tile specific endpoints in the `Cycle` collection:
 
-- tile links in `http://localhost:5000/collections/Cycle](http://localhost:5000/collections/Cycle`
-- tile metadata in `http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/metadata`
+- tile links in [http://localhost:5000/collections/Cycle](http://localhost:5000/collections/Cycle
+- tile metadata in [http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/metadata](http://localhost:5000/collections/Cycle/tiles/WorldCRS84Quad/metadata)
 
 ![TileSet](../assets/images/vtiles.png)
 
