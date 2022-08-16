@@ -21,7 +21,7 @@ for text editors (there may be others), along with what some of the pygeoapi dev
 * Sublime Text (all): Angelos
 * IntelliJ IDEA (all): Just
 * Emacs (all): Just
-* Visual Studio Code (all): Francesco, Angelos
+* Visual Studio Code (all): Francesco, Angelos, Joana
 * `/usr/bin/vim` (all): Tom, Angelos
 
 Having said this, please feel free to use what works for you :)

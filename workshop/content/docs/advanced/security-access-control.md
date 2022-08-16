@@ -27,4 +27,3 @@ These parts are usually managed by dedicated infrastructures and solutions which
     The OpenAPI specification has very well-defined elements for developers and adopters. The most relevant are:
         - [Security Scheme Object](https://swagger.io/specification/#security-scheme-object) defines the security schemes that can be used by the operations. Supported schemes are *HTTP Authentication*, an *API Key*, *OAuth2*'s flows and *OpenID Connect*.
         - [Security Requirement Object](https://swagger.io/specification/#security-requirement-object) defines the list of required security schemes to execute an operation.
-

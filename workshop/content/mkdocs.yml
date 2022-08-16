@@ -21,10 +21,9 @@ nav:
         - advanced/index.md
         - Multilingual support: advanced/i18n.md
         - UI customization and templating: advanced/ui-custom-templates.md
-        - Custom plugins: advanced/custom-plugins.md
         - Using pygeoapi in downstream applications: advanced/downstream-applications.md
-        - Security and access control: advanced/security-access-control.md
         - Search Engine Optimization (SEO): advanced/seo.md
+        - Security and access control: advanced/security-access-control.md
         - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
         - Cloud deployment: advanced/cloud.md
         - INSPIRE support: advanced/inspire.md
