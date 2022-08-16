@@ -6,13 +6,29 @@ site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
 nav:
     - Home: index.md
-    - Introduction to pygeoapi: intro/index.md
-    - Set up the training environment: setup/index.md
-    - Standards: standards/index.md
-    - Publishing data: publish/index.md
-    - Advanced topics: advanced/index.md
+    - Introduction to pygeoapi: introduction.md
+    - Workshop environment setup: setup.md
+    - Standards: standards.md
+    - Publishing data:
+        - publish/index.md
+        - Exercise 1 - Your first dataset: publish/first.md
+        - Exercise 2 - Vector data via OGC API - Features: publish/ogcfeat.md
+        - Exercise 3 - Raster data via OGC API - Coverages: publish/ogccov.md
+        - Exercise 4 - Tiles of geospatial data via OGC API - Tiles: publish/ogctile.md
+        - Exercise 5 - Metadata via OGC API - Records: publish/ogcrec.md
+        - Exercise 6 - Environmental data via OGC - Environmental Data Retrieval: publish/ogcedr.md
+    - Advanced topics:
+        - advanced/index.md
+        - Multilingual support: advanced/i18n.md
+        - UI customization and templating: advanced/ui-custom-templates.md
+        - Using pygeoapi in downstream applications: advanced/downstream-applications.md
+        - Search Engine Optimization (SEO): advanced/seo.md
+        - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
+        - Cloud deployment: advanced/cloud.md
+        - INSPIRE support: advanced/inspire.md
+    - Conclusion: conclusion.md
 
-# use_directory_urls: true
+use_directory_urls: true
 
 theme:
     name: material
@@ -20,6 +36,10 @@ theme:
         # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
         # Default is indigo (blue)
         scheme: pygeoapi
+    features:
+        - navigation.indexes 
+    favicon: assets/favicon.ico
+    logo: assets/images/pygeoapi-icon-notrans.png
 
 plugins:
     - search
