@@ -34,7 +34,7 @@ To test:
 
     <div class="termy">
     ```bash
-    $ docker-compose up
+    docker-compose up
     ```
     </div>
     1. Open `http://localhost:5000` in your browser, verify some collections
@@ -46,11 +46,11 @@ To test:
 
     <div class="termy">
     ```bash
-    $ docker-compose up -d
-    $ docker ls  # verify that the pygeoapi container is running
-    $ # visit http://localhost:5000 in your browser, verify some collections
-    $ docker logs --follow pygeoapi  # view logs
-    $ docker-compose stop
+    docker-compose up -d
+    docker ls  # verify that the pygeoapi container is running
+    # visit http://localhost:5000 in your browser, verify some collections
+    docker logs --follow pygeoapi  # view logs
+    docker-compose stop
     ```
     </div>
 
@@ -166,7 +166,7 @@ Set the logging level to `DEBUG` and indicate a path to a log file.
 
     <div class="termy">
     ```bash
-    $ docker logs --follow pygeoapi
+    docker logs --follow pygeoapi
     ```
     </div>
 

@@ -75,7 +75,7 @@ Snippets which need to be typed in a on a terminal/console are indicated as:
 
 <div class="termy">
 ```bash
-$ echo 'Hello world'
+echo 'Hello world'
 ```
 </div>
 

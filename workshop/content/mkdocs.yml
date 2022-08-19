@@ -9,14 +9,14 @@ nav:
     - Introduction to pygeoapi: introduction.md
     - Workshop environment setup: setup.md
     - Standards: standards.md
-    - Publishing data:
-        - publish/index.md
-        - Exercise 1 - Your first dataset: publish/first.md
-        - Exercise 2 - Vector data via OGC API - Features: publish/ogcfeat.md
-        - Exercise 3 - Raster data via OGC API - Coverages: publish/ogccov.md
-        - Exercise 4 - Tiles of geospatial data via OGC API - Tiles: publish/ogctile.md
-        - Exercise 5 - Metadata via OGC API - Records: publish/ogcrec.md
-        - Exercise 6 - Environmental data via OGC - Environmental Data Retrieval: publish/ogcedr.md
+    - Publishing:
+        - publishing/index.md
+        - Exercise 1 - Your first dataset: publishing/first.md
+        - Exercise 2 - Vector data via OGC API - Features: publishing/ogcfeat.md
+        - Exercise 3 - Raster data via OGC API - Coverages: publishing/ogccov.md
+        - Exercise 4 - Tiles of geospatial data via OGC API - Tiles: publishing/ogctile.md
+        - Exercise 5 - Metadata via OGC API - Records: publishing/ogcrec.md
+        - Exercise 6 - Environmental data via OGC - Environmental Data Retrieval: publishing/ogcedr.md
     - Advanced topics:
         - advanced/index.md
         - Multilingual support: advanced/i18n.md

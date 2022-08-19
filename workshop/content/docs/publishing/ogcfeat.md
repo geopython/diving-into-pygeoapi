@@ -39,8 +39,8 @@ Let's add the file `workshop/exercises/data/firenze_terrains.gpkg.zip`:
 
 <div class="termy">
 ```bash
-$ cd workshop/exercises/data
-$ unzip firenze_terrains.gpkg.zip
+cd workshop/exercises/data
+unzip firenze_terrains.gpkg.zip
 ```
 </div>
 
@@ -178,7 +178,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     <div class="termy">
     ```bash
-    $ ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
+    ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
     ```
     </div>
     
@@ -186,7 +186,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     <div class="termy">
     ```bash
-    $ ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
+    ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
     ```
     </div>
 
@@ -204,7 +204,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     <div class="termy">
     ```bash
-    $ pip3 install owslib
+    pip3 install owslib
     ```
     </div>
 

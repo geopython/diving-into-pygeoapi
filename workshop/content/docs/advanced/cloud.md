@@ -14,7 +14,7 @@ A [Docker image](https://hub.docker.com/r/geopython/pygeoapi) is available for p
 
 <div class="termy">
 ```bash
-$ docker run -p 5000:80 https://hub.docker.com/r/geopython/pygeoapi:latest
+docker run -p 5000:80 https://hub.docker.com/r/geopython/pygeoapi:latest
 ```
 </div>
 
@@ -26,9 +26,9 @@ In a typical configuration one would override the default pygeoapi configuration
 
 <div class="termy">
 ```bash
-$ docker run -p 5000:80 \ 
-  -v $(pwd)/pygeoapi-config.yml:/pygeoapi/local.config.yml \
-  -v $(pwd)/geodata:/geodata https://hub.docker.com/r/geopython/pygeoapi:latest
+docker run -p 5000:80 \ 
+-v $(pwd)/pygeoapi-config.yml:/pygeoapi/local.config.yml \
+-v $(pwd)/geodata:/geodata https://hub.docker.com/r/geopython/pygeoapi:latest
 ```
 </div>
 
@@ -47,8 +47,8 @@ set the `SCRIPT_NAME` environment variable.
 
 <div class="termy"> 
 ```bash
-$ docker run -p 5000:80 -e SCRIPT_NAME='/mypygeoapi' 
-    -v $(pwd)/my.config.yml:/pygeoapi/local.config.yml -it geopython/pygeoapi
+docker run -p 5000:80 -e SCRIPT_NAME='/mypygeoapi' \
+-v $(pwd)/my.config.yml:/pygeoapi/local.config.yml -it geopython/pygeoapi
 # browse to http://localhost:5000/mypygeoapi
 ```
 </div>
@@ -56,5 +56,3 @@ $ docker run -p 5000:80 -e SCRIPT_NAME='/mypygeoapi'
 # Summary
 
 Congratulations! You can now deploy pygeopi as a cloud native service.
- 
-

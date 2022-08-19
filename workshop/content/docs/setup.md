@@ -96,9 +96,10 @@ If all goes well, you should be able to run Docker from the command line as foll
 
 <div class="termy">
 ```bash
-$ docker --version
+docker --version
 Docker version 20.10.17, build 100c701
-$ docker-compose --version  
+
+docker-compose --version  
 Docker Compose version v2.6.1
 ```
 </div>
@@ -117,7 +118,7 @@ data is a one-liner.
 
     <div class="termy">
     ```bash
-    $ docker run --rm -p 5000:80 geopython/pygeoapi:latest
+    docker run --rm -p 5000:80 geopython/pygeoapi:latest
     Unable to find image 'geopython/pygeoapi:latest' locally
     latest: Pulling from geopython/pygeoapi
     d7bfe07ed847: Already exists 
@@ -173,7 +174,7 @@ within the container by a local file which you can edit in your favourite text e
 
     <div class="termy">
     ```bash
-    $ curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/Docker/default.config.yml
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/Docker/default.config.yml
     ```
     </div>
 
@@ -190,9 +191,9 @@ within the container by a local file which you can edit in your favourite text e
 
     <div class="termy">
     ```bash
-    $ docker run -p 5000:80 \
-        -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
-        geopython/pygeoapi:latest
+    docker run -p 5000:80 \
+    -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
+    geopython/pygeoapi:latest
     ```
     </div>
 
@@ -216,11 +217,11 @@ Below is an example where the configuration is explictly set to `pygeoapi-config
 
 <div class="termy">
 ```bash
-$ docker run -p 5000:80 \
-    -v $(pwd)/data:/pygeoapi/mydata \
-    -v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.xml \
-    -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
-    geopython/pygeoapi:latest
+docker run -p 5000:80 \
+-v $(pwd)/data:/pygeoapi/mydata \
+-v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.yml \
+-e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
+geopython/pygeoapi:latest
 ```
 </div>
 

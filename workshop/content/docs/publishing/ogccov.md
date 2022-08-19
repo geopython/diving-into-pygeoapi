@@ -28,9 +28,9 @@ Download and unzip the GeoTIFF file:
 
 <div class="termy">
 ```bash
-$ cd workshop/exercises/data
-$ curl -O http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip
-$ unzip 53.zip
+cd workshop/exercises/data
+curl -O http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip
+unzip 53.zip
 ```
 </div>
 
@@ -86,7 +86,7 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
     <div class="termy">
     ```
-    $ gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
+    gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
     ```
     </div>
 
@@ -100,7 +100,7 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
     <div class="termy">
     ```bash
-    $ pip3 install owslib
+    pip3 install owslib
     ``` 
     </div>
 
