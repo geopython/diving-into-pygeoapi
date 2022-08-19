@@ -44,9 +44,9 @@ Let's generate the tiles as the first step using tippecanoe:
 
 <div class="termy">
 ```bash
-$ cd workshop/exercises
-$ docker run -it --rm -v ${PWD}/data:/data emotionalcities/tippecanoe \
-  tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/cycle-lanes-firenze.geojson
+cd workshop/exercises
+docker run -it --rm -v ${PWD}/data:/data emotionalcities/tippecanoe \
+tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/cycle-lanes-firenze.geojson
 ```
 </div>
  

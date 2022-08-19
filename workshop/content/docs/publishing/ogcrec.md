@@ -73,7 +73,7 @@ It's possible to load more example ISO19139 metadata in a TinyDB database with [
 
 <div class="termy">
 ```bash
-$ python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
+python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
 ```
 </div>
 
@@ -109,7 +109,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
     <div class="termy">
     ```bash
-    $ pip3 install owslib
+    pip3 install owslib
     ``` 
     </div>
 

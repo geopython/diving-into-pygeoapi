@@ -54,7 +54,7 @@ recommendation and the relevant Good Practices.
 
     <div class="termy">
     ```bash
-    $ python3 load_tinydb_records.py <path/to/xml-files> <output.db>
+    python3 load_tinydb_records.py <path/to/xml-files> <output.db>
     ```
     </div>
 
