@@ -54,5 +54,4 @@ as well from additional developers and users who happily provided new functional
 updates. As a result, a healthy community quickly emerged with a common interest in open source, OGC API standards, low barrier, modular and extensible. The
 rest, as they say, is history.
 
-pygeoapi is an [OSGeo Project in incubation](https://www.osgeo.org/projects/pygeoapi) and an
-OGC Reference Implementation.
+pygeoapi is an [OSGeo Project](https://www.osgeo.org/projects/pygeoapi) and an OGC Reference Implementation.
