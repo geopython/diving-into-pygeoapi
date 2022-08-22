@@ -15,7 +15,9 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 For those in attendance at [FOSS4G 2022](https://2022.foss4g.org):
 
-- come up and pick up your free pygeoapi t-shirt at the end of this workshop!
+- come up and pick up your free pygeoapi t-shirt and laptop sticker at the end of this workshop!
+- come to the [pygeoapi project status presentation](https://talks.osgeo.org/foss4g-2022/talk/KABLGQ) presentation on Thusrday 25 August at 9:30, in Room Onice
+- come to the [Implementing OGC APIs using Elasticsearch and pygeoapi](https://talks.osgeo.org/foss4g-2022/talk/KABLGQ) presentation on Thusrday 26 August at 10:10, in Room 4
 - the pygeoapi team will be at the [community sprint](https://wiki.osgeo.org/wiki/FOSS4G_2022/Community_sprint) on 27-28 August. Come join us!
 
 
