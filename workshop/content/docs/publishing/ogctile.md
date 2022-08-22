@@ -25,7 +25,7 @@ include, but are not limited to:
 * [TileMill](https://tilemill-project.github.io/tilemill)
 * [MapProxy](https://mapproxy.org)
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
-* [tippecanoe](https://github.com/mapbox/tippecanoe):
+* [tippecanoe](https://github.com/mapbox/tippecanoe)
 
 !!! The OGC API - Tiles URL structure is compatible with XYZ layers in common libraries such as OpenLayers, Leaflet and MapML
 
