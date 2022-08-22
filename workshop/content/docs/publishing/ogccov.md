@@ -108,6 +108,7 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
     ```python
     >>> from owslib.ogcapi.coverages import Coverages
     >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+    >>> w = Coverages(SERVICE_URL)
     >>> w.url
     'https://demo.pygeoapi.io/master/'
     >>> gdps = w.collection('gdps-temperature')
