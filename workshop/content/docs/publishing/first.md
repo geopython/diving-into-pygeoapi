@@ -64,7 +64,7 @@ You are now ready to publish your first dataset.
     1. Look for the commented config section starting with `# START - EXERCISE 1 - Your First Collection`
     1. Uncomment all lines until `# END - EXERCISE 1 - Your First Collection`
 
-Make sure that the indentation aligns (hint: directly under `# START ...)
+Make sure that the indentation aligns (hint: directly under `# START ...`)
 
 The config section reads:
 
