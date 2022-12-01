@@ -175,7 +175,7 @@ within the container by a local file which you can edit in your favourite text e
 
     <div class="termy">
     ```bash
-    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/Docker/default.config.yml
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
     ```
     </div>
 
