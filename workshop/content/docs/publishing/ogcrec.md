@@ -14,7 +14,7 @@ for clients and users.
 
 ## pygeoapi support
 
-pygeoapi supports the OGC API - Records draft specification, using Elasticsearch and TinyDB [rasterio](https://rasterio.readthedocs.io) and [xarray](https://docs.xarray.dev) as core backends.
+pygeoapi supports the OGC API - Records draft specification, using Elasticsearch and TinyDB [rasterio](https://rasterio.readthedocs.io) as core backends.
 
 !!! note
 
