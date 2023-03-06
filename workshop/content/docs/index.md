@@ -48,7 +48,7 @@ Exercises are indicated as follows:
 
     A section marked like this indicates that you can try out the exercise.
 
-Also you will notice tips and notes setions within the text:
+Also you will notice tips and notes sections within the text:
 
 !!! tip
 
