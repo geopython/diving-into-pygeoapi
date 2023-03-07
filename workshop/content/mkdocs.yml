@@ -44,7 +44,6 @@ theme:
 
 plugins:
     - search
-    - pdf-export
 
 markdown_extensions:
     - meta # option to add some meta tags on top, title, author, date, etc
