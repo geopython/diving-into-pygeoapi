@@ -101,7 +101,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
     ![Search results](../assets/images/search-results.png){ width=50% }
 
-[OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Records.
+[OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Records.
 
 !!! question "Interact with OGC API - Records via OWSLib"
 
@@ -142,7 +142,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
 !!! note
 
-    See the official [OWSLib documentation](https://geopython.github.io/OWSLib/usage.html#ogc-api) for more examples.
+    See the official [OWSLib documentation](https://owslib.readthedocs.io/en/latest/usage.html#ogc-api) for more examples.
 
 
 # Summary

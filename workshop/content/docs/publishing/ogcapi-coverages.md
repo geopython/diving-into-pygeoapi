@@ -92,7 +92,7 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
 ### OWSLib
 
-[OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Coverages.
+[OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Coverages.
 
 !!! question "Interact with OGC API - Coverages via OWSLib"
 
@@ -137,7 +137,7 @@ Save the configuration and restart docker compose. Navigate to `http://localhost
 
 !!! note
 
-    See the official [OWSLib documentation](https://geopython.github.io/OWSLib/usage.html#ogc-api) for more examples.
+    See the official [OWSLib documentation](https://owslib.readthedocs.io/en/latest/usage.html#ogc-api) for more examples.
 
 # Summary
 

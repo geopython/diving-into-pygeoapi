@@ -194,9 +194,9 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
 
-### OWSlib
+### OWSLib
 
-[OWSlib](https://geopython.github.io/OWSLib) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
+[OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
 !!! question "Interact with OGC API - Features via OWSLib"
 
@@ -243,7 +243,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! note
 
-    See the official [OWSLib documentation](https://geopython.github.io/OWSLib/usage.html#ogc-api) for more examples.
+    See the official [OWSLib documentation](https://owslib.readthedocs.io/en/latest/usage.html#ogc-api) for more examples.
 
 # Summary
 
