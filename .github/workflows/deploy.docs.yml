@@ -1,9 +1,9 @@
 name: Deploy documentation ⚙️
 
 on:
-  branches:
-    - main
   push:
+    branches:
+      - main
     paths:
       - 'workshop/content/**'
 
