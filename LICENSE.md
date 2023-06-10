@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright &copy; 2018-2022 The pygeoapi community
+Copyright &copy; 2018-2023 The pygeoapi community
 
 * * *
 

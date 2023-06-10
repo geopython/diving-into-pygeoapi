@@ -6,7 +6,7 @@
 #
 # Copyright (c) 2019 Just van den Broecke
 # Copyright (c) 2019 Jorge Samuel Mendes de Jesus
-# Copyright (c) 2020 Tom Kralidis
+# Copyright (c) 2023 Tom Kralidis
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -31,9 +31,9 @@
 #
 # =================================================================
 
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.5.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:8.6.2
 
-LABEL maintainer="jorge.dejesus@geocat.net justb4@gmail.com"
+LABEL maintainer="jorge.dejesus@geocat.net justb4@gmail.com tomkralidis@gmail.com"
 ARG DATA_FOLDER=/usr/share/elasticsearch/data
 
 USER root
@@ -51,8 +51,8 @@ RUN echo "discovery.type: single-node" >> config/elasticsearch.yml
 
 RUN yum --enablerepo=extras -y install epel-release \
         && yum install -y python3 python3-pip python3-setuptools python-typing \
-        && pip3 install --upgrade pip elasticsearch==7.17.1 elasticsearch-dsl \
-        && yum clean packages
+        && pip3 install --upgrade pip elasticsearch elasticsearch-dsl \
+        && pip3 install -U elasticsearch && yum clean packages
 
 COPY docker-entrypoint.sh  /docker-entrypoint.sh
 COPY add_data.sh /add_data.sh

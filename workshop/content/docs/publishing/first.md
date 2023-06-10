@@ -13,10 +13,10 @@ You can find this dataset in `workshop/exercises/data/free-wifi-florence.csv`.
 
 This exercise consists of two key steps:
 
-* adapt the `pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
-* ensure that pygeoapi can find and connec to the data file
+* adapt the `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
+* ensure that pygeoapi can find and connect to the data file
 
-We will use the `docker-compose.yml` file provided.
+We will use the `workshop/exercises/docker-compose.yml` file provided.
 
 ## Verify the existing Docker Compose config
 
@@ -24,7 +24,7 @@ Before making any changes, we will make sure that the initial Docker Compose
 setup provided to you is actually working. Two files are relevant:
 
 * `workshop/exercises/docker-compose.yml`
-* `pygeoapi/docker.pygeoapi.config`
+* `workshop/exercises/pygeoapi.config.yml`
 
 To test:
 
@@ -34,6 +34,7 @@ To test:
 
     <div class="termy">
     ```bash
+    cd workshop/exercises
     docker-compose up
     ```
     </div>
@@ -173,6 +174,6 @@ Set the logging level to `DEBUG` and indicate a path to a log file.
 !!! tip
 
     Errors related to file paths typically happen on initial setup. However, they may also happen at unexpected moments, resulting in a broken service.
-    Products such as [GeoHealthCheck](https://geohealthcheck.org) aim to monitor, detect and notify service health and availability. The OGC APi - Features
+    Products such as [GeoHealthCheck](https://geohealthcheck.org) aim to monitor, detect and notify service health and availability. The OGC API - Features
     tests in GeoHealthCheck poll the availability of the service at intervals. Consult the [GeoHealthCheck documentation](https://docs.geohealthcheck.org) for more
     information. 

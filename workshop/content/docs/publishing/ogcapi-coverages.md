@@ -12,7 +12,7 @@ data (grids, remote sensing data, multidimensional data cubes):
 ## pygeoapi support
 
 pygeoapi supports the OGC API - Coverages draft specification, with [rasterio](https://rasterio.readthedocs.io) and [xarray](https://docs.xarray.dev) as core backends
-and [CoverageJSON](https://covjson.org) and native output.
+as well as [CoverageJSON](https://covjson.org) and native output.
 
 !!! note
 

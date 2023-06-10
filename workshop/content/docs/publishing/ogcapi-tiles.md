@@ -7,7 +7,7 @@ title: Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 [OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiled data (bitmaps or vectors),
 extending the functionalty other OGC API standards:
  
-* [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/DRAFTS/20-057.html) (**draft**)
+* [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/is/20-057/20-057.html)
 
 !!! note
     OGC API - Tiles extends the `collections/*` URL structure (tilesets are listed under `/collections/example/tiles`:
@@ -27,7 +27,9 @@ include, but are not limited to:
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
-!!! The OGC API - Tiles URL structure is compatible with XYZ layers in common libraries such as OpenLayers, Leaflet and MapML
+!!! note
+
+    The OGC API - Tiles URL structure is compatible with XYZ layers in common libraries such as OpenLayers, Leaflet and MapML
 
 !!! note
 

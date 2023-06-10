@@ -22,19 +22,15 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
         <td><a href="https://twitter.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
         <td><a href="https://twitter.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
         <td><a href="https://twitter.com/pvangenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
-        <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://twitter.com/francbartoli"><img width="150" src="https://avatars.githubusercontent.com/u/560676?v=4"/></a></td>
         <td><a href="https://twitter.com/tzotsos"><img width="150" src="https://avatars.githubusercontent.com/u/383944?v=4"/></a></td>
-        <td><a href="https://twitter.com/PascalLike"><img width="150" src="https://avatars.githubusercontent.com/u/1323093?v=4"/></a></td>
     </tr>
     <tr>
         <td>Tom Kralidis</td>
         <td>Just van den Broecke</td>
         <td>Paul van Genuchten</td>
-        <td>Joana Simoes</td>
         <td>Francesco Bartoli</td>
         <td>Angelos Tzotsos</td>
-        <td>Antonio Cerciello</td>
     </tr>
 </table>
 
@@ -89,7 +85,7 @@ The workshop contents, wiki and issue tracker are managed on GitHub at [https://
 
 # Support
 
-A [Gitter](https://gitter.im/geopython/diving-into-pygeoapi) channel exists for
+A [Gitter](https://matrix.to/#/#geopython_diving-into-pygeoapi:gitter.im) channel exists for
 discussion and live support from the developers of the workshop and other workshop participants.
 
 For issues/bugs/suggestions or improvements/contributions, use the [GitHub issue tracker](https://github.com/geopython/diving-into-pygeoapi/issues).

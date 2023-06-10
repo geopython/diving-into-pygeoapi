@@ -15,7 +15,7 @@ additional related standards and extensions are in development for the following
 
 ## pygeoapi support
 
-pygeoapi supports the core OGC API - Features specification as well as Part 3 for some backends (Elasticsearch).
+pygeoapi supports all of the above OGC API - Features specification parts (Part 3 is dependent on backend support i.e. Elasticsearch).
 
 !!! note
 

@@ -19,10 +19,11 @@ more information in the [setup section](setup.md)).
 The pygeoapi [website](https://pygeoapi.io) is the main entrypoint for both end-users and developers
 where you can find:
 
-* all [documentation and presentations](https://pygeoapi.io/documentation)
-* our default introductory [default/latest presentation](https://pygeoapi.io/presentations/default)
-* our code on [GitHub](https://github.com/geopython/pygeoapi)
-* all Docker images [available on Docker Hub](https://hub.docker.com/r/geopython/pygeoapi)
+* [official documentation](https://docs.pygeoapi.io)
+* the [default/latest presentation](https://pygeoapi.io/presentations/default)
+* [documentation and presentations archive](https://pygeoapi.io/documentation)
+* code on [GitHub](https://github.com/geopython/pygeoapi)
+* Docker images [available on Docker Hub](https://hub.docker.com/r/geopython/pygeoapi)
 
 Given pygeoapi implements a number of OGC API standards, you may also want to read about these
 on [ogcapi.ogc.org](https://ogcapi.ogc.org).
@@ -35,7 +36,7 @@ default, the pygeoapi public demo at [demo.pygeoapi.io](https://demo.pygeoapi.io
 and made available by the development team. Check out the [main instance](https://demo.pygeoapi.io/master) which
 always runs the latest GitHub version.
 
-Interested in the demo site setup itself? demo.pygeoapi.io is developed in a [GitHub repository](https://github.com/geopython/demo.pygeoapi.io) using a
+Interested in the demo site setup itself? [demo.pygeoapi.io](https://demo.pygeoapi.io) is developed in a [GitHub repository](https://github.com/geopython/demo.pygeoapi.io) using a
 DevOps continuous deployment (CD) workflow.
 Even more recent GitOps deployments were developed for [Geonovum](https://github.com/Geonovum/ogc-api-testbed) and the [European Commission Joint Research Center](https://github.com/justb4/ogc-api-jrc).
 
@@ -44,9 +45,16 @@ The above examples may help as starting points for your own pygeoapi setup and d
 ## History
 
 Starting in 2018, pygeoapi emerged as part of the initial efforts for the development of OGC API standards. OGC API
-code sprints were instrumental for agile development and pouring the foundation of the project. The core design principles
-of the project were and are modularity, extensibility, building by exception, building on a large ecosystem of Free Open Source and OSGeo
-components such as GDAL, rasterio, Shapely, Pandas, Elasticsearch, PostGIS and many others.
+code sprints were instrumental for agile development and pouring the foundation of the project.
+
+The core design principles are as follows:
+
+- simplicity / low barrier to entry
+- long term sustainability
+- modularity
+- extensibility
+- building by exception based on a large ecosystem of Free Open Source and OSGeo
+  components such as GDAL, rasterio, Shapely, Pandas, Elasticsearch, PostGIS and many others
 
 The project was initiated by [Tom Kralidis](https://github.com/tomkralidis). Within weeks, several talented
 developers joined the project, which led to the formation of a core team and [Project Steering Committee (PSC)](https://pygeoapi.io/community/psc). Contributions continued
