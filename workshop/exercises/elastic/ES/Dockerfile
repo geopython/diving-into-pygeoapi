@@ -38,7 +38,7 @@ ARG DATA_FOLDER=/usr/share/elasticsearch/data
 
 USER root
 
-RUN yum install -y wget
+RUN apt update && apt install -y wget
 
 RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O bin/wait-for-it.sh
 RUN chmod +x bin/wait-for-it.sh
@@ -49,10 +49,9 @@ RUN echo "xpack.security.enabled: false" >> config/elasticsearch.yml
 RUN echo "http.host: 0.0.0.0" >> config/elasticsearch.yml
 RUN echo "discovery.type: single-node" >> config/elasticsearch.yml
 
-RUN yum --enablerepo=extras -y install epel-release \
-        && yum install -y python3 python3-pip python3-setuptools python-typing \
-        && pip3 install --upgrade pip elasticsearch elasticsearch-dsl \
-        && pip3 install -U elasticsearch && yum clean packages
+RUN apt install -y python3 python3-pip python3-setuptools python-typing \
+    && pip3 install --upgrade pip elasticsearch==8.4.0 elasticsearch-dsl \
+    && apt clean packages
 
 COPY docker-entrypoint.sh  /docker-entrypoint.sh
 COPY add_data.sh /add_data.sh
