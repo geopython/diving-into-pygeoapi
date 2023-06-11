@@ -18,11 +18,11 @@ Your text editor needs to be able to edit configuration files in **plain text**.
 for text editors (there may be others), along with what some of the pygeoapi developers prefer to use:
 
 * Notepad or Notepad++ (Windows)
-* Sublime Text (all): Angelos
-* IntelliJ IDEA (all): Just
-* Emacs (all): Just
-* Visual Studio Code (all): Francesco, Angelos, Joana
-* `/usr/bin/vim` (all): Tom, Angelos
+* Sublime Text: Angelos
+* IntelliJ IDEA): Just
+* Emacs: Just
+* Visual Studio Code: Francesco, Angelos, Joana
+* `vi` / `vim`: Tom, Angelos
 
 Having said this, please feel free to use what works for you :)
 
@@ -226,4 +226,4 @@ geopython/pygeoapi:latest
 ```
 </div>
 
-In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/Docker/examples).
+In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/docker/examples).

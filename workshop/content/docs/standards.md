@@ -73,17 +73,18 @@ pygeoapi over time:
 pygeoapi is an OGC API Reference Implemetnation and implements numerous OGC API standards.
 
 
-| Standard                              | pygeoapi status | Included in this workshop |
-|---------------------------------------|-----------------|---------------------------|
-| OGC API - Features                    | Reference       | ✅                         |
-| OGC API - Coverages                   | Implementing    | ✅                         |
-| OGC API - Tiles                       | Implementing    | ✅                         |
-| OGC API - Processes                   | Implementing    | ✅                         |
-| OGC API - Records                     | Implementing    | ✅                         |
-| OGC API - Environmental Data Retrieval | Implementing    | ✅                         |
-| OGC API - Routes | Planned |                         |
-| OGC API - Maps | Planned |                         |
-| OGC API - Styles | Planned |                         |
+| Standard                               | pygeoapi status | Included in this workshop |
+|----------------------------------------|-----------------|---------------------------|
+| OGC API - Features                     | Reference       | ✅                        |
+| OGC API - Coverages                    | Implementing    | ✅                        |
+| OGC API - Tiles                        | Implementing    | ✅                        |
+| OGC API - Maps                         | Implementing    | ✅                        |
+| OGC API - Processes                    | Implementing    | ✅                        |
+| OGC API - Records                      | Implementing    | ✅                        |
+| OGC API - Environmental Data Retrieval | Implementing    | ✅                        |
+| SpatioTemporal Asset Catalog           | Implementing    |                           |
+| OGC API - Routes                       | Planned         |                           |
+| OGC API - Styles                       | Planned         |                           |
 
 In the next section we will dive into the dedicated API's related to specific types of information. You will
 notice that all APIs are combined and available via a single OGC API endpoint, thanks to OGC API - Common.
@@ -132,16 +133,17 @@ The `f` parameter can be used with any pygeoapi endpoint to specify an output fo
 !!! question "Using a web browser to access OGC API"
 
     Use your web browser to navigate to [demo.pygeoapi.io](https://demo.pygeoapi.io/master). A browser by default opens 
-    any OGC API in HTML (as a webpage) due to the [accept header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) 
-    sent by the browser (`text/html`). On the right top corner you will notice a `JSON` link. The link 
-    adds the parameter to the url: `f=json`, which is a mechanism of pygeoapi to override the accept
+    any OGC API in HTML (as a webpage) due to the [HTTP Accept header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) 
+    sent by the browser (`text/html`). On the right top corner you will notice a JSON link. The link 
+    adds the parameter to the url: `f=json`, which is a mechanism of pygeoapi to override the HTTP Accept
     header sent by the web browser.
 
 !!! note 
 
-    When calling an OGC API from javascript, and the aim is to receive json. You can use the `?f=json` pygeoapi convention, or the content 
-    negotiation as provided by the standard; include a header `accept:"application/json"` in your request.
-    In jquery for example, this is represented by the dataType property
+    When calling an OGC API from javascript, and the aim is to receive JSON, you can use the `?f=json` pygeoapi convention, or the content 
+    negotiation as provided by the standard; include an HTTP header `Accept: "application/json"` in your request.
+
+    In jQuery for example, this is represented by the dataType property:
 
     ``` {.js linenums="1"}
     $.ajax({

@@ -1,8 +1,8 @@
 ---
-title: Exercise 6 - Environmental data via OGC - Environmental Data Retrieval
+title: Exercise 7 - Environmental data via OGC - Environmental Data Retrieval
 ---
 
-# Exercise 6 - Environmental data via OGC - Environmental Data Retrieval
+# Exercise 7 - Environmental data via OGC - Environmental Data Retrieval
 
 [OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr) provides a Web API to access
 environmental data using well defined query patterns:

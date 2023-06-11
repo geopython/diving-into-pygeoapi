@@ -1,8 +1,8 @@
 ---
-title: Exercise 5 - Metadata via OGC API - Records
+title: Exercise 6 - Metadata via OGC API - Records
 ---
 
-# Exercise 5 - Metadata via OGC API - Records
+# Exercise 6 - Metadata via OGC API - Records
 
 [OGC API - Records](https://ogcapi.ogc.org/records) provides a Web API with the capability to create, modify,
 and query metadata on the Web:
