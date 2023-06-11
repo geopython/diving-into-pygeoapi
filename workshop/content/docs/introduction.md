@@ -53,8 +53,7 @@ The core design principles are as follows:
 - long term sustainability
 - modularity
 - extensibility
-- building by exception based on a large ecosystem of Free Open Source and OSGeo
-  components such as GDAL, rasterio, Shapely, Pandas, Elasticsearch, PostGIS and many others
+- building on a large ecosystem of Free Open Source and OSGeo components such as GDAL, rasterio, Shapely, Pandas, Elasticsearch, PostGIS and many others
 
 The project was initiated by [Tom Kralidis](https://github.com/tomkralidis). Within weeks, several talented
 developers joined the project, which led to the formation of a core team and [Project Steering Committee (PSC)](https://pygeoapi.io/community/psc). Contributions continued

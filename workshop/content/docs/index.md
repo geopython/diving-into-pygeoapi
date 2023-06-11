@@ -15,7 +15,7 @@ Version: 1.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G 2022](https://2022.foss4g.org) workshop team
+# Your [FOSS4G 2023](https://2023.foss4g.org) workshop team
 
 <table>
     <tr>

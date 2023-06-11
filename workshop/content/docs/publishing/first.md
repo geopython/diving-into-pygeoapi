@@ -13,7 +13,7 @@ You can find this dataset in `workshop/exercises/data/free-wifi-florence.csv`.
 
 This exercise consists of two key steps:
 
-* adapt the `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
+* adapt `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
 * ensure that pygeoapi can find and connect to the data file
 
 We will use the `workshop/exercises/docker-compose.yml` file provided.
