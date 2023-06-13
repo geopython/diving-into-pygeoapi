@@ -4,26 +4,26 @@ title: Coordinate Reference Systems (CRS) Support
 
 # CRS support
 
-Starting with version 0.15.0 pygeoapi fully supports [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
+Starting with version 0.15.0, pygeoapi fully supports [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
 This enables the import and export of any data according to dedicated projections.
-A "projection" is specified with a Coordinate Reference System (CRS) identifier. These are in URI-formats
-like `http://www.opengis.net/def/crs/OGC/1.3/CRS84` (basically WGS84 in lon, lat axis order)
-or the "OpenGIS" format like `http://www.opengis.net/def/crs/EPSG/0/4258`. Note that the "EPSG:"-format like `EPSG:4326`
+A "projection" is specified with a Coordinate Reference System (CRS) identifier. These are in URI formats
+like `http://www.opengis.net/def/crs/OGC/1.3/CRS84` (basically WGS84 in longitude, latitude axis order)
+or the "OpenGIS" format like `http://www.opengis.net/def/crs/EPSG/0/4258`. Note that the "EPSG:" format like `EPSG:4326`
 is outside the scope of the OGC standard.
 
-In particular CRS support allows 
+In particular CRS support allows for the following:
 
-- to specify the CRS in which the data is stored, in pygeoapi the `storageCRS:` config option 
-- to specify the list of CRSs in which Feature data can be retrieved, in pygeoapi the `crs:` config option
+- to specify the CRS in which the data is stored, in pygeoapi the `storageCRS` config option 
+- to specify the list of CRSs in which Feature data can be retrieved, in pygeoapi the `crs` config option
 - to publish these CRSs in the collection metadata
 - the `crs=` query parameter for a collection or collection item
 - the `bbox-crs=` query parameter to indicate that the `bbox=` parameter is encoded in that CRS
 - the HTTP response header `Content-Crs` denotes the CRS of the Feature(s) in the data returned
 
-So although GeoJSON mandates WGS84 in lon,lat order, client and server may still agree
+So although GeoJSON mandates WGS84 in longitude, latitude order, the client and server may still agree
 on other CRSs.
 
-Under the hood pygeoapi uses the well-known [pyproj](https://pyproj4.github.io/pyproj/stable/) Python wrapper to the [PROJ](https://proj.org/) library.
+Under the hood, pygeoapi uses the well-known [pyproj](https://pyproj4.github.io/pyproj/stable) Python wrapper to the [PROJ](https://proj.org) library.
                                                                                                
 Read more in the pygeoapi documentation in the [CRS Chapter](https://docs.pygeoapi.io/en/latest/crs.html).
 
@@ -32,27 +32,26 @@ Read more in the pygeoapi documentation in the [CRS Chapter](https://docs.pygeoa
 Adding CRS support to pygeoapi collections for the `provider` type `feature` is as simple as
 for example extending the [Exercise 2](../publishing/ogcapi-features.md) config with this snippet:
 
-```
+```yaml
   crs:
       - http://www.opengis.net/def/crs/OGC/1.3/CRS84
       - http://www.opengis.net/def/crs/EPSG/0/4258
       - http://www.opengis.net/def/crs/EPSG/0/3857
       - http://www.opengis.net/def/crs/EPSG/0/4326
   storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-
 ```
 
 
-!!! AxisOrder
+!!! Axis order
 
-    Axis order (are coordinates it lon,lat or lat,lon order?) in projections is often a source of confusion. 
+    Axis order (are coordinates it longitude, latitude or latitude, longitude order?) in projections is often a source of confusion. 
     However the URI format is quite clear on this, at least more than the `EPSG:` format.
-    So http://www.opengis.net/def/crs/OGC/1.3/CRS84 is lon, lat order, while
-    http://www.opengis.net/def/crs/EPSG/0/4326 is lat, lon order.
+    So http://www.opengis.net/def/crs/OGC/1.3/CRS84 is longitude, latitude order, while
+    http://www.opengis.net/def/crs/EPSG/0/4326 is latitude, longitude order.
     
  
-In the config below, we basically indicate that the data is stored in WGS84 (lon, lat axis order) and can be retrieved
-in CRSs like `http://www.opengis.net/def/crs/EPSG/0/4258` (ETRS89 lat,lon axis order) etc.
+In the config below, we basically indicate that the data is stored in WGS84 (longitude, latitude axis order) and can be retrieved
+in CRSs like `http://www.opengis.net/def/crs/EPSG/0/4258` (ETRS89 latitude, longitude axis order) etc.
 
 !!! question "Add CRS to a pygeoapi configuration"
 
@@ -103,12 +102,11 @@ We can even do this in the Swagger UI, but using the browser is quite fast and c
 
     Open the URL: 
     [http://localhost:5000/collections/firenze-terrains-vec](http://localhost:5000/collections/firenze-terrains-vec)
-    Your configured CRSs are displayed at the bottom of the page: "Reference Systems"
-    and "Storage CRS".
+    Your configured CRSs are displayed at the bottom of the page: "Reference Systems" and "Storage CRS".
     
     See these in JSON format, also at the bottom: 
     http://localhost:5000/collections/firenze-terrains-vec?f=json
-    ```    
+    ```yaml
        .
        .
        "crs":[
@@ -132,7 +130,7 @@ We can even do this in the Swagger UI, but using the browser is quite fast and c
 
     See these in JSON format, also at the bottom:
 
-    ```    
+    ```json
     "type":"FeatureCollection",
       "features":[
           {
@@ -169,8 +167,8 @@ We can even do this in the Swagger UI, but using the browser is quite fast and c
      }
     ```
 
-    If you open the browser development console you can observe the HTTP response header:
+    If you open the browser development console, you can observe the HTTP response header:
 
     `Content-Crs: <http://www.opengis.net/def/crs/EPSG/0/4258>`
 
-    (The CRS URI is always enclosed in < >)
+    (The CRS URI is always enclosed in `<` `>`)
