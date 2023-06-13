@@ -7,7 +7,7 @@ title: Exercise 3 - Raster data via OGC API - Coverages
 [OGC API - Coverages](https://ogcapi.ogc.org/coverages) provides a Web API to access raster
 data (grids, remote sensing data, multidimensional data cubes):
 
-* [OGC API - Coverages](https://ogcapi.ogc.org/coverages/) (**draft**)
+* [OGC API - Coverages](https://docs.ogc.org/DRAFTS/19-087.html) (**draft**)
 
 ## pygeoapi support
 

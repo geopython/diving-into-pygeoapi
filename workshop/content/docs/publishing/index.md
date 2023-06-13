@@ -15,5 +15,6 @@ through the following exercises:
 - [Exercise 2 - Vector data via OGC API - Features](ogcapi-features.md)
 - [Exercise 3 - Raster data via OGC API - Coverages](ogcapi-coverages.md)
 - [Exercise 4 - Tiles of geospatial data via OGC API - Tiles](ogcapi-tiles.md)
-- [Exercise 5 - Metadata via OGC API - Records](ogcapi-records.md)
-- [Exercise 6 - Environmental data via OGC - Environmental Data Retrieval](ogcapi-edr.md) 
+- [Exercise 5 - Maps of geospatial data via OGC API - Maps](ogcapi-maps.md)
+- [Exercise 6 - Metadata via OGC API - Records](ogcapi-records.md)
+- [Exercise 7 - Environmental data via OGC - Environmental Data Retrieval](ogcapi-edr.md)

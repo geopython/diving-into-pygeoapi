@@ -357,7 +357,32 @@ resources:
 ## END - EXERCISE 4 - Tiles
 
 ## START - EXERCISE 5 - Maps
- ## TODO
+    # wms-facade-demo:
+    #     type: collection
+    #    title: WMS Facade demo
+    #    description: WMS Facade demo
+    #    keywords:
+    #        - WMS facade
+    #    links:
+    #        - type: text/html
+    #          rel: canonical
+    #          title: MapServer
+    #          href: https://mapserver.org
+    #          hreflang: it
+    #    extents:
+    #        spatial:
+    #            bbox: [-180,-90,180,90]
+    #            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    #    providers:
+    #        - type: map
+    #          name: WMSFacade
+    #          data: https://demo.mapserver.org/cgi-bin/msautotest
+    #          options:
+    #              layer: world_latlong
+    #              style: default
+    #          format:
+    #              name: png
+    #              mimetype: image/png
 ## END - EXERCISE 5 - Maps
 
 ## START - EXERCISE 6 - Metadata
