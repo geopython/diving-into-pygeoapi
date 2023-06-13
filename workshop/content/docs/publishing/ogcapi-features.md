@@ -28,7 +28,9 @@ pygeoapi supports all of the above OGC API - Features specification parts (Part 
 
 ## Publish a vector dataset
 
-In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. In this excercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) data source.
+In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
+In this exercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
+data source.
 
 !!! tip
 
@@ -46,24 +48,29 @@ unzip firenze_terrains.gpkg.zip
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
+    Open the pygeoapi configuration file in a text editor.
+    Find the line: 
+    "# START - EXERCISE 2 - firenze-terrains" 
+
+    Add a new dataset section by uncommenting the lines upto
+    "# END - EXERCISE 2 - firenze-terrains":
 
     ``` {.yaml linenums="1"}
-    firenze-terrains:
-        type: collection 
+    firenze-terrains-vec:
+        type: collection
         title: Administrative boundaries before 2014
         description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
-        keywords:  
+        keywords:
             - Cadastral parcels
         links:
             - type: text/html
-              rel: canonical  
+              rel: canonical
               title: Administrative boundaries before 2014
               href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
               hreflang: it
         extents:
-            spatial: 
-                bbox: [11.23,43.75,11.28,43.78] 
+            spatial:
+                bbox: [11.23,43.75,11.28,43.78]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
@@ -74,36 +81,47 @@ unzip firenze_terrains.gpkg.zip
               table: firenze_terrains
     ```
 
-Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset with
+title *"Administrative boundaries before 2014"* has been published.
 
 !!! note
 
-    The SQLite driver incidentally has challenges to open the GeoPackage extension on MacOS. Consult the [official documentation](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) or try with an alternative data format.
+    The SQLite driver incidentally has challenges to open the GeoPackage extension on MacOS. 
+    Consult the [official documentation](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) 
+    or try with an alternative data format.
  
 ## pygeoapi as a WFS proxy
 
-An interesting use case for pygeoapi is to provide OGC API - Features interface over existing Web Feature Service (WFS) or ESRI FeatureServer endpoints. In this scenario you lower the barrier and increase the usability of existing services to a wider audience. Let's set up an API on top of an existing WFS hosted by the city of Florence.
+A powerful use case for pygeoapi is to provide an OGC API - Features interface over existing Web Feature Service (WFS) 
+or ESRI FeatureServer endpoints. In this scenario, you lower the barrier and increase the usability of existing services to 
+a wider audience. Let's set up an API on top of an existing WFS hosted by the city of Florence.
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
+    Open the pygeoapi configuration in a text editor. 
+    Find the line: 
+    "# START - EXERCISE 2 - Proxy" 
+
+    Add a new dataset section by uncommenting the lines upto
+    "# END - EXERCISE 2 - Proxy":
+
 
     ``` {.yaml linenums="1"}
     suol_epicentri_storici:
-        type: collection 
+        type: collection
         title: Epicenters of the main historical earthquakes
         description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
-        keywords:  
+        keywords:
             - earthquakes
         links:
             - type: text/xml
-              rel: canonical  
+              rel: canonical
               title: Epicenters of the main historical earthquakes
               href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
               hreflang: it
         extents:
-            spatial: 
-                bbox: [10.94, 43.52, 11.65, 44.17] 
+            spatial:
+                bbox: [10.94, 43.52, 11.65, 44.17]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
@@ -111,8 +129,6 @@ An interesting use case for pygeoapi is to provide OGC API - Features interface 
               data:
                   source_type: WFS
                   source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
-                  source_srs: EPSG:3003
-                  target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
                   source_options:
@@ -122,11 +138,31 @@ An interesting use case for pygeoapi is to provide OGC API - Features interface 
                       GDAL_CACHEMAX: 64
                       CPL_DEBUG: NO
               id_field: cpti_id
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/3003
+              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
               title_field: d
               layer: territorio:suol_epicentri_storici
     ```
 
-Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` 
+to evaluate whether the new dataset has been published.
+ 
+Note these important configuration slices under `providers`:
+
+* We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr). 
+This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
+We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `firenze-terrains-vec` exercise above.
+
+* `storage_crs` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'longitude, latitude') 
+* `crs` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding box (`bbox-crs=` parameter). Default is also CRS84.
+ 
+CRS support effectively allows pygeoapi to *reproject* the data from its storage CRS (here EPSG:3003)
+according to [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
+The Advanced section of this workshop will further [elaborate pygeoapi CRS support](../advanced/crs.md).
 
 ## Client access
 
@@ -161,13 +197,13 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! tip
 
-    Install and activate the `QGIS Network Logger` extension. It will display HTTP traffice within QGIS and is a valuable tool in debugging failing connections.
+    Install and activate the `QGIS Network Logger` extension. It will display HTTP traffic within QGIS and is a valuable tool in debugging failing connections.
 
 !!! note
 
     An increasing number of GIS Desktop clients add support for OGC API's in subsequent releases. For example ArcGIS Pro [supports OGC API - Features](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) since release 2.8.
 
-### GDAL/OGR
+### GDAL/OGR - Advanced
 
 [GDAL/OGR](https://gdal.org) provides support for [OGC API - Features](https://gdal.org/drivers/vector/oapif.html). This means you can use `ogrinfo`, `ogr2ogr` to query and convert data from OGC API - Features endpoints just like any other vector data source.  This also means you can make connections to OGC API - Features endpoints from any software which has an interface to GDAL, such as MapServer, GeoServer, Manifold, FME, ArcGIS, etc.
 
@@ -194,7 +230,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
 
-### OWSLib
+### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
