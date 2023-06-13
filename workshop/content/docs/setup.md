@@ -19,7 +19,7 @@ for text editors (there may be others), along with what some of the pygeoapi dev
 
 * Notepad or Notepad++ (Windows)
 * Sublime Text: Angelos
-* IntelliJ IDEA): Just
+* IntelliJ IDEA: Just
 * Emacs: Just
 * Visual Studio Code: Francesco, Angelos, Joana
 * `vi` / `vim`: Tom, Angelos
@@ -46,11 +46,11 @@ contain the latest pygeoapi and all its dependencies and external services (e.g.
 
 Docker has been available for almost 10 years, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
 era of computing, chances are that you have heard of Docker and *containerization*. Or, perhaps are already familiar and hopefully using Docker already.
-If not, there is a wide array of introductory materials that can be found online ([example from IBM](https://www.ibm.com/in-en/cloud/learn/Docker).
+If not, there is an abundance of introductory materials that can be found online like this [tutorial from IBM](https://www.ibm.com/topics/docker).
 
 FOSS4G software has benefitted greatly from Docker (consistent packaging, isolation, integration and upgrade patterns) in
 comparison to custom installations. Though today we mainly use Docker, the bigger picture is the use of **Containers** as a next step
-in virtualization. Containerization certainly deserves its own workshop, so for the purpose of this workshop we cover the basics
+in virtualization. Containerization certainly deserves its own workshop, so for the purpose of this workshop we only cover the basics
 of Docker and Docker Compose.
 
 [Docker Compose](https://docs.docker.com/compose) is an addition to Docker to facilitate
@@ -105,6 +105,7 @@ Docker Compose version v2.6.1
 ```
 </div>
 
+(It is not required that your version-numbers exactly match). 
 [^2]: For recent version of Docker run `docker compose version`
 
 
@@ -157,7 +158,8 @@ you may want to do this beforehand.
 Some notes:
 
 * Docker runs a pygeoapi container on your local system on port 5000, which is mapped to port 80 inside the container
-* the pygeoapi Docker container runs with the [default configuration](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml) and data from the GitHub repo
+* the pygeoapi Docker container runs with the [default configuration](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml) and data from the GitHub repo 
+* both configuration and data (from GitHub repo) is embedded in the Docker Image - we will override these later
 * the `--rm` option removes the Docker Container (but not the image), after execution
 * type `CTRL-C` to stop the container and return to the terminal
 
