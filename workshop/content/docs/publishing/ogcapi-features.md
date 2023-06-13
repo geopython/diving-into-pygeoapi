@@ -29,7 +29,7 @@ pygeoapi supports all of the above OGC API - Features specification parts (Part 
 ## Publish a vector dataset
 
 In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
-In this excercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
+In this exercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
 data source.
 
 !!! tip
@@ -93,7 +93,7 @@ title *"Administrative boundaries before 2014"* has been published.
 ## pygeoapi as a WFS proxy
 
 A powerful use case for pygeoapi is to provide an OGC API - Features interface over existing Web Feature Service (WFS) 
-or ESRI FeatureServer endpoints. In this scenario you lower the barrier and increase the usability of existing services to 
+or ESRI FeatureServer endpoints. In this scenario, you lower the barrier and increase the usability of existing services to 
 a wider audience. Let's set up an API on top of an existing WFS hosted by the city of Florence.
 
 !!! question "Update the pygeoapi configuration"
@@ -148,17 +148,17 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
               layer: territorio:suol_epicentri_storici
     ```
 
-Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` 
+Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` 
 to evaluate whether the new dataset has been published.
  
 Note these important configuration slices under `providers`:
 
 * We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr). 
-This is the most versatile backend of pygeoapi. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector/).
+This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
 We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `firenze-terrains-vec` exercise above.
 
-* `storage_crs:` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'lon,lat') 
-* `crs:` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding-box (`bbox-crs=` parameter). Default is also CRS84.
+* `storage_crs` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'longitude, latitude') 
+* `crs` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding box (`bbox-crs=` parameter). Default is also CRS84.
  
 CRS support effectively allows pygeoapi to *reproject* the data from its storage CRS (here EPSG:3003)
 according to [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
@@ -203,7 +203,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     An increasing number of GIS Desktop clients add support for OGC API's in subsequent releases. For example ArcGIS Pro [supports OGC API - Features](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) since release 2.8.
 
-### GDAL/OGR -- ADVANCED
+### GDAL/OGR - Advanced
 
 [GDAL/OGR](https://gdal.org) provides support for [OGC API - Features](https://gdal.org/drivers/vector/oapif.html). This means you can use `ogrinfo`, `ogr2ogr` to query and convert data from OGC API - Features endpoints just like any other vector data source.  This also means you can make connections to OGC API - Features endpoints from any software which has an interface to GDAL, such as MapServer, GeoServer, Manifold, FME, ArcGIS, etc.
 
@@ -230,7 +230,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
 
-### OWSLib -- ADVANCED
+### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
