@@ -21,6 +21,7 @@ nav:
     - Advanced topics:
         - advanced/index.md
         - Multilingual support: advanced/i18n.md
+        - CRS support: advanced/crs.md
         - UI customization and templating: advanced/ui-custom-templates.md
         - Using pygeoapi in downstream applications: advanced/downstream-applications.md
         - Search Engine Optimization (SEO): advanced/seo.md
