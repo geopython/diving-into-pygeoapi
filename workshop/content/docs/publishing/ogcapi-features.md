@@ -52,7 +52,7 @@ unzip firenze_terrains.gpkg.zip
     Find the line: 
     "# START - EXERCISE 2 - firenze-terrains" 
 
-    Add a new dataset section by uncommenting the lines upto
+    Add a new dataset section by uncommenting the lines up to
     "# END - EXERCISE 2 - firenze-terrains":
 
     ``` {.yaml linenums="1"}
@@ -102,7 +102,7 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
     Find the line: 
     "# START - EXERCISE 2 - Proxy" 
 
-    Add a new dataset section by uncommenting the lines upto
+    Add a new dataset section by uncommenting the lines up to
     "# END - EXERCISE 2 - Proxy":
 
 
