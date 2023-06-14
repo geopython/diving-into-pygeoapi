@@ -29,11 +29,11 @@ We can use the MapServer demo server at https://demo.mapserver.org/cgi-bin/msaut
 
 !!! question "Update the pygeoapi configuration"
 
-Open the pygeoapi configuration file in a text editor.
+    Open the pygeoapi configuration file in a text editor.
 
-Find the line: "# START - EXERCISE 5 - Maps".
+    Find the line: "# START - EXERCISE 5 - Maps".
 
-Uncomment or paste the configuration snippet below until the line that reads "## END - EXERCISE 5 - Maps". Be sure to keep the proper YAML indentation.
+    Uncomment or paste the configuration snippet below until the line that reads "## END - EXERCISE 5 - Maps". Be sure to keep the proper YAML indentation.
 
     ``` {.yaml linenums="1"}
     wms-facade-demo:
