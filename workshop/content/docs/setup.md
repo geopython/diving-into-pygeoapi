@@ -229,3 +229,52 @@ geopython/pygeoapi:latest
 </div>
 
 In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/docker/examples).
+
+## Using Docker for Python Clients
+
+In some exercises we access `pygeoapi` remote endpoints using [OWSLib](https://owslib.readthedocs.io), 
+a Python library to interact with OGC Web Services. `OWSLib` can be installed using standard 
+Python `pip install OWSLib`, but you may not have Python available, or you want to keep your system 'clean'.
+
+As Docker is already available on your system, you can start up a 
+Container with a complete Python environment, and access it from a `Bash` shell prompt. 
+The magic line is:
+
+`docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash`
+
+This will pull a small (125MB) official Python Docker Image. When the Container is started you are directed into 
+a `Bash` session/prompt. The argument `--network=host` allows you to directly interact with services on your
+host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python` and install `OWSLib` and
+maybe even other tools like `curl` and `wget`.
+
+Below is a complete example, assuming pygeoapi runs on your `localhost` at port 5000:
+
+
+<div class="termy">
+```bash
+docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
+
+Unable to find image 'python:3.10-slim' locally
+3.10-slim: Pulling from library/python
+5b5fe70539cd: Pull complete 
+f4b0e4004dc0: Pull complete 
+c5424f0ac885: Pull complete 
+9d21fe1624ec: Pull complete 
+de0194aa1c21: Pull complete 
+Digest: sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+Status: Downloaded newer image for python:3.10-slim
+
+root@docker-desktop:/# pip install owslib
+root@docker-desktop:/# python
+>>> from owslib.ogcapi.features import Features
+>>> w = Features('http://localhost:5000')
+>>> w
+<owslib.ogcapi.features.Features object at 0x7ff493e6f850>
+>>> conformance = w.conformance()
+>>> conformance
+etc
+
+```
+</div>
+ 
+We will refer to this installation in some of the Exercises where OWSLib is used.

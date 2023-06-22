@@ -236,7 +236,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! question "Interact with OGC API - Features via OWSLib"
 
-    If you do not have Python installed, consider running this exercise in a Docker container or in a cloud environment.
+    If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
     <div class="termy">
     ```bash
