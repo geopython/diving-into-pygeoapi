@@ -77,7 +77,7 @@ system the Docker website provides detailed installation instructions. Please fo
     
     In our texts we will use `docker-compose`. Depending on your installation you may need
     to replace the hyphen (`-`) with a space. But you can always install the original
-    compose (`docker-compose`) via `pip install docker-compose`.
+    compose (`docker-compose`) via `pip3 install docker-compose`.
 
 For many platforms a product called `Docker Desktop` is available, which includes `Docker compose`:
 
@@ -234,17 +234,17 @@ In the next sections we will review additional examples of mounts to the data fo
 
 In some exercises we access `pygeoapi` remote endpoints using [OWSLib](https://owslib.readthedocs.io), 
 a Python library to interact with OGC Web Services. `OWSLib` can be installed using standard 
-Python `pip install OWSLib`, but you may not have Python available, or you want to keep your system 'clean'.
+Python `pip3 install OWSLib`, but you may not have Python available, or you want to keep your system 'clean'.
 
 As Docker is already available on your system, you can start up a 
-Container with a complete Python environment, and access it from a `Bash` shell prompt. 
+Container with a complete Python environment, and access it from a `bash` shell prompt. 
 The magic line is:
 
 `docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash`
 
 This will pull a small (125MB) official Python Docker Image. When the Container is started you are directed into 
 a `Bash` session/prompt. The argument `--network=host` allows you to directly interact with services on your
-host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python` and install `OWSLib` and
+host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python3`, install `OWSLib` and
 maybe even other tools like `curl` and `wget`.
 
 Below is a complete example, assuming pygeoapi runs on your `localhost` at port 5000:
@@ -264,8 +264,8 @@ de0194aa1c21: Pull complete
 Digest: sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
 Status: Downloaded newer image for python:3.10-slim
 
-root@docker-desktop:/# pip install owslib
-root@docker-desktop:/# python
+root@docker-desktop:/# pip3 install owslib
+root@docker-desktop:/# python3
 >>> from owslib.ogcapi.features import Features
 >>> w = Features('http://localhost:5000')
 >>> w
