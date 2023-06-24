@@ -44,4 +44,4 @@ services:
 
     volumes:
       - ./pygeoapi.config.yml:/pygeoapi/local.config.yml
-      - ./data:/data # Exercise 1 - First - Ready to pull data from here
+      # - ./data:/data # Exercise 1 - First - Ready to pull data from here

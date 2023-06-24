@@ -37,52 +37,46 @@ data source.
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/exercises/data/firenze_terrains.gpkg.zip`:
-
-<div class="termy">
-```bash
-cd workshop/exercises/data
-unzip firenze_terrains.gpkg.zip
-```
-</div>
+Let's add the file `workshop/exercises/data/osm_places_kosovo.gpkg`:
 
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration file in a text editor.
     Find the line: 
-    "# START - EXERCISE 2 - firenze-terrains" 
+    "# START - EXERCISE 2 - osm_places" 
 
     Add a new dataset section by uncommenting the lines up to
-    "# END - EXERCISE 2 - firenze-terrains":
+    "# END - EXERCISE 2 - osm_places":
 
     ``` {.yaml linenums="1"}
-    firenze-terrains-vec:
+    osm_places-vec:
         type: collection
-        title: Administrative boundaries before 2014
-        description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
+        title: Places in Kosovo 2023
+        description: Places in Kosovo as maintained by the Open Street Map Community
         keywords:
-            - Cadastral parcels
+            - places
+            - Kosovo
         links:
-            - type: text/html
-              rel: canonical
-              title: Administrative boundaries before 2014
-              href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
-              hreflang: it
-        extents:
-            spatial:
-                bbox: [11.23,43.75,11.28,43.78]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+            -   type: text/csv
+                rel: canonical
+                title: data
+                href: https://download.geofabrik.de/europe/kosovo.html
+                hreflang: AL
+    extents:
+        spatial:
+            bbox: [20,41.9,21.7,43.2]
+            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
               name: SQLiteGPKG
-              data: /data/firenze_terrains.gpkg # place correct path here
-              id_field: fid
-              title_field: codbo
-              table: firenze_terrains
+              data: /data/osm_places_kosovo.gpkg # place correct path here
+              id_field: osm_id
+              title_field: name
+              table: gis_osm_places_free_1 # table name within gpkg
     ```
 
 Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset with
-title *"Administrative boundaries before 2014"* has been published.
+title *"Places in Kosovo 2023"* has been published.
 
 !!! note
 
@@ -155,7 +149,7 @@ Note these important configuration slices under `providers`:
 
 * We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr). 
 This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
-We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `firenze-terrains-vec` exercise above.
+We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `osm_places-vec` exercise above.
 
 * `storage_crs` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'longitude, latitude') 
 * `crs` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding box (`bbox-crs=` parameter). Default is also CRS84.

@@ -146,8 +146,9 @@ we have also mounted (made available) the entire local directory `./data`.
     1. Start by typing `docker-compose up` 
     1. Observe logging output
     1. If no errors: open http://localhost:5000
-    1. Look for the Free Wifi Collection
-    1. Browse through the collection
+    1. Look for the Point of interest collection
+    1. Browse through the items of the collection
+    1. Check the json representation by adding ?f=json to url (or click 'json' in top right)
 
 ## Debugging configuration errors
 
