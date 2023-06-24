@@ -6,10 +6,10 @@ title: Exercise 1 - Your first dataset
 
 In this section you are going to publish a vector dataset.
 
-For this exercise, we will use a CSV dataset of [free Wifi locations in Florence](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/exercises/data/free-wifi-florence.csv),
-kindly provided by [opendata.comune.fi.it](https://opendata.comune.fi.it).
+For this exercise, we will use a CSV dataset of [Points of interest in Kosovo](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/exercises/data/osm_poi_kosovo.csv),
+kindly provided by [Open Street Map Community and GeoFabrik](https://download.geofabrik.de/europe/kosovo.html).
 
-You can find this dataset in `workshop/exercises/data/free-wifi-florence.csv`.
+You can find this dataset in `workshop/exercises/data/osm_poi_kosovo.csv`.
 
 This exercise consists of two key steps:
 
@@ -70,31 +70,31 @@ Make sure that the indentation aligns (hint: directly under `# START ...`)
 The config section reads:
 
 ``` {.yml linenums="185"}
-free_wifi_florence:
+poi_kosovo:
     type: collection
-    title: Free WIFI Florence
-    description: The dataset shows the location of the places in the Municipality of Florence where a free wireless internet connection service (Wifi) is available.
+    title: Points of Interest Kosovo
+    description: The dataset shows the location of the places of interest in Kosovo.
     keywords:
-        - wifi
-        - florence
+        - places of interest
+        - kosovo
     links:
         - type: text/csv
           rel: canonical
           title: data
-          href: https://opendata.comune.fi.it/?q=metarepo/datasetinfo&id=fb5b7bac-bcb0-4326-9388-7e3f3d671d71
-          hreflang: it-IT
+          href: https://download.geofabrik.de/europe/kosovo.html
+          hreflang: AL
     extents:
         spatial:
-            bbox: [11, 43.6, 11.4, 43.9]
+            bbox: [20,41.9,21.7,43.2]
             crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
         - type: feature
-        name: CSV
-        data: /data/free-wifi-florence.csv
-        id_field: name-it
-        geometry:
-            x_field: lon
-            y_field: lat
+          name: CSV
+          data: /data/osm_poi_kosovo.csv
+          id_field: osm_id
+          geometry:
+            x_field: x
+            y_field: y
 ```
 
 The most relevant part is the `providers` section. Here, we define a `CSV Provider`,
