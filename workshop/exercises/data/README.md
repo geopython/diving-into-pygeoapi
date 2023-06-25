@@ -4,19 +4,19 @@ This directory provides sample data to demonstrate functionality.
 
 ## Sources
 
-### Free Wifi Hotspots in Florence
-- title: [free-wifi-florence.csv](free-wifi-florence.csv)
-- url: https://opendata.comune.fi.it/?q=metarepo/datasetinfo&id=fb5b7bac-bcb0-4326-9388-7e3f3d671d71
-- description: The dataset shows the location of the places in the Municipality of Florence where a free wireless internet connection service (Wifi) is available.
-- copyright: Comune di Firenze
-- license: CC-BY 4.0
+### OSM POI Kosovo
+- title: [osm_poi_kosovo.csv](osm_poi_kosovo.csv)
+- url: https://download.geofabrik.de/europe/kosovo.html
+- description: Data coverted to csv from kosovo-latest-free.shp.zip. The file was last modified 23-6-2023
+- copyright: OSM Contributors
+- license: ODbL
 
-### Administrative boundaries (terrains) Florence
-- title: [firenze_terrains.gpkg.zip](./firenze_terrains.gpkg.zip)
-- url: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:c539d359-4387-4f83-a6f4-cd546b3d8443
-- description: The data fragment shows the border of terrains in the Municipality of Florence.
-- copyright: Città Metropolitana di Firenze
-- license: CC-BY 4.0
+### Places Kosovo
+- title: [osm_places_kosovo.gpkg](./osm_places_kosovo.gpkg)
+- url: https://download.geofabrik.de/europe/kosovo.html
+- description: Data converted to geopackage from kosovo-latest-free.shp.zip. The file was last modified 23-6-2023
+- copyright: OSM Contributors
+- license: ODbL
 
 ### Cycle Circulation Area in Florence
 - title: [cycle-lanes-firenze.geojson](cycle-lanes-firenze.geojson)
