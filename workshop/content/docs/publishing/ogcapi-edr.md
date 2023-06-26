@@ -63,7 +63,7 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
                   mimetype: application/x-netcdf
 ```
 
-Save the configuration and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the configuration and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
 At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Let's look a bit closer at the colleciton description:
 

@@ -98,7 +98,7 @@ tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-d
                       mimetype: application/vnd.mapbox-vector-tile
     ```
 
-Save the file and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
 Additional check for the following tile specific endpoints in the `Cycle` collection:
 
