@@ -160,7 +160,7 @@ resources:
 
     countries:
         type: collection
-        title: Countries in the world
+        title: Countries of the world
         description: Countries of the world
         keywords:
             - countries
