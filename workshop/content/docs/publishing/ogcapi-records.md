@@ -59,21 +59,33 @@ Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/
               title_field: title
 ```
 
-Save the configuration and restart docker compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the configuration and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
 
 ## Metadata formats
 
 By default, pygeoapi supports and expects the OGC API - Records core record model and queryables. For additional metadata formats, you can
 develop your own custom pygeoapi plugin, or convert your metadata to OGC API - Records core record model before adding to pygeoapi.
 
+!!! question "Install OWSLib"
+
+    If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
+
+    <div class="termy">
+    ```bash
+    pip3 install owslib
+    ```
+    </div>
+
 ### Sample ISO 19139 to TinyDBCatalogue loader
 
-It's possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py))
+It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py))
 
 
 <div class="termy">
 ```bash
-python3 load_tinydb_records.py /xml_folder/ /db_folder/sample-records.tinydb
+cd workshop/exercises/data/records
+curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+python3 load_tinydb_records.py xml catalogue.tinydb
 ```
 </div>
 
