@@ -81,7 +81,7 @@ pygeoapi is an OGC API Reference Implemetnation and implements numerous OGC API 
 | OGC API - Maps                         | Implementing    | ✅                        |
 | OGC API - Processes                    | Implementing    | ✅                        |
 | OGC API - Records                      | Implementing    | ✅                        |
-| OGC API - Environmental Data Retrieval | Implementing    | ✅                        |
+| OGC API - Environmental Data Retrieval | Reference       | ✅                        |
 | SpatioTemporal Asset Catalog           | Implementing    |                           |
 | OGC API - Routes                       | Planned         |                           |
 | OGC API - Styles                       | Planned         |                           |
