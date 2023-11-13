@@ -17,7 +17,7 @@ a number of open standards (both formal and defacto or community driven).
 
 pygeoapi implements the [OGC API](https://ogcapi.ogc.org) suite of standards from the [Open Geospatial Consortium](https://www.ogc.org/) (OGC). From the OGC API website:
 
-!!! cite
+!!! Citation
 
     The OGC API family of standards are being developed to make it easy for anyone to provide geospatial data to the web. These standards build upon the legacy of the OGC Web Service standards (WMS, WFS, WCS, WPS, etc.), but define resource-centric APIs that take advantage of modern web development practices. This web page provides information on these standards in a consolidated location.
 
@@ -26,17 +26,17 @@ pygeoapi implements the [OGC API](https://ogcapi.ogc.org) suite of standards fro
 #### OGC API - Common
 
 [OGC API - Common](https://ogcapi.ogc.org/common/) is a common framework used in all OGC API's. 
-OGC API - Common Common provides the following functionality:
+OGC API - Common provides the following functionality:
 
 - based on [OpenAPI 3.0](https://spec.openapis.org/oas/latest.html)
 - HTML and JSON as the dominant encodings, alternative encodings are possible
-- common and shared endpoints such as:
+- shared endpoints such as:
     - `/` (landing page)
     - `/conformance`
     - `/openapi`
     - `/collections`
     - `/collections/foo`
-- common aspects such as pagination, links between resources, basic filtering, query parameters (`bbox`, `datetime`, etc.)
+- aspects such as pagination, links between resources, basic filtering, query parameters (`bbox`, `datetime`, etc.)
 
 OGC API - Common allows for specification developers to focus on the key functionality of a given API (i.e. data access, etc.)
 while using common constructs. This harmonizes OGC API standards and enables deeper integration with less code. This also
@@ -123,7 +123,7 @@ GeoJSON for OGC API - Features, GeoTIFF for OGC API - Coverages) depending on th
 # pygeoapi specific conventions
 
 pygeoapi provides some conventions that are not put forth by OGC API standards, however facilitate
-some features and capabiliteis.
+some features and capabilities.
 
 ## the `f` parameter
 
