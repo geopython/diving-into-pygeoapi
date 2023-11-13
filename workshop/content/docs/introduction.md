@@ -24,7 +24,7 @@ where you can find:
 * [documentation and presentations archive](https://pygeoapi.io/documentation)
 * code on [GitHub](https://github.com/geopython/pygeoapi)
 * Docker images [available on Docker Hub](https://hub.docker.com/r/geopython/pygeoapi)
-* pygeoapi releases in the [python package index (pypi)](https://pypi.org/project/pygeoapi/)
+* pygeoapi releases in the [Python Package Index (PyPI)](https://pypi.org/project/pygeoapi)
 
 Given pygeoapi implements a number of OGC API standards, you may also want to read about these
 on [ogcapi.ogc.org](https://ogcapi.ogc.org).
