@@ -20,18 +20,19 @@ The pygeoapi [website](https://pygeoapi.io) is the main entrypoint for both end-
 where you can find:
 
 * [official documentation](https://docs.pygeoapi.io)
-* the [default/latest presentation](https://pygeoapi.io/presentations/default)
+* the [default](https://pygeoapi.io/presentations/default) and [latest](https://pygeoapi.io/presentations/foss4g2023) presentations
 * [documentation and presentations archive](https://pygeoapi.io/documentation)
 * code on [GitHub](https://github.com/geopython/pygeoapi)
 * Docker images [available on Docker Hub](https://hub.docker.com/r/geopython/pygeoapi)
+* pygeoapi releases in the [python package index (pypi)](https://pypi.org/project/pygeoapi/)
 
 Given pygeoapi implements a number of OGC API standards, you may also want to read about these
 on [ogcapi.ogc.org](https://ogcapi.ogc.org).
 
 ## Existing Deployments
 
-A number of organizations have deployed pygeoapi to their operatios. To get a feel of how pygeoapi
-is used in practice, check our up to date [live deployments page](https://github.com/geopython/pygeoapi/wiki/LiveDeployments). By
+A number of organizations have deployed pygeoapi to their operations. To get a feel of how pygeoapi
+is used in practice, check out our up to date [live deployments page](https://github.com/geopython/pygeoapi/wiki/LiveDeployments). By
 default, the pygeoapi public demo at [demo.pygeoapi.io](https://demo.pygeoapi.io) is always maintained
 and made available by the development team. Check out the [main instance](https://demo.pygeoapi.io/master) which
 always runs the latest GitHub version.

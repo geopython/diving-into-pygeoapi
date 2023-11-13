@@ -214,7 +214,7 @@ In addition to adapting the configuration you will usually add your own data as 
 remote data services like PostGIS or WFS.
 
 You can also mount a local directory such as `data/` to `/pygeoapi/mydata` within the Container.
-Within the data directory you can store vector data, raster files or sets of image of vector tiles.
+Within the data directory you can store vector data, raster files or sets of image or vector tiles.
 
 Below is an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
@@ -272,9 +272,10 @@ root@docker-desktop:/# python3
 <owslib.ogcapi.features.Features object at 0x7ff493e6f850>
 >>> conformance = w.conformance()
 >>> conformance
-etc
-
+>>> quit()
 ```
 </div>
- 
+
+Type `exit` to return to exit the owslib docker container.
+
 We will refer to this installation in some of the Exercises where OWSLib is used.
