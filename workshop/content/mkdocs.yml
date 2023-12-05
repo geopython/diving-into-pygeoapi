@@ -29,6 +29,7 @@ nav:
         - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
         - Cloud deployment: advanced/cloud.md
         - INSPIRE support: advanced/inspire.md
+        - pygeoapi as a Bridge to Other Services: advanced/bridges.md
     - Conclusion: conclusion.md
 
 use_directory_urls: true

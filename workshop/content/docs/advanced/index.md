@@ -16,3 +16,4 @@ focused on extending pygeoapi via custom development and deployment.
 - [Semantic Web and Linked Data](semantic-web-linked-data.md)
 - [Cloud deployment](cloud.md)
 - [INSPIRE support](inspire.md)
+- [pygeoapi as a Bridge to Other Services](bridges.md)
