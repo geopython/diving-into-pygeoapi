@@ -17,62 +17,9 @@ pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapSc
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
 
-## Serve a WMS via OGC API - Maps
+## pygeoapi as a WMS proxy
 
-Let's use pygeoapi's WMSFacade provider as a bridge to serve an OGC WMS via OGC API - Maps.
-
-We can use the MapServer demo server at https://demo.mapserver.org/cgi-bin/msautotest
-
-!!! note
-
-    Feel free to use a WMS of your choice as you wish!
-
-!!! question "Update the pygeoapi configuration"
-
-    Open the pygeoapi configuration file in a text editor.
-
-    Find the line: "# START - EXERCISE 5 - Maps".
-
-    Uncomment or paste the configuration snippet below until the line that reads "## END - EXERCISE 5 - Maps". Be sure to keep the proper YAML indentation.
-
-    ``` {.yaml linenums="1"}
-    wms-facade-demo:
-        type: collection
-        title: WMS Facade demo
-        description: WMS Facade demo
-        keywords:
-            - WMS facade
-        links:
-            - type: text/html
-              rel: canonical
-              title: MapServer
-              href: https://mapserver.org
-              hreflang: en
-        extents:
-            spatial:
-                bbox: [-180,-90,180,90]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-        providers:
-            - type: map
-              name: WMSFacade
-              data: https://demo.mapserver.org/cgi-bin/msautotest
-              options:
-                  layer: world_latlong
-                  style: default
-              format:
-                  name: png
-                  mimetype: image/png
-    ```
-
-Run the following requests in your web browser:
-
-- default map: [http://localhost:5000/collections/wms-facade-demo/map?f=png](http://localhost:5000/collections/wms-facade-demo/map?f=png)
-- specific width/height: [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600)
-- specific area of interest (bbox of Canada): [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&bbox=-142,42,-52,84)
-
-!!! tip
-
-    Try with your own bbox and width/height values!
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WMS as OGC API - Maps](../../advanced/bridges/#publishing-wms-as-ogc-api-maps).
 
 ## Client access
 

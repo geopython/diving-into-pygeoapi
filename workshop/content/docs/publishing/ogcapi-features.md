@@ -86,77 +86,7 @@ title *"Places in Kosovo 2023"* has been published.
  
 ## pygeoapi as a WFS proxy
 
-A powerful use case for pygeoapi is to provide an OGC API - Features interface over existing Web Feature Service (WFS) 
-or ESRI FeatureServer endpoints. In this scenario, you lower the barrier and increase the usability of existing services to 
-a wider audience. Let's set up an API on top of an existing WFS hosted by the city of Florence.
-
-!!! question "Update the pygeoapi configuration"
-
-    Open the pygeoapi configuration in a text editor. 
-    Find the line: 
-    "# START - EXERCISE 2 - Proxy" 
-
-    Add a new dataset section by uncommenting the lines up to
-    "# END - EXERCISE 2 - Proxy":
-
-
-    ``` {.yaml linenums="1"}
-    suol_epicentri_storici:
-        type: collection
-        title: Epicenters of the main historical earthquakes
-        description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
-        keywords:
-            - earthquakes
-        links:
-            - type: text/xml
-              rel: canonical
-              title: Epicenters of the main historical earthquakes
-              href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
-              hreflang: it
-        extents:
-            spatial:
-                bbox: [10.94, 43.52, 11.65, 44.17]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-        providers:
-            - type: feature
-              name: OGR
-              data:
-                  source_type: WFS
-                  source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
-                  source_capabilities:
-                      paging: True
-                  source_options:
-                      OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
-                  gdal_ogr_options:
-                      EMPTY_AS_NULL: NO
-                      GDAL_CACHEMAX: 64
-                      CPL_DEBUG: NO
-              id_field: cpti_id
-              crs:
-                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-                - http://www.opengis.net/def/crs/EPSG/0/4258
-                - http://www.opengis.net/def/crs/EPSG/0/3857
-                - http://www.opengis.net/def/crs/EPSG/0/3003
-              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
-              title_field: d
-              layer: territorio:suol_epicentri_storici
-    ```
-
-Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` 
-to evaluate whether the new dataset has been published.
- 
-Note these important configuration slices under `providers`:
-
-* We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr). 
-This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
-We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `osm_places-vec` exercise above.
-
-* `storage_crs` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'longitude, latitude') 
-* `crs` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding box (`bbox-crs=` parameter). Default is also CRS84.
- 
-CRS support effectively allows pygeoapi to *reproject* the data from its storage CRS (here EPSG:3003)
-according to [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
-The Advanced section of this workshop will further [elaborate pygeoapi CRS support](../advanced/crs.md).
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WFS as OGC API - Features](../../advanced/bridges/#publishing-wfs-as-ogc-api-features).
 
 ## Client access
 

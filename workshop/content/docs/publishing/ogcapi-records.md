@@ -89,6 +89,10 @@ python3 load_tinydb_records.py xml catalogue.tinydb
 ```
 </div>
 
+## pygeoapi as a CSW proxy
+
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish CSW as OGC API - Records](../../advanced/bridges/#publishing-csw-as-ogc-api-records).
+
 ## Client access
 
 ### QGIS
