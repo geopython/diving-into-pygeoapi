@@ -15,22 +15,18 @@ Version: 1.1
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G 2023](https://2023.foss4g.org) workshop team
+# Your [GISE Hub Winter School on OGC Stack](https://drive.google.com/file/d/1Y4C-rX7OeihXSPXV2QjoUp5z6P_3oe5d/view) workshop team
 
 <table>
     <tr>
+        <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://twitter.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://twitter.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
-        <td><a href="https://twitter.com/pvangenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
-        <td><a href="https://twitter.com/francbartoli"><img width="150" src="https://avatars.githubusercontent.com/u/560676?v=4"/></a></td>
-        <td><a href="https://twitter.com/tzotsos"><img width="150" src="https://avatars.githubusercontent.com/u/383944?v=4"/></a></td>
+        <td><a href="https://twitter.com/krishnaglodha"><img width="150" src="https://avatars.githubusercontent.com/u/47075664?v=4"/></a></td>
     </tr>
     <tr>
+        <td>Joana Simoes</td>
         <td>Tom Kralidis</td>
-        <td>Just van den Broecke</td>
-        <td>Paul van Genuchten</td>
-        <td>Francesco Bartoli</td>
-        <td>Angelos Tzotsos</td>
+        <td>Krishna Lodha</td>
     </tr>
 </table>
 
