@@ -140,8 +140,49 @@ Run the following requests in your web browser:
 
 ## Publishing CSW as OGC API - Records
 
-TODO
+
+``` {.yaml linenums="1"}
+cite_demo:
+    type: collection
+    title: pycsw OGC CITE demo and Reference Implementation
+    description: pycsw is an OARec and OGC CSW server implementation written in Python. pycsw fully implements the OGC API - Records and OpenGIS Catalogue Service Implementation Specification (Catalogue Service for the Web). Initial development started in 2010 (more formally announced in 2011). The project is certified OGC Compliant, and is an OGC Reference Implementation. Since 2015, pycsw is an official OSGeo Project. pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU). Existing repositories of geospatial metadata can also be exposed, providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X)
+    keywords:
+        - ogc
+        - cite
+        - compliance
+        - interoperability
+    extents:
+        spatial:
+            bbox: [-180,-90,180,90]
+            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+        - type: record
+          name: CSWFacade
+          data: https://demo.pycsw.org/cite/csw
+          id_field: identifier
+          time_field: datetime
+          title_field: title
+```
 
 ## Publishing SensorThings API as OGC API - Features
 
-TODO
+``` {.yaml linenums="1"}
+sediments_sta:
+    type: collection
+    title: DDT 24' in Sédiments on Eau brute at L'AUXENCE A VIMPELLES 2 with method Méthode inconnue
+    description: DDT 24' in Sédiments on Eau brute at L'AUXENCE A VIMPELLES 2 with method Méthode inconnue
+    keywords:
+        - sediments
+    extents:
+        spatial:
+            bbox: [-180,-90,180,90]
+            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+        - type: feature
+          name: SensorThings
+          data: https://sensorthings-wq.brgm-rec.fr/FROST-Server/v1.0/
+          uri_field: uri
+          entity: Datastreams
+          time_field: phenomenonTime
+          intralink: true
+```
