@@ -13,7 +13,7 @@ any geospatial data as a georeferenced map image.
 
 pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
 
-In this section we'll be exposing a shapefile available at `/data/airport/airport.shp` location. This data can be consumed with various clients which can access OGC APIs - Maps. Here we can also pass style in *.sld* format. Which can be generated on [Geoserver](https://docs.geoserver.org/stable/en/user/styling/index.html), [QGIS](https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html), etc.
+In this section we'll be exposing a shapefile available at `/data/airport/airport.shp` location. This data can be consumed with various clients which can access OGC APIs - Maps. Here we can also pass style in *.sld* format. Which can be generated on [Geoserver](https://docs.geoserver.org/stable/en/user/styling/index.html), [QGIS](https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html), etc. using `MapScript`.
  
 
 ```
