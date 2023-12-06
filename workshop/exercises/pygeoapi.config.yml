@@ -184,6 +184,37 @@ resources:
               data: tests/data/ne_110m_admin_0_countries.sqlite
               id_field: ogc_fid
               table: ne_110m_admin_0_countries
+    airports:
+        type: collection
+        title: airports of the world
+        description: airports of the world
+        keywords:
+            - airports
+            - natural earth
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://www.naturalearthdata.com/
+              hreflang: en-US
+        extents:
+            spatial:
+                bbox: [-20037508.34, -20048966.1,20037508.34, 20048966.1]
+                crs: http://www.opengis.net/def/crs/EPSG/0/3857
+            temporal:
+                begin:
+                end: null  # or empty
+        providers:
+            - type: map
+              name: MapScript
+              data: /data/airport/airport.shp
+              options:
+                  type: MS_LAYER_POINT
+                  layer: airport
+                  style: /data/airp.sld
+              format:
+                  name: png
+                  mimetype: image/png
 
     # ==== END - STANDARD PYGEOAPI COLLECTIONS ====
 
