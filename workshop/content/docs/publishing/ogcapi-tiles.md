@@ -4,8 +4,7 @@ title: Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 
 # Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 
-[OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiled data (bitmaps or vectors),
-extending the functionalty other OGC API standards:
+[OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiles of geospatial information. Different forms of geospatial information are supported, such as tiles of vector features ("vector tiles"), coverages, maps (or imagery) and potentially eventually additional types of tiles of geospatial information. The standard is available on this document:
  
 * [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/is/20-057/20-057.html)
 
