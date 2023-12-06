@@ -387,7 +387,7 @@ resources:
     # airports:
     #     type: collection
     #     title: airports of the world
-    #     description: airports of the world
+    #     description: Point data representing airports around the world with various metadata such as name, Code, etc.
     #     keywords:
     #         - airports
     #         - natural earth
@@ -395,7 +395,7 @@ resources:
     #         - type: text/html
     #           rel: canonical
     #           title: information
-    #           href: https://www.naturalearthdata.com/
+    #           href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
     #           hreflang: en-US
     #     extents:
     #         spatial:
