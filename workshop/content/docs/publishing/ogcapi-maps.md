@@ -13,6 +13,22 @@ any geospatial data as a georeferenced map image.
 
 pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
 
+To expose data using `MapScript` following configuration can be added 
+
+```
+providers:
+    - type: map
+      name: MapScript
+      data: /data/airport/air_3857.shp
+      options:
+          type: MS_LAYER_POINT
+          layer: airport
+          style: /data/airp.sld
+      format:
+          name: png
+          mimetype: image/png
+```
+
 !!! note
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
