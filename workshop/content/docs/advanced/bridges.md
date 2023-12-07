@@ -140,8 +140,69 @@ Run the following requests in your web browser:
 
 ## Publishing CSW as OGC API - Records
 
-TODO
+In this section we'll have a look at how to Publish a CSW data as an OGC API - Records, which then can be consumed by various clients.
+
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor.
+    Find the line: 
+    "#START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval" 
+
+    Add a new dataset section by uncommenting the lines up of
+    "# cite_demo configuration":    
+
+    ``` {.yaml linenums="1"}
+    cite_demo:
+        type: collection
+        title: pycsw OGC CITE demo and Reference Implementation
+        description: pycsw is an OARec and OGC CSW server implementation written in Python. pycsw fully implements the OGC API - Records and OpenGIS Catalogue Service Implementation Specification (Catalogue Service for the Web). Initial development started in 2010 (more formally announced in 2011). The project is certified OGC Compliant, and is an OGC Reference Implementation. Since 2015, pycsw is an official OSGeo Project. pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU). Existing repositories of geospatial metadata can also be exposed, providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X)
+        keywords:
+            - ogc
+            - cite
+            - compliance
+            - interoperability
+        extents:
+            spatial:
+                bbox: [-180,-90,180,90]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            - type: record
+            name: CSWFacade
+            data: https://demo.pycsw.org/cite/csw
+            id_field: identifier
+            time_field: datetime
+            title_field: title
+    ```
 
 ## Publishing SensorThings API as OGC API - Features
 
-TODO
+In this section we'll have a look at how to Publish a SensorThings API as an OGC API - Features, which then can be consumed by various clients.
+PygeoAPI allows to consume `Thing` , `Sensor` and `ObservedProperty`.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor.
+    Find the line: 
+    "#START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval" 
+
+    Add a new dataset section by uncommenting the lines up of
+    "# toronto_bikes configuration": 
+
+    ``` {.yaml linenums="1"}
+    toronto_bikes:
+        type: collection
+        title: Toronto Bikes SensorThings
+        description: The geographic location with coordinates for the Toronto bike share station
+        keywords:
+            - sediments
+        extents:
+            spatial:
+                bbox: [-180,-90,180,90]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            - type: feature
+                name: SensorThings
+                data: https://toronto-bike-snapshot.sensorup.com/v1.0/
+                entity: Things
+    ```
