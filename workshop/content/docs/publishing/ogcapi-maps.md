@@ -13,6 +13,50 @@ any geospatial data as a georeferenced map image.
 
 pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
 
+## Publish a raster dataset
+
+In this section we'll be exposing a Geopackage file available at `workshop/exercises/data/airport.gpkg` location using [MapServer MapScript](https://www.mapserver.org/mapscript). This data can be consumed with various clients which are compliant with OGC APIs - Maps. List of few such clients can be found [here](https://github.com/opengeospatial/ogcapi-maps/blob/master/implementations.adoc#clients). Here we can also pass style in *.sld* format. Which can be generated on [Geoserver](https://docs.geoserver.org/stable/en/user/styling/index.html), [QGIS](https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html), etc. 
+ 
+!!! question "Interact with OGC API - Maps via MapScript"
+
+    Open the pygeoapi configuration file in a text editor. Find the line: "# START - EXERCISE 5 - Maps". 
+
+    Uncomment section related to #airports.
+
+    ```{.yaml linenums="1"}
+    airports:
+        type: collection
+        title: airports of the world
+        description: Point data representing airports around the world with various metadata such as name, Code, etc.
+        keywords:
+            - airports
+            - natural earth
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
+              hreflang: en-US
+        extents:
+            spatial:
+                bbox: [-180,-90,180,90]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+            temporal:
+                begin:
+                end: null  # or empty
+        providers:
+            - type: map
+              name: MapScript
+              data: /data/airport.gpkg
+              options:
+                  type: MS_LAYER_POINT
+                  layer: airport
+                  style: /data/airport.sld
+              format:
+                  name: png
+                  mimetype: image/png
+    ```
+
 !!! note
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
