@@ -148,8 +148,7 @@ Run the following requests in your web browser:
 
 ## Publishing CSW as OGC API - Records
 
-In this section we'll have a look at how to Publish a CSW data as an OGC API - Records, which then can be consumed by various clients.
-
+In this section we'll have a look at how to publish Catalogue Services for the Web (CSW) as OGC API - Records. For that, we will use the [pycsw OGC CITE demo](https://demo.pycsw.org/cite/) CSW service.
 
 !!! question "Update the pygeoapi configuration"
 
@@ -183,10 +182,23 @@ In this section we'll have a look at how to Publish a CSW data as an OGC API - R
             title_field: title
     ```
 
+You can explore the proxied catalogue collection using this endpoints:
+
+* collection metadata page: <http://localhost:5000/collections/cite_demo>
+* list of records: <http://localhost:5000/collections/cite_demo/items>
+* record: <http://localhost:5000/collections/cite_demo/items/urn:uuid:19887a8a-f6b0-4a63-ae56-7fba0e17801f>
+
+!!! tip
+
+    Remember that you can use the QGIS client suggested [here](https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access) to explore this API.
+
 ## Publishing SensorThings API as OGC API - Features
 
-In this section we'll have a look at how to Publish a SensorThings API as an OGC API - Features, which then can be consumed by various clients.
-PygeoAPI allows to consume `Thing` , `Sensor` and `ObservedProperty`.
+The [OGC SensorThings API standard](https://ogcapi-workshop.ogc.org/api-deep-dive/sensorthings/) offers RESTfull interfaces to interconnect IoT devices, data, in an open and unified way. Although there are some clients that support this standard, there are many more that support OGC API - Features.
+
+The pygeoapi SensorThings bridge enables to proxy the SensorThings entities (e.g.:  `Thing` , `Sensor`, `DataStream`, `ObservedProperty` ) into feature collections.
+
+In this section we'll have a look at how to Publish a SensorThings API `Thing` as an OGC API - Features collection, which can then be consumed by various clients, like [the ones listed here](../../publishing/ogcapi-features/#client-access)
 
 !!! question "Update the pygeoapi configuration"
 

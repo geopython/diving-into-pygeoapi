@@ -192,33 +192,33 @@ resources:
     # Uncomment a config section between START and END for each exercise.
     # Make sure that indentation matches!
 
-## START - EXERCISE 1 - Your First Collection
-    poi_kosovo:
-        type: collection
-        title: Points of Interest Kosovo
-        description: The dataset shows the location of the places of interest in Kosovo.
-        keywords:
-            - places of interest
-            - kosovo
-        links:
-            - type: text/csv
-              rel: canonical
-              title: data
-              href: https://download.geofabrik.de/europe/kosovo.html
-              hreflang: AL
-        extents:
-            spatial:
-                bbox: [20,41.9,21.7,43.2]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-        providers:
-            -   type: feature
-                name: CSV
-                data: /data/osm_poi_kosovo.csv
-                id_field: osm_id
-                geometry:
-                    x_field: x
-                    y_field: y
-## END - EXERCISE 1 - Your First Collection
+### START - EXERCISE 1 - Your First Collection
+#     poi_kosovo:
+#         type: collection
+#         title: Points of Interest Kosovo
+#         description: The dataset shows the location of the places of interest in Kosovo.
+#         keywords:
+#             - places of interest
+#             - kosovo
+#         links:
+#             - type: text/csv
+#               rel: canonical
+#               title: data
+#               href: https://download.geofabrik.de/europe/kosovo.html
+#               hreflang: AL
+#         extents:
+#             spatial:
+#                 bbox: [20,41.9,21.7,43.2]
+#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#         providers:
+#             -   type: feature
+#                 name: CSV
+#                 data: /data/osm_poi_kosovo.csv
+#                 id_field: osm_id
+#                 geometry:
+#                     x_field: x
+#                     y_field: y
+### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - osm_places
 #     osm_places-vec:
