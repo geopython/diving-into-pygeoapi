@@ -140,7 +140,7 @@ Run the following requests in your web browser:
 - specific width/height: [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600)
 - specific area of interest (bbox of Canada): [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&bbox=-142,42,-52,84)
 
-![](../../assets/images/maps-response.png){ width=80% }
+![](../assets/images/maps-response.png){ width=80% }
 
 !!! tip
 
