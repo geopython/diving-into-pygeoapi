@@ -184,7 +184,7 @@ resources:
               data: tests/data/ne_110m_admin_0_countries.sqlite
               id_field: ogc_fid
               table: ne_110m_admin_0_countries
-    
+
     # ==== END - STANDARD PYGEOAPI COLLECTIONS ====
 
 

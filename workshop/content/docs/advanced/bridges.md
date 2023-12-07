@@ -177,20 +177,32 @@ In this section we'll have a look at how to Publish a CSW data as an OGC API - R
 
 ## Publishing SensorThings API as OGC API - Features
 
-``` {.yaml linenums="1"}
-toronto_bikes:
-    type: collection
-    title: Toronto Bikes SensorThings
-    description: The geographic location with coordinates for the Toronto bike share station
-    keywords:
-        - sediments
-    extents:
-        spatial:
-            bbox: [-180,-90,180,90]
-            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-    providers:
-        - type: feature
-            name: SensorThings
-            data: https://toronto-bike-snapshot.sensorup.com/v1.0/
-            entity: Things
-```
+In this section we'll have a look at how to Publish a SensorThings API as an OGC API - Features, which then can be consumed by various clients.
+PygeoAPI allows to consume `Thing` , `Sensor` and `ObservedProperty`.
+
+!!! question "Update the pygeoapi configuration"
+
+    Open the pygeoapi configuration file in a text editor.
+    Find the line: 
+    "#START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval" 
+
+    Add a new dataset section by uncommenting the lines up of
+    "# toronto_bikes configuration": 
+
+    ``` {.yaml linenums="1"}
+    toronto_bikes:
+        type: collection
+        title: Toronto Bikes SensorThings
+        description: The geographic location with coordinates for the Toronto bike share station
+        keywords:
+            - sediments
+        extents:
+            spatial:
+                bbox: [-180,-90,180,90]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        providers:
+            - type: feature
+                name: SensorThings
+                data: https://toronto-bike-snapshot.sensorup.com/v1.0/
+                entity: Things
+    ```
