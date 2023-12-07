@@ -83,22 +83,25 @@ The Advanced section of this workshop will further [elaborate pygeoapi CRS suppo
 
 ## Publishing WMS as OGC API - Maps
 
-We can use the pygeoapi's WMSFacade provider as a bridge to serve an OGC WMS via OGC API - Maps.
+We can use the pygeoapi's WMSFacade provider to publish OGC Web Map Service (WMS) interfaces as OGC API - Maps.
 
-We can use the MapServer demo server at: <https://demo.mapserver.org/cgi-bin/msautotest>
+ Let's set up an API on top of an existing WMS on the MapServer Demonstration Server:
+ 
+ <https://demo.mapserver.org/cgi-bin/msautotest>
+
 
 !!! note
 
-    Feel free to use a WMS of your choice as you wish!
+    Feel free to use an WMS of your choice, as you wish!
 
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
     Find the line: 
-    "# START - EXERCISE 8 - WMS Proxy" 
+    "## START - EXERCISE 8 - WMS Proxy" 
 
     Add a new dataset section by uncommenting the lines up to
-    "# END - EXERCISE 8 - WMS Proxy":
+    "## END - EXERCISE 8 - WMS Proxy":
 
      Be sure to keep the proper YAML indentation.
 
@@ -136,6 +139,8 @@ Run the following requests in your web browser:
 - default map: [http://localhost:5000/collections/wms-facade-demo/map?f=png](http://localhost:5000/collections/wms-facade-demo/map?f=png)
 - specific width/height: [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600)
 - specific area of interest (bbox of Canada): [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&bbox=-142,42,-52,84)
+
+![](../../assets/images/maps-response.png){ width=80% }
 
 !!! tip
 
