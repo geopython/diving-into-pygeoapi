@@ -1,8 +1,8 @@
 ---
-title: pygeoapi as a Bridge to Other Services
+title: Exercise 8 - pygeoapi as a Bridge to Other Services
 ---
 
-# pygeoapi as a Bridge to Other Services
+# Exercise 8 - pygeoapi as a Bridge to Other Services
 
 In this section we explore how pygeoapi can be used as a facade, or a bridge, to re-publish web services with different interfaces. These bridges can help [organisations migrating from OWS to OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration/).
 
@@ -16,10 +16,10 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
 
     Open the pygeoapi configuration in a text editor. 
     Find the line: 
-    "# START - EXERCISE 2 - Proxy" 
+    "# START - EXERCISE 8 - WFS Proxy" 
 
     Add a new dataset section by uncommenting the lines up to
-    "# END - EXERCISE 2 - Proxy":
+    "# END - EXERCISE 8 - WFS Proxy":
 
 
     ``` {.yaml linenums="1"}
@@ -93,11 +93,14 @@ We can use the MapServer demo server at: <https://demo.mapserver.org/cgi-bin/msa
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration file in a text editor.
+    Open the pygeoapi configuration in a text editor. 
+    Find the line: 
+    "# START - EXERCISE 8 - WMS Proxy" 
 
-    Find the line: "# START - EXERCISE 5 - Maps".
+    Add a new dataset section by uncommenting the lines up to
+    "# END - EXERCISE 8 - WMS Proxy":
 
-    Uncomment or paste the configuration snippet below until the line that reads "## END - EXERCISE 5 - Maps". Be sure to keep the proper YAML indentation.
+     Be sure to keep the proper YAML indentation.
 
     ``` {.yaml linenums="1"}
     wms-facade-demo:
@@ -145,12 +148,12 @@ In this section we'll have a look at how to Publish a CSW data as an OGC API - R
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration file in a text editor.
+    Open the pygeoapi configuration in a text editor. 
     Find the line: 
-    "#START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval" 
+    "# START - EXERCISE 8 - CSW Proxy" 
 
-    Add a new dataset section by uncommenting the lines up of
-    "# cite_demo configuration":    
+    Add a new dataset section by uncommenting the lines up to
+    "# END - EXERCISE 8 - CSW Proxy":    
 
     ``` {.yaml linenums="1"}
     cite_demo:
@@ -182,12 +185,12 @@ PygeoAPI allows to consume `Thing` , `Sensor` and `ObservedProperty`.
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration file in a text editor.
+    Open the pygeoapi configuration in a text editor. 
     Find the line: 
-    "#START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval" 
+    "# START - EXERCISE 8 - SensorThings Proxy" 
 
-    Add a new dataset section by uncommenting the lines up of
-    "# toronto_bikes configuration": 
+    Add a new dataset section by uncommenting the lines up to
+    "# END - EXERCISE 8 - SensorThings Proxy": 
 
     ``` {.yaml linenums="1"}
     toronto_bikes:
