@@ -25,8 +25,9 @@ pygeoapi supports all of the above OGC API - Features specification parts (Part 
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/cql.html) for more information on CQL support 
 
+Next, we are going to explore how-to publish vector data using a `GeoPackage` and a `Elasticsearch` backend.
 
-## Publish a vector dataset
+## Publish a GeoPackage
 
 In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
 In this exercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
@@ -84,6 +85,76 @@ title *"Places in Kosovo 2023"* has been published.
     Consult the [official documentation](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) 
     or try with an alternative data format.
  
+## Publish a GeoJSON using Elasticsearch
+
+If you want to explore publishing vector tiles using Elasticsearch clone this fork of pygeoapi:
+
+<div class="termy">
+```bash
+git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
+```
+</div>
+
+Then change into the `docker/examples/elastic` folder, and run the `docker-compose` file:
+
+<div class="termy">
+```bash
+cd docker/examples/elastic
+
+docker-compose up
+```
+</div>
+
+This configuration snippet, enables publishing greater_hyderabad_municipal_corporation_ward_boundaries.geojson as OGC API - Features:
+
+``` {.yaml linenums="1"}
+    greater_hyderabad_municipal_corporation_ward_boundaries:
+        type: collection
+        title: Greater Hyderabad Municipal Corporation ward boundaries
+        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+        keywords:
+           - Boundaries
+           - Administrative
+           - Ward
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
+              hreflang: en-US
+        extents:
+            spatial:
+                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+            temporal:
+                begin: 2011-11-11
+                end: null  # or empty
+        providers:
+            - type: feature
+              name: Elasticsearch
+              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
+              id_field: objectid
+``` 
+
+Wait until the data was ingested into an elastic index, and pygeoapi starts. You can check the logs using:
+
+<div class="termy">
+```bash
+docker-compose logs --follow
+```
+</div>
+
+After the server has started you can access the collection page here:
+
+<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries>
+
+And the feature items here:
+
+<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries/items>
+
+   ![](../assets/images/features-hyderabad.png){ width=100% }
+
 ## pygeoapi as a WFS proxy
 
 You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WFS as OGC API - Features](../../advanced/bridges/#publishing-wfs-as-ogc-api-features).
