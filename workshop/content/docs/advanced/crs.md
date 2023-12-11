@@ -101,11 +101,11 @@ We can even do this in the Swagger UI, but using the browser is quite fast and c
 !!! question "Collection Metadata"
 
     Open the URL: 
-    [http://localhost:5000/collections/firenze-terrains-vec](http://localhost:5000/collections/firenze-terrains-vec)
+    <http://localhost:5000/collections/firenze-terrains-vec>
     Your configured CRSs are displayed at the bottom of the page: "Reference Systems" and "Storage CRS".
     
     See these in JSON format, also at the bottom: 
-    http://localhost:5000/collections/firenze-terrains-vec?f=json
+    <http://localhost:5000/collections/firenze-terrains-vec?f=json>
     ```yaml
        .
        .
@@ -124,7 +124,7 @@ We can even do this in the Swagger UI, but using the browser is quite fast and c
 !!! question "Using the CRS query parameter"
 
     Open the URL: 
-    [http://localhost:5000/collections/firenze-terrains-vec/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258](http://localhost:5000/collections/firenze-terrains-vec/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258)
+    <http://localhost:5000/collections/firenze-terrains-vec/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258>
 
     This is ETRS89, similar to WGS84, but for the European Continent (Datum) and in lat,lon order. This is e.g. used in INSPIRE.
 
