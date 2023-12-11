@@ -4,7 +4,7 @@ title: Exercise 8 - pygeoapi as a bridge to other services
 
 # Exercise 8 - pygeoapi as a bridge to other services
 
-In this section we explore how pygeoapi can be used as a facade, or a bridge, to re-publish web services with different interfaces. These bridges can help [organisations migrating from OWS to OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration/).
+In this section we explore how pygeoapi can be used as a facade, or a bridge, to re-publish web services with different interfaces. These bridges can help [organisations migrating from OWS to OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration).
 
 ## Publishing WFS as OGC API - Features
 
@@ -148,7 +148,7 @@ Run the following requests in your web browser:
 
 ## Publishing CSW as OGC API - Records
 
-In this section we'll have a look at how to publish Catalogue Services for the Web (CSW) as OGC API - Records. For that, we will use the [pycsw OGC CITE demo](https://demo.pycsw.org/cite/) CSW service.
+In this section we'll have a look at how to publish Catalogue Service for the Web (CSW) as OGC API - Records. For that, we will use the [pycsw OGC CITE demo](https://demo.pycsw.org/cite/) CSW service.
 
 !!! question "Update the pygeoapi configuration"
 
