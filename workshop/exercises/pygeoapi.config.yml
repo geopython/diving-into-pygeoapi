@@ -48,6 +48,10 @@ server:
         url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
         attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     ogc_schemas_location: /schemas.opengis.net
+    manager:
+        name: TinyDB
+        connection: /tmp/pygeoapi-process-manager.db
+        output_dir: /tmp/
 
 logging:
     level: ERROR
@@ -55,7 +59,7 @@ logging:
 
 metadata:
     identification:
-        title: pygeoapi default instance
+        title: Diving into pygeoapi default instance
         description: pygeoapi provides an API to geospatial data
         keywords:
             - geospatial
@@ -63,7 +67,7 @@ metadata:
             - api
         keywords_type: theme
         terms_of_service: https://creativecommons.org/licenses/by/4.0/
-        url: https://github.com/geopython/pygeoapi
+        url: https://dive.pygeoapi.io
     license:
         name: CC-BY 4.0 license
         url: https://creativecommons.org/licenses/by/4.0/
@@ -71,19 +75,19 @@ metadata:
         name: pygeoapi Development Team
         url: https://pygeoapi.io
     contact:
-        name: Kralidis, Tom
-        position: Lead Dev
-        address: Mailing Address
-        city: City
-        stateorprovince: Administrative Area
-        postalcode: Zip or Postal Code
-        country: Canada
+        name: pygeoapi Development Team
+        position: pygeoapi Development Team
+        address: 9450 SW Gemini Dr. #42523
+        city: Beaverton
+        stateorprovince: Oregon
+        postalcode: 97008
+        country: United States of America
         phone: +xx-xxx-xxx-xxxx
         fax: +xx-xxx-xxx-xxxx
-        email: you@example.org
-        url: Contact URL
-        hours: Hours of Service
-        instructions: During hours of service.  Off on weekends.
+        email: pygeoapi@gmail.com
+        url: https://pygeoapi.io
+        hours: 24/7
+        instructions: During hours of service.
         role: pointOfContact
 
 resources:
@@ -378,7 +382,7 @@ resources:
 #               title_field: title
 ## END - EXERCISE 6 - Metadata
 
-## START EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval
+## START EXERCISE 7 - Environmental data via OGC API - Environmental Data Retrieval
 #     icoads-sst:
 #         type: collection
 #         title: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
@@ -407,9 +411,22 @@ resources:
 #               format:
 #                   name: NetCDF
 #                   mimetype: application/x-netcdf
-## END EXERCISE 7 - Environmental data via OGC - Environmental Data Retrieval
+## END EXERCISE 7 - Environmental data via OGC API - Environmental Data Retrieval
 
-## START - EXERCISE 8 - WFS Proxy
+    hello-world:
+        type: process
+        processor:
+            name: HelloWorld
+
+## START EXERCISE 8 - Functions via OGC API - Processes
+    # squared:
+    #     type: process
+    #     processor:
+    #         name: pygeoapi.process.squared.SquaredProcessor
+## END EXERCISE 8 - Functions via OGC API - Processes
+
+
+## START - EXERCISE 9 - WFS Proxy
 #     suol_epicentri_storici:
 #         type: collection
 #         title: Epicenters of the main historical earthquakes
@@ -449,9 +466,9 @@ resources:
 #               storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
 #               title_field: d
 #               layer: territorio:suol_epicentri_storici
-## END - EXERCISE 8 - WFS Proxy
+## END - EXERCISE 9 - WFS Proxy
 
-## START - EXERCISE 8 - WMS Proxy
+## START - EXERCISE 9 - WMS Proxy
 #     wms-facade-demo:
 #         type: collection
 #         title: WMS Facade demo
@@ -478,9 +495,9 @@ resources:
 #               format:
 #                 name: png
 #                 mimetype: image/png
-## END - EXERCISE 8 - WMS Proxy
+## END - EXERCISE 9 - WMS Proxy
 
-## START - EXERCISE 8 - CSW Proxy
+## START - EXERCISE 9 - CSW Proxy
 #     cite_demo:
 #         type: collection
 #         title: pycsw OGC CITE demo and Reference Implementation
@@ -501,9 +518,9 @@ resources:
 #               id_field: identifier
 #               time_field: datetime
 #               title_field: title
-## END - EXERCISE 8 - CSW Proxy
+## END - EXERCISE 9 - CSW Proxy
 
-## START - EXERCISE 8 - SensorThings Proxy
+## START - EXERCISE 9 - SensorThings Proxy
 #     toronto_bikes:
 #         type: collection
 #         title: Toronto Bikes SensorThings
@@ -519,9 +536,4 @@ resources:
 #               name: SensorThings
 #               data: https://toronto-bike-snapshot.sensorup.com/v1.0/
 #               entity: Things
-## END - EXERCISE 8 - SensorThings Proxy
-        
-    # hello-world:
-    #     type: process
-    #     processor:
-    #         name: HelloWorld
+## END - EXERCISE 9 - SensorThings Proxy

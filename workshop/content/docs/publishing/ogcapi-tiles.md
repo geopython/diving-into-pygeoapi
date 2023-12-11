@@ -98,12 +98,12 @@ tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-d
                     mimetype: application/vnd.mapbox-vector-tile
 ```
 
-Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
 Additional check for the following tile specific endpoints in the `Hyderabad` collection:
 
-- tile links in [http://localhost:5000/collections/hyderabad/tiles](http://localhost:5000/collections/hyderabad/tiles)
-- tile metadata in [http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata](http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata)
+- tile links in <http://localhost:5000/collections/hyderabad/tiles>
+- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
 
 ![TileSet](../assets/images/vtiles-hyderabad.png)
 
@@ -188,9 +188,9 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
 
-    - access the collection page of the tiles dataset: `http://localhost:5000/collections/Hyderabad`
-    - navigate to the tiles page by clicking on `tiles`: `http://localhost:5000/collections/Hyderabad/tiles`
-    - click in `Tiles metadata in tilejson format`: `http://localhost:5000/collections/Cycle/Hyderabad/WorldCRS84Quad/metadata`
+    - access the collection page of the tiles dataset: <http://localhost:5000/collections/Hyderabad>
+    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/Hyderabad/tiles>
+    - click in `Tiles metadata in tilejson format`: `http://localhost:5000/collections/Cycle/Hyderabad/WorldCRS84Quad/metadata>
     - note the URL in `tiles`: `http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
 
     Follow these steps to connect to a service and access vector tiles:

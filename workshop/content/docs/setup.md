@@ -150,7 +150,7 @@ data is a one-liner.
     </div>
 
 
-That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
+That's all! Open your browser and navigate to <http://localhost:5000>, the pygeoapi page will display.
 As part of the initial `docker run`, Docker will download the pygeoapi Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
 This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
 you may want to do this beforehand. 
@@ -200,7 +200,7 @@ within the container by a local file which you can edit in your favourite text e
     ```
     </div>
 
-    At this point, navigate to `http://localhost:5000` to verify the new title and description.
+    At this point, navigate to <http://localhost:5000> to verify the new title and description.
 
 
 By using a Docker volume mount (`-v` option), Docker attaches or 'mounts' a

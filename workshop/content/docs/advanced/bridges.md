@@ -1,8 +1,8 @@
 ---
-title: Exercise 8 - pygeoapi as a Bridge to Other Services
+title: Exercise 8 - pygeoapi as a bridge to other services
 ---
 
-# Exercise 8 - pygeoapi as a Bridge to Other Services
+# Exercise 8 - pygeoapi as a bridge to other services
 
 In this section we explore how pygeoapi can be used as a facade, or a bridge, to re-publish web services with different interfaces. These bridges can help [organisations migrating from OWS to OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration/).
 
@@ -64,7 +64,7 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
               layer: territorio:suol_epicentri_storici
     ```
 
-Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` 
+Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections>
 to evaluate whether the new dataset has been published.
  
 Note these important configuration slices under `providers`:
@@ -136,9 +136,9 @@ We can use the pygeoapi's WMSFacade provider to publish OGC Web Map Service (WMS
 
 Run the following requests in your web browser:
 
-- default map: [http://localhost:5000/collections/wms-facade-demo/map?f=png](http://localhost:5000/collections/wms-facade-demo/map?f=png)
-- specific width/height: [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600)
-- specific area of interest (bbox of Canada): [http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600](http://localhost:5000/collections/wms-facade-demo/map?f=png&bbox=-142,42,-52,84)
+- default map: <http://localhost:5000/collections/wms-facade-demo/map?f=png>
+- specific width/height: <http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600>
+- specific area of interest (bbox of Canada): <http://localhost:5000/collections/wms-facade-demo/map?f=png&width=800&height=600&bbox=-142,42,-52,84>
 
 ![](../assets/images/maps-response.png){ width=80% }
 

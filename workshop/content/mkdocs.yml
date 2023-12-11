@@ -17,7 +17,8 @@ nav:
         - Exercise 4 - Tiles of geospatial data via OGC API - Tiles: publishing/ogcapi-tiles.md
         - Exercise 5 - Maps of geospatial data via OGC API - Maps: publishing/ogcapi-maps.md
         - Exercise 6 - Metadata via OGC API - Records: publishing/ogcapi-records.md
-        - Exercise 7 - Environmental data via OGC - Environmental Data Retrieval: publishing/ogcapi-edr.md
+        - Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval: publishing/ogcapi-edr.md
+        - Exercise 8 - Functions via OGC API - Processes: publishing/ogcapi-processes.md
     - Advanced topics:
         - advanced/index.md
         - Multilingual support: advanced/i18n.md
@@ -29,7 +30,7 @@ nav:
         - Semantic Web and Linked Data: advanced/semantic-web-linked-data.md
         - Cloud deployment: advanced/cloud.md
         - INSPIRE support: advanced/inspire.md
-        - Exercise 8 - pygeoapi as a Bridge to Other Services: advanced/bridges.md
+        - Exercise 9 - pygeoapi as a bridge to other services: advanced/bridges.md
     - Conclusion: conclusion.md
 
 use_directory_urls: true

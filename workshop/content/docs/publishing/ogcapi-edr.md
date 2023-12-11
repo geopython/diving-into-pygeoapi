@@ -1,8 +1,8 @@
 ---
-title: Exercise 7 - Environmental data via OGC - Environmental Data Retrieval
+title: Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval
 ---
 
-# Exercise 7 - Environmental data via OGC - Environmental Data Retrieval
+# Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval
 
 [OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr) provides a Web API to access
 environmental data using well defined query patterns:
@@ -63,7 +63,7 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
                   mimetype: application/x-netcdf
 ```
 
-Save the configuration and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
 At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Let's look a bit closer at the colleciton description:
 

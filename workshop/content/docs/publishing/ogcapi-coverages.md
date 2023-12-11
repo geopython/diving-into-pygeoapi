@@ -70,7 +70,7 @@ You can now add `53_ED1_G.tif` to pygeoapi:
 
     The rasterio provider `format.name` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)
 
-Save the configuration and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
 ## Client access
 

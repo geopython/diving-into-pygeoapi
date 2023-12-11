@@ -76,7 +76,7 @@ Let's add the file `workshop/exercises/data/osm_places_kosovo.gpkg`:
               table: gis_osm_places_free_1 # table name within gpkg
     ```
 
-Save the file and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset with
+Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset with
 title *"Places in Kosovo 2023"* has been published.
 
 !!! note

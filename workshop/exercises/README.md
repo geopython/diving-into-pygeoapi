@@ -9,7 +9,7 @@ To start Docker Compose, from `workshop/exercises`, run the following command:
 docker-compose up -d
 ```
 
-This will start a Docker container with pygeoapi (reachable from the browser at [this address](http://localhost:5000/)).
+This will start a Docker container with pygeoapi (reachable from the browser at <http://localhost:5000/>).
 
 To stop, use the command:
 

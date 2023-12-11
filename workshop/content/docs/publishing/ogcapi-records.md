@@ -59,7 +59,7 @@ Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/
               title_field: title
 ```
 
-Save the configuration and restart Docker Compose. Navigate to `http://localhost:5000/collections` to evaluate whether the new dataset has been published.
+Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
 ## Metadata formats
 
