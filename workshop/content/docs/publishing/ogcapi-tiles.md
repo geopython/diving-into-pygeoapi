@@ -102,8 +102,8 @@ Save the file and restart Docker Compose. Navigate to <http://localhost:5000/col
 
 Additional check for the following tile specific endpoints in the `Hyderabad` collection:
 
-- tile links in <http://localhost:5000/collections/hyderabad/tiles>
-- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
+- tile links in <http://localhost:5000/collections/Hyderabad/tiles>
+- tile metadata in <http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/metadata>
 
 ![TileSet](../assets/images/vtiles-hyderabad.png)
 
