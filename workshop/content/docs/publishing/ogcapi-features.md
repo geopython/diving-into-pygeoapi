@@ -264,7 +264,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     >>> lakes['description']
     'lakes of the world, public domain'
     >>> lakes_queryables = w.collection_queryables('lakes')
-    >>> len(lakes_queryables['queryables'])
+    >>> len(lakes_queryables['properties'])
     6
     >>> lakes_query = w.collection_items('lakes')
     >>> lakes_query['features'][0]['properties']
