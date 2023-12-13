@@ -102,8 +102,8 @@ Save the file and restart Docker Compose. Navigate to <http://localhost:5000/col
 
 Additional check for the following tile specific endpoints in the `Hyderabad` collection:
 
-- tile links in <http://localhost:5000/collections/hyderabad/tiles>
-- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
+- tile links in <http://localhost:5000/collections/Hyderabad/tiles>
+- tile metadata in <http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/metadata>
 
 ![TileSet](../assets/images/vtiles-hyderabad.png)
 
@@ -174,9 +174,6 @@ This configuration, enables publishing greater_hyderabad_municipal_corporation_w
                     name: pbf
                     mimetype: application/vnd.mapbox-vector-tile
 ```
-
-You can explore this example in leaflet using this code:
-<https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm>
 
 ## Client access
 
@@ -276,6 +273,15 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
 !!! tip 
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
+
+    If you want to render the tiles from the [elasticSearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
+    <div class="termy">
+    ```bash
+    git clone -b ogcapi-ws https://github.com/doublebyte1/vtiles-example.git
+    ```
+    </div>
+
+    ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
 
 ### OpenLayers
 
