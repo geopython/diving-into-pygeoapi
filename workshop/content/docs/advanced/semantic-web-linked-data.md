@@ -37,7 +37,7 @@ some aspects of the Semantic Web so the data can be traversed by Semantic Web aw
     However you can also use SPARQL to query graphs of linked web resources. The SPARQL client traverses links between 
     the resources to locate the requested triples. [Jena ARQ](https://jena.apache.org/documentation/query/) is a command 
     line SPARQL client which is able to run such queries. Jena is quite difficult to set up, although there is a 
-    [Docker Image](https://hub.docker.com/r/stain/jena) available. As an alternative we will use a web-based implementation 
+    [Docker image](https://hub.docker.com/r/stain/jena) available. As an alternative we will use a web-based implementation 
     of the ARQ engine. Navigate to [https://demos.isl.ics.forth.gr/sparql-ld-endpoint](https://demos.isl.ics.forth.gr/sparql-ld-endpoint/)
     and replace the query in the textbox with:
 

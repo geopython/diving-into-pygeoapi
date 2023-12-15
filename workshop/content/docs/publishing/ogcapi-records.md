@@ -89,6 +89,40 @@ python3 load_tinydb_records.py xml catalogue.tinydb
 ```
 </div>
 
+If you do not have curl installed, copy the URL above to your web browser and save locally.
+
+If you do not have Python installed, you can the loader by using the OWSLib Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
+
+!!! example "Using the OWSLib Docker container to load metadata"
+
+=== "Linux/Mac"
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+    pip3 install owslib
+    apt-get update -y && apt-get install curl -y
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
+    ```
+    </div>
+
+=== "Windows"
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+    pip3 install owslib
+    apt-get update -y && apt-get install curl -y
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
+    ```
+    </div>
+
+
+Navigate to <http://localhost:5000/collections/example_catalogue> to evaluate whether the new metadata has been published
+to the collection.
+
 ## pygeoapi as a CSW proxy
 
 You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish CSW as OGC API - Records](../../advanced/bridges/#publishing-csw-as-ogc-api-records).
@@ -129,7 +163,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
     ``` 
     </div>
 
-    Then start a Python console session with: `python` (stop the session by typing `exit()`).
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
     <div class="termy">
     ```python

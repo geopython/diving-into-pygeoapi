@@ -40,6 +40,23 @@ Exercises are indicated as follows:
 
     A section marked like this indicates that you can try out the exercise.
 
+!!! example "Example exercise with tabs"
+
+    A section marked like this indicates that you can try out the exercise and choose your environment (Linux/Mac or Windows).
+
+    === "Linux/Mac"
+        <div class="termy">
+        ```bash
+        docker run -p 5000:80 -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
+        ```
+        </div>
+    === "Windows"
+        <div class="termy">
+        ```bash
+        docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
+        ```
+        </div>
+
 Also you will notice tips and notes sections within the text:
 
 !!! tip

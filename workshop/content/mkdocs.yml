@@ -54,6 +54,8 @@ markdown_extensions:
     - admonition # adds the note, question, tip boxes, eg: !!! tip "my tip"
     - pymdownx.details # advanced collapsible panels
     - pymdownx.superfences # advanced features; such as line number, flow chart, python shell
+    - pymdownx.tabbed:
+          alternate_style: true
     - footnotes # notes bottom of page
     - attr_list # used to size images
     - md_in_html # used to size images
