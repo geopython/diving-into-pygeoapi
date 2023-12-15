@@ -95,6 +95,8 @@ git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
 ```
 </div>
 
+In alternative, you can download a zip file from [this](https://github.com/doublebyte1/pygeoapi/archive/refs/heads/ogcapi-ws.zip) link.
+
 Then change into the `docker/examples/elastic` folder, and run the `docker-compose` file:
 
 <div class="termy">
