@@ -78,8 +78,7 @@ develop your own custom pygeoapi plugin, or convert your metadata to OGC API - R
 
 ### Sample ISO 19139 to TinyDBCatalogue loader
 
-It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py))
-
+It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
 
 <div class="termy">
 ```bash
@@ -119,9 +118,25 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
     ```
     </div>
 
-
 Navigate to <http://localhost:5000/collections/example_catalogue> to evaluate whether the new metadata has been published
 to the collection.
+
+!!! tip pygeometa
+
+    [pygeometa](https://geopython.github.io/pygeometa) is a Python package to generate metadata for geospatial
+    datasets.  pygeometa allows for managing metadata in simple YAML "metadata control files (MCF), and supports
+    import, export as well as transformations for many geospatial metadata formats.  OGC API - Records metadata
+    can be produced using pygeometa, either from MCF files or transforming from other formats.
+
+    Install and run pygeometa per below to get an idea of the various commands and functionality (as well,
+    consult the [tutorial](https://geopython.github.io/pygeometa/tutorial)).
+
+    <div class="termy">
+    ```bash
+    pip3 install pygeometa
+    pygeometa --help
+    ```
+    </div>
 
 ## pygeoapi as a CSW proxy
 
