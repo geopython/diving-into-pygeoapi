@@ -38,26 +38,39 @@ include, but are not limited to:
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
-For this exercise, you will publish a vector dataset of the [greater hyderabad municipal corporation ward boundaries](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), from the location below:
+For this exercise, you will publish a vector dataset of the [greater Hyderabad municipal corporation ward boundaries](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), from the location below:
 
 * data: `workshop/exercises/data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson`
 
 Let's generate the tiles as the first step using tippecanoe:
 
-<div class="termy">
-```bash
-cd workshop/exercises
-docker run -it --rm -v ${PWD}/data:/data emotionalcities/tippecanoe \
-tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-```
-</div>
+!!! example "Using tippecanoe to generate vector tiles"
+
+    === "Linux/Mac"
+    
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
+        tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        ```
+        </div>
+     
+    === "Windows"
+    
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        ```
+        </div>
  
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
 
 ``` {.yaml linenums="1"}
-    Hyderabad:
+    hyderabad:
         type: collection
         title: Greater Hyderabad Municipal Corporation ward boundaries
         description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
@@ -102,8 +115,8 @@ Save the file and restart Docker Compose. Navigate to <http://localhost:5000/col
 
 Additional check for the following tile specific endpoints in the `Hyderabad` collection:
 
-- tile links in <http://localhost:5000/collections/Hyderabad/tiles>
-- tile metadata in <http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/metadata>
+- tile links in <http://localhost:5000/collections/hyderabad/tiles>
+- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
 
 ![TileSet](../assets/images/vtiles-hyderabad.png)
 
@@ -156,7 +169,7 @@ This configuration, enables publishing greater_hyderabad_municipal_corporation_w
         providers:
             - type: feature
               name: Elasticsearch
-              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              # note: elastic_search is the Docker container name as defined in docker-compose.yml
               data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
               id_field: objectid
             - type: tile
@@ -185,10 +198,10 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
 
-    - access the collection page of the tiles dataset: <http://localhost:5000/collections/Hyderabad>
-    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/Hyderabad/tiles>
-    - click in `Tiles metadata in tilejson format`: `http://localhost:5000/collections/Cycle/Hyderabad/WorldCRS84Quad/metadata>
-    - note the URL in `tiles`: `http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
+    - access the collection page of the tiles dataset: <http://localhost:5000/collections/hyderabad>
+    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/hyderabad/tiles>
+    - click in `Tiles metadata in tilejson format`: <http://localhost:5000/collections/Cycle/hyderabad/WorldCRS84Quad/metadata>
+    - note the URL in `tiles`: `http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
 
     Follow these steps to connect to a service and access vector tiles:
 
@@ -259,7 +272,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
             interactive: true,
             vectorTileLayerStyles: vectorTileStyling,
             };
-        var pbfURL='http://localhost:5000/collections/Hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
+        var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
         var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
             console.log(e.layer);
         L.DomEvent.stop(e);
@@ -274,7 +287,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 !!! tip 
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
 
-    If you want to render the tiles from the [elasticSearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
+    If you want to render the tiles from the [Elasticsearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
     <div class="termy">
     ```bash
     git clone -b ogcapi-ws https://github.com/doublebyte1/vtiles-example.git
@@ -282,6 +295,11 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     </div>
 
     ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
+
+!!! tip 
+
+    See the [official LeafletJS documentation](https://leafletjs.com/reference.html)
+
 
 ### OpenLayers
 

@@ -56,8 +56,7 @@ in CRSs like `http://www.opengis.net/def/crs/EPSG/0/4258` (ETRS89 latitude, long
 !!! question "Add CRS to a pygeoapi configuration"
 
     Open the pygeoapi configuration file in a text editor.
-    Find the line: 
-    "# START - EXERCISE 2 - firenze-terrains" 
+    Find the line `# START - EXERCISE 2 - firenze-terrain`
 
     Update the dataset section with CRS support by replacing it with the snippet below:
 

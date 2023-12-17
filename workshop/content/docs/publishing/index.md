@@ -19,4 +19,4 @@ through the following exercises:
 - [Exercise 6 - Metadata via OGC API - Records](ogcapi-records.md)
 - [Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval](ogcapi-edr.md)
 - [Exercise 8 - Functions via OGC API - Processes](ogcapi-processes.md)
-- [Exercise 9 - Functions via OGC API - Processes](ogcapi-processes.md)
+- [Exercise 9 - pygeoapi as a bridge to other services](../advanced/bridges.md)

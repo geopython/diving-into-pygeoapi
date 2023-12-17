@@ -43,11 +43,9 @@ Let's add the file `workshop/exercises/data/osm_places_kosovo.gpkg`:
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration file in a text editor.
-    Find the line: 
-    "# START - EXERCISE 2 - osm_places" 
+    Find the line `# START - EXERCISE 2 - osm_places`.
 
-    Add a new dataset section by uncommenting the lines up to
-    "# END - EXERCISE 2 - osm_places":
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - osm_places`:
 
     ``` {.yaml linenums="1"}
     osm_places-vec:
@@ -107,7 +105,7 @@ docker-compose up
 ```
 </div>
 
-This configuration snippet, enables publishing greater_hyderabad_municipal_corporation_ward_boundaries.geojson as OGC API - Features:
+This configuration snippet, enables publishing the file `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` as OGC API - Features:
 
 ``` {.yaml linenums="1"}
     greater_hyderabad_municipal_corporation_ward_boundaries:
@@ -134,7 +132,7 @@ This configuration snippet, enables publishing greater_hyderabad_municipal_corpo
         providers:
             - type: feature
               name: Elasticsearch
-              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              # note: elastic_search is the Docker container name as defined in docker-compose.ym
               data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
               id_field: objectid
 ``` 
@@ -194,7 +192,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! tip
 
-    Install and activate the `QGIS Network Logger` extension. It will display HTTP traffic within QGIS and is a valuable tool in debugging failing connections.
+    Activate the `Debugging/Development Tools Panel` (right click anywhere on the toolbar icons and select). It will display HTTP traffic within QGIS and is a valuable tool in debugging failing connections.
 
 !!! note
 
@@ -241,7 +239,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
 
-    Then start a Python console session with: `python` (stop the session by typing `exit()`).
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
     <div class="termy">
     ```python

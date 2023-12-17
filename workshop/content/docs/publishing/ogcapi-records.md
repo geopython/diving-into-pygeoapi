@@ -78,8 +78,7 @@ develop your own custom pygeoapi plugin, or convert your metadata to OGC API - R
 
 ### Sample ISO 19139 to TinyDBCatalogue loader
 
-It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py))
-
+It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
 
 <div class="termy">
 ```bash
@@ -88,6 +87,56 @@ curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_t
 python3 load_tinydb_records.py xml catalogue.tinydb
 ```
 </div>
+
+If you do not have curl installed, copy the URL above to your web browser and save locally.
+
+If you do not have Python installed, you can the loader by using the OWSLib Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
+
+!!! example "Using the OWSLib Docker container to load metadata"
+
+=== "Linux/Mac"
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+    pip3 install owslib
+    apt-get update -y && apt-get install curl -y
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
+    ```
+    </div>
+
+=== "Windows"
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+    pip3 install owslib
+    apt-get update -y && apt-get install curl -y
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
+    ```
+    </div>
+
+Navigate to <http://localhost:5000/collections/example_catalogue> to evaluate whether the new metadata has been published
+to the collection.
+
+!!! tip pygeometa
+
+    [pygeometa](https://geopython.github.io/pygeometa) is a Python package to generate metadata for geospatial
+    datasets.  pygeometa allows for managing metadata in simple YAML "metadata control files (MCF), and supports
+    import, export as well as transformations for many geospatial metadata formats.  OGC API - Records metadata
+    can be produced using pygeometa, either from MCF files or transforming from other formats.
+
+    Install and run pygeometa per below to get an idea of the various commands and functionality (as well,
+    consult the [tutorial](https://geopython.github.io/pygeometa/tutorial)).
+
+    <div class="termy">
+    ```bash
+    pip3 install pygeometa
+    pygeometa --help
+    ```
+    </div>
 
 ## pygeoapi as a CSW proxy
 
@@ -129,7 +178,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
     ``` 
     </div>
 
-    Then start a Python console session with: `python` (stop the session by typing `exit()`).
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
     <div class="termy">
     ```python

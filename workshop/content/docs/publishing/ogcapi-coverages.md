@@ -34,6 +34,8 @@ unzip 53.zip
 ```
 </div>
 
+If you do not have curl installed, copy the URL above to your web browser and save locally.
+
 You can now add `53_ED1_G.tif` to pygeoapi:
 
 !!! question "Update the pygeoapi configuration"

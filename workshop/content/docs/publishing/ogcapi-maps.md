@@ -19,7 +19,7 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
  
 !!! question "Interact with OGC API - Maps via MapScript"
 
-    Open the pygeoapi configuration file in a text editor. Find the line: "# START - EXERCISE 5 - Maps". 
+    Open the pygeoapi configuration file in a text editor. Find the line `# START - EXERCISE 5 - Maps`.
 
     Uncomment section related to #airports.
 

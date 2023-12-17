@@ -65,11 +65,22 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
 
 Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Let's look a bit closer at the colleciton description:
+At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Let's look a bit closer at the collection description:
 
 # Client access
 
-Currently there is no support for EDR in common tooling. The example below provides a generic workflow using the [Python requests library](https://requests.readthedocs.io):
+!!! question "Interact with OGC API - Environmental Data Retrieval via Python requests"
+
+    If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
+
+    <div class="termy">
+    ```bash
+    pip3 install requests
+    ``` 
+    </div>
+
+
+Currently there is limited client support for EDR.  The example below provides a generic workflow using the [Python requests library](https://requests.readthedocs.io):
 
 <div class="termy">
 ```python
