@@ -249,7 +249,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     'https://demo.pygeoapi.io/master'
     >>> conformance = w.conformance()
     {u'conformsTo': [u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html', u'http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson']}
-    >>> api = w.api()  # OpenAPI document/
+    >>> api = w.api()  # OpenAPI document
     >>> collections = w.collections()
     >>> len(collections['collections'])
     13
