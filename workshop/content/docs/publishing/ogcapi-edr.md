@@ -65,41 +65,46 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
 
 Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Let's look a bit closer at the collection description:
+At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Look a bit closer at the collection description, and notice
+that there is a `parameter_names' key that describes EDR parameter names for the collection queries.
 
-# Client access
+### OWSLib - Advanced
 
-!!! question "Interact with OGC API - Environmental Data Retrieval via Python requests"
+[OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Environmental Data Retrieval.
+
+!!! question "Interact with OGC API - Environmental Data Retrieval via OWSLib"
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
     <div class="termy">
     ```bash
-    pip3 install requests
-    ``` 
+    pip3 install owslib
+    ```
     </div>
 
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
-Currently there is limited client support for EDR.  The example below provides a generic workflow using the [Python requests library](https://requests.readthedocs.io):
+    <div class="termy">
+    ```python
+    >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
+    >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
+    >>> w.url
+    'https://demo.pygeoapi.io/master'
+    >>> api = w.api()  # OpenAPI document
+    >>> collections = w.collections()
+    >>> len(collections['collections'])
+    13
+    >>> icoads_sst = w.collection('icoads-sst')
+    >>> icoads_sst['parameter-names'].keys()
+    dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
+    >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+    >>> data  # CoverageJSON data
+    ```
+    </div>
 
-<div class="termy">
-```python
->>> import requests
->>> collection = requests.get('http://localhost:5000/collections/icoads-sst').json()
->>> collection['id']
-'icoads-sst'
->>> collection['title']
-'International Comprehensive Ocean-Atmosphere Data Set (ICOADS)'
->>> collection['description']
-'International Comprehensive Ocean-Atmosphere Data Set (ICOADS)'
->>> collection['parameter-names'].keys()
-dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
->>> params = {'coords': 'POINT(-28 14)', 'parameter-name': 'SST'}
->>> position_query = requests.get('http://localhost:5000/collections/icoads-sst/position', params=params).json()
->>> position_query['ranges']['SST']['values']
-[26.755414962768555, 26.303892135620117, 26.512916564941406, 26.799564361572266, 27.48826026916504, 28.04759979248047, 28.745832443237305, 28.5635986328125, 28.272104263305664, 28.526521682739258, 28.25160026550293, 27.074399948120117]
-```
-</div>
+!!! note
+
+    See the official [OWSLib documentation](https://owslib.readthedocs.io/en/latest/usage.html#ogc-api) for more examples.
 
 # Summary
 
