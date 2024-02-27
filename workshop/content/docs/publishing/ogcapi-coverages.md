@@ -120,20 +120,15 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
     'Global Deterministic Prediction System sample'
     >>> gdps['description']
     'Global Deterministic Prediction System sample'
-    >>> domainset = w.coverage_domainset('gdps-temperature')
-    >>> domainset['generalGrid']['axisLabels']
-    ['Long', 'Lat']
-    >>> domainset['generalGrid']['gridLimits']['axisLabels']
-    ['i', 'j']
-    >>> rangetype = w.coverage_rangetype('gdps-temperature')
-    >>> len(rangetype['field'])
+    >>> schema = w.collection_schema('gdps-temperature')
+    >>> len(schema['field'])
     1
-    >>> rangetype['field'][0]['name']
+    >>> schema['properties']['1']['title']
     'Temperature [C]'
-    >>> rangetype['field'][0]['uom']['code']
+    >>> schema['properties']['1']['x-ogc-unit']
     '[C]'
-    >>> rangetype['field'][0]['encodingInfo']['dataType']
-    'http://www.opengis.net/def/dataType/OGC/0/float64'
+    >>> schema['properties']['1']['type']
+    'number'
     ```
     </div>
 
