@@ -140,7 +140,7 @@ to the collection.
 
 ## pygeoapi as a CSW proxy
 
-You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish CSW as OGC API - Records](../../advanced/bridges/#publishing-csw-as-ogc-api-records).
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish CSW as OGC API - Records](../advanced/bridges.md#publishing-csw-as-ogc-api-records).
 
 ## Client access
 

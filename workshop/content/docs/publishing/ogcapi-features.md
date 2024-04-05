@@ -157,7 +157,7 @@ And the feature items here:
 
 ## pygeoapi as a WFS proxy
 
-You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WFS as OGC API - Features](../../advanced/bridges/#publishing-wfs-as-ogc-api-features).
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WFS as OGC API - Features](../advanced/bridges.md#publishing-wfs-as-ogc-api-features).
 
 ## Client access
 
