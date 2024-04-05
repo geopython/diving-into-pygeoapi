@@ -224,32 +224,32 @@ resources:
 #                     y_field: y
 ### END - EXERCISE 1 - Your First Collection
 
-## START - EXERCISE 2 - osm_places
-#     osm_places-vec:
+## START - EXERCISE 2 - cadastral parcels Tartu
+#     cp-tartu:
 #         type: collection
-#         title: Places in Kosovo 2023
-#         description: Places in Kosovo as maintained by the Open Street Map Community
+#         title: Tartu Cadastral Parcels
+#         description: Cadasral parcels in downtown Tartu
 #         keywords:
-#             - places
-#             - Kosovo
+#             - Cadastral parcels
+#             - Tartu
 #         links:
-#             -   type: text/csv
+#             -   type: OGC/WFS
 #                 rel: canonical
 #                 title: data
-#                 href: https://download.geofabrik.de/europe/kosovo.html
-#                 hreflang: AL
+#                 href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
+#                 hreflang: EE
 #         extents:
 #             spatial:
-#                 bbox: [20,41.9,21.7,43.2]
+#                 bbox: [26.6, 58.3, 26.8, 58.5]
 #                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 #         providers:
 #             - type: feature
 #               name: SQLiteGPKG
-#               data: /data/osm_places_kosovo.gpkg # place correct path here
-#               id_field: osm_id
-#               title_field: name
-#               table: gis_osm_places_free_1 # table name within gpkg
-## END - EXERCISE 2 - osm_places
+#               data: /data/cptartu2.gpkg # place correct path here
+#               id_field: nationalca
+#               title_field: label
+#               table: cptartu2 # table name within gpkg
+## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
 #     firenze-terrains:

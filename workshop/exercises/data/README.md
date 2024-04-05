@@ -11,12 +11,12 @@ This directory provides sample data to demonstrate functionality.
 - copyright: OSM Contributors
 - license: ODbL
 
-### Places Kosovo
-- title: [osm_places_kosovo.gpkg](./osm_places_kosovo.gpkg)
-- url: https://download.geofabrik.de/europe/kosovo.html
-- description: Data converted to geopackage from kosovo-latest-free.shp.zip. The file was last modified 23-6-2023
-- copyright: OSM Contributors
-- license: ODbL
+### Cadastral Parcels Estonia
+- title: [cptartu2.gpkg.zip](./cptartu2.gpkg.zip)
+- url: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
+- description: Data converted to geopackage from WFS.
+- copyright: [Maa-amet](https://maaamet.ee)
+- license:  CC BY 4.0
 
 ### Cycle Circulation Area in Florence
 - title: [cycle-lanes-firenze.geojson](cycle-lanes-firenze.geojson)
