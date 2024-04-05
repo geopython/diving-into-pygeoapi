@@ -192,7 +192,7 @@ The [OGC SensorThings API standard](https://ogcapi-workshop.ogc.org/api-deep-div
 
 The pygeoapi SensorThings bridge enables to proxy the SensorThings entities (e.g.:  `Thing` , `Sensor`, `DataStream`, `ObservedProperty` ) into feature collections.
 
-In this section we'll have a look at how to Publish a SensorThings API `Thing` as an OGC API - Features collection, which can then be consumed by various clients, like [the ones listed here](../../publishing/ogcapi-features/#client-access)
+In this section we'll have a look at how to Publish a SensorThings API `Thing` as an OGC API - Features collection, which can then be consumed by various clients, like [the ones listed here](../publishing/ogcapi-features.md#client-access)
 
 !!! question "Update the pygeoapi configuration"
 

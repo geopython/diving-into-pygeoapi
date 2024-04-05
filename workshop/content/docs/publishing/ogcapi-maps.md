@@ -63,7 +63,7 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
 
 ## pygeoapi as a WMS proxy
 
-You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WMS as OGC API - Maps](../../advanced/bridges/#publishing-wms-as-ogc-api-maps).
+You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WMS as OGC API - Maps](../advanced/bridges.md#publishing-wms-as-ogc-api-maps).
 
 ## Client access
 
