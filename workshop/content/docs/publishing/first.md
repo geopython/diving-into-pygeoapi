@@ -9,11 +9,11 @@ In this section you are going to publish a vector dataset.
 For this exercise, we will use a CSV dataset of [Bathing waters in Estonia](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/bathingwater-estonia.csv),
 kindly provided by [Estonian Health Board](https://terviseamet.ee).
 
-You can find this dataset in `workshop/exercises/data/osm_poi_kosovo.csv`.
+You can find this dataset in `workshop/exercises/data/bathingwater-estonia.csv`.
 
-This exercise consists of two key steps:
+This exercise consists of two steps:
 
-* adapt `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
+* adjust `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
 * ensure that pygeoapi can find and connect to the data file
 
 We will use the `workshop/exercises/docker-compose.yml` file provided.
@@ -70,38 +70,40 @@ Make sure that the indentation aligns (hint: directly under `# START ...`)
 The config section reads:
 
 ``` {.yml linenums="185"}
-poi_kosovo:
-    type: collection
-    title: Points of Interest Kosovo
-    description: The dataset shows the location of the places of interest in Kosovo.
-    keywords:
-        - places of interest
-        - kosovo
-    links:
-        - type: text/csv
-          rel: canonical
-          title: data
-          href: https://download.geofabrik.de/europe/kosovo.html
-          hreflang: AL
-    extents:
-        spatial:
-            bbox: [20,41.9,21.7,43.2]
-            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-    providers:
-        - type: feature
-          name: CSV
-          data: /data/osm_poi_kosovo.csv
-          id_field: osm_id
-          geometry:
-            x_field: x
-            y_field: y
+    Bathing_Water_Estonia:
+        type: collection
+        title: Bathing Water Estonia
+        description: Locations where the Estonian Health Board monitors the bathing water quality
+        keywords:
+            - bathing water
+            - estonia
+        links:
+            - type: text/csv
+              rel: canonical
+              title: data
+              href: https://avaandmed.eesti.ee/datasets/joogiveeallikad
+              hreflang: EE
+        extents:
+            spatial:
+                bbox: [20,57,29,60]
+                crs: http://www.opengis.net/def/crs/EPSG/0/4326
+        providers:
+            - type: feature
+              name: CSV
+              data: /data/bathingwater-estonia.csv
+              id_field: id
+              title_field: Name
+              geometry:
+                x_field: x
+                y_field: y
+              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
 ```
 
 The most relevant part is the `providers` section. Here, we define a `CSV Provider`,
 pointing the file path to the `/data` directory we will mount (see next) from the local
 directory into the Docker container above. Because a CSV is not a spatial file, we explicitly
 configure pygeoapi so that the longitude and latitude (x and y) is mapped from the columns `lon`
-and `lat` in the CSV file.
+and `lat` in the CSV file. Notice the `storage_crs` parameter, which indicates the coordinate system which is used in the source data.
 
 !!! Tip
 
