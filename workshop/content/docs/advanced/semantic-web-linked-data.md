@@ -21,7 +21,7 @@ pygeoapi supports this use case via embedding a `schema.org` JSON-LD snippet in 
 
 !!! tip
 
-    See more information at [Search Engine Optimization](../seo)
+    See more information at [Search Engine Optimization](./seo.md)
 
 ## Publish spatial data in the Semantic Web
 

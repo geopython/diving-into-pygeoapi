@@ -6,8 +6,8 @@ title: Exercise 1 - Your first dataset
 
 In this section you are going to publish a vector dataset.
 
-For this exercise, we will use a CSV dataset of [Points of interest in Kosovo](https://github.com/geopython/diving-into-pygeoapi/blob/main/workshop/exercises/data/osm_poi_kosovo.csv),
-kindly provided by [Open Street Map Community and GeoFabrik](https://download.geofabrik.de/europe/kosovo.html).
+For this exercise, we will use a CSV dataset of [Bathing waters in Estonia](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/bathingwater-estonia.csv),
+kindly provided by [Estonian Health Board](https://terviseamet.ee).
 
 You can find this dataset in `workshop/exercises/data/osm_poi_kosovo.csv`.
 
