@@ -4,12 +4,13 @@ This directory provides sample data to demonstrate functionality.
 
 ## Sources
 
-### OSM POI Kosovo
-- title: [osm_poi_kosovo.csv](osm_poi_kosovo.csv)
-- url: https://download.geofabrik.de/europe/kosovo.html
-- description: Data coverted to csv from kosovo-latest-free.shp.zip. The file was last modified 23-6-2023
-- copyright: OSM Contributors
-- license: ODbL
+### Bathingwater Estonia
+- title: [Supluskohad](./bathingwater-estonia.csv) (Bathing places) 
+- url: https://avaandmed.eesti.ee/datasets/joogiveeallikad
+- description: Locations where the Estonian Health Board monitors the bathing water quality
+- copyright: [Terviseamet](https://terviseamet.ee)
+- license: CC-BY-SA 3.0
+- projection: epsg:3300
 
 ### Places Kosovo
 - title: [osm_places_kosovo.gpkg](./osm_places_kosovo.gpkg)
