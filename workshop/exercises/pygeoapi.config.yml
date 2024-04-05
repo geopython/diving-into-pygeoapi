@@ -221,8 +221,8 @@ resources:
 #               id_field: id
 #               title_field: Name
 #               geometry:
-#                  x_field: y
-#                  y_field: x
+#                  x_field: x
+#                  y_field: y
 #               storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
 ### END - EXERCISE 1 - Your First Collection
 
