@@ -38,44 +38,46 @@ data source.
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/exercises/data/osm_places_kosovo.gpkg`:
+Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
-    Open the pygeoapi configuration file in a text editor.
-    Find the line `# START - EXERCISE 2 - osm_places`.
+    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/cptartu2.gpkg.zip) to cptartu2.gpkg.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - osm_places`:
+    Then, open the pygeoapi configuration file in a text editor.
+    Find the line `# START - EXERCISE 2 - cadastral parcels Tartu`.
+
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - cadastral parcels Tartu`:
 
     ``` {.yaml linenums="1"}
-    osm_places-vec:
+    cp-tartu:
         type: collection
-        title: Places in Kosovo 2023
-        description: Places in Kosovo as maintained by the Open Street Map Community
+        title: Tartu Cadastral Parcels
+        description: Cadasral parcels in downtown Tartu
         keywords:
-            - places
-            - Kosovo
+            - Cadastral parcels
+            - Tartu
         links:
-            -   type: text/csv
+            -   type: OGC/WFS
                 rel: canonical
                 title: data
-                href: https://download.geofabrik.de/europe/kosovo.html
-                hreflang: AL
-    extents:
-        spatial:
-            bbox: [20,41.9,21.7,43.2]
-            crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
+                hreflang: EE
+        extents:
+            spatial:
+                bbox: [26.6, 58.3, 26.8, 58.5]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
               name: SQLiteGPKG
-              data: /data/osm_places_kosovo.gpkg # place correct path here
-              id_field: osm_id
-              title_field: name
-              table: gis_osm_places_free_1 # table name within gpkg
+              data: /data/cptartu2.gpkg # place correct path here
+              id_field: nationalca
+              title_field: label
+              table: cptartu2 # table name within gpkg
     ```
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset with
-title *"Places in Kosovo 2023"* has been published.
+title *"Tartu Cadastral Parcels"* has been published.
 
 !!! note
 
