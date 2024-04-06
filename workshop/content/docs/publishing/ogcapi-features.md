@@ -42,7 +42,7 @@ Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
-    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/cptartu2.gpkg.zip) to cptartu2.gpkg.
+    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/cptartu2.gpkg.zip) to `cptartu2.gpkg`.
 
     Then, open the pygeoapi configuration file in a text editor.
     Find the line `# START - EXERCISE 2 - cadastral parcels Tartu`.
