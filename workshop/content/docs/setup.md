@@ -89,8 +89,8 @@ Some notes:
 
 * On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker
 * On Mac, if you are using [Homebrew](https://brew.sh), consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
-* On MacOS Monterey, there is an issue with the port 5000 that is already used and therefore conflicting to the default one used by pygeoapi. If you are facing with this error `OSError: [Errno 48] Address already in use` then you need to can disable the *Airplay Receiver* from `System Preference->Sharing` of your MacOS (detailed description in this blog [post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/)).
-* On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu image or use a cloud VM
+* On Mac OSX Monterey and later, there may be an issue with local port 5000 already in use, therefore conflicting with the default one used by the pygeoapi container. If you see this error `OSError: [Errno 48] Address already in use`, you need to disable the *Airplay Receiver*. Go to `System Settings | Sharing` or like in Sonoma type 'airplay' in the search box. See [this image](assets/images/macosx-airplay-disable.png) for Sonoma. Also a detailed description in [this blog post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/).
+* On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu Image or use a cloud VM
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
 If all goes well, you should be able to run Docker from the command line as follows: [^2]
@@ -150,8 +150,8 @@ data is a one-liner.
     </div>
 
 
-That's all! Open your browser and navigate to <http://localhost:5000>, the pygeoapi page will display.
-As part of the initial `docker run`, Docker will download the pygeoapi Docker image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
+That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
+As part of the initial `docker run`, Docker will download the pygeoapi Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
 This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
 you may want to do this beforehand. 
 
@@ -159,7 +159,7 @@ Some notes:
 
 * Docker runs a pygeoapi container on your local system on port 5000, which is mapped to port 80 inside the container
 * the pygeoapi Docker container runs with the [default configuration](https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml) and data from the GitHub repo 
-* both configuration and data (from GitHub repo) is embedded in the Docker image - we will override these later
+* both configuration and data (from GitHub repo) is embedded in the Docker Image - we will override these later
 * the `--rm` option removes the Docker Container (but not the image), after execution
 * type `CTRL-C` to stop the container and return to the terminal
 
@@ -175,9 +175,11 @@ within the container by a local file which you can edit in your favourite text e
 
     Download pygeoapi's default Docker configuration from [default.config.yml](https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml) to the current folder (or navigate to the folder where you downloaded the file), for example with:
 
-    !!! note
-
-        If you do not have curl installed, copy the URL above to your web browser and save locally.
+    <div class="termy">
+    ```bash
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+    ```
+    </div>
 
     Open the file in your favourite text editor and change the title and description of the API:
 
@@ -188,36 +190,23 @@ within the container by a local file which you can edit in your favourite text e
             description: pygeoapi provides an API to geospatial data
     ```
 
-    Now run the container with the overridden config file (on Linux/Mac):
+    Now run the container with the overridden config file:
 
+    <div class="termy">
+    ```bash
+    docker run -p 5000:80 \
+    -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
+    geopython/pygeoapi:latest
+    ```
+    </div>
 
-    !!! example "Running pygeoapi with a custom configuration"
-
-    === "Linux/Mac"
-
-        <div class="termy">
-        ```bash
-        docker run -p 5000:80 \
-        -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
-        geopython/pygeoapi:latest
-        ```
-        </div>
-
-    === "Windows"
-
-        <div class="termy">
-        ```bash
-        docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
-        ```
-        </div>
-
-    At this point, navigate to <http://localhost:5000> to verify the new title and description.
+    At this point, navigate to `http://localhost:5000` to verify the new title and description.
 
 
 By using a Docker volume mount (`-v` option), Docker attaches or 'mounts' a
 directory or single file from your host/local system into the Docker Container.
 
-In the above snippet, `$(pwd)` or `${pwd}` indicates the working folder from which you start the Docker container.
+In the above snippet, `$(pwd)` indicates the working folder from which you start the Docker container.
 
 ## Adding data and setting the configuration file
 
@@ -225,31 +214,19 @@ In addition to adapting the configuration you will usually add your own data as 
 remote data services like PostGIS or WFS.
 
 You can also mount a local directory such as `data/` to `/pygeoapi/mydata` within the Container.
-Within the data directory you can store vector data, raster files or sets of image or vector tiles.
+Within the data directory you can store vector data, raster files or sets of image of vector tiles.
 
 Below is an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
-!!! question "Running pygeoapi with custom configuration"
-
-    === "Linux/Mac"
-
-        <div class="termy">
-        ```bash
-        docker run -p 5000:80 \
-        -v $(pwd)/data:/pygeoapi/mydata \
-        -v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.yml \
-        -e  PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
-        geopython/pygeoapi:latest
-        ```
-        </div>
-
-    === "Windows"
-
-        <div class="termy">
-        ```bash
-        docker run -p 5000:80 -v ${pwd}/data:/pygeoapi/mydata -v ${pwd}/default.config.yml:/pygeoapi/pygeoapi-config.yml -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml geopython/pygeoapi:latest
-        ```
-        </div>
+<div class="termy">
+```bash
+docker run -p 5000:80 \
+-v $(pwd)/data:/pygeoapi/mydata \
+-v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.yml \
+-e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
+geopython/pygeoapi:latest
+```
+</div>
 
 In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/docker/examples).
 
@@ -265,9 +242,10 @@ The magic line is:
 
 `docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash`
 
-This will pull a small (125MB) official Python Docker image. When the Container is started you are directed into 
+This will pull a small (125MB) official Python Docker Image. When the Container is started you are directed into 
 a `Bash` session/prompt. The argument `--network=host` allows you to directly interact with services on your
-host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python3`, install `OWSLib` and maybe even other tools like `curl` and `wget`.
+host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python3`, install `OWSLib` and
+maybe even other tools like `curl` and `wget`.
 
 Below is a complete example, assuming pygeoapi runs on your `localhost` at port 5000:
 
@@ -294,10 +272,9 @@ root@docker-desktop:/# python3
 <owslib.ogcapi.features.Features object at 0x7ff493e6f850>
 >>> conformance = w.conformance()
 >>> conformance
->>> quit()
+etc
+
 ```
 </div>
-
-Type `exit` to return to exit the owslib docker container.
-
+ 
 We will refer to this installation in some of the Exercises where OWSLib is used.
