@@ -97,13 +97,13 @@ git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
 
 In alternative, you can download a zip file from [this](https://github.com/doublebyte1/pygeoapi/archive/refs/heads/ogcapi-ws.zip) link.
 
-Then change into the `docker/examples/elastic` folder, and run the `docker-compose` file:
+Then change into the `docker/examples/elastic` folder, and run the `docker-compose.yml` file:
 
 <div class="termy">
 ```bash
 cd docker/examples/elastic
 
-docker-compose up
+docker compose up
 ```
 </div>
 
@@ -134,7 +134,7 @@ This configuration snippet, enables publishing the file `greater_hyderabad_munic
         providers:
             - type: feature
               name: Elasticsearch
-              # note: elastic_search is the Docker container name as defined in docker-compose.ym
+              # note: elastic_search is the Docker container name as defined in `docker-compose.yml`
               data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
               id_field: objectid
 ``` 
@@ -143,7 +143,7 @@ Wait until the data was ingested into an elastic index, and pygeoapi starts. You
 
 <div class="termy">
 ```bash
-docker-compose logs --follow
+docker compose logs --follow
 ```
 </div>
 

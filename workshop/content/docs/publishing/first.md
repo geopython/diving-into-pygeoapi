@@ -35,7 +35,7 @@ To test:
     <div class="termy">
     ```bash
     cd workshop/exercises
-    docker-compose up
+    docker compose up
     ```
     </div>
     1. Open <http://localhost:5000> in your browser, verify some collections
@@ -47,11 +47,11 @@ To test:
 
     <div class="termy">
     ```bash
-    docker-compose up -d
+    docker compose up -d
     docker ls  # verify that the pygeoapi container is running
     # visit http://localhost:5000 in your browser, verify some collections
     docker logs --follow pygeoapi  # view logs
-    docker-compose stop
+    docker compose stop
     ```
     </div>
 
@@ -145,7 +145,7 @@ we have also mounted (made available) the entire local directory `./data`.
 
 !!! question "Start with updated configuration"
 
-    1. Start by typing `docker-compose up` 
+    1. Start by typing `docker compose up` 
     1. Observe logging output
     1. If no errors: open <http://localhost:5000>
     1. Look for the Point of interest collection

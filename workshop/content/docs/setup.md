@@ -67,19 +67,7 @@ Docker installation has greatly progressed over the years. This is the only part
 which is dependent on the system/OS you are running (e.g. Windows, Mac or Linux). For each
 system the Docker website provides detailed installation instructions. Please follow these consistently.
 
-!!! Note "Docker compose variants"
-
-    Docker Compose in older (pre Compose v2) versions was a separate (Python) program to install,
-    though it was usually present in Docker Desktop. 
-    The `docker compose` command in that case is `docker-compose` (hyphened).
-    Since 2021, Docker Desktop includes Compose in the Docker CLI.
-    The command is then `docker compose` (space).
-    
-    In our texts we will use `docker-compose`. Depending on your installation you may need
-    to replace the hyphen (`-`) with a space. But you can always install the original
-    compose (`docker-compose`) via `pip3 install docker-compose`.
-
-For many platforms a product called `Docker Desktop` is available, which includes `Docker compose`:
+For many platforms a product called `Docker Desktop` is available, which includes the main Docker components:
 
 * Windows [installation](https://docs.Docker.com/desktop/install/windows-install)
 * Mac [installation](https://docs.Docker.com/desktop/install/mac-install)
@@ -101,7 +89,7 @@ If all goes well, you should be able to run Docker from the command line as foll
 docker --version
 Docker version 20.10.17, build 100c701
 
-docker-compose --version  
+docker compose --version  
 Docker Compose version v2.6.1
 ```
 </div>

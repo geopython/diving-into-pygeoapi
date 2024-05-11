@@ -132,13 +132,13 @@ git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
 ```
 </div>
 
-Then change into the `docker/examples/elastic` folder, and run the `docker-compose` file:
+Then change into the `docker/examples/elastic` folder, and run the `docker-compose.yml` file:
 
 <div class="termy">
 ```bash
 cd docker/examples/elastic
 
-docker-compose up
+docker compose up
 ```
 </div>
 
