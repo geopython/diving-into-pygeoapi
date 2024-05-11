@@ -31,8 +31,6 @@
 #
 # =================================================================
 
-version: '3.3'
-
 services:
   pygeoapi:
     image: geopython/pygeoapi:latest
