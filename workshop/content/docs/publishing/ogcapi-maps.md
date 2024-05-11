@@ -67,6 +67,19 @@ You can check the "pygeoapi as a Bridge to Other Services" section to learn how 
 
 ## Client access
 
+### QGIS
+
+QGIS added support for API's providing rendered image layers via its raster support. 
+
+!!! question "Add OGC API - Maps layer to QGIS"
+
+    - Install a recent version of QGIS (>3.28). 
+    - Open the `Add raster layer panel`.
+    - Select `OGCAPI` for Source type.
+    - Add the local endpoint as source `http://localhost:5000/collections/airports`.
+    - Select `PNG` as image format.
+    - Finally add the layer to the map.
+
 ### OWSLib
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Maps.
