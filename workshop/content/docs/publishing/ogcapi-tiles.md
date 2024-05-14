@@ -42,9 +42,9 @@ include, but are not limited to:
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
-For this exercise, you will publish a vector dataset of the [greater Hyderabad municipal corporation ward boundaries](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), from the location below:
+For this exercise, you will publish a vector dataset of the [drinking water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
 
-* data: `workshop/exercises/data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson`
+* data: `workshop/exercises/data/bathingwater-estonia.geojson`
 
 Let's generate the tiles as the first step using tippecanoe:
 
@@ -56,7 +56,7 @@ Let's generate the tiles as the first step using tippecanoe:
         ```bash
         cd workshop/exercises
         docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
-        tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=20 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
      
@@ -65,7 +65,7 @@ Let's generate the tiles as the first step using tippecanoe:
         <div class="termy">
         ```bash
         cd workshop/exercises
-        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=20 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
  
@@ -74,42 +74,44 @@ Let's generate the tiles as the first step using tippecanoe:
     Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
 
 ``` {.yaml linenums="1"}
-    hyderabad:
+    bathing-water:
         type: collection
-        title: Greater Hyderabad Municipal Corporation ward boundaries
-        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+        title: Drinking water sources
+        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
-           - Boundaries
-           - Administrative
-           - Ward
+          - Water
+          - Water bodies
+          - Drilled wells
+          - Surface water
+          - Groundwater
+          - Environmental health
+          - Health
+          - Drinking water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
+              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
               hreflang: en-US
         extents:
             spatial:
-                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+                bbox: [22.2290936066586440,57.6912449743385451,28.2024877654160555,59.6097269178904412]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin: 2011-11-11
+                begin: null
                 end: null  # or empty
         providers:
             - type: feature
               name: GeoJSON
-              data: /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-              id_field: objectid
+              data: /data/bathingwater-estonia.geojson
+              id_field: id
             - type: tile
-              name: MVT
-              data: /data/tiles
+              name: MVT-tippecanoe
+              data: /data/tiles/  # local directory tree
               options:
-                metadata_format: tilejson # default | tilejson
                 zoom:
                     min: 0
                     max: 16
-                schemes:
-                    - WorldCRS84Quad
               format:
                     name: pbf
                     mimetype: application/vnd.mapbox-vector-tile
@@ -117,12 +119,12 @@ Let's generate the tiles as the first step using tippecanoe:
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-Additional check for the following tile specific endpoints in the `Hyderabad` collection:
+Additional check for the following tile specific endpoints in the `bathing-water` collection:
 
-- tile links in <http://localhost:5000/collections/hyderabad/tiles>
-- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
+- tile links in <http://localhost:5000/collections/bathing-water/tiles>
+- tile metadata in <http://localhost:5000/collections/bathing-water/tiles/WebMercatorQuad/metadata>
 
-![TileSet](../assets/images/vtiles-hyderabad.png)
+![TileSet](../assets/images/vtiles-estonia.png)
 
 ## Publish vector tiles from Elasticsearch
 
