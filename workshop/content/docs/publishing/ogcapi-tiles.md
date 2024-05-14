@@ -28,6 +28,10 @@ itself does not render tiles from source data. It supports publishing pre-render
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) for more information on supported tile backends
 
+!!! note
+
+    pygeoapi currently supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point.  
+
 ## Publish pre-rendered vector tiles
 
 In this scenario, tiles must be pre-rendered before serving. Existing tools to create tiles
