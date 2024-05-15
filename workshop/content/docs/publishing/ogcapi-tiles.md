@@ -130,69 +130,111 @@ Additional check for the following tile specific endpoints in the `bathing-water
 
 Elasticsearch provides a middleware that [renders an index on the fly, as vector tiles](https://www.elastic.co/blog/introducing-elasticsearch-vector-tile-search-api-for-geospatial). This middleware is also supported by the pygeoapi mvt backend.
 
-If you want to explore publishing vector tiles using Elasticsearch clone this fork of pygeoapi:
+If you want to explore publishing vector tiles using Elasticsearch clone [pygeoapi-examples](https://github.com/geopython/pygeoapi-examples/) repository:
 
 <div class="termy">
 ```bash
-git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
+git checkout https://github.com/geopython/pygeoapi-examples.git
 ```
 </div>
 
-Then change into the `docker/examples/elastic` folder, and run the `docker-compose.yml` file:
+Then change into the `docker/mvt-elastic` folder:
 
 <div class="termy">
 ```bash
-cd docker/examples/elastic
-
-docker compose up
+cd docker/mvt-elastic
 ```
 </div>
 
-This configuration, enables publishing greater_hyderabad_municipal_corporation_ward_boundaries.geojson as both OGC API - Features and OGC API - Tiles:
+Edit the `add-data.sh` script on the `ES` folder, adding these two lines before the end:
 
 ``` {.yaml linenums="1"}
-    greater_hyderabad_municipal_corporation_ward_boundaries:
+
+    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/doublebyte1/diving-into-pygeoapi/tiles-update/workshop/exercises/data/bathingwater-estonia.geojson
+    python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
+
+```
+
+Above we are downloading the `bathingwater-estonia.geojson` inside the container, and ingesting it into an Elasticsearch index. After this we need to build the docker image:
+
+<div class="termy">
+```bash
+docker compose build
+```
+</div>
+
+Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this code block before the end:
+
+``` {.yaml linenums="1"}
+    bathingwater-estonia:
         type: collection
-        title: Greater Hyderabad Municipal Corporation ward boundaries
-        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+        title: Drinking water sources
+        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
-           - Boundaries
-           - Administrative
-           - Ward
+          - Water
+          - Water bodies
+          - Drilled wells
+          - Surface water
+          - Groundwater
+          - Environmental health
+          - Health
+          - Drinking water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
+              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
               hreflang: en-US
         extents:
             spatial:
-                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+                bbox: [22.2290936066586440,57.6912449743385451,28.2024877654160555,59.6097269178904412]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin: 2011-11-11
+                begin: null
                 end: null  # or empty
         providers:
             - type: feature
               name: Elasticsearch
-              # note: elastic_search is the Docker container name as defined in docker-compose.yml
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
-              id_field: objectid
+              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              data: http://elastic_search:9200/bathingwater-estonia
+              id_field: id
             - type: tile
-              name: MVT
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+              name: MVT-elastic
+              data: http://elastic_search:9200/bathingwater-estonia/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
               # index must have a geo_point
               options:
-                metadata_format: none # default | tilejson
                 zoom:
                     min: 0
                     max: 16
-                schemes:
-                    - WorldCRS84Quad
               format:
                     name: pbf
                     mimetype: application/vnd.mapbox-vector-tile
 ```
+
+This configuration enables publishing ne_110m_populated_places_simple.geojson as both, OGC API - Features and OGC API - Tiles.
+
+Finally start the docker composition, which will download and ingest the dataset and publish it in pygeoapi:
+
+<div class="termy">
+```bash
+docker compose up
+```
+</div>
+
+!!! note
+
+    You can check your elastic index at:
+    [http://localhost:9200/_cat/indices](http://localhost:9200/_cat/indices)
+
+    If you are in production, you may want to close the elastic ports on docker-compose.
+
+Additional check for the following tile specific endpoints in the `bathingwater-estonia` collection:
+
+- tile links in <http://localhost:5000/collections/bathingwater-estonia/tiles>
+- tile metadata in <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
+
+![TileSet](../assets/images/vtiles-estonia2.png)
+
 
 ## Client access
 
