@@ -51,7 +51,7 @@ can mix and match OGC APIs together.
 
 ![OGC API building blocks](assets/images/ogc-api-building-blocks.png)
 
-You can read more about this topic in the [building blocks website](https://opengeospatial.github.io/bblocks/).
+You can read more about this topic in the [building blocks website](https://blocks.ogc.org/).
 
 #### More OGC APIs
 
