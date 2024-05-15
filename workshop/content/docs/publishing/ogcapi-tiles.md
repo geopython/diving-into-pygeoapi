@@ -28,6 +28,10 @@ itself does not render tiles from source data. It supports publishing pre-render
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) for more information on supported tile backends
 
+!!! note
+
+    pygeoapi currently supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point.  
+
 ## Publish pre-rendered vector tiles
 
 In this scenario, tiles must be pre-rendered before serving. Existing tools to create tiles
@@ -38,9 +42,9 @@ include, but are not limited to:
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
-For this exercise, you will publish a vector dataset of the [greater Hyderabad municipal corporation ward boundaries](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), from the location below:
+For this exercise, you will publish a vector dataset of the [drinking water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
 
-* data: `workshop/exercises/data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson`
+* data: `workshop/exercises/data/bathingwater-estonia.geojson`
 
 Let's generate the tiles as the first step using tippecanoe:
 
@@ -52,7 +56,8 @@ Let's generate the tiles as the first step using tippecanoe:
         ```bash
         cd workshop/exercises
         docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
-        tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
+        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
      
@@ -61,7 +66,9 @@ Let's generate the tiles as the first step using tippecanoe:
         <div class="termy">
         ```bash
         cd workshop/exercises
-        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe \
+        tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
+        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
  
@@ -70,42 +77,44 @@ Let's generate the tiles as the first step using tippecanoe:
     Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
 
 ``` {.yaml linenums="1"}
-    hyderabad:
+    bathingwater-estonia:
         type: collection
-        title: Greater Hyderabad Municipal Corporation ward boundaries
-        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+        title: Drinking water sources
+        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
-           - Boundaries
-           - Administrative
-           - Ward
+          - Water
+          - Water bodies
+          - Drilled wells
+          - Surface water
+          - Groundwater
+          - Environmental health
+          - Health
+          - Drinking water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
+              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
               hreflang: en-US
         extents:
             spatial:
-                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+                bbox: [22.2290936066586440,57.6912449743385451,28.2024877654160555,59.6097269178904412]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin: 2011-11-11
+                begin: null
                 end: null  # or empty
         providers:
             - type: feature
               name: GeoJSON
-              data: /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-              id_field: objectid
+              data: /data/bathingwater-estonia.geojson
+              id_field: id
             - type: tile
-              name: MVT
-              data: /data/tiles
+              name: MVT-tippecanoe
+              data: /data/tiles/  # local directory tree
               options:
-                metadata_format: tilejson # default | tilejson
                 zoom:
                     min: 0
                     max: 16
-                schemes:
-                    - WorldCRS84Quad
               format:
                     name: pbf
                     mimetype: application/vnd.mapbox-vector-tile
@@ -113,95 +122,129 @@ Let's generate the tiles as the first step using tippecanoe:
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-Additional check for the following tile specific endpoints in the `Hyderabad` collection:
+Additional check for the following tile specific endpoints in the `bathingwater-estonia` collection:
 
-- tile links in <http://localhost:5000/collections/hyderabad/tiles>
-- tile metadata in <http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/metadata>
+- tile links in <http://localhost:5000/collections/bathingwater-estonia/tiles>
+- tile metadata in <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
 
-![TileSet](../assets/images/vtiles-hyderabad.png)
+![TileSet](../assets/images/vtiles-estonia.png)
 
 ## Publish vector tiles from Elasticsearch
 
 Elasticsearch provides a middleware that [renders an index on the fly, as vector tiles](https://www.elastic.co/blog/introducing-elasticsearch-vector-tile-search-api-for-geospatial). This middleware is also supported by the pygeoapi mvt backend.
 
-If you want to explore publishing vector tiles using Elasticsearch clone this fork of pygeoapi:
+If you want to explore publishing vector tiles using Elasticsearch clone [pygeoapi-examples](https://github.com/geopython/pygeoapi-examples/) repository:
 
 <div class="termy">
 ```bash
-git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
+git checkout https://github.com/geopython/pygeoapi-examples.git
 ```
 </div>
 
-Then change into the `docker/examples/elastic` folder, and run the `docker-compose.yml` file:
+Then change into the `docker/mvt-elastic` folder:
 
 <div class="termy">
 ```bash
-cd docker/examples/elastic
-
-docker compose up
+cd docker/mvt-elastic
 ```
 </div>
 
-This configuration, enables publishing greater_hyderabad_municipal_corporation_ward_boundaries.geojson as both OGC API - Features and OGC API - Tiles:
+Edit the `add-data.sh` script on the `ES` folder, adding these two lines before the end:
 
 ``` {.yaml linenums="1"}
-    greater_hyderabad_municipal_corporation_ward_boundaries:
+
+    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/doublebyte1/diving-into-pygeoapi/tiles-update/workshop/exercises/data/bathingwater-estonia.geojson
+    python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
+
+```
+
+Above we are downloading the `bathingwater-estonia.geojson` inside the container, and ingesting it into an Elasticsearch index. After this we need to build the docker image:
+
+<div class="termy">
+```bash
+docker compose build
+```
+</div>
+
+Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this code block before the end:
+
+``` {.yaml linenums="1"}
+    bathingwater-estonia:
         type: collection
-        title: Greater Hyderabad Municipal Corporation ward boundaries
-        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+        title: Drinking water sources
+        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
-           - Boundaries
-           - Administrative
-           - Ward
+          - Water
+          - Water bodies
+          - Drilled wells
+          - Surface water
+          - Groundwater
+          - Environmental health
+          - Health
+          - Drinking water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
+              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
               hreflang: en-US
         extents:
             spatial:
-                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+                bbox: [22.2290936066586440,57.6912449743385451,28.2024877654160555,59.6097269178904412]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin: 2011-11-11
+                begin: null
                 end: null  # or empty
         providers:
             - type: feature
               name: Elasticsearch
-              # note: elastic_search is the Docker container name as defined in docker-compose.yml
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
-              id_field: objectid
+              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              data: http://elastic_search:9200/bathingwater-estonia
+              id_field: id
             - type: tile
-              name: MVT
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
+              name: MVT-elastic
+              data: http://elastic_search:9200/bathingwater-estonia/_mvt/geometry/{z}/{x}/{y}?grid_precision=0
               # index must have a geo_point
               options:
-                metadata_format: none # default | tilejson
                 zoom:
                     min: 0
                     max: 16
-                schemes:
-                    - WorldCRS84Quad
               format:
                     name: pbf
                     mimetype: application/vnd.mapbox-vector-tile
 ```
 
+This configuration enables publishing `bathingwater-estonia.geojson` as both, OGC API - Features and OGC API - Tiles.
+
+Finally start the docker composition, which will download and ingest the dataset and publish it in pygeoapi:
+
+<div class="termy">
+```bash
+docker compose up
+```
+</div>
+
+!!! note
+
+    You can check your elastic index at:
+    [http://localhost:9200/_cat/indices](http://localhost:9200/_cat/indices)
+
+    If you are in production, you may want to close the elastic ports on docker-compose.
+
 ## Client access
 
 ### QGIS
 
-QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
+QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
 !!! question "Access OGC API Vector Tiles from QGIS"
 
     Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
 
-    - access the collection page of the tiles dataset: <http://localhost:5000/collections/hyderabad>
-    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/hyderabad/tiles>
-    - click in `Tiles metadata in tilejson format`: <http://localhost:5000/collections/Cycle/hyderabad/WorldCRS84Quad/metadata>
-    - note the URL in `tiles`: `http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
+    - access the collection page of the tiles dataset: <http://localhost:5000/collections/bathingwater-estonia>
+    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/bathingwater-estonia/tiles>
+    - click in `Tiles metadata`: <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
+    - note the URL template: `http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
 
     Follow these steps to connect to a service and access vector tiles:
 
@@ -214,11 +257,9 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     - press `OK` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
     - double-click in the collection to add it to the map
     <!-- - remember to set the CRS of the map to `EPSG:4326` by clicking in the button on the lower right corner -->
-    - zoom in to Hyderabad to visualize your dataset
+    - zoom in to Estonia to visualize your dataset
 
-    ![](../assets/images/qgis-vtiles2-hyderabad.png){ width=100% }
-    <!-- ![](../assets/images/qgis-vtiles3.png){ width=100% } -->
-    ![](../assets/images/qgis-vtiles4-hyderabad.png){ width=100% }
+    ![](../assets/images/qgis-vtiles2-estonia.png){ width=100% }
 
 ### LeafletJS
 
@@ -229,18 +270,28 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     * copy the HTML below to a file called `vector-tiles.html`, or locate this file in `workshop/exercises/html`
     * open the file in a web browser
 
-    The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of an OpenStreetMap base layer.
+    The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of a base layer.
 
-    ``` {.html linenums="1"}
+``` {.html linenums="1"}
     <html>
     <head><title>OGC API - Tiles exercise</title></head>
     <body>
     <div id="map" style="width:100vw;height:100vh;"></div>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+
+    <!-- load leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- load VectorGrid extension -->
+    <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
     <script>    
-    map = L.map('map').setView({ lat: 17.425181, lng: 78.5493906 }, 11);
+    map = L.map('map').setView({ lat: 58.37, lng: 26.72 }, 7);
     map.addLayer(
         new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
@@ -248,21 +299,21 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
         maxZoom: 16,
         }));
     function getColor(val){
-        if (val < 40) {return "#f2e6c7"}
-        else if (val < 80) {return "#8fa37e"}
-        else if (val < 100) {return "#f0d17d"}
-        else if (val < 120) {return  "#d7ded1"}
-        else return "#c2d0d9";
+        if (val < 0) {return "#ffffff"}
+        else if (val < 400) {return "#ffbfbf"}
+        else if (val < 1500) {return "#ff8080"}
+        else if (val < 3000) {return  "#ff4040"}
+        else return "#ff0000";
     }
     var vectorTileStyling = {
-        greater_hyderabad_municipal_corporation_ward_Boundaries: function(properties) {
+        bathingwaterestonia: function(properties) {
+            console.log(properties)
             return ({
                 fill: true,
-                fillColor: getColor(properties.objectid),
+                fillColor: getColor(properties.visitors),
                 color: "#ffffff",
                 fillOpacity: 1.0,
-                weight: 5,
-                //color: "#ffffff",
+                weight: 1,
                 opacity: 1.0,
             });
         }
@@ -272,17 +323,22 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
             interactive: true,
             vectorTileLayerStyles: vectorTileStyling,
             };
-        var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
-        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
-            console.log(e.layer);
-        L.DomEvent.stop(e);
-        }).addTo(map); 
+        var pbfURL='http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt';
+        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).addTo(map); 
     </script>
     </body>
     </html>
-    ```
+```
 
-   ![](../assets/images/leaflet-hyderabad.png){ width=100% }
+In this example, the colors of the symbols reflect the value of the `visitors` attribute.
+
+   ![](../assets/images/leaflet-estonia.png){ width=100% }
+
+!!! note 
+
+    You can check the layer attributes, by opening the console in the developer tools.
+    ![](../assets/images/vtiles-attributes.png){ width=100% }
+
 
 !!! tip 
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
@@ -290,11 +346,11 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     If you want to render the tiles from the [Elasticsearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
     <div class="termy">
     ```bash
-    git clone -b ogcapi-ws https://github.com/doublebyte1/vtiles-example.git
+    git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
     ```
     </div>
 
-    ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
+    ![](../assets/images/leaflet-estonia2.png){ width=100% }
 
 !!! tip 
 
@@ -312,4 +368,4 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
 # Summary
 
-Congratulations! You are now able to publish tiles to pygeoapi.
+Congratulations! You are now able to publish tiles to pygeoapi. You can learn more about this standard on: <https://tiles.developer.ogc.org/>

@@ -2,11 +2,21 @@
 <head><title>OGC API - Tiles exercise</title></head>
 <body>
 <div id="map" style="width:100vw;height:100vh;"></div>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-<script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-<script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+
+<!-- load leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+<!-- load VectorGrid extension -->
+<script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
 <script>    
-map = L.map('map').setView({ lat: 17.425181, lng: 78.5493906 }, 11);
+map = L.map('map').setView({ lat: 58.37, lng: 26.72 }, 7);
 map.addLayer(
     new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
@@ -14,21 +24,21 @@ map.addLayer(
     maxZoom: 16,
     }));
  function getColor(val){
-    if (val < 40) {return "#f2e6c7"}
-    else if (val < 80) {return "#8fa37e"}
-    else if (val < 100) {return "#f0d17d"}
-    else if (val < 120) {return  "#d7ded1"}
-    else return "#c2d0d9";
+    if (val < 0) {return "#ffffff"}
+    else if (val < 400) {return "#ffbfbf"}
+    else if (val < 1500) {return "#ff8080"}
+    else if (val < 3000) {return  "#ff4040"}
+    else return "#ff0000";
  }
  var vectorTileStyling = {
-    greater_hyderabad_municipal_corporation_ward_Boundaries: function(properties) {
+    bathingwaterestonia: function(properties) {
+        console.log(properties)
         return ({
             fill: true,
-            fillColor: getColor(properties.objectid),
+            fillColor: getColor(properties.visitors),
             color: "#ffffff",
             fillOpacity: 1.0,
-            weight: 5,
-            //color: "#ffffff",
+            weight: 1,
             opacity: 1.0,
         });
     }
@@ -38,11 +48,8 @@ map.addLayer(
         interactive: true,
         vectorTileLayerStyles: vectorTileStyling,
         };
-    var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
-    var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
-        console.log(e.layer);
-    L.DomEvent.stop(e);
-    }).addTo(map); 
+    var pbfURL='http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt';
+    var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).addTo(map); 
 </script>
 </body>
 </html>
