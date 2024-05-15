@@ -368,4 +368,4 @@ In this example, the colors of the symbols reflect the value of the `visitors` a
 
 # Summary
 
-Congratulations! You are now able to publish tiles to pygeoapi.
+Congratulations! You are now able to publish tiles to pygeoapi. You can learn more about this standard on: <https://tiles.developer.ogc.org/>
