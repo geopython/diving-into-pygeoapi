@@ -58,7 +58,6 @@ You can read more about this topic in the [building blocks website](https://bloc
 The OGC API effort is rapidly evolving. Numerous OGC API standards are in development, and will be implemented in
 pygeoapi over time:
 
-- [Maps](https://ogcapi.ogc.org/maps) can serve spatially referenced and dynamically rendered map imagery
 - [Routes](https://ogcapi.ogc.org/routes) provides access to routing data
 - [Styles](https://ogcapi.ogc.org/styles) defines a Web API that enables map servers, clients as well as visual style editors, to manage and fetch styles
 - [3D GeoVolumes](https://ogcapi.ogc.org/geovolumes) facilitates efficient discovery of and access to 3D content in multiple formats based on a space-centric perspective
