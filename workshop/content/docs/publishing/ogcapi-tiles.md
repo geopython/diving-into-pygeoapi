@@ -56,7 +56,8 @@ Let's generate the tiles as the first step using tippecanoe:
         ```bash
         cd workshop/exercises
         docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
-        tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=20 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
+        tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
+        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
      
@@ -65,7 +66,9 @@ Let's generate the tiles as the first step using tippecanoe:
         <div class="termy">
         ```bash
         cd workshop/exercises
-        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe --output-to-directory=/data/tiles/ --force --maximum-zoom=20 --drop-densest-as-needed --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
+        docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe \
+        tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
+        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
         ```
         </div>
  
@@ -211,7 +214,7 @@ Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this
                     mimetype: application/vnd.mapbox-vector-tile
 ```
 
-This configuration enables publishing ne_110m_populated_places_simple.geojson as both, OGC API - Features and OGC API - Tiles.
+This configuration enables publishing `bathingwater-estonia.geojson` as both, OGC API - Features and OGC API - Tiles.
 
 Finally start the docker composition, which will download and ingest the dataset and publish it in pygeoapi:
 
@@ -228,28 +231,20 @@ docker compose up
 
     If you are in production, you may want to close the elastic ports on docker-compose.
 
-Additional check for the following tile specific endpoints in the `bathingwater-estonia` collection:
-
-- tile links in <http://localhost:5000/collections/bathingwater-estonia/tiles>
-- tile metadata in <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
-
-![TileSet](../assets/images/vtiles-estonia2.png)
-
-
 ## Client access
 
 ### QGIS
 
-QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
+QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
 !!! question "Access OGC API Vector Tiles from QGIS"
 
     Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
 
-    - access the collection page of the tiles dataset: <http://localhost:5000/collections/hyderabad>
-    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/hyderabad/tiles>
-    - click in `Tiles metadata in tilejson format`: <http://localhost:5000/collections/Cycle/hyderabad/WorldCRS84Quad/metadata>
-    - note the URL in `tiles`: `http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
+    - access the collection page of the tiles dataset: <http://localhost:5000/collections/bathingwater-estonia>
+    - navigate to the tiles page by clicking on `tiles`: <http://localhost:5000/collections/bathingwater-estonia/tiles>
+    - click in `Tiles metadata`: <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
+    - note the URL template: `http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom
 
     Follow these steps to connect to a service and access vector tiles:
 
@@ -262,11 +257,9 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     - press `OK` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
     - double-click in the collection to add it to the map
     <!-- - remember to set the CRS of the map to `EPSG:4326` by clicking in the button on the lower right corner -->
-    - zoom in to Hyderabad to visualize your dataset
+    - zoom in to Estonia to visualize your dataset
 
-    ![](../assets/images/qgis-vtiles2-hyderabad.png){ width=100% }
-    <!-- ![](../assets/images/qgis-vtiles3.png){ width=100% } -->
-    ![](../assets/images/qgis-vtiles4-hyderabad.png){ width=100% }
+    ![](../assets/images/qgis-vtiles2-estonia.png){ width=100% }
 
 ### LeafletJS
 
@@ -277,18 +270,28 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     * copy the HTML below to a file called `vector-tiles.html`, or locate this file in `workshop/exercises/html`
     * open the file in a web browser
 
-    The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of an OpenStreetMap base layer.
+    The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of a base layer.
 
-    ``` {.html linenums="1"}
+``` {.html linenums="1"}
     <html>
     <head><title>OGC API - Tiles exercise</title></head>
     <body>
     <div id="map" style="width:100vw;height:100vh;"></div>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+
+    <!-- load leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- load VectorGrid extension -->
+    <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
     <script>    
-    map = L.map('map').setView({ lat: 17.425181, lng: 78.5493906 }, 11);
+    map = L.map('map').setView({ lat: 58.37, lng: 26.72 }, 7);
     map.addLayer(
         new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
@@ -296,21 +299,21 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
         maxZoom: 16,
         }));
     function getColor(val){
-        if (val < 40) {return "#f2e6c7"}
-        else if (val < 80) {return "#8fa37e"}
-        else if (val < 100) {return "#f0d17d"}
-        else if (val < 120) {return  "#d7ded1"}
-        else return "#c2d0d9";
+        if (val < 0) {return "#ffffff"}
+        else if (val < 400) {return "#ffbfbf"}
+        else if (val < 1500) {return "#ff8080"}
+        else if (val < 3000) {return  "#ff4040"}
+        else return "#ff0000";
     }
     var vectorTileStyling = {
-        greater_hyderabad_municipal_corporation_ward_Boundaries: function(properties) {
+        bathingwaterestonia: function(properties) {
+            console.log(properties)
             return ({
                 fill: true,
-                fillColor: getColor(properties.objectid),
+                fillColor: getColor(properties.visitors),
                 color: "#ffffff",
                 fillOpacity: 1.0,
-                weight: 5,
-                //color: "#ffffff",
+                weight: 1,
                 opacity: 1.0,
             });
         }
@@ -320,17 +323,22 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
             interactive: true,
             vectorTileLayerStyles: vectorTileStyling,
             };
-        var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
-        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
-            console.log(e.layer);
-        L.DomEvent.stop(e);
-        }).addTo(map); 
+        var pbfURL='http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt';
+        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).addTo(map); 
     </script>
     </body>
     </html>
-    ```
+```
 
-   ![](../assets/images/leaflet-hyderabad.png){ width=100% }
+In this example, the colors of the symbols reflect the value of the `visitors` attribute.
+
+   ![](../assets/images/leaflet-estonia.png){ width=100% }
+
+!!! note 
+
+    You can check the layer attributes, by opening the console in the developer tools.
+    ![](../assets/images/vtiles-attributes.png){ width=100% }
+
 
 !!! tip 
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
@@ -338,11 +346,11 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     If you want to render the tiles from the [Elasticsearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
     <div class="termy">
     ```bash
-    git clone -b ogcapi-ws https://github.com/doublebyte1/vtiles-example.git
+    git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
     ```
     </div>
 
-    ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
+    ![](../assets/images/leaflet-estonia2.png){ width=100% }
 
 !!! tip 
 
