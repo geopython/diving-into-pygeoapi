@@ -73,11 +73,12 @@ pygeoapi over time:
 
 #### OGC APIs supported by pygeoapi
 
-pygeoapi implements numerous OGC API standards and draft standards. In addition, it is a Reference Implementation for some of them. From OGC Compliance Testing Program Policies & Procedures 08-134r9:
+pygeoapi implements numerous OGC API standards and draft standards. In addition, it is a Reference Implementation for some of them. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
 
 !!! Citation
 
-    A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passed the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download
+    A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passes the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download.
+
 
 | Standard                               | pygeoapi status | Included in this workshop |
 |----------------------------------------|-----------------|---------------------------|
