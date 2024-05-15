@@ -23,6 +23,10 @@ pygeoapi implements the [OGC API](https://ogcapi.ogc.org) suite of standards fro
 
     These standards are being constructed as "building blocks" that can be used to assemble novel APIs for web access to geospatial content. The building blocks are defined not only by the requirements of the specific standards, but also through interoperability prototyping and testing in OGC's Innovation Program. 
 
+!!! Tip
+
+    You can learn more about OGC APIs on this workshop: <https://ogcapi-workshop.ogc.org/>
+
 #### OGC API - Common
 
 [OGC API - Common](https://ogcapi.ogc.org/common/) is a common framework used in all OGC API's. 
@@ -69,8 +73,11 @@ pygeoapi over time:
 
 #### OGC APIs supported by pygeoapi
 
-pygeoapi is an OGC API Reference Implemetnation and implements numerous OGC API standards.
+pygeoapi implements numerous OGC API standards and draft standards. In addition, it is a Reference Implementation for some of them. From OGC Compliance Testing Program Policies & Procedures 08-134r9:
 
+!!! Citation
+
+    A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passed the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download
 
 | Standard                               | pygeoapi status | Included in this workshop |
 |----------------------------------------|-----------------|---------------------------|
