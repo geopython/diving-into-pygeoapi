@@ -74,7 +74,7 @@ Let's generate the tiles as the first step using tippecanoe:
     Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
 
 ``` {.yaml linenums="1"}
-    bathing-water:
+    bathingwater-estonia:
         type: collection
         title: Drinking water sources
         description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
@@ -119,10 +119,10 @@ Let's generate the tiles as the first step using tippecanoe:
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-Additional check for the following tile specific endpoints in the `bathing-water` collection:
+Additional check for the following tile specific endpoints in the `bathingwater-estonia` collection:
 
-- tile links in <http://localhost:5000/collections/bathing-water/tiles>
-- tile metadata in <http://localhost:5000/collections/bathing-water/tiles/WebMercatorQuad/metadata>
+- tile links in <http://localhost:5000/collections/bathingwater-estonia/tiles>
+- tile metadata in <http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/metadata>
 
 ![TileSet](../assets/images/vtiles-estonia.png)
 

@@ -279,7 +279,7 @@ resources:
 #                     mimetype: application/tiff
 ## END - EXERCISE 3 - Coverages
 ## START - EXERCISE 4 - Tiles
-#     bathing-water:
+#     bathingwater-estonia:
 #         type: collection
 #         title: Drinking water sources
 #         description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
@@ -320,7 +320,7 @@ resources:
 #               format:
 #                     name: pbf
 #                     mimetype: application/vnd.mapbox-vector-tile
-## END - EXERCISE 4 - Tiles
+# # END - EXERCISE 4 - Tiles
 ## START - EXERCISE 5 - Maps
 #     airports:
 #         type: collection
