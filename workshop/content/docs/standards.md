@@ -91,6 +91,8 @@ pygeoapi implements numerous OGC API standards and draft standards. In addition,
 | SpatioTemporal Asset Catalog           | Implementing    |                           |
 | OGC API - Routes                       | Planned         |                           |
 | OGC API - Styles                       | Planned         |                           |
+| OGC API - Moving Features              | Planned         |                           |
+| OGC API - DGGS                         | Planned         |                           |
 
 In the next section we will dive into the dedicated API's related to specific types of information. You will
 notice that all APIs are combined and available via a single OGC API endpoint, thanks to OGC API - Common.
