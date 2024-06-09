@@ -24,7 +24,7 @@ pygeoapi supports the OGC API - Records draft specification, using Elasticsearch
 ## Publish metadata records in pygeoapi
 
 With pygeoapi we can setup OGC API - Records using any supported data provider. In this exercise we will use the [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html)
-Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/records/catalogue.tinydb`.
+Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/records/tartu/catalogue.tinydb`.
 
 !!! question "Update the pygeoapi configuration"
 
@@ -33,27 +33,26 @@ Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/
 ``` {.yaml linenums="1"}
     example_catalogue:
         type: collection
-        title: FOSS4G Florence Record catalogue
-        description: FOSS4G Florence Record catalogue (OGC API - Records)
+        title: FOSS4G Europe Estonia national catalogue
+        description: FOSS4G Europe Estonia national catalogue
         keywords:
-            - Services
-            - Infrastructures
-            - Florence
-            - FOSS4G
+            - estonia
+            - catalogue
+            - FOSS4G Europe
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: http://opendata.comune.firenze.it
+              href: https://metadata.geoportaal.ee
               hreflang: en-US
         extents:
             spatial:
-                bbox: [11.145, 43.718, 11.348, 43.84]
+                bbox: [23.3397953631, 57.4745283067, 28.1316992531, 59.6110903998]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: record
               name: TinyDBCatalogue
-              data: /data/records/catalogue.tinydb
+              data: /data/records/tartu/catalogue.tinydb
               id_field: externalId
               time_field: recordCreated
               title_field: title
@@ -82,7 +81,7 @@ It is possible to load more example ISO19139 metadata in a TinyDB database with 
 
 <div class="termy">
 ```bash
-cd workshop/exercises/data/records
+cd workshop/exercises/data/records/tartu
 curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
 python3 load_tinydb_records.py xml catalogue.tinydb
 ```
@@ -94,7 +93,6 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
 
 !!! example "Using the OWSLib Docker container to load metadata"
 
-=== "Linux/Mac"
     <div class="termy">
     ```bash
     cd workshop/exercises
@@ -102,19 +100,7 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
     pip3 install owslib
     apt-get update -y && apt-get install curl -y
     curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
-    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
-    ```
-    </div>
-
-=== "Windows"
-    <div class="termy">
-    ```bash
-    cd workshop/exercises
-    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
-    pip3 install owslib
-    apt-get update -y && apt-get install curl -y
-    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
-    python3 load_tinydb_records.py /data/records/xml /data/records/catalogue.tinydb
+    python3 load_tinydb_records.py /data/records/tartu/xml /data/records/tartu/catalogue.tinydb
     ```
     </div>
 

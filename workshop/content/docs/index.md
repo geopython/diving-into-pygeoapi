@@ -15,18 +15,22 @@ Version: 1.1
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [GISE Hub Winter School on OGC Stack](https://drive.google.com/file/d/1Y4C-rX7OeihXSPXV2QjoUp5z6P_3oe5d/view) workshop team
+# Your [FOSS4G Europe 2024](https://2024.europe.foss4g.org) workshop team
 
 <table>
     <tr>
-        <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://twitter.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
+        <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://twitter.com/pvangenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
+        <td><a href="https://twitter.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
         <td><a href="https://twitter.com/krishnaglodha"><img width="150" src="https://avatars.githubusercontent.com/u/47075664?v=4"/></a></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/doublebyte1">Joana Simoes (OGC)</a></td>
-        <td><a href="https://github.com/tomkralidis">Tom Kralidis (OSGeo)</a></td>
-        <td><a href="https://github.com/krishnaglodha">Krishna Lodha (Rotten Grapes)</a></td>
+        <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
+        <td><a href="https://github.com/doublebyte1">Joana Simoes</a></td>
+        <td><a href="https://github.com/pvangenuchten">Paul van Genuchten</a></td>
+        <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
+        <td><a href="https://github.com/krishnaglodha">Krishna Lodha</a></td>
     </tr>
 </table>
 
@@ -101,7 +105,7 @@ The workshop contents, wiki and issue tracker are managed on GitHub at [https://
 A [Gitter](https://matrix.to/#/#geopython_diving-into-pygeoapi:gitter.im) channel exists for
 discussion and live support from the developers of the workshop and other workshop participants.
 
-For issues/bugs/suggestions or improvements/contributions, use the [GitHub issue tracker](https://github.com/geopython/diving-into-pygeoapi/issues).
+For issues/bugs/suggestions or improvements/contributions, please use the [GitHub issue tracker](https://github.com/geopython/diving-into-pygeoapi/issues).
 
 All bugs, enhancements and issues can be reported on [GitHub](https://github.com/geopython/diving-into-pygeoapi/issues).
 

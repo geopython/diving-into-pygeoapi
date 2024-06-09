@@ -136,6 +136,7 @@ The relevant lines read:
 volumes:
     - ./pygeoapi/pygeoapi.config.yml:/pygeoapi/local.config.yml
     - ./data:/data # Exercise 1 - Ready to pull data from here
+    - ./plugins/process/squared.py:/pygeoapi/pygeoapi/process/squared.py  # Exercise 8
 ```
 
 The local `./pygeoapi/pygeoapi.config.yml` file was already mounted. Now

@@ -11,9 +11,12 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 [![OGC APIs banner](assets/images/OGC_APIs_banner.jpg){ width=40% }](https://ogcapi.ogc.org)
 
-# GISE Hub Winter School on OGC Stack
+# FOSS4G Europe 2024
 
-Sending you all best wishes and enjoy the rest of the [GISE Hub Winter School on OGC Stack](https://drive.google.com/file/d/1Y4C-rX7OeihXSPXV2QjoUp5z6P_3oe5d/view)!
+For those in attendance at [FOSS4G Europe 2024](https://2024.europe.foss4g.org):
+
+- come to the [pygeoapi mid-year update](https://talks.osgeo.org/foss4g-europe-2024/talk/EQSNSK) presentation on Wednesday 03 July at 11h, in room GEOCAT (301)
+- the pygeoapi team will be at the [community sprint](https://wiki.osgeo.org/wiki/FOSS4G-Europe-2024/CommunitySprint) on 06-07 July. Come join us!
 
 # Contributing
 

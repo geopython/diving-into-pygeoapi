@@ -169,11 +169,11 @@ In this section we'll have a look at how to publish Catalogue Service for the We
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: record
-            name: CSWFacade
-            data: https://demo.pycsw.org/cite/csw
-            id_field: identifier
-            time_field: datetime
-            title_field: title
+              name: CSWFacade
+              data: https://demo.pycsw.org/cite/csw
+              id_field: identifier
+              time_field: datetime
+              title_field: title
     ```
 
 You can explore the proxied catalogue collection using this endpoints:
@@ -214,7 +214,7 @@ In this section we'll have a look at how to Publish a SensorThings API `Thing` a
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
-                name: SensorThings
-                data: https://toronto-bike-snapshot.sensorup.com/v1.0/
-                entity: Things
+              name: SensorThings
+              data: https://toronto-bike-snapshot.sensorup.com/v1.0/
+              entity: Things
     ```
