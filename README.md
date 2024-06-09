@@ -1,5 +1,7 @@
 # Diving into pygeoapi
 
+[![Gitter](https://img.shields.io/gitter/room/geopython/diving-into-pygeoapi)](https://matrix.to/#/#geopython_diving-into-pygeoapi:gitter.im)
+
 Welcome to the Diving into pygeoapi workshop!
 
 [pygeoapi](https://pygeoapi.io) is a Python server implementation of the [OGC API](https://ogcapi.ogc.org) suite of standards. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy a RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is open source and released under an MIT license.
