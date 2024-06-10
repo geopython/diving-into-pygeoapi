@@ -44,7 +44,7 @@ contain the latest pygeoapi and all its dependencies and external services (e.g.
 
 ## About Docker
 
-Docker has been available for almost 10 years, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
+Docker has been available since 2013, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
 era of computing, chances are that you have heard of Docker and *containerization*. Or, perhaps are already familiar and hopefully using Docker already.
 If not, there is an abundance of introductory materials that can be found online like this [tutorial from IBM](https://www.ibm.com/topics/docker).
 
@@ -140,7 +140,7 @@ data is a one-liner.
 
 
 That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
-As part of the initial `docker run`, Docker will download the pygeoapi Docker Image from [Docker hub](https://hub.Docker.com/r/geopython/pygeoapi).
+As part of the initial `docker run`, Docker will download the pygeoapi Docker Image from [Docker Hub](https://hub.Docker.com/r/geopython/pygeoapi).
 This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
 you may want to do this beforehand. 
 
@@ -222,7 +222,7 @@ In the next sections we will review additional examples of mounts to the data fo
 ## Using Docker for Python Clients
 
 In some exercises we access `pygeoapi` remote endpoints using [OWSLib](https://owslib.readthedocs.io), 
-a Python library to interact with OGC Web Services. `OWSLib` can be installed using standard 
+a Python library to interact with OGC Web Services. OWSLib can be installed using standard 
 Python `pip3 install OWSLib`, but you may not have Python available, or you want to keep your system 'clean'.
 
 As Docker is already available on your system, you can start up a 
@@ -231,9 +231,9 @@ The magic line is:
 
 `docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash`
 
-This will pull a small (125MB) official Python Docker Image. When the Container is started you are directed into 
-a `Bash` session/prompt. The argument `--network=host` allows you to directly interact with services on your
-host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python3`, install `OWSLib` and
+This will pull a small (125MB) official Python Docker Image. When the Container is started, you are directed into 
+a `bash` session/prompt. The argument `--network=host` allows you to directly interact with services on your
+host system, thus with `pygeoapi`, without setting up a Docker network. From there you can start `python3`, install OWSLib and
 maybe even other tools like `curl` and `wget`.
 
 Below is a complete example, assuming pygeoapi runs on your `localhost` at port 5000:

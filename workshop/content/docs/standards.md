@@ -4,12 +4,12 @@ title: Standards
 
 # Overview
 
-This section provides a high level overview of pygeoapi standards support.
+This section provides a high level overview of standards support in pygeoapi.
 
 # Standards
 
-Open standards are core to pygeoapi. Open standards allow for broad interoperability and plug and play capability. pygeoapi supports
-a number of open standards (both formal and defacto or community driven).
+Open standards are core to pygeoapi, and allow for broad interoperability and plug and play capability. pygeoapi supports
+a number of open standards (both formal standards and defacto or community driven).
 
 ## API standards
 
@@ -25,7 +25,7 @@ pygeoapi implements the [OGC API](https://ogcapi.ogc.org) suite of standards fro
 
 !!! Tip
 
-    You can learn more about OGC APIs on this workshop: <https://ogcapi-workshop.ogc.org/>
+    You can learn more about OGC APIs in the [OGC API workshop](https://ogcapi-workshop.ogc.org)
 
 #### OGC API - Common
 
@@ -41,6 +41,7 @@ OGC API - Common provides the following functionality:
     - `/collections`
     - `/collections/foo`
 - aspects such as pagination, links between resources, basic filtering, query parameters (`bbox`, `datetime`, etc.)
+- shared models (exceptions, links, etc.)
 
 OGC API - Common allows for specification developers to focus on the key functionality of a given API (i.e. data access, etc.)
 while using common constructs. This harmonizes OGC API standards and enables deeper integration with less code. This also
@@ -159,6 +160,17 @@ The `f` parameter can be used with any pygeoapi endpoint to specify an output fo
         method: "GET",
         url: "https://demo.pygeoapi.io/master",
         dataType: "json"
+    });
+    ```
+
+    Or using the native fetch API:
+
+    ``` {.js linenums="1"}
+    const response = await fetch('https://demo.pygeoapi.io/master', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json'
+        }
     });
     ```
 
