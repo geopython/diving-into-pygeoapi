@@ -80,6 +80,12 @@ Some notes:
 * On Mac OSX Monterey and later, there may be an issue with local port 5000 already in use, therefore conflicting with the default one used by the pygeoapi container. If you see this error `OSError: [Errno 48] Address already in use`, you need to disable the *Airplay Receiver*. Go to `System Settings | Sharing` or like in Sonoma type 'airplay' in the search box. See image below for Mac OSX Sonoma. Also a detailed description in [this blog post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/).
 ![MacBook settings](assets/images/macosx-airplay-disable.png)
 * On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu Image or use a cloud VM
+* On Linux, when encountering permission issues: the Docker daemon normally runs as "root". This requires prefixing commands with `sudo` as a non-root user. On most distributions Docker is accessible by users in the `docker` group. You can omit the use of `sudo` and prevent possibly other permission issues as follows:
+  * Test if the `docker` group exists: `cat /etc/group | grep docker`.
+  * When non-existing: `sudo groupadd docker`. 
+  * Add your user to this group: `sudo usermod -aG docker $USER` 
+  * Log-out and log-in.
+  * See all details and more options in [this instruction](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user).
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
 If all goes well, you should be able to run Docker from the command line as follows: [^2]
