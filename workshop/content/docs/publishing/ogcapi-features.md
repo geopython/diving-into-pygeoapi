@@ -42,7 +42,7 @@ Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
-    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/cptartu2.gpkg.zip) to `cptartu2.gpkg`.
+    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/tartu/cptartu2.gpkg.zip) to `cptartu2.gpkg`.
 
     Then, open the pygeoapi configuration file in a text editor.
     Find the line `# START - EXERCISE 2 - cadastral parcels Tartu`.
@@ -70,7 +70,7 @@ Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
         providers:
             - type: feature
               name: SQLiteGPKG
-              data: /data/cptartu2.gpkg # place correct path here
+              data: /data/tartu/cptartu2.gpkg # place correct path here
               id_field: nationalca
               title_field: label
               table: cptartu2 # table name within gpkg
@@ -118,7 +118,7 @@ First we will load `bathingwater-estonia.geojson` into the Elasticsearch server.
 Edit the `add-data.sh` script within the `ES` folder, adding these two lines before the end:
 
 ``` {.bash linenums="1"}
-    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/bathingwater-estonia.geojson
+    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/tartu/bathingwater-estonia.geojson
     python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
 ```
 Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 

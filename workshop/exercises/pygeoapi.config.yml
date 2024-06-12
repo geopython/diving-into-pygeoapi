@@ -217,7 +217,7 @@ resources:
 #         providers:
 #             - type: feature
 #               name: CSV
-#               data: /data/bathingwater-estonia.csv
+#               data: /data/tartu/bathingwater-estonia.csv
 #               id_field: id
 #               title_field: Name
 #               geometry:
@@ -247,7 +247,7 @@ resources:
 #         providers:
 #             - type: feature
 #               name: SQLiteGPKG
-#               data: /data/cptartu2.gpkg # place correct path here
+#               data: /data/tartu/cptartu2.gpkg # place correct path here
 #               id_field: nationalca
 #               title_field: label
 #               table: cptartu2 # table name within gpkg
@@ -308,7 +308,7 @@ resources:
 #         providers:
 #             - type: feature
 #               name: GeoJSON
-#               data: /data/bathingwater-estonia.geojson
+#               data: /data/tartu/bathingwater-estonia.geojson
 #               id_field: id
 #             - type: tile
 #               name: MVT-tippecanoe
@@ -356,31 +356,31 @@ resources:
 ## END - EXERCISE 5 - Maps
 
 ## START - EXERCISE 6 - Metadata
-    example_catalogue:
-        type: collection
-        title: FOSS4G Europe Estonia national catalogue
-        description: FOSS4G Europe Estonia national catalogue
-        keywords:
-            - estonia
-            - catalogue
-            - FOSS4G Europe
-        links:
-            - type: text/html
-              rel: canonical
-              title: information
-              href: https://metadata.geoportaal.ee
-              hreflang: en-US
-        extents:
-            spatial:
-                bbox: [23.3397953631, 57.4745283067, 28.1316992531, 59.6110903998]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-        providers:
-            - type: record
-              name: TinyDBCatalogue
-              data: /data/records/tartu/catalogue.tinydb
-              id_field: externalId
-              time_field: recordCreated
-              title_field: title
+#    example_catalogue:
+#        type: collection
+#        title: FOSS4G Europe Estonia national catalogue
+#        description: FOSS4G Europe Estonia national catalogue
+#        keywords:
+#            - estonia
+#            - catalogue
+#            - FOSS4G Europe
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: information
+#              href: https://metadata.geoportaal.ee
+#              hreflang: en-US
+#        extents:
+#            spatial:
+#                bbox: [23.3397953631, 57.4745283067, 28.1316992531, 59.6110903998]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: record
+#              name: TinyDBCatalogue
+#              data: /data/tartu/metadata/catalogue.tinydb
+#              id_field: externalId
+#              time_field: recordCreated
+#              title_field: title
 ## END - EXERCISE 6 - Metadata
 
 ## START EXERCISE 7 - Environmental data via OGC API - Environmental Data Retrieval

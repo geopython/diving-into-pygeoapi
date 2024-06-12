@@ -24,7 +24,7 @@ pygeoapi supports the OGC API - Records draft specification, using Elasticsearch
 ## Publish metadata records in pygeoapi
 
 With pygeoapi we can setup OGC API - Records using any supported data provider. In this exercise we will use the [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html)
-Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/records/tartu/catalogue.tinydb`.
+Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/tartu/metadata/catalogue.tinydb`.
 
 !!! question "Update the pygeoapi configuration"
 
@@ -52,7 +52,7 @@ Catalogue backend. We will use the sample catalogue in `workshop/exercises/data/
         providers:
             - type: record
               name: TinyDBCatalogue
-              data: /data/records/tartu/catalogue.tinydb
+              data: /data/tartu/metadata/catalogue.tinydb
               id_field: externalId
               time_field: recordCreated
               title_field: title
@@ -81,7 +81,7 @@ It is possible to load more example ISO19139 metadata in a TinyDB database with 
 
 <div class="termy">
 ```bash
-cd workshop/exercises/data/records/tartu
+cd workshop/exercises/data/tartu/metadata
 curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
 python3 load_tinydb_records.py xml catalogue.tinydb
 ```
@@ -100,7 +100,7 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
     pip3 install owslib
     apt-get update -y && apt-get install curl -y
     curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
-    python3 load_tinydb_records.py /data/records/tartu/xml /data/records/tartu/catalogue.tinydb
+    python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
     ```
     </div>
 
