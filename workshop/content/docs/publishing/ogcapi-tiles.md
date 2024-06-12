@@ -44,7 +44,7 @@ include, but are not limited to:
 
 For this exercise, you will publish a vector dataset of the [bathing water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
 
-* data: `workshop/exercises/data/bathingwater-estonia.geojson`
+* data: `workshop/exercises/data/tartu/bathingwater-estonia.geojson`
 
 Let's generate the tiles as the first step using tippecanoe:
 
@@ -57,7 +57,7 @@ Let's generate the tiles as the first step using tippecanoe:
         cd workshop/exercises
         docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
         tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
-        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
+        --extend-zooms-if-still-dropping --no-tile-compression /data/tartu/bathingwater-estonia.geojson
         ```
         </div>
      
@@ -68,7 +68,7 @@ Let's generate the tiles as the first step using tippecanoe:
         cd workshop/exercises
         docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe \
         tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=20 \
-        --extend-zooms-if-still-dropping --no-tile-compression /data/bathingwater-estonia.geojson
+        --extend-zooms-if-still-dropping --no-tile-compression /data/tartu/bathingwater-estonia.geojson
         ```
         </div>
  
@@ -106,7 +106,7 @@ Let's generate the tiles as the first step using tippecanoe:
         providers:
             - type: feature
               name: GeoJSON
-              data: /data/bathingwater-estonia.geojson
+              data: /data/tartu/bathingwater-estonia.geojson
               id_field: id
             - type: tile
               name: MVT-tippecanoe
@@ -153,7 +153,7 @@ Edit the `add-data.sh` script on the `ES` folder, adding these two lines before 
 
 ``` {.yaml linenums="1"}
 
-    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/doublebyte1/diving-into-pygeoapi/tiles-update/workshop/exercises/data/bathingwater-estonia.geojson
+    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/tiles-update/workshop/exercises/data/tartu/bathingwater-estonia.geojson
     python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
 
 ```
