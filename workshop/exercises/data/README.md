@@ -6,7 +6,7 @@ This directory provides sample data to demonstrate functionality.
 
 ### Bathingwater Estonia
 - title: [Supluskohad](./bathingwater-estonia.csv) (Bathing places) 
-- url: https://avaandmed.eesti.ee/datasets/joogiveeallikad
+- url: https://avaandmed.eesti.ee/datasets/supluskohad
 - description: Locations where the Estonian Health Board monitors the bathing water quality
 - copyright: [Terviseamet](https://terviseamet.ee)
 - license: CC-BY-SA 3.0

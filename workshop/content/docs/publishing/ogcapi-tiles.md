@@ -42,7 +42,7 @@ include, but are not limited to:
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
-For this exercise, you will publish a vector dataset of the [drinking water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
+For this exercise, you will publish a vector dataset of the [bathing water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
 
 * data: `workshop/exercises/data/bathingwater-estonia.geojson`
 
@@ -79,8 +79,8 @@ Let's generate the tiles as the first step using tippecanoe:
 ``` {.yaml linenums="1"}
     bathingwater-estonia:
         type: collection
-        title: Drinking water sources
-        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
+        title: Bathing water sources
+        description: Data of bathing water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
           - Water
           - Water bodies
@@ -89,12 +89,12 @@ Let's generate the tiles as the first step using tippecanoe:
           - Groundwater
           - Environmental health
           - Health
-          - Drinking water
+          - Bathing water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
+              href: https://avaandmed.eesti.ee/api/datasets/slug/supluskohad
               hreflang: en-US
         extents:
             spatial:
@@ -171,8 +171,8 @@ Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this
 ``` {.yaml linenums="1"}
     bathingwater-estonia:
         type: collection
-        title: Drinking water sources
-        description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
+        title: Bathing water sources
+        description: Data of bathing water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
         keywords:
           - Water
           - Water bodies
@@ -181,12 +181,12 @@ Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this
           - Groundwater
           - Environmental health
           - Health
-          - Drinking water
+          - Bathing water
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
+              href: https://avaandmed.eesti.ee/api/datasets/slug/supluskohad
               hreflang: en-US
         extents:
             spatial:

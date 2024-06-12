@@ -81,7 +81,7 @@ The config section reads:
             - type: text/csv
               rel: canonical
               title: data
-              href: https://avaandmed.eesti.ee/datasets/joogiveeallikad
+              href: https://avaandmed.eesti.ee/datasets/supluskohad
               hreflang: EE
         extents:
             spatial:

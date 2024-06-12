@@ -208,7 +208,7 @@ resources:
 #             - type: text/csv
 #               rel: canonical
 #               title: data
-#               href: https://avaandmed.eesti.ee/datasets/joogiveeallikad
+#               href: https://avaandmed.eesti.ee/datasets/supluskohad
 #               hreflang: EE
 #         extents:
 #             spatial:
@@ -281,8 +281,8 @@ resources:
 ## START - EXERCISE 4 - Tiles
 #     bathingwater-estonia:
 #         type: collection
-#         title: Drinking water sources
-#         description: Data of drinking water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
+#         title: Bathing water sources
+#         description: Data of bathing water sources used by water supply systems under the supervision of the Health Board from the Water Health Information System.
 #         keywords:
 #           - Water
 #           - Water bodies
@@ -291,12 +291,12 @@ resources:
 #           - Groundwater
 #           - Environmental health
 #           - Health
-#           - Drinking water
+#           - Bathing water
 #         links:
 #             - type: text/html
 #               rel: canonical
 #               title: information
-#               href: https://avaandmed.eesti.ee/api/datasets/slug/joogiveeallikad
+#               href: https://avaandmed.eesti.ee/api/datasets/slug/supluskohad
 #               hreflang: en-US
 #         extents:
 #             spatial:
