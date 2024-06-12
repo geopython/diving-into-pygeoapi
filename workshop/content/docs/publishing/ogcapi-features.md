@@ -25,13 +25,13 @@ pygeoapi supports all of the above OGC API - Features specification parts (Part 
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/cql.html) for more information on CQL support 
 
-Next, we are going to explore how-to publish vector data using a `GeoPackage` and a `Elasticsearch` backend.
+Next, we are going to explore how-to publish vector data using a `GeoPackage`.
 
 ## Publish a GeoPackage
 
 In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
 In this exercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
-data source.
+Vector data source.
 
 !!! tip
 
@@ -83,31 +83,59 @@ title *"Tartu Cadastral Parcels"* has been published.
 
     The SQLite driver incidentally has challenges to open the GeoPackage extension on MacOS. 
     Consult the [official documentation](https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx) 
-    or try with an alternative data format.
+    or try with an alternative data format. If you use Docker this is not an issue.
  
-## Publish a GeoJSON using Elasticsearch
+## OPTIONAL: Publish a GeoJSON file using Elasticsearch
 
-If you want to explore publishing vector tiles using Elasticsearch clone this fork of pygeoapi:
+This exercise is optional, if time permits, or you can perform this after workshop.
+
+Here we explore publishing OGC API - Features data using pygeoapi with an Elasticsearch backend provider. 
+For this we need the [pygeoapi-examples GitHub repository](https://github.com/geopython/pygeoapi-examples.git):
 
 <div class="termy">
 ```bash
-git checkout -b ogcapi-ws https://github.com/doublebyte1/pygeoapi.git
+git clone https://github.com/geopython/pygeoapi-examples.git
 ```
 </div>
 
-In alternative, you can download a zip file from [this](https://github.com/doublebyte1/pygeoapi/archive/refs/heads/ogcapi-ws.zip) link.
+Alternatively, you can [download the repo as a .zip file](https://github.com/geopython/pygeoapi-examples/archive/refs/heads/main.zip) and unzip.
 
-Then change into the `docker/examples/elastic` folder, and run the `docker-compose.yml` file:
+Change into the `docker/elastic` folder and run the `docker-compose.yml` file:
 
 <div class="termy">
 ```bash
-cd docker/examples/elastic
+cd docker/elastic
 
 docker compose up
 ```
 </div>
 
-This configuration snippet, enables publishing the file `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` as OGC API - Features:
+If you experience startup problems, consult the [README file](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). 
+You may need to adapt your local host system's virtual memory setting.
+
+First we will load `bathingwater-estonia.geojson` into the ES server. 
+
+Edit the `add-data.sh` script within the `ES` folder, adding these two lines before the end:
+
+``` {.yaml linenums="1"}
+
+    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/bathingwater-estonia.geojson
+    python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
+
+```
+Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the ES Docker container and then loaded into Elasticsearch. 
+
+After this we need to rebuild the docker image:
+
+<div class="termy">
+```bash
+docker compose build
+```
+</div>
+
+Next we need to configure pygeoapi by inserting the snippet below into the pygeoapi config file `pygeoapi/docker.config.yml`.
+This effectively enables publishing the file `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` as OGC API - Features
+using the ES backend provider.
 
 ``` {.yaml linenums="1"}
     greater_hyderabad_municipal_corporation_ward_boundaries:
@@ -139,11 +167,12 @@ This configuration snippet, enables publishing the file `greater_hyderabad_munic
               id_field: objectid
 ``` 
 
-Wait until the data was ingested into an elastic index, and pygeoapi starts. You can check the logs using:
+On startup the pygeaoapi container will wait until the data has been ingested and the ES index has been built. 
+You can check the logs using:
 
 <div class="termy">
 ```bash
-docker compose logs --follow
+docker compose logs --follow pygeoapi
 ```
 </div>
 
@@ -157,9 +186,12 @@ And the feature items here:
 
    ![](../assets/images/features-hyderabad.png){ width=100% }
 
-## pygeoapi as a WFS proxy
+## OPTIONAL: pygeoapi as a WFS proxy
 
-You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WFS as OGC API - Features](../advanced/bridges.md#publishing-wfs-as-ogc-api-features).
+pygeoapi can also function as an OGC API - Features frontend service for an existing OGC WFS through 
+the built-in GDAL/OGR provider. This bridging-function effectively allows you to publish a WFS as OGC API - Features.
+
+This is expanded in an advanced section of this workshop: [pygeoapi as a Bridge to other Services WFS-section](../advanced/bridges.md#publishing-wfs-as-ogc-api-features). 
 
 ## Client access
 
@@ -280,4 +312,4 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 # Summary
 
-Congratulations! You are now able to publish vector data to pygeoapi.
+Congratulations! You are now able to publish vector data with pygeoapi.
