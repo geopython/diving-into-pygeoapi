@@ -31,7 +31,7 @@ Next, we are going to explore how-to publish vector data using a `GeoPackage`.
 
 In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
 In this exercise we are going to publish another vector file, this time from a [GeoPackage](https://www.geopackage.org) (SQLite3) 
-Vector data source.
+vector data source.
 
 !!! tip
 
@@ -90,7 +90,7 @@ title *"Tartu Cadastral Parcels"* has been published.
 This exercise is optional, if time permits, or you can perform this after workshop.
 
 Here we explore publishing OGC API - Features data using pygeoapi with an Elasticsearch backend provider. 
-For this we need the [pygeoapi-examples GitHub repository](https://github.com/geopython/pygeoapi-examples.git):
+For this we need the [pygeoapi-examples GitHub repository](https://github.com/geopython/pygeoapi-examples):
 
 <div class="termy">
 ```bash
@@ -113,17 +113,15 @@ docker compose up
 If you experience startup problems, consult the [README file](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). 
 You may need to adapt your local host system's virtual memory setting.
 
-First we will load `bathingwater-estonia.geojson` into the ES server. 
+First we will load `bathingwater-estonia.geojson` into the Elasticsearch server. 
 
 Edit the `add-data.sh` script within the `ES` folder, adding these two lines before the end:
 
-``` {.yaml linenums="1"}
-
+``` {.bash linenums="1"}
     curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/bathingwater-estonia.geojson
     python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
-
 ```
-Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the ES Docker container and then loaded into Elasticsearch. 
+Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 
 
 After this we need to rebuild the docker image:
 
@@ -135,7 +133,7 @@ docker compose build
 
 Next we need to configure pygeoapi by inserting the snippet below into the pygeoapi config file `pygeoapi/docker.config.yml`.
 This effectively enables publishing the file `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` as OGC API - Features
-using the ES backend provider.
+using the Elasticsearch backend provider.
 
 ``` {.yaml linenums="1"}
     greater_hyderabad_municipal_corporation_ward_boundaries:
@@ -167,7 +165,7 @@ using the ES backend provider.
               id_field: objectid
 ``` 
 
-On startup the pygeaoapi container will wait until the data has been ingested and the ES index has been built. 
+On startup the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
 You can check the logs using:
 
 <div class="termy">
