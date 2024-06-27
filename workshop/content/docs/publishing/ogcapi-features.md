@@ -257,6 +257,57 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
 
+
+!!! tip "Use GDAL from the commandline with Docker"
+
+    If you do not have GDAL installed, or want to use/try another version, you can always run the GDAL Docker image
+    directly from the commandline. OSGeo provides [GDAL Docker Images](https://github.com/OSGeo/gdal/pkgs/container/gdal). The main thing to deal with is proper Docker Volume mapping to have GDAL-tools 
+    access local files. This can be very handy for quick data conversions. Most images also come with GDAL Python bindings.
+    
+    First you can pull a very small Docker Image:
+
+    <div class="termy">
+    ```bash
+    docker pull ghcr.io/osgeo/gdal:alpine-small-latest
+    ```
+    </div>
+
+    Then you can run for example OGR commandline tools. Base command is `docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`.
+    This runs the Docker container interactively (`-it`) and removes the container on exit (`--rm`). Below are examples.
+
+    Ask GDAL/OGR for available Vector formats:
+    <div class="termy">
+    ```bash
+    docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest \
+                            ogrinfo --formats
+    ```
+    </div>
+
+    Get information from a geospatial file. Note the volume mapping: `-v $(pwd)/data:/work` 
+    to access local files within the Docker container. NB Commands are single-line, broken up for readability.
+    <div class="termy">
+    ```bash
+    cd git/workshop/exercises
+    docker run -v $(pwd)/data:/work -it --rm \
+       ghcr.io/osgeo/gdal:alpine-small-latest \
+       ogrinfo /work/tartu/bathingwater-estonia.geojson
+
+    INFO: Open of `/work/tartu/bathingwater-estonia.geojson'
+          using driver `GeoJSON' successful.
+    1: bathingwater-estonia (Point)
+    ```
+    </div>
+
+    Convert the GeoJSON file to a GeoPackage (GPKG) with `ogr2ogr`:
+    <div class="termy">
+    ```bash
+    docker run -v $(pwd)/data:/work -it --rm \
+       ghcr.io/osgeo/gdal:alpine-small-latest \
+       ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg \
+                         /work/tartu/bathingwater-estonia.geojson
+    ```
+    </div>
+
 ### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
