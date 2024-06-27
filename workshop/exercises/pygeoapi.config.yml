@@ -273,7 +273,7 @@ resources:
     #     providers:
     #         -   type: coverage
     #             name: rasterio
-    #             data: /data/estonia_light.tif # place correct path here
+    #             data: /data/tartu/estonia_light.tif # place correct path here
     #             format:
     #                 name: GTiff
     #                 mimetype: application/tiff
