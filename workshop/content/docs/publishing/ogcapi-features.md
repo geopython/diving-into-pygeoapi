@@ -261,7 +261,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 !!! tip "Use GDAL from the commandline with Docker"
 
     If you do not have GDAL installed, or want to use/try another version, you can always run the GDAL Docker image
-    directly from the commandline. OSGeo provides [GDAL Docker Images](https://github.com/OSGeo/gdal/pkgs/container/gdal). The main thing to deal with is proper Docker Volume mapping to have GDAL-tools 
+    directly from the commandline. OSGeo provides [GDAL Docker Images](https://github.com/OSGeo/gdal/pkgs/container/gdal). The main thing to deal with is proper Docker Volume mapping to have GDAL tools 
     access local files. This can be very handy for quick data conversions. Most images also come with GDAL Python bindings.
     
     First you can pull a very small Docker Image:
@@ -272,8 +272,8 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
 
-    Then you can run for example OGR commandline tools. Base command is `docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`.
-    This runs the Docker container interactively (`-it`) and removes the container on exit (`--rm`). Below are examples.
+    Then you can run for example OGR command line tools. Base command is `docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`.
+    This runs the Docker container interactively (`-it`) and removes the container on exit (`--rm`).  Below are examples.
 
     Ask GDAL/OGR for available Vector formats:
     <div class="termy">
@@ -284,7 +284,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     </div>
 
     Get information from a geospatial file. Note the volume mapping: `-v $(pwd)/data:/work` 
-    to access local files within the Docker container. NB Commands are single-line, broken up for readability.
+    to access local files within the Docker container (commands are single-line, broken up for readability).
     <div class="termy">
     ```bash
     cd git/workshop/exercises
