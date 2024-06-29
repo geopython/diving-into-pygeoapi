@@ -268,7 +268,7 @@ resources:
     #             hreflang: it
     #     extents:
     #         spatial:
-    #             bbox: [26.6264,58.32569 , 26.82632,58.433989]
+    #             bbox: [26.6264,58.32569,26.82632,58.433989]
     #             crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     #     providers:
     #         -   type: coverage
