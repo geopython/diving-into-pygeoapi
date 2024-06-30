@@ -254,30 +254,33 @@ resources:
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
-    # tartu-ntl:
-    #     type: collection
-    #     title: Night Time Light Data 
-    #     description: Night Time Light Data averaged for 2023 in Tartu region.
-    #     keywords:
-    #         - Night Time Light
-    #     links:
-    #         -   type: text/html
-    #             rel: canonical
-    #             title: Nasa's Black Marble
-    #             href: https://blackmarble.gsfc.nasa.gov/
-    #             hreflang: it
-    #     extents:
-    #         spatial:
-    #             bbox: [26.6264,58.32569,26.82632,58.433989]
-    #             crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-    #     providers:
-    #         -   type: coverage
-    #             name: rasterio
-    #             data: /data/tartu/estonia_light.tif # place correct path here
-    #             format:
-    #                 name: GTiff
-    #                 mimetype: application/tiff
+#    tartu-ntl:
+#        type: collection
+#        title: NASA Blue Marble Night Lights Data sample over Estonia
+#        description: NASA Blue Marble Night Lights Data sample over Estonia
+#        keywords:
+#            - Blue Marble
+#            - Night Lights
+#            - NTL
+#        links:
+#            - type: text/html
+#              rel: about
+#              title: NASA Blue Marble Night Lights Data
+#              href: https://appliedsciences.nasa.gov/get-involved/training/english/arset-introduction-nasas-black-marble-night-lights-data
+#              hreflang: en
+#        extents:
+#            spatial:
+#              bbox: [26.6264,58.32569,26.82632,58.433989]
+#              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: coverage
+#              name: rasterio
+#              data: /data/tartu/estonia_light.tif # place correct path here
+#              format:
+#                  name: GTiff
+#                  mimetype: application/tiff
 ## END - EXERCISE 3 - Coverages
+
 ## START - EXERCISE 4 - Tiles
 #     bathingwater-estonia:
 #         type: collection
@@ -420,12 +423,11 @@ resources:
             name: HelloWorld
 
 ## START EXERCISE 8 - Functions via OGC API - Processes
-    # squared:
-    #     type: process
-    #     processor:
-    #         name: pygeoapi.process.squared.SquaredProcessor
+#    squared:
+#        type: process
+#        processor:
+#            name: pygeoapi.process.squared.SquaredProcessor
 ## END EXERCISE 8 - Functions via OGC API - Processes
-
 
 ## START - EXERCISE 9 - WFS Proxy
 #     suol_epicentri_storici:

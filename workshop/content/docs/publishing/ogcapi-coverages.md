@@ -31,27 +31,29 @@ In the previous exercises we have demonstrated the steps involved to publish vec
     ``` {.yaml linenums="1"}
     tartu-ntl:
         type: collection
-        title: Night Time Light Data 
-        description: Night Time Light Data averaged for 2023 in Tartu region.
+        title: NASA Blue Marble Night Lights Data sample over Estonia
+        description: NASA Blue Marble Night Lights Data sample over Estonia
         keywords:
-            - Night Time Light
+            - Blue Marble
+            - Night Lights
+            - NTL
         links:
-            -   type: text/html
-                rel: canonical
-                title: Nasa's Black Marble
-                href: https://blackmarble.gsfc.nasa.gov/
-                hreflang: it
+            - type: text/html
+              rel: about
+              title: NASA Blue Marble Night Lights Data
+              href: https://appliedsciences.nasa.gov/get-involved/training/english/arset-introduction-nasas-black-marble-night-lights-data
+              hreflang: en
         extents:
             spatial:
-                bbox: [26.6264,58.32569,26.82632,58.433989]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              bbox: [26.6264,58.32569,26.82632,58.433989]
+              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
-            -   type: coverage
-                name: rasterio
-                data: /data/tartu/estonia_light.tif # place correct path here
-                format:
-                    name: GTiff
-                    mimetype: application/tiff
+            - type: coverage
+              name: rasterio
+              data: /data/tartu/estonia_light.tif # place correct path here
+              format:
+                  name: GTiff
+                  mimetype: application/tiff
     ```
 
 !!! tip
