@@ -21,51 +21,37 @@ as well as [CoverageJSON](https://covjson.org) and native output.
 
 ## Publish a raster dataset
 
-In the previous exercises we have demonstrated the steps involved to publish vector data and update the pygeoapi configuration. In this section we are going to
-publish a raster file in GeoTIFF format, from a [rasterio](https://rasterio.readthedocs.io) source provider.
+In the previous exercises we have demonstrated the steps involved to publish vector data and update the pygeoapi configuration. In this section we are going to publish a raster file in GeoTIFF format, from a [rasterio](https://rasterio.readthedocs.io) source provider.
 
-Download and unzip the GeoTIFF file:
-
-<div class="termy">
-```bash
-cd workshop/exercises/data
-curl -O http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records/cmfi:419774cb-e812-4ca4-991d-97f0b747e017/attachments/53.zip
-unzip 53.zip
-```
-</div>
-
-If you do not have curl installed, copy the URL above to your web browser and save locally.
-
-You can now add `53_ED1_G.tif` to pygeoapi:
 
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration file in a text editor. Add a new dataset section as follows:
 
     ``` {.yaml linenums="1"}
-    firenze-terrains:
+    tartu-ntl:
         type: collection
-        title: Administrative boundaries before 2014
-        description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
+        title: Night Time Light Data 
+        description: Night Time Light Data averaged for 2023 in Tartu region.
         keywords:
-            - Cadastral parcels
+            - Night Time Light
         links:
-            - type: text/html
-              rel: canonical
-              title: Administrative boundaries before 2014
-              href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:419774cb-e812-4ca4-991d-97f0b747e017
-              hreflang: it
+            -   type: text/html
+                rel: canonical
+                title: Nasa's Black Marble
+                href: https://blackmarble.gsfc.nasa.gov/
+                hreflang: it
         extents:
             spatial:
-                bbox: [10.70,43.43,11.76,44.25]
+                bbox: [26.6264,58.32569,26.82632,58.433989]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
-            - type: coverage
-              name: rasterio
-              data: /data/53_ED1_G.tif # place correct path here
-              format:
-                  name: GTiff
-                  mimetype: application/tiff
+            -   type: coverage
+                name: rasterio
+                data: /data/tartu/estonia_light.tif # place correct path here
+                format:
+                    name: GTiff
+                    mimetype: application/tiff
     ```
 
 !!! tip

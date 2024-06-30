@@ -254,29 +254,29 @@ resources:
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
-#     firenze-terrains:
-#         type: collection
-#         title: Administrative boundaries before 2014
-#         description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
-#         keywords:
-#             - Cadastral parcels
-#         links:
-#             -   type: text/html
-#                 rel: canonical
-#                 title: Administrative boundaries before 2014
-#                 href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:419774cb-e812-4ca4-991d-97f0b747e017
-#                 hreflang: it
-#         extents:
-#             spatial:
-#                 bbox: [10.70,43.43,11.76,44.25]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             -   type: coverage
-#                 name: rasterio
-#                 data: /data/53_ED1_G.tif # place correct path here
-#                 format:
-#                     name: GTiff
-#                     mimetype: application/tiff
+    # tartu-ntl:
+    #     type: collection
+    #     title: Night Time Light Data 
+    #     description: Night Time Light Data averaged for 2023 in Tartu region.
+    #     keywords:
+    #         - Night Time Light
+    #     links:
+    #         -   type: text/html
+    #             rel: canonical
+    #             title: Nasa's Black Marble
+    #             href: https://blackmarble.gsfc.nasa.gov/
+    #             hreflang: it
+    #     extents:
+    #         spatial:
+    #             bbox: [26.6264,58.32569,26.82632,58.433989]
+    #             crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    #     providers:
+    #         -   type: coverage
+    #             name: rasterio
+    #             data: /data/tartu/estonia_light.tif # place correct path here
+    #             format:
+    #                 name: GTiff
+    #                 mimetype: application/tiff
 ## END - EXERCISE 3 - Coverages
 ## START - EXERCISE 4 - Tiles
 #     bathingwater-estonia:
