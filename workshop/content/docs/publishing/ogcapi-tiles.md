@@ -5,11 +5,11 @@ title: Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 # Exercise 4 - Tiles of geospatial data via OGC API - Tiles
 
 [OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiles of geospatial information. Different forms of geospatial information are supported, such as tiles of vector features ("vector tiles"), coverages, maps (or imagery) and potentially eventually additional types of tiles of geospatial information. The standard is available on this document:
-
-- [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/is/20-057/20-057.html)
+ 
+* [OGC API - Tiles: Part 1: Core](https://docs.ogc.org/is/20-057/20-057.html)
 
 !!! note
-OGC API - Tiles extends the `collections/*` URL structure (tilesets are listed under `/collections/example/tiles`:
+    OGC API - Tiles extends the `collections/*` URL structure (tilesets are listed under `/collections/example/tiles`:
 
     ```
     https://demo.pygeoapi.io/collections/lakes/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt
@@ -30,27 +30,27 @@ itself does not render tiles from source data. It supports publishing pre-render
 
 !!! note
 
-    pygeoapi currently supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point.
+    pygeoapi currently supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point.  
 
 ## Publish pre-rendered vector tiles
 
 In this scenario, tiles must be pre-rendered before serving. Existing tools to create tiles
 include, but are not limited to:
 
-- [TileMill](https://tilemill-project.github.io/tilemill)
-- [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
-- [tippecanoe](https://github.com/mapbox/tippecanoe)
+* [TileMill](https://tilemill-project.github.io/tilemill)
+* [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
+* [tippecanoe](https://github.com/mapbox/tippecanoe)
 
 For this exercise, you will publish a vector dataset of the [bathing water sources in Estonia](https://avaandmed.eesti.ee/datasets/joogiveeallikad), from the location below:
 
-- data: `workshop/exercises/data/tartu/bathingwater-estonia.geojson`
+* data: `workshop/exercises/data/tartu/bathingwater-estonia.geojson`
 
 Let's generate the tiles as the first step using tippecanoe:
 
 !!! example "Using tippecanoe to generate vector tiles"
 
     === "Linux/Mac"
-
+    
         <div class="termy">
         ```bash
         cd workshop/exercises
@@ -59,9 +59,9 @@ Let's generate the tiles as the first step using tippecanoe:
         --extend-zooms-if-still-dropping --no-tile-compression /data/tartu/bathingwater-estonia.geojson
         ```
         </div>
-
+     
     === "Windows"
-
+    
         <div class="termy">
         ```bash
         cd workshop/exercises
@@ -70,12 +70,12 @@ Let's generate the tiles as the first step using tippecanoe:
         --extend-zooms-if-still-dropping --no-tile-compression /data/tartu/bathingwater-estonia.geojson
         ```
         </div>
-
+ 
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. Add a new dataset section as follows:
 
-```{.yaml linenums="1"}
+``` {.yaml linenums="1"}
     bathingwater-estonia:
         type: collection
         title: Bathing water sources
@@ -150,7 +150,7 @@ cd docker/mvt-elastic
 
 Edit the `add-data.sh` script on the `ES` folder, adding these two lines before the end:
 
-```{.yaml linenums="1"}
+``` {.yaml linenums="1"}
 
     curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/tiles-update/workshop/exercises/data/tartu/bathingwater-estonia.geojson
     python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
@@ -167,7 +167,7 @@ docker compose build
 
 Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this code block before the end:
 
-```{.yaml linenums="1"}
+``` {.yaml linenums="1"}
     bathingwater-estonia:
         type: collection
         title: Bathing water sources
@@ -271,7 +271,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     The code uses the LeafletJS library with the [leaflet.vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid) plugin to display the lakes OGC API - Tiles service on top of a base layer.
 
-```{.html linenums="1"}
+``` {.html linenums="1"}
     <html>
     <head><title>OGC API - Tiles exercise</title></head>
     <body>
@@ -289,7 +289,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 
-    <script>
+    <script>    
     map = L.map('map').setView({ lat: 58.37, lng: 26.72 }, 7);
     map.addLayer(
         new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -316,14 +316,14 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
                 opacity: 1.0,
             });
         }
-    }
+    } 
         var mapVectorTileOptions = {
             rendererFactory: L.canvas.tile,
             interactive: true,
             vectorTileLayerStyles: vectorTileStyling,
             };
         var pbfURL='http://localhost:5000/collections/bathingwater-estonia/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt';
-        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).addTo(map);
+        var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).addTo(map); 
     </script>
     </body>
     </html>
@@ -331,15 +331,16 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
 In this example, the colors of the symbols reflect the value of the `visitors` attribute.
 
-![](../assets/images/leaflet-estonia.png){ width=100% }
+   ![](../assets/images/leaflet-estonia.png){ width=100% }
 
-!!! note
+!!! note 
 
     You can check the layer attributes, by opening the console in the developer tools.
     ![](../assets/images/vtiles-attributes.png){ width=100% }
 
-!!! tip
-Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
+
+!!! tip 
+    Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
 
     If you want to render the tiles from the [Elasticsearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
     <div class="termy">
@@ -350,17 +351,19 @@ Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/ma
 
     ![](../assets/images/leaflet-estonia2.png){ width=100% }
 
-!!! tip
+!!! tip 
 
     See the [official LeafletJS documentation](https://leafletjs.com/reference.html)
+
 
 ### OpenLayers
 
 [OpenLayers](https://openlayers.org) is a popular JavaScript library to add interactive maps to websites. OpenLayers natively supports OGC API - Tiles.
 
-!!! tip
+!!! tip 
 
     See the [official OpenLayers documentation](https://openlayers.org/en/latest/examples/ogc-vector-tiles.html)
+
 
 # Summary
 
