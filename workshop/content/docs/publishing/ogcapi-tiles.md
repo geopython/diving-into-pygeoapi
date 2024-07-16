@@ -38,7 +38,6 @@ In this scenario, tiles must be pre-rendered before serving. Existing tools to c
 include, but are not limited to:
 
 * [TileMill](https://tilemill-project.github.io/tilemill)
-* [MapProxy](https://mapproxy.org)
 * [QGIS](https://www.qgistutorials.com/en/docs/creating_basemaps_with_qtiles.html)
 * [tippecanoe](https://github.com/mapbox/tippecanoe)
 
