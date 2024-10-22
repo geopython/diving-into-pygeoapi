@@ -76,3 +76,10 @@ This directory provides sample data to demonstrate functionality.
 - description: Ruumiandmekogum "Eesti topograafia andmekogu - transport" hõlmab Eesti topograafia andmekogu (ETAK) reaalsusmudeli transpordi gruppi koondatud reaalse maailma nähtuseid, mis on klassifitseeritud nähtusklassideks
 - copyright:  Keskkonnaagentuur 
 - license: CC BY-SA 3.0
+
+### NASA Blue Marble Night Lights Data sample over Estonia
+- title: [./tartu/estonia_light.tif](./tartu/estonia_light.tif)
+- url: https://blackmarble.gsfc.nasa.gov/
+- description: At night, satellite images of Earth capture a uniquely human signal--artificial lighting. Remotely-sensed lights at night provide a new data source for improving our understanding of interactions between human systems and the environment. NASA has developed the Black Marble, a daily calibrated, corrected, and validated product suite, so nightlight data can be used effectively for scientific observations. Black Marble is playing a vital role in research on light pollution, illegal fishing, fires, disaster impacts and recovery, and human settlements and associated energy infrastructures.
+- copyright:  NASA
+- license: CC0

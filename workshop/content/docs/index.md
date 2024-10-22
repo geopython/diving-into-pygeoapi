@@ -4,7 +4,7 @@ title: Diving into pygeoapi
 
 # Welcome to the Diving into pygeoapi workshop!
 
-Version: 1.1
+Version: 1.3
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
@@ -102,7 +102,7 @@ The workshop contents, wiki and issue tracker are managed on GitHub at [https://
 
 # Support
 
-A [Gitter](https://matrix.to/#/#geopython_diving-into-pygeoapi:gitter.im) channel exists for
+A [Gitter](https://app.gitter.im/#/room/#geopython_diving-into-pygeoapi:gitter.im) channel exists for
 discussion and live support from the developers of the workshop and other workshop participants.
 
 For issues/bugs/suggestions or improvements/contributions, please use the [GitHub issue tracker](https://github.com/geopython/diving-into-pygeoapi/issues).
