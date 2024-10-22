@@ -45,8 +45,8 @@ server:
     limit: 10
     # templates: /path/to/templates
     map:
-        url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
-        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     ogc_schemas_location: /schemas.opengis.net
     manager:
         name: TinyDB
@@ -196,35 +196,35 @@ resources:
     # Uncomment a config section between START and END for each exercise.
     # Make sure that indentation matches!
 
-## START - EXERCISE 1 - Your First Collection
-    Bathing_Water_Estonia:
-        type: collection
-        title: Bathing Water Estonia
-        description: Locations where the Estonian Health Board monitors the bathing water quality
-        keywords:
-            - bathingwater
-            - estonia
-        links:
-            - type: text/csv
-              rel: canonical
-              title: data
-              href: https://avaandmed.eesti.ee/datasets/supluskohad
-              hreflang: EE
-        extents:
-            spatial:
-                bbox: [20,57,29,60]
-                crs: http://www.opengis.net/def/crs/EPSG/0/4326
-        providers:
-            - type: feature
-              name: CSV
-              data: /data/tartu/bathingwater-estonia.csv
-              id_field: id
-              title_field: Name
-              geometry:
-                 x_field: x
-                 y_field: y
-              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
-## END - EXERCISE 1 - Your First Collection
+### START - EXERCISE 1 - Your First Collection
+#     Bathing_Water_Estonia:
+#         type: collection
+#         title: Bathing Water Estonia
+#         description: Locations where the Estonian Health Board monitors the bathing water quality
+#         keywords:
+#             - bathingwater
+#             - estonia
+#         links:
+#             - type: text/csv
+#               rel: canonical
+#               title: data
+#               href: https://avaandmed.eesti.ee/datasets/supluskohad
+#               hreflang: EE
+#         extents:
+#             spatial:
+#                 bbox: [20,57,29,60]
+#                 crs: http://www.opengis.net/def/crs/EPSG/0/4326
+#         providers:
+#             - type: feature
+#               name: CSV
+#               data: /data/tartu/bathingwater-estonia.csv
+#               id_field: id
+#               title_field: Name
+#               geometry:
+#                  x_field: x
+#                  y_field: y
+#               storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
+### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - cadastral parcels Tartu
 #     cp-tartu:
@@ -254,67 +254,70 @@ resources:
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
-#     firenze-terrains:
+#    tartu-ntl:
+#        type: collection
+#        title: NASA Blue Marble Night Lights Data sample over Estonia
+#        description: NASA Blue Marble Night Lights Data sample over Estonia
+#        keywords:
+#            - Blue Marble
+#            - Night Lights
+#            - NTL
+#        links:
+#            - type: text/html
+#              rel: about
+#              title: NASA Blue Marble Night Lights Data
+#              href: https://appliedsciences.nasa.gov/get-involved/training/english/arset-introduction-nasas-black-marble-night-lights-data
+#              hreflang: en
+#        extents:
+#            spatial:
+#              bbox: [26.6264,58.32569,26.82632,58.433989]
+#              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: coverage
+#              name: rasterio
+#              data: /data/tartu/estonia_light.tif # place correct path here
+#              format:
+#                  name: GTiff
+#                  mimetype: application/tiff
+## END - EXERCISE 3 - Coverages
+
+## START - EXERCISE 4 - Tiles
+#     hyderabad:
 #         type: collection
-#         title: Administrative boundaries before 2014
-#         description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
+#         title: Greater Hyderabad Municipal Corporation ward boundaries
+#         description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
 #         keywords:
-#             - Cadastral parcels
+#           - Boundaries
+#           - Administrative
+#           - Ward
 #         links:
-#             -   type: text/html
-#                 rel: canonical
-#                 title: Administrative boundaries before 2014
-#                 href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:419774cb-e812-4ca4-991d-97f0b747e017
-#                 hreflang: it
+#             - type: text/html
+#               rel: canonical
+#               title: information
+#               href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/
+#               hreflang: en-US
 #         extents:
 #             spatial:
-#                 bbox: [10.70,43.43,11.76,44.25]
+#                 bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
 #                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#             temporal:
+#                 begin: null
+#                 end: null  # or empty
 #         providers:
-#             -   type: coverage
-#                 name: rasterio
-#                 data: /data/53_ED1_G.tif # place correct path here
-#                 format:
-#                     name: GTiff
-#                     mimetype: application/tiff
-## END - EXERCISE 3 - Coverages
-## START - EXERCISE 4 - Tiles
-    hyderabad:
-        type: collection
-        title: Greater Hyderabad Municipal Corporation ward boundaries
-        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
-        keywords:
-           - Boundaries
-           - Administrative
-           - Ward
-        links:
-            - type: text/html
-              rel: canonical
-              title: information
-              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about
-              hreflang: en-US
-        extents:
-            spatial:
-                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-            temporal:
-                begin: 2011-11-11
-                end: null  # or empty
-        providers:
-            - type: feature
-              name: GeoJSON
-              data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-              id_field: objectid
-            - type: tile
-              name: MVT-tippecanoe
-              data: /data/tiles/  # local directory tree
-              options:
-                zoom:
-                    min: 0
-                    max: 16
-              format:
-                    name: pbf
-                    mimetype: application/vnd.mapbox-vector-tile
+#             - type: feature
+#               name: GeoJSON
+#               data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+#               id_field: id
+#             - type: tile
+#               name: MVT-tippecanoe
+#               data: /data/tiles/  # local directory tree
+#               options:
+#                 zoom:
+#                     min: 0
+#                     max: 16
+#               format:
+#                     name: pbf
+#                     mimetype: application/vnd.mapbox-vector-tile
 # # END - EXERCISE 4 - Tiles
 ## START - EXERCISE 5 - Maps
 #     airports:
@@ -415,12 +418,11 @@ resources:
             name: HelloWorld
 
 ## START EXERCISE 8 - Functions via OGC API - Processes
-    # squared:
-    #     type: process
-    #     processor:
-    #         name: pygeoapi.process.squared.SquaredProcessor
+#    squared:
+#        type: process
+#        processor:
+#            name: pygeoapi.process.squared.SquaredProcessor
 ## END EXERCISE 8 - Functions via OGC API - Processes
-
 
 ## START - EXERCISE 9 - WFS Proxy
 #     suol_epicentri_storici:
