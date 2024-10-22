@@ -45,8 +45,8 @@ server:
     limit: 10
     # templates: /path/to/templates
     map:
-        url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
-        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     ogc_schemas_location: /schemas.opengis.net
     manager:
         name: TinyDB
@@ -254,30 +254,33 @@ resources:
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
-#     firenze-terrains:
-#         type: collection
-#         title: Administrative boundaries before 2014
-#         description: Cadastral parcels (terrains) from the cadastre. Territory Agency; SIT and Information Networks;
-#         keywords:
-#             - Cadastral parcels
-#         links:
-#             -   type: text/html
-#                 rel: canonical
-#                 title: Administrative boundaries before 2014
-#                 href: http://dati.cittametropolitana.fi.it/geonetwork/srv/metadata/cmfi:419774cb-e812-4ca4-991d-97f0b747e017
-#                 hreflang: it
-#         extents:
-#             spatial:
-#                 bbox: [10.70,43.43,11.76,44.25]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             -   type: coverage
-#                 name: rasterio
-#                 data: /data/53_ED1_G.tif # place correct path here
-#                 format:
-#                     name: GTiff
-#                     mimetype: application/tiff
+#    tartu-ntl:
+#        type: collection
+#        title: NASA Blue Marble Night Lights Data sample over Estonia
+#        description: NASA Blue Marble Night Lights Data sample over Estonia
+#        keywords:
+#            - Blue Marble
+#            - Night Lights
+#            - NTL
+#        links:
+#            - type: text/html
+#              rel: about
+#              title: NASA Blue Marble Night Lights Data
+#              href: https://appliedsciences.nasa.gov/get-involved/training/english/arset-introduction-nasas-black-marble-night-lights-data
+#              hreflang: en
+#        extents:
+#            spatial:
+#              bbox: [26.6264,58.32569,26.82632,58.433989]
+#              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: coverage
+#              name: rasterio
+#              data: /data/tartu/estonia_light.tif # place correct path here
+#              format:
+#                  name: GTiff
+#                  mimetype: application/tiff
 ## END - EXERCISE 3 - Coverages
+
 ## START - EXERCISE 4 - Tiles
     hyderabad:
         type: collection
@@ -415,12 +418,11 @@ resources:
             name: HelloWorld
 
 ## START EXERCISE 8 - Functions via OGC API - Processes
-    # squared:
-    #     type: process
-    #     processor:
-    #         name: pygeoapi.process.squared.SquaredProcessor
+#    squared:
+#        type: process
+#        processor:
+#            name: pygeoapi.process.squared.SquaredProcessor
 ## END EXERCISE 8 - Functions via OGC API - Processes
-
 
 ## START - EXERCISE 9 - WFS Proxy
 #     suol_epicentri_storici:

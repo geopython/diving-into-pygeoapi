@@ -92,10 +92,10 @@ If all goes well, you should be able to run Docker from the command line as foll
 
 <div class="termy">
 ```bash
-docker --version
+docker version
 Docker version 20.10.17, build 100c701
 
-docker compose --version  
+docker compose version  
 Docker Compose version v2.6.1
 ```
 </div>
