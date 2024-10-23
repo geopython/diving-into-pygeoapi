@@ -269,6 +269,56 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
+This exercise will be done using a jupyter notebook. If you prefer, you can do it using python from the command line (see bellow).
+
+Before continuing, make sure you are in the `workshop/exercises` folder. You will need that, to be able to use the jupyter notebook.
+
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    pwd
+    ```
+    </div>
+    
+=== "Windows"
+
+    <div class="termy">
+    ```bash
+    cd
+    ```
+    </div>
+
+Then run a container to start a jupyter notebook, mounting the local folder:
+
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    docker run -p 8888:8888 -v $(pwd):/home/jovyan/work jupyter/base-notebook
+    ```
+    </div>
+    
+=== "Windows"
+
+    <div class="termy">
+    ```bash
+    docker run -p 8888:8888 -v ${pwd}:/home/jovyan/work jupyter/base-notebook
+    ```
+    </div>
+
+Enter the url stated on the command line,  `http://127.0.0.1:8888/lab` followed by a token. Enter the `work` folder and open the `features-owslib.ipynb`.
+
+![jupyter notebook](../assets/images/jupyter1.png)
+
+Run through the notebook, to explore an OGC API - Features server, using owslib.
+
+!!! note
+
+    You can run the same instructions using your local pygeoapi server, instead of the demo pygeoapi instance.
+
+#### Using python from the command line
+
 !!! question "Interact with OGC API - Features via OWSLib"
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
