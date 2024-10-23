@@ -113,15 +113,15 @@ docker compose up
 If you experience startup problems, consult the [README file](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). 
 You may need to adapt your local host system's virtual memory setting.
 
-First we will load `bathingwater-estonia.geojson` into the Elasticsearch server. 
+First we will load `greater_hyderabad_municipal_corporation_ward_Boundaries.geojson` into the Elasticsearch server. 
 
 Edit the `add-data.sh` script within the `ES` folder, adding these two lines before the end:
 
 ``` {.bash linenums="1"}
-    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/tartu/bathingwater-estonia.geojson
-    python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
+curl -o /tmp/hyderabad.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/refs/heads/main/workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+python3 /load_es_data.py /tmp/hyderabad.geojson objectid
 ```
-Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 
+Through these changes the file `greater_hyderabad_municipal_corporation_ward_Boundaries.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 
 
 After this we need to rebuild the docker image:
 
@@ -136,7 +136,7 @@ This effectively enables publishing the file `greater_hyderabad_municipal_corpor
 using the Elasticsearch backend provider.
 
 ``` {.yaml linenums="1"}
-    greater_hyderabad_municipal_corporation_ward_boundaries:
+    hyderabad:
         type: collection
         title: Greater Hyderabad Municipal Corporation ward boundaries
         description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
@@ -160,27 +160,27 @@ using the Elasticsearch backend provider.
         providers:
             - type: feature
               name: Elasticsearch
-              # note: elastic_search is the Docker container name as defined in `docker-compose.yml`
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
+              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              data: http://elastic_search:9200/hyderabad
               id_field: objectid
 ``` 
 
-On startup the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
+On startup (e.g.: docker compose up -d) the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
 You can check the logs using:
 
 <div class="termy">
 ```bash
-docker compose logs --follow pygeoapi
+docker compose logs --follow
 ```
 </div>
 
 After the server has started you can access the collection page here:
 
-<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries>
+<http://localhost:5000/collections/hyderabad>
 
 And the feature items here:
 
-<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries/items>
+<http://localhost:5000/collections/hyderabad/items>
 
    ![](../assets/images/features-hyderabad.png){ width=100% }
 
@@ -245,6 +245,14 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
     
+    Check summary information about the layer with:
+
+    <div class="termy">
+    ```bash
+    ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs obs -so
+    ```
+    </div>
+
     Now, let's convert the observations into a shapefile
 
     <div class="termy">
@@ -255,7 +263,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! Note
 
-    You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
+    You can even use OGR to append new features to an OGC API - Features collection which supports transactions. Read more [here](https://docs.pygeoapi.io/en/latest/transactions.html) about support for transactions in pygeoapi.
 
 ### OWSLib - Advanced
 
