@@ -8,10 +8,10 @@ title: Exercise 2 - Vector data via OGC API - Features
 data (geometries and their attributes). While the core specification covers basic data access and query,
 additional related standards and extensions are in development for the following capabilities:
 
-- [OGC API - Features - Part 1: Core](https://docs.opengeospatial.org/is/17-069r4/17-069r4.html) provides basic access and query capabilities
-- [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections
-- [OGC API - Features - Part 3: Filtering](https://docs.ogc.org/DRAFTS/19-079r1.html) (**draft**) adds the ability for complex queries using Common Query Language (CQL)
-- [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002.html) (**draft**) adds transactional capabilities
+- [OGC API - Features - Part 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html) provides basic access and query capabilities
+- [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.ogc.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections
+- [OGC API - Features - Part 3: Filtering](https://docs.ogc.org/is/19-079r2/19-079r2.html) adds the ability for complex queries using Common Query Language (CQL)
+- [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002r1.html) (**draft**) adds transactional capabilities 
 
 ## pygeoapi support
 
