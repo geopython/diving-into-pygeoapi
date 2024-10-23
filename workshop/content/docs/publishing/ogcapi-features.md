@@ -8,10 +8,10 @@ title: Exercise 2 - Vector data via OGC API - Features
 data (geometries and their attributes). While the core specification covers basic data access and query,
 additional related standards and extensions are in development for the following capabilities:
 
-- [OGC API - Features - Part 1: Core](https://docs.opengeospatial.org/is/17-069r4/17-069r4.html) provides basic access and query capabilities
-- [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections
-- [OGC API - Features - Part 3: Filtering](https://docs.ogc.org/DRAFTS/19-079r1.html) (**draft**) adds the ability for complex queries using Common Query Language (CQL)
-- [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002.html) (**draft**) adds transactional capabilities
+- [OGC API - Features - Part 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html) provides basic access and query capabilities
+- [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.ogc.org/is/18-058r1/18-058r1.html) enables the import and export of any data according to dedicated projections
+- [OGC API - Features - Part 3: Filtering](https://docs.ogc.org/is/19-079r2/19-079r2.html) adds the ability for complex queries using [Common Query Language (CQL2)](https://docs.ogc.org/is/21-065r2/21-065r2.html)
+- [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002r1.html) (**draft**) adds transactional capabilities 
 
 ## pygeoapi support
 
@@ -38,7 +38,7 @@ vector data source.
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
+Let's add the file `workshop/exercises/data/tartu/cp-tartu2.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
@@ -53,7 +53,7 @@ Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
     cp-tartu:
         type: collection
         title: Tartu Cadastral Parcels
-        description: Cadasral parcels in downtown Tartu
+        description: Cadastral parcels in downtown Tartu
         keywords:
             - Cadastral parcels
             - Tartu
@@ -113,15 +113,15 @@ docker compose up
 If you experience startup problems, consult the [README file](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). 
 You may need to adapt your local host system's virtual memory setting.
 
-First we will load `bathingwater-estonia.geojson` into the Elasticsearch server. 
+First we will load `greater_hyderabad_municipal_corporation_ward_Boundaries.geojson` into the Elasticsearch server. 
 
 Edit the `add-data.sh` script within the `ES` folder, adding these two lines before the end:
 
 ``` {.bash linenums="1"}
-    curl -o /tmp/bathingwater-estonia.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/main/workshop/exercises/data/tartu/bathingwater-estonia.geojson
-    python3 /load_es_data.py /tmp/bathingwater-estonia.geojson id
+curl -o /tmp/hyderabad.geojson https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/refs/heads/main/workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+python3 /load_es_data.py /tmp/hyderabad.geojson objectid
 ```
-Through these changes the file `bathingwater-estonia.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 
+Through these changes the file `greater_hyderabad_municipal_corporation_ward_Boundaries.geojson` is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. 
 
 After this we need to rebuild the docker image:
 
@@ -136,7 +136,7 @@ This effectively enables publishing the file `greater_hyderabad_municipal_corpor
 using the Elasticsearch backend provider.
 
 ``` {.yaml linenums="1"}
-    greater_hyderabad_municipal_corporation_ward_boundaries:
+    hyderabad:
         type: collection
         title: Greater Hyderabad Municipal Corporation ward boundaries
         description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
@@ -160,27 +160,27 @@ using the Elasticsearch backend provider.
         providers:
             - type: feature
               name: Elasticsearch
-              # note: elastic_search is the Docker container name as defined in `docker-compose.yml`
-              data: http://elastic_search:9200/greater_hyderabad_municipal_corporation_ward_boundaries
+              #Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml
+              data: http://elastic_search:9200/hyderabad
               id_field: objectid
 ``` 
 
-On startup the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
+On startup (e.g.: docker compose up -d) the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
 You can check the logs using:
 
 <div class="termy">
 ```bash
-docker compose logs --follow pygeoapi
+docker compose logs --follow
 ```
 </div>
 
 After the server has started you can access the collection page here:
 
-<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries>
+<http://localhost:5000/collections/hyderabad>
 
 And the feature items here:
 
-<http://localhost:5000/collections/greater_hyderabad_municipal_corporation_ward_boundaries/items>
+<http://localhost:5000/collections/hyderabad/items>
 
    ![](../assets/images/features-hyderabad.png){ width=100% }
 
@@ -245,6 +245,14 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
     
+    Check summary information about the layer with:
+
+    <div class="termy">
+    ```bash
+    ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs obs -so
+    ```
+    </div>
+
     Now, let's convert the observations into a shapefile
 
     <div class="termy">
@@ -255,7 +263,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 !!! Note
 
-    You can even use OGR to append new features to an OGC API - Features collection which supports transactions (pygeoapi transaction support is planned for future implementation)
+    You can even use OGR to append new features to an OGC API - Features collection which supports transactions. Read more [here](https://docs.pygeoapi.io/en/latest/transactions.html) about support for transactions in pygeoapi.
 
 
 !!! tip "Use GDAL from the commandline with Docker"
@@ -311,6 +319,56 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 ### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
+
+This exercise will be done using a jupyter notebook. If you prefer, you can do it using python from the command line (see bellow).
+
+Before continuing, make sure you are in the `workshop/exercises` folder. You will need that, to be able to use the jupyter notebook.
+
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    pwd
+    ```
+    </div>
+    
+=== "Windows"
+
+    <div class="termy">
+    ```bash
+    cd
+    ```
+    </div>
+
+Then run a container to start a jupyter notebook, mounting the local folder:
+
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    docker run -p 8888:8888 -v $(pwd):/home/jovyan/work jupyter/base-notebook
+    ```
+    </div>
+    
+=== "Windows"
+
+    <div class="termy">
+    ```bash
+    docker run -p 8888:8888 -v ${pwd}:/home/jovyan/work jupyter/base-notebook
+    ```
+    </div>
+
+Enter the url stated on the command line,  `http://127.0.0.1:8888/lab` followed by a token. Enter the `work` folder and open the `features-owslib.ipynb`.
+
+![jupyter notebook](../assets/images/jupyter1.png)
+
+Run through the notebook, to explore an OGC API - Features server, using owslib.
+
+!!! note
+
+    You can run the same instructions using your local pygeoapi server, instead of the demo pygeoapi instance.
+
+#### Using python from the command line
 
 !!! question "Interact with OGC API - Features via OWSLib"
 

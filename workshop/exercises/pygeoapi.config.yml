@@ -230,7 +230,7 @@ resources:
 #     cp-tartu:
 #         type: collection
 #         title: Tartu Cadastral Parcels
-#         description: Cadasral parcels in downtown Tartu
+#         description: Cadastral parcels in downtown Tartu
 #         keywords:
 #             - Cadastral parcels
 #             - Tartu
