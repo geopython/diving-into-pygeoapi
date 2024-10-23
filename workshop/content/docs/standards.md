@@ -74,7 +74,11 @@ pygeoapi over time:
 
 #### OGC APIs supported by pygeoapi
 
-pygeoapi implements numerous OGC API standards and draft standards. In addition, it is a Reference Implementation for some of them. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
+pygeoapi implements numerous OGC API standards and draft standards. In addition, it is compliance certified and even a Reference Implementation (RI) for some of them. Compliance certification is important to remove interoperability risks. RI are always compliance certified. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
+
+!!! Citation
+
+    Candidate Products that pass all the tests in a Compliance Test Package, and that OGC has reviewed and certified as having passed those tests, are considered compliant with that Implementation Standard version. 
 
 !!! Citation
 
@@ -87,7 +91,7 @@ pygeoapi implements numerous OGC API standards and draft standards. In addition,
 | OGC API - Coverages                    | Implementing    | ✅                        |
 | OGC API - Tiles                        | Reference       | ✅                        |
 | OGC API - Maps                         | Implementing    | ✅                        |
-| OGC API - Processes                    | Implementing    | ✅                        |
+| OGC API - Processes                    | Certified    | ✅                        |
 | OGC API - Records                      | Implementing    | ✅                        |
 | OGC API - Environmental Data Retrieval | Reference       | ✅                        |
 | SpatioTemporal Asset Catalog           | Implementing    |                           |
