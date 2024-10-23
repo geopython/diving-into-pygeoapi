@@ -48,7 +48,7 @@ To test:
     <div class="termy">
     ```bash
     docker compose up -d
-    docker ls  # verify that the pygeoapi container is running
+    docker ps  # verify that the pygeoapi container is running
     # visit http://localhost:5000 in your browser, verify some collections
     docker logs --follow pygeoapi  # view logs
     docker compose stop
