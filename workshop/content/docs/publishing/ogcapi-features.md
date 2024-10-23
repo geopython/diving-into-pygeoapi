@@ -53,7 +53,7 @@ Let's add the file `workshop/exercises/data/tartu/cp-tartu2.gpkg.zip`:
     cp-tartu:
         type: collection
         title: Tartu Cadastral Parcels
-        description: Cadasral parcels in downtown Tartu
+        description: Cadastral parcels in downtown Tartu
         keywords:
             - Cadastral parcels
             - Tartu
