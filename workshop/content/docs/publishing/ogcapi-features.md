@@ -38,7 +38,7 @@ vector data source.
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/exercises/data/cp-tartu2.gpkg.zip`:
+Let's add the file `workshop/exercises/data/tartu/cp-tartu2.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
