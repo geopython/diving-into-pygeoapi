@@ -15,22 +15,16 @@ Version: 1.3
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G Europe 2024](https://2024.europe.foss4g.org) workshop team
+# Your [GISE Hub Winter School on OGC Stack](https://docs.google.com/document/d/1_ZiwzYlRheAlhsAjdjq2sV8twjImalFMw8jHaR8Dkwo/edit?tab=t.0) workshop team
 
 <table>
     <tr>
         <td><a href="https://twitter.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
         <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
-        <td><a href="https://twitter.com/pvangenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
-        <td><a href="https://twitter.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
-        <td><a href="https://twitter.com/krishnaglodha"><img width="150" src="https://avatars.githubusercontent.com/u/47075664?v=4"/></a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
         <td><a href="https://github.com/doublebyte1">Joana Simoes</a></td>
-        <td><a href="https://github.com/pvangenuchten">Paul van Genuchten</a></td>
-        <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
-        <td><a href="https://github.com/krishnaglodha">Krishna Lodha</a></td>
     </tr>
 </table>
 
