@@ -96,7 +96,7 @@ The workshop contents, wiki and issue tracker are managed on GitHub at [https://
 
 ## Printing this workshop
 
-To print this workshop, navigate to the [print page](/print_page) and select *File > Print > Save as PDF*.
+To print this workshop, navigate to the [print page](print_page) and select *File > Print > Save as PDF*.
 
 # Support
 
