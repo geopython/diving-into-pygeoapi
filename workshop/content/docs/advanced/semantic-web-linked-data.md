@@ -8,7 +8,7 @@ This section touches on 3 aspects of the Semantic Web:
 
 - [Search engines](#search-engines)
 - [Publish spatial data in the semantic web](#publish-spatial-data-in-the-semantic-web)
-- [Proxy to semantic web](#proxy-to-semantic-web)
+- [Proxy to semantic web](#proxy-to-the-semantic-web)
 
 ## Search engines
 
