@@ -6,11 +6,11 @@ title: Administration
 
 ## Overview
 
-pygeoapi provides an administration API (see the pygeoapi [documentation](https://docs.pygeoapi.io/en/latest/admin-api.html) for more information on how to enable, configure and use) in support of managing its configuration.  The API (not an OGC API) is implementated as a RESTful service to help create, update, replace or delete various elements of pygeoapi configuration.
+pygeoapi provides an administration API (see the pygeoapi [documentation](https://docs.pygeoapi.io/en/latest/admin-api.html) for more information on how to enable, configure and use) in support of managing its configuration.  The API (not an OGC API) is implementated as a RESTful service to help create, update, replace or delete various elements of pygeoapi configuration.  A simple read-only UI is implemented as part of the admin API.
 
 ## User interface
 
-By design, pygeoapi does not provide a user interface to administer the configuration.  Given that the admin API exists, a few options can be considered for developing an admin UI:
+By design, pygeoapi does not provide a true user interface to administer the configuration.  Given that the admin API exists, a few options can be considered for developing an admin UI:
 
 - standalone
     - simple application with no connectivity to the pygeoapi admin API
