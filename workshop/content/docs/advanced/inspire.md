@@ -35,8 +35,8 @@ recommendation and the relevant Good Practices.
 | Discovery service                | CSW    | OGC API - Records                   | [In preparation](https://github.com/INSPIRE-MIF/gp-ogc-api-records) |
 | View service                     | WM(T)S | OGC API - Maps / OGC API - Tiles     | Not scheduled<br> [In preparation](https://wikis.ec.europa.eu/display/InspireMIG/69th+MIG-T+meeting+2022-04-01) |
 | Download service - Vector        | WFS    | OGC API - Features                  | [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-api-features) |
-| Download service - Coverage      | WCS    | OGC API - Coverages / STAC        | Not scheduled<br> [In preparation](https://github.com/INSPIRE-MIF/gp-stac) | 
-| Download service - Sensor        | SOS    | OGC API - EDR / Sensorthings API [^1]  | Not scheduled<br> [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api) |
+| Download service - Coverage      | WCS    | OGC API - Coverages / STAC [^1]       | Not scheduled<br> [In preparation](https://github.com/INSPIRE-MIF/gp-stac) | 
+| Download service - Sensor        | SOS    | OGC API - EDR / Sensorthings API [^2]  | Not scheduled<br> [Adopted](https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api) |
 
 [^1]: Sensorthings API and is not an OGC API standards and is currently not supported by pygeoapi. It is listed here for completeness
 [^2]: STAC is not OGC API standard but is supported by pygeoapi
