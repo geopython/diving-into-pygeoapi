@@ -113,7 +113,7 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
         ```
         </div>
 
-    Now running Python:
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 

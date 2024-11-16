@@ -521,8 +521,7 @@ Run through the notebook, to explore an OGC API - Features server, using owslib.
         ```
         </div>
 
-    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
-    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
+    Then start a Python console session with `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 

@@ -222,7 +222,7 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
         ``` 
         </div>
 
-    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
+    Then start a Python console session with `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 
