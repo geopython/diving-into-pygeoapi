@@ -52,11 +52,21 @@ recommendation and the relevant Good Practices.
     Download the zipfile 'inspire-records.zip' from the repository. Expand the zipfile. The `/tests` folder contains a script 
     [load_tinydb_records.py](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py). The script has 2 parameters:
 
-    <div class="termy">
-    ```bash
-    python3 load_tinydb_records.py <path/to/xml-files> <output.db>
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        python3 load_tinydb_records.py <path/to/xml-files> <output.db>
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        python3 load_tinydb_records.py <path/to/xml-files> <output.db>
+        ```
+        </div>
 
     Now configure [TinyDB as a provider for OGC API - Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the XML output of some of the records. 
 

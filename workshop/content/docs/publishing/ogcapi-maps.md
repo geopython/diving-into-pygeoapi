@@ -88,21 +88,47 @@ QGIS added support for API's providing rendered image layers via its raster supp
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ```
-    </div>
+    === "Linux/Mac"
 
-    <div class="termy">
-    ```python
-    >>> from owslib.ogcapi.maps import Maps
-    >>> m = Maps('http://localhost:5000')
-    >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
-    >>> with open("output.png", "wb") as fh:
-    ...     fh.write(data.getbuffer())
-    ```
-    </div>
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    Now running in Python:
+
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.maps import Maps
+        >>> m = Maps('http://localhost:5000')
+        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> with open("output.png", "wb") as fh:
+        ...     fh.write(data.getbuffer())
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.maps import Maps
+        >>> m = Maps('http://localhost:5000')
+        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> with open("output.png", "wb") as fh:
+        ...     fh.write(data.getbuffer())
+        ```
+        </div>
 
 !!! note
 

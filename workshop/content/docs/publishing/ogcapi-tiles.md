@@ -54,7 +54,7 @@ Let's generate the tiles as the first step using tippecanoe:
         ```
         </div>
      
-    === "Windows"
+    === "Windows (PowerShell)"
     
         <div class="termy">
         ```bash
@@ -126,19 +126,38 @@ Elasticsearch provides a middleware that [renders an index on the fly, as vector
 
 If you want to explore publishing vector tiles using Elasticsearch clone [pygeoapi-examples](https://github.com/geopython/pygeoapi-examples/) repository:
 
-<div class="termy">
-```bash
-git clone https://github.com/geopython/pygeoapi-examples.git
-```
-</div>
+=== "Linux/Mac"
 
+    <div class="termy">
+    ```bash
+    git clone https://github.com/geopython/pygeoapi-examples.git
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    git clone https://github.com/geopython/pygeoapi-examples.git
+    ```
+    </div>
 Then change into the `docker/mvt-elastic` folder:
 
-<div class="termy">
-```bash
-cd docker/mvt-elastic
-```
-</div>
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    cd docker/mvt-elastic
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    cd docker/mvt-elastic
+    ```
+    </div>
 
 Edit the `add-data.sh` script on the `ES` folder, adding these two lines before the end:
 
@@ -151,11 +170,21 @@ Edit the `add-data.sh` script on the `ES` folder, adding these two lines before 
 
 Above we are downloading the `greater_hyderabad_municipal_corporation_ward_Boundaries.geojson` inside the container, and ingesting it into an Elasticsearch index. After this we need to build the docker image:
 
-<div class="termy">
-```bash
-docker compose build
-```
-</div>
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    docker compose build
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    docker compose build
+    ```
+    </div>
 
 Edit the `docker.config.yml` configuration on the `pygeoapi` folder, adding this code block before the end:
 
@@ -207,11 +236,21 @@ This configuration enables publishing `greater_hyderabad_municipal_corporation_w
 
 Finally start the docker composition, which will download and ingest the dataset and publish it in pygeoapi:
 
-<div class="termy">
-```bash
-docker compose up
-```
-</div>
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    docker compose up
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    docker compose up
+    ```
+    </div>
 
 !!! note
 
@@ -327,11 +366,22 @@ In this example, the colors of the symbols reflect the value of the `objectid` a
     Try adding a [different pygeoapi vector tiles layer](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) by updating the code in `workshop/exercises/html/vector-tiles.html`.
 
     If you want to render the tiles from the [Elasticsearch example](#publish-vector-tiles-from-elasticsearch), you can check out the code from [this](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm) repository:
-    <div class="termy">
-    ```bash
-    git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
-    ```
-    </div>
+
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
+        ```
+        </div>
 
     ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
 

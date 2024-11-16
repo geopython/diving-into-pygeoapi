@@ -69,23 +69,45 @@ develop your own custom pygeoapi plugin, or convert your metadata to OGC API - R
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
 
 ### Sample ISO 19139 to TinyDBCatalogue loader
 
 It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
 
-<div class="termy">
-```bash
-cd workshop/exercises/data/tartu/metadata
-curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
-python3 load_tinydb_records.py xml catalogue.tinydb
-```
-</div>
+    === "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    cd workshop/exercises/data/tartu/metadata
+    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py xml catalogue.tinydb
+    ```
+    </div>
+
+    === "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    cd workshop/exercises/data/tartu/metadata
+    curl https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+    python3 load_tinydb_records.py xml catalogue.tinydb
+    ```
+    </div>
 
 If you do not have curl installed, copy the URL above to your web browser and save locally.
 
@@ -93,16 +115,31 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
 
 !!! example "Using the OWSLib Docker container to load metadata"
 
-    <div class="termy">
-    ```bash
-    cd workshop/exercises
-    docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
-    pip3 install owslib
-    apt-get update -y && apt-get install curl -y
-    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
-    python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+        pip3 install owslib
+        apt-get update -y && apt-get install curl -y
+        curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+        python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+        pip3 install owslib
+        apt-get update -y && apt-get install curl -y
+        curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
+        python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
+        ```
+        </div>
 
 Navigate to <http://localhost:5000/collections/example_catalogue> to evaluate whether the new metadata has been published
 to the collection.
@@ -117,12 +154,23 @@ to the collection.
     Install and run pygeometa per below to get an idea of the various commands and functionality (as well,
     consult the [tutorial](https://geopython.github.io/pygeometa/tutorial)).
 
-    <div class="termy">
-    ```bash
-    pip3 install pygeometa
-    pygeometa --help
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        pip3 install pygeometa
+        pygeometa --help
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install pygeometa
+        pygeometa --help
+        ```
+        </div>
 
 ## pygeoapi as a CSW proxy
 
@@ -158,38 +206,77 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ``` 
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ``` 
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ``` 
+        </div>
 
     Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
-    <div class="termy">
-    ```python
-    >>> from owslib.ogcapi.records import Records
-    >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
-    >>> w = Records(SERVICE_URL)
-    >>> w.url
-    'https://demo.pygeoapi.io/master'
-    >>> dutch_metacat = w.collection('dutch-metadata')
-    >>> dutch_metacat['id']
-    'dutch-metadata'
-    >>> dutch_metacat['title']
-    'Sample metadata records from Dutch Nationaal georegister'
-    >>> dutch_metacat['description']
-    'Sample metadata records from Dutch Nationaal georegister'
-    >>> dutch_metacat_query = w.collection_items('dutch-metadata', limit=1)
-    >>> dutch_metacat_query['numberMatched']
-    198
-    >>> dutch_metacat_query['numberReturned']
-    1
-    >>> dutch_metacat_query = w.collection_items('dutch-metadata', q='Wegpanorama')
-    >>> dutch_metacat_query['numberMatched']
-    2
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.records import Records
+        >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+        >>> w = Records(SERVICE_URL)
+        >>> w.url
+        'https://demo.pygeoapi.io/master'
+        >>> dutch_metacat = w.collection('dutch-metadata')
+        >>> dutch_metacat['id']
+        'dutch-metadata'
+        >>> dutch_metacat['title']
+        'Sample metadata records from Dutch Nationaal georegister'
+        >>> dutch_metacat['description']
+        'Sample metadata records from Dutch Nationaal georegister'
+        >>> dutch_metacat_query = w.collection_items('dutch-metadata', limit=1)
+        >>> dutch_metacat_query['numberMatched']
+        198
+        >>> dutch_metacat_query['numberReturned']
+        1
+        >>> dutch_metacat_query = w.collection_items('dutch-metadata', q='Wegpanorama')
+        >>> dutch_metacat_query['numberMatched']
+        2
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.records import Records
+        >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+        >>> w = Records(SERVICE_URL)
+        >>> w.url
+        'https://demo.pygeoapi.io/master'
+        >>> dutch_metacat = w.collection('dutch-metadata')
+        >>> dutch_metacat['id']
+        'dutch-metadata'
+        >>> dutch_metacat['title']
+        'Sample metadata records from Dutch Nationaal georegister'
+        >>> dutch_metacat['description']
+        'Sample metadata records from Dutch Nationaal georegister'
+        >>> dutch_metacat_query = w.collection_items('dutch-metadata', limit=1)
+        >>> dutch_metacat_query['numberMatched']
+        198
+        >>> dutch_metacat_query['numberReturned']
+        1
+        >>> dutch_metacat_query = w.collection_items('dutch-metadata', q='Wegpanorama')
+        >>> dutch_metacat_query['numberMatched']
+        2
+        ```
+        </div>
 
 !!! note
 

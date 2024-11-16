@@ -32,12 +32,24 @@ To test:
 
     1. In a terminal shell navigate to the workshop folder and type:
 
-    <div class="termy">
-    ```bash
-    cd workshop/exercises
-    docker compose up
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker compose up
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        cd workshop/exercises
+        docker compose up
+        ```
+        </div>
+
     1. Open <http://localhost:5000> in your browser, verify some collections
     1. Close by typing `CTRL-C`
 
@@ -45,16 +57,29 @@ To test:
 
     You may also run the Docker container in the background (detached) as follows:
 
-    <div class="termy">
-    ```bash
-    docker compose up -d
-    docker ps  # verify that the pygeoapi container is running
-    # visit http://localhost:5000 in your browser, verify some collections
-    docker logs --follow pygeoapi  # view logs
-    docker compose stop
-    ```
-    </div>
+    === "Linux/Mac"
 
+        <div class="termy">
+        ```bash
+        docker compose up -d
+        docker ps  # verify that the pygeoapi container is running
+        # visit http://localhost:5000 in your browser, verify some collections
+        docker logs --follow pygeoapi  # view logs
+        docker compose stop
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        docker compose up -d
+        docker ps  # verify that the pygeoapi container is running
+        # visit http://localhost:5000 in your browser, verify some collections
+        docker logs --follow pygeoapi  # view logs
+        docker compose stop
+        ```
+        </div>
 ## Publish first dataset
 
 You are now ready to publish your first dataset.
@@ -169,11 +194,21 @@ Set the logging level to `DEBUG` and indicate a path to a log file.
     On Docker, set the path of the logfile to the mounted folder, so you can easily access it from your host system. You can also view the console logs from
     your Docker container as follows:
 
-    <div class="termy">
-    ```bash
-    docker logs --follow pygeoapi
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        docker logs --follow pygeoapi
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        docker logs --follow pygeoapi
+        ```
+        </div>
 
 !!! tip
 
