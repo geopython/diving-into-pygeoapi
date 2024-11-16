@@ -25,7 +25,7 @@ pygeoapi supports the core OGC API - Tiles specification, and is able to adverti
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) for more information on OGC API - Tiles support in pygeoapi
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) for more information on supported tile backends
 
 !!! note
 

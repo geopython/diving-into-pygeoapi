@@ -7,11 +7,15 @@ title: Exercise 5 - Maps of geospatial data via OGC API - Maps
 [OGC API - Maps](https://ogcapi.ogc.org/maps) provides a Web API to access
 any geospatial data as a georeferenced map image.
 
-* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html) (**draft**)
+* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html)
 
 ## pygeoapi support
 
-pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
+pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
+
+!!! note
+
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
 
 ## Publish a raster dataset
 
