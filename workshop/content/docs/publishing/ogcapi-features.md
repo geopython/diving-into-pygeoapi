@@ -316,6 +316,17 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
     ```
     </div>
 
+    If can also use `ogrinfo` retrieve information about an OGC API - Features collection. In case you are accessing a local collection, you'll need to make sure the container runs on the host network:
+    <div class="termy">
+    ```bash
+    docker run \
+    --network=host \
+    ghcr.io/osgeo/gdal:alpine-small-latest \
+    ogrinfo OAPIF:http://localhost:5000/collections/obs obs -so
+    ```
+    </div>
+
+
 ### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
