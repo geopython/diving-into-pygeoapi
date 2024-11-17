@@ -333,7 +333,6 @@ Below is a complete example, assuming pygeoapi runs on your `localhost` at port 
     <div class="termy">
     ```bash
     docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
-    
     Unable to find image 'python:3.10-slim' locally
     3.10-slim: Pulling from library/python
     5b5fe70539cd: Pull complete 
@@ -362,7 +361,6 @@ Below is a complete example, assuming pygeoapi runs on your `localhost` at port 
     <div class="termy">
     ```bash
     docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
-    
     Unable to find image 'python:3.10-slim' locally
     3.10-slim: Pulling from library/python
     5b5fe70539cd: Pull complete 
