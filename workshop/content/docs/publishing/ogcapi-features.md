@@ -117,7 +117,6 @@ Change into the `docker/elastic` folder and run the `docker-compose.yml` file:
     <div class="termy">
     ```bash
     cd docker/elastic
-
     docker compose up
     ```
     </div>
@@ -127,7 +126,6 @@ Change into the `docker/elastic` folder and run the `docker-compose.yml` file:
     <div class="termy">
     ```bash
     cd docker/elastic
-
     docker compose up
     ```
     </div>
