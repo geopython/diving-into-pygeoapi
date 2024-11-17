@@ -38,7 +38,7 @@ map.addLayer(
         interactive: true,
         vectorTileLayerStyles: vectorTileStyling,
         };
-    var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
+    var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/{z}/{x}/{y}?f=mvt';
     var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
         console.log(e.layer);
     L.DomEvent.stop(e);
