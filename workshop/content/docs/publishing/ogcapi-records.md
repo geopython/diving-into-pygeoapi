@@ -133,7 +133,7 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
         <div class="termy">
         ```bash
         cd workshop/exercises
-        docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
+        docker run -it --rm --network=host --name owslib -v ${pwd}/data:/data python:3.10-slim /bin/bash
         pip3 install owslib
         apt-get update -y && apt-get install curl -y
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
