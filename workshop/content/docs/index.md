@@ -15,7 +15,7 @@ Version: 1.4.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [GISE Hub Winter School on OGC Stack](https://docs.google.com/document/d/1_ZiwzYlRheAlhsAjdjq2sV8twjImalFMw8jHaR8Dkwo/edit?tab=t.0) workshop team
+# Your [FOSS4G 2024](https://2024.foss4g.org) workshop team
 
 <table>
     <tr>
