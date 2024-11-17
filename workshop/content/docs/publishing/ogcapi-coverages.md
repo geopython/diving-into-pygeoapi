@@ -74,11 +74,22 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
     - Verify you have a recent GDAL installed, else use GDAL from OSGeoLive
     - Run `gdalinfo` on the command line to verify a connection to OGC API - Coverages:
 
-    <div class="termy">
-    ```
-    gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```
+        gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```
+        gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
+        ```
+        </div>
+
 
 ### OWSLib
 
@@ -88,37 +99,77 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients). 
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ``` 
-    </div>
+    === "Linux/Mac"
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
 
-    <div class="termy">
-    ```python
-    >>> from owslib.ogcapi.coverages import Coverages
-    >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
-    >>> w = Coverages(SERVICE_URL)
-    >>> w.url
-    'https://demo.pygeoapi.io/master/'
-    >>> gdps = w.collection('gdps-temperature')
-    >>> gdps['id']
-    'gdps-temperature'
-    >>> gdps['title']
-    'Global Deterministic Prediction System sample'
-    >>> gdps['description']
-    'Global Deterministic Prediction System sample'
-    >>> schema = w.collection_schema('gdps-temperature')
-    >>> len(schema['field'])
-    1
-    >>> schema['properties']['1']['title']
-    'Temperature [C]'
-    >>> schema['properties']['1']['x-ogc-unit']
-    '[C]'
-    >>> schema['properties']['1']['type']
-    'number'
-    ```
-    </div>
+    === "Windows (PowerShell)"
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
+
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.coverages import Coverages
+        >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+        >>> w = Coverages(SERVICE_URL)
+        >>> w.url
+        'https://demo.pygeoapi.io/master/'
+        >>> gdps = w.collection('gdps-temperature')
+        >>> gdps['id']
+        'gdps-temperature'
+        >>> gdps['title']
+        'Global Deterministic Prediction System sample'
+        >>> gdps['description']
+        'Global Deterministic Prediction System sample'
+        >>> schema = w.collection_schema('gdps-temperature')
+        >>> len(schema['field'])
+        1
+        >>> schema['properties']['1']['title']
+        'Temperature [C]'
+        >>> schema['properties']['1']['x-ogc-unit']
+        '[C]'
+        >>> schema['properties']['1']['type']
+        'number'
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.coverages import Coverages
+        >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
+        >>> w = Coverages(SERVICE_URL)
+        >>> w.url
+        'https://demo.pygeoapi.io/master/'
+        >>> gdps = w.collection('gdps-temperature')
+        >>> gdps['id']
+        'gdps-temperature'
+        >>> gdps['title']
+        'Global Deterministic Prediction System sample'
+        >>> gdps['description']
+        'Global Deterministic Prediction System sample'
+        >>> schema = w.collection_schema('gdps-temperature')
+        >>> len(schema['field'])
+        1
+        >>> schema['properties']['1']['title']
+        'Temperature [C]'
+        >>> schema['properties']['1']['x-ogc-unit']
+        '[C]'
+        >>> schema['properties']['1']['type']
+        'number'
+        ```
+        </div>
 
 !!! note
 

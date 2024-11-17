@@ -90,15 +90,30 @@ Some notes:
 
 If all goes well, you should be able to run Docker from the command line as follows: [^2]
 
-<div class="termy">
-```bash
-docker version
-Docker version 20.10.17, build 100c701
+=== "Linux/Mac"
 
-docker compose version  
-Docker Compose version v2.6.1
-```
-</div>
+    <div class="termy">
+    ```bash
+    docker version
+    Docker version 20.10.17, build 100c701
+
+    docker compose version
+    Docker Compose version v2.6.1
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    docker version
+    Docker version 20.10.17, build 100c701
+
+    docker compose version
+    Docker Compose version v2.6.1
+    ```
+    </div>
+
 
 (It is not required that your version numbers exactly match).
 [^2]: For recent version of Docker run `docker compose version`
@@ -109,40 +124,75 @@ Docker Compose version v2.6.1
 Once Docker is available on your system, running the pygeoapi container with its built-in configuration and 
 data is a one-liner. 
 
+Open a terminal session and run:
+
 !!! question "First run via Docker"
 
-    Open a terminal session and run:
-
-    <div class="termy">
-    ```bash
-    docker run --rm -p 5000:80 geopython/pygeoapi:latest
-    Unable to find image 'geopython/pygeoapi:latest' locally
-    latest: Pulling from geopython/pygeoapi
-    d7bfe07ed847: Already exists 
-    d5d0144a7164: Already exists 
-    afe0923a0fa0: Already exists 
-    75f8618c4e86: Already exists 
-    c603397fd6ad: Already exists 
-    6584a95328b3: Already exists 
-    fd93e44631d9: Already exists 
-    6a3201071a5d: Already exists 
-    4f4fb700ef54: Already exists 
-    Digest: sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
-    Status: Downloaded newer image for geopython/pygeoapi:latest
-    START /entrypoint.sh
-    Trying to generate openapi.yml
-    openapi.yml generated continue to pygeoapi
-    make SCRIPT_NAME empty from /
-    Start gunicorn name=pygeoapi on 0.0.0.0:80 with 4 workers and SCRIPT_NAME=
-    [2022-08-09 12:59:00 +0000] [1] [INFO] Starting gunicorn 20.0.4
-    [2022-08-09 12:59:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)
-    [2022-08-09 12:59:00 +0000] [1] [INFO] Using worker: gevent
-    [2022-08-09 12:59:00 +0000] [18] [INFO] Booting worker with pid: 18
-    [2022-08-09 12:59:00 +0000] [19] [INFO] Booting worker with pid: 19
-    [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
-    [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
-    ```
-    </div>
+    === "Linux/Mac"
+    
+        <div class="termy">
+        ```bash
+        docker run --rm -p 5000:80 geopython/pygeoapi:latest
+        Unable to find image 'geopython/pygeoapi:latest' locally
+        latest: Pulling from geopython/pygeoapi
+        d7bfe07ed847: Already exists 
+        d5d0144a7164: Already exists 
+        afe0923a0fa0: Already exists 
+        75f8618c4e86: Already exists 
+        c603397fd6ad: Already exists 
+        6584a95328b3: Already exists 
+        fd93e44631d9: Already exists 
+        6a3201071a5d: Already exists 
+        4f4fb700ef54: Already exists 
+        Digest: sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+        Status: Downloaded newer image for geopython/pygeoapi:latest
+        START /entrypoint.sh
+        Trying to generate openapi.yml
+        openapi.yml generated continue to pygeoapi
+        make SCRIPT_NAME empty from /
+        Start gunicorn name=pygeoapi on 0.0.0.0:80 with 4 workers and SCRIPT_NAME=
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Starting gunicorn 20.0.4
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Using worker: gevent
+        [2022-08-09 12:59:00 +0000] [18] [INFO] Booting worker with pid: 18
+        [2022-08-09 12:59:00 +0000] [19] [INFO] Booting worker with pid: 19
+        [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
+        [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
+        ```
+        </div>
+    
+    === "Windows (PowerShell)"
+    
+        <div class="termy">
+        ```bash
+        docker run --rm -p 5000:80 geopython/pygeoapi:latest
+        Unable to find image 'geopython/pygeoapi:latest' locally
+        latest: Pulling from geopython/pygeoapi
+        d7bfe07ed847: Already exists 
+        d5d0144a7164: Already exists 
+        afe0923a0fa0: Already exists 
+        75f8618c4e86: Already exists 
+        c603397fd6ad: Already exists 
+        6584a95328b3: Already exists 
+        fd93e44631d9: Already exists 
+        6a3201071a5d: Already exists 
+        4f4fb700ef54: Already exists 
+        Digest: sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+        Status: Downloaded newer image for geopython/pygeoapi:latest
+        START /entrypoint.sh
+        Trying to generate openapi.yml
+        openapi.yml generated continue to pygeoapi
+        make SCRIPT_NAME empty from /
+        Start gunicorn name=pygeoapi on 0.0.0.0:80 with 4 workers and SCRIPT_NAME=
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Starting gunicorn 20.0.4
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)
+        [2022-08-09 12:59:00 +0000] [1] [INFO] Using worker: gevent
+        [2022-08-09 12:59:00 +0000] [18] [INFO] Booting worker with pid: 18
+        [2022-08-09 12:59:00 +0000] [19] [INFO] Booting worker with pid: 19
+        [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
+        [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
+        ```
+        </div>
 
 
 That's all! Open your browser and navigate to `http://localhost:5000`, the pygeoapi page will display.
@@ -170,11 +220,21 @@ within the container by a local file which you can edit in your favourite text e
 
     Download pygeoapi's default Docker configuration from [default.config.yml](https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml) to the current folder (or navigate to the folder where you downloaded the file), for example with:
 
-    <div class="termy">
-    ```bash
-    curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        curl https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+        ```
+        </div>
 
     Open the file in your favourite text editor and change the title and description of the API:
 
@@ -187,15 +247,29 @@ within the container by a local file which you can edit in your favourite text e
 
     Now run the container with the overridden config file:
 
-    <div class="termy">
-    ```bash
-    docker run -p 5000:80 \
-    -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
-    geopython/pygeoapi:latest
-    ```
-    </div>
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```bash
+        docker run -p 5000:80 \
+        -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
+        geopython/pygeoapi:latest
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
+        ```
+        </div>
 
     At this point, navigate to `http://localhost:5000` to verify the new title and description.
+
+!!! note
+
+    On Windows, the file downloaded may be renamed to `default.config.yml.txt`.  Ensure to rename the file to `default.config.yml`.
 
 
 By using a Docker volume mount (`-v` option), Docker attaches or 'mounts' a
@@ -213,15 +287,25 @@ Within the data directory you can store vector data, raster files or sets of ima
 
 Below is an example where the configuration is explictly set to `pygeoapi-config.yml` via an environment variable (`-e`) and uses a Docker mount to mount the local `data` folder as `/pygeoapi/mydata`:
 
-<div class="termy">
-```bash
-docker run -p 5000:80 \
--v $(pwd)/data:/pygeoapi/mydata \
--v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.yml \
--e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
-geopython/pygeoapi:latest
-```
-</div>
+=== "Linux/Mac"
+
+    <div class="termy">
+    ```bash
+    docker run -p 5000:80 \
+    -v $(pwd)/data:/pygeoapi/mydata \
+    -v $(pwd)/default.config.yml:/pygeoapi/pygeoapi-config.yml \
+    -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
+    geopython/pygeoapi:latest
+    ```
+    </div>
+
+=== "Windows (PowerShell)"
+
+    <div class="termy">
+    ```bash
+    docker run -p 5000:80 -v ${pwd}/data:/pygeoapi/mydata -v ${pwd}/default.config.yml:/pygeoapi/pygeoapi-config.yml -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml geopython/pygeoapi:latest
+    ```
+    </div>
 
 In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the [pygeoapi GitHub repository](https://github.com/geopython/pygeoapi/tree/master/docker/examples).
 
@@ -244,32 +328,60 @@ maybe even other tools like `curl` and `wget`.
 
 Below is a complete example, assuming pygeoapi runs on your `localhost` at port 5000:
 
+=== "Linux/Mac"
 
-<div class="termy">
-```bash
-docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
+    <div class="termy">
+    ```bash
+    docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
+    Unable to find image 'python:3.10-slim' locally
+    3.10-slim: Pulling from library/python
+    5b5fe70539cd: Pull complete 
+    f4b0e4004dc0: Pull complete 
+    c5424f0ac885: Pull complete 
+    9d21fe1624ec: Pull complete 
+    de0194aa1c21: Pull complete 
+    Digest: sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+    Status: Downloaded newer image for python:3.10-slim
+    
+    root@docker-desktop:/# pip3 install owslib
+    root@docker-desktop:/# python3
+    >>> from owslib.ogcapi.features import Features
+    >>> w = Features('http://localhost:5000')
+    >>> w
+    <owslib.ogcapi.features.Features object at 0x7ff493e6f850>
+    >>> conformance = w.conformance()
+    >>> conformance
+    etc
+    
+    ```
+    </div>
+ 
+=== "Windows (PowerShell)"
 
-Unable to find image 'python:3.10-slim' locally
-3.10-slim: Pulling from library/python
-5b5fe70539cd: Pull complete 
-f4b0e4004dc0: Pull complete 
-c5424f0ac885: Pull complete 
-9d21fe1624ec: Pull complete 
-de0194aa1c21: Pull complete 
-Digest: sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
-Status: Downloaded newer image for python:3.10-slim
-
-root@docker-desktop:/# pip3 install owslib
-root@docker-desktop:/# python3
->>> from owslib.ogcapi.features import Features
->>> w = Features('http://localhost:5000')
->>> w
-<owslib.ogcapi.features.Features object at 0x7ff493e6f850>
->>> conformance = w.conformance()
->>> conformance
-etc
-
-```
-</div>
+    <div class="termy">
+    ```bash
+    docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
+    Unable to find image 'python:3.10-slim' locally
+    3.10-slim: Pulling from library/python
+    5b5fe70539cd: Pull complete 
+    f4b0e4004dc0: Pull complete 
+    c5424f0ac885: Pull complete 
+    9d21fe1624ec: Pull complete 
+    de0194aa1c21: Pull complete 
+    Digest: sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+    Status: Downloaded newer image for python:3.10-slim
+    
+    root@docker-desktop:/# pip3 install owslib
+    root@docker-desktop:/# python3
+    >>> from owslib.ogcapi.features import Features
+    >>> w = Features('http://localhost:5000')
+    >>> w
+    <owslib.ogcapi.features.Features object at 0x7ff493e6f850>
+    >>> conformance = w.conformance()
+    >>> conformance
+    etc
+    
+    ```
+    </div>
  
 We will refer to this installation in some of the Exercises where OWSLib is used.

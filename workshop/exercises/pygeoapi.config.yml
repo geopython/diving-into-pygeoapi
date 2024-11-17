@@ -197,60 +197,60 @@ resources:
     # Make sure that indentation matches!
 
 ### START - EXERCISE 1 - Your First Collection
-#     Bathing_Water_Estonia:
-#         type: collection
-#         title: Bathing Water Estonia
-#         description: Locations where the Estonian Health Board monitors the bathing water quality
-#         keywords:
-#             - bathingwater
-#             - estonia
-#         links:
-#             - type: text/csv
-#               rel: canonical
-#               title: data
-#               href: https://avaandmed.eesti.ee/datasets/supluskohad
-#               hreflang: EE
-#         extents:
-#             spatial:
-#                 bbox: [20,57,29,60]
-#                 crs: http://www.opengis.net/def/crs/EPSG/0/4326
-#         providers:
-#             - type: feature
-#               name: CSV
-#               data: /data/tartu/bathingwater-estonia.csv
-#               id_field: id
-#               title_field: Name
-#               geometry:
-#                  x_field: x
-#                  y_field: y
-#               storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
+#    Bathing_Water_Estonia:
+#        type: collection
+#        title: Bathing Water Estonia
+#        description: Locations where the Estonian Health Board monitors the bathing water quality
+#        keywords:
+#            - bathingwater
+#            - estonia
+#        links:
+#            - type: text/csv
+#              rel: canonical
+#              title: data
+#              href: https://avaandmed.eesti.ee/datasets/supluskohad
+#              hreflang: EE
+#        extents:
+#            spatial:
+#                bbox: [20,57,29,60]
+#                crs: http://www.opengis.net/def/crs/EPSG/0/4326
+#        providers:
+#           - type: feature
+#              name: CSV
+#              data: /data/tartu/bathingwater-estonia.csv
+#              id_field: id
+#              title_field: Name
+#              geometry:
+#                 x_field: x
+#                 y_field: y
+#              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
 ### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - cadastral parcels Tartu
-#     cp-tartu:
-#         type: collection
-#         title: Tartu Cadastral Parcels
-#         description: Cadastral parcels in downtown Tartu
-#         keywords:
-#             - Cadastral parcels
-#             - Tartu
-#         links:
-#             -   type: OGC/WFS
-#                 rel: canonical
-#                 title: data
-#                 href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
-#                 hreflang: EE
-#         extents:
-#             spatial:
-#                 bbox: [26.6, 58.3, 26.8, 58.5]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             - type: feature
-#               name: SQLiteGPKG
-#               data: /data/tartu/cptartu2.gpkg # place correct path here
-#               id_field: nationalca
-#               title_field: label
-#               table: cptartu2 # table name within gpkg
+#    cp-tartu:
+#        type: collection
+#        title: Tartu Cadastral Parcels
+#        description: Cadastral parcels in downtown Tartu
+#        keywords:
+#            - Cadastral parcels
+#            - Tartu
+#        links:
+#            -   type: OGC/WFS
+#                rel: canonical
+#                title: data
+#                href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
+#                hreflang: EE
+#        extents:
+#            spatial:
+#                bbox: [26.6, 58.3, 26.8, 58.5]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: feature
+#              name: SQLiteGPKG
+#              data: /data/tartu/cptartu2.gpkg # place correct path here
+#              id_field: nationalca
+#              title_field: label
+#              table: cptartu2 # table name within gpkg
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
@@ -282,75 +282,76 @@ resources:
 ## END - EXERCISE 3 - Coverages
 
 ## START - EXERCISE 4 - Tiles
-#     hyderabad:
-#         type: collection
-#         title: Greater Hyderabad Municipal Corporation ward boundaries
-#         description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
-#         keywords:
-#           - Boundaries
-#           - Administrative
-#           - Ward
-#         links:
-#             - type: text/html
-#               rel: canonical
-#               title: information
-#               href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/
-#               hreflang: en-US
-#         extents:
-#             spatial:
-#                 bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#             temporal:
-#                 begin: null
-#                 end: null  # or empty
-#         providers:
-#             - type: feature
-#               name: GeoJSON
-#               data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-#               id_field: id
-#             - type: tile
-#               name: MVT-tippecanoe
-#               data: /data/tiles/  # local directory tree
-#               options:
-#                 zoom:
-#                     min: 0
-#                     max: 16
-#               format:
-#                     name: pbf
-#                     mimetype: application/vnd.mapbox-vector-tile
+#    hyderabad:
+#        type: collection
+#        title: Greater Hyderabad Municipal Corporation ward boundaries
+#        description: The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.
+#        keywords:
+#          - Boundaries
+#          - Administrative
+#          - Ward
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: information
+#              href: https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/
+#              hreflang: en-US
+#        extents:
+#            spatial:
+#                bbox: [78.2379194985166180,17.2908061510471995,78.6217049083810764,17.5618443356918768]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#            temporal:
+#                begin: null
+#                end: null  # or empty
+#        providers:
+#            - type: feature
+#              name: GeoJSON
+#              data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+#              id_field: id
+#            - type: tile
+#              name: MVT-tippecanoe
+#              data: /data/tiles/  # local directory tree
+#              options:
+#                zoom:
+#                    min: 0
+#                    max: 16
+#              format:
+#                    name: pbf
+#                    mimetype: application/vnd.mapbox-vector-tile
 # # END - EXERCISE 4 - Tiles
+
 ## START - EXERCISE 5 - Maps
-#     airports:
-#         type: collection
-#         title: airports of the world
-#         description: Point data representing airports around the world with various metadata such as name, Code, etc.
-#         keywords:
-#             - airports
-#             - natural earth
-#         links:
-#             - type: text/html
-#               rel: canonical
-#               title: information
-#               href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
-#               hreflang: en-US
-#         extents:
-#             spatial:
-#                 bbox: [-180,-90,180,90]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#             temporal:
-#                 begin:
-#                 end: null  # or empty
-#         providers:
-#             - type: map
-#               name: MapScript
-#               data: /data/airport.gpkg
-#               options:
-#                   type: MS_LAYER_POINT
-#                   layer: airport
-#                   style: /data/airport.sld
-#               format:
-#                   name: png
-#                   mimetype: image/png
+#    airports:
+#        type: collection
+#        title: airports of the world
+#        description: Point data representing airports around the world with various metadata such as name, Code, etc.
+#        keywords:
+#            - airports
+#            - natural earth
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: information
+#              href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
+#              hreflang: en-US
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#            temporal:
+#                begin:
+#                end: null  # or empty
+#        providers:
+#            - type: map
+#              name: MapScript
+#              data: /data/airport.gpkg
+#              options:
+#                  type: MS_LAYER_POINT
+#                  layer: airport
+#                  style: /data/airport.sld
+#              format:
+#                  name: png
+#                  mimetype: image/png
 ## END - EXERCISE 5 - Maps
 
 ## START - EXERCISE 6 - Metadata
@@ -382,34 +383,34 @@ resources:
 ## END - EXERCISE 6 - Metadata
 
 ## START EXERCISE 7 - Environmental data via OGC API - Environmental Data Retrieval
-#     icoads-sst:
-#         type: collection
-#         title: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
-#         description: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
-#         keywords:
-#             - icoads
-#             - sst
-#             - air temperature
-#         extents:
-#             spatial:
-#                 bbox: [-180,-90,180,90]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#             temporal:
-#                 begin: 2000-01-16T06:00:00Z
-#                 end: 2000-12-16T06:00:00Z
-#         links:
-#             - type: text/html
-#               rel: canonical
-#               title: information
-#               href: https://psl.noaa.gov/data/gridded/data.coads.1deg.html
-#               hreflang: en-US
-#         providers:
-#             - type: edr
-#               name: xarray-edr
-#               data: /data/coads_sst.nc
-#               format:
-#                   name: NetCDF
-#                   mimetype: application/x-netcdf
+#    icoads-sst:
+#        type: collection
+#        title: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
+#        description: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
+#        keywords:
+#            - icoads
+#            - sst
+#            - air temperature
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#            temporal:
+#                begin: 2000-01-16T06:00:00Z
+#                end: 2000-12-16T06:00:00Z
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: information
+#              href: https://psl.noaa.gov/data/gridded/data.coads.1deg.html
+#              hreflang: en-US
+#        providers:
+#            - type: edr
+#              name: xarray-edr
+#              data: /data/coads_sst.nc
+#              format:
+#                  name: NetCDF
+#                  mimetype: application/x-netcdf
 ## END EXERCISE 7 - Environmental data via OGC API - Environmental Data Retrieval
 
     hello-world:
@@ -425,113 +426,113 @@ resources:
 ## END EXERCISE 8 - Functions via OGC API - Processes
 
 ## START - EXERCISE 9 - WFS Proxy
-#     suol_epicentri_storici:
-#         type: collection
-#         title: Epicenters of the main historical earthquakes
-#         description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
-#         keywords:
-#             - earthquakes
-#         links:
-#             - type: text/xml
-#               rel: canonical
-#               title: Epicenters of the main historical earthquakes
-#               href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
-#               hreflang: it
-#         extents:
-#             spatial:
-#                 bbox: [10.94, 43.52, 11.65, 44.17]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             - type: feature
-#               name: OGR
-#               data:
-#                     source_type: WFS
-#                     source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
-#                     source_capabilities:
-#                         paging: True
-#                     source_options:
-#                         OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
-#                     gdal_ogr_options:
-#                         EMPTY_AS_NULL: NO
-#                         GDAL_CACHEMAX: 64
-#                         CPL_DEBUG: NO
-#               id_field: cpti_id
-#               crs:
-#                 - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#                 - http://www.opengis.net/def/crs/EPSG/0/4258
-#                 - http://www.opengis.net/def/crs/EPSG/0/3857
-#                 - http://www.opengis.net/def/crs/EPSG/0/3003
-#               storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
-#               title_field: d
-#               layer: territorio:suol_epicentri_storici
+#    suol_epicentri_storici:
+#        type: collection
+#        title: Epicenters of the main historical earthquakes
+#        description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
+#        keywords:
+#            - earthquakes
+#        links:
+#            - type: text/xml
+#              rel: canonical
+#              title: Epicenters of the main historical earthquakes
+#              href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
+#              hreflang: it
+#        extents:
+#            spatial:
+#                bbox: [10.94, 43.52, 11.65, 44.17]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: feature
+#              name: OGR
+#              data:
+#                    source_type: WFS
+#                    source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
+#                    source_capabilities:
+#                        paging: True
+#                    source_options:
+#                        OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
+#                    gdal_ogr_options:
+#                        EMPTY_AS_NULL: NO
+#                        GDAL_CACHEMAX: 64
+#                        CPL_DEBUG: NO
+#              id_field: cpti_id
+#              crs:
+#                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#                - http://www.opengis.net/def/crs/EPSG/0/4258
+#                - http://www.opengis.net/def/crs/EPSG/0/3857
+#                - http://www.opengis.net/def/crs/EPSG/0/3003
+#              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
+#              title_field: d
+#              layer: territorio:suol_epicentri_storici
 ## END - EXERCISE 9 - WFS Proxy
 
 ## START - EXERCISE 9 - WMS Proxy
-#     wms-facade-demo:
-#         type: collection
-#         title: WMS Facade demo
-#         description: WMS Facade demo
-#         keywords:
-#             - WMS facade
-#         links:
-#             - type: text/html
-#               rel: canonical
-#               title: MapServer
-#               href: https://mapserver.org
-#               hreflang: it
-#         extents:
-#             spatial:
-#                 bbox: [-180,-90,180,90]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             - type: map
-#               name: WMSFacade
-#               data: https://demo.mapserver.org/cgi-bin/msautotest
-#               options:
-#                 layer: world_latlong
-#                 style: default
-#               format:
-#                 name: png
-#                 mimetype: image/png
+#    wms-facade-demo:
+#        type: collection
+#        title: WMS Facade demo
+#        description: WMS Facade demo
+#        keywords:
+#            - WMS facade
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: MapServer
+#              href: https://mapserver.org
+#              hreflang: it
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: map
+#              name: WMSFacade
+#              data: https://demo.mapserver.org/cgi-bin/msautotest
+#              options:
+#                layer: world_latlong
+#                style: default
+#              format:
+#                name: png
+#                mimetype: image/png
 ## END - EXERCISE 9 - WMS Proxy
 
 ## START - EXERCISE 9 - CSW Proxy
-#     cite_demo:
-#         type: collection
-#         title: pycsw OGC CITE demo and Reference Implementation
-#         description: pycsw is an OARec and OGC CSW server implementation written in Python. pycsw fully implements the OGC API - Records and OpenGIS Catalogue Service Implementation Specification (Catalogue Service for the Web). Initial development started in 2010 (more formally announced in 2011). The project is certified OGC Compliant, and is an OGC Reference Implementation. Since 2015, pycsw is an official OSGeo Project. pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU). Existing repositories of geospatial metadata can also be exposed, providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X)
-#         keywords:
-#             - ogc
-#             - cite
-#             - compliance
-#             - interoperability
-#         extents:
-#             spatial:
-#                 bbox: [-180,-90,180,90]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             - type: record
-#               name: CSWFacade
-#               data: https://demo.pycsw.org/cite/csw
-#               id_field: identifier
-#               time_field: datetime
-#               title_field: title
+#    cite_demo:
+#        type: collection
+#        title: pycsw OGC CITE demo and Reference Implementation
+#        description: pycsw is an OARec and OGC CSW server implementation written in Python. pycsw fully implements the OGC API - Records and OpenGIS Catalogue Service Implementation Specification (Catalogue Service for the Web). Initial development started in 2010 (more formally announced in 2011). The project is certified OGC Compliant, and is an OGC Reference Implementation. Since 2015, pycsw is an official OSGeo Project. pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU). Existing repositories of geospatial metadata can also be exposed, providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X)
+#        keywords:
+#            - ogc
+#            - cite
+#            - compliance
+#            - interoperability
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: record
+#              name: CSWFacade
+#              data: https://demo.pycsw.org/cite/csw
+#              id_field: identifier
+#              time_field: datetime
+#              title_field: title
 ## END - EXERCISE 9 - CSW Proxy
 
 ## START - EXERCISE 9 - SensorThings Proxy
-#     toronto_bikes:
-#         type: collection
-#         title: Toronto Bikes SensorThings
-#         description: The geographic location with coordinates for the Toronto bike share station
-#         keywords:
-#             - sediments
-#         extents:
-#             spatial:
-#                 bbox: [-180,-90,180,90]
-#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#         providers:
-#             - type: feature
-#               name: SensorThings
-#               data: https://toronto-bike-snapshot.sensorup.com/v1.0/
-#               entity: Things
+#    toronto_bikes:
+#        type: collection
+#        title: Toronto Bikes SensorThings
+#        description: The geographic location with coordinates for the Toronto bike share station
+#        keywords:
+#            - sediments
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#        providers:
+#            - type: feature
+#              name: SensorThings
+#              data: https://toronto-bike-snapshot.sensorup.com/v1.0/
+#              entity: Things
 ## END - EXERCISE 9 - SensorThings Proxy

@@ -20,8 +20,7 @@ with the ability to store and retrive the status/results of 'jobs'.
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-processes.html) for more information
-    on publishing processes in pygeoapi
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-processes.html) for more information on publishing processes in pygeoapi
 
 
 ## Publishing Python code as a process in pygeoapi

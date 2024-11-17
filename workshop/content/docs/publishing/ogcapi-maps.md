@@ -7,11 +7,15 @@ title: Exercise 5 - Maps of geospatial data via OGC API - Maps
 [OGC API - Maps](https://ogcapi.ogc.org/maps) provides a Web API to access
 any geospatial data as a georeferenced map image.
 
-* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html) (**draft**)
+* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html)
 
 ## pygeoapi support
 
-pygeoapi supports the OGC API - Maps draft specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
+pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
+
+!!! note
+
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
 
 ## Publish a raster dataset
 
@@ -88,21 +92,47 @@ QGIS added support for API's providing rendered image layers via its raster supp
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ```
-    </div>
+    === "Linux/Mac"
 
-    <div class="termy">
-    ```python
-    >>> from owslib.ogcapi.maps import Maps
-    >>> m = Maps('http://localhost:5000')
-    >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
-    >>> with open("output.png", "wb") as fh:
-    ...     fh.write(data.getbuffer())
-    ```
-    </div>
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    Now running in Python:
+
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.maps import Maps
+        >>> m = Maps('http://localhost:5000')
+        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> with open("output.png", "wb") as fh:
+        ...     fh.write(data.getbuffer())
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.maps import Maps
+        >>> m = Maps('http://localhost:5000')
+        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> with open("output.png", "wb") as fh:
+        ...     fh.write(data.getbuffer())
+        ```
+        </div>
 
 !!! note
 

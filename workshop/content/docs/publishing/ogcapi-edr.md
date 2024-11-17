@@ -76,31 +76,63 @@ that there is a `parameter_names' key that describes EDR parameter names for the
 
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients).
 
-    <div class="termy">
-    ```bash
-    pip3 install owslib
-    ```
-    </div>
+    === "Linux/Mac"
 
-    Then start a Python console session with: `python3` (stop the session by typing `exit()`).
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
 
-    <div class="termy">
-    ```python
-    >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
-    >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
-    >>> w.url
-    'https://demo.pygeoapi.io/master'
-    >>> api = w.api()  # OpenAPI document
-    >>> collections = w.collections()
-    >>> len(collections['collections'])
-    13
-    >>> icoads_sst = w.collection('icoads-sst')
-    >>> icoads_sst['parameter-names'].keys()
-    dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-    >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
-    >>> data  # CoverageJSON data
-    ```
-    </div>
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```bash
+        pip3 install owslib
+        ```
+        </div>
+
+    Then start a Python console session with `python3` (stop the session by typing `exit()`).
+
+    === "Linux/Mac"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
+        >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
+        >>> w.url
+        'https://demo.pygeoapi.io/master'
+        >>> api = w.api()  # OpenAPI document
+        >>> collections = w.collections()
+        >>> len(collections['collections'])
+        13
+        >>> icoads_sst = w.collection('icoads-sst')
+        >>> icoads_sst['parameter-names'].keys()
+        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
+        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data  # CoverageJSON data
+        ```
+        </div>
+
+    === "Windows (PowerShell)"
+
+        <div class="termy">
+        ```python
+        >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
+        >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
+        >>> w.url
+        'https://demo.pygeoapi.io/master'
+        >>> api = w.api()  # OpenAPI document
+        >>> collections = w.collections()
+        >>> len(collections['collections'])
+        13
+        >>> icoads_sst = w.collection('icoads-sst')
+        >>> icoads_sst['parameter-names'].keys()
+        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
+        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data  # CoverageJSON data
+        ```
+        </div>
 
 !!! note
 
