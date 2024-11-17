@@ -19,12 +19,16 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
 
 <table>
     <tr>
-        <td><a href="https://twitter.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://twitter.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
+        <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://github.com/PascalLike"><img width="150" src="https://avatars.githubusercontent.com/u/1323093?v=4"/></a></td>
+        <td><a href="https://github.com/webb-ben"><img width="150" src="https://avatars.githubusercontent.com/u/40066515?v=4"/></a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
         <td><a href="https://github.com/doublebyte1">Joana Simoes</a></td>
+        <td><a href="https://github.com/PascalLike">Antonio Cerciello</a></td>
+        <td><a href="https://github.com/webb-ben">Benjamin Webb</a></td>
     </tr>
 </table>
 
