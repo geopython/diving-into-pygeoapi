@@ -89,7 +89,7 @@ develop your own custom pygeoapi plugin, or convert your metadata to OGC API - R
 
 It is possible to load more example ISO19139 metadata in a TinyDB database with [the following script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
 
-    === "Linux/Mac"
+=== "Linux/Mac"
 
     <div class="termy">
     ```bash
@@ -99,7 +99,7 @@ It is possible to load more example ISO19139 metadata in a TinyDB database with 
     ```
     </div>
 
-    === "Windows (PowerShell)"
+=== "Windows (PowerShell)"
 
     <div class="termy">
     ```bash
