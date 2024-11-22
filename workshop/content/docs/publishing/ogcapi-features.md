@@ -38,46 +38,45 @@ vector data source.
     It may be helpful to open the dataset in [QGIS](https://qgis.org) while adding and updating your pygeoapi server to easily evaluate table attributes, names, spatial properties and CRS.
 
 
-Let's add the file `workshop/exercises/data/tartu/cp-tartu2.gpkg.zip`:
+Let's add the file `workshop/exercises/data/brazil/guama_river.gpkg.zip`:
 
 !!! question "Update the pygeoapi configuration"
 
-    First, let's unzip the file [cptartu2.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/tartu/cptartu2.gpkg.zip) to `cptartu2.gpkg`.
+    First, let's unzip the file [guama_river.gpkg.zip](https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/brazil/guama_river.gpkg.zip) to `guama_river.gpkg`.
 
     Then, open the pygeoapi configuration file in a text editor.
-    Find the line `# START - EXERCISE 2 - cadastral parcels Tartu`.
+    Find the line `# START - EXERCISE 2 - flowlines Guama River`.
 
     Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - cadastral parcels Tartu`:
 
     ``` {.yaml linenums="1"}
-    cp-tartu:
+    guama-river:
         type: collection
-        title: Tartu Cadastral Parcels
-        description: Cadastral parcels in downtown Tartu
+        title: Guama River
+        description: Guama River basin and flowlines
         keywords:
-            - Cadastral parcels
-            - Tartu
+            - Guama River
+            - Merit Hydro
         links:
-            -   type: OGC/WFS
+            -   type: text/html
                 rel: canonical
                 title: data
-                href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
+                href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
                 hreflang: EE
         extents:
             spatial:
-                bbox: [26.6, 58.3, 26.8, 58.5]
+                bbox: [49.16,-5.0, -46.8, -1.2]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
               name: SQLiteGPKG
-              data: /data/tartu/cptartu2.gpkg # place correct path here
-              id_field: nationalca
-              title_field: label
-              table: cptartu2 # table name within gpkg
+              data: /data/brazil/guama_river.gpkg # place correct path here
+              id_field: fid
+              table: guama_river # table name within gpkg
     ```
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset with
-title *"Tartu Cadastral Parcels"* has been published.
+title *"Guama River"* has been published.
 
 !!! note
 
