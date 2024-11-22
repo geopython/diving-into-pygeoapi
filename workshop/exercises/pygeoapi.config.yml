@@ -227,30 +227,29 @@ resources:
 ### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - cadastral parcels Tartu
-#    cp-tartu:
-#        type: collection
-#        title: Tartu Cadastral Parcels
-#        description: Cadastral parcels in downtown Tartu
-#        keywords:
-#            - Cadastral parcels
-#            - Tartu
-#        links:
-#            -   type: OGC/WFS
-#                rel: canonical
-#                title: data
-#                href: https://metadata.geoportaal.ee/geonetwork/srv/metadata/9949ec81-f758-42e6-9c1c-6fb604a3f053
-#                hreflang: EE
-#        extents:
-#            spatial:
-#                bbox: [26.6, 58.3, 26.8, 58.5]
-#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#        providers:
-#            - type: feature
-#              name: SQLiteGPKG
-#              data: /data/tartu/cptartu2.gpkg # place correct path here
-#              id_field: nationalca
-#              title_field: label
-#              table: cptartu2 # table name within gpkg
+#     guama-river:
+#         type: collection
+#         title: Guama River
+#         description: Guama River basin and flowlines
+#         keywords:
+#             - Guama River
+#             - Merit Hydro
+#         links:
+#             -   type: text/html
+#                 rel: canonical
+#                 title: data
+#                 href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
+#                 hreflang: EE
+#         extents:
+#             spatial:
+#                 bbox: [49.16,-5.0, -46.8, -1.2]
+#                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#         providers:
+#             - type: feature
+#               name: SQLiteGPKG
+#               data: /data/brazil/guama_river.gpkg # place correct path here
+#               id_field: fid
+#               table: guama_river # table name within gpkg
 ## END - EXERCISE 2 - cadastral parcels Tartu
 
 ## START - EXERCISE 3 - Coverages
