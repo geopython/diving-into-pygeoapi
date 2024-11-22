@@ -53,7 +53,7 @@ Let's add the file `workshop/exercises/data/brazil/guama_river.gpkg.zip`:
     guama-river:
         type: collection
         title: Guama River
-        description: Guama River basin and flowlines
+        description: Guama River Basin mainstem flowlines
         keywords:
             - Guama River
             - Merit Hydro
@@ -65,7 +65,7 @@ Let's add the file `workshop/exercises/data/brazil/guama_river.gpkg.zip`:
                 hreflang: EE
         extents:
             spatial:
-                bbox: [49.16,-5.0, -46.8, -1.2]
+                bbox: [-49.16, -5.0, -46.8, -1.2]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature

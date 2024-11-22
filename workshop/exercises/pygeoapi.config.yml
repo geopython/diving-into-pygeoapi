@@ -226,11 +226,11 @@ resources:
 #              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
 ### END - EXERCISE 1 - Your First Collection
 
-## START - EXERCISE 2 - cadastral parcels Tartu
+## START - EXERCISE 2 - Guama River mainstems
 #     guama-river:
 #         type: collection
 #         title: Guama River
-#         description: Guama River basin and flowlines
+#         description: Guama River Basin mainstem flowlines
 #         keywords:
 #             - Guama River
 #             - Merit Hydro
@@ -250,7 +250,7 @@ resources:
 #               data: /data/brazil/guama_river.gpkg # place correct path here
 #               id_field: fid
 #               table: guama_river # table name within gpkg
-## END - EXERCISE 2 - cadastral parcels Tartu
+## END - EXERCISE 2 - Guama River mainstems
 
 ## START - EXERCISE 3 - Coverages
 #    tartu-ntl:
