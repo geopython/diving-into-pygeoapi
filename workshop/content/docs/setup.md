@@ -10,7 +10,7 @@ In this workshop we use the following materials:
 1. **Exercises** - download the [latest zip file](https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip), unzip, find exercises in `workshop/exercises` [^1]
 1. **Docker** - all examples/exercises are run in a `Docker container` in `workshop/exercises`
 
-[^1]: alternatively, you can fork/clone the GitHub repository of this workshop directly from https://github.com/geopython/diving-into-pygeoapi.
+[^1]: Alternatively, you can fork/clone the GitHub repository of this workshop directly from <https://github.com/geopython/diving-into-pygeoapi>.
 
 ## Text editor
 
@@ -67,7 +67,7 @@ Docker installation has greatly progressed over the years. This is the only part
 which is dependent on the system/OS you are running (e.g. Windows, Mac or Linux). For each
 system the Docker website provides detailed installation instructions. Please follow these consistently.
 
-For many platforms a product called `Docker Desktop` is available, which includes the main Docker components:
+For many platforms a product called [Docker Desktop](https://docs.docker.com/desktop) is available, which includes the main Docker components:
 
 * Windows [installation](https://docs.Docker.com/desktop/install/windows-install)
 * Mac [installation](https://docs.Docker.com/desktop/install/mac-install)
@@ -75,7 +75,8 @@ For many platforms a product called `Docker Desktop` is available, which include
 
 Some notes:
 
-* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker
+* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker.  Before installing Docker Desktop, install WSL by opening Microsoft PowerShell (run as administrator) and running `wsl --install`
+    * **installing WSL requires administrator privileges on your system**
 * On Mac, if you are using [Homebrew](https://brew.sh), consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
 * On Mac OSX Monterey and later, there may be an issue with local port 5000 already in use, therefore conflicting with the default one used by the pygeoapi container. If you see this error `OSError: [Errno 48] Address already in use`, you need to disable the *Airplay Receiver*. Go to `System Settings | Sharing` or like in Sonoma type 'airplay' in the search box. See image below for Mac OSX Sonoma. Also a detailed description in [this blog post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/).
 ![MacBook settings](assets/images/macosx-airplay-disable.png)
