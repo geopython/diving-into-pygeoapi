@@ -75,7 +75,7 @@ For many platforms a product called [Docker Desktop](https://docs.docker.com/des
 
 Some notes:
 
-* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker.  Before installing Docker Desktop, install WSL by opening Microsoft PowerShell (run as administrator) and type `wsl --install`.
+* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker.  Before installing Docker Desktop, install WSL by opening Microsoft PowerShell (run as administrator) and running `wsl --install`
     * **installing WSL requires administrator privileges on your system**
 * On Mac, if you are using [Homebrew](https://brew.sh), consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
 * On Mac OSX Monterey and later, there may be an issue with local port 5000 already in use, therefore conflicting with the default one used by the pygeoapi container. If you see this error `OSError: [Errno 48] Address already in use`, you need to disable the *Airplay Receiver*. Go to `System Settings | Sharing` or like in Sonoma type 'airplay' in the search box. See image below for Mac OSX Sonoma. Also a detailed description in [this blog post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/).
