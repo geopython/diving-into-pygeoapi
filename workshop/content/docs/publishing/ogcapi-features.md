@@ -47,7 +47,7 @@ Let's add the file `workshop/exercises/data/brazil/guama_river.gpkg.zip`:
     Then, open the pygeoapi configuration file in a text editor.
     Find the line `# START - EXERCISE 2 - flowlines Guama River`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - cadastral parcels Tartu`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 2 - flowlines Guama River`:
 
     ``` {.yaml linenums="1"}
     guama-river:
