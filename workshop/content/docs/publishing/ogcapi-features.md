@@ -458,7 +458,7 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.
 
-This exercise will be done using a jupyter notebook. If you prefer, you can do it using python from the command line (see bellow).
+This exercise will be done using a jupyter notebook. If you prefer, you can do it using Python from the command line (see bellow).
 
 Before continuing, make sure you are in the `workshop/exercises` folder. You will need that, to be able to use the jupyter notebook.
 
@@ -506,7 +506,7 @@ Run through the notebook, to explore an OGC API - Features server, using owslib.
 
     You can run the same instructions using your local pygeoapi server, instead of the demo pygeoapi instance.
 
-#### Using python from the command line
+#### Using Python from the command line
 
 !!! question "Interact with OGC API - Features via OWSLib"
 
