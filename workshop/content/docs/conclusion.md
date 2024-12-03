@@ -15,7 +15,7 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 For those in attendance at [FOSS4G 2024](https://2024.foss4g.org):
 
-- come to the [pygeoapi project status](https://talks.osgeo.org/foss4g-2024/talk/VQNTSA) presentation on Friday 03 December at 16:30, in room I
+- come to the [pygeoapi project status](https://talks.osgeo.org/foss4g-2024/talk/VQNTSA) presentation on Wednesday 04 December at 17:45, in room II
 - the pygeoapi team will be at the [Community Code Sprint](https://2024.foss4g.org/en/additional-events) on 07-08 December, at the IFPA Campus Belém.
 
 # Contributing
