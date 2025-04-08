@@ -279,7 +279,7 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
     ![](../assets/images/qgis-vtiles1.png){ width=100% }
 
     - right-click to bring up the context menu and choose `New Generic connection`
-    - fill the required values. For URL, use the URL you noted from the previous step, replacing `{tileMatrix}/{tileRow}/{tileCol}` with `{z}/{x}/{y}`.
+    - fill the required values. For URL, use the URL you noted from the previous step, replacing `{tileMatrix}/{tileRow}/{tileCol}` with `{z}/{y}/{x}`.
     - press `OK` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
     - double-click in the collection to add it to the map
     <!-- - remember to set the CRS of the map to `EPSG:3857` by clicking in the button on the lower right corner
@@ -340,7 +340,7 @@ map.addLayer(
         interactive: true,
         vectorTileLayerStyles: vectorTileStyling,
         };
-    var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{x}/{y}?f=mvt';
+    var pbfURL='http://localhost:5000/collections/hyderabad/tiles/WorldCRS84Quad/{z}/{y}/{x}?f=mvt';
     var pbfLayer=L.vectorGrid.protobuf(pbfURL,mapVectorTileOptions).on('click',function(e) {
         console.log(e.layer);
     L.DomEvent.stop(e);
