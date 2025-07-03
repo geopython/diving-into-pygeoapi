@@ -258,7 +258,7 @@ Finally start the docker composition, which will download and ingest the dataset
     If you are in production, you may want to close the elastic ports on docker-compose.
 
 ## Client access
-<!-- 
+
 ### QGIS
 
 QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
@@ -276,18 +276,18 @@ QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgi
 
     - locate the vector tiles service on the left hand side browser panel. Note that you can also use the top menu and navigate to `Layer > Add Layer > Vector Tile Layer`
 
-    ![](../assets/images/qgis-vtiles1.png){ width=100% }
-
     - right-click to bring up the context menu and choose `New Generic connection`
     - fill the required values. For URL, use the URL you noted from the previous step, replacing `{tileMatrix}/{tileRow}/{tileCol}` with `{z}/{y}/{x}`.
-    - press `OK` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, below "Vector Tiles"
-    - double-click in the collection to add it to the map
-    <!-- - remember to set the CRS of the map to `EPSG:3857` by clicking in the button on the lower right corner
-    - zoom in to Hyderabad to visualize your dataset
 
-    ![](../assets/images/qgis-vtiles2-hyderabad.png){ width=100% }
-    ![](../assets/images/qgis-vtiles4-hyderabad.png){ width=100% }
- -->
+    ![](../assets/images/qgis-vtiles-hyderabad1.png){ width=100% }
+
+    - press `OK` to add the service. At this point, if you should see the connection appear it. Click `Add` to add it to the map
+    - Zoom in to Hyderabad to visualize your dataset
+
+    ![](../assets/images/qgis-vtiles-hyderabad2.png){ width=100% }
+
+    ![](../assets/images/qgis-vtiles-hyderabad3.png){ width=100% }
+
 ### LeafletJS
 
 [LeafletJS](https://leafletjs.com) is a popular JavaScript library to add interactive maps to websites. LeafletJS does not support OGC API's explicitly, however can interact with OGC API by using the results of the API directly.
