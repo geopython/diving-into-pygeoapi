@@ -4,7 +4,7 @@ title: Diving into pygeoapi
 
 # Welcome to the Diving into pygeoapi workshop!
 
-Version: 1.5.0
+Version: 1.6.0dev
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
@@ -15,20 +15,20 @@ Version: 1.5.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G 2024](https://2024.foss4g.org) workshop team
+# Your [FOSS4G-EU 2025](https://2025.europe.foss4g.org/) workshop team
 
-<table>
+<table>    
     <tr>
         <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
-        <td><a href="https://github.com/PascalLike"><img width="150" src="https://avatars.githubusercontent.com/u/1323093?v=4"/></a></td>
-        <td><a href="https://github.com/webb-ben"><img width="150" src="https://avatars.githubusercontent.com/u/40066515?v=4"/></a></td>
+        <td><a href="https://github.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
+        <td><a href="https://github.com/geographika"><img width="150" src="https://avatars.githubusercontent.com/u/490840?v=4"/></a></td>
+        <td><a href="https://github.com/pvgenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
-        <td><a href="https://github.com/doublebyte1">Joana Simoes</a></td>
-        <td><a href="https://github.com/PascalLike">Antonio Cerciello</a></td>
-        <td><a href="https://github.com/webb-ben">Benjamin Webb</a></td>
+        <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
+        <td><a href="https://github.com/geographika">Seth Girvin</a></td>
+        <td><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></td>
     </tr>
 </table>
 
