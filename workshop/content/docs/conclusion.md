@@ -11,16 +11,13 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 [![OGC APIs banner](assets/images/OGC_APIs_banner.jpg){ width=40% }](https://ogcapi.ogc.org)
 
-# FOSS4G 2024
+# FOSS4G Europe 2025
 
-For those in attendance at [FOSS4G 2024](https://2024.foss4g.org):
+For those in attendance at [FOSS4G Europe 2025](https://2025.europe.foss4g.org):
 
-- come to the [pygeoapi project status](https://talks.osgeo.org/foss4g-2024/talk/VQNTSA) presentation on Wednesday 04 December at 17:45, in room II
+- come to the [pygeoapi project status](https://talks.osgeo.org/foss4g-europe-2025/talk/EPWGP7) presentation on Wednesday 16 July 17:45, in room EL11 (Geosolutions)
 - or the other talks related to pygeoapi:
-  - [Unifying Standards for Water Data Exchange: Leveraging OGC API - EDR and pygeoapi](https://talks.osgeo.org/foss4g-2024/talk/KRFWMJ) on Thursday 05 December at 15:00, in room III
-  - [Rendering OGC API Compliant Vector Tiles on the Fly with pygeoapi + Elasticsearch](https://talks.osgeo.org/foss4g-2024/talk/ZLGZPA) on Friday 06 December at 12:00, in room I
-  - [Wagtail CMS + pygeoapi = Modern SDI for the current needs ](https://talks.osgeo.org/foss4g-2024/talk/L9PB9K) on Friday 06 December at 12:30, in room I
-- the pygeoapi team will be at the [Community Code Sprint](https://2024.foss4g.org/en/additional-events) on 07-08 December, at the IFPA Campus Belém
+- the pygeoapi team will be at the [Community Sprint](https://2025.europe.foss4g.org/schedule/community-sprint/) on 19-20 July, at the conference venue, Faculty of Humanities and Social Sciences (building P)
 
 # Contributing
 
