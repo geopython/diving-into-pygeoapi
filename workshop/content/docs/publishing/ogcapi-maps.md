@@ -1,8 +1,8 @@
 ---
-title: Exercise 5 - Maps of geospatial data via OGC API - Maps
+title: Exercise 4 - Maps of geospatial data via OGC API - Maps
 ---
 
-# Exercise 5 - Maps of geospatial data via OGC API - Maps
+# Exercise 4 - Maps of geospatial data via OGC API - Maps
 
 [OGC API - Maps](https://ogcapi.ogc.org/maps) provides a Web API to access
 any geospatial data as a georeferenced map image.
@@ -23,7 +23,7 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
  
 !!! question "Interact with OGC API - Maps via MapScript"
 
-    Open the pygeoapi configuration file in a text editor. Find the line `# START - EXERCISE 5 - Maps`.
+    Open the pygeoapi configuration file in a text editor. Find the line `# START - EXERCISE 4 - Maps`.
 
     Uncomment section related to #airports.
 

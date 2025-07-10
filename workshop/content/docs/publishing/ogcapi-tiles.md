@@ -1,8 +1,8 @@
 ---
-title: Exercise 4 - Tiles of geospatial data via OGC API - Tiles
+title: Exercise 5 - Tiles of geospatial data via OGC API - Tiles
 ---
 
-# Exercise 4 - Tiles of geospatial data via OGC API - Tiles
+# Exercise 5 - Tiles of geospatial data via OGC API - Tiles
 
 [OGC API - Tiles](https://ogcapi.ogc.org/tiles) provides a Web API to deliver tiles of geospatial information. Different forms of geospatial information are supported, such as tiles of vector features ("vector tiles"), coverages, maps (or imagery) and potentially eventually additional types of tiles of geospatial information. The standard is available on this document:
  
@@ -261,7 +261,7 @@ Finally start the docker composition, which will download and ingest the dataset
 
 ### QGIS
 
-QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.34/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
+QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.40/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API - Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
 !!! question "Access OGC API Vector Tiles from QGIS"
 

@@ -1,7 +1,7 @@
 site_name: Diving into pygeoapi
 site_description: "pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards."
 site_author: The pygeoapi community
-copyright: "&copy; 2023 pygeoapi community"
+copyright: "&copy; 2025 pygeoapi community"
 site_url: https://geopython.github.io/diving-into-pygeoapi
 repo_url: https://github.com/geopython/diving-into-pygeoapi
 nav:
@@ -14,8 +14,8 @@ nav:
         - Exercise 1 - Your first dataset: publishing/first.md
         - Exercise 2 - Vector data via OGC API - Features: publishing/ogcapi-features.md
         - Exercise 3 - Raster data via OGC API - Coverages: publishing/ogcapi-coverages.md
-        - Exercise 4 - Tiles of geospatial data via OGC API - Tiles: publishing/ogcapi-tiles.md
-        - Exercise 5 - Maps of geospatial data via OGC API - Maps: publishing/ogcapi-maps.md
+        - Exercise 4 - Maps of geospatial data via OGC API - Maps: publishing/ogcapi-maps.md
+        - Exercise 5 - Tiles of geospatial data via OGC API - Tiles: publishing/ogcapi-tiles.md
         - Exercise 6 - Metadata via OGC API - Records: publishing/ogcapi-records.md
         - Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval: publishing/ogcapi-edr.md
         - Exercise 8 - Functions via OGC API - Processes: publishing/ogcapi-processes.md

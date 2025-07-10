@@ -282,7 +282,41 @@ resources:
 #                  mimetype: application/tiff
 ## END - EXERCISE 3 - Coverages
 
-## START - EXERCISE 4 - Tiles
+## START - EXERCISE 4 - Maps
+#    airports:
+#        type: collection
+#        title: airports of the world
+#        description: Point data representing airports around the world with various metadata such as name, Code, etc.
+#        keywords:
+#            - airports
+#            - natural earth
+#        links:
+#            - type: text/html
+#              rel: canonical
+#              title: information
+#              href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
+#              hreflang: en-US
+#        extents:
+#            spatial:
+#                bbox: [-180,-90,180,90]
+#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+#            temporal:
+#                begin:
+#                end: null  # or empty
+#        providers:
+#            - type: map
+#              name: MapScript
+#              data: /data/airport.gpkg
+#              options:
+#                  type: MS_LAYER_POINT
+#                  layer: airport
+#                  style: /data/airport.sld
+#              format:
+#                  name: png
+#                  mimetype: image/png
+## END - EXERCISE 4 - Maps
+
+## START - EXERCISE 5 - Tiles
 #    hyderabad:
 #        type: collection
 #        title: Greater Hyderabad Municipal Corporation ward boundaries
@@ -319,41 +353,7 @@ resources:
 #              format:
 #                    name: pbf
 #                    mimetype: application/vnd.mapbox-vector-tile
-# # END - EXERCISE 4 - Tiles
-
-## START - EXERCISE 5 - Maps
-#    airports:
-#        type: collection
-#        title: airports of the world
-#        description: Point data representing airports around the world with various metadata such as name, Code, etc.
-#        keywords:
-#            - airports
-#            - natural earth
-#        links:
-#            - type: text/html
-#              rel: canonical
-#              title: information
-#              href: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/airports/
-#              hreflang: en-US
-#        extents:
-#            spatial:
-#                bbox: [-180,-90,180,90]
-#                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-#            temporal:
-#                begin:
-#                end: null  # or empty
-#        providers:
-#            - type: map
-#              name: MapScript
-#              data: /data/airport.gpkg
-#              options:
-#                  type: MS_LAYER_POINT
-#                  layer: airport
-#                  style: /data/airport.sld
-#              format:
-#                  name: png
-#                  mimetype: image/png
-## END - EXERCISE 5 - Maps
+# # END - EXERCISE 5 - Tiles
 
 ## START - EXERCISE 6 - Metadata
 #    example_catalogue:
