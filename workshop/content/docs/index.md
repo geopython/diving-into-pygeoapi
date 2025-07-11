@@ -31,7 +31,6 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
         <td><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></td>
         <td><a href="https://github.com/geographika">Seth Girvin</a></td>
         <td><a href="https://github.com/ldesousa">Luís de Sousa</td>
-
     </tr>
 </table>
 
