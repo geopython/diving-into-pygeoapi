@@ -21,14 +21,17 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
     <tr>
         <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
         <td><a href="https://github.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
-        <td><a href="https://github.com/geographika"><img width="150" src="https://avatars.githubusercontent.com/u/490840?v=4"/></a></td>
         <td><a href="https://github.com/pvgenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
+        <td><a href="https://github.com/geographika"><img width="150" src="https://avatars.githubusercontent.com/u/490840?v=4"/></a></td>
+        <td><a href="https://github.com/ldesousa"><img width="150" src="https://avatars.githubusercontent.com/u/1137878?v=4"/></a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
         <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
-        <td><a href="https://github.com/geographika">Seth Girvin</a></td>
         <td><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></td>
+        <td><a href="https://github.com/geographika">Seth Girvin</a></td>
+        <td><a href="https://github.com/ldesousa">Luís de Sousa</td>
+
     </tr>
 </table>
 
