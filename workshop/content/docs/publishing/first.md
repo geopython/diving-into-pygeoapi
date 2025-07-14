@@ -65,7 +65,7 @@ To test:
         docker ps  # verify that the pygeoapi container is running
         # visit http://localhost:5000 in your browser, verify some collections
         docker logs --follow pygeoapi  # view logs
-        docker compose stop
+        docker compose down --remove-orphans
         ```
         </div>
 
@@ -77,7 +77,7 @@ To test:
         docker ps  # verify that the pygeoapi container is running
         # visit http://localhost:5000 in your browser, verify some collections
         docker logs --follow pygeoapi  # view logs
-        docker compose stop
+        docker compose down --remove-orphans
         ```
         </div>
 ## Publish first dataset
