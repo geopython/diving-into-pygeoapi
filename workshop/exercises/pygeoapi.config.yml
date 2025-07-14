@@ -218,14 +218,14 @@ resources:
 #                crs: http://www.opengis.net/def/crs/EPSG/0/4326
 #        providers:
 #           - type: feature
-#              name: CSV
-#              data: /data/tartu/bathingwater-estonia.csv
-#              id_field: id
-#              title_field: Name
-#              geometry:
-#                 x_field: x
-#                 y_field: y
-#              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
+#             name: CSV
+#             data: /data/tartu/bathingwater-estonia.csv
+#             id_field: id
+#             title_field: Name
+#             geometry:
+#                x_field: x
+#                y_field: y
+#             storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
 ### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - Guama River mainstems
@@ -237,11 +237,11 @@ resources:
 #             - Guama River
 #             - Merit Hydro
 #         links:
-#             -   type: text/html
-#                 rel: canonical
-#                 title: data
-#                 href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
-#                 hreflang: EE
+#             - type: text/html
+#               rel: canonical
+#               title: data
+#               href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
+#               hreflang: EE
 #         extents:
 #             spatial:
 #                 bbox: [49.16,-5.0, -46.8, -1.2]
@@ -347,7 +347,7 @@ resources:
 #              name: MVT-tippecanoe
 #              data: /data/tiles/  # local directory tree
 #              options:
-#                zoom:
+#                 zoom:
 #                    min: 0
 #                    max: 16
 #              format:
