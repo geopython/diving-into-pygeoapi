@@ -116,7 +116,7 @@ QGIS added support for API's providing rendered image layers via its raster supp
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
-        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> data = m.map('airports', width=1200, height=800, transparent=False)
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
@@ -128,7 +128,7 @@ QGIS added support for API's providing rendered image layers via its raster supp
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
-        >>> data = m.map('wms-facade-demo', width=1200, height=800, transparent=False)
+        >>> data = m.map('airports', width=1200, height=800, transparent=False)
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
