@@ -342,7 +342,7 @@ resources:
 #            - type: feature
 #              name: GeoJSON
 #              data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-#              id_field: id
+#              id_field: objectid
 #            - type: tile
 #              name: MVT-tippecanoe
 #              data: /data/tiles/  # local directory tree
