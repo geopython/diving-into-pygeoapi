@@ -58,11 +58,11 @@ Let's add the file `workshop/exercises/data/brazil/guama_river.gpkg.zip`:
             - Guama River
             - Merit Hydro
         links:
-            -   type: text/html
-                rel: canonical
-                title: data
-                href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
-                hreflang: EE
+            - type: text/html
+              rel: canonical
+              title: data
+              href: https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d
+              hreflang: EE
         extents:
             spatial:
                 bbox: [-49.16, -5.0, -46.8, -1.2]

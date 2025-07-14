@@ -229,7 +229,7 @@ resources:
 ### END - EXERCISE 1 - Your First Collection
 
 ## START - EXERCISE 2 - Guama River mainstems
-#     guama-river:
+#    guama-river:
 #         type: collection
 #         title: Guama River
 #         description: Guama River Basin mainstem flowlines
@@ -244,7 +244,7 @@ resources:
 #               hreflang: EE
 #         extents:
 #             spatial:
-#                 bbox: [49.16,-5.0, -46.8, -1.2]
+#                 bbox: [-49.16,-5.0, -46.8, -1.2]
 #                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 #         providers:
 #             - type: feature
