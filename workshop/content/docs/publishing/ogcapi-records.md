@@ -7,14 +7,14 @@ title: Exercise 6 - Metadata via OGC API - Records
 [OGC API - Records](https://ogcapi.ogc.org/records) provides a Web API with the capability to create, modify,
 and query metadata on the Web:
 
-* [OGC API - Records: Part 1: Core](https://docs.ogc.org/DRAFTS/20-004.html) (**draft**)
+* Read the [OGC API - Records: Part 1: Core](https://docs.ogc.org/is/20-004r1/20-004r1.html) specification at the OGC website.
 
 OGC API - Records uses OGC API - Features as a building block, thus enabling streamlined deployment and integration
 for clients and users.
 
 ## pygeoapi support
 
-pygeoapi supports the OGC API - Records draft specification, using Elasticsearch and TinyDB [rasterio](https://rasterio.readthedocs.io) as core backends.
+pygeoapi supports the OGC API - Records specification, using Elasticsearch and TinyDB [rasterio](https://rasterio.readthedocs.io) as core backends.
 
 !!! note
 
