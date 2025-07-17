@@ -353,6 +353,7 @@ resources:
 #              format:
 #                    name: pbf
 #                    mimetype: application/vnd.mapbox-vector-tile
+#              id_field: objectid
 # # END - EXERCISE 5 - Tiles
 
 ## START - EXERCISE 6 - Metadata
