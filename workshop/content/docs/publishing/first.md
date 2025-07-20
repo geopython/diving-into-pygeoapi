@@ -11,20 +11,12 @@ kindly provided by [Estonian Health Board](https://terviseamet.ee).
 
 You can find this dataset in `workshop/exercises/data/tartu/bathingwater-estonia.csv`.
 
-This exercise consists of two steps:
-
-* adjust `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
-* ensure that pygeoapi can find and connect to the data file
-
-We will use the `workshop/exercises/docker-compose.yml` file provided.
+This exercise consists of adjusting `workshop/exercises/pygeoapi.config.yml` to define this dataset as an OGC API - Features *collection*
 
 ## Verify the existing Docker Compose config
 
 Before making any changes, we will make sure that the initial Docker Compose
-setup provided to you is actually working. Two files are relevant:
-
-* `workshop/exercises/docker-compose.yml`
-* `workshop/exercises/pygeoapi.config.yml`
+setup provided to you is actually working.
 
 To test:
 
@@ -80,6 +72,7 @@ To test:
         docker compose down --remove-orphans
         ```
         </div>
+
 ## Publish first dataset
 
 You are now ready to publish your first dataset.
@@ -142,30 +135,6 @@ and `lat` in the CSV file. Notice the `storage_crs` parameter, which indicates t
     Consult the [data provider page](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) how you can set up
     a connection to your dataset of choice. You can always copy a relevant example configuration and place it in the datasets section of
     the pygeoapi configuration file for your future project.
-
-## Making data available in the Docker container
-
-As the Docker container (named `pygeoapi`) cannot directly access files on your
-local host system, we will use Docker volume mounts. This can be defined 
-in the `docker-compose.yml` file as follows:
-
-!!! question "Configure access to the data"
-
-    1. Open the file `workshop/exercises/docker-compose.yml`
-    1. Look for the commented section `# Exercise 1 - `
-    1. Uncomment that line  `- ./data:/data`
-
-The relevant lines read:
-
-``` {.yml linenums="43"}
-volumes:
-    - ./pygeoapi/pygeoapi.config.yml:/pygeoapi/local.config.yml
-    - ./data:/data # Exercise 1 - Ready to pull data from here
-    - ./plugins/process/squared.py:/pygeoapi/pygeoapi/process/squared.py  # Exercise 8
-```
-
-The local `./pygeoapi/pygeoapi.config.yml` file was already mounted. Now
-we have also mounted (made available) the entire local directory `./data`.
 
 ## Test
 
