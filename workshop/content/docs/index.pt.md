@@ -1,21 +1,20 @@
 ---
-title: Mergulhar na pygeoapi
+title: Mergulhando na pygeoapi
 ---
 
-# Welcome to the Diving into pygeoapi workshop!
+# Bem-vind@s à workshop Mergulhando na pygeoapi!
 
-Version: 1.6.0
+Versão: 1.6.0
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
-[pygeoapi](https://pygeoapi.io) is a Python server implementation of the [OGC API](https://ogcapi.ogc.org) suite of standards. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy a RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is open source and released under an MIT license.
+A [pygeoapi](https://pygeoapi.io) é uma implementação em Python de um servidor da suíte de standards [OGC API](https://ogcapi.ogc.org). O projeto surgiu como parte dos esforços da próxima geração da OGC API em 2018 e oferece a capacidade de as organizações implementarem um ponto de acesso (endpoint) RESTful OGC API usando OpenAPI, GeoJSON e HTML. A pygeoapi é de código aberto e disponibilizada sob a licença MIT.
 
-**Diving into pygeoapi** is a half day workshop designed for users to become familiar with installing, configuring, publishing data to and extending pygeoapi. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards.
+A **Mergulhando na pygeoapi** é uma workshop de meio dia, desenhada para que os utilizadores se familiarizem com a instalação, configuração, publicação de dados e extensão da pygeoapi. Esta workshop abordará a publicação de dados geoespaciais na Web usando a pygeoapi, em conformidade com a suíte de standards OGC API.
 
+Esta workshop abrange uma vasta gama de tópicos (instalação/configuração, publicação, cloud, modelos, plugins, etc.). Por favor, consulte o menu de navegação à esquerda para aceder ao índice.
 
-This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
-
-# Your [FSL](https://festa2025.softwarelivre.eu/) workshop team
+# A vossa equipa da workshop [FSL](https://festa2025.softwarelivre.eu/)
 
 <table>    
     <tr>
@@ -24,19 +23,19 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
     </tr>
 </table>
 
-# About this tutorial
+# Sobre este tutorial
 
-This tutorial is a combination of step-by-step explanations of various aspects of pygeoapi as well as a series of exercises to familiarize yourself with the project.
+Este tutorial é uma combinação de explicações passo a passo de vários aspetos da pygeoapi, bem como uma série de exercícios para se familiarizar com o projeto.
 
-Exercises are indicated as follows:
+Os exercícios são indicados da seguinte forma:
 
-!!! question "Example exercise"
+!!! question "Exemplo de exercício"
 
-    A section marked like this indicates that you can try out the exercise.
+    Uma secção marcada desta forma indica que pode experimentar o exercício.
 
-!!! example "Example exercise with tabs"
+!!! example "Exemplo de exercício com separadores"
 
-    A section marked like this indicates that you can try out the exercise and choose your environment (Linux/Mac or Windows).
+    Uma secção marcada desta forma indica que pode experimentar o exercício e escolher o seu ambiente (Linux/Mac ou Windows).
 
     === "Linux/Mac"
         <div class="termy">
@@ -51,15 +50,15 @@ Exercises are indicated as follows:
         ```
         </div>
 
-Also you will notice tips and notes sections within the text:
+Também irá notar secções de dicas e notas no texto:
 
 !!! tip
 
-    Tips share additional help on how to best achieve tasks
+    As dicas oferecem ajuda adicional sobre a melhor forma de realizar tarefas
 
-Examples are indicated as follows:
+Os exemplos são indicados da seguinte forma:
 
-Code
+Código
 ``` {.html linenums="1"}
 <html>
     <head>
@@ -68,7 +67,7 @@ Code
 </html>
 ```
 
-Configuration
+Configuração
 ``` {.yaml linenums="1"}
 my-collection:
     type: collection
@@ -76,7 +75,7 @@ my-collection:
     description: my cool collection description
 ```
 
-Snippets which need to be typed in a on a terminal/console are indicated as:
+Fragmentos de código (snippets) que precisam de ser digitados num terminal/consola são indicados como:
 
 <div class="termy">
 ```bash
@@ -84,28 +83,26 @@ echo 'Hello world'
 ```
 </div>
 
-# Workshop location and materials
+# Localização e materiais da workshop
 
-This workshop is always provided live at [https://dive.pygeoapi.io](https://dive.pygeoapi.io).
+Esta workshop é sempre disponibilizada ao vivo em [https://dive.pygeoapi.io](https://dive.pygeoapi.io).
 
-The workshop contents, wiki and issue tracker are managed on GitHub at [https://github.com/geopython/diving-into-pygeoapi](https://github.com/geopython/diving-into-pygeoapi).
+Os conteúdos da workshop, a wiki e o sistema de registo de problemas (issue tracker) são geridos no GitHub em [https://github.com/geopython/diving-into-pygeoapi](https://github.com/geopython/diving-into-pygeoapi).
 
-## Printing this workshop
+## Imprimir esta workshop
 
-To print this workshop, navigate to the [print page](print_page) and select *File > Print > Save as PDF*.
+Para imprimir esta workshop, navegue até à [página de impressão](print_page) e selecione *Ficheiro > Imprimir > Guardar como PDF*.
 
-# Support
+# Suporte
 
-A [Gitter](https://app.gitter.im/#/room/#geopython_diving-into-pygeoapi:gitter.im) channel exists for
-discussion and live support from the developers of the workshop and other workshop participants.
+Existe um canal no [Gitter](https://app.gitter.im/#/room/#geopython_diving-into-pygeoapi:gitter.im) para discussão e suporte ao vivo por parte dos desenvolvedores da workshop e de outros participantes.
 
-For issues/bugs/suggestions or improvements/contributions, please use the [GitHub issue tracker](https://github.com/geopython/diving-into-pygeoapi/issues).
+Para problemas/bugs/sugestões ou melhorias/contribuições, por favor, utilize o [issue tracker do GitHub](https://github.com/geopython/diving-into-pygeoapi/issues).
 
-All bugs, enhancements and issues can be reported on [GitHub](https://github.com/geopython/diving-into-pygeoapi/issues).
+Todos os bugs, melhorias e problemas podem ser reportados no [GitHub](https://github.com/geopython/diving-into-pygeoapi/issues).
 
-As always, core pygeoapi support and community information can be found on the pygeoapi [website](https://pygeoapi.io/community).
+Como sempre, o suporte principal da pygeoapi e as informações da comunidade podem ser encontrados no [website](https://pygeoapi.io/community) da pygeoapi.
 
-Contributions are always enncouraged and welcome!
+As contribuições são sempre incentivadas e bem-vindas!
 
-
-## Now, on to the workshop.  Let's go!
+## Agora, vamos à workshop. Bora lá!

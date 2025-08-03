@@ -105,7 +105,7 @@ All bugs, enhancements and issues can be reported on [GitHub](https://github.com
 
 As always, core pygeoapi support and community information can be found on the pygeoapi [website](https://pygeoapi.io/community).
 
-Contributions are always enncouraged and welcome!
+Contributions are always encouraged and welcome!
 
 
 ## Now, on to the workshop.  Let's go!
