@@ -46,10 +46,22 @@ theme:
         - navigation.indexes 
     favicon: assets/favicon.ico
     logo: assets/images/pygeoapi-icon-notrans.png
+    language: en
 
 plugins:
     - search
     - print-site
+    - i18n:
+        default_language: en
+        languages:
+          - locale: en
+            name: English
+            default: true
+            build: true
+          - locale: pt
+            name: Portuguese
+            build: true
+
 
 markdown_extensions:
     - meta # option to add some meta tags on top, title, author, date, etc
@@ -72,3 +84,4 @@ extra_css:
 extra_javascript:
     - assets/javascripts/termynal.js
     - assets/javascripts/custom.js
+

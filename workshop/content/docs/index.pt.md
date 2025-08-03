@@ -1,5 +1,5 @@
 ---
-title: Diving into pygeoapi
+title: Mergulhar na pygeoapi
 ---
 
 # Welcome to the Diving into pygeoapi workshop!
@@ -19,8 +19,17 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
 
 <table>    
     <tr>
+    <tr>
         <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
+    </tr>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
+        <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
+        <td><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></td>
+        <td><a href="https://github.com/geographika">Seth Girvin</a></td>
+        <td><a href="https://github.com/ldesousa">Luís de Sousa</td>
     </tr>
 </table>
 
