@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - lang-pt  # Or your default branch
+  workflow_dispatch:
 
 permissions:
   contents: write
