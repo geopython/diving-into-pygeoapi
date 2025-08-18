@@ -67,7 +67,7 @@ plugins:
                 Workshop environment setup: Configuração do ambiente da workshop
                 Standards: Normas
                 Publishing: Publicação
-                "Exercise 1 - Your first dataset": "Exercício 1 - O primeiro conjunto de dados"
+                "Exercise 1 - Your first dataset": "Exercício 1 - O meu primeiro conjunto de dados"
                 "Exercise 2 - Vector data via OGC API - Features": "Exercício 2 - Dados vetoriais via OGC API - Features"
                 "Exercise 3 - Raster data via OGC API - Coverages": "Exercício 3 - Dados raster via OGC API - Coverages"
                 "Exercise 4 - Maps of geospatial data via OGC API - Maps": "Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps"
