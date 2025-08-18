@@ -60,6 +60,7 @@ plugins:
             build: true
           - locale: pt
             name: Portuguese
+            site_name: Mergulhando na pygeoapi
             build: true
             nav_translations:
                 Home: Início

@@ -14,12 +14,14 @@ A **Mergulhando na pygeoapi** é uma workshop de meio dia, desenhada para que os
 
 Esta workshop abrange uma vasta gama de tópicos (instalação/configuração, publicação, cloud, modelos, plugins, etc.). Por favor, consulte o menu de navegação à esquerda para aceder ao índice.
 
-# A vossa equipa da workshop [FSL](https://festa2025.softwarelivre.eu/)
+# A vossa equipa da workshop da [FSL](https://festa2025.softwarelivre.eu/)
 
 <table>    
     <tr>
         <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
+        <td><a href="https://codeberg.org/ldesousa"><img width="150" src="https://codeberg.org/avatars/8508bf63cba1d561f24407341653cf925cd7a7b468fcffbb1ce7a8db0e010a30?size=512"/></a></td>
+        <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
     </tr>
 </table>
 

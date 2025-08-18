@@ -21,6 +21,8 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
     <tr>
         <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
         <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
+        <td><a href="https://codeberg.org/ldesousa"><img width="150" src="https://codeberg.org/avatars/8508bf63cba1d561f24407341653cf925cd7a7b468fcffbb1ce7a8db0e010a30?size=512"/></a></td>
+        <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
     </tr>
 </table>
 
