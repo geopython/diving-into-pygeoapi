@@ -72,7 +72,7 @@ plugins:
                 "Exercise 2 - Vector data via OGC API - Features": "Exercício 2 - Dados vetoriais via OGC API - Features"
                 "Exercise 3 - Raster data via OGC API - Coverages": "Exercício 3 - Dados raster via OGC API - Coverages"
                 "Exercise 4 - Maps of geospatial data via OGC API - Maps": "Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps"
-                "Exercise 5 - Tiles of geospatial data via OGC API - Tiles": "Exercício 5 - Mosaicos de dados geoespaciais via OGC API - Tiles"
+                "Exercise 5 - Tiles of geospatial data via OGC API - Tiles": "Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles"
                 "Exercise 6 - Metadata via OGC API - Records": "Exercício 6 - Metadados via OGC API - Records"
                 "Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval": "Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval"
                 "Exercise 8 - Functions via OGC API - Processes": "Exercício 8 - Funções via OGC API - Processes"
