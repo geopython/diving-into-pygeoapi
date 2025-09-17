@@ -72,6 +72,14 @@ pygeoapi over time:
 
 ![Approved and candidate OGC API standards](assets/images/ogcapis.png)
 
+#### OGC API Roadmap
+
+The [OGC Standards Roadmap](https://agora.ogc.org/roadmap) highlights the current and planned standards efforts as well as related extensions to those standards.  The Roadmap
+is useful for planning new functionality to users, as well as software implementation.
+
+!!! note
+    The OGC Standards Roadmap provides a status and timeline on all OGC standards.  To filter the Roadmap on OGC APIs only, use the "Filter by title, repo, label..." text box (top left) and filter on "OGC API"
+
 #### OGC APIs supported by pygeoapi
 
 pygeoapi implements numerous OGC API standards and draft standards. In addition, it is compliance certified and even a Reference Implementation (RI) for some of them. Compliance certification is important to remove interoperability risks. RI are always compliance certified. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
