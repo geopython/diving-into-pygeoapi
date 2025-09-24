@@ -35,7 +35,7 @@ A pygeoapi suporta a especificação core da OGC API - Tiles e é capaz de anunc
 
 Neste cenário, as tiles devem ser pré-renderizadas antes de serem servidas. O fornecedor `MVT-tippecanoe` permite servir tiles pré-renderizadas pelo [tippecanoe](https://github.com/mapbox/tippecanoe), seja a partir de uma directoria no disco ou de um servidor estático (ex.: bucket S3 ou MinIO).
 
-Para este exercício, irá publicar um conjunto de dados vetoriais dos [limites dos bairros da corporação municipal da grande Hyderabad](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), a partir da localização abaixo:
+Para este exercício, irá publicar um conjunto de dados vetoriais dos [limites dos bairros da corporação municipal da grande Hyderabad](https://en.wikipedia.org/wiki/Administrative_divisions_of_Hyderabad), a partir da localização abaixo:
 
 * data: `workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson`
   
