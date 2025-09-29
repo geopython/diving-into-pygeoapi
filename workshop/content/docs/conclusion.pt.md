@@ -14,7 +14,7 @@ Esperamos que esta workshop vos tenha proporcionado uma visão geral das muitas 
 
 Para aqueles que estão na [Festa do Software Livre 2025](https://festa2025.softwarelivre.eu/):
 
-- Apareçam na apresentação "Uma Visão Geral da Open Geospatial Foundation (OSGeo)" no sábado 4 às 14h, na sala D2- B001.
+- Apareçam na apresentação "Uma Visão Geral da Open Geospatial Foundation (OSGeo)" no sábado 4 às 14h, na sala D2- B002.
 - Apareçam na mesa redonda "Comunidades à conversa" no sábado 4 às 16:30h, na sala D2- B001. 
 
 # Contribuições
