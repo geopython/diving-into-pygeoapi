@@ -4,13 +4,13 @@ title: Exercício 2 - Dados vetoriais via OGC API - Features
 
 # Exercício 2 - Dados vetoriais via OGC API - Features
 
-A [OGC API - Features](https://ogcapi.ogc.org/features) fornece uma API de Web para aceder a dados 
-vetoriais (geometrias e os seus atributos). Embora a especificação principal abranja o acesso e a consulta básicos 
+A [OGC API - Features](https://ogcapi.ogc.org/features) fornece uma API Web para aceder a dados 
+vetoriais (geometrias e os seus atributos). A especificação principal abrange o acesso e consulta básicos 
 de dados, partes adicionais estão em desenvolvimento com as seguintes capacidades:
 
 - [OGC API - Features - Parte 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html) fornece capacidades básicas de acesso e consulta
 - [OGC API - Features - Parte 2: Coordinate Reference Systems by Reference](https://docs.ogc.org/is/18-058r1/18-058r1.html) 
-  permite a importação e exportação de quaisquer dados de acordo com projeções dedicadas
+  permite a importação e exportação de dados de diferentes sistemas de coordenadas
 - [OGC API - Features - Parte 3: Filtering](https://docs.ogc.org/is/19-079r2/19-079r2.html) adiciona a capacidade de 
   pesquisas complexas usando a [Common Query Language (CQL2)](https://docs.ogc.org/is/21-065r2/21-065r2.html)
 - [OGC API - Features - Parte 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002r1.html) (**rascunho**) adiciona capacidades transacionais
@@ -137,7 +137,7 @@ Mude para a pasta `docker/elastic` e execute o ficheiro `docker-compose.yml`:
     ```
     </div>
 
-Se tiver problemas no arranque, consulte o 
+Se tiver problemas a iniciar os serviços, consulte o 
 [ficheiro README](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). Pode precisar de 
 adaptar a configuração de memória virtual do seu sistema.
 
@@ -172,7 +172,7 @@ Depois disto, precisamos de reconstruir a imagem Docker:
     </div>
 
 A seguir, precisamos de configurar a pygeoapi inserindo o excerto abaixo no ficheiro de configuração da 
-pygeoapi `pygeoapi/docker.config.yml`. Isto permite efetivamente publicar o 
+pygeoapi `pygeoapi/docker.config.yml`. Esta modificação resulta na publicação do 
 ficheiro `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` como OGC API - Features usando o 
 fornecedor de backend Elasticsearch.
 
@@ -206,7 +206,7 @@ fornecedor de backend Elasticsearch.
               id_field: objectid
 ``` 
 
-No arranque (ex: docker compose up -d), o container da pygeoapi irá esperar até que os dados tenham sido ingeridos e 
+No arranque (ex: docker compose up -d), o contentor da pygeoapi irá esperar até que os dados tenham sido ingeridos e 
 o índice do Elasticsearch tenha sido construído. Pode verificar os registos usando:
 
 === "Linux/Mac"
@@ -246,7 +246,7 @@ Isto é expandido numa secção avançada deste workshop: [A pygeoapi como uma P
 
 ### QGIS
 
-O QGIS Foi um dos primeiros clientes GIS de Desktop que adicionou suporte para a OGC API - Features. O suporte foi 
+O QGIS Foi um dos primeiros clientes SIG de Desktop que adicionou suporte para a OGC API - Features. O suporte foi 
 integrado no fornecedor WFS existente.
 
 !!! question "Abrir uma coleção da OGC API - Features no QGIS"
@@ -254,7 +254,7 @@ integrado no fornecedor WFS existente.
     Siga os passos para adicionar algumas coleções de um endpoint da OGC API - Features:
 
     - Abra o QGIS (se não tiver o QGIS, pode usar o OSGeoLive)
-    - No menu Layer, selecione `Adicionar Layer` > `Adicionar layer WFS`
+    - No menu Layer, selecione `Adicionar Layer` > `Adicionar layer WFS / layer OGC API Features`
     - No painel `Gestor de fontes de dados`, escolha 'Nova ligação'
     
     ![New connection](../assets/images/new-connection.png){ width=50% }
@@ -358,13 +358,14 @@ Manifold, FME, ArcGIS, etc.
     Pode até usar o OGR para acrescentar novas features a uma coleção da OGC API - Features que suporte transações. 
     Leia mais [aqui](https://docs.pygeoapi.io/en/latest/transactions.html) sobre o suporte a transações na pygeoapi.
 
-!!! tip "Usar o GDAL a partir da linha de comandos com Docker"
+!!! tip "Usar a biblioteca GDAL a partir da linha de comandos com Docker"
 
-    Se não tiver o GDAL instalado, ou quiser usar/experimentar outra versão, pode sempre executar a imagem de Docker 
-    do GDAL diretamente a partir da linha de comandos. A OSGeo fornece 
-    [Imagens de Docker do GDAL](https://github.com/OSGeo/gdal/pkgs/container/gdal). O principal a ter em conta é o 
-    mapeamento correto de Volumes Docker para que as ferramentas do GDAL possam aceder a ficheiros locais. Isto pode 
-    ser muito útil para conversões rápidas de dados. A maioria das imagens também vem com bindings Python da GDAL.
+    Se não tiver a GDAL instalada, ou quiser usar/experimentar outra versão, pode sempre executar a imagem de Docker 
+    da GDAL diretamente a partir da linha de comandos. A OSGeo fornece 
+    [Imagens de Docker da GDAL](https://github.com/OSGeo/gdal/pkgs/container/gdal). O principal a ter em conta é o 
+    mapeamento correto de volumes Docker para que as ferramentas de linha de comandos da GDAL possam aceder a 
+    ficheiros locais. Isto pode ser muito útil para conversões rápidas de dados. A maioria das imagens também vem 
+    com bindings Python da GDAL.
     
     Primeiro, pode descarregar uma Imagem Docker muito pequena:
 
@@ -385,8 +386,8 @@ Manifold, FME, ArcGIS, etc.
         </div>
 
     Depois pode executar, por exemplo, as ferramentas de linha de comandos do OGR. O comando base é `docker 
-    run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`. Isto executa o container Docker interativamente (`-it`) e 
-    remove o container ao sair (`--rm`). Abaixo estão exemplos.
+    run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`. Isto executa um contentor Docker interativamente (`-it`) e 
+    remove-o ao sair (`--rm`). Abaixo estão exemplos.
 
     Liste os formatos Vetoriais disponíveis no GDAL/OGR :
 
@@ -460,7 +461,8 @@ Manifold, FME, ArcGIS, etc.
          ```
         </div>
 
-    Também pode usar o `ogrinfo` para obter informações sobre uma coleção da OGC API - Features. Caso esteja a aceder a uma coleção local, terá de se certificar de que o contentor é executado na rede do anfitrião (host):
+    Também pode usar o `ogrinfo` para obter informações sobre uma coleção da OGC API - Features. Caso esteja a aceder 
+    a uma coleção local, terá de se certificar de que o contentor é executado na rede do anfitrião (host):
 
     === "Linux/Mac"
 
@@ -508,7 +510,7 @@ jupyter notebook.
     ```
     </div>
 
-Depois, execute um container para iniciar um jupyter notebook, montando a pasta local:
+Depois use o docker para iniciar um contentor com o jupyter notebook, montando também a pasta local como um volume:
 
 === "Linux/Mac"
 
@@ -533,15 +535,16 @@ e abra o `features-owslib.ipynb`.
 
 Execute o notebook para explorar um servidor OGC API - Features, usando a owslib.
 
-!!! note
+!!! note "Nota"
 
-    Pode executar as mesmas instruções usando o seu servidor pygeoapi local, em vez da instância de demonstração da pygeoapi.
+    Pode executar as mesmas instruções usando o seu servidor pygeoapi local, em vez da instância 
+    de demonstração da pygeoapi.
 
 #### Usar Python a partir da linha de comandos
 
 !!! question "Interagir com a OGC API - Features via OWSLib"
 
-    Se não tiver o Python instalado, considere executar este exercício num container de Docker. Veja o 
+    Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Veja o 
     [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
     === "Linux/Mac"
@@ -628,7 +631,7 @@ Execute o notebook para explorar um servidor OGC API - Features, usando a owslib
         ```
         </div>
 
-!!! note
+!!! note "Nota"
 
     Consulte a [documentação oficial da OWSLib](https://owslib.readthedocs.io/en/latest/usage.html#ogc-api) para mais exemplos.
 
