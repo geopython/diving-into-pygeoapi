@@ -15,22 +15,14 @@ Version: 1.6.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G-EU 2025](https://2025.europe.foss4g.org/) workshop team
+# Your [FSL](https://festa2025.softwarelivre.eu/) workshop team
 
 <table>    
     <tr>
-        <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://github.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
-        <td><a href="https://github.com/pvgenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
-        <td><a href="https://github.com/geographika"><img width="150" src="https://avatars.githubusercontent.com/u/490840?v=4"/></a></td>
-        <td><a href="https://github.com/ldesousa"><img width="150" src="https://avatars.githubusercontent.com/u/1137878?v=4"/></a></td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/tomkralidis">Tom Kralidis</a></td>
-        <td><a href="https://github.com/justb4">Just van den Broecke</a></td>
-        <td><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></td>
-        <td><a href="https://github.com/geographika">Seth Girvin</a></td>
-        <td><a href="https://github.com/ldesousa">Luís de Sousa</td>
+        <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
+        <td><a href="https://codeberg.org/ldesousa"><img width="150" src="https://codeberg.org/avatars/8508bf63cba1d561f24407341653cf925cd7a7b468fcffbb1ce7a8db0e010a30?size=512"/></a></td>
+        <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
     </tr>
 </table>
 
@@ -115,7 +107,7 @@ All bugs, enhancements and issues can be reported on [GitHub](https://github.com
 
 As always, core pygeoapi support and community information can be found on the pygeoapi [website](https://pygeoapi.io/community).
 
-Contributions are always enncouraged and welcome!
+Contributions are always encouraged and welcome!
 
 
 ## Now, on to the workshop.  Let's go!

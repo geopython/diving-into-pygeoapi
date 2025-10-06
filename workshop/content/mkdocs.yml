@@ -46,9 +46,47 @@ theme:
         - navigation.indexes 
     favicon: assets/favicon.ico
     logo: assets/images/pygeoapi-icon-notrans.png
+    language: en
 
 plugins:
     - search
+    - i18n:
+        languages:
+          - locale: en
+            name: English
+            default: true
+            build: true
+          - locale: pt
+            name: Portuguese
+            site_name: Mergulhando na pygeoapi
+            build: true
+            nav_translations:
+                Home: Início
+                Introduction to pygeoapi: Introdução á pygeoapi
+                Workshop environment setup: Configuração do ambiente da workshop
+                Standards: Normas
+                Publishing: Publicação
+                "Exercise 1 - Your first dataset": "Exercício 1 - O meu primeiro conjunto de dados"
+                "Exercise 2 - Vector data via OGC API - Features": "Exercício 2 - Dados vetoriais via OGC API - Features"
+                "Exercise 3 - Raster data via OGC API - Coverages": "Exercício 3 - Dados raster via OGC API - Coverages"
+                "Exercise 4 - Maps of geospatial data via OGC API - Maps": "Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps"
+                "Exercise 5 - Tiles of geospatial data via OGC API - Tiles": "Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles"
+                "Exercise 6 - Metadata via OGC API - Records": "Exercício 6 - Metadados via OGC API - Records"
+                "Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval": "Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval"
+                "Exercise 8 - Functions via OGC API - Processes": "Exercício 8 - Funções via OGC API - Processes"
+                "Advanced topics": "Tópicos avançados"
+                "Multilingual support": "Suporte multilíngue"
+                "CRS support": "Suporte a CRS"
+                "UI customization and templating": "Personalização de UI e templating"
+                "Using pygeoapi in downstream applications": "Uso da pygeoapi em aplicações downstream"
+                "Search Engine Optimization (SEO)": "Otimização para mecanismos de busca (SEO)"
+                "Security and access control": "Segurança e controle de acessos"
+                "Semantic Web and Linked Data": "Web Semântica e Linked Data"
+                "Cloud deployment": "Implantação na cloud"
+                "INSPIRE support": "Suporte INSPIRE"
+                Administration: Administração
+                "Exercise 9 - pygeoapi as a bridge to other services": "Exercício 9 - pygeoapi como uma ponte para outros serviços"
+                Conclusion: Conclusão
     - print-site
 
 markdown_extensions:
