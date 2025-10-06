@@ -65,7 +65,7 @@ O esforço da OGC API está a evoluir rapidamente. Várias normas OGC API estão
 - [Joins](https://ogcapi.ogc.org/joins) suporta a junção de dados, de múltiplas fontes, com coleções de elementos ou diretamente com outros ficheiros de entrada
 - [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) permite que as aplicações organizem e acedam a dados organizados de acordo com um Discrete Global Grid System (DGGS)
 
-![Normas OGC API aprovadas e candidatas](assets/images/ogcapis-new-all.png)
+![Normas OGC API aprovadas e candidatas](assets/images/ogcapis.png)
 
 #### OGC APIs suportadas pela pygeoapi
 

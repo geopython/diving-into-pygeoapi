@@ -70,7 +70,7 @@ pygeoapi over time:
 - [Joins](https://ogcapi.ogc.org/joins)  supports the joining of data, from multiple sources, with feature collections or directly with other input files
 - [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS)
 
-![Approved and candidate OGC API standards](assets/images/ogcapis-new-all.png)
+![Approved and candidate OGC API standards](assets/images/ogcapis.png)
 
 #### OGC APIs supported by pygeoapi
 
