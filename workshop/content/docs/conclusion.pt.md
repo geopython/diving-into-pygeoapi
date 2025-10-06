@@ -10,15 +10,17 @@ Esperamos que esta workshop vos tenha proporcionado uma visão geral das muitas 
 
 [![OGC APIs banner](assets/images/OGC_APIs_banner.jpg){ width=40% }](https://ogcapi.ogc.org)
 
-# FSL 2025
+# FOSS4G Europe 2025
 
-Para aqueles que estão na [Festa do Software Livre 2025](https://festa2025.softwarelivre.eu/):
+Para aqueles que estão a participar no [FOSS4G Europe 2025](https://2025.europe.foss4g.org):
 
-- Apareçam na apresentação "Uma Visão Geral da Open Geospatial Foundation (OSGeo)" no sábado 4 às 14h, na sala D2- B002.
-- Apareçam na mesa redonda "Comunidades à conversa" no sábado 4 às 16:30h, na sala D2- B001. 
+- venham à apresentação sobre o [estado do projeto pygeoapi](https://talks.osgeo.org/foss4g-europe-2025/talk/EPWGP7) na quarta-feira, 16 de julho às 17:45, na sala EL11 (Geosolutions)
+- ou às outras apresentações relacionadas com pygeoapi:
+- a equipa pygeoapi estará presente no [Community Sprint](https://2025.europe.foss4g.org/schedule/community-sprint/) nos dias 19-20 de julho, no local da conferência, Faculdade de Humanidades e Ciências Sociais (edifício P)
 
 # Contribuições
 
-Sugestões, melhorias e correções são sempre bem vindas. For favor visitem a nossa [página de comunidade](https://pygeoapi.io/community) para mais informação ou entrem em contacto.
+Sugestões, melhorias e correções são sempre bem-vindas. Por favor, visitem a nossa página da [comunidade](https://pygeoapi.io/community)
+para mais informações sobre como entrar em contacto.
 
-Obrigada pelo vosso interesse na pygeoapi!
+Obrigado pelo vosso interesse na pygeoapi!

@@ -9,22 +9,22 @@ e consultar metadados na Web:
 
 * Leia a especificação [OGC API - Records: Part 1: Core](https://docs.ogc.org/is/20-004r1/20-004r1.html) no website da OGC.
 
-A OGC API - Records usa a OGC API - Features como um bloco de construção, permitindo assim uma implementação e integração
-otimizadas para clientes e utilizadores.
+A OGC API - Records utiliza a OGC API - Features como bloco de construção, permitindo assim implementação
+e integração simplificadas para clientes e utilizadores.
 
-## Suporte da pygeoapi
+## Suporte na pygeoapi
 
-A pygeoapi suporta a especificação OGC API - Records, usando Elasticsearch e TinyDB como backends principais.
+A pygeoapi suporta a especificação OGC API - Records, usando Elasticsearch e TinyDB [rasterio](https://rasterio.readthedocs.io) como backends principais.
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html) para mais informações sobre os backends de catálogo/metadados suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html) para mais informações sobre backends de catálogo/metadados suportados
 
 
 ## Publicar registos de metadados na pygeoapi
 
-Com a pygeoapi podemos configurar a OGC API - Records usando qualquer fornecedor de dados suportado. Neste exercício, usaremos o
-backend de Catálogo [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Usaremos o catálogo de exemplo em `workshop/exercises/data/tartu/metadata/catalogue.tinydb`.
+Com a pygeoapi vamos configurar OGC API - Records usando qualquer fornecedor de dados suportado. Neste exercício vamos usar o backend
+de catálogo [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Vamos utilizar o catálogo de exemplo em `workshop/exercises/data/tartu/metadata/catalogue.tinydb`.
 
 !!! question "Atualizar a configuração da pygeoapi"
 

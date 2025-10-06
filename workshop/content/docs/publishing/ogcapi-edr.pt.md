@@ -4,28 +4,28 @@ title: Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieva
 
 # Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval
 
-A [OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr) fornece uma API de Web para aceder
+[OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr) fornece uma Web API para aceder
 a dados ambientais usando padrões de consulta bem definidos:
 
-* [OGC API - Environmental Data Retrieval Standard](https://docs.ogc.org/is/19-086r4/19-086r4.html)
+* [Norma OGC API - Environmental Data Retrieval](https://docs.ogc.org/is/19-086r4/19-086r4.html)
 
-A OGC API - Environmental Data Retrieval usa a OGC API - Features como um bloco de construção, permitindo assim
-uma integração otimizada para clientes e utilizadores. A EDR pode ser considerada uma API de conveniência que não requer
-um conhecimento aprofundado sobre o armazenamento/modelo de dados subjacente.
+A OGC API - Environmental Data Retrieval utiliza a OGC API - Features como bloco de construção, permitindo assim
+integração simplificada para clientes e utilizadores. A EDR pode ser considerada uma API de conveniência que não
+requer conhecimento aprofundado sobre o armazenamento/modelo de dados subjacente.
 
-## Suporte da pygeoapi
+## Suporte na pygeoapi
 
-A pygeoapi suporta a especificação OGC API - Environmental Data Retrieval, aproveitando os plugins de fornecedor tanto de *feature*
-como de *coverage*.
+A pygeoapi suporta a especificação OGC API - Environmental Data Retrieval aproveitando tanto plugins de fornecedor
+de funcionalidades como de cobertura.
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-edr.html) para mais informações sobre os backends EDR suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-edr.html) para mais informações sobre backends EDR suportados
 
 
 ## Publicar dados ambientais na pygeoapi
 
-Vamos tentar publicar alguns dados ICOADS através do plugin EDR xarray. Os dados de exemplo ICOADS podem ser encontrados em `workshop/exercises/data/coads_sst.nc`:
+Vamos publicar alguns dados ICOADS através do plugin EDR xarray. Os dados ICOADS do exemplo podem ser encontrados em `workshop/exercises/data/coads_sst.nc`:
 
 
 !!! question "Atualizar a configuração da pygeoapi"
@@ -65,16 +65,16 @@ Vamos tentar publicar alguns dados ICOADS através do plugin EDR xarray. Os dado
 
 Guarde a configuração e reinicie o Docker Compose. Navegue para <http://localhost:5000/collections> para avaliar se o novo conjunto de dados foi publicado.
 
-À primeira vista, a coleção `icoads-sst` parece uma coleção normal da OGC API - Coverages. Olhe um pouco mais de perto para a descrição da coleção e repare
-que existe uma chave `parameter_names` que descreve os nomes dos parâmetros EDR para as consultas da coleção.
+À primeira vista, a coleção `icoads-sst` aparece como uma coleção normal OGC API - Coverages. Olhe um pouco mais de perto para a descrição da coleção, e note
+que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR para as consultas da coleção.
 
 ### OWSLib - Avançado
 
-A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagir com OGC Web Services e suporta várias OGC APIs, incluindo a OGC API - Environmental Data Retrieval.
+[OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagir com Serviços Web OGC e suporta várias OGC APIs incluindo OGC API - Environmental Data Retrieval.
 
-!!! question "Interagir com a OGC API - Environmental Data Retrieval via OWSLib"
+!!! question "Interagir com OGC API - Environmental Data Retrieval via OWSLib"
 
-    Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    Se não tem Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
     === "Linux/Mac"
 
@@ -102,7 +102,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
         >>> w.url
         'https://demo.pygeoapi.io/master'
-        >>> api = w.api()  # Documento OpenAPI
+        >>> api = w.api()  # documento OpenAPI
         >>> collections = w.collections()
         >>> len(collections['collections'])
         13
@@ -110,7 +110,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> icoads_sst['parameter-names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
         >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
-        >>> data  # Dados CoverageJSON
+        >>> data  # dados CoverageJSON
         ```
         </div>
 
@@ -122,7 +122,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
         >>> w.url
         'https://demo.pygeoapi.io/master'
-        >>> api = w.api()  # Documento OpenAPI
+        >>> api = w.api()  # documento OpenAPI
         >>> collections = w.collections()
         >>> len(collections['collections'])
         13
@@ -130,7 +130,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> icoads_sst['parameter-names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
         >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
-        >>> data  # Dados CoverageJSON
+        >>> data  # dados CoverageJSON
         ```
         </div>
 
