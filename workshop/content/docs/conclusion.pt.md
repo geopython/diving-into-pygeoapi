@@ -4,7 +4,7 @@ title: Conclusão
 
 # Conclusão
 
-Esperamos que este workshop tenha fornecido uma visão geral valiosa das muitas funcionalidades da pygeoapi. O objetivo do projeto é facilitar a publicação de dados com baixas barreiras, de forma simples e flexível, utilizando o conjunto de normas das OGC API.
+Esperamos que esta workshop vos tenha proporcionado uma visão geral das muitas funcionalidades da pygeoapi. O objetivo do projeto é permitir a publicação de dados utilizando o conjunto de Standards OGC API de forma simples, flexível e com uma barreira baixa de entrada.
 
 [![pygeoapi logo](assets/images/pygeoapi-logo.png){ width=40% }](https://pygeoapi.io)
 

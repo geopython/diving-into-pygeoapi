@@ -40,7 +40,7 @@ abstrata base fundamental da pygeoapi. Neste exercício vamos implementar uma fu
             name: pygeoapi.process.squared.SquaredProcessor
 ```
 
-!!! question "Atualizar código Python"
+!!! question "Atualizar o código Python"
 
     Abra o código Python em `workshop/exercises/plugins/process/squared.py`. Encontre a função `execute` e atualize o código Python
     para calcular o valor de entrada ao quadrado.
@@ -66,4 +66,4 @@ o processo na interface Swagger.
 
 # Resumo
 
-Parabéns! Agora pode publicar código Python como um processo na pygeoapi.
+Parabéns! Agora é capaz de publicar código Python como um processo na pygeoapi.

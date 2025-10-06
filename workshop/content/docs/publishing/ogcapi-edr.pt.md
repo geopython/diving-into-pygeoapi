@@ -40,7 +40,7 @@ Vamos publicar alguns dados ICOADS através do plugin EDR xarray. Os dados ICOAD
         keywords:
             - icoads
             - sst
-            - temperatura do ar
+            - air temperature
         extents:
             spatial:
                 bbox: [-180,-90,180,90]
@@ -51,7 +51,7 @@ Vamos publicar alguns dados ICOADS através do plugin EDR xarray. Os dados ICOAD
         links:
             - type: text/html
               rel: canonical
-              title: informação
+              title: information
               href: https://psl.noaa.gov/data/gridded/data.coads.1deg.html
               hreflang: en-US
         providers:
@@ -92,7 +92,7 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
         ```
         </div>
 
-    Depois inicie uma sessão de consola Python com `python3` (pare a sessão digitando `exit()`).
+    Depois, inicie uma sessão de consola Python com `python3` (pare a sessão escrevendo `exit()`).
 
     === "Linux/Mac"
 
@@ -140,4 +140,4 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
 
 # Resumo
 
-Parabéns! Agora pode publicar dados ambientais na pygeoapi.
+Parabéns! Agora é capaz de publicar dados ambientais na pygeoapi.

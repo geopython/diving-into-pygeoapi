@@ -4,7 +4,7 @@ title: Exercício 6 - Metadados via OGC API - Records
 
 # Exercício 6 - Metadados via OGC API - Records
 
-[OGC API - Records](https://ogcapi.ogc.org/records) fornece uma Web API com a capacidade de criar, modificar
+A [OGC API - Records](https://ogcapi.ogc.org/records) fornece uma API de Web com a capacidade de criar, modificar,
 e consultar metadados na Web:
 
 * Leia a especificação [OGC API - Records: Part 1: Core](https://docs.ogc.org/is/20-004r1/20-004r1.html) no website da OGC.
@@ -33,8 +33,8 @@ de catálogo [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Vamos
 ``` {.yaml linenums="1"}
     example_catalogue:
         type: collection
-        title: Catálogo nacional da Estónia FOSS4G Europe
-        description: Catálogo nacional da Estónia FOSS4G Europe
+        title: FOSS4G Europe Estonia national catalogue
+        description: FOSS4G Europe Estonia national catalogue
         keywords:
             - estonia
             - catalogue
@@ -42,7 +42,7 @@ de catálogo [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Vamos
         links:
             - type: text/html
               rel: canonical
-              title: informação
+              title: information
               href: https://metadata.geoportaal.ee
               hreflang: en-US
         extents:
@@ -62,12 +62,11 @@ Guarde a configuração e reinicie o Docker Compose. Navegue para <http://localh
 
 ## Formatos de metadados
 
-Por defeito, a pygeoapi suporta e espera o modelo de registo núcleo OGC API - Records e consultáveis. Para formatos de metadados adicionais, pode
-desenvolver o seu próprio plugin personalizado da pygeoapi, ou converter os seus metadados para o modelo de registo núcleo OGC API - Records antes de adicionar à pygeoapi.
+Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" da OGC API - Records. Para formatos de metadados adicionais, pode desenvolver o seu próprio plugin personalizado para a pygeoapi, ou converter os seus metadados para o modelo de records da OGC API - Records antes de os adicionar à pygeoapi.
 
-!!! question "Instalar OWSLib"
+!!! question "Instalar a OWSLib"
 
-    Se não tem Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    Se não tiver o Python instalado, considere executar este exercício num container Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
     === "Linux/Mac"
 
@@ -85,9 +84,9 @@ desenvolver o seu próprio plugin personalizado da pygeoapi, ou converter os seu
         ```
         </div>
 
-### Exemplo de carregador ISO 19139 para TinyDBCatalogue
+### Exemplo de loader de ISO 19139 para TinyDBCatalogue
 
-É possível carregar mais exemplos de metadados ISO19139 numa base de dados TinyDB com [o seguinte script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
+É possível carregar mais metadados de exemplo ISO19139 numa base de dados TinyDB com [o seguinte script](https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py) ([raw](https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py)):
 
 === "Linux/Mac"
 
@@ -109,11 +108,11 @@ desenvolver o seu próprio plugin personalizado da pygeoapi, ou converter os seu
     ```
     </div>
 
-Se não tem curl instalado, copie o URL acima para o seu navegador web e guarde localmente.
+Se não tiver o curl instalado, copie o URL acima para o seu navegador web e guarde localmente.
 
-Se não tem Python instalado, pode executar o carregador usando o contentor Docker OWSLib. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+Se não tiver o Python instalado, pode usar o loader utilizando o container Docker da OWSLib. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
-!!! example "Usar o contentor Docker OWSLib para carregar metadados"
+!!! example "Usar o container Docker da OWSLib para carregar metadados"
 
     === "Linux/Mac"
 
@@ -138,7 +137,7 @@ Se não tem Python instalado, pode executar o carregador usando o contentor Dock
         apt-get update -y && apt-get install curl -y
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
         python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
-        ```
+        ```        
         </div>
 
 Navegue para <http://localhost:5000/collections/example_catalogue> para avaliar se os novos metadados foram publicados
@@ -146,12 +145,12 @@ na coleção.
 
 !!! tip pygeometa
 
-    [pygeometa](https://geopython.github.io/pygeometa) é um pacote Python para gerar metadados para conjuntos de dados geoespaciais.
-    A pygeometa permite gerir metadados em simples "ficheiros de controlo de metadados" YAML (MCF), e suporta
-    importação, exportação bem como transformações para muitos formatos de metadados geoespaciais. Metadados OGC API - Records
-    podem ser produzidos usando pygeometa, seja a partir de ficheiros MCF ou transformando de outros formatos.
+    O [pygeometa](https://geopython.github.io/pygeometa) é um pacote Python para gerar metadados para conjuntos de dados geoespaciais.
+    AOpygeometa permite gerir metadados em ficheiros YAML simples "metadata control files (MCF)", e suporta
+    importação, exportação, bem como transformações para muitos formatos de metadados geoespaciais. Metadados
+    da OGC API - Records podem ser produzidos usando o pygeometa, quer a partir de ficheiros MCF ou por transformação de outros formatos.
 
-    Instale e execute pygeometa conforme abaixo para ter uma ideia dos vários comandos e funcionalidade (bem como,
+    Instale e execute o pygeometa como abaixo para ter uma ideia dos vários comandos e funcionalidades (além disso,
     consulte o [tutorial](https://geopython.github.io/pygeometa/tutorial)).
 
     === "Linux/Mac"
@@ -172,39 +171,41 @@ na coleção.
         ```
         </div>
 
-## pygeoapi como proxy CSW
+## A pygeoapi como um proxy de CSW
 
-Pode consultar a secção "pygeoapi como Ponte para Outros Serviços" para aprender como [publicar CSW como OGC API - Records](../advanced/bridges.md#publishing-csw-as-ogc-api-records).
+Pode verificar a secção "pygeoapi como uma Ponte para Outros serviços" para aprender como [publicar CSW como OGC API - Records](../advanced/bridges.md#publishing-csw-as-ogc-api-records).
 
-## Acesso cliente
+## Acesso de cliente
 
 ### QGIS
 
-O QGIS suporta OGC API - Records através do [plugin MetaSearch](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). O MetaSearch originalmente focava-se apenas no Catalogue Service for the Web (OGC:CSW), mas foi estendido para OGC API - Records. O MetaSearch é um plugin padrão no QGIS e não requer instalação adicional.
+O QGIS suporta a OGC API - Records através do [plugin MetaSearch](https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html). O MetaSearch focava-se originalmente apenas em Catalogue Service for the Web (OGC:CSW), mas foi estendido para a OGC API - Records. O MetaSearch é um plugin padrão no QGIS e não requer instalação adicional.
 
-!!! question "Consultar OGC API - Records a partir do QGIS"
+!!! question "Consultar a OGC API - Records a partir do QGIS"
 
-    Vamos seguir estes passos para nos conectarmos a um serviço e consultar conjuntos de dados:
+    Siga estes passos para se conectar a um serviço e consultar conjuntos de dados:
 
-    - Localize o plugin MetaSearch no menu Web ou na Barra de Ferramentas ![ícone MetaSearch](https://docs.qgis.org/latest/en/_images/MetaSearch.png "ícone MetaSearch"). O painel de pesquisa principal aparecerá com a lista de catálogos MetaSearch padrão já preenchida.
+    - Localize o plugin MetaSearch no menu Web ou na Barra de Ferramentas ![Ícone do MetaSearch](https://docs.qgis.org/latest/en/_images/MetaSearch.png "Ícone do MetaSearch"). O painel de pesquisa principal aparecerá com a lista de catálogos padrão do MetaSearch já preenchida.
 
     ![Catálogos pré-preenchidos](../assets/images/prepopulated-catalogues.png){ width=50% }
 
     - abra o separador `Services`, para encontrar o botão `New` para criar uma nova ligação
-    - adicione uma ligação para `https://demo.pygeoapi.io/master`
+    - adicione uma ligação a `https://demo.pygeoapi.io/master`
     - clique em `Service Info` para obter informações sobre o serviço
     - volte ao separador Search
     - selecione a ligação que acabou de criar
-    - digite um termo de pesquisa e clique em `search`
-    - note que quando seleciona um resultado de pesquisa, uma pegada vermelha é desenhada no mapa destacando a localização do conjunto de dados
+    - escreva um termo de pesquisa e clique em `search`
+    - repare que quando seleciona um resultado da pesquisa, uma pegada vermelha é desenhada no mapa, destacando a localização do conjunto de dados
 
     ![Resultados da pesquisa](../assets/images/search-results.png){ width=50% }
 
-[OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagir com Serviços Web OGC e suporta várias OGC APIs incluindo OGC API - Records.
+### OWSLib
 
-!!! question "Interagir com OGC API - Records via OWSLib"
+A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagir com OGC Web Services e suporta várias OGC APIs, incluindo a OGC API - Records.
 
-    Se não tem Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+!!! question "Interagir com a OGC API - Records via OWSLib"
+
+    Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
     === "Linux/Mac"
 
@@ -222,7 +223,7 @@ O QGIS suporta OGC API - Records através do [plugin MetaSearch](https://docs.qg
         ``` 
         </div>
 
-    Depois inicie uma sessão de consola Python com `python3` (pare a sessão digitando `exit()`).
+    Depois, inicie uma sessão de consola Python com `python3` (pare a sessão escrevendo `exit()`).
 
     === "Linux/Mac"
 
@@ -285,4 +286,4 @@ O QGIS suporta OGC API - Records através do [plugin MetaSearch](https://docs.qg
 
 # Resumo
 
-Parabéns! Agora pode publicar metadados na pygeoapi.
+Parabéns! Agora é capaz de publicar metadados na pygeoapi.

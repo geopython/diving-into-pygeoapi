@@ -1,3 +1,6 @@
 .DS_Store
 workshop/exercises/data/tiles
 workshop/content/site
+
+.idea
+.venv
