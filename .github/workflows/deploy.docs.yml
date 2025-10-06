@@ -25,4 +25,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Deploy 📦
-        run: mkdocs gh-deploy --strict --force --message 'update website via GitHub Actions'
+        run: mkdocs gh-deploy --config-file mkdocs.yml --strict --force --clean --message 'update website via GitHub Actions'
