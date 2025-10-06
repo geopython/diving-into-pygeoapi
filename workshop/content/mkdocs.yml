@@ -50,9 +50,7 @@ theme:
 
 plugins:
     - search
-    - print-site
     - i18n:
-        default_language: en
         languages:
           - locale: en
             name: English
@@ -89,7 +87,8 @@ plugins:
                 Administration: Administração
                 "Exercise 9 - pygeoapi as a bridge to other services": "Exercício 9 - pygeoapi como uma ponte para outros serviços"
                 Conclusion: Conclusão
-
+    - print-site
+    
 markdown_extensions:
     - meta # option to add some meta tags on top, title, author, date, etc
     - admonition # adds the note, question, tip boxes, eg: !!! tip "my tip"
