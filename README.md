@@ -43,6 +43,26 @@ mkdocs build
 mkdocs serve  # website is made available on http://localhost:8000
 ```
 
+### Translating the workshop to a different language
+
+The workshop is setup to support content in different languages, via the [mkdocs-static-i18n](https://pypi.org/project/mkdocs-static-i18n) plugin. To add an additional language to the workshop:
+
+- in `mkdocs.yml`, section `plugins.i18n.languages`, add a section with at least the `locale`, `name`, and `build` directives.  For example, to add Greek:
+
+```yaml
+- locale: el
+  name: Ελληνικά
+  build: true
+```
+
+- foreach `.md` page in `workshop/content/docs`, add an equivalant page in the language with the locale code as part of the filename.  For example:
+  - `ogcapi-records.md` -> `ogcapi-records.el.md`
+
+- commit to your fork and issue a GitHub Pull Request
+
+NOTE: see [issue 217](https://github.com/geopython/diving-into-pygeoapi/issues/217) to track the implementation of auto-translation.
+
+
 ## Contributing updates
 
 To make contributions back to the workshop, fork the repository from GitHub.  Contributions and Pull Requests are always welcome!
