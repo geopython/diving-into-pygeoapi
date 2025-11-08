@@ -126,7 +126,7 @@ and `lat` in the CSV file. Notice the `storage_crs` parameter, which indicates t
 !!! Tip
 
     To learn more about the pygeoapi configuration syntax and conventions see
-    the [relevant chapter in the documentation](https://docs.pygeoapi.io/en/latest/configuration.html).
+    the [relevant section in the documentation](https://docs.pygeoapi.io/en/latest/configuration.html).
 
 !!! Tip
 

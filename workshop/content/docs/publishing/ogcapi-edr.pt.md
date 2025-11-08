@@ -107,9 +107,9 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
         >>> len(collections['collections'])
         13
         >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter-names'].keys()
+        >>> icoads_sst['parameter_names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # dados CoverageJSON
         ```
         </div>
@@ -127,9 +127,9 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
         >>> len(collections['collections'])
         13
         >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter-names'].keys()
+        >>> icoads_sst['parameter_names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # dados CoverageJSON
         ```
         </div>

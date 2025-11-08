@@ -11,7 +11,7 @@ data (grids, remote sensing data, multidimensional data cubes):
 
 ## pygeoapi support
 
-pygeoapi supports the OGC API - Coverages draft specification, with [rasterio](https://rasterio.readthedocs.io) and [xarray](https://docs.xarray.dev) as core backends
+pygeoapi supports the OGC API - Coverages draft specification, with [Rasterio](https://rasterio.readthedocs.io) and [xarray](https://docs.xarray.dev) as core backends
 as well as [CoverageJSON](https://covjson.org) and native output.
 
 !!! note
@@ -21,7 +21,7 @@ as well as [CoverageJSON](https://covjson.org) and native output.
 
 ## Publish a raster dataset
 
-In the previous exercises we have demonstrated the steps involved to publish vector data and update the pygeoapi configuration. In this section we are going to publish a raster file in GeoTIFF format, from a [rasterio](https://rasterio.readthedocs.io) source provider.
+In the previous exercises we have demonstrated the steps involved to publish vector data and update the pygeoapi configuration. In this section we are going to publish a raster file in GeoTIFF format, from a [Rasterio](https://rasterio.readthedocs.io) source provider.
 
 
 !!! question "Update the pygeoapi configuration"
@@ -58,7 +58,7 @@ In the previous exercises we have demonstrated the steps involved to publish vec
 
 !!! tip
 
-    The rasterio provider `format.name` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)
+    The Rasterio provider `format.name` directive **requires** a valid [GDAL raster driver short name](https://gdal.org/drivers/raster/index.html)
 
 Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 

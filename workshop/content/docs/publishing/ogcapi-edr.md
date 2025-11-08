@@ -66,7 +66,9 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
 Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
 At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Look a bit closer at the collection description, and notice
-that there is a `parameter_names' key that describes EDR parameter names for the collection queries.
+that there is a `parameter_names` key that describes EDR parameter names for the collection queries.
+
+Try visualizing the following EDR position query in a web browser: <http://localhost:5000/collections/icoads-sst/position?coords=POINT(174.7645%20-36.8509)>
 
 ### OWSLib - Advanced
 
@@ -107,9 +109,9 @@ that there is a `parameter_names' key that describes EDR parameter names for the
         >>> len(collections['collections'])
         13
         >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter-names'].keys()
+        >>> icoads_sst['parameter_names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # CoverageJSON data
         ```
         </div>
@@ -127,9 +129,9 @@ that there is a `parameter_names' key that describes EDR parameter names for the
         >>> len(collections['collections'])
         13
         >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter-names'].keys()
+        >>> icoads_sst['parameter_names'].keys()
         dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads_sst', 'position', coords='POINT(-75 45)', parameter_names=['SST', 'AIRT'])
+        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # CoverageJSON data
         ```
         </div>
