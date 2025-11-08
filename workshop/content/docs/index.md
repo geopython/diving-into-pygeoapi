@@ -15,14 +15,12 @@ Version: 1.7.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FSL](https://festa2025.softwarelivre.eu/) workshop team
+# Your [FOSS4G 2025](https://2025.foss4g.org/) workshop team
 
 <table>    
     <tr>
-        <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
-        <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
-        <td><a href="https://codeberg.org/ldesousa"><img width="150" src="https://codeberg.org/avatars/8508bf63cba1d561f24407341653cf925cd7a7b468fcffbb1ce7a8db0e010a30?size=512"/></a></td>
-        <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
+        <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
+        <td><a href="https://github.com/jorgejesus"><img width="150" src="https://avatars.githubusercontent.com/u/1275400?v=4"/></a></td>
     </tr>
 </table>
 

@@ -99,10 +99,11 @@ pygeoapi implements numerous OGC API standards and draft standards. In addition,
 | OGC API - Coverages                    | Implementing    | ✅                        |
 | OGC API - Tiles                        | Reference       | ✅                        |
 | OGC API - Maps                         | Implementing    | ✅                        |
-| OGC API - Processes                    | Certified    | ✅                        |
+| OGC API - Processes                    | Certified       | ✅                        |
 | OGC API - Records                      | Implementing    | ✅                        |
 | OGC API - Environmental Data Retrieval | Reference       | ✅                        |
 | SpatioTemporal Asset Catalog           | Implementing    |                           |
+| SpatioTemporal Asset Catalog API       | Implementing    |                           |
 | OGC API - Routes                       | Planned         |                           |
 | OGC API - Styles                       | Planned         |                           |
 | OGC API - Moving Features              | Planned         |                           |
