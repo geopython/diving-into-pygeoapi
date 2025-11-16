@@ -21,6 +21,7 @@ This workshop covers a wide range of topics (install/setup/configuration, publis
     <tr>
         <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
         <td><a href="https://github.com/jorgejesus"><img width="150" src="https://avatars.githubusercontent.com/u/1275400?v=4"/></a></td>
+        <td><a href="https://github.com/krishnaglodha"><img width="150" src="https://avatars.githubusercontent.com/u/47075664?v=4"/></a></td>
     </tr>
 </table>
 
