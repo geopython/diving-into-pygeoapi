@@ -1,0 +1,1801 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards.">
+      
+      
+        <meta name="author" content="The pygeoapi community">
+      
+      
+        <link rel="canonical" href="https://dive.pygeoapi.io/setup/">
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../standards/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../pt/setup/" hreflang="pt">
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Workshop environment setup - Diving into pygeoapi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/pygeoapi.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/termynal.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#workshop-environment-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+      
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Diving into pygeoapi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workshop environment setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../pt/setup/" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+      
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+
+    </a>
+    Diving into pygeoapi
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to pygeoapi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshop environment setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshop environment setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quickstart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-and-setting-the-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding data and setting the configuration file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-docker-for-python-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Docker for Python Clients
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../publishing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publishing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 1 - Your first dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 2 - Vector data via OGC API - Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-coverages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 3 - Raster data via OGC API - Coverages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 4 - Maps of geospatial data via OGC API - Maps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-tiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 5 - Tiles of geospatial data via OGC API - Tiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 6 - Metadata via OGC API - Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-edr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 7 - Environmental data via OGC API - Environmental Data Retrieval
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/ogcapi-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 8 - Functions via OGC API - Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../advanced/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced topics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced topics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/i18n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multilingual support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/crs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/ui-custom-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI customization and templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/downstream-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using pygeoapi in downstream applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Engine Optimization (SEO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/security-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and access control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/semantic-web-linked-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantic Web and Linked Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/inspire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INSPIRE support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/administration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/bridges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 9 - pygeoapi as a bridge to other services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quickstart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-and-setting-the-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding data and setting the configuration file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-docker-for-python-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Docker for Python Clients
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="workshop-environment-setup">Workshop environment setup</h1>
+<p>In this workshop we use the following materials:</p>
+<ol>
+<li><strong>Documentation</strong> - (like this page): access latest on <a href="https://dive.pygeoapi.io">dive.pygeoapi.io</a></li>
+<li><strong>Exercises</strong> - download the <a href="https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip">latest zip file</a>, unzip, find exercises in <code>workshop/exercises</code> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Docker</strong> - all examples/exercises are run in a <code>Docker container</code> in <code>workshop/exercises</code></li>
+</ol>
+<h2 id="text-editor">Text editor</h2>
+<p>Your text editor needs to be able to edit configuration files in <strong>plain text</strong>. Below are some choices
+for text editors (there may be others), along with what some of the pygeoapi developers prefer to use:</p>
+<ul>
+<li>Notepad or Notepad++ (Windows)</li>
+<li>Sublime Text: Angelos</li>
+<li>PyCharm: Just</li>
+<li>Emacs: Just</li>
+<li>Visual Studio Code: Francesco, Angelos, Joana</li>
+<li><code>vi</code> / <code>vim</code>: Tom, Angelos</li>
+</ul>
+<p>Having said this, please feel free to use what works for you :)</p>
+<h2 id="yaml">YAML</h2>
+<p>Most exercises will focus on editing the pygeoapi <a href="https://docs.pygeoapi.io/en/latest/configuration.html">configuration</a>,
+which is in the <a href="https://yaml.org">YAML</a> format. If you are not familiar with YAML, it is worth reading through a <a href="https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started">tutorial</a> to become aware of YAML syntax and indentation.</p>
+<p>The main requirement for the training is to install Docker and/with Docker Compose on your system.
+We strongly advise to install Docker before the workshop starts.</p>
+<p>Although several custom installation scenarios are possible (see the <a href="https://docs.pygeoapi.io/en/latest/installation.html">documentation</a>
+for more information), these are not considered in this workshop given the ability to install a fully reproducible
+environment via Docker and Docker Compose.</p>
+<p>Workshop Exercises will also be based on Docker, hence a custom installation would at least be 'challenging'.
+The good news is that only a single installation (Docker) is needed! The Docker images used in this workshop
+contain the latest pygeoapi and all its dependencies and external services (e.g. PostGIS).</p>
+<h2 id="about-docker">About Docker</h2>
+<p>Docker has been available since 2013, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
+era of computing, chances are that you have heard of Docker and <em>containerization</em>. Or, perhaps are already familiar and hopefully using Docker already.
+If not, there is an abundance of introductory materials that can be found online like this <a href="https://www.ibm.com/topics/docker">tutorial from IBM</a>.</p>
+<p>FOSS4G software has benefitted greatly from Docker (consistent packaging, isolation, integration and upgrade patterns) in
+comparison to custom installations. Though today we mainly use Docker, the bigger picture is the use of <strong>Containers</strong> as a next step
+in virtualization. Containerization certainly deserves its own workshop, so for the purpose of this workshop we only cover the basics
+of Docker and Docker Compose.</p>
+<p><a href="https://docs.docker.com/compose">Docker Compose</a> is an addition to Docker to facilitate
+the orchestration (configuration) of one or more Docker 'Containers' (a Container is a running instance of a Docker image)
+using a configuration convention (the Docker Compose YAML file), usually named <code>docker-compose.yml</code>.</p>
+<p>Stepping up further are even more sophisticated Docker orchestrators like 
+<a href="https://rancher.com/products/rancher">Rancher</a> and <a href="https://kubernetes.io">Kubernetes</a>, but for
+this workshop, Docker and Docker Compose are all we need.</p>
+<h2 id="installation">Installation</h2>
+<p>Docker installation has greatly progressed over the years. This is the only part of the workshop
+which is dependent on the system/OS you are running (e.g. Windows, Mac or Linux). For each
+system the Docker website provides detailed installation instructions. Please follow these consistently.</p>
+<p>For many platforms a product called <a href="https://docs.docker.com/desktop">Docker Desktop</a> is available, which includes the main Docker components:</p>
+<ul>
+<li>Windows <a href="https://docs.Docker.com/desktop/install/windows-install">installation</a></li>
+<li>Mac <a href="https://docs.Docker.com/desktop/install/mac-install">installation</a></li>
+<li>Linux <a href="https://docs.Docker.com/desktop/install/linux-install">installation</a></li>
+</ul>
+<p>Some notes:</p>
+<ul>
+<li>On Windows we recommend using the <a href="https://docs.microsoft.com/en-us/windows/wsl">Windows Subsystem for Linux</a> (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker.  Before installing Docker Desktop, install WSL by opening Microsoft PowerShell (run as administrator) and running <code>wsl --install</code><ul>
+<li><strong>installing WSL requires administrator privileges on your system</strong></li>
+</ul>
+</li>
+<li>On Mac, if you are using <a href="https://brew.sh">Homebrew</a>, consider (as the author has) using the <a href="https://formulae.brew.sh/formula/Docker">brew Docker formula</a></li>
+<li>On Mac OSX Monterey and later, there may be an issue with local port 5000 already in use, therefore conflicting with the default one used by the pygeoapi container. If you see this error <code>OSError: [Errno 48] Address already in use</code>, you need to disable the <em>Airplay Receiver</em>. Go to <code>System Settings | Sharing</code> or like in Sonoma type 'airplay' in the search box. See image below for Mac OSX Sonoma. Also a detailed description in <a href="https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/">this blog post</a>.
+<img alt="MacBook settings" src="../assets/images/macosx-airplay-disable.png" /></li>
+<li>On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu Image or use a cloud VM</li>
+<li>On Linux, when encountering permission issues: the Docker daemon normally runs as "root". This requires prefixing commands with <code>sudo</code> as a non-root user. On most distributions Docker is accessible by users in the <code>docker</code> group. You can omit the use of <code>sudo</code> and prevent possibly other permission issues as follows:<ul>
+<li>Test if the <code>docker</code> group exists: <code>cat /etc/group | grep docker</code>.</li>
+<li>When non-existing: <code>sudo groupadd docker</code>. </li>
+<li>Add your user to this group: <code>sudo usermod -aG docker $USER</code> </li>
+<li>Log-out and log-in.</li>
+<li>See all details and more options in <a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user">this instruction</a>.</li>
+</ul>
+</li>
+<li>Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container</li>
+</ul>
+<p>If all goes well, you should be able to run Docker from the command line as follows: <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
+Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
+
+docker<span class="w"> </span>compose<span class="w"> </span>version
+Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
+Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
+
+docker<span class="w"> </span>compose<span class="w"> </span>version
+Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>(It is not required that your version numbers exactly match).</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>Once Docker is available on your system, running the pygeoapi container with its built-in configuration and 
+data is a one-liner. </p>
+<p>Open a terminal session and run:</p>
+<div class="admonition question">
+<p class="admonition-title">First run via Docker</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
+Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
+d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
+START<span class="w"> </span>/entrypoint.sh
+Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
+openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
+make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
+Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
+Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
+d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
+START<span class="w"> </span>/entrypoint.sh
+Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
+openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
+make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
+Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
+<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<p>That's all! Open your browser and navigate to <code>http://localhost:5000</code>, the pygeoapi page will display.
+As part of the initial <code>docker run</code>, Docker will download the pygeoapi Docker Image from <a href="https://hub.Docker.com/r/geopython/pygeoapi">Docker Hub</a>.
+This may take some time, as the Docker image includes all dependencies (such as GDAL, etc.). Be patient! This is a one-time download for the entire workshop, or
+you may want to do this beforehand. </p>
+<p>Some notes:</p>
+<ul>
+<li>Docker runs a pygeoapi container on your local system on port 5000, which is mapped to port 80 inside the container</li>
+<li>the pygeoapi Docker container runs with the <a href="https://github.com/geopython/pygeoapi/blob/master/docker/default.config.yml">default configuration</a> and data from the GitHub repo </li>
+<li>both configuration and data (from GitHub repo) is embedded in the Docker Image - we will override these later</li>
+<li>the <code>--rm</code> option removes the Docker Container (but not the image), after execution</li>
+<li>type <code>CTRL-C</code> to stop the container and return to the terminal</li>
+</ul>
+<p>Next, you can override the default configuration and add your own data using <a href="https://docs.Docker.com/storage/volumes">Docker volumes</a>.</p>
+<h2 id="customizing-configuration">Customizing configuration</h2>
+<p>In the upcoming exercises we are going to update the configuration file multiple times.
+For ease of development we are overriding the pygeoapi configuration which resides by default at <code>/pygeoapi/local.config.yml</code>
+within the container by a local file which you can edit in your favourite text editor. </p>
+<div class="admonition question">
+<p class="admonition-title">Override the pygeoapi config file</p>
+<p>Download pygeoapi's default Docker configuration from <a href="https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml">default.config.yml</a> to the current folder (or navigate to the folder where you downloaded the file), for example with:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Open the file in your favourite text editor and change the title and description of the API:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code>metadata:
+    identification:
+        title: My first pygeoapi run
+        description: pygeoapi provides an API to geospatial data
+</code></pre></div></td></tr></table></div>
+<p>Now run the container with the overridden config file:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span><span class="se">\</span>
+geopython/pygeoapi:latest
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span>geopython/pygeoapi:latest
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>At this point, navigate to <code>http://localhost:5000</code> to verify the new title and description.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Windows, the file downloaded may be renamed to <code>default.config.yml.txt</code>.  Ensure to rename the file to <code>default.config.yml</code>.</p>
+</div>
+<p>By using a Docker volume mount (<code>-v</code> option), Docker attaches or 'mounts' a
+directory or single file from your host/local system into the Docker Container.</p>
+<p>In the above snippet, <code>$(pwd)</code> indicates the working folder from which you start the Docker container.</p>
+<h2 id="adding-data-and-setting-the-configuration-file">Adding data and setting the configuration file</h2>
+<p>In addition to adapting the configuration you will usually add your own data as files or
+remote data services like PostGIS or WFS.</p>
+<p>You can also mount a local directory such as <code>data/</code> to <code>/pygeoapi/mydata</code> within the Container.
+Within the data directory you can store vector data, raster files or sets of image of vector tiles.</p>
+<p>Below is an example where the configuration is explicitly set to <code>pygeoapi-config.yml</code> via an environment variable (<code>-e</code>) and uses a Docker mount to mount the local <code>data</code> folder as <code>/pygeoapi/mydata</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label><label for="__tabbed_5_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/pygeoapi/mydata<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
+-e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
+geopython/pygeoapi:latest
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/pygeoapi/mydata<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span>-e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span>geopython/pygeoapi:latest
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the <a href="https://github.com/geopython/pygeoapi/tree/master/docker/examples">pygeoapi GitHub repository</a>.</p>
+<h2 id="using-docker-for-python-clients">Using Docker for Python Clients</h2>
+<p>In some exercises we access <code>pygeoapi</code> remote endpoints using <a href="https://owslib.readthedocs.io">OWSLib</a>, 
+a Python library to interact with OGC Web Services. OWSLib can be installed using standard 
+Python <code>pip3 install OWSLib</code>, but you may not have Python available, or you want to keep your system 'clean'.</p>
+<p>As Docker is already available on your system, you can start up a 
+Container with a complete Python environment, and access it from a <code>bash</code> shell prompt. 
+The magic line is:</p>
+<p><code>docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash</code></p>
+<p>This will pull a small (125MB) official Python Docker Image. When the Container is started, you are directed into 
+a <code>bash</code> session/prompt. The argument <code>--network=host</code> allows you to directly interact with services on your
+host system, thus with <code>pygeoapi</code>, without setting up a Docker network. From there you can start <code>python3</code>, install OWSLib and
+maybe even other tools like <code>curl</code> and <code>wget</code>.</p>
+<p>Below is a complete example, assuming pygeoapi runs on your <code>localhost</code> at port 5000:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux/Mac</label><label for="__tabbed_6_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
+Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+<span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
+5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
+
+root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+root@docker-desktop:/#<span class="w"> </span>python3
+&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+&gt;&gt;&gt;<span class="w"> </span>w
+&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
+&gt;&gt;&gt;<span class="w"> </span>conformance
+etc
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
+Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+<span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
+5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
+
+root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+root@docker-desktop:/#<span class="w"> </span>python3
+&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+&gt;&gt;&gt;<span class="w"> </span>w
+&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
+&gt;&gt;&gt;<span class="w"> </span>conformance
+etc
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>We will refer to this installation in some of the Exercises where OWSLib is used.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Alternatively, you can fork/clone the GitHub repository of this workshop directly from <a href="https://github.com/geopython/diving-into-pygeoapi">https://github.com/geopython/diving-into-pygeoapi</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>For recent version of Docker run <code>docker compose version</code>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 pygeoapi community
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/javascripts/termynal.js"></script>
+      
+        <script src="../assets/javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2137 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="pygeoapi is an OGC Reference Implementation supporting numerous OGC API specifications. This workshop will cover publishing geospatial data to the Web using pygeoapi in support of the suite of OGC API standards.">
+      
+      
+        <meta name="author" content="The pygeoapi community">
+      
+      
+        <link rel="canonical" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-features/">
+      
+      
+        <link rel="prev" href="../first/">
+      
+      
+        <link rel="next" href="../ogcapi-coverages/">
+      
+      
+        
+          <link rel="alternate" href="../../../publishing/ogcapi-features/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="pt">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Exercício 2 - Dados vetoriais via OGC API - Features - Mergulhando na pygeoapi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/pygeoapi.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/termynal.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercicio-2-dados-vetoriais-via-ogc-api-features" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../" title="Mergulhando na pygeoapi" class="md-header__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+      
+  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mergulhando na pygeoapi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercício 2 - Dados vetoriais via OGC API - Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../publishing/ogcapi-features/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Mergulhando na pygeoapi" class="md-nav__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+      
+  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+
+    </a>
+    Mergulhando na pygeoapi
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução á pygeoapi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuração do ambiente da workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publicação
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publicação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 1 - O meu primeiro conjunto de dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 2 - Dados vetoriais via OGC API - Features
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 2 - Dados vetoriais via OGC API - Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suporte-da-pygeoapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte da pygeoapi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publicar-um-geopackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicar um GeoPackage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opcional-publicar-um-ficheiro-geojson-usando-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPCIONAL: Publicar um ficheiro GeoJSON usando Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opcional-pygeoapi-como-um-proxy-wfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPCIONAL: pygeoapi como um proxy WFS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acesso-de-lado-do-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acesso de lado do cliente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acesso de lado do cliente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QGIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdalogr-avancado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GDAL/OGR - Avançado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owslib-avancado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWSLib - Avançado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OWSLib - Avançado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-python-a-partir-da-linha-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar Python a partir da linha de comandos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-coverages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 3 - Dados raster via OGC API - Coverages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-tiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 6 - Metadados via OGC API - Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-edr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogcapi-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 8 - Funções via OGC API - Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tópicos avançados
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tópicos avançados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/i18n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suporte multilíngue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/crs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suporte a CRS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/ui-custom-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalização de UI e templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/downstream-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso da pygeoapi em aplicações downstream
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otimização para mecanismos de busca (SEO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/security-access-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança e controle de acessos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/semantic-web-linked-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Semântica e Linked Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implantação na cloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/inspire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suporte INSPIRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/bridges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercício 9 - pygeoapi como uma ponte para outros serviços
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suporte-da-pygeoapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte da pygeoapi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publicar-um-geopackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicar um GeoPackage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opcional-publicar-um-ficheiro-geojson-usando-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPCIONAL: Publicar um ficheiro GeoJSON usando Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opcional-pygeoapi-como-um-proxy-wfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPCIONAL: pygeoapi como um proxy WFS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acesso-de-lado-do-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acesso de lado do cliente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acesso de lado do cliente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QGIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdalogr-avancado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GDAL/OGR - Avançado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owslib-avancado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWSLib - Avançado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OWSLib - Avançado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-python-a-partir-da-linha-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usar Python a partir da linha de comandos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="exercicio-2-dados-vetoriais-via-ogc-api-features">Exercício 2 - Dados vetoriais via OGC API - Features</h1>
+<p>A <a href="https://ogcapi.ogc.org/features">OGC API - Features</a> fornece uma API Web para aceder a dados 
+vetoriais (geometrias e os seus atributos). A especificação principal abrange o acesso e consulta básicos 
+de dados, partes adicionais estão em desenvolvimento com as seguintes capacidades:</p>
+<ul>
+<li><a href="https://docs.ogc.org/is/17-069r4/17-069r4.html">OGC API - Features - Parte 1: Core</a> fornece capacidades básicas de acesso e consulta</li>
+<li><a href="https://docs.ogc.org/is/18-058r1/18-058r1.html">OGC API - Features - Parte 2: Coordinate Reference Systems by Reference</a> 
+  permite a importação e exportação de dados de diferentes sistemas de coordenadas</li>
+<li><a href="https://docs.ogc.org/is/19-079r2/19-079r2.html">OGC API - Features - Parte 3: Filtering</a> adiciona a capacidade de 
+  pesquisas complexas usando a <a href="https://docs.ogc.org/is/21-065r2/21-065r2.html">Common Query Language (CQL2)</a></li>
+<li><a href="https://docs.ogc.org/DRAFTS/20-002r1.html">OGC API - Features - Parte 4: Create, Replace, Update and Delete</a> (<strong>rascunho</strong>) adiciona capacidades transacionais</li>
+</ul>
+<h2 id="suporte-da-pygeoapi">Suporte da pygeoapi</h2>
+<p>A pygeoapi suporta todas as partes da especificação OGC API - Features acima (a Parte 3 depende do suporte do backend, 
+por examplo, Elasticsearch).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Consulte <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html">a documentação oficial</a> 
+para mais informações sobre os backends vetoriais suportados.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Consulte <a href="https://docs.pygeoapi.io/en/latest/cql.html">a documentação oficial</a> para mais informações sobre o 
+suporte a CQL.</p>
+</div>
+<p>A seguir, vamos explorar como publicar dados vetoriais usando um <code>GeoPackage</code>.</p>
+<h2 id="publicar-um-geopackage">Publicar um GeoPackage</h2>
+<p>Na secção anterior, demonstrámos os passos envolvidos para adicionar um conjunto de dados à pygeoapi e atualizar a 
+sua configuração. Neste exercício, vamos publicar outro ficheiro vetorial, desta vez de uma fonte de dados 
+vetoriais <a href="https://www.geopackage.org">GeoPackage</a> (SQLite3).</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Pode ser útil abrir o conjunto de dados no <a href="https://qgis.org">QGIS</a> enquanto adiciona e atualiza o seu servidor 
+da pygeoapi para avaliar facilmente os atributos da tabela, nomes, propriedades espaciais e SRC.</p>
+</div>
+<p>Vamos adicionar o ficheiro <code>workshop/exercises/data/brazil/guama_river.gpkg.zip</code>:</p>
+<div class="admonition question">
+<p class="admonition-title">Atualizar a configuração da pygeoapi</p>
+<p>Primeiro, vamos descompactar o ficheiro 
+<a href="https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/brazil/guama_river.gpkg.zip">guama_river.gpkg.zip</a> 
+para <code>guama_river.gpkg</code>.</p>
+<p>Depois, abra o ficheiro de configuração da pygeoapi num editor de texto.
+Encontre a linha <code># START - EXERCISE 2 - flowlines Guama River</code>.</p>
+<p>Adicione uma nova secção de conjunto de dados. descomentando as linhas até <code># END - EXERCISE 2 - 
+flowlines Guama River</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">guama-river</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River Basin mainstem flowlines</span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Merit Hydro</span>
+<span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
+<span class="w">          </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
+<span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
+<span class="w">          </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d</span>
+<span class="w">          </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EE</span>
+<span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-49.16</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-5.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-46.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1.2</span><span class="p p-Indicator">]</span>
+<span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+<span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SQLiteGPKG</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/brazil/guama_river.gpkg</span><span class="w"> </span><span class="c1"># coloque o caminho correto aqui</span>
+<span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fid</span>
+<span class="w">          </span><span class="nt">table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guama_river</span><span class="w"> </span><span class="c1"># nome da tabela dentro do gpkg</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Guarde o ficheiro e reinicie o Docker Compose. Navegue para <a href="http://localhost:5000/collections">http://localhost:5000/collections</a> para avaliar se o 
+novo conjunto de dados com o título <em>"Guama River"</em> foi publicado.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>O driver SQLite incidentalmente tem desafios para abrir a extensão GeoPackage no MacOS.
+Consulte a <a href="https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx">documentação oficial</a>
+ou tente com um formato de dados alternativo. Se usar Docker, isto não é um problema.</p>
+</div>
+<h2 id="opcional-publicar-um-ficheiro-geojson-usando-elasticsearch">OPCIONAL: Publicar um ficheiro GeoJSON usando Elasticsearch</h2>
+<p>Este exercício é opcional, se o tempo permitir, ou pode realizá-lo após o workshop.</p>
+<p>Aqui exploramos a publicação de dados em OGC API - Features usando a pygeoapi com um fornecedor de backend 
+Elasticsearch. Para isso, precisamos do repositório GitHub <a href="https://github.com/geopython/pygeoapi-examples">pygeoapi-examples</a>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Em alternativa, pode <a href="https://github.com/geopython/pygeoapi-examples/archive/refs/heads/main.zip">descarregar o repositório como um ficheiro .zip</a> e descompactá-lo.</p>
+<p>Mude para a pasta <code>docker/elastic</code> e execute o ficheiro <code>docker-compose.yml</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docker/elastic
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docker/elastic
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Se tiver problemas a iniciar os serviços, consulte o 
+<a href="https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md">ficheiro README</a>. Pode precisar de 
+adaptar a configuração de memória virtual do seu sistema.</p>
+<p>Primeiro, vamos carregar o ficheiro <code>greater_hyderabad_municipal_corporation_ward_Boundaries.geojson</code> para o 
+servidor Elasticsearch.</p>
+<p>Edite o script <code>add-data.sh</code> dentro da pasta <code>ES</code>, adicionando estas duas linhas antes do final:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/refs/heads/main/workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+python3<span class="w"> </span>/load_es_data.py<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>objectid
+</code></pre></div></td></tr></table></div>
+Através destas alterações, o ficheiro <code>greater_hyderabad_municipal_corporation_ward_Boundaries.geojson</code> é descarregado 
+para dentro do container Docker do Elasticsearch e depois carregado para o Elasticsearch.</p>
+<p>Depois disto, precisamos de reconstruir a imagem Docker:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>build
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>build
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>A seguir, precisamos de configurar a pygeoapi inserindo o excerto abaixo no ficheiro de configuração da 
+pygeoapi <code>pygeoapi/docker.config.yml</code>. Esta modificação resulta na publicação do 
+ficheiro <code>greater_hyderabad_municipal_corporation_ward_boundaries.geojson</code> como OGC API - Features usando o 
+fornecedor de backend Elasticsearch.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nt">hyderabad</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Greater Hyderabad Municipal Corporation ward boundaries</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.</span>
+<span class="w">        </span><span class="nt">keywords</span><span class="p">:</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boundaries</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Administrative</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ward</span>
+<span class="w">        </span><span class="nt">links</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
+<span class="w">              </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
+<span class="w">              </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">information</span>
+<span class="w">              </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about</span>
+<span class="w">              </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-US</span>
+<span class="w">        </span><span class="nt">extents</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">spatial</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">78.2379194985166180</span><span class="p p-Indicator">,</span><span class="nv">17.2908061510471995</span><span class="p p-Indicator">,</span><span class="nv">78.6217049083810764</span><span class="p p-Indicator">,</span><span class="nv">17.5618443356918768</span><span class="p p-Indicator">]</span>
+<span class="w">                </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+<span class="w">            </span><span class="nt">temporal</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">begin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2011-11-11</span>
+<span class="w">                </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">  </span><span class="c1"># or empty</span>
+<span class="w">        </span><span class="nt">providers</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Elasticsearch</span>
+<span class="w">              </span><span class="c1">#Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml</span>
+<span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://elastic_search:9200/hyderabad</span>
+<span class="w">              </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objectid</span>
+</code></pre></div></td></tr></table></div>
+<p>No arranque (ex: docker compose up -d), o contentor da pygeoapi irá esperar até que os dados tenham sido ingeridos e 
+o índice do Elasticsearch tenha sido construído. Pode verificar os registos usando:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Depois do servidor ter arrancado, pode aceder à página da coleção aqui:</p>
+<p><a href="http://localhost:5000/collections/hyderabad">http://localhost:5000/collections/hyderabad</a></p>
+<p>E aos itens (features) aqui:</p>
+<p><a href="http://localhost:5000/collections/hyderabad/items">http://localhost:5000/collections/hyderabad/items</a></p>
+<p><img alt="" src="../../../assets/images/features-hyderabad.png" width="100%" /></p>
+<h2 id="opcional-pygeoapi-como-um-proxy-wfs">OPCIONAL: pygeoapi como um proxy WFS</h2>
+<p>A pygeoapi também pode funcionar como um serviço de frontend da OGC API - Features para um WFS OGC existente através 
+do fornecedor GDAL/OGR. Esta função de ponte permite-lhe efetivamente publicar um WFS como OGC API - Features.</p>
+<p>Isto é expandido numa secção avançada deste workshop: <a href="../../advanced/bridges/#publishing-wfs-as-ogc-api-features">A pygeoapi como uma Ponte para outros Serviços - secção WFS</a>.</p>
+<h2 id="acesso-de-lado-do-cliente">Acesso de lado do cliente</h2>
+<h3 id="qgis">QGIS</h3>
+<p>O QGIS Foi um dos primeiros clientes SIG de Desktop que adicionou suporte para a OGC API - Features. O suporte foi 
+integrado no fornecedor WFS existente.</p>
+<div class="admonition question">
+<p class="admonition-title">Abrir uma coleção da OGC API - Features no QGIS</p>
+<p>Siga os passos para adicionar algumas coleções de um endpoint da OGC API - Features:</p>
+<ul>
+<li>Abra o QGIS (se não tiver o QGIS, pode usar o OSGeoLive)</li>
+<li>No menu Layer, selecione <code>Adicionar Layer</code> &gt; <code>Adicionar layer WFS / layer OGC API Features</code></li>
+<li>No painel <code>Gestor de fontes de dados</code>, escolha 'Nova ligação'</li>
+</ul>
+<p><img alt="New connection" src="../../../assets/images/new-connection.png" width="50%" /></p>
+<ul>
+<li>Adicione o URL https://demo.pygeoapi.io/master (ou o endereço de um servidor local)</li>
+<li>Pode agora clicar no botão <code>detetar</code> e o QGIS irá notar que está a configurar um endpoint da OGC API - Features</li>
+<li>O QGIS facilita a definição do tamanho da página (o pedido é dividido em vários pedidos)<ul>
+<li>para pontos, pode facilmente defini-lo para 2500</li>
+<li>para alguns polígonos com alta densidade, 100 já pode ser lento</li>
+</ul>
+</li>
+<li>Pressione <code>OK</code> para guardar a ligação e voltar ao ecrã anterior</li>
+<li>Agora clique no botão <code>Ligar</code> para obter as coleções do serviço</li>
+</ul>
+<p><img alt="Collection list" src="../../../assets/images/collection-list.png" width="50%" /></p>
+<ul>
+<li>Pode agora adicionar coleções ao seu projeto QGIS</li>
+<li>Também pode construir uma pesquisa para adicionar um subconjunto da coleção</li>
+<li>Feche o <code>Gestor de fontes de dados</code>. Note que o QGIS aplicou um estilo padrão, tal como faria se adicionasse 
+  um layer baseado em ficheiro. Pode trabalhar com a coleção de forma semelhante; identificar, aplicar estilo, 
+  filtrar, exportar, etc.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Ative o <code>Painel de Ferramentas de Debug/Desenvolvimento</code> (clique com o botão direito do rato em qualquer 
+parte dos ícones da barra de ferramentas e selecione). Ele exibirá o tráfego HTTP dentro do QGIS e é uma 
+ferramenta valiosa no debug de ligações falhadas.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Um número crescente de clientes GIS de Desktop adiciona suporte para as OGC APIs em lançamentos subsequentes. 
+Por exemplo, o ArcGIS Pro 
+<a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm">suporta a OGC API - Features</a> 
+desde a versão 2.8.</p>
+</div>
+<h3 id="gdalogr-avancado">GDAL/OGR - Avançado</h3>
+<p>O <a href="https://gdal.org">GDAL/OGR</a> fornece suporte para a <a href="https://gdal.org/drivers/vector/oapif.html">OGC API - Features</a>. 
+Isto significa que pode usar o <code>ogrinfo</code> e o <code>ogr2ogr</code> para consultar e converter dados de endpoints da OGC API - 
+Features, tal como qualquer outra fonte de dados vetoriais. Significa também que pode estabelecer ligações a endpoints 
+da OGC API - Features a partir de qualquer software que tenha uma interface para o GDAL, como MapServer, GeoServer, 
+Manifold, FME, ArcGIS, etc.</p>
+<div class="admonition question">
+<p class="admonition-title">Usar o OGR para interagir com a OGC API - Features</p>
+<ul>
+<li>Verifique se tem uma versão recente do GDAL instalada, caso contrário, use o GDAL do OSGeoLive</li>
+<li>Execute o <code>ogrinfo</code> na linha de comandos para verificar uma ligação à OGC API - Features</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><div class="termy">
+    <div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</code></pre></div>
+    </div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Verifique as informações de resumo sobre o layer com:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux/Mac</label><label for="__tabbed_7_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Agora, vamos converter as observações para uma shapefile</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux/Mac</label><label for="__tabbed_8_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pode até usar o OGR para acrescentar novas features a uma coleção da OGC API - Features que suporte transações. 
+Leia mais <a href="https://docs.pygeoapi.io/en/latest/transactions.html">aqui</a> sobre o suporte a transações na pygeoapi.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Usar a biblioteca GDAL a partir da linha de comandos com Docker</p>
+<p>Se não tiver a GDAL instalada, ou quiser usar/experimentar outra versão, pode sempre executar a imagem de Docker 
+da GDAL diretamente a partir da linha de comandos. A OSGeo fornece 
+<a href="https://github.com/OSGeo/gdal/pkgs/container/gdal">Imagens de Docker da GDAL</a>. O principal a ter em conta é o 
+mapeamento correto de volumes Docker para que as ferramentas de linha de comandos da GDAL possam aceder a 
+ficheiros locais. Isto pode ser muito útil para conversões rápidas de dados. A maioria das imagens também vem 
+com bindings Python da GDAL.</p>
+<p>Primeiro, pode descarregar uma Imagem Docker muito pequena:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Linux/Mac</label><label for="__tabbed_9_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Depois pode executar, por exemplo, as ferramentas de linha de comandos do OGR. O comando base é <code>docker 
+run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest</code>. Isto executa um contentor Docker interativamente (<code>-it</code>) e 
+remove-o ao sair (<code>--rm</code>). Abaixo estão exemplos.</p>
+<p>Liste os formatos Vetoriais disponíveis no GDAL/OGR :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Linux/Mac</label><label for="__tabbed_10_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">                    </span>ogrinfo<span class="w"> </span>--formats
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>--formats
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Obter informação sobre um ficheiro geoespacial. Note o mapeamento de volumes: <code>-v $(pwd)/data:/work</code> para aceder 
+a ficheiros locais dentro do container de Docker (os comandos estão numa única linha, quebrados para facilitar 
+a leitura).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Linux/Mac</label><label for="__tabbed_11_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
+docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
+
+INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
+<span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
+<span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
+docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
+
+INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
+<span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
+<span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Converter o ficheiro GeoJSON para um GeoPackage (GPKG) com <code>ogr2ogr</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Linux/Mac</label><label for="__tabbed_12_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;GPKG&quot;</span><span class="w"> </span>/work/tartu/bathingwater-estonia.gpkg<span class="w"> </span><span class="se">\</span>
+<span class="w">                     </span>/work/tartu/bathingwater-estonia.geojson
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<code>bash
+docker run -v ${pwd}/data:/work -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg /work/tartu/bathingwater-estonia.geojson</code>
+</div></p>
+</div>
+</div>
+</div>
+<p>Também pode usar o <code>ogrinfo</code> para obter informações sobre uma coleção da OGC API - Features. Caso esteja a aceder 
+a uma coleção local, terá de se certificar de que o contentor é executado na rede do anfitrião (host):</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Linux/Mac</label><label for="__tabbed_13_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+--network<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="owslib-avancado">OWSLib - Avançado</h3>
+<p>A <a href="https://owslib.readthedocs.io">OWSLib</a> é uma biblioteca de Python para interagir com Serviços Web OGC e suporta 
+várias OGC APIs, incluindo a OGC API - Features.</p>
+<p>Este exercício será feito usando um jupyter notebook. Se preferir, pode fazê-lo usando Python a partir da linha de 
+comandos (ver abaixo).</p>
+<p>Antes de continuar, certifique-se de que está na pasta <code>workshop/exercises</code>. Precisará disso para poder usar o 
+jupyter notebook.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Linux/Mac</label><label for="__tabbed_14_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Depois use o docker para iniciar um contentor com o jupyter notebook, montando também a pasta local como um volume:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Linux/Mac</label><label for="__tabbed_15_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Introduza o url indicado na linha de comandos, <code>http://127.0.0.1:8888/lab</code> seguido de um token. Entre na pasta <code>work</code> 
+e abra o <code>features-owslib.ipynb</code>.</p>
+<p><img alt="jupyter notebook" src="../../../assets/images/jupyter1.png" /></p>
+<p>Execute o notebook para explorar um servidor OGC API - Features, usando a owslib.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Pode executar as mesmas instruções usando o seu servidor pygeoapi local, em vez da instância 
+de demonstração da pygeoapi.</p>
+</div>
+<h4 id="usar-python-a-partir-da-linha-de-comandos">Usar Python a partir da linha de comandos</h4>
+<div class="admonition question">
+<p class="admonition-title">Interagir com a OGC API - Features via OWSLib</p>
+<p>Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Veja o 
+<a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Linux/Mac</label><label for="__tabbed_16_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p>Depois, inicie uma sessão de consola Python com <code>python3</code> (pare a sessão escrevendo <code>exit()</code>).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Linux/Mac</label><label for="__tabbed_17_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
+<span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
+<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
+<span class="mi">13</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
+<span class="mi">13</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="s1">&#39;lakes&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<span class="s1">&#39;Large Lakes&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+<span class="s1">&#39;lakes of the world, public domain&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
+<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
+<span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
+<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
+<span class="mi">13</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
+<span class="mi">13</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="s1">&#39;lakes&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<span class="s1">&#39;Large Lakes&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+<span class="s1">&#39;lakes of the world, public domain&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
+<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Consulte a <a href="https://owslib.readthedocs.io/en/latest/usage.html#ogc-api">documentação oficial da OWSLib</a> para mais exemplos.</p>
+</div>
+<h1 id="resumo">Resumo</h1>
+<p>Parabéns! Agora é capaz de publicar dados vetoriais com a pygeoapi.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 pygeoapi community
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../js/print-site.js"></script>
+      
+        <script src="../../../js/print-site.js"></script>
+      
+        <script src="../../../assets/javascripts/termynal.js"></script>
+      
+        <script src="../../../assets/javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>

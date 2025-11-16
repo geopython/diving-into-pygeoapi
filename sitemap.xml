@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://dive.pygeoapi.io/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/conclusion/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/conclusion/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/conclusion/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/introduction/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/introduction/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/setup/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/setup/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/setup/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/standards/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/standards/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/standards/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/administration/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/administration/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/administration/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/bridges/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/bridges/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/bridges/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/cloud/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/cloud/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/cloud/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/crs/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/crs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/crs/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/downstream-applications/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/downstream-applications/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/downstream-applications/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/i18n/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/i18n/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/i18n/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/inspire/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/inspire/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/inspire/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/security-access-control/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/security-access-control/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/security-access-control/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/semantic-web-linked-data/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/semantic-web-linked-data/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/semantic-web-linked-data/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/seo/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/seo/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/seo/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/advanced/ui-custom-templates/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/ui-custom-templates/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/ui-custom-templates/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/first/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/first/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/first/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-coverages/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-coverages/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-coverages/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-edr/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-edr/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-edr/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-features/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-features/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-features/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-maps/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-maps/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-maps/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-processes/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-processes/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-processes/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-records/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-records/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-records/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/publishing/ogcapi-tiles/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-tiles/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/conclusion/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/conclusion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/conclusion/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/introduction/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/introduction/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/setup/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/setup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/setup/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/standards/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/standards/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/standards/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/administration/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/administration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/administration/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/bridges/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/bridges/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/bridges/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/cloud/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/cloud/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/cloud/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/crs/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/crs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/crs/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/downstream-applications/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/downstream-applications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/downstream-applications/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/i18n/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/i18n/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/i18n/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/inspire/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/inspire/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/inspire/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/security-access-control/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/security-access-control/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/security-access-control/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/semantic-web-linked-data/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/semantic-web-linked-data/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/semantic-web-linked-data/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/seo/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/seo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/seo/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/advanced/ui-custom-templates/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/advanced/ui-custom-templates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/advanced/ui-custom-templates/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/first/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/first/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/first/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-coverages/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-coverages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-coverages/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-edr/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-edr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-edr/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-features/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-features/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-features/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-maps/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-maps/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-processes/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-processes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-processes/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-records/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-records/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-records/"/>
+    </url>
+    <url>
+        <loc>https://dive.pygeoapi.io/pt/publishing/ogcapi-tiles/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://dive.pygeoapi.io/pt/publishing/ogcapi-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dive.pygeoapi.io/publishing/ogcapi-tiles/"/>
+    </url>
+</urlset>
