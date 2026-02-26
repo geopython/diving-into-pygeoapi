@@ -74,7 +74,7 @@ Try visualizing the following EDR position query in a web browser: <http://local
 
 ### QGIS
 
-[QGIS](https://qgis.org/) supports QGIS supports OGC API EDR via the [EDR plugin](https://plugins.qgis.org/plugins/edr_plugin/). You can install the plugin directly from the QGIS Plugin Hub, by going to `Plugins->Manage Install Plugins` on the top level menu.
+[QGIS](https://qgis.org/) supports OGC API - EDR via the [EDR plugin](https://plugins.qgis.org/plugins/edr_plugin/). You can install the plugin directly from the QGIS Plugin Hub, by going to `Plugins->Manage and Install Plugins` on the top level menu.
 
 ![](../assets/images/edr-plugin1.png){ width=100% }
 
@@ -94,7 +94,7 @@ The combo box will be populated with all the collections available on that serve
 
 ![](../assets/images/edr-plugin4.png){ width=100% }
 
-The data query combo box will be populated with the data query types available for this collection; in this case: position and cube. You may select the cube query and then  click the button to set the spatial extent of that query. A new dialog will open, displaying multiple options to define the spatial extent. You may choose the `Draw on canvas`, to draw a rectangle in the map view extent.
+The data query combo box will be populated with the data query types available for this collection; in this case: position and cube. You may select the cube query and then click the button to set the spatial extent of that query. A new dialog will open, displaying multiple options to define the spatial extent. You may choose the `Draw on canvas`, to draw a rectangle in the map view extent.
 
 ![](../assets/images/edr-plugin5.png){ width=100% }
 

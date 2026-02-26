@@ -68,6 +68,38 @@ Guarde a configuração e reinicie o Docker Compose. Navegue para <http://localh
 À primeira vista, a coleção `icoads-sst` aparece como uma coleção normal OGC API - Coverages. Olhe um pouco mais de perto para a descrição da coleção, e note
 que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR para as consultas da coleção.
 
+## Acesso do lado do cliente
+
+### QGIS
+
+O [QGIS](https://qgis.org/) dá suporte à OGC API - EDR através do [plugin EDR](https://plugins.qgis.org/plugins/edr_plugin/). Pode instalar-lo directamente através do Hub de plugins do QGIS, indo a `Plugins->Gerir e instalar Plugins` no menu de topo.
+
+![](../assets/images/edr-plugin1.png){ width=100% }
+
+Pode aceder ao plugin através de uma entrada no menu de plugins.
+
+![](../assets/images/edr-plugin2.png){ width=100% }
+
+A primeira coisa a fazer é configurar o url do servidor. Use aqui o url da Landing Page: `http://localhost:5000/`
+
+!!! tip "Também deveria comecar por definir a directoria onde gostaria de guardar os dados descarregados pelo plugin"
+
+![](../assets/images/edr-plugin3.png){ width=100% }
+
+A combo box será populada com todas as coleções disponiveis naquele servidor. Seleccione a coleção EDR: `International Comprehensive Ocean-Atmosphere Data Set (ICOADS)`.
+
+!!! tip "Pode ignorar os avisos mostrados aqui!"
+
+![](../assets/images/edr-plugin4.png){ width=100% }
+
+A combo box de query de dados será populada com os tipos de query de dados disponiveis para esta coleção, neste caso: posição e cubo. Pode seleccionar a query do tipo cubo e carregar no botão que permite definir a extensão espacial da query. Um novo diálogo irá abrir, mostrando as diferentes opções para definir a extensão espacial. Pode escolher `Desenhar no canvas`, para desenhar um rectângulo no extent da map view.
+
+![](../assets/images/edr-plugin5.png){ width=100% }
+
+Pode fechar este dialogo e executar a query. O plugin irá descarregar todos os dados disponiveis que se encaixam nesta query e mostrar-los como um grupo de layers.
+
+![](../assets/images/edr-plugin6.png){ width=100% }
+
 ### OWSLib - Avançado
 
 [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagir com Serviços Web OGC e suporta várias OGC APIs incluindo OGC API - Environmental Data Retrieval.
