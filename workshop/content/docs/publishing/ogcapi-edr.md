@@ -70,6 +70,38 @@ that there is a `parameter_names` key that describes EDR parameter names for the
 
 Try visualizing the following EDR position query in a web browser: <http://localhost:5000/collections/icoads-sst/position?coords=POINT(174.7645%20-36.8509)>
 
+## Client access
+
+### QGIS
+
+[QGIS](https://qgis.org/) supports OGC API - EDR via the [EDR plugin](https://plugins.qgis.org/plugins/edr_plugin/). You can install the plugin directly from the QGIS Plugin Hub, by going to `Plugins->Manage and Install Plugins` on the top level menu.
+
+![](../assets/images/edr-plugin1.png){ width=100% }
+
+You can access the plugin through an entry on the plugin menu.
+
+![](../assets/images/edr-plugin2.png){ width=100% }
+
+The first thing to setup is the server url. Use the url of the Landing Page here: `http://localhost:5000/`
+
+!!! tip "You should also start by defining the folder where you would like the data fetched by the plugin to be downloaded"
+
+![](../assets/images/edr-plugin3.png){ width=100% }
+
+The combo box will be populated with all the collections available on that server. Select the EDR collection: `International Comprehensive Ocean-Atmosphere Data Set (ICOADS)`.
+
+!!! tip "You may safely ignore the warnings displayed here"
+
+![](../assets/images/edr-plugin4.png){ width=100% }
+
+The data query combo box will be populated with the data query types available for this collection; in this case: position and cube. You may select the cube query and then click the button to set the spatial extent of that query. A new dialog will open, displaying multiple options to define the spatial extent. You may choose the `Draw on canvas`, to draw a rectangle in the map view extent.
+
+![](../assets/images/edr-plugin5.png){ width=100% }
+
+You can close this dialog and run the query. The plugin will fetch all the data available that fits into this query and display it as a layer group.
+
+![](../assets/images/edr-plugin6.png){ width=100% }
+
 ### OWSLib - Advanced
 
 [OWSLib](https://owslib.readthedocs.io) is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Environmental Data Retrieval.
