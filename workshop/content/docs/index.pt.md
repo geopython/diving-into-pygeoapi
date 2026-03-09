@@ -91,10 +91,6 @@ Esta workshop é sempre disponibilizada ao vivo em [https://dive.pygeoapi.io](ht
 
 Os conteúdos da workshop, a wiki e o sistema de registo de problemas (issue tracker) são geridos no GitHub em [https://github.com/geopython/diving-into-pygeoapi](https://github.com/geopython/diving-into-pygeoapi).
 
-## Imprimir esta workshop
-
-Para imprimir esta workshop, navegue até à [página de impressão](print_page) e selecione *Ficheiro > Imprimir > Guardar como PDF*.
-
 # Suporte
 
 Existe um canal no [Gitter](https://app.gitter.im/#/room/#geopython_diving-into-pygeoapi:gitter.im) para discussão e suporte ao vivo por parte dos desenvolvedores da workshop e de outros participantes.

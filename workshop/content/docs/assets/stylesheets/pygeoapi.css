@@ -3,3 +3,6 @@
     --md-primary-fg-color--light: #6c98c6;
     --md-primary-fg-color--dark:  #004067;
 }
+.md-header, .md-footer {
+    background-color: #000000;
+}
