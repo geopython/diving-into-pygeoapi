@@ -93,25 +93,20 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     Para executar em Python:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
@@ -119,11 +114,9 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
@@ -131,7 +124,6 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
-        </div>
 
 !!! note
 

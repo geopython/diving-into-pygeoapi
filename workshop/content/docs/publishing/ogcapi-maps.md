@@ -94,25 +94,20 @@ QGIS added support for API's providing rendered image layers via its raster supp
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     Now running in Python:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
@@ -120,11 +115,9 @@ QGIS added support for API's providing rendered image layers via its raster supp
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.maps import Maps
         >>> m = Maps('http://localhost:5000')
@@ -132,7 +125,6 @@ QGIS added support for API's providing rendered image layers via its raster supp
         >>> with open("output.png", "wb") as fh:
         ...     fh.write(data.getbuffer())
         ```
-        </div>
 
 !!! note
 

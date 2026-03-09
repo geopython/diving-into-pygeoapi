@@ -104,9 +104,6 @@ features = [
 [project.extra]
 homepage = "https://dive.pygeoapi.io"
 
-[plugins.termynal]
-enabled = true
-
 default_language = "en"
 languages = ["en", "pt"]
 generate_language_paths = true

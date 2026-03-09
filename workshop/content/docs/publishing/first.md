@@ -26,21 +26,17 @@ To test:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker compose up
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker compose up
         ```
-        </div>
 
     1. Open <http://localhost:5000> in your browser, verify some collections
     1. Close by typing `CTRL-C`
@@ -51,7 +47,6 @@ To test:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker compose up -d
         docker ps  # verify that the pygeoapi container is running
@@ -59,11 +54,9 @@ To test:
         docker logs --follow pygeoapi  # view logs
         docker compose down --remove-orphans
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker compose up -d
         docker ps  # verify that the pygeoapi container is running
@@ -71,7 +64,6 @@ To test:
         docker logs --follow pygeoapi  # view logs
         docker compose down --remove-orphans
         ```
-        </div>
 
 ## Publish first dataset
 
@@ -165,19 +157,15 @@ Set the logging level to `DEBUG` and indicate a path to a log file.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker logs --follow pygeoapi
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker logs --follow pygeoapi
         ```
-        </div>
 
 !!! tip
 

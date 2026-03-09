@@ -40,17 +40,15 @@ Os exercícios são indicados da seguinte forma:
     Uma secção marcada desta forma indica que pode experimentar o exercício e escolher o seu ambiente (Linux/Mac ou Windows).
 
     === "Linux/Mac"
-        <div class="termy">
         ```bash
         docker run -p 5000:80 -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
         ```
-        </div>
+
     === "Windows"
-        <div class="termy">
+
         ```bash
         docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
         ```
-        </div>
 
 Também irá notar secções de dicas e notas no texto:
 
@@ -79,11 +77,9 @@ my-collection:
 
 Fragmentos de código (snippets) que precisam de ser digitados num terminal/consola são indicados como:
 
-<div class="termy">
 ```bash
 echo 'Hello world'
 ```
-</div>
 
 # Localização e materiais da workshop
 

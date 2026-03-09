@@ -76,19 +76,15 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```
         gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```
         gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
         ```
-        </div>
 
 
 ### OWSLib
@@ -100,24 +96,19 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
     If you do not have Python installed, consider running this exercise in a Docker container. See the [Setup Chapter](../setup.md#using-docker-for-python-clients). 
 
     === "Linux/Mac"
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     Then start a Python console session with: `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.coverages import Coverages
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -141,11 +132,9 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
         >>> schema['properties']['1']['type']
         'number'
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.coverages import Coverages
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -169,7 +158,6 @@ Save the configuration and restart Docker Compose. Navigate to <http://localhost
         >>> schema['properties']['1']['type']
         'number'
         ```
-        </div>
 
 !!! note
 

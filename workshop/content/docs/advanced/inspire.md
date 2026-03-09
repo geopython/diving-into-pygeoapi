@@ -54,19 +54,15 @@ recommendation and the relevant Good Practices.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         python3 load_tinydb_records.py <path/to/xml-files> <output.db>
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         python3 load_tinydb_records.py <path/to/xml-files> <output.db>
         ```
-        </div>
 
     Now configure [TinyDB as a provider for OGC API - Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the XML output of some of the records. 
 

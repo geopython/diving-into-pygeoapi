@@ -71,19 +71,15 @@ develop your own custom pygeoapi plugin, or convert your metadata to OGC API - R
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
 ### Sample ISO 19139 to TinyDBCatalogue loader
 
@@ -91,23 +87,19 @@ It is possible to load more example ISO19139 metadata in a TinyDB database with 
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     cd workshop/exercises/data/tartu/metadata
     curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
     python3 load_tinydb_records.py xml catalogue.tinydb
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     cd workshop/exercises/data/tartu/metadata
     curl https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
     python3 load_tinydb_records.py xml catalogue.tinydb
     ```
-    </div>
 
 If you do not have curl installed, copy the URL above to your web browser and save locally.
 
@@ -117,7 +109,6 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
@@ -126,11 +117,9 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
         python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm --network=host --name owslib -v ${pwd}/data:/data python:3.10-slim /bin/bash
@@ -139,7 +128,6 @@ If you do not have Python installed, you can the loader by using the OWSLib Dock
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
         python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
         ```
-        </div>
 
 Navigate to <http://localhost:5000/collections/example_catalogue> to evaluate whether the new metadata has been published
 to the collection.
@@ -156,21 +144,17 @@ to the collection.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install pygeometa
         pygeometa --help
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install pygeometa
         pygeometa --help
         ```
-        </div>
 
 ## pygeoapi as a CSW proxy
 
@@ -208,25 +192,20 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ``` 
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ``` 
-        </div>
 
     Then start a Python console session with `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.records import Records
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -249,11 +228,9 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
         >>> dutch_metacat_query['numberMatched']
         2
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.records import Records
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -276,7 +253,6 @@ QGIS supports OGC API - Records via the [MetaSearch plugin](https://docs.qgis.or
         >>> dutch_metacat_query['numberMatched']
         2
         ```
-        </div>
 
 !!! note
 

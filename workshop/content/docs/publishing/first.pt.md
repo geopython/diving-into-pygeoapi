@@ -24,21 +24,17 @@ Para testar:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker compose up
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker compose up
         ```
-        </div>
 
     1. Abra <http://localhost:5000> no seu navegador, verifique algumas coleções
     1. Feche digitando `CTRL-C`
@@ -49,7 +45,6 @@ Para testar:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker compose up -d
         docker ps  # verifique que o container pygeoapi está em execução
@@ -57,11 +52,9 @@ Para testar:
         docker logs --follow pygeoapi  # ver registos
         docker compose down --remove-orphans
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker compose up -d
         docker ps  # verifique que o container pygeoapi está em execução
@@ -69,7 +62,6 @@ Para testar:
         docker logs --follow pygeoapi  # ver registos
         docker compose down --remove-orphans
         ```
-        </div>
 
 ## Publicar o primeiro conjunto de dados
 
@@ -153,19 +145,15 @@ Defina o nível de registo (logging) para `DEBUG` e indique um caminho para um f
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker logs --follow pygeoapi
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker logs --follow pygeoapi
         ```
-        </div>
 
 !!! tip
 

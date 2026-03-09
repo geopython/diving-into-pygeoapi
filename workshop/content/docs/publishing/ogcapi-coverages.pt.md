@@ -71,19 +71,15 @@ O [GDAL/OGR](https://gdal.org) fornece suporte para a [OGC API - Coverages](http
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```
         gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```
         gdalinfo OGCAPI:https://maps.ecere.com/ogcapi/collections/SRTM_ViewFinderPanorama
         ```
-        </div>
 
 ### OWSLib
 
@@ -94,23 +90,19 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
     Se não tiver o Python instalado, considere executar este exercício num container de Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
 
     === "Linux/Mac"
-        <div class="termy">
-        ```bash
-        pip3 install owslib
-        ```        </div>
-
-    === "Windows (PowerShell)"
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
+
+    === "Windows (PowerShell)"
+        ```bash
+        pip3 install owslib
+        ```
 
     Em seguida, inicie uma sessão de consola Python com: `python3` (pare a sessão escrevendo `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.coverages import Coverages
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -134,11 +126,9 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> schema['properties']['1']['type']
         'number'
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.coverages import Coverages
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -162,7 +152,6 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> schema['properties']['1']['type']
         'number'
         ```
-        </div>
 
 !!! note
 
