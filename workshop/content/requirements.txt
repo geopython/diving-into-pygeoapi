@@ -1,4 +1,4 @@
-mkdocs
+mkdocs<2.0.0
 mkdocs-material
 mkdocs-print-site-plugin
 mkdocs-static-i18n
