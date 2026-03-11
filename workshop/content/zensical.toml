@@ -104,9 +104,14 @@ features = [
 [project.extra]
 homepage = "https://dive.pygeoapi.io"
 
-default_language = "en"
-languages = ["en", "pt"]
-generate_language_paths = true
+#default_language = "en"
+#languages = ["en", "pt"]
+#generate_language_paths = true
 
-[i18n.routing]
-prefix_default_language = false
+#[i18n.routing]
+#prefix_default_language = false
+
+alternate =[
+    { name = "English", link = "/", lang = "en" },
+    { name = "Português", link = "/pt/", lang = "pt" }
+]

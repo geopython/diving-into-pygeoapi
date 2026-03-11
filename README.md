@@ -45,23 +45,35 @@ zensical serve  # website is made available on http://localhost:8000
 
 ### Translating the workshop to a different language
 
-The workshop is setup to support content in different languages, via the [mkdocs-static-i18n](https://pypi.org/project/mkdocs-static-i18n) plugin. To add an additional language to the workshop:
+Support to multiple languages is native in Zensical. To add an additional language to the workshop, create another toml file with the locale code as part of the filename. See an example [here](./workshop/content/zensical.pt.toml). 
 
-- in `mkdocs.yml`, section `plugins.i18n.languages`, add a section with at least the `locale`, `name`, and `build` directives.  For example, to add Greek:
-
-```yaml
-- locale: el
-  name: Ελληνικά
-  build: true
-```
-
-- foreach `.md` page in `workshop/content/docs`, add an equivalant page in the language with the locale code as part of the filename.  For example:
+- To enable the language switcher, update this block at the end of [the main configuration file](./workshop/content/zensical.toml):
+    ```
+    alternate =[
+        { name = "English", link = "/", lang = "en" },
+        { name = "Português", link = "/pt/", lang = "pt" }
+    ] 
+    ```
+- foreach `.md` page in `workshop/content/docs`, add an equivalent page in the language with the locale code as part of the filename.  For example:
   - `ogcapi-records.md` -> `ogcapi-records.el.md`
+- Update the [GitHub action](https://github.com/geopython/diving-into-pygeoapi/blob/main/.github/workflows/deploy.docs.yml), to also include a build for this language; example: `zensical build --strict --config-file zensical.pt.toml`
 
 - commit to your fork and issue a GitHub Pull Request
 
 NOTE: see [issue 217](https://github.com/geopython/diving-into-pygeoapi/issues/217) to track the implementation of auto-translation.
 
+Note: Zensical can only serve one language at a time. Example:
+ `zensical serve --config-file zensical.pt.toml`
+
+If you want to test the language switcher: build the default English site, build the other language sites and spin up a basic local web server to view the combined output:
+
+ ```
+zensical build --config-file zensical.toml
+
+zensical build --config-file zensical.pt.toml
+
+python3 -m http.server --directory site
+ ```
 
 ## Contributing updates
 
