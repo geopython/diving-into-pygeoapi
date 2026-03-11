@@ -22,8 +22,8 @@ jobs:
           pip install -r workshop/content/requirements.txt
       - name: Build site 📦
         run: |
-          zensical build --clean --strict --config-file zensical.toml
-          zensical build --strict --config-file zensical.pt.toml
+          zensical build --clean --strict --config-file workshop/content/zensical.toml
+          zensical build --strict --config-file workshop/content/zensical.pt.toml
           mv site /tmp/
       - name: checkout gh-pages branch
         uses: actions/checkout@master
