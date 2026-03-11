@@ -22,6 +22,7 @@ jobs:
           pip install -r workshop/content/requirements.txt
       - name: Build site 📦
         run: |
+          cd workshop/content
           zensical build --clean --strict
           mv site /tmp/
       - name: checkout gh-pages branch
