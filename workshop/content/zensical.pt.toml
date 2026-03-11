@@ -14,7 +14,7 @@ extra_css = [
 ]
 
 # Native translated nav for Portuguese
-nav =[
+nav = [
     { "Início" = "index.pt.md"},
     { "Introdução á pygeoapi" = "introduction.pt.md"},
     { "Configuração do ambiente da workshop" = "setup.pt.md"},
@@ -52,7 +52,7 @@ variant = "classic"
 primary = "black"
 favicon = "assets/favicon.ico"
 logo = "assets/images/pygeoapi-icon-notrans.png"
-features =[
+features = [
   "content.action.edit",
   "content.action.view",
   "navigation.top",
@@ -64,7 +64,7 @@ features =[
 [project.extra]
 homepage = "https://dive.pygeoapi.io"
 
-alternate =[
+alternate = [
     { name = "English", link = "/", lang = "en" },
     { name = "Português", link = "/pt/", lang = "pt" }
 ]
