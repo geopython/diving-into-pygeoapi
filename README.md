@@ -22,7 +22,7 @@ the [Workshop environment setup](https://dive.pygeoapi.io/setup).
 
 ### Building the workshop content locally
 
-The workshop manual is powered by [MkDocs](https://www.mkdocs.org) which facilitates easy management
+The workshop manual is powered by [Zensical](https://zensical.org) which facilitates easy management
 of content and publishing. Workshop content is written in Markdown.
 
 
@@ -38,9 +38,9 @@ cd diving-into-pygeoapi/workshop/content
 # install required dependencies
 pip install -r requirements.txt
 # build the website
-mkdocs build
+zensical build
 # serve locally
-mkdocs serve  # website is made available on http://localhost:8000
+zensical serve  # website is made available on http://localhost:8000
 ```
 
 ### Translating the workshop to a different language
@@ -71,10 +71,4 @@ Changes to the GitHub repository result in an automated build and deploy of the 
 
 ## Deploying to live site
 
-Website updates are automatically published via GitHub Actions. To publish manually:
-
-```bash
-# NOTE: you require access privileges to the GitHub repository
-# to publish live updates
-mkdocs gh-deploy -m 'add new page on topic x'
-```
+Website updates are automatically published via GitHub Actions.

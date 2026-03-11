@@ -40,17 +40,15 @@ Os exercícios são indicados da seguinte forma:
     Uma secção marcada desta forma indica que pode experimentar o exercício e escolher o seu ambiente (Linux/Mac ou Windows).
 
     === "Linux/Mac"
-        <div class="termy">
         ```bash
         docker run -p 5000:80 -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
         ```
-        </div>
+
     === "Windows"
-        <div class="termy">
+
         ```bash
         docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
         ```
-        </div>
 
 Também irá notar secções de dicas e notas no texto:
 
@@ -79,21 +77,15 @@ my-collection:
 
 Fragmentos de código (snippets) que precisam de ser digitados num terminal/consola são indicados como:
 
-<div class="termy">
 ```bash
 echo 'Hello world'
 ```
-</div>
 
 # Localização e materiais da workshop
 
 Esta workshop é sempre disponibilizada ao vivo em [https://dive.pygeoapi.io](https://dive.pygeoapi.io).
 
 Os conteúdos da workshop, a wiki e o sistema de registo de problemas (issue tracker) são geridos no GitHub em [https://github.com/geopython/diving-into-pygeoapi](https://github.com/geopython/diving-into-pygeoapi).
-
-## Imprimir esta workshop
-
-Para imprimir esta workshop, navegue até à [página de impressão](print_page) e selecione *Ficheiro > Imprimir > Guardar como PDF*.
 
 # Suporte
 

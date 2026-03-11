@@ -92,7 +92,7 @@ Your contribution will be under our [license](https://github.com/geopython/divin
 ### Documentation
 
 * documentation is managed in `workshop/content/docs/` using , in Markdown format
-* [MkDocs](https://www.mkdocs.org) is used to generate the documentation
+* [Zensical](https://zensical.org) is used to generate the documentation
 
 
 ## Suggesting Enhancements

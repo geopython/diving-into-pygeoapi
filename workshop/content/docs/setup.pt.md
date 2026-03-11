@@ -78,7 +78,6 @@ Se tudo correr bem, deverá conseguir executar o Docker a partir da linha de com
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker version
     Docker version 20.10.17, build 100c701
@@ -86,11 +85,9 @@ Se tudo correr bem, deverá conseguir executar o Docker a partir da linha de com
     docker compose version
     Docker Compose version v2.6.1
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker version
     Docker version 20.10.17, build 100c701
@@ -98,7 +95,6 @@ Se tudo correr bem, deverá conseguir executar o Docker a partir da linha de com
     docker compose version
     Docker Compose version v2.6.1
     ```
-    </div>
 
 (Não é necessário que os números da sua versão correspondam exatamente).
 [^2]: Para versões recentes do Docker, execute `docker compose version`
@@ -114,7 +110,6 @@ Abra uma sessão de terminal e execute:
 
     === "Linux/Mac"
     
-        <div class="termy">
         ```bash
         docker run --rm -p 5000:80 geopython/pygeoapi:latest
         Unable to find image 'geopython/pygeoapi:latest' locally
@@ -143,11 +138,9 @@ Abra uma sessão de terminal e execute:
         [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
         [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
         ```
-        </div>
     
     === "Windows (PowerShell)"
     
-        <div class="termy">
         ```bash
         docker run --rm -p 5000:80 geopython/pygeoapi:latest
         Unable to find image 'geopython/pygeoapi:latest' locally
@@ -176,7 +169,6 @@ Abra uma sessão de terminal e execute:
         [2022-08-09 12:59:00 +0000] [21] [INFO] Booting worker with pid: 21
         [2022-08-09 12:59:00 +0000] [22] [INFO] Booting worker with pid: 22
         ```
-        </div>
 
 
 É tudo! Abra o seu navegador e navegue para `http://localhost:5000`, a página da pygeoapi será exibida.
@@ -204,19 +196,15 @@ Para facilitar o desenvolvimento, vamos substituir a configuração da pygeoapi 
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         curl https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
         ```
-        </div>
 
     Abra o ficheiro no seu editor de texto favorito e altere o título e a descrição da API:
 
@@ -231,21 +219,17 @@ Para facilitar o desenvolvimento, vamos substituir a configuração da pygeoapi 
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker run -p 5000:80 \
         -v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
         geopython/pygeoapi:latest
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker run -p 5000:80 -v ${pwd}/default.config.yml:/pygeoapi/local.config.yml geopython/pygeoapi:latest
         ```
-        </div>
 
     Neste ponto, navegue para `http://localhost:5000` para verificar o novo título e descrição.
 
@@ -269,7 +253,6 @@ Abaixo está um exemplo onde a configuração é explicitamente definida para `p
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 \
     -v $(pwd)/data:/pygeoapi/mydata \
@@ -277,15 +260,12 @@ Abaixo está um exemplo onde a configuração é explicitamente definida para `p
     -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml \
     geopython/pygeoapi:latest
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 -v ${pwd}/data:/pygeoapi/mydata -v ${pwd}/default.config.yml:/pygeoapi/pygeoapi-config.yml -e PYGEOAPI_CONFIG=/pygeoapi/pygeoapi-config.yml geopython/pygeoapi:latest
     ```
-    </div>
 
 Nas próximas secções, analisaremos exemplos adicionais de montagens na pasta de dados. Mais exemplos de implementação do Docker podem ser encontrados no [repositório GitHub da pygeoapi](https://github.com/geopython/pygeoapi/tree/master/docker/examples).
 
@@ -303,7 +283,6 @@ Abaixo está um exemplo completo, assumindo que a pygeoapi está a ser executada
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
     Unable to find image 'python:3.10-slim' locally
@@ -327,11 +306,9 @@ Abaixo está um exemplo completo, assumindo que a pygeoapi está a ser executada
     etc
     
     ```
-    </div>
  
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker run -it --rm --network=host --name owslib python:3.10-slim /bin/bash
     Unable to find image 'python:3.10-slim' locally
@@ -355,6 +332,5 @@ Abaixo está um exemplo completo, assumindo que a pygeoapi está a ser executada
     etc
     
     ```
-    </div>
  
 Faremos referência a esta instalação em alguns dos Exercícios onde a OWSLib é utilizada.

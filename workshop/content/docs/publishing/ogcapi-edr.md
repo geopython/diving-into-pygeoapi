@@ -112,25 +112,20 @@ You can close this dialog and run the query. The plugin will fetch all the data 
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     Then start a Python console session with `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
         >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
@@ -146,11 +141,9 @@ You can close this dialog and run the query. The plugin will fetch all the data 
         >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # CoverageJSON data
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
         >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
@@ -166,7 +159,6 @@ You can close this dialog and run the query. The plugin will fetch all the data 
         >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
         >>> data  # CoverageJSON data
         ```
-        </div>
 
 !!! note
 

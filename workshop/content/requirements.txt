@@ -1,4 +1,1 @@
-mkdocs
-mkdocs-material
-mkdocs-print-site-plugin
-mkdocs-static-i18n
+zensical

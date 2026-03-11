@@ -14,19 +14,15 @@ A [Docker image](https://hub.docker.com/r/geopython/pygeoapi) is available for p
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 geopython/pygeoapi:latest
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 geopython/pygeoapi:latest
     ```
-    </div>
 
 !!! question "Review the pygeoapi Dockerfile"
 
@@ -38,22 +34,17 @@ In a typical configuration one would override the default pygeoapi configuration
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker run -p 5000:80 \ 
         -v $(pwd)/pygeoapi-config.yml:/pygeoapi/local.config.yml \
         -v $(pwd)/geodata:/geodata https://hub.docker.com/r/geopython/pygeoapi:latest
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker run -p 5000:80 -v ${pwd}/pygeoapi-config.yml:/pygeoapi/local.config.yml -v ${pwd}/geodata:/geodata https://hub.docker.com/r/geopython/pygeoapi:latest
         ```
-        </div>
-
 
 Alternatively, you can build a fresh Docker image including both the configuration and data for the service. 
 
@@ -70,22 +61,18 @@ set the `SCRIPT_NAME` environment variable.
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 -e SCRIPT_NAME='/mypygeoapi' \
     -v $(pwd)/my.config.yml:/pygeoapi/local.config.yml -it geopython/pygeoapi
     # browse to http://localhost:5000/mypygeoapi
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker run -p 5000:80 -e SCRIPT_NAME='/mypygeoapi' -v ${pwd}/my.config.yml:/pygeoapi/local.config.yml -it geopython/pygeoapi
     # browse to http://localhost:5000/mypygeoapi
     ```
-    </div>
 
 # Summary
 

@@ -93,19 +93,15 @@ For this we need the [pygeoapi-examples GitHub repository](https://github.com/ge
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     git clone https://github.com/geopython/pygeoapi-examples.git
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     git clone https://github.com/geopython/pygeoapi-examples.git
     ```
-    </div>
 
 Alternatively, you can [download the repo as a .zip file](https://github.com/geopython/pygeoapi-examples/archive/refs/heads/main.zip) and unzip.
 
@@ -113,21 +109,17 @@ Change into the `docker/elastic` folder and run the `docker-compose.yml` file:
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     cd docker/elastic
     docker compose up
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     cd docker/elastic
     docker compose up
     ```
-    </div>
 
 If you experience startup problems, consult the [README file](https://github.com/geopython/pygeoapi-examples/blob/main/docker/elastic/README.md). 
 You may need to adapt your local host system's virtual memory setting.
@@ -146,19 +138,15 @@ After this we need to rebuild the Docker image:
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker compose build
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker compose build
     ```
-    </div>
 
 Next we need to configure pygeoapi by inserting the snippet below into the pygeoapi config file `pygeoapi/docker.config.yml`.
 This effectively enables publishing the file `greater_hyderabad_municipal_corporation_ward_boundaries.geojson` as OGC API - Features
@@ -199,19 +187,15 @@ You can check the logs using:
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker compose logs --follow
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker compose logs --follow
     ```
-    </div>
 
 After the server has started you can access the collection page here:
 
@@ -280,55 +264,43 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     === "Linux/Mac"
 
-    <div class="termy">
         ```bash
         ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs
         ```
-        </div>
 
     Check summary information about the layer with:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs obs -so
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         ogrinfo OAPIF:https://demo.pygeoapi.io/master/collections/obs obs -so
         ```
-        </div>
 
     Now, let's convert the observations into a shapefile
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         ogr2ogr -f "ESRI Shapefile" obs.shp OAPIF:https://demo.pygeoapi.io/master/collections/obs
         ```
-        </div>
 
 !!! Note
 
@@ -345,19 +317,15 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker pull ghcr.io/osgeo/gdal:alpine-small-latest
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker pull ghcr.io/osgeo/gdal:alpine-small-latest
         ```
-        </div>
 
     Then you can run for example OGR command line tools. Base command is `docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest`.
     This runs the Docker container interactively (`-it`) and removes the container on exit (`--rm`).  Below are examples.
@@ -366,27 +334,22 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest \
                             ogrinfo --formats
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogrinfo --formats
         ```
-        </div>
 
     Get information from a geospatial file. Note the volume mapping: `-v $(pwd)/data:/work` 
     to access local files within the Docker container (commands are single-line, broken up for readability).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         cd git/workshop/exercises
         docker run -v $(pwd)/data:/work -it --rm \
@@ -397,11 +360,9 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
               using driver `GeoJSON' successful.
         1: bathingwater-estonia (Point)
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         cd git/workshop/exercises
         docker run -v ${pwd}/data:/work -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogrinfo /work/tartu/bathingwater-estonia.geojson
@@ -410,49 +371,40 @@ QGIS is one of the first GIS Desktop clients which added support for OGC API - F
               using driver `GeoJSON' successful.
         1: bathingwater-estonia (Point)
         ```
-        </div>
 
     Convert the GeoJSON file to a GeoPackage (GPKG) with `ogr2ogr`:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker run -v $(pwd)/data:/work -it --rm \
            ghcr.io/osgeo/gdal:alpine-small-latest \
            ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg \
                              /work/tartu/bathingwater-estonia.geojson
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         docker run -v ${pwd}/data:/work -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg /work/tartu/bathingwater-estonia.geojson
          ```
-        </div>
 
     You can also use `ogrinfo` retrieve information about an OGC API - Features collection.  In case you are accessing a local collection, you will need to make sure the container runs on the host network:
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         docker run \
         --network=host \
         ghcr.io/osgeo/gdal:alpine-small-latest \
         ogrinfo OAPIF:http://localhost:5000/collections/obs obs -so
         ```
-        </div>
 
     === "Windows"
 
-        <div class="termy">
         ```bash
         docker run --network=host ghcr.io/osgeo/gdal:alpine-small-latest ogrinfo OAPIF:http://localhost:5000/collections/obs obs -so
         ```
-        </div>
 
 ### OWSLib - Advanced
 
@@ -464,37 +416,29 @@ Before continuing, make sure you are in the `workshop/exercises` folder. You wil
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     pwd
     ```
-    </div>
     
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     cd
     ```
-    </div>
 
 Then run a container to start a jupyter notebook, mounting the local folder:
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker run -p 8888:8888 -v $(pwd):/home/jovyan/work jupyter/base-notebook
     ```
-    </div>
     
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker run -p 8888:8888 -v ${pwd}:/home/jovyan/work jupyter/base-notebook
     ```
-    </div>
 
 Enter the url stated on the command line,  `http://127.0.0.1:8888/lab` followed by a token. Enter the `work` folder and open the `features-owslib.ipynb`.
 
@@ -514,25 +458,20 @@ Run through the notebook, to explore an OGC API - Features server, using owslib.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     Then start a Python console session with `python3` (stop the session by typing `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.features import Features
         >>> w = Features('https://demo.pygeoapi.io/master')
@@ -561,11 +500,9 @@ Run through the notebook, to explore an OGC API - Features server, using owslib.
         >>> lakes_query['features'][0]['properties']
         {u'scalerank': 0, u'name_alt': None, u'admin': None, u'featureclass': u'Lake', u'id': 0, u'name': u'Lake Baikal'}
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.features import Features
         >>> w = Features('https://demo.pygeoapi.io/master')
@@ -594,7 +531,6 @@ Run through the notebook, to explore an OGC API - Features server, using owslib.
         >>> lakes_query['features'][0]['properties']
         {u'scalerank': 0, u'name_alt': None, u'admin': None, u'featureclass': u'Lake', u'id': 0, u'name': u'Lake Baikal'}
         ```
-        </div>
 
 !!! note
 

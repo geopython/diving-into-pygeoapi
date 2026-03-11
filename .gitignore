@@ -1,5 +1,6 @@
 .DS_Store
 workshop/exercises/data/tiles
+workshop/content/.cache
 workshop/content/site
 
 .idea

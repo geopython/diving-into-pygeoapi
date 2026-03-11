@@ -45,23 +45,19 @@ Como primeiro passo vamos gerar as tiles, usando o tippecanoe:
 
     === "Linux/Mac"
     
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm -v $(pwd)/data:/data emotionalcities/tippecanoe \
         tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=16 \
         --extend-zooms-if-still-dropping --no-tile-compression /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
         ```
-        </div>
      
     === "Windows (PowerShell)"
     
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm -v ${pwd}/data:/data emotionalcities/tippecanoe tippecanoe -r1 -pk -pf --output-to-directory=/data/tiles/ --force --maximum-zoom=16 --extend-zooms-if-still-dropping --no-tile-compression /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
         ```
-        </div>
  
 !!! note
     Por favor, note que a ferramenta tippecanoe requer que o ficheiro de entrada esteja em WGS84, e produz sempre tiles em WebMercator.
@@ -126,36 +122,29 @@ Se quiser explorar a publicação de tiles vetoriais usando o Elasticsearch, clo
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     git clone https://github.com/geopython/pygeoapi-examples.git
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     git clone https://github.com/geopython/pygeoapi-examples.git
     ```
-    </div>
+
 Depois, mude para a pasta `docker/mvt-elastic`:
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     cd docker/mvt-elastic
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     cd docker/mvt-elastic
     ```
-    </div>
 
 Edite o script `add-data.sh` na pasta `ES`, adicionando estas duas linhas antes do fim:
 
@@ -170,19 +159,15 @@ Acima, estamos a descarregar o `greater_hyderabad_municipal_corporation_ward_Bou
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker compose build
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker compose build
     ```
-    </div>
 
 Edite a configuração `docker.config.yml` na pasta `pygeoapi`, adicionando este bloco de código antes do fim:
 
@@ -236,19 +221,15 @@ Finalmente, inicie a composição docker, que irá descarregar e ingerir o conju
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     docker compose up
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     docker compose up
     ```
-    </div>
 
 !!! note
 
@@ -367,19 +348,15 @@ Neste exemplo, as cores dos símbolos refletem o valor do atributo `objectid`.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         git clone -b ogcapi-ws https://github.com/emotional-cities/vtiles-example.git
         ```
-        </div>
 
     ![](../assets/images/leaflet-hyderabad2.png){ width=100% }
 

@@ -70,19 +70,15 @@ Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" d
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ```
-        </div>
 
 ### Exemplo de loader de ISO 19139 para TinyDBCatalogue
 
@@ -90,23 +86,19 @@ Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" d
 
 === "Linux/Mac"
 
-    <div class="termy">
     ```bash
     cd workshop/exercises/data/tartu/metadata
     curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
     python3 load_tinydb_records.py xml catalogue.tinydb
     ```
-    </div>
 
 === "Windows (PowerShell)"
 
-    <div class="termy">
     ```bash
     cd workshop/exercises/data/tartu/metadata
     curl https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
     python3 load_tinydb_records.py xml catalogue.tinydb
     ```
-    </div>
 
 Se não tiver o curl instalado, copie o URL acima para o seu navegador web e guarde localmente.
 
@@ -116,7 +108,6 @@ Se não tiver o Python instalado, pode usar o loader utilizando o container Dock
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm --network=host --name owslib -v $(pwd)/data:/data python:3.10-slim /bin/bash
@@ -125,11 +116,9 @@ Se não tiver o Python instalado, pode usar o loader utilizando o container Dock
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
         python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         cd workshop/exercises
         docker run -it --rm --network=host --name owslib -v ${pwd}/data:/data python:3.10-slim /bin/bash
@@ -138,7 +127,6 @@ Se não tiver o Python instalado, pode usar o loader utilizando o container Dock
         curl -O https://raw.githubusercontent.com/geopython/pygeoapi/master/tests/load_tinydb_records.py
         python3 load_tinydb_records.py /data/tartu/metadata/xml /data/tartu/metadata/catalogue.tinydb
         ```        
-        </div>
 
 Navegue para <http://localhost:5000/collections/example_catalogue> para avaliar se os novos metadados foram publicados
 na coleção.
@@ -155,21 +143,17 @@ na coleção.
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install pygeometa
         pygeometa --help
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install pygeometa
         pygeometa --help
         ```
-        </div>
 
 ## A pygeoapi como um proxy de CSW
 
@@ -209,25 +193,20 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ``` 
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```bash
         pip3 install owslib
         ``` 
-        </div>
 
     Depois, inicie uma sessão de consola Python com `python3` (pare a sessão escrevendo `exit()`).
 
     === "Linux/Mac"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.records import Records
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -250,11 +229,9 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> dutch_metacat_query['numberMatched']
         2
         ```
-        </div>
 
     === "Windows (PowerShell)"
 
-        <div class="termy">
         ```python
         >>> from owslib.ogcapi.records import Records
         >>> SERVICE_URL = 'https://demo.pygeoapi.io/master/'
@@ -277,7 +254,6 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
         >>> dutch_metacat_query['numberMatched']
         2
         ```
-        </div>
 
 !!! note
 
