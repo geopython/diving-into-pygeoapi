@@ -22,14 +22,14 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="../../pt/publishing/ogcapi-features/" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,22 +54,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../css/print-site.css">
-    
-      <link rel="stylesheet" href="../../css/print-site-material.css">
-    
       <link rel="stylesheet" href="../../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -78,17 +70,12 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -108,12 +95,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -134,8 +121,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -148,14 +135,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../pt/publishing/ogcapi-features/" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -167,57 +154,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -243,9 +203,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
     Diving into pygeoapi
@@ -255,7 +215,7 @@
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -515,7 +475,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -534,7 +494,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -543,7 +504,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1281,7 +1242,8 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1290,7 +1252,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1419,13 +1381,24 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/ogcapi-features.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/publishing/ogcapi-features.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="exercise-2-vector-data-via-ogc-api-features">Exercise 2 - Vector data via OGC API - Features</h1>
+<h1 id="exercise-2-vector-data-via-ogc-api-features">Exercise 2 - Vector data via OGC API - Features<a class="headerlink" href="#exercise-2-vector-data-via-ogc-api-features" title="Permanent link">&para;</a></h1>
 <p><a href="https://ogcapi.ogc.org/features">OGC API - Features</a> provides a Web API to access vector 
 data (geometries and their attributes). While the core specification covers basic data access and query,
 additional related standards and extensions are in development for the following capabilities:</p>
@@ -1435,7 +1408,7 @@ additional related standards and extensions are in development for the following
 <li><a href="https://docs.ogc.org/is/19-079r2/19-079r2.html">OGC API - Features - Part 3: Filtering</a> adds the ability for complex queries using <a href="https://docs.ogc.org/is/21-065r2/21-065r2.html">Common Query Language (CQL2)</a></li>
 <li><a href="https://docs.ogc.org/DRAFTS/20-002r1.html">OGC API - Features - Part 4: Create, Replace, Update and Delete</a> (<strong>draft</strong>) adds transactional capabilities </li>
 </ul>
-<h2 id="pygeoapi-support">pygeoapi support</h2>
+<h2 id="pygeoapi-support">pygeoapi support<a class="headerlink" href="#pygeoapi-support" title="Permanent link">&para;</a></h2>
 <p>pygeoapi supports all of the above OGC API - Features specification parts (Part 3 is dependent on backend support i.e. Elasticsearch).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1446,7 +1419,7 @@ additional related standards and extensions are in development for the following
 <p>See <a href="https://docs.pygeoapi.io/en/latest/cql.html">the official documentation</a> for more information on CQL support </p>
 </div>
 <p>Next, we are going to explore how-to publish vector data using a <code>GeoPackage</code>.</p>
-<h2 id="publish-a-geopackage">Publish a GeoPackage</h2>
+<h2 id="publish-a-geopackage">Publish a GeoPackage<a class="headerlink" href="#publish-a-geopackage" title="Permanent link">&para;</a></h2>
 <p>In the previous section we demonstrated the steps involved to add a dataset to pygeoapi and update the configuration. 
 In this exercise we are going to publish another vector file, this time from a <a href="https://www.geopackage.org">GeoPackage</a> (SQLite3) 
 vector data source.</p>
@@ -1461,52 +1434,52 @@ vector data source.</p>
 <p>Then, open the pygeoapi configuration file in a text editor.
 Find the line <code># START - EXERCISE 2 - flowlines Guama River</code>.</p>
 <p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 2 - flowlines Guama River</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">guama-river</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
-<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River Basin mainstem flowlines</span>
-<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Merit Hydro</span>
-<span class="w">    </span><span class="nt">links</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
-<span class="w">          </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
-<span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">          </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d</span>
-<span class="w">          </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EE</span>
-<span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-49.16</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-5.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-46.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1.2</span><span class="p p-Indicator">]</span>
-<span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
-<span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SQLiteGPKG</span>
-<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/brazil/guama_river.gpkg</span><span class="w"> </span><span class="c1"># place correct path here</span>
-<span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fid</span>
-<span class="w">          </span><span class="nt">table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guama_river</span><span class="w"> </span><span class="c1"># table name within gpkg</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">guama-river</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River Basin mainstem flowlines</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guama River</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Merit Hydro</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">          </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">          </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.sciencebase.gov/catalog/item/614a8864d34e0df5fb97572d</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">          </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EE</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-49.16</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-5.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-46.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1.2</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SQLiteGPKG</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/brazil/guama_river.gpkg</span><span class="w"> </span><span class="c1"># place correct path here</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fid</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">          </span><span class="nt">table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guama_river</span><span class="w"> </span><span class="c1"># table name within gpkg</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <p>Save the file and restart Docker Compose. Navigate to <a href="http://localhost:5000/collections">http://localhost:5000/collections</a> to evaluate whether the new dataset with
 title <em>"Guama River"</em> has been published.</p>
@@ -1516,23 +1489,19 @@ title <em>"Guama River"</em> has been published.</p>
 Consult the <a href="https://docs.pygeoapi.io/en/latest/development.html#working-with-spatialite-on-osx">official documentation</a> 
 or try with an alternative data format. If you use Docker this is not an issue.</p>
 </div>
-<h2 id="optional-publish-a-geojson-file-using-elasticsearch">OPTIONAL: Publish a GeoJSON file using Elasticsearch</h2>
+<h2 id="optional-publish-a-geojson-file-using-elasticsearch">OPTIONAL: Publish a GeoJSON file using Elasticsearch<a class="headerlink" href="#optional-publish-a-geojson-file-using-elasticsearch" title="Permanent link">&para;</a></h2>
 <p>This exercise is optional, if time permits, or you can perform this after workshop.</p>
 <p>Here we explore publishing OGC API - Features data using pygeoapi with an Elasticsearch backend provider. 
 For this we need the <a href="https://github.com/geopython/pygeoapi-examples">pygeoapi-examples GitHub repository</a>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi-examples.git
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1541,18 +1510,14 @@ For this we need the <a href="https://github.com/geopython/pygeoapi-examples">py
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docker/elastic
-docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>docker/elastic
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docker/elastic
-docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>docker/elastic
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1560,100 +1525,92 @@ docker<span class="w"> </span>compose<span class="w"> </span>up
 You may need to adapt your local host system's virtual memory setting.</p>
 <p>First we will load <code>greater_hyderabad_municipal_corporation_ward_Boundaries.geojson</code> into the Elasticsearch server. </p>
 <p>Edit the <code>add-data.sh</code> script within the <code>ES</code> folder, adding these two lines before the end:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/refs/heads/main/workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
-python3<span class="w"> </span>/load_es_data.py<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>objectid
-</code></pre></div></td></tr></table></div>
+<p><div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>curl<span class="w"> </span>-o<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>https://raw.githubusercontent.com/geopython/diving-into-pygeoapi/refs/heads/main/workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>python3<span class="w"> </span>/load_es_data.py<span class="w"> </span>/tmp/hyderabad.geojson<span class="w"> </span>objectid
+</span></code></pre></div></td></tr></table></div>
 Through these changes the file <code>greater_hyderabad_municipal_corporation_ward_Boundaries.geojson</code> is downloaded inside the Elasticsearch Docker container and then loaded into Elasticsearch. </p>
 <p>After this we need to rebuild the Docker image:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>build
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>build
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>build
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>build
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Next we need to configure pygeoapi by inserting the snippet below into the pygeoapi config file <code>pygeoapi/docker.config.yml</code>.
 This effectively enables publishing the file <code>greater_hyderabad_municipal_corporation_ward_boundaries.geojson</code> as OGC API - Features
 using the Elasticsearch backend provider.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nt">hyderabad</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
-<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Greater Hyderabad Municipal Corporation ward boundaries</span>
-<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.</span>
-<span class="w">        </span><span class="nt">keywords</span><span class="p">:</span>
-<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boundaries</span>
-<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Administrative</span>
-<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ward</span>
-<span class="w">        </span><span class="nt">links</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
-<span class="w">              </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
-<span class="w">              </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">information</span>
-<span class="w">              </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about</span>
-<span class="w">              </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-US</span>
-<span class="w">        </span><span class="nt">extents</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">spatial</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">78.2379194985166180</span><span class="p p-Indicator">,</span><span class="nv">17.2908061510471995</span><span class="p p-Indicator">,</span><span class="nv">78.6217049083810764</span><span class="p p-Indicator">,</span><span class="nv">17.5618443356918768</span><span class="p p-Indicator">]</span>
-<span class="w">                </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
-<span class="w">            </span><span class="nt">temporal</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">begin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2011-11-11</span>
-<span class="w">                </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">  </span><span class="c1"># or empty</span>
-<span class="w">        </span><span class="nt">providers</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Elasticsearch</span>
-<span class="w">              </span><span class="c1">#Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml</span>
-<span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://elastic_search:9200/hyderabad</span>
-<span class="w">              </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objectid</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">    </span><span class="nt">hyderabad</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Greater Hyderabad Municipal Corporation ward boundaries</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The city ward boundaries represent the administrative and electoral boundary areas of the city. It plays a great role in planning of the city, for each council of the municipal corporation.</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="nt">keywords</span><span class="p">:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boundaries</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Administrative</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ward</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="nt">links</span><span class="p">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">              </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">              </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">information</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">              </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">              </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-US</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="nt">extents</span><span class="p">:</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">            </span><span class="nt">spatial</span><span class="p">:</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">                </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">78.2379194985166180</span><span class="p p-Indicator">,</span><span class="nv">17.2908061510471995</span><span class="p p-Indicator">,</span><span class="nv">78.6217049083810764</span><span class="p p-Indicator">,</span><span class="nv">17.5618443356918768</span><span class="p p-Indicator">]</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">                </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="nt">temporal</span><span class="p">:</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">                </span><span class="nt">begin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2011-11-11</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">                </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">  </span><span class="c1"># or empty</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="nt">providers</span><span class="p">:</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Elasticsearch</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">              </span><span class="c1">#Note elastic_search is the docker container of ES the name is defined in the docker-compose.yml</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://elastic_search:9200/hyderabad</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">              </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objectid</span>
+</span></code></pre></div></td></tr></table></div>
 <p>On startup (e.g.: docker compose up -d) the pygeaoapi container will wait until the data has been ingested and the Elasticsearch index has been built. 
 You can check the logs using:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>--follow
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1662,12 +1619,12 @@ You can check the logs using:</p>
 <p>And the feature items here:</p>
 <p><a href="http://localhost:5000/collections/hyderabad/items">http://localhost:5000/collections/hyderabad/items</a></p>
 <p><img alt="" src="../../assets/images/features-hyderabad.png" width="100%" /></p>
-<h2 id="optional-pygeoapi-as-a-wfs-proxy">OPTIONAL: pygeoapi as a WFS proxy</h2>
+<h2 id="optional-pygeoapi-as-a-wfs-proxy">OPTIONAL: pygeoapi as a WFS proxy<a class="headerlink" href="#optional-pygeoapi-as-a-wfs-proxy" title="Permanent link">&para;</a></h2>
 <p>pygeoapi can also function as an OGC API - Features frontend service for an existing OGC WFS through 
 the built-in GDAL/OGR provider. This bridging-function effectively allows you to publish a WFS as OGC API - Features.</p>
 <p>This is expanded in an advanced section of this workshop: <a href="../../advanced/bridges/#publishing-wfs-as-ogc-api-features">pygeoapi as a Bridge to other Services WFS-section</a>. </p>
-<h2 id="client-access">Client access</h2>
-<h3 id="qgis">QGIS</h3>
+<h2 id="client-access">Client access<a class="headerlink" href="#client-access" title="Permanent link">&para;</a></h2>
+<h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
 <p>QGIS is one of the first GIS Desktop clients which added support for OGC API - Features. Support has been integrated into the existing WFS provider.</p>
 <div class="admonition question">
 <p class="admonition-title">Open an OGC API - Features collection in QGIS</p>
@@ -1679,7 +1636,7 @@ the built-in GDAL/OGR provider. This bridging-function effectively allows you to
 </ul>
 <p><img alt="New connection" src="../../assets/images/new-connection.png" width="50%" /></p>
 <ul>
-<li>Add the URL https://demo.pygeoapi.io/master (or the address of a local server)</li>
+<li>Add the URL <a href="https://demo.pygeoapi.io/master">https://demo.pygeoapi.io/master</a> (or the address of a local server)</li>
 <li>You can now click the <code>detect</code> button and QGIS will notice you are configuring an OGC API - Features endpoint</li>
 <li>QGIS facilitates to set page size (request is split in multiple requests)<ul>
 <li>for points you can easily set it to 2500</li>
@@ -1704,7 +1661,7 @@ the built-in GDAL/OGR provider. This bridging-function effectively allows you to
 <p class="admonition-title">Note</p>
 <p>An increasing number of GIS Desktop clients add support for OGC API's in subsequent releases. For example ArcGIS Pro <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm">supports OGC API - Features</a> since release 2.8.</p>
 </div>
-<h3 id="gdalogr-advanced">GDAL/OGR - Advanced</h3>
+<h3 id="gdalogr-advanced">GDAL/OGR - Advanced<a class="headerlink" href="#gdalogr-advanced" title="Permanent link">&para;</a></h3>
 <p><a href="https://gdal.org">GDAL/OGR</a> provides support for <a href="https://gdal.org/drivers/vector/oapif.html">OGC API - Features</a>. This means you can use <code>ogrinfo</code>, <code>ogr2ogr</code> to query and convert data from OGC API - Features endpoints just like any other vector data source.  This also means you can make connections to OGC API - Features endpoints from any software which has an interface to GDAL, such as MapServer, GeoServer, Manifold, FME, ArcGIS, etc.</p>
 <div class="admonition question">
 <p class="admonition-title">Use OGR to interact with OGC API - Features</p>
@@ -1712,56 +1669,41 @@ the built-in GDAL/OGR provider. This bridging-function effectively allows you to
 <li>Verify you have a recent GDAL installed, else use GDAL from OSGeoLive</li>
 <li>Run <code>ogrinfo</code> on the command line to verify a connection to OGC API - Features</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
-<p><div class="termy">
-    <div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
-</code></pre></div>
-    </div></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label><label for="__tabbed_5_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Check summary information about the layer with:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux/Mac</label><label for="__tabbed_7_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux/Mac</label><label for="__tabbed_6_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ogrinfo<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Now, let's convert the observations into a shapefile</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux/Mac</label><label for="__tabbed_8_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux/Mac</label><label for="__tabbed_7_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>obs.shp<span class="w"> </span>OAPIF:https://demo.pygeoapi.io/master/collections/obs
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1776,147 +1718,119 @@ the built-in GDAL/OGR provider. This bridging-function effectively allows you to
 directly from the commandline. OSGeo provides <a href="https://github.com/OSGeo/gdal/pkgs/container/gdal">GDAL Docker Images</a>. The main thing to deal with is proper Docker Volume mapping to have GDAL tools 
 access local files. This can be very handy for quick data conversions. Most images also come with GDAL Python bindings.</p>
 <p>First you can pull a very small Docker Image:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Linux/Mac</label><label for="__tabbed_9_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux/Mac</label><label for="__tabbed_8_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Then you can run for example OGR command line tools. Base command is <code>docker run -it --rm ghcr.io/osgeo/gdal:alpine-small-latest</code>.
 This runs the Docker container interactively (<code>-it</code>) and removes the container on exit (<code>--rm</code>).  Below are examples.</p>
 <p>Ask GDAL/OGR for available Vector formats:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Linux/Mac</label><label for="__tabbed_10_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Linux/Mac</label><label for="__tabbed_9_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
-<span class="w">                    </span>ogrinfo<span class="w"> </span>--formats
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">                    </span>ogrinfo<span class="w"> </span>--formats
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>--formats
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>--formats
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Get information from a geospatial file. Note the volume mapping: <code>-v $(pwd)/data:/work</code> 
 to access local files within the Docker container (commands are single-line, broken up for readability).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Linux/Mac</label><label for="__tabbed_11_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Linux/Mac</label><label for="__tabbed_10_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
-docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
-
-INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
-<span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
-<span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">   </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
-docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
-
-INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
-<span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
-<span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">cd</span><span class="w"> </span>git/workshop/exercises
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>/work/tartu/bathingwater-estonia.geojson
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>INFO:<span class="w"> </span>Open<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>/work/tartu/bathingwater-estonia.geojson<span class="s1">&#39;</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="s1">      using driver `GeoJSON&#39;</span><span class="w"> </span>successful.
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="m">1</span>:<span class="w"> </span>bathingwater-estonia<span class="w"> </span><span class="o">(</span>Point<span class="o">)</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Convert the GeoJSON file to a GeoPackage (GPKG) with <code>ogr2ogr</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Linux/Mac</label><label for="__tabbed_12_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Linux/Mac</label><label for="__tabbed_11_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
-<span class="w">   </span>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;GPKG&quot;</span><span class="w"> </span>/work/tartu/bathingwater-estonia.gpkg<span class="w"> </span><span class="se">\</span>
-<span class="w">                     </span>/work/tartu/bathingwater-estonia.geojson
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/work<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">   </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">   </span>ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;GPKG&quot;</span><span class="w"> </span>/work/tartu/bathingwater-estonia.gpkg<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">                     </span>/work/tartu/bathingwater-estonia.geojson
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<code>bash
-docker run -v ${pwd}/data:/work -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg /work/tartu/bathingwater-estonia.geojson</code>
-</div></p>
+<p><code>bash
+docker run -v ${pwd}/data:/work -it --rm ghcr.io/osgeo/gdal:alpine-small-latest ogr2ogr -f "GPKG" /work/tartu/bathingwater-estonia.gpkg /work/tartu/bathingwater-estonia.geojson</code></p>
 </div>
 </div>
 </div>
 <p>You can also use <code>ogrinfo</code> retrieve information about an OGC API - Features collection.  In case you are accessing a local collection, you will need to make sure the container runs on the host network:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Linux/Mac</label><label for="__tabbed_13_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Linux/Mac</label><label for="__tabbed_12_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
---network<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
-ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
-ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>--network<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>ghcr.io/osgeo/gdal:alpine-small-latest<span class="w"> </span>ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span class="w"> </span>obs<span class="w"> </span>-so
+</span></code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<h3 id="owslib-advanced">OWSLib - Advanced</h3>
+<h3 id="owslib-advanced">OWSLib - Advanced<a class="headerlink" href="#owslib-advanced" title="Permanent link">&para;</a></h3>
 <p><a href="https://owslib.readthedocs.io">OWSLib</a> is a Python library to interact with OGC Web Services and supports a number of OGC APIs including OGC API - Features.</p>
 <p>This exercise will be done using a jupyter notebook. If you prefer, you can do it using Python from the command line (see bellow).</p>
 <p>Before continuing, make sure you are in the <code>workshop/exercises</code> folder. You will need that, to be able to use the jupyter notebook.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Linux/Mac</label><label for="__tabbed_14_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Linux/Mac</label><label for="__tabbed_13_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">pwd</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">cd</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Then run a container to start a jupyter notebook, mounting the local folder:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Linux/Mac</label><label for="__tabbed_15_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Linux/Mac</label><label for="__tabbed_14_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>:/home/jovyan/work<span class="w"> </span>jupyter/base-notebook
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1927,90 +1841,82 @@ ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span 
 <p class="admonition-title">Note</p>
 <p>You can run the same instructions using your local pygeoapi server, instead of the demo pygeoapi instance.</p>
 </div>
-<h4 id="using-python-from-the-command-line">Using Python from the command line</h4>
+<h4 id="using-python-from-the-command-line">Using Python from the command line<a class="headerlink" href="#using-python-from-the-command-line" title="Permanent link">&para;</a></h4>
 <div class="admonition question">
 <p class="admonition-title">Interact with OGC API - Features via OWSLib</p>
 <p>If you do not have Python installed, consider running this exercise in a Docker container. See the <a href="../../setup/#using-docker-for-python-clients">Setup Chapter</a>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Linux/Mac</label><label for="__tabbed_16_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Linux/Mac</label><label for="__tabbed_15_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>owslib
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>owslib
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Then start a Python console session with <code>python3</code> (stop the session by typing <code>exit()</code>).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Linux/Mac</label><label for="__tabbed_17_2">Windows (PowerShell)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Linux/Mac</label><label for="__tabbed_16_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
-<span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
-<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
-<span class="mi">13</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
-<span class="mi">13</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
-<span class="s1">&#39;lakes&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
-<span class="s1">&#39;Large Lakes&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
-<span class="s1">&#39;lakes of the world, public domain&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
-<span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
-<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
-</code></pre></div>
-</div></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="mi">13</span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="mi">13</span>
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="s1">&#39;lakes&#39;</span>
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a><span class="s1">&#39;Large Lakes&#39;</span>
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+</span><span id="__span-32-20"><a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a><span class="s1">&#39;lakes of the world, public domain&#39;</span>
+</span><span id="__span-32-21"><a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-32-22"><a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
+</span><span id="__span-32-23"><a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a><span class="mi">6</span>
+</span><span id="__span-32-24"><a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-32-25"><a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
+</span><span id="__span-32-26"><a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a><span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
-<span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
-<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
-<span class="mi">13</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
-<span class="mi">13</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
-<span class="s1">&#39;lakes&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
-<span class="s1">&#39;Large Lakes&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
-<span class="s1">&#39;lakes of the world, public domain&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
-<span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
-<span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
-</code></pre></div>
-</div></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">Features</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Features</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">)</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">conformance</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">conformance</span><span class="p">()</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="p">{</span><span class="sa">u</span><span class="s1">&#39;conformsTo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;</span><span class="p">]}</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># OpenAPI document</span>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;collections&#39;</span><span class="p">])</span>
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="mi">13</span>
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">feature_collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">feature_collections</span><span class="p">()</span>
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_collections</span><span class="p">)</span>
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a><span class="mi">13</span>
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a><span class="s1">&#39;lakes&#39;</span>
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a><span class="s1">&#39;Large Lakes&#39;</span>
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a><span class="s1">&#39;lakes of the world, public domain&#39;</span>
+</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_queryables</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_queryables</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lakes_queryables</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">])</span>
+</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a><span class="mi">6</span>
+</span><span id="__span-33-24"><a id="__codelineno-33-24" name="__codelineno-33-24" href="#__codelineno-33-24"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection_items</span><span class="p">(</span><span class="s1">&#39;lakes&#39;</span><span class="p">)</span>
+</span><span id="__span-33-25"><a id="__codelineno-33-25" name="__codelineno-33-25" href="#__codelineno-33-25"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lakes_query</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span>
+</span><span id="__span-33-26"><a id="__codelineno-33-26" name="__codelineno-33-26" href="#__codelineno-33-26"></a><span class="p">{</span><span class="sa">u</span><span class="s1">&#39;scalerank&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name_alt&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;featureclass&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Lake Baikal&#39;</span><span class="p">}</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -2019,8 +1925,10 @@ ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span 
 <p class="admonition-title">Note</p>
 <p>See the official <a href="https://owslib.readthedocs.io/en/latest/usage.html#ogc-api">OWSLib documentation</a> for more examples.</p>
 </div>
-<h1 id="summary">Summary</h1>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
 <p>Congratulations! You are now able to publish vector data with pygeoapi.</p>
+
+
 
 
 
@@ -2044,6 +1952,12 @@ ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -2053,13 +1967,13 @@ ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -2077,16 +1991,11 @@ ogrinfo<span class="w"> </span>OAPIF:http://localhost:5000/collections/obs<span 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../js/print-site.js"></script>
-      
-        <script src="../../assets/javascripts/termynal.js"></script>
-      
-        <script src="../../assets/javascripts/custom.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

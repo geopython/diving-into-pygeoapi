@@ -22,14 +22,14 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="../pt/setup/" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,22 +54,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../css/print-site.css">
-    
-      <link rel="stylesheet" href="../css/print-site-material.css">
-    
       <link rel="stylesheet" href="../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -78,17 +70,12 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -108,12 +95,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -134,8 +121,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -148,14 +135,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../pt/setup/" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -167,57 +154,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -243,9 +203,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
     Diving into pygeoapi
@@ -255,7 +215,7 @@
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -272,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="./.." class="md-nav__link">
         
   
   
@@ -353,7 +313,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -372,7 +332,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -381,7 +342,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1256,7 +1217,8 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1265,7 +1227,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1371,20 +1333,31 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/setup.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/setup.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="workshop-environment-setup">Workshop environment setup</h1>
+<h1 id="workshop-environment-setup">Workshop environment setup<a class="headerlink" href="#workshop-environment-setup" title="Permanent link">&para;</a></h1>
 <p>In this workshop we use the following materials:</p>
 <ol>
 <li><strong>Documentation</strong> - (like this page): access latest on <a href="https://dive.pygeoapi.io">dive.pygeoapi.io</a></li>
 <li><strong>Exercises</strong> - download the <a href="https://github.com/geopython/diving-into-pygeoapi/archive/refs/heads/main.zip">latest zip file</a>, unzip, find exercises in <code>workshop/exercises</code> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 <li><strong>Docker</strong> - all examples/exercises are run in a <code>Docker container</code> in <code>workshop/exercises</code></li>
 </ol>
-<h2 id="text-editor">Text editor</h2>
+<h2 id="text-editor">Text editor<a class="headerlink" href="#text-editor" title="Permanent link">&para;</a></h2>
 <p>Your text editor needs to be able to edit configuration files in <strong>plain text</strong>. Below are some choices
 for text editors (there may be others), along with what some of the pygeoapi developers prefer to use:</p>
 <ul>
@@ -1396,7 +1369,7 @@ for text editors (there may be others), along with what some of the pygeoapi dev
 <li><code>vi</code> / <code>vim</code>: Tom, Angelos</li>
 </ul>
 <p>Having said this, please feel free to use what works for you :)</p>
-<h2 id="yaml">YAML</h2>
+<h2 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h2>
 <p>Most exercises will focus on editing the pygeoapi <a href="https://docs.pygeoapi.io/en/latest/configuration.html">configuration</a>,
 which is in the <a href="https://yaml.org">YAML</a> format. If you are not familiar with YAML, it is worth reading through a <a href="https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started">tutorial</a> to become aware of YAML syntax and indentation.</p>
 <p>The main requirement for the training is to install Docker and/with Docker Compose on your system.
@@ -1407,7 +1380,7 @@ environment via Docker and Docker Compose.</p>
 <p>Workshop Exercises will also be based on Docker, hence a custom installation would at least be 'challenging'.
 The good news is that only a single installation (Docker) is needed! The Docker images used in this workshop
 contain the latest pygeoapi and all its dependencies and external services (e.g. PostGIS).</p>
-<h2 id="about-docker">About Docker</h2>
+<h2 id="about-docker">About Docker<a class="headerlink" href="#about-docker" title="Permanent link">&para;</a></h2>
 <p>Docker has been available since 2013, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
 era of computing, chances are that you have heard of Docker and <em>containerization</em>. Or, perhaps are already familiar and hopefully using Docker already.
 If not, there is an abundance of introductory materials that can be found online like this <a href="https://www.ibm.com/topics/docker">tutorial from IBM</a>.</p>
@@ -1421,7 +1394,7 @@ using a configuration convention (the Docker Compose YAML file), usually named <
 <p>Stepping up further are even more sophisticated Docker orchestrators like 
 <a href="https://rancher.com/products/rancher">Rancher</a> and <a href="https://kubernetes.io">Kubernetes</a>, but for
 this workshop, Docker and Docker Compose are all we need.</p>
-<h2 id="installation">Installation</h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Docker installation has greatly progressed over the years. This is the only part of the workshop
 which is dependent on the system/OS you are running (e.g. Windows, Mac or Linux). For each
 system the Docker website provides detailed installation instructions. Please follow these consistently.</p>
@@ -1455,29 +1428,25 @@ system the Docker website provides detailed installation instructions. Please fo
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
-Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
-
-docker<span class="w"> </span>compose<span class="w"> </span>version
-Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>version
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
-Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
-
-docker<span class="w"> </span>compose<span class="w"> </span>version
-Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>version
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Docker<span class="w"> </span>version<span class="w"> </span><span class="m">20</span>.10.17,<span class="w"> </span>build<span class="w"> </span>100c701
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.6.1
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>(It is not required that your version numbers exactly match).</p>
-<h2 id="quickstart">Quickstart</h2>
+<h2 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
 <p>Once Docker is available on your system, running the pygeoapi container with its built-in configuration and 
 data is a one-liner. </p>
 <p>Open a terminal session and run:</p>
@@ -1486,66 +1455,62 @@ data is a one-liner. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
-Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
-latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
-d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
-Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
-START<span class="w"> </span>/entrypoint.sh
-Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
-openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
-make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
-Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>START<span class="w"> </span>/entrypoint.sh
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
-Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
-latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
-d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
-Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
-Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
-START<span class="w"> </span>/entrypoint.sh
-Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
-openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
-make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
-Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
-<span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>afe0923a0fa0:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>75f8618c4e86:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>c603397fd6ad:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>6584a95328b3:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>fd93e44631d9:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>6a3201071a5d:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>4f4fb700ef54:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Digest:<span class="w"> </span>sha256:27b2b219497a6ea382a946ee90ae96ad00b5c1d8e9b725fccf23211978fef124
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>geopython/pygeoapi:latest
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>START<span class="w"> </span>/entrypoint.sh
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>Trying<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>openapi.yml
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>openapi.yml<span class="w"> </span>generated<span class="w"> </span><span class="k">continue</span><span class="w"> </span>to<span class="w"> </span>pygeoapi
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>make<span class="w"> </span>SCRIPT_NAME<span class="w"> </span>empty<span class="w"> </span>from<span class="w"> </span>/
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Start<span class="w"> </span>gunicorn<span class="w"> </span><span class="nv">name</span><span class="o">=</span>pygeoapi<span class="w"> </span>on<span class="w"> </span><span class="m">0</span>.0.0.0:80<span class="w"> </span>with<span class="w"> </span><span class="m">4</span><span class="w"> </span>workers<span class="w"> </span>and<span class="w"> </span><span class="nv">SCRIPT_NAME</span><span class="o">=</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Starting<span class="w"> </span>gunicorn<span class="w"> </span><span class="m">20</span>.0.4
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Listening<span class="w"> </span>at:<span class="w"> </span>http://0.0.0.0:80<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>worker:<span class="w"> </span>gevent
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">18</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">19</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">21</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="o">[</span><span class="m">2022</span>-08-09<span class="w"> </span><span class="m">12</span>:59:00<span class="w"> </span>+0000<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Booting<span class="w"> </span>worker<span class="w"> </span>with<span class="w"> </span>pid:<span class="w"> </span><span class="m">22</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1563,7 +1528,7 @@ you may want to do this beforehand. </p>
 <li>type <code>CTRL-C</code> to stop the container and return to the terminal</li>
 </ul>
 <p>Next, you can override the default configuration and add your own data using <a href="https://docs.Docker.com/storage/volumes">Docker volumes</a>.</p>
-<h2 id="customizing-configuration">Customizing configuration</h2>
+<h2 id="customizing-configuration">Customizing configuration<a class="headerlink" href="#customizing-configuration" title="Permanent link">&para;</a></h2>
 <p>In the upcoming exercises we are going to update the configuration file multiple times.
 For ease of development we are overriding the pygeoapi configuration which resides by default at <code>/pygeoapi/local.config.yml</code>
 within the container by a local file which you can edit in your favourite text editor. </p>
@@ -1573,44 +1538,36 @@ within the container by a local file which you can edit in your favourite text e
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>https://raw.githubusercontent.com/geopython/pygeoapi/master/docker/default.config.yml
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Open the file in your favourite text editor and change the title and description of the API:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code>metadata:
-    identification:
-        title: My first pygeoapi run
-        description: pygeoapi provides an API to geospatial data
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-59">59</a></span>
+<span class="normal"><a href="#__codelineno-6-60">60</a></span>
+<span class="normal"><a href="#__codelineno-6-61">61</a></span>
+<span class="normal"><a href="#__codelineno-6-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59"></a>metadata:
+</span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60"></a>    identification:
+</span><span id="__span-6-61"><a id="__codelineno-6-61" name="__codelineno-6-61"></a>        title: My first pygeoapi run
+</span><span id="__span-6-62"><a id="__codelineno-6-62" name="__codelineno-6-62"></a>        description: pygeoapi provides an API to geospatial data
+</span></code></pre></div></td></tr></table></div>
 <p>Now run the container with the overridden config file:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
--v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span><span class="se">\</span>
-geopython/pygeoapi:latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>geopython/pygeoapi:latest
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span>geopython/pygeoapi:latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/local.config.yml<span class="w"> </span>geopython/pygeoapi:latest
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1623,7 +1580,7 @@ geopython/pygeoapi:latest
 <p>By using a Docker volume mount (<code>-v</code> option), Docker attaches or 'mounts' a
 directory or single file from your host/local system into the Docker Container.</p>
 <p>In the above snippet, <code>$(pwd)</code> indicates the working folder from which you start the Docker container.</p>
-<h2 id="adding-data-and-setting-the-configuration-file">Adding data and setting the configuration file</h2>
+<h2 id="adding-data-and-setting-the-configuration-file">Adding data and setting the configuration file<a class="headerlink" href="#adding-data-and-setting-the-configuration-file" title="Permanent link">&para;</a></h2>
 <p>In addition to adapting the configuration you will usually add your own data as files or
 remote data services like PostGIS or WFS.</p>
 <p>You can also mount a local directory such as <code>data/</code> to <code>/pygeoapi/mydata</code> within the Container.
@@ -1632,25 +1589,21 @@ Within the data directory you can store vector data, raster files or sets of ima
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label><label for="__tabbed_5_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
--v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/pygeoapi/mydata<span class="w"> </span><span class="se">\</span>
--v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
--e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
-geopython/pygeoapi:latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/pygeoapi/mydata<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>-e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>geopython/pygeoapi:latest
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/pygeoapi/mydata<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span>-e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span>geopython/pygeoapi:latest
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/data:/pygeoapi/mydata<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/default.config.yml:/pygeoapi/pygeoapi-config.yml<span class="w"> </span>-e<span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>/pygeoapi/pygeoapi-config.yml<span class="w"> </span>geopython/pygeoapi:latest
+</span></code></pre></div>
 </div>
 </div>
 </div>
 <p>In the next sections we will review additional examples of mounts to the data folder. More Docker deployment examples can be found in the <a href="https://github.com/geopython/pygeoapi/tree/master/docker/examples">pygeoapi GitHub repository</a>.</p>
-<h2 id="using-docker-for-python-clients">Using Docker for Python Clients</h2>
+<h2 id="using-docker-for-python-clients">Using Docker for Python Clients<a class="headerlink" href="#using-docker-for-python-clients" title="Permanent link">&para;</a></h2>
 <p>In some exercises we access <code>pygeoapi</code> remote endpoints using <a href="https://owslib.readthedocs.io">OWSLib</a>, 
 a Python library to interact with OGC Web Services. OWSLib can be installed using standard 
 Python <code>pip3 install OWSLib</code>, but you may not have Python available, or you want to keep your system 'clean'.</p>
@@ -1666,54 +1619,50 @@ maybe even other tools like <code>curl</code> and <code>wget</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux/Mac</label><label for="__tabbed_6_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
-Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
-<span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
-5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
-Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
-
-root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
-root@docker-desktop:/#<span class="w"> </span>python3
-&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
-&gt;&gt;&gt;<span class="w"> </span>w
-&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
-&gt;&gt;&gt;<span class="w"> </span>conformance
-etc
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>root@docker-desktop:/#<span class="w"> </span>python3
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>&gt;&gt;&gt;<span class="w"> </span>w
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>&gt;&gt;&gt;<span class="w"> </span>conformance
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>etc
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
-Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
-<span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
-5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
-Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
-Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
-
-root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
-root@docker-desktop:/#<span class="w"> </span>python3
-&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
-&gt;&gt;&gt;<span class="w"> </span>w
-&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
-&gt;&gt;&gt;<span class="w"> </span>conformance
-etc
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>c5424f0ac885:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>9d21fe1624ec:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>de0194aa1c21:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>Digest:<span class="w"> </span>sha256:7dc5b4e948acd18c1633b0e593ad0224298646612ce7d0b5ac6d4e17616d7e4b
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>python:3.10-slim
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>root@docker-desktop:/#<span class="w"> </span>python3
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>&gt;&gt;&gt;<span class="w"> </span>w
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>&gt;&gt;&gt;<span class="w"> </span>conformance
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>etc
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1729,6 +1678,8 @@ etc
 </li>
 </ol>
 </div>
+
+
 
 
 
@@ -1752,6 +1703,12 @@ etc
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1761,13 +1718,13 @@ etc
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1785,16 +1742,11 @@ etc
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../js/print-site.js"></script>
-      
-        <script src="../assets/javascripts/termynal.js"></script>
-      
-        <script src="../assets/javascripts/custom.js"></script>
+      <script src="../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

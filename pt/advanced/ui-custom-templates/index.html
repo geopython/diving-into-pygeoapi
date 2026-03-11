@@ -12,35 +12,31 @@
         <meta name="author" content="The pygeoapi community">
       
       
-        <link rel="canonical" href="https://dive.pygeoapi.io/pt/advanced/ui-custom-templates/">
+        <link rel="canonical" href="https://dive.pygeoapi.io/advanced/ui-custom-templates/">
       
       
-        <link rel="prev" href="../crs/">
-      
-      
-        <link rel="next" href="../downstream-applications/">
       
       
         
-          <link rel="alternate" href="../../../advanced/ui-custom-templates/" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="./" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
-        <title>Personalização de UI e templating - Mergulhando na pygeoapi</title>
+        <title>UI customization and templating - Diving into pygeoapi</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,26 +50,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../css/print-site.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../../css/print-site.css">
-    
-      <link rel="stylesheet" href="../../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/pygeoapi.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -82,21 +66,16 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
     <div data-md-component="skip">
       
         
-        <a href="#personalizacao-de-ui-e-templating" class="md-skip">
+        <a href="#ui-customization-and-templating" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -112,12 +91,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../" title="Mergulhando na pygeoapi" class="md-header__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegação">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -125,21 +104,21 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Mergulhando na pygeoapi
+            Diving into pygeoapi
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Personalização de UI e templating
+              UI customization and templating
             
           </span>
         </div>
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -152,14 +131,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../advanced/ui-custom-templates/" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -171,57 +150,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Pesquisar">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando a pesquisa
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Pesquisar">
+  <button type="button" class="md-search__button">
+    Pesquisar
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -247,19 +199,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../" title="Mergulhando na pygeoapi" class="md-nav__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    Mergulhando na pygeoapi
+    Diving into pygeoapi
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -276,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../index.pt/" class="md-nav__link">
         
   
   
@@ -303,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/" class="md-nav__link">
+      <a href="../../introduction.pt/" class="md-nav__link">
         
   
   
@@ -330,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/" class="md-nav__link">
+      <a href="../../setup.pt/" class="md-nav__link">
         
   
   
@@ -357,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/" class="md-nav__link">
+      <a href="../../standards.pt/" class="md-nav__link">
         
   
   
@@ -462,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/first/" class="md-nav__link">
+      <a href="../../publishing/first.pt/" class="md-nav__link">
         
   
   
@@ -490,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-features/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-features.pt/" class="md-nav__link">
         
   
   
@@ -518,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-coverages/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-coverages.pt/" class="md-nav__link">
         
   
   
@@ -546,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-maps/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-maps.pt/" class="md-nav__link">
         
   
   
@@ -574,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-tiles/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-tiles.pt/" class="md-nav__link">
         
   
   
@@ -602,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-records/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-records.pt/" class="md-nav__link">
         
   
   
@@ -630,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-edr/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-edr.pt/" class="md-nav__link">
         
   
   
@@ -658,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-processes/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-processes.pt/" class="md-nav__link">
         
   
   
@@ -690,53 +642,48 @@
       
   
   
-    
-  
   
   
     
     
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -750,16 +697,10 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -771,6 +712,32 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -779,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../i18n/" class="md-nav__link">
+      <a href="../i18n.pt/" class="md-nav__link">
         
   
   
@@ -807,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crs/" class="md-nav__link">
+      <a href="../crs.pt/" class="md-nav__link">
         
   
   
@@ -832,37 +799,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Personalização de UI e templating
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ui-custom-templates.pt/" class="md-nav__link">
         
   
   
@@ -878,48 +818,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#jinja2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jinja2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#personalizacoes-css" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Personalizações CSS
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -932,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../downstream-applications/" class="md-nav__link">
+      <a href="../downstream-applications.pt/" class="md-nav__link">
         
   
   
@@ -960,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seo/" class="md-nav__link">
+      <a href="../seo.pt/" class="md-nav__link">
         
   
   
@@ -988,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security-access-control/" class="md-nav__link">
+      <a href="../security-access-control.pt/" class="md-nav__link">
         
   
   
@@ -1016,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semantic-web-linked-data/" class="md-nav__link">
+      <a href="../semantic-web-linked-data.pt/" class="md-nav__link">
         
   
   
@@ -1044,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/" class="md-nav__link">
+      <a href="../cloud.pt/" class="md-nav__link">
         
   
   
@@ -1072,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspire/" class="md-nav__link">
+      <a href="../inspire.pt/" class="md-nav__link">
         
   
   
@@ -1100,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../administration/" class="md-nav__link">
+      <a href="../administration.pt/" class="md-nav__link">
         
   
   
@@ -1128,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bridges/" class="md-nav__link">
+      <a href="../bridges.pt/" class="md-nav__link">
         
   
   
@@ -1163,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conclusion/" class="md-nav__link">
+      <a href="../../conclusion.pt/" class="md-nav__link">
         
   
   
@@ -1196,6 +1094,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
@@ -1221,10 +1120,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#personalizacoes-css" class="md-nav__link">
+  <a href="#css-customizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Personalizações CSS
+        CSS customizations
       
     </span>
   </a>
@@ -1245,50 +1144,63 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/advanced/ui-custom-templates.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/advanced/ui-custom-templates.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="personalizacao-de-ui-e-templating">Personalização de UI e templating</h1>
-<p>A pygeoapi adotou o mecanismo de templating Jinja2 para estilizar a saída HTML. Cada elemento visualizado na saída HTML é
-personalizável substituindo o template relevante. Os templates estão localizados na pasta <a href="https://github.com/geopython/pygeoapi/tree/master/pygeoapi/templates"><code>pygeoapi/templates</code></a>.
-É possível substituir qualquer template copiando-o para uma pasta separada e ajustá-lo às suas necessidades. Na configuração da pygeoapi
-pode então indicar o caminho para a pasta de substituição. Note que para ficheiros que não são colocados
-na pasta de substituição, o ficheiro original é usado.</p>
+<h1 id="ui-customization-and-templating">UI customization and templating<a class="headerlink" href="#ui-customization-and-templating" title="Permanent link">&para;</a></h1>
+<p>pygeoapi adopted the Jinja2 templating mechanism to style HTML output. Each element visualized on the HTML output is
+customizable by overriding the relevant template. Templates are located in the <a href="https://github.com/geopython/pygeoapi/tree/master/pygeoapi/templates"><code>pygeoapi/templates</code></a> folder.
+It is possible to override any template by copying it into a separate folder and adjust it to your needs. In the pygeoapi
+configuration you can then indicate the path to the override folder. Notice that for files which are not placed
+in the override folder, the original file is used.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Para qualquer personalização, tenha em mente que com uma nova versão da pygeoapi as alterações nos templates padrão não estão automaticamente
-disponíveis nos ficheiros substituídos. As atualizações precisam de ser cuidadosamente testadas e validadas.</p>
+<p>For any customization, mind that with a new version of pygeoapi changes on the default templates are not automatically
+available on the overriden files. Upgrades need to be carefully tested and validated.</p>
 </div>
-<h2 id="jinja2">Jinja2</h2>
-<p><a href="https://jinja.palletsprojects.com">Jinja2</a> é um conceito de templating comum na comunidade Python. Com um conhecimento mínimo
-de HTML será capaz de fazer personalizações menores mas significativas. No núcleo da configuração de template da pygeoapi está o
-template <a href="https://github.com/geopython/pygeoapi/blob/master/pygeoapi/templates/_base.html"><code>_base.html</code></a>, que define o
-cabeçalho e rodapé da página. O fragmento abaixo define o rodapé da página, note os parâmetros em chavetas,
-que são substituídos por conteúdo dinâmico. </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code> <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sticky&quot;</span><span class="p">&gt;</span>
-    {% trans %}Powered by {% endtrans %} 
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;pygeoapi&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://pygeoapi.io&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ config[&#39;server&#39;][&#39;url&#39;] }}/assets/images/pygeoapi.png&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;pygeoapi logo&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height:24px;vertical-align: middle;&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> 
-    {{ version }}
-<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="jinja2">Jinja2<a class="headerlink" href="#jinja2" title="Permanent link">&para;</a></h2>
+<p><a href="https://jinja.palletsprojects.com">Jinja2</a> is a common templating concept in the Python community. With a minimal background
+in HTML you will be able to make minor but meaningful customizations. At the core of pygeoapi's template setup is the
+<a href="https://github.com/geopython/pygeoapi/blob/master/pygeoapi/templates/_base.html"><code>_base.html</code></a> template, which defines the
+header and footer of the page. The fragment below defines the footer of the page, notice the parameters in curly braces,
+which are replaced by dynamic content. </p>
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a> <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sticky&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    {% trans %}Powered by {% endtrans %} 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;pygeoapi&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://pygeoapi.io&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ config[&#39;server&#39;][&#39;url&#39;] }}/assets/images/pygeoapi.png&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;pygeoapi logo&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height:24px;vertical-align: middle;&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>    {{ version }}
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 <div class="admonition help">
-<p class="admonition-title">Personalizar uma página HTML</p>
-<p>Copie <code>_base.html</code> para uma pasta separada. Ajuste alguns elementos nessa página (por exemplo, imagem do logótipo). Depois, inclua uma referência à nova pasta na
-configuração da pygeoapi. Reinicie o serviço. Verifique o resultado.</p>
+<p class="admonition-title">Customizing an HTML page</p>
+<p>Copy <code>_base.html</code> to a separate folder. Adjust some elements on that page (e.g. logo image). Then, include a reference to the new folder in
+the pygeoapi configuration. Restart the service. Verify the result.</p>
 </div>
-<h2 id="personalizacoes-css">Personalizações CSS</h2>
-<p>A partir do template HTML personalizado pode referenciar um novo ficheiro de folha de estilo com personalizações ou adicionar diretamente as suas personalizações ao <a href="https://github.com/geopython/pygeoapi/blob/master/pygeoapi/static/css/default.css">/static/css/default.css</a>.</p>
-<h1 id="resumo">Resumo</h1>
-<p>Parabéns! Adicionou um aspeto e comportamento personalizados à sua implementação pygeoapi.</p>
+<h2 id="css-customizations">CSS customizations<a class="headerlink" href="#css-customizations" title="Permanent link">&para;</a></h2>
+<p>From the customized HTML template you can reference a new stylesheet file with customizations or directly add your customizations to <a href="https://github.com/geopython/pygeoapi/blob/master/pygeoapi/static/css/default.css">/static/css/default.css</a>.</p>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>Congratulations! You've added a custom look and feel to your pygeoapi deployment.</p>
+
+
 
 
 
@@ -1312,6 +1224,12 @@ configuração da pygeoapi. Reinicie o serviço. Verifique o resultado.</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1321,13 +1239,13 @@ configuração da pygeoapi. Reinicie o serviço. Verifique o resultado.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1345,18 +1263,11 @@ configuração da pygeoapi. Reinicie o serviço. Verifique o resultado.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../js/print-site.js"></script>
-      
-        <script src="../../../js/print-site.js"></script>
-      
-        <script src="../../../assets/javascripts/termynal.js"></script>
-      
-        <script src="../../../assets/javascripts/custom.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

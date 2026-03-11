@@ -22,14 +22,14 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="../../pt/publishing/first/" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,22 +54,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../css/print-site.css">
-    
-      <link rel="stylesheet" href="../../css/print-site-material.css">
-    
       <link rel="stylesheet" href="../../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -78,17 +70,12 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -108,12 +95,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -134,8 +121,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -148,14 +135,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../pt/publishing/first/" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -167,57 +154,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -243,9 +203,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
     Diving into pygeoapi
@@ -255,7 +215,7 @@
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -487,7 +447,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -506,7 +466,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -515,7 +476,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1214,7 +1175,8 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1223,7 +1185,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1285,19 +1247,30 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/first.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/publishing/first.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="exercise-1-your-first-dataset">Exercise 1 - Your first dataset</h1>
+<h1 id="exercise-1-your-first-dataset">Exercise 1 - Your first dataset<a class="headerlink" href="#exercise-1-your-first-dataset" title="Permanent link">&para;</a></h1>
 <p>In this section you are going to publish a vector dataset.</p>
 <p>For this exercise, we will use a CSV dataset of <a href="https://github.com/geopython/diving-into-pygeoapi/tree/main/workshop/exercises/data/tartu/bathingwater-estonia.csv">Bathing waters in Estonia</a>,
 kindly provided by <a href="https://terviseamet.ee">Estonian Health Board</a>.</p>
 <p>You can find this dataset in <code>workshop/exercises/data/tartu/bathingwater-estonia.csv</code>.</p>
 <p>This exercise consists of adjusting <code>workshop/exercises/pygeoapi.config.yml</code> to define this dataset as an OGC API - Features <em>collection</em></p>
-<h2 id="verify-the-existing-docker-compose-config">Verify the existing Docker Compose config</h2>
+<h2 id="verify-the-existing-docker-compose-config">Verify the existing Docker Compose config<a class="headerlink" href="#verify-the-existing-docker-compose-config" title="Permanent link">&para;</a></h2>
 <p>Before making any changes, we will make sure that the initial Docker Compose
 setup provided to you is actually working.</p>
 <p>To test:</p>
@@ -1309,18 +1282,14 @@ setup provided to you is actually working.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>workshop/exercises
-docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>workshop/exercises
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>workshop/exercises
-docker<span class="w"> </span>compose<span class="w"> </span>up
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>workshop/exercises
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1335,29 +1304,25 @@ docker<span class="w"> </span>compose<span class="w"> </span>up
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-docker<span class="w"> </span>ps<span class="w">  </span><span class="c1"># verify that the pygeoapi container is running</span>
-<span class="c1"># visit http://localhost:5000 in your browser, verify some collections</span>
-docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi<span class="w">  </span><span class="c1"># view logs</span>
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--remove-orphans
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>ps<span class="w">  </span><span class="c1"># verify that the pygeoapi container is running</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># visit http://localhost:5000 in your browser, verify some collections</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi<span class="w">  </span><span class="c1"># view logs</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--remove-orphans
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-docker<span class="w"> </span>ps<span class="w">  </span><span class="c1"># verify that the pygeoapi container is running</span>
-<span class="c1"># visit http://localhost:5000 in your browser, verify some collections</span>
-docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi<span class="w">  </span><span class="c1"># view logs</span>
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--remove-orphans
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>ps<span class="w">  </span><span class="c1"># verify that the pygeoapi container is running</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># visit http://localhost:5000 in your browser, verify some collections</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi<span class="w">  </span><span class="c1"># view logs</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--remove-orphans
+</span></code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<h2 id="publish-first-dataset">Publish first dataset</h2>
+<h2 id="publish-first-dataset">Publish first dataset<a class="headerlink" href="#publish-first-dataset" title="Permanent link">&para;</a></h2>
 <p>You are now ready to publish your first dataset.</p>
 <div class="admonition question">
 <p class="admonition-title">Setting up the pygeoapi config file</p>
@@ -1369,60 +1334,60 @@ docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"
 </div>
 <p>Make sure that the indentation aligns (hint: directly under <code># START ...</code>)</p>
 <p>The config section reads:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span></pre></div></td><td class="code"><div><pre><span></span><code>    Bathing_Water_Estonia:
-        type: collection
-        title: Bathing Water Estonia
-        description: Locations where the Estonian Health Board monitors the bathing water quality
-        keywords:
-            - bathing water
-            - estonia
-        links:
-            - type: text/csv
-              rel: canonical
-              title: data
-              href: https://avaandmed.eesti.ee/datasets/supluskohad
-              hreflang: EE
-        extents:
-            spatial:
-                bbox: [20,57,29,60]
-                crs: http://www.opengis.net/def/crs/EPSG/0/4326
-        providers:
-            - type: feature
-              name: CSV
-              data: /data/tartu/bathingwater-estonia.csv
-              id_field: id
-              title_field: Name
-              geometry:
-                x_field: x
-                y_field: y
-              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-185">185</a></span>
+<span class="normal"><a href="#__codelineno-4-186">186</a></span>
+<span class="normal"><a href="#__codelineno-4-187">187</a></span>
+<span class="normal"><a href="#__codelineno-4-188">188</a></span>
+<span class="normal"><a href="#__codelineno-4-189">189</a></span>
+<span class="normal"><a href="#__codelineno-4-190">190</a></span>
+<span class="normal"><a href="#__codelineno-4-191">191</a></span>
+<span class="normal"><a href="#__codelineno-4-192">192</a></span>
+<span class="normal"><a href="#__codelineno-4-193">193</a></span>
+<span class="normal"><a href="#__codelineno-4-194">194</a></span>
+<span class="normal"><a href="#__codelineno-4-195">195</a></span>
+<span class="normal"><a href="#__codelineno-4-196">196</a></span>
+<span class="normal"><a href="#__codelineno-4-197">197</a></span>
+<span class="normal"><a href="#__codelineno-4-198">198</a></span>
+<span class="normal"><a href="#__codelineno-4-199">199</a></span>
+<span class="normal"><a href="#__codelineno-4-200">200</a></span>
+<span class="normal"><a href="#__codelineno-4-201">201</a></span>
+<span class="normal"><a href="#__codelineno-4-202">202</a></span>
+<span class="normal"><a href="#__codelineno-4-203">203</a></span>
+<span class="normal"><a href="#__codelineno-4-204">204</a></span>
+<span class="normal"><a href="#__codelineno-4-205">205</a></span>
+<span class="normal"><a href="#__codelineno-4-206">206</a></span>
+<span class="normal"><a href="#__codelineno-4-207">207</a></span>
+<span class="normal"><a href="#__codelineno-4-208">208</a></span>
+<span class="normal"><a href="#__codelineno-4-209">209</a></span>
+<span class="normal"><a href="#__codelineno-4-210">210</a></span>
+<span class="normal"><a href="#__codelineno-4-211">211</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-185"><a id="__codelineno-4-185" name="__codelineno-4-185"></a>    Bathing_Water_Estonia:
+</span><span id="__span-4-186"><a id="__codelineno-4-186" name="__codelineno-4-186"></a>        type: collection
+</span><span id="__span-4-187"><a id="__codelineno-4-187" name="__codelineno-4-187"></a>        title: Bathing Water Estonia
+</span><span id="__span-4-188"><a id="__codelineno-4-188" name="__codelineno-4-188"></a>        description: Locations where the Estonian Health Board monitors the bathing water quality
+</span><span id="__span-4-189"><a id="__codelineno-4-189" name="__codelineno-4-189"></a>        keywords:
+</span><span id="__span-4-190"><a id="__codelineno-4-190" name="__codelineno-4-190"></a>            - bathing water
+</span><span id="__span-4-191"><a id="__codelineno-4-191" name="__codelineno-4-191"></a>            - estonia
+</span><span id="__span-4-192"><a id="__codelineno-4-192" name="__codelineno-4-192"></a>        links:
+</span><span id="__span-4-193"><a id="__codelineno-4-193" name="__codelineno-4-193"></a>            - type: text/csv
+</span><span id="__span-4-194"><a id="__codelineno-4-194" name="__codelineno-4-194"></a>              rel: canonical
+</span><span id="__span-4-195"><a id="__codelineno-4-195" name="__codelineno-4-195"></a>              title: data
+</span><span id="__span-4-196"><a id="__codelineno-4-196" name="__codelineno-4-196"></a>              href: https://avaandmed.eesti.ee/datasets/supluskohad
+</span><span id="__span-4-197"><a id="__codelineno-4-197" name="__codelineno-4-197"></a>              hreflang: EE
+</span><span id="__span-4-198"><a id="__codelineno-4-198" name="__codelineno-4-198"></a>        extents:
+</span><span id="__span-4-199"><a id="__codelineno-4-199" name="__codelineno-4-199"></a>            spatial:
+</span><span id="__span-4-200"><a id="__codelineno-4-200" name="__codelineno-4-200"></a>                bbox: [20,57,29,60]
+</span><span id="__span-4-201"><a id="__codelineno-4-201" name="__codelineno-4-201"></a>                crs: http://www.opengis.net/def/crs/EPSG/0/4326
+</span><span id="__span-4-202"><a id="__codelineno-4-202" name="__codelineno-4-202"></a>        providers:
+</span><span id="__span-4-203"><a id="__codelineno-4-203" name="__codelineno-4-203"></a>            - type: feature
+</span><span id="__span-4-204"><a id="__codelineno-4-204" name="__codelineno-4-204"></a>              name: CSV
+</span><span id="__span-4-205"><a id="__codelineno-4-205" name="__codelineno-4-205"></a>              data: /data/tartu/bathingwater-estonia.csv
+</span><span id="__span-4-206"><a id="__codelineno-4-206" name="__codelineno-4-206"></a>              id_field: id
+</span><span id="__span-4-207"><a id="__codelineno-4-207" name="__codelineno-4-207"></a>              title_field: Name
+</span><span id="__span-4-208"><a id="__codelineno-4-208" name="__codelineno-4-208"></a>              geometry:
+</span><span id="__span-4-209"><a id="__codelineno-4-209" name="__codelineno-4-209"></a>                x_field: x
+</span><span id="__span-4-210"><a id="__codelineno-4-210" name="__codelineno-4-210"></a>                y_field: y
+</span><span id="__span-4-211"><a id="__codelineno-4-211" name="__codelineno-4-211"></a>              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3300
+</span></code></pre></div></td></tr></table></div>
 <p>The most relevant part is the <code>providers</code> section. Here, we define a <code>CSV Provider</code>,
 pointing the file path to the <code>/data</code> directory we will mount (see next) from the local
 directory into the Docker container above. Because a CSV is not a spatial file, we explicitly
@@ -1441,7 +1406,7 @@ Consult the <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-f
 a connection to your dataset of choice. You can always copy a relevant example configuration and place it in the datasets section of
 the pygeoapi configuration file for your future project.</p>
 </div>
-<h2 id="test">Test</h2>
+<h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Start with updated configuration</p>
 <ol>
@@ -1453,7 +1418,7 @@ the pygeoapi configuration file for your future project.</p>
 <li>Check the json representation by adding ?f=json to url (or click 'json' in top right)</li>
 </ol>
 </div>
-<h2 id="debugging-configuration-errors">Debugging configuration errors</h2>
+<h2 id="debugging-configuration-errors">Debugging configuration errors<a class="headerlink" href="#debugging-configuration-errors" title="Permanent link">&para;</a></h2>
 <p>Incidentally you may run into errors, briefly discussed here:</p>
 <ul>
 <li>A file cannot be found, a typo in the configuration</li>
@@ -1469,16 +1434,12 @@ your Docker container as follows:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>pygeoapi
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1490,6 +1451,8 @@ Products such as <a href="https://geohealthcheck.org">GeoHealthCheck</a> aim to 
 tests in GeoHealthCheck poll the availability of the service at intervals. Consult the <a href="https://docs.geohealthcheck.org">GeoHealthCheck documentation</a> for more
 information. </p>
 </div>
+
+
 
 
 
@@ -1513,6 +1476,12 @@ information. </p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1522,13 +1491,13 @@ information. </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1546,16 +1515,11 @@ information. </p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../js/print-site.js"></script>
-      
-        <script src="../../assets/javascripts/termynal.js"></script>
-      
-        <script src="../../assets/javascripts/custom.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

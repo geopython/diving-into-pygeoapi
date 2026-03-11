@@ -12,35 +12,31 @@
         <meta name="author" content="The pygeoapi community">
       
       
-        <link rel="canonical" href="https://dive.pygeoapi.io/pt/standards/">
+        <link rel="canonical" href="https://dive.pygeoapi.io/standards/">
       
       
-        <link rel="prev" href="../setup/">
-      
-      
-        <link rel="next" href="../publishing/">
       
       
         
-          <link rel="alternate" href="../../standards/" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="./" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
-        <title>Normas - Mergulhando na pygeoapi</title>
+        <title>Standards - Diving into pygeoapi</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,26 +50,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../css/print-site.css">
+      <link rel="stylesheet" href="../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../css/print-site.css">
-    
-      <link rel="stylesheet" href="../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/pygeoapi.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -82,21 +66,16 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
     <div data-md-component="skip">
       
         
-        <a href="#visao-geral" class="md-skip">
+        <a href="#overview" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -112,12 +91,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../" title="Mergulhando na pygeoapi" class="md-header__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegação">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -125,21 +104,21 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Mergulhando na pygeoapi
+            Diving into pygeoapi
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Normas
+              Standards
             
           </span>
         </div>
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -152,14 +131,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../standards/" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -171,57 +150,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Pesquisar">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando a pesquisa
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Pesquisar">
+  <button type="button" class="md-search__button">
+    Pesquisar
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -247,19 +199,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../" title="Mergulhando na pygeoapi" class="md-nav__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    Mergulhando na pygeoapi
+    Diving into pygeoapi
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -276,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../index.pt/" class="md-nav__link">
         
   
   
@@ -303,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../introduction.pt/" class="md-nav__link">
         
   
   
@@ -330,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../setup.pt/" class="md-nav__link">
         
   
   
@@ -354,19 +306,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../standards.pt/" class="md-nav__link">
         
   
   
@@ -382,7 +325,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -472,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/first/" class="md-nav__link">
+      <a href="../publishing/first.pt/" class="md-nav__link">
         
   
   
@@ -500,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-features/" class="md-nav__link">
+      <a href="../publishing/ogcapi-features.pt/" class="md-nav__link">
         
   
   
@@ -528,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-coverages/" class="md-nav__link">
+      <a href="../publishing/ogcapi-coverages.pt/" class="md-nav__link">
         
   
   
@@ -556,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-maps/" class="md-nav__link">
+      <a href="../publishing/ogcapi-maps.pt/" class="md-nav__link">
         
   
   
@@ -584,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-tiles/" class="md-nav__link">
+      <a href="../publishing/ogcapi-tiles.pt/" class="md-nav__link">
         
   
   
@@ -612,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-records/" class="md-nav__link">
+      <a href="../publishing/ogcapi-records.pt/" class="md-nav__link">
         
   
   
@@ -640,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-edr/" class="md-nav__link">
+      <a href="../publishing/ogcapi-edr.pt/" class="md-nav__link">
         
   
   
@@ -668,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing/ogcapi-processes/" class="md-nav__link">
+      <a href="../publishing/ogcapi-processes.pt/" class="md-nav__link">
         
   
   
@@ -706,8 +648,6 @@
     
       
         
-          
-        
       
         
       
@@ -742,9 +682,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../advanced/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -758,14 +697,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
@@ -779,6 +712,32 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -787,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/i18n/" class="md-nav__link">
+      <a href="../advanced/i18n.pt/" class="md-nav__link">
         
   
   
@@ -815,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/crs/" class="md-nav__link">
+      <a href="../advanced/crs.pt/" class="md-nav__link">
         
   
   
@@ -843,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/ui-custom-templates/" class="md-nav__link">
+      <a href="../advanced/ui-custom-templates.pt/" class="md-nav__link">
         
   
   
@@ -871,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/downstream-applications/" class="md-nav__link">
+      <a href="../advanced/downstream-applications.pt/" class="md-nav__link">
         
   
   
@@ -899,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/seo/" class="md-nav__link">
+      <a href="../advanced/seo.pt/" class="md-nav__link">
         
   
   
@@ -927,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/security-access-control/" class="md-nav__link">
+      <a href="../advanced/security-access-control.pt/" class="md-nav__link">
         
   
   
@@ -955,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/semantic-web-linked-data/" class="md-nav__link">
+      <a href="../advanced/semantic-web-linked-data.pt/" class="md-nav__link">
         
   
   
@@ -983,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/cloud/" class="md-nav__link">
+      <a href="../advanced/cloud.pt/" class="md-nav__link">
         
   
   
@@ -1011,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/inspire/" class="md-nav__link">
+      <a href="../advanced/inspire.pt/" class="md-nav__link">
         
   
   
@@ -1039,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/administration/" class="md-nav__link">
+      <a href="../advanced/administration.pt/" class="md-nav__link">
         
   
   
@@ -1067,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/bridges/" class="md-nav__link">
+      <a href="../advanced/bridges.pt/" class="md-nav__link">
         
   
   
@@ -1102,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conclusion/" class="md-nav__link">
+      <a href="../conclusion.pt/" class="md-nav__link">
         
   
   
@@ -1135,6 +1094,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
@@ -1154,193 +1114,250 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/standards.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/standards.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="visao-geral">Visão Geral</h1>
-<p>Esta secção fornece uma visão geral de alto nível do suporte a normas na pygeoapi.</p>
-<h1 id="normas">Normas</h1>
-<p>As normas abertas são o núcleo da pygeoapi e permitem uma ampla interoperabilidade e capacidade <em>plug and play</em>. A pygeoapi suporta uma série de normas abertas (tanto normas formais como de facto ou impulsionadas pela comunidade).</p>
-<h2 id="normas-api">Normas API</h2>
-<h3 id="ogc-api">OGC API</h3>
-<p>A pygeoapi implementa o conjunto de normas <a href="https://ogcapi.ogc.org">OGC API</a> do <a href="https://www.ogc.org/">Open Geospatial Consortium</a> (OGC). Do website da OGC API:</p>
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p>This section provides a high level overview of standards support in pygeoapi.</p>
+<h1 id="standards">Standards<a class="headerlink" href="#standards" title="Permanent link">&para;</a></h1>
+<p>Open standards are core to pygeoapi, and allow for broad interoperability and plug and play capability. pygeoapi supports
+a number of open standards (both formal standards and defacto or community driven).</p>
+<h2 id="api-standards">API standards<a class="headerlink" href="#api-standards" title="Permanent link">&para;</a></h2>
+<h3 id="ogc-api">OGC API<a class="headerlink" href="#ogc-api" title="Permanent link">&para;</a></h3>
+<p>pygeoapi implements the <a href="https://ogcapi.ogc.org">OGC API</a> suite of standards from the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> (OGC). From the OGC API website:</p>
 <div class="admonition citation">
 <p class="admonition-title">Citation</p>
-<p>A família de normas OGC API está a ser desenvolvida para facilitar a qualquer pessoa o fornecimento de dados geoespaciais para a web. Estas normas baseiam-se no legado das normas OGC Web Service (WMS, WFS, WCS, WPS, etc.), mas definem APIs centradas em recursos que tiram partido das práticas modernas de desenvolvimento web. Esta página web fornece informações sobre estas normas num local consolidado.</p>
-<p>Estas normas estão a ser construídas como "blocos de construção" que podem ser usados para montar APIs inovadoras para acesso via web a conteúdo geoespacial. Os blocos de construção são definidos não só pelos requisitos das normas específicas, mas também através da prototipagem de interoperabilidade e testes no Programa de Inovação da OGC.</p>
+<p>The OGC API family of standards are being developed to make it easy for anyone to provide geospatial data to the web. These standards build upon the legacy of the OGC Web Service standards (WMS, WFS, WCS, WPS, etc.), but define resource-centric APIs that take advantage of modern web development practices. This web page provides information on these standards in a consolidated location.</p>
+<p>These standards are being constructed as "building blocks" that can be used to assemble novel APIs for web access to geospatial content. The building blocks are defined not only by the requirements of the specific standards, but also through interoperability prototyping and testing in OGC's Innovation Program. </p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Pode aprender mais sobre as OGC APIs na <a href="https://ogcapi-workshop.ogc.org">workshop da OGC API</a></p>
+<p>You can learn more about OGC APIs in the <a href="https://ogcapi-workshop.ogc.org">OGC API workshop</a></p>
 </div>
-<h4 id="ogc-api-common">OGC API - Common</h4>
-<p>A <a href="https://ogcapi.ogc.org/common/">OGC API - Common</a> é uma estrutura comum utilizada em todas as OGC API.
-A OGC API - Common fornece a seguinte funcionalidade:</p>
+<h4 id="ogc-api-common">OGC API - Common<a class="headerlink" href="#ogc-api-common" title="Permanent link">&para;</a></h4>
+<p><a href="https://ogcapi.ogc.org/common/">OGC API - Common</a> is a common framework used in all OGC API's. 
+OGC API - Common provides the following functionality:</p>
 <ul>
-<li>baseada na <a href="https://spec.openapis.org/oas/latest.html">OpenAPI 3.0</a></li>
-<li>HTML e JSON como as codificações dominantes, sendo possíveis codificações alternativas</li>
-<li><em>endpoints</em> partilhados, tais como:<ul>
-<li><code>/</code> (página de entrada)</li>
+<li>based on <a href="https://spec.openapis.org/oas/latest.html">OpenAPI 3.0</a></li>
+<li>HTML and JSON as the dominant encodings, alternative encodings are possible</li>
+<li>shared endpoints such as:<ul>
+<li><code>/</code> (landing page)</li>
 <li><code>/conformance</code></li>
 <li><code>/openapi</code></li>
 <li><code>/collections</code></li>
 <li><code>/collections/foo</code></li>
 </ul>
 </li>
-<li>aspetos como paginação, ligações entre recursos, filtragem básica, parâmetros de consulta (<code>bbox</code>, <code>datetime</code>, etc.)</li>
-<li>modelos partilhados (exceções, ligações, etc.)</li>
+<li>aspects such as pagination, links between resources, basic filtering, query parameters (<code>bbox</code>, <code>datetime</code>, etc.)</li>
+<li>shared models (exceptions, links, etc.)</li>
 </ul>
-<p>A OGC API - Common permite que os programadores de especificações se concentrem na funcionalidade principal de uma determinada API (ou seja, acesso a dados, etc.), utilizando construções comuns. Isto harmoniza as normas OGC API e permite uma integração mais profunda com menos código. Isto também permite que o software cliente da OGC API seja mais simplificado.</p>
-<p>O <em>endpoint</em> <code>/conformance</code> indica quais as normas e extensões que são suportadas por uma implementação da OGC API.</p>
-<h4 id="blocos-de-construcao-da-ogc-api">Blocos de construção da OGC API</h4>
-<p>A abordagem da OGC API permite a modularidade e a "criação de perfis" de APIs, dependendo dos seus requisitos. Isto significa que pode misturar e combinar diferentes OGC APIs.</p>
-<p><img alt="Blocos de construção da OGC API" src="../../assets/images/ogc-api-building-blocks.png" /></p>
-<p>Pode ler mais sobre este tópico no <a href="https://blocks.ogc.org/">website dos blocos de construção</a>.</p>
-<h4 id="mais-ogc-apis">Mais OGC APIs</h4>
-<p>O esforço da OGC API está a evoluir rapidamente. Várias normas OGC API estão em desenvolvimento e serão implementadas na pygeoapi ao longo do tempo:</p>
+<p>OGC API - Common allows for specification developers to focus on the key functionality of a given API (i.e. data access, etc.)
+while using common constructs. This harmonizes OGC API standards and enables deeper integration with less code. This also
+allows for OGC API client software to be more streamlined.</p>
+<p>The <code>/conformance</code> endpoint indicates which standards and extensions are supported by a deployment of OGC API.</p>
+<h4 id="ogc-api-building-blocks">OGC API building blocks<a class="headerlink" href="#ogc-api-building-blocks" title="Permanent link">&para;</a></h4>
+<p>The OGC API approach allows for modularity and "profiling" of APIs depending on your requirements.  This means you
+can mix and match OGC APIs together.</p>
+<p><img alt="OGC API building blocks" src="../assets/images/ogc-api-building-blocks.png" /></p>
+<p>You can read more about this topic in the <a href="https://blocks.ogc.org/">building blocks website</a>.</p>
+<h4 id="more-ogc-apis">More OGC APIs<a class="headerlink" href="#more-ogc-apis" title="Permanent link">&para;</a></h4>
+<p>The OGC API effort is rapidly evolving. Numerous OGC API standards are in development, and will be implemented in
+pygeoapi over time:</p>
 <ul>
-<li><a href="https://ogcapi.ogc.org/routes">Routes</a> fornece acesso a dados de roteamento</li>
-<li><a href="https://ogcapi.ogc.org/styles">Styles</a> define uma API Web que permite que servidores de mapas, clientes, bem como editores de estilo visual, giram e obtenham estilos</li>
-<li><a href="https://ogcapi.ogc.org/geovolumes">3D GeoVolumes</a> facilita a descoberta e o acesso eficientes a conteúdo 3D em múltiplos formatos, com base numa perspetiva centrada no espaço</li>
-<li><a href="https://ogcapi.ogc.org/movingfeatures">Moving Features</a> define uma API que fornece acesso a dados que representam elementos que se movem como corpos rígidos</li>
-<li><a href="https://ogcapi.ogc.org/joins">Joins</a> suporta a junção de dados, de múltiplas fontes, com coleções de elementos ou diretamente com outros ficheiros de entrada</li>
-<li><a href="https://ogcapi.ogc.org/dggs">Discrete Global Grid System</a> permite que as aplicações organizem e acedam a dados organizados de acordo com um Discrete Global Grid System (DGGS)</li>
+<li><a href="https://ogcapi.ogc.org/routes">Routes</a> provides access to routing data</li>
+<li><a href="https://ogcapi.ogc.org/styles">Styles</a> defines a Web API that enables map servers, clients as well as visual style editors, to manage and fetch styles</li>
+<li><a href="https://ogcapi.ogc.org/geovolumes">3D GeoVolumes</a> facilitates efficient discovery of and access to 3D content in multiple formats based on a space-centric perspective</li>
+<li><a href="https://ogcapi.ogc.org/movingfeatures">Moving Features</a> defines an API that provides access to data representing features that move as rigid bodies</li>
+<li><a href="https://ogcapi.ogc.org/joins">Joins</a>  supports the joining of data, from multiple sources, with feature collections or directly with other input files</li>
+<li><a href="https://ogcapi.ogc.org/dggs">Discrete Global Grid System</a> enables applications to organise and access data arranged according to a Discrete Global Grid System (DGGS)</li>
 </ul>
-<p><img alt="Normas OGC API aprovadas e candidatas" src="../../assets/images/ogcapis.png" /></p>
-<h4 id="ogc-apis-suportadas-pela-pygeoapi">OGC APIs suportadas pela pygeoapi</h4>
-<p>A pygeoapi implementa várias normas e rascunhos de normas da OGC API. Além disso, é certificada em conformidade e até mesmo uma Implementação de Referência (RI) para algumas delas. A certificação de conformidade é importante para remover os riscos de interoperabilidade. As RI são sempre certificadas em conformidade. Do OGC <a href="https://docs.ogc.org/pol/08-134r11.html#toc26">Compliance Testing Program Policies &amp; Procedures 08-134r11</a>:</p>
+<p><img alt="Approved and candidate OGC API standards" src="../assets/images/ogcapis.png" /></p>
+<h4 id="ogc-api-roadmap">OGC API Roadmap<a class="headerlink" href="#ogc-api-roadmap" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://agora.ogc.org/roadmap">OGC Standards Roadmap</a> highlights the current and planned standards efforts as well as related extensions to those standards.  The Roadmap
+is useful for planning new functionality to users, as well as software implementation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The OGC Standards Roadmap provides a status and timeline on all OGC standards.  To filter the Roadmap on OGC APIs only, use the "Filter by title, repo, label..." text box (top left) and filter on "OGC API"</p>
+</div>
+<h4 id="ogc-apis-supported-by-pygeoapi">OGC APIs supported by pygeoapi<a class="headerlink" href="#ogc-apis-supported-by-pygeoapi" title="Permanent link">&para;</a></h4>
+<p>pygeoapi implements numerous OGC API standards and draft standards. In addition, it is compliance certified and even a Reference Implementation (RI) for some of them. Compliance certification is important to remove interoperability risks. RI are always compliance certified. From OGC <a href="https://docs.ogc.org/pol/08-134r11.html#toc26">Compliance Testing Program Policies &amp; Procedures 08-134r11</a>:</p>
 <div class="admonition citation">
 <p class="admonition-title">Citation</p>
-<p>Os Produtos Candidatos que passam em todos os testes de um Pacote de Testes de Conformidade, e que a OGC reviu e certificou como tendo passado nesses testes, são considerados conformes com essa versão da Norma de Implementação.</p>
+<p>Candidate Products that pass all the tests in a Compliance Test Package, and that OGC has reviewed and certified as having passed those tests, are considered compliant with that Implementation Standard version. </p>
 </div>
 <div class="admonition citation">
 <p class="admonition-title">Citation</p>
-<p>Uma Implementação de Referência é uma cópia totalmente funcional e licenciada de um software testado e de marca que passou no teste para uma classe de conformidade associada numa versão de uma Norma de Implementação e que está disponível gratuitamente e publicamente para teste através de um serviço web ou download.</p>
+<p>A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passes the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download.</p>
 </div>
 <table>
 <thead>
 <tr>
-<th>Norma</th>
-<th>Estado na pygeoapi</th>
-<th>Incluída nesta workshop</th>
+<th>Standard</th>
+<th>pygeoapi status</th>
+<th>Included in this workshop</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>OGC API - Features</td>
-<td>Referência</td>
+<td>Reference</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Coverages</td>
-<td>Em implementação</td>
+<td>Implementing</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Tiles</td>
-<td>Referência</td>
+<td>Reference</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Maps</td>
-<td>Em implementação</td>
+<td>Implementing</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Processes</td>
-<td>Certificada</td>
+<td>Certified</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Records</td>
-<td>Em implementação</td>
+<td>Implementing</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>OGC API - Environmental Data Retrieval</td>
-<td>Referência</td>
+<td>Reference</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>SpatioTemporal Asset Catalog</td>
-<td>Em implementação</td>
+<td>Implementing</td>
+<td></td>
+</tr>
+<tr>
+<td>SpatioTemporal Asset Catalog API</td>
+<td>Implementing</td>
 <td></td>
 </tr>
 <tr>
 <td>OGC API - Routes</td>
-<td>Planeada</td>
+<td>Planned</td>
 <td></td>
 </tr>
 <tr>
 <td>OGC API - Styles</td>
-<td>Planeada</td>
+<td>Planned</td>
 <td></td>
 </tr>
 <tr>
 <td>OGC API - Moving Features</td>
-<td>Planeada</td>
+<td>Planned</td>
 <td></td>
 </tr>
 <tr>
 <td>OGC API - DGGS</td>
-<td>Planeada</td>
+<td>Planned</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>Na próxima secção, vamos aprofundar as APIs dedicadas relacionadas com tipos específicos de informação. Irá notar que todas as APIs são combinadas e disponibilizadas através de um único <em>endpoint</em> da OGC API, graças à OGC API - Common.</p>
-<h4 id="openapi">OpenAPI</h4>
-<p>No centro da OGC API - Common está a <a href="https://www.openapis.org/about">iniciativa OpenAPI</a> para ajudar a descrever e documentar uma API. A OpenAPI define a sua estrutura num documento OpenAPI. A OGC API - Common sugere que este documento esteja localizado em <code>/openapi</code>. Com a pygeoapi num navegador, <a href="https://demo.pygeoapi.io/master/openapi">este URL</a> abre uma página HTML interativa que facilita a consulta à API. Acrescente <code>?f=json</code> para ver o documento em JSON. O documento OpenAPI indica que <em>endpoints</em> estão disponíveis no serviço, que parâmetros aceita e que tipos de respostas podem ser esperados. O documento OpenAPI é um conceito semelhante ao XML de Capacidades (<em>Capabilities</em>) como parte da primeira geração de normas OGC Web Service.</p>
+<p>In the next section we will dive into the dedicated API's related to specific types of information. You will
+notice that all APIs are combined and available via a single OGC API endpoint, thanks to OGC API - Common.</p>
+<h4 id="openapi">OpenAPI<a class="headerlink" href="#openapi" title="Permanent link">&para;</a></h4>
+<p>Core to OGC API - Common is the <a href="https://www.openapis.org/about">OpenAPI initiative</a> to help
+describe and document an API. OpenAPI defines its structure in an OpenAPI document. 
+OGC API - Common suggests this document to be located at <code>/openapi</code>. With pygeoapi in a browser 
+<a href="https://demo.pygeoapi.io/master/openapi">this URL</a> opens an interactive HTML page which facilitates 
+an API query. Append <code>?f=json</code> to view the document in JSON. The OpenAPI document indicates which
+endpoints are available in the service, which parameters it accepts and 
+what types of responses can be expected. The OpenAPI document is a similar concept to Capabilities
+XML as part of the first genration OGC Web Service standards.</p>
 <div class="admonition question">
-<p class="admonition-title">Análise da Especificação OpenAPI num navegador</p>
-<p>Uma abordagem comum para interagir com Open APIs usando JSON é usar um programa como o <a href="https://www.postman.com/">Postman</a>. Também existem <em>plugins</em> de navegador que permitem definir pedidos à API interativamente. Para o Firefox, descarregue o <em>plugin</em> <a href="https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon">poster</a>. Para o Chrome e Edge, use o <a href="https://microsoftedge.microsoft.com/addons/detail/boomerang-soap-rest-c/bhmdjpobkcdcompmlhiigoidknlgghfo?hl=en-US">Boomerang</a>. No Boomerang, pode criar pedidos web individuais, mas também carregar o documento de especificação da open api e interagir com qualquer um dos <em>endpoints</em> anunciados.</p>
+<p class="admonition-title">OpenAPI Specification parsing in a browser</p>
+<p>A common approach to interact with Open API's using json is to use a program like 
+<a href="https://www.postman.com/">Postman</a>. Also there are browser plugins which enable to define api 
+requests interactively within a browser. For firefox download the plugin 
+<a href="https://pluginsaddonsextensions.com/mozilla-firefox/poster-mozilla-addon">poster</a>. For Chrome 
+and Edge use <a href="https://microsoftedge.microsoft.com/addons/detail/boomerang-soap-rest-c/bhmdjpobkcdcompmlhiigoidknlgghfo?hl=en-US">Boomerang</a>. 
+In Boomerang you can create individual web requests, but also load the open api specification 
+document and interact with any of the advertised endpoints. </p>
 </div>
-<p>A comunidade OpenAPI fornece várias ferramentas, como um validador para documentos OAS ou para <a href="https://swagger.io/tools/swagger-codegen/">gerar código</a> como ponto de partida para o desenvolvimento de clientes.</p>
-<h2 id="normas-de-conteudo-e-formato">Normas de conteúdo e formato</h2>
-<p>O JSON é fundamental na pygeoapi, fornecendo um formato que é legível por máquina e fácil de analisar e manusear por software e ferramentas cliente. A OGC API - Common fornece formatos JSON uniformes para os vários <em>endpoints</em> que suporta. Normas específicas da OGC API podem especificar formatos de domínio específico (por exemplo, GeoJSON para a OGC API - Features, GeoTIFF para a OGC API - Coverages) dependendo do(s) tipo(s) de dados.</p>
-<h1 id="convencoes-especificas-da-pygeoapi">Convenções específicas da pygeoapi</h1>
-<p>A pygeoapi fornece algumas convenções que não são apresentadas pelas normas OGC API, no entanto, facilitam algumas funcionalidades e capacidades.</p>
-<h2 id="o-parametro-f">o parâmetro <code>f</code></h2>
-<p>O parâmetro <code>f</code> pode ser usado com qualquer <em>endpoint</em> da pygeoapi para especificar um formato de saída para um determinado pedido à API. Exemplos são <code>f=html</code>, <code>f=json</code>, etc.</p>
+<p>The OpenAPI community provides various tools, such as a validator for OAS documents or 
+<a href="https://swagger.io/tools/swagger-codegen/">generate code</a> as a starting point for client development.</p>
+<h2 id="content-and-format-standards">Content and format standards<a class="headerlink" href="#content-and-format-standards" title="Permanent link">&para;</a></h2>
+<p>JSON is core in pygeoapi, providing a format that is machine readable and easy to parse and handle
+by client software and tools.  OGC API - Common provides uniform JSON formats for the various
+endpoints it supports.  Specific OGC API standards may specify domain specific formats (for example,
+GeoJSON for OGC API - Features, GeoTIFF for OGC API - Coverages) depending on the data type(s).</p>
+<h1 id="pygeoapi-specific-conventions">pygeoapi specific conventions<a class="headerlink" href="#pygeoapi-specific-conventions" title="Permanent link">&para;</a></h1>
+<p>pygeoapi provides some conventions that are not put forth by OGC API standards, however facilitate
+some features and capabilities.</p>
+<h2 id="the-f-parameter">the <code>f</code> parameter<a class="headerlink" href="#the-f-parameter" title="Permanent link">&para;</a></h2>
+<p>The <code>f</code> parameter can be used with any pygeoapi endpoint to specify an output format for a given
+  API request.  Examples are <code>f=html</code>, <code>f=json</code>, etc.</p>
 <div class="admonition question">
-<p class="admonition-title">Usar um navegador web para aceder à OGC API</p>
-<p>Use o seu navegador web para navegar para <a href="https://demo.pygeoapi.io/master">demo.pygeoapi.io</a>. Um navegador, por defeito, abre qualquer OGC API em HTML (como uma página web) devido ao cabeçalho <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept">HTTP Accept</a> enviado pelo navegador (<code>text/html</code>). No canto superior direito, irá notar uma ligação JSON. A ligação adiciona o parâmetro ao URL: <code>f=json</code>, que é um mecanismo da pygeoapi para sobrepor o cabeçalho HTTP Accept enviado pelo navegador web.</p>
+<p class="admonition-title">Using a web browser to access OGC API</p>
+<p>Use your web browser to navigate to <a href="https://demo.pygeoapi.io/master">demo.pygeoapi.io</a>. A browser by default opens 
+any OGC API in HTML (as a webpage) due to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept">HTTP Accept header</a> 
+sent by the browser (<code>text/html</code>). On the right top corner you will notice a JSON link. The link 
+adds the parameter to the url: <code>f=json</code>, which is a mechanism of pygeoapi to override the HTTP Accept
+header sent by the web browser.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ao chamar uma OGC API a partir de javascript, e o objetivo é receber JSON, pode usar a convenção <code>?f=json</code> da pygeoapi, ou a negociação de conteúdo conforme previsto pela norma; inclua um cabeçalho HTTP <code>Accept: "application/json"</code> no seu pedido.</p>
-<p>Em jQuery, por exemplo, isto é representado pela propriedade dataType:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://demo.pygeoapi.io/master&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json&quot;</span>
-<span class="p">});</span>
-</code></pre></div></td></tr></table></div>
-<p>Ou usando a API fetch nativa:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div></td></tr></table></div>
+<p>When calling an OGC API from javascript, and the aim is to receive JSON, you can use the <code>?f=json</code> pygeoapi convention, or the content 
+negotiation as provided by the standard; include an HTTP header <code>Accept: "application/json"</code> in your request.</p>
+<p>In jQuery for example, this is represented by the dataType property:</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://demo.pygeoapi.io/master&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Or using the native fetch API:</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://demo.pygeoapi.io/master&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
-<h2 id="o-parametro-skipgeometry">o parâmetro <code>skipGeometry</code></h2>
-<p>O parâmetro <code>skipGeometry</code> (<code>true|false</code>, o padrão é <code>false</code>) pode ser usado com o acesso a dados de elementos (<em>features</em>) para facilitar o download de dados vetoriais sem geometria, se desejado.</p>
-<h1 id="resumo">Resumo</h1>
-<p>As normas são uma pedra angular da pygeoapi e permitir-lhe-ão publicar os seus dados de forma eficiente e com uma baixa barreira para os utilizadores. Agora, vamos à ação: <strong>Publicar dados</strong></p>
+<h2 id="the-skipgeometry-parameter">the <code>skipGeometry</code> parameter<a class="headerlink" href="#the-skipgeometry-parameter" title="Permanent link">&para;</a></h2>
+<p>The <code>skipGeometry</code> (<code>true|false</code>, default is <code>false</code>) parameter can be used with feature data access to facilitate
+downloading vector data without geometry if desired.</p>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>Standards are a cornerstone of pygeoapi, and will enable you to publish your data efficiently and with a low
+barrier for users.  Now, let's get to the action: <strong>Publishing data</strong>!</p>
+
+
 
 
 
@@ -1364,6 +1381,12 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1373,13 +1396,13 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1397,18 +1420,11 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../js/print-site.js"></script>
-      
-        <script src="../../js/print-site.js"></script>
-      
-        <script src="../../assets/javascripts/termynal.js"></script>
-      
-        <script src="../../assets/javascripts/custom.js"></script>
+      <script src="../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

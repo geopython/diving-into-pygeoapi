@@ -12,35 +12,31 @@
         <meta name="author" content="The pygeoapi community">
       
       
-        <link rel="canonical" href="https://dive.pygeoapi.io/pt/advanced/inspire/">
+        <link rel="canonical" href="https://dive.pygeoapi.io/advanced/inspire/">
       
       
-        <link rel="prev" href="../cloud/">
-      
-      
-        <link rel="next" href="../administration/">
       
       
         
-          <link rel="alternate" href="../../../advanced/inspire/" hreflang="en">
+          <link rel="alternate" href="/" hreflang="en">
         
-          <link rel="alternate" href="./" hreflang="pt">
+          <link rel="alternate" href="/pt/" hreflang="pt">
         
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.26">
     
     
       
-        <title>Suporte INSPIRE - Mergulhando na pygeoapi</title>
+        <title>INSPIRE support - Diving into pygeoapi</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.d9d44b50.min.css">
       
       
 
@@ -54,26 +50,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../css/print-site.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/pygeoapi.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../../css/print-site.css">
-    
-      <link rel="stylesheet" href="../../../css/print-site-material.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/pygeoapi.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/termynal.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -82,21 +66,16 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="pygeoapi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
     <div data-md-component="skip">
       
         
-        <a href="#suporte-inspire" class="md-skip">
+        <a href="#inspire-support" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -112,12 +91,12 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../" title="Mergulhando na pygeoapi" class="md-header__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-header__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegação">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
@@ -125,21 +104,21 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Mergulhando na pygeoapi
+            Diving into pygeoapi
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Suporte INSPIRE
+              INSPIRE support
             
           </span>
         </div>
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -152,14 +131,14 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../advanced/inspire/" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="pt" class="md-select__link">
-              Portuguese
+            <a href="/pt/" hreflang="pt" class="md-select__link">
+              Português
             </a>
           </li>
         
@@ -171,57 +150,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Pesquisar">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando a pesquisa
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Pesquisar">
+  <button type="button" class="md-search__button">
+    Pesquisar
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -247,19 +199,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../" title="Mergulhando na pygeoapi" class="md-nav__button md-logo" aria-label="Mergulhando na pygeoapi" data-md-component="logo">
+    <a href="https://dive.pygeoapi.io" title="Diving into pygeoapi" class="md-nav__button md-logo" aria-label="Diving into pygeoapi" data-md-component="logo">
       
-  <img src="../../../assets/images/pygeoapi-icon-notrans.png" alt="logo">
+  <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    Mergulhando na pygeoapi
+    Diving into pygeoapi
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/geopython/diving-into-pygeoapi" title="Ir ao repositório" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -276,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../index.pt/" class="md-nav__link">
         
   
   
@@ -303,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/" class="md-nav__link">
+      <a href="../../introduction.pt/" class="md-nav__link">
         
   
   
@@ -330,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/" class="md-nav__link">
+      <a href="../../setup.pt/" class="md-nav__link">
         
   
   
@@ -357,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/" class="md-nav__link">
+      <a href="../../standards.pt/" class="md-nav__link">
         
   
   
@@ -462,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/first/" class="md-nav__link">
+      <a href="../../publishing/first.pt/" class="md-nav__link">
         
   
   
@@ -490,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-features/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-features.pt/" class="md-nav__link">
         
   
   
@@ -518,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-coverages/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-coverages.pt/" class="md-nav__link">
         
   
   
@@ -546,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-maps/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-maps.pt/" class="md-nav__link">
         
   
   
@@ -574,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-tiles/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-tiles.pt/" class="md-nav__link">
         
   
   
@@ -602,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-records/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-records.pt/" class="md-nav__link">
         
   
   
@@ -630,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-edr/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-edr.pt/" class="md-nav__link">
         
   
   
@@ -658,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../publishing/ogcapi-processes/" class="md-nav__link">
+      <a href="../../publishing/ogcapi-processes.pt/" class="md-nav__link">
         
   
   
@@ -690,53 +642,48 @@
       
   
   
-    
-  
   
   
     
     
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -750,16 +697,10 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -771,6 +712,32 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -779,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../i18n/" class="md-nav__link">
+      <a href="../i18n.pt/" class="md-nav__link">
         
   
   
@@ -807,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crs/" class="md-nav__link">
+      <a href="../crs.pt/" class="md-nav__link">
         
   
   
@@ -835,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ui-custom-templates/" class="md-nav__link">
+      <a href="../ui-custom-templates.pt/" class="md-nav__link">
         
   
   
@@ -863,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../downstream-applications/" class="md-nav__link">
+      <a href="../downstream-applications.pt/" class="md-nav__link">
         
   
   
@@ -891,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seo/" class="md-nav__link">
+      <a href="../seo.pt/" class="md-nav__link">
         
   
   
@@ -919,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security-access-control/" class="md-nav__link">
+      <a href="../security-access-control.pt/" class="md-nav__link">
         
   
   
@@ -947,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semantic-web-linked-data/" class="md-nav__link">
+      <a href="../semantic-web-linked-data.pt/" class="md-nav__link">
         
   
   
@@ -975,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/" class="md-nav__link">
+      <a href="../cloud.pt/" class="md-nav__link">
         
   
   
@@ -1000,37 +967,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Suporte INSPIRE
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../inspire.pt/" class="md-nav__link">
         
   
   
@@ -1046,59 +986,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#servicos-inspire-e-a-sua-alternativa-ogc-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Serviços INSPIRE e a sua alternativa OGC API
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ogc-api-e-os-modelos-de-dados-inspire" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OGC API e os modelos de dados INSPIRE
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ogc-api-como-um-registo-de-listas-de-codigos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OGC API como um registo de listas de códigos
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1111,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../administration/" class="md-nav__link">
+      <a href="../administration.pt/" class="md-nav__link">
         
   
   
@@ -1139,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bridges/" class="md-nav__link">
+      <a href="../bridges.pt/" class="md-nav__link">
         
   
   
@@ -1174,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conclusion/" class="md-nav__link">
+      <a href="../../conclusion.pt/" class="md-nav__link">
         
   
   
@@ -1207,6 +1094,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
@@ -1221,10 +1109,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#servicos-inspire-e-a-sua-alternativa-ogc-api" class="md-nav__link">
+  <a href="#inspire-services-and-their-ogc-api-alternative" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Serviços INSPIRE e a sua alternativa OGC API
+        INSPIRE services and their OGC API alternative
       
     </span>
   </a>
@@ -1232,10 +1120,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ogc-api-e-os-modelos-de-dados-inspire" class="md-nav__link">
+  <a href="#ogc-api-and-the-inspire-data-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OGC API e os modelos de dados INSPIRE
+        OGC API and the INSPIRE data models
       
     </span>
   </a>
@@ -1243,10 +1131,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ogc-api-como-um-registo-de-listas-de-codigos" class="md-nav__link">
+  <a href="#ogc-api-as-a-codelist-registry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OGC API como um registo de listas de códigos
+        OGC API as a codelist registry
       
     </span>
   </a>
@@ -1267,185 +1155,194 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+  
+    <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/advanced/inspire.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
   
   
+    
+      
+    
+    <a href="https://github.com/geopython/diving-into-pygeoapi/raw/main/workshop/content/docs/advanced/inspire.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
-<h1 id="suporte-inspire">Suporte INSPIRE</h1>
-<p><a href="https://inspire.ec.europa.eu">INSPIRE</a> é uma diretiva europeia sobre partilha de dados no domínio ambiental. Os estados membros da UE 
-investiram quase 20 anos de esforço para harmonizar dados no domínio ambiental e publicá-los usando normas OGC. 
-A diretiva está no final do seu tempo de vida, mas a expectativa é que as convenções da diretiva INSPIRE sejam adotadas 
-por diretivas futuras, como as diretivas do pacto verde e dados abertos. </p>
-<p>Nos últimos 20 anos, o panorama das TI mudou consideravelmente. O INSPIRE acompanhou estes desenvolvimentos adotando uma 
-série de <a href="https://inspire.ec.europa.eu/portfolio/good-practice-library">Boas Práticas</a> que substituem as 
-<a href="https://inspire.ec.europa.eu/Technical-guidelines3">Diretrizes Técnicas</a> originais.</p>
-<p>Algumas das boas práticas recentes e futuras focam-se nos desenvolvimentos no domínio OGC API. 
-Uma boa prática já foi adotada sobre fornecer 
-<a href="https://github.com/INSPIRE-MIF/gp-ogc-api-features">serviços de descarregamento usando OGC API - Features</a> 
-e outras estão em preparação, como o 
-<a href="https://github.com/INSPIRE-MIF/gp-ogc-api-records">serviço de descoberta usando OGC API - Records</a>. 
-Estes desenvolvimentos tornam a pygeoapi uma opção interessante 
-para fornecer serviços INSPIRE.</p>
-<h2 id="servicos-inspire-e-a-sua-alternativa-ogc-api">Serviços INSPIRE e a sua alternativa OGC API</h2>
-<p>Os serviços INSPIRE são tipicamente categorizados em serviços de visualização, serviços de descarregamento e serviços de descoberta. 
-Os serviços de descarregamento são ainda divididos em fontes Vetoriais, fontes de Cobertura e fontes de Sensores.
-A iniciativa OGC API fornece as APIs relacionadas para cada tipo de serviço.
-A tabela abaixo destaca para cada tipo de serviço a recomendação das Diretrizes Técnicas
-e as Boas Práticas relevantes. </p>
+<h1 id="inspire-support">INSPIRE support<a class="headerlink" href="#inspire-support" title="Permanent link">&para;</a></h1>
+<p><a href="https://inspire.ec.europa.eu">INSPIRE</a> is a European directive on data sharing in the environmental domain. EU member states 
+have invested almost 20 years of effort to harmonize data in the environmental domain and publish it using OGC standards. 
+The directive is at the end of its lifetime, but the expectation is that conventions from the INSPIRE directive will be adopted 
+by upcoming directives, such as green deal and open data directives. </p>
+<p>In the past 20 years, the IT landscape has changed considerably. INSPIRE has followed these developments by adopting a 
+series of <a href="https://inspire.ec.europa.eu/portfolio/good-practice-library">Good Practices</a> which supersede the original 
+<a href="https://inspire.ec.europa.eu/Technical-guidelines3">Technical Guidelines</a>.</p>
+<p>Some of the recent and upcoming good practices focus on the developments in the OGC API domain. 
+One good practice has already been adopted on providing 
+<a href="https://github.com/INSPIRE-MIF/gp-ogc-api-features">download services using OGC API - Features</a> 
+and others are in preparation, such as the 
+<a href="https://github.com/INSPIRE-MIF/gp-ogc-api-records">discovery service using OGC API - Records</a>. 
+These developments make pygeoapi an interesting option 
+for providing INSPIRE services.</p>
+<h2 id="inspire-services-and-their-ogc-api-alternative">INSPIRE services and their OGC API alternative<a class="headerlink" href="#inspire-services-and-their-ogc-api-alternative" title="Permanent link">&para;</a></h2>
+<p>INSPIRE services are typically categorized in view services, download services and discovery services. 
+Download services are further devided in Vector sources, Coverage sources and Sensor sources.
+The OGC API initiative provides the related APIs for each service.
+The table below highlights for each service type the Technical Guidenace
+recommendation and the relevant Good Practices. </p>
 <table>
 <thead>
 <tr>
-<th>Tipo de serviço</th>
+<th>Service type</th>
 <th>TG</th>
 <th>OGC API</th>
-<th>Estado da boa prática</th>
+<th>Good practice status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Serviço de descoberta</td>
+<td>Discovery service</td>
 <td>CSW</td>
 <td>OGC API - Records</td>
-<td><a href="https://github.com/INSPIRE-MIF/gp-ogc-api-records">Em preparação</a></td>
+<td><a href="https://github.com/INSPIRE-MIF/gp-ogc-api-records">In preparation</a></td>
 </tr>
 <tr>
-<td>Serviço de visualização</td>
+<td>View service</td>
 <td>WM(T)S</td>
 <td>OGC API - Maps / OGC API - Tiles</td>
-<td>Não agendado<br> <a href="https://wikis.ec.europa.eu/display/InspireMIG/69th+MIG-T+meeting+2022-04-01">Em preparação</a></td>
+<td>Not scheduled<br> <a href="https://wikis.ec.europa.eu/display/InspireMIG/69th+MIG-T+meeting+2022-04-01">In preparation</a></td>
 </tr>
 <tr>
-<td>Serviço de descarregamento - Vetor</td>
+<td>Download service - Vector</td>
 <td>WFS</td>
 <td>OGC API - Features</td>
-<td><a href="https://github.com/INSPIRE-MIF/gp-ogc-api-features">Adotada</a></td>
+<td><a href="https://github.com/INSPIRE-MIF/gp-ogc-api-features">Adopted</a></td>
 </tr>
 <tr>
-<td>Serviço de descarregamento - Cobertura</td>
+<td>Download service - Coverage</td>
 <td>WCS</td>
 <td>OGC API - Coverages / STAC <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>Não agendado<br> <a href="https://github.com/INSPIRE-MIF/gp-stac">Em preparação</a></td>
+<td>Not scheduled<br> <a href="https://github.com/INSPIRE-MIF/gp-stac">In preparation</a></td>
 </tr>
 <tr>
-<td>Serviço de descarregamento - Sensor</td>
+<td>Download service - Sensor</td>
 <td>SOS</td>
 <td>OGC API - EDR / Sensorthings API <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
-<td>Não agendado<br> <a href="https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api">Adotada</a></td>
+<td>Not scheduled<br> <a href="https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api">Adopted</a></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ao adotar Boas Práticas, considere que a documentação e ferramentas para validação ainda são limitadas. 
-Além disso, o Portal Geo INSPIRE pode ainda não estar pronto para recolher registos de um endpoint OGC API - Records. </p>
+<p>When adopting Good Practices, consider that the documentation and tools for validation are still limited. 
+Also the INSPIRE GeoPortal may not be ready to harvest records from an OGC API - Records endpoint yet. </p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Publicar documentos de metadados como um serviço de descoberta INSPIRE</p>
-<p>Neste exercício vamos importar uma pasta de documentos de metadados para uma base de dados TinyDB e vamos configurar a base de dados como um endpoint OGC API - Records. 
-Descarregue o ficheiro zip 'inspire-records.zip' do repositório. Extraia o ficheiro zip. A pasta <code>/tests</code> contém um script 
-<a href="https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py">load_tinydb_records.py</a>. O script tem 2 parâmetros:</p>
+<p class="admonition-title">Publish metadata documents as an INSPIRE discovery service</p>
+<p>In this exercise we will import a folder of metadata documents into a TinyDB database and configure the database as an OGC API - Records endpoint. 
+Download the zipfile 'inspire-records.zip' from the repository. Expand the zipfile. The <code>/tests</code> folder contains a script 
+<a href="https://github.com/geopython/pygeoapi/blob/master/tests/load_tinydb_records.py">load_tinydb_records.py</a>. The script has 2 parameters:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>load_tinydb_records.py<span class="w"> </span>&lt;path/to/xml-files&gt;<span class="w"> </span>&lt;output.db&gt;
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>load_tinydb_records.py<span class="w"> </span>&lt;path/to/xml-files&gt;<span class="w"> </span>&lt;output.db&gt;
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="termy">
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>load_tinydb_records.py<span class="w"> </span>&lt;path/to/xml-files&gt;<span class="w"> </span>&lt;output.db&gt;
-</code></pre></div>
-</div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>load_tinydb_records.py<span class="w"> </span>&lt;path/to/xml-files&gt;<span class="w"> </span>&lt;output.db&gt;
+</span></code></pre></div>
 </div>
 </div>
 </div>
-<p>Agora configure <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue">TinyDB como fornecedor para OGC API - Records</a>. Reinicie o serviço e verifique o resultado. Verifique também a saída XML de alguns dos registos. </p>
+<p>Now configure <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue">TinyDB as a provider for OGC API - Records</a>. Restart the service and verify the result. Verify also the XML output of some of the records. </p>
 </div>
-<h2 id="ogc-api-e-os-modelos-de-dados-inspire">OGC API e os modelos de dados INSPIRE</h2>
-<p>A maioria dos modelos de dados INSPIRE tem uma estrutura hierárquica, que não é comum na comunidade OGC API orientada para GeoJSON. 
-Em teoria é possível fornecer GML hierárquico a partir de um endpoint OGC API, mas ainda não há muitas experiências atualmente.
-Duas iniciativas podem trazer melhorias a este aspeto:</p>
+<h2 id="ogc-api-and-the-inspire-data-models">OGC API and the INSPIRE data models<a class="headerlink" href="#ogc-api-and-the-inspire-data-models" title="Permanent link">&para;</a></h2>
+<p>Most of the INSPIRE data models have a hierarchical structure, which is not common in the GeoJSON oriented OGC API community. 
+In theory it is possible to provide hierarchical GML from an OGC API endpoint, but there are not many experiences yet currently.
+Two initiatives may bring improvement to this aspect:</p>
 <ul>
-<li>a pygeoapi facilita a configuração de uma codificação JSON-LD usando uma ontologia arbitrária. A 
-<a href="https://inspire-eu-rdf.github.io/inspire-rdf-guidelines">boa prática sobre web semântica</a> fornece alguns dos modelos de dados
-numa ontologia RDF</li>
-<li>A <a href="https://github.com/INSPIRE-MIF/gp-geopackage-encodings">boa prática sobre codificações alternativas</a> sugere uma 
-abordagem para publicar conjuntos de dados usando um modelo de dados relacional como GeoPackage, que se adequa melhor à comunidade OGC API</li>
+<li>pygeoapi facilitates to configure a JSON-LD encoding using an arbitrary ontology. The 
+<a href="https://inspire-eu-rdf.github.io/inspire-rdf-guidelines">good practice on semantic web</a> provides some of the data models
+in an RDF ontology</li>
+<li>The <a href="https://github.com/INSPIRE-MIF/gp-geopackage-encodings">good practice on alternative encodings</a> suggests an 
+approach to publish datasets using a relational data model such as GeoPackage, which fits better with the OGC API community</li>
 </ul>
-<h2 id="ogc-api-como-um-registo-de-listas-de-codigos">OGC API como um registo de listas de códigos</h2>
-<p>Um caso de uso típico no INSPIRE é a opção de estender uma lista de códigos INSPIRE para corresponder a um requisito local. Para este caso de uso, a 
-lista de códigos estendida tem de ser publicada num registo. A OGC API - Common fornece mecanismos para publicar listas de conceitos como itens 
-em coleções. A pygeoapi também fornece um mecanismo para anunciar os conceitos usando a ontologia SKOS através da sua codificação JSON-LD 
-. Na coincidência de um conceito ter uma propriedade de geometria, a lista de códigos pode até ser publicada como OGC API - Features 
-(num mapa).</p>
+<h2 id="ogc-api-as-a-codelist-registry">OGC API as a codelist registry<a class="headerlink" href="#ogc-api-as-a-codelist-registry" title="Permanent link">&para;</a></h2>
+<p>A typical use case in INSPIRE is the option to extend an INSPIRE codelist to match a local requirement. For this use case the 
+extended codelist has to be published in a registry. OGC API - Common provides mechanisms to publish lists of concepts as items 
+in collections. pygeoapi also provides a mechanism to advertise the concepts using the SKOS ontology via its JSON-LD 
+encoding. In the coincidence that a concept has a geometry property, the codelist can even be published as OGC API - Features 
+(on a map).</p>
 <div class="admonition question">
-<p class="admonition-title">Publicar uma lista de códigos via OGC API</p>
-<p>Uma lista de códigos de tipos de solo alemã foi disponibilizada em formato CSV em <code>workshop/exercises/data/bodenart.en.csv</code>. Use o <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv">fornecedor CSV</a> para publicar este conjunto de dados na pygeoapi. Que URL usaria para referenciar um conceito na lista publicada?</p>
+<p class="admonition-title">Publish a codelist via OGC API</p>
+<p>A German Soiltype codelist has been made available in CSV format in <code>workshop/exercises/data/bodenart.en.csv</code>. Use the <a href="https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv">CSV provider</a> to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?</p>
 </div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">SoilTypes</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
-<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tipos de solo da Alemanha</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bodenarten auf Basis der Bodenkundlichen Kartieranleitung 5. Auflage (KA5)</span>
-<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soiltype</span>
-<span class="w">    </span><span class="nt">links</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
-<span class="w">          </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
-<span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tipos de solo da Alemanha</span>
-<span class="w">          </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://registry.gdi-de.org/codelist/de.bund.thuenen/bodenart</span>
-<span class="w">          </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">de</span>
-<span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">]</span>
-<span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
-<span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CSV</span>
-<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/bodenart.en.csv</span>
-<span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Label</span>
-<span class="w">          </span><span class="nt">geometry</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">x_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
-<span class="w">              </span><span class="nt">y_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
-</code></pre></div></td></tr></table></div>
-<h1 id="resumo">Resumo</h1>
-<p>Parabéns! Trabalhou com a pygeoapi para conformidade INSPIRE</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">SoilTypes</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Soil types of Germany</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bodenarten auf Basis der Bodenkundlichen Kartieranleitung 5. Auflage (KA5)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">soiltype</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">          </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Soil types of Germany</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">          </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://registry.gdi-de.org/codelist/de.bund.thuenen/bodenart</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">          </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">de</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">0</span><span class="p p-Indicator">]</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CSV</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/bodenart.en.csv</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Label</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">          </span><span class="nt">geometry</span><span class="p">:</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">              </span><span class="nt">x_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">              </span><span class="nt">y_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">y</span>
+</span></code></pre></div></td></tr></table></div>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>Congratulations! You have worked with pygeoapi for INSPIRE compliance</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>A Sensorthings API não é uma norma OGC API e atualmente não é suportada pela pygeoapi. É listada aqui para completude&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Sensorthings API and is not an OGC API standards and is currently not supported by pygeoapi. It is listed here for completeness&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>STAC não é uma norma OGC API mas é suportada pela pygeoapi&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>STAC is not OGC API standard but is supported by pygeoapi&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
+
+
 
 
 
@@ -1469,6 +1366,12 @@ em coleções. A pygeoapi também fornece um mecanismo para anunciar os conceito
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1478,13 +1381,13 @@ em coleções. A pygeoapi também fornece um mecanismo para anunciar os conceito
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 pygeoapi community
+      © 2022 - 2026 pygeoapi community
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1502,18 +1405,11 @@ em coleções. A pygeoapi também fornece um mecanismo para anunciar os conceito
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../js/print-site.js"></script>
-      
-        <script src="../../../js/print-site.js"></script>
-      
-        <script src="../../../assets/javascripts/termynal.js"></script>
-      
-        <script src="../../../assets/javascripts/custom.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>
