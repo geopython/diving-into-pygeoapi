@@ -111,7 +111,7 @@ homepage = "https://dive.pygeoapi.io"
 #[i18n.routing]
 #prefix_default_language = false
 
-alternate =[
+alternate = [
     { name = "English", link = "/", lang = "en" },
     { name = "Português", link = "/pt/", lang = "pt" }
 ]
