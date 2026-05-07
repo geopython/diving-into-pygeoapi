@@ -123,7 +123,8 @@ Pode fechar este dialogo e executar a query. O plugin irá descarregar todos os 
     Depois, inicie uma sessão de consola Python com `python3` (pare a sessão escrevendo `exit()`).
 
     === "Linux/Mac"
-
+    
+        ```python
         >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
         >>> w.url
         'https://demo.pygeoapi.io/master'
