@@ -34,6 +34,8 @@ which is in the [YAML](https://yaml.org) format. If you are not familiar with YA
 The main requirement for the training is to install Docker and/with Docker Compose on your system.
 We strongly advise to install Docker before the workshop starts.
 
+## Docker
+
 Although several custom installation scenarios are possible (see the [documentation](https://docs.pygeoapi.io/en/latest/installation.html)
 for more information), these are not considered in this workshop given the ability to install a fully reproducible
 environment via Docker and Docker Compose.
@@ -41,8 +43,6 @@ environment via Docker and Docker Compose.
 Workshop Exercises will also be based on Docker, hence a custom installation would at least be 'challenging'.
 The good news is that only a single installation (Docker) is needed! The Docker images used in this workshop
 contain the latest pygeoapi and all its dependencies and external services (e.g. PostGIS).
-
-## About Docker
 
 Docker has been available since 2013, and provided as a deployment option on numerous FOSS software and OSGeo projects. Given the current
 era of computing, chances are that you have heard of Docker and *containerization*. Or, perhaps are already familiar and hopefully using Docker already.
@@ -61,7 +61,7 @@ Stepping up further are even more sophisticated Docker orchestrators like
 [Rancher](https://rancher.com/products/rancher) and [Kubernetes](https://kubernetes.io), but for
 this workshop, Docker and Docker Compose are all we need.
 
-## Installation
+### Installation
 
 Docker installation has greatly progressed over the years. This is the only part of the workshop
 which is dependent on the system/OS you are running (e.g. Windows, Mac or Linux). For each

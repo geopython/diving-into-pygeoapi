@@ -34,10 +34,10 @@ Aconselhamos vivamente a instalação do Docker antes do início da workshop.
 
 Embora sejam possíveis vários cenários de instalação personalizada (consulte a [documentação](https://docs.pygeoapi.io/en/latest/installation.html) para mais informações), estes não são considerados nesta workshop, dada a capacidade de instalar um ambiente totalmente reprodutível através do Docker e do Docker Compose.
 
+## Docker
+
 Os Exercícios da Workshop também serão baseados no Docker, pelo que uma instalação personalizada seria, no mínimo, 'desafiadora'.
 A boa notícia é que apenas uma única instalação (Docker) é necessária! As imagens Docker utilizadas nesta workshop contêm a versão mais recente da pygeoapi e todas as suas dependências e serviços externos (ex: PostGIS).
-
-## Sobre o Docker
 
 O Docker está disponível desde 2013 e é fornecido como uma opção de implementação em inúmeros projetos de software FOSS e da OSGeo. Dada a era atual da computação, é provável que já tenha ouvido falar do Docker e de *contentorização*. Ou, talvez, já esteja familiarizado e, esperamos, já a utilizar o Docker.
 Se não for o caso, existe uma abundância de materiais introdutórios que podem ser encontrados online, como este [tutorial da IBM](https://www.ibm.com/topics/docker).
@@ -48,7 +48,7 @@ O [Docker Compose](https://docs.docker.com/compose) é um complemento do Docker 
 
 Num patamar superior, existem orquestradores Docker ainda mais sofisticados, como o [Rancher](https://rancher.com/products/rancher) e o [Kubernetes](https://kubernetes.io), mas para esta workshop, o Docker e o Docker Compose são tudo o que precisamos.
 
-## Instalação
+### Instalação
 
 A instalação do Docker progrediu muito ao longo dos anos. Esta é a única parte da workshop que depende do sistema/SO que está a utilizar (ex: Windows, Mac ou Linux). Para cada sistema, o site do Docker fornece instruções de instalação detalhadas. Por favor, siga-as de forma consistente.
 
