@@ -314,6 +314,7 @@ resources:
 #              format:
 #                  name: png
 #                  mimetype: image/png
+#              storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
 ## END - EXERCISE 4 - Maps
 
 ## START - EXERCISE 5 - Tiles
@@ -496,6 +497,7 @@ resources:
 #              format:
 #                name: png
 #                mimetype: image/png
+#              storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
 ## END - EXERCISE 9 - WMS Proxy
 
 ## START - EXERCISE 9 - CSW Proxy
