@@ -6,9 +6,11 @@ Title: Web Semântica e Linked Data
 
 Esta secção aborda 3 aspetos da Web Semântica:
 
-- [Motores de busca](#motores-de-busca)
-- [Publicar dados espaciais na web semântica](#publicar-dados-espaciais-na-web-semântica)
-- [Proxy para a web semântica](#proxy-para-a-web-semântica)
+- [Web Semântica e Linked Data](#web-semântica-e-linked-data)
+  - [Motores de busca](#motores-de-busca)
+  - [Publicar dados espaciais na Web Semântica](#publicar-dados-espaciais-na-web-semântica)
+  - [Proxy para a Web Semântica](#proxy-para-a-web-semântica)
+- [Resumo](#resumo)
 
 ## Motores de busca
 

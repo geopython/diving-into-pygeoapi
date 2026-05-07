@@ -344,7 +344,7 @@ Neste exemplo, as cores dos símbolos refletem o valor do atributo `objectid`.
 !!! tip 
     Tente adicionar um [layer de tiles vetoriais da pygeoapi diferente](https://demo.pygeoapi.io/master/collections/lakes/tiles/WorldCRS84Quad/metadata) atualizando o código em `workshop/exercises/html/vector-tiles.html`.
 
-    Se quiser renderizar as tiles do [exemplo do Elasticsearch](#publish-vector-tiles-from-elasticsearch), pode consultar o código deste repositório [aqui](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm):
+    Se quiser renderizar as tiles do [exemplo do Elasticsearch](#publicar-tiles-vetoriais-a-partir-do-elasticsearch), pode consultar o código deste repositório [aqui](https://github.com/doublebyte1/vtiles-example/blob/ogcapi-ws/demo-oat.htm):
 
     === "Linux/Mac"
 
