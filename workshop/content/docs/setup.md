@@ -31,10 +31,10 @@ Having said this, please feel free to use what works for you :)
 Most exercises will focus on editing the pygeoapi [configuration](https://docs.pygeoapi.io/en/latest/configuration.html),
 which is in the [YAML](https://yaml.org) format. If you are not familiar with YAML, it is worth reading through a [tutorial](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) to become aware of YAML syntax and indentation.
 
+## Docker
+
 The main requirement for the training is to install Docker and/with Docker Compose on your system.
 We strongly advise to install Docker before the workshop starts.
-
-## Docker
 
 Although several custom installation scenarios are possible (see the [documentation](https://docs.pygeoapi.io/en/latest/installation.html)
 for more information), these are not considered in this workshop given the ability to install a fully reproducible

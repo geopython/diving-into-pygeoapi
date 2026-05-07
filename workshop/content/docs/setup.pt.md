@@ -29,12 +29,12 @@ Dito isto, sinta-se à vontade para usar o que funciona melhor para si :)
 
 A maioria dos exercícios focar-se-á na edição da [configuração](https://docs.pygeoapi.io/en/latest/configuration.html) da pygeoapi, que está no formato [YAML](https://yaml.org). Se não estiver familiarizado com YAML, vale a pena ler um [tutorial](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) para se familiarizar com a sintaxe e a indentação do YAML.
 
+## Docker
+
 O requisito principal para a formação é instalar o Docker e/ou o Docker Compose no seu sistema.
 Aconselhamos vivamente a instalação do Docker antes do início da workshop.
 
 Embora sejam possíveis vários cenários de instalação personalizada (consulte a [documentação](https://docs.pygeoapi.io/en/latest/installation.html) para mais informações), estes não são considerados nesta workshop, dada a capacidade de instalar um ambiente totalmente reprodutível através do Docker e do Docker Compose.
-
-## Docker
 
 Os Exercícios da Workshop também serão baseados no Docker, pelo que uma instalação personalizada seria, no mínimo, 'desafiadora'.
 A boa notícia é que apenas uma única instalação (Docker) é necessária! As imagens Docker utilizadas nesta workshop contêm a versão mais recente da pygeoapi e todas as suas dependências e serviços externos (ex: PostGIS).
