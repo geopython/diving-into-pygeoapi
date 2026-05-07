@@ -127,37 +127,37 @@ You can close this dialog and run the query. The plugin will fetch all the data 
     === "Linux/Mac"
 
         ```python
-        >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
-        >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
-        >>> w.url
-        'https://demo.pygeoapi.io/master'
-        >>> api = w.api()  # OpenAPI document
-        >>> collections = w.collections()
-        >>> len(collections['collections'])
-        13
-        >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter_names'].keys()
-        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
-        >>> data  # CoverageJSON data
+            >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
+            >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
+            >>> w.url
+            'https://demo.pygeoapi.io/master'
+            >>> api = w.api()  # OpenAPI document
+            >>> collections = w.collections()
+            >>> len(collections['collections'])
+            13
+            >>> icoads_sst = w.collection('icoads-sst')
+            >>> icoads_sst['parameter_names'].keys()
+            dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
+            >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
+            >>> data  # CoverageJSON data
         ```
 
     === "Windows (PowerShell)"
 
         ```python
-        >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
-        >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
-        >>> w.url
-        'https://demo.pygeoapi.io/master'
-        >>> api = w.api()  # OpenAPI document
-        >>> collections = w.collections()
-        >>> len(collections['collections'])
-        13
-        >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter_names'].keys()
-        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
-        >>> data  # CoverageJSON data
+            >>> from owslib.ogcapi.edr import  EnvironmentalDataRetrieval
+            >>> w = EnvironmentalDataRetrieval('https://demo.pygeoapi.io/master')
+            >>> w.url
+            'https://demo.pygeoapi.io/master'
+            >>> api = w.api()  # OpenAPI document
+            >>> collections = w.collections()
+            >>> len(collections['collections'])
+            13
+            >>> icoads_sst = w.collection('icoads-sst')
+            >>> icoads_sst['parameter_names'].keys()
+            dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
+            >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
+            >>> data  # CoverageJSON data
         ```
 
 !!! note
