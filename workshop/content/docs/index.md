@@ -15,13 +15,13 @@ Version: 1.8.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G 2025](https://2025.foss4g.org/) workshop team
+# Your [FOSS4G Europe 2026](https://2026.europe.foss4g.org) workshop team
 
 <table>    
     <tr>
         <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://github.com/jorgejesus"><img width="150" src="https://avatars.githubusercontent.com/u/1275400?v=4"/></a></td>
-        <td><a href="https://github.com/krishnaglodha"><img width="150" src="https://avatars.githubusercontent.com/u/47075664?v=4"/></a></td>
+        <td><a href="https://github.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
+        <td><a href="https://github.com/pvgenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
     </tr>
 </table>
 
