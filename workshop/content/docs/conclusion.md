@@ -15,7 +15,7 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 For those in attendance at [FOSS4G Europe 2026](https://2026.foss4g.org):
 
-- come to the [pygeoapi project status presentation](https://talks.osgeo.org/foss4g-europe-2026/talk/review/DZVDQHG7ZYFWMBKAYGZUQGY3JDKBGKBR) on Wednesday 01 July at 15h, in the auditorim
+- come to the [pygeoapi project status presentation](https://talks.osgeo.org/foss4g-europe-2026/talk/review/DZVDQHG7ZYFWMBKAYGZUQGY3JDKBGKBR) on Wednesday 01 July at 15h, in the auditorium
 
 # Contributing
 
