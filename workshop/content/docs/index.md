@@ -102,4 +102,4 @@ As always, core pygeoapi support and community information can be found on the p
 Contributions are always encouraged and welcome!
 
 
-## Now, on to the workshop.  Let's go!
+## Now, on to the workshop.  [Let's go!](introduction.md)

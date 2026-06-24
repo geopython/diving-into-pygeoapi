@@ -74,21 +74,19 @@ pygeoapi over time:
 
 #### OGC API Roadmap
 
-The [OGC Standards Roadmap](https://agora.ogc.org/roadmap) highlights the current and planned standards efforts as well as related extensions to those standards.  The Roadmap
-is useful for planning new functionality to users, as well as software implementation.
-
-!!! note
-    The OGC Standards Roadmap provides a status and timeline on all OGC standards.  To filter the Roadmap on OGC APIs only, use the "Filter by title, repo, label..." text box (top left) and filter on "OGC API"
+The [OGC Standards Roadmap](https://www.ogc.org/standards/roadmap), highlights the current and 
+planned standards efforts as well as related extensions to those standards.  The Roadmap is useful for planning new 
+functionality to users, as well as software implementation.
 
 #### OGC APIs supported by pygeoapi
 
 pygeoapi implements numerous OGC API standards and draft standards. In addition, it is compliance certified and even a Reference Implementation (RI) for some of them. Compliance certification is important to remove interoperability risks. RI are always compliance certified. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
 
-!!! Citation
+!!! [Citation](https://docs.ogc.org/pol/08-134r11.html#toc17)
 
     Candidate Products that pass all the tests in a Compliance Test Package, and that OGC has reviewed and certified as having passed those tests, are considered compliant with that Implementation Standard version. 
 
-!!! Citation
+!!! [Citation](https://docs.ogc.org/pol/08-134r11.html#term-reference-implementation-_ri_)
 
     A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passes the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download.
 
