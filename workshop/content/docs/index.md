@@ -4,7 +4,7 @@ title: Diving into pygeoapi
 
 # Welcome to the Diving into pygeoapi workshop!
 
-Version: 1.8.0
+Version: 1.9.0
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
