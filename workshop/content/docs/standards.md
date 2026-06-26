@@ -91,21 +91,21 @@ pygeoapi implements numerous OGC API standards and draft standards. In addition,
     A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passes the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download.
 
 
-| Standard                               | pygeoapi status | Included in this workshop |
-|----------------------------------------|-----------------|---------------------------|
-| OGC API - Features                     | Reference       | ✅                        |
-| OGC API - Coverages                    | Implementing    | ✅                        |
-| OGC API - Tiles                        | Reference       | ✅                        |
-| OGC API - Maps                         | Implementing    | ✅                        |
-| OGC API - Processes                    | Certified       | ✅                        |
-| OGC API - Records                      | Implementing    | ✅                        |
-| OGC API - Environmental Data Retrieval | Reference       | ✅                        |
-| SpatioTemporal Asset Catalog           | Implementing    |                           |
-| SpatioTemporal Asset Catalog API       | Implementing    |                           |
-| OGC API - Routes                       | Planned         |                           |
-| OGC API - Styles                       | Planned         |                           |
-| OGC API - Moving Features              | Planned         |                           |
-| OGC API - DGGS                         | Planned         |                           |
+| Standard                               | pygeoapi status          | Included in this workshop |
+|----------------------------------------|--------------------------|---------------------------|
+| OGC API - Features                     | Reference Implementation | ✅                        |
+| OGC API - Coverages                    | Implementing             | ✅                        |
+| OGC API - Tiles                        | Reference Implementation | ✅                        |
+| OGC API - Maps                         | Implementing             | ✅                        |
+| OGC API - Processes                    | Certified                | ✅                        |
+| OGC API - Records                      | Implementing             | ✅                        |
+| OGC API - Environmental Data Retrieval | Reference Implementation | ✅                        |
+| SpatioTemporal Asset Catalog           | Implementing             |                           |
+| SpatioTemporal Asset Catalog API       | Implementing             |                           |
+| OGC API - Routes                       | Planned                  |                           |
+| OGC API - Styles                       | Planned                  |                           |
+| OGC API - Moving Features              | Planned                  |                           |
+| OGC API - DGGS                         | Planned                  |                           |
 
 In the next section we will dive into the dedicated API's related to specific types of information. You will
 notice that all APIs are combined and available via a single OGC API endpoint, thanks to OGC API - Common.
