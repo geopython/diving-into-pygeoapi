@@ -1,0 +1,11 @@
+{
+  "name": "pygeoapi",
+  "image": "geopython/pygeoapi:latest",
+  "forwardPorts": [5000],
+  "mounts": [
+    "source=${localWorkspaceFolder}/pygeoapi.config.yml,target=/pygeoapi/local.config.yml,type=bind",
+    "source=${localWorkspaceFolder}/data,target=/data,type=bind",
+    "source=${localWorkspaceFolder}/plugins/process/squared.py,target=/pygeoapi/pygeoapi/process/squared.py,type=bind"
+  ],
+  "postStartCommand": ""
+}
