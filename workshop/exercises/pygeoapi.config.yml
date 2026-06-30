@@ -35,7 +35,7 @@ server:
     bind:
         host: 0.0.0.0
         port: 5000
-    url: http://{$PYGEOAPI_URL:-localhost}:5000/
+    url: http://localhost:5000/
     mimetype: application/json; charset=UTF-8
     encoding: utf-8
     gzip: false
