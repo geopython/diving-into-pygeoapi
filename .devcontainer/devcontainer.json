@@ -4,5 +4,5 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
-  "postStartCommand": "docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d logs"
+  "postStartCommand": "docker info"
 }
