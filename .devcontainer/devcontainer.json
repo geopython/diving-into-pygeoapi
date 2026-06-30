@@ -1,11 +1,8 @@
 {
   "name": "pygeoapi",
-  "image": "geopython/pygeoapi:latest",
   "forwardPorts": [5000],
-  "mounts": [
-    "source=${localWorkspaceFolder}/pygeoapi.config.yml,target=/pygeoapi/local.config.yml,type=bind",
-    "source=${localWorkspaceFolder}/data,target=/data,type=bind",
-    "source=${localWorkspaceFolder}/plugins/process/squared.py,target=/pygeoapi/pygeoapi/process/squared.py,type=bind"
-  ],
-  "postStartCommand": ""
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "postStartCommand": "export PYGEOAPI_URL='pygeoapi' && docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d && "
 }
