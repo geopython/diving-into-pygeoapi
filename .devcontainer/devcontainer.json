@@ -1,9 +1,8 @@
 {
   "name": "pygeoapi",
-  "image": "geopython/geopython-workshop:latest",
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
-  "postStartCommand": "export PYGEOAPI_URL=https://${CODESPACE_NAME}-5000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}; docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d"
+  "postStartCommand": "export PYGEOAPI_URL=https://${CODESPACE_NAME}-5000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
 }
