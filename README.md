@@ -43,6 +43,18 @@ zensical build
 zensical serve  # website is made available on http://localhost:8000
 ```
 
+### Running from Github Codespaces
+
+You can also use Github Codespaces after forking the repository:
+<img width="964" height="269" alt="image" src="https://github.com/user-attachments/assets/e041edd6-c7cc-48ce-b5ea-f7bf7a1cbb7c" />
+
+Then you can open port 5000 in the browser:
+<img width="1402" height="728" alt="image" src="https://github.com/user-attachments/assets/2ce9fc13-fbc0-4e95-8da1-a2362907a0c6" />
+
+You can use Terminal as usually. Navigate to exercises folder with ```cd workshop/exercises``` to proceed with the exercises. Docker container is already started from that folder. If you want to make changes to pygeoapi.config.yml, you can run ```docker compose down``` (from the same exercise folder), make your changes and restart it with ```docker compose up -d```.
+<img width="1409" height="738" alt="image" src="https://github.com/user-attachments/assets/28090661-e9c8-4e94-b093-6171af4f4173" />
+
+
 ### Translating the workshop to a different language
 
 Support to multiple languages is native in Zensical. To add an additional language to the workshop, create another toml file with the locale code as part of the filename. See an example [here](./workshop/content/zensical.pt.toml). 
