@@ -1,6 +1,6 @@
 {
   "name": "pygeoapi",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "geopython/geopython-workshop:latest",
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
