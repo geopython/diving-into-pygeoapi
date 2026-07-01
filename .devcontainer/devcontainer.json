@@ -4,5 +4,5 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
-  "postStartCommand": "export PYGEOAPI_URL=\"https://${CODESPACE_NAME}-5000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"; grep -q '^export PYGEOAPI_URL=' ~/.bashrc && sed -i '/^export PYGEOAPI_URL=/d' ~/.bashrc || true; echo \"export PYGEOAPI_URL=$PYGEOAPI_URL\" >> ~/.bashrc; until docker info >/dev/null 2>&1; do sleep 1; done; docker compose -f workshop/exercises/docker-compose.yml up -d"
+  "postStartCommand": "export PYGEOAPI_URL=\"https://${CODESPACE_NAME}-5000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"; echo \"export PYGEOAPI_URL=$PYGEOAPI_URL\" >> ~/.bashrc; until docker info >/dev/null 2>&1; do sleep 1; done; docker compose -f workshop/exercises/docker-compose.yml up -d"
 }
