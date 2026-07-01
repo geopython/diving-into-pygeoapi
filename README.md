@@ -49,7 +49,7 @@ You can also use Github Codespaces after forking the repository:
 <img width="964" height="269" alt="image" src="https://github.com/user-attachments/assets/e041edd6-c7cc-48ce-b5ea-f7bf7a1cbb7c" />
 
 Then you can open port 5000 in the browser:
-<img width="1408" height="736" alt="image" src="https://github.com/user-attachments/assets/f790c911-3c12-41f3-91a9-41fb4bc76cce" />
+<img width="1402" height="728" alt="image" src="https://github.com/user-attachments/assets/2ce9fc13-fbc0-4e95-8da1-a2362907a0c6" />
 
 You can use Terminal as usually. Navigate to exercises folder with ```cd workshop/exercises``` to proceed with the exercises. Docker container is already started from that folder. If you want to make changes to pygeoapi.config.yml, you can run ```docker compose down``` (from the same exercise folder), make your changes and restart it with ```docker compose up -d```.
 <img width="1409" height="738" alt="image" src="https://github.com/user-attachments/assets/28090661-e9c8-4e94-b093-6171af4f4173" />
