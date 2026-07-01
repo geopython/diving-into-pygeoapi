@@ -17,7 +17,7 @@ title: Exercise 5 - Tiles of geospatial data via OGC API - Tiles
 
 ## pygeoapi support
 
-pygeoapi supports the core OGC API - Tiles specification, and is able to advertise an existing tileset. Note that pygeoapi itself does not render tiles from source data, but it supports publishing tiles from different [backend providers](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html#providers). 
+pygeoapi supports the core OGC API - Tiles specification, and is able to advertise an existing tileset. Note that pygeoapi itself does not render tiles from source data, but it supports publishing tiles from different [backend providers](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providers). 
 
 !!! note
 
@@ -25,7 +25,7 @@ pygeoapi supports the core OGC API - Tiles specification, and is able to adverti
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) for more information on supported tile backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html) for more information on supported tile backends
 
 !!! note
 
