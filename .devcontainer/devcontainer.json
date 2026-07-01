@@ -3,9 +3,6 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "forwardPorts": [5000],
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12"
-    },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
   "postStartCommand": "docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d"
