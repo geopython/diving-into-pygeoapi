@@ -1,7 +1,6 @@
 {
   "name": "pygeoapi",
   "image": "geopython/geopython-workshop:latest",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
