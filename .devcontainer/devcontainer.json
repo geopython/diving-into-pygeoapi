@@ -1,8 +1,9 @@
 {
   "name": "pygeoapi",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
-  "postStartCommand": "sleep 1; docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d"
+  "postStartCommand": "docker compose -f /workspaces/${localWorkspaceFolderBasename}/workshop/exercises/docker-compose.yml up -d"
 }
