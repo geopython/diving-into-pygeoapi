@@ -3,5 +3,6 @@
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-  }
+  },
+  "postStartCommand": "until docker info >/dev/null 2>&1; do sleep 1; done; docker compose -f workshop/exercises/docker-compose.yml up -d"
 }
