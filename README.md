@@ -48,7 +48,7 @@ zensical serve  # website is made available on http://localhost:8000
 You can also use Github Codespaces after forking the repository:
 <img width="964" height="269" alt="image" src="https://github.com/user-attachments/assets/e041edd6-c7cc-48ce-b5ea-f7bf7a1cbb7c" />
 
-You can use Terminal as usually. Navigate to exercises folder with ```cd workshop/exercises``` to proceed with the exercises. Docker container is already started from that folder:
+You can use Terminal as usually. Navigate to exercises folder with ```cd workshop/exercises``` to proceed with the exercises. Docker container is already started from that folder. If you want to make changes to pygeoapi.config.yml, you can run ```docker compose down``` from the exercise folder, make your changes and restart it with ```docker compose up -d```.
 <img width="1409" height="738" alt="image" src="https://github.com/user-attachments/assets/28090661-e9c8-4e94-b093-6171af4f4173" />
 
 Then you can open port 5000 in the browser:
