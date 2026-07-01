@@ -1,6 +1,6 @@
 {
   "name": "pygeoapi",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "image": "geopython/geopython-workshop:latest",
   "forwardPorts": [5000],
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
