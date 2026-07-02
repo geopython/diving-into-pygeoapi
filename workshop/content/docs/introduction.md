@@ -20,8 +20,8 @@ The pygeoapi [website](https://pygeoapi.io) is the main entrypoint for both end-
 where you can find:
 
 * [official documentation](https://docs.pygeoapi.io)
-* the [default](https://pygeoapi.io/presentations/default) and [latest](https://pygeoapi.io/presentations/foss4g2023) presentations
-* [documentation and presentations archive](https://pygeoapi.io/documentation)
+* [presentations archive](https://pygeoapi.io/presentations)
+* [documentation](https://pygeoapi.io/documentation)
 * code on [GitHub](https://github.com/geopython/pygeoapi)
 * Docker images [available on Docker Hub](https://hub.docker.com/r/geopython/pygeoapi)
 * pygeoapi releases in the [Python Package Index (PyPI)](https://pypi.org/project/pygeoapi)
