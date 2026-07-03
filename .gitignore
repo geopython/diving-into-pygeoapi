@@ -1,7 +1,9 @@
 .DS_Store
 workshop/exercises/data/tiles
+workshop/exercises/data/brazil/guama_river.gpkg
+workshop/exercises/data/airport.gpkg-*
+workshop/exercises/data/tartu/metadata/load_tinydb_records.py
 workshop/content/.cache
 workshop/content/site
-
 .idea
 .venv

@@ -315,6 +315,11 @@ resources:
 #                  name: png
 #                  mimetype: image/png
 #              storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
+#            - type: feature
+#              name: SQLiteGPKG
+#              data: /data/airport.gpkg
+#              id_field: fid
+#              table: airport
 ## END - EXERCISE 4 - Maps
 
 ## START - EXERCISE 5 - Tiles
