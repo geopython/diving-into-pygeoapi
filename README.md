@@ -54,6 +54,7 @@ Then you can open port 5000 in the browser:
 You can use Terminal as usually. Navigate to exercises folder with ```cd workshop/exercises``` to proceed with the exercises. Docker container is already started from that folder. If you want to make changes to pygeoapi.config.yml, you can run ```docker compose down``` (from the same exercise folder), make your changes and restart it with ```docker compose up -d```.
 <img width="1409" height="738" alt="image" src="https://github.com/user-attachments/assets/28090661-e9c8-4e94-b093-6171af4f4173" />
 
+NOTE: Please consult [GitHub Codespaces documentation](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-and-billed-use-by-personal-accounts) for more information on personal GitHub accounts and free usage.
 
 ### Translating the workshop to a different language
 
