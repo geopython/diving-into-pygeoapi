@@ -16,7 +16,7 @@ as well as [CoverageJSON](https://covjson.org) and native output.
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-coverages.html) for more information on supported raster backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-coverages.html) for more information on supported raster backends
 
 
 ## Publish a raster dataset

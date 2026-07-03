@@ -20,7 +20,7 @@ and coverage provider plugins.
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-edr.html) for more information on supported EDR backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-edr.html) for more information on supported EDR backends
 
 
 ## Publish environmental data in pygeoapi

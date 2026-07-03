@@ -18,7 +18,7 @@ A pygeoapi suporta a especificação OGC API - Records, usando Elasticsearch e T
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html) para mais informações sobre backends de catálogo/metadados suportados
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-records.html) para mais informações sobre backends de catálogo/metadados suportados
 
 
 ## Publicar registos de metadados na pygeoapi

@@ -20,7 +20,7 @@ de funcionalidades como de cobertura.
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-edr.html) para mais informações sobre backends EDR suportados
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-edr.html) para mais informações sobre backends EDR suportados
 
 
 ## Publicar dados ambientais na pygeoapi

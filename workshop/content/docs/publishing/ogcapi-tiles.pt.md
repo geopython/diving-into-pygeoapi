@@ -17,7 +17,7 @@ A [OGC API - Tiles](https://ogcapi.ogc.org/tiles) fornece uma API Web para dispo
 
 ## Suporte da pygeoapi
 
-A pygeoapi suporta a especificação core da OGC API - Tiles e é capaz de anunciar um conjunto de tiles existente. Note que a própria pygeoapi não renderiza tiles a partir de dados de origem, mas suporta a publicação de tiles de diferentes [fornecedores de backend](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html#providers). 
+A pygeoapi suporta a especificação core da OGC API - Tiles e é capaz de anunciar um conjunto de tiles existente. Note que a própria pygeoapi não renderiza tiles a partir de dados de origem, mas suporta a publicação de tiles de diferentes [fornecedores de backend](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providers). 
 
 !!! note
 
@@ -25,7 +25,7 @@ A pygeoapi suporta a especificação core da OGC API - Tiles e é capaz de anunc
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-tiles.html) para mais informações sobre os backends de tiles suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html) para mais informações sobre os backends de tiles suportados.
 
 !!! note
 
