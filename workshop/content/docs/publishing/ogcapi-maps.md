@@ -59,11 +59,20 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
               format:
                   name: png
                   mimetype: image/png
+            - type: feature
+              name: SQLiteGPKG
+              data: /data/airport.gpkg
+              id_field: fid
+              table: airport
     ```
 
 !!! note
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
+
+!!! note
+
+    The airport data is published as **both** a map and a feature collection through a single endpoint (`/collections/airports`).  How is this made possible in the above configuration?
 
 ## pygeoapi as a WMS proxy
 
