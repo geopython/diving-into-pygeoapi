@@ -115,7 +115,7 @@ A parte mais relevante é a secção `providers`. Aqui, definimos um `Provider C
 
 !!! Tip
 
-    A pygeoapi inclui [inúmeros fornecedores de dados](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) que permitem o acesso a uma variedade de formatos de dados. Através do plugin OGR/GDAL, o número de formatos suportados é quase ilimitado. Consulte a [página do fornecedor de dados](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) para saber como pode configurar uma ligação ao conjunto de dados da sua escolha. Pode sempre copiar um exemplo de configuração relevante e colocá-lo na secção de conjuntos de dados do ficheiro de configuração da pygeoapi para o seu projeto futuro.
+    A pygeoapi inclui [inúmeros fornecedores de dados](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#providers) que permitem o acesso a uma variedade de formatos de dados. Através do plugin OGR/GDAL, o número de formatos suportados é quase ilimitado. Consulte a [página do fornecedor de dados](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#providers) para saber como pode configurar uma ligação ao conjunto de dados da sua escolha. Pode sempre copiar um exemplo de configuração relevante e colocá-lo na secção de conjuntos de dados do ficheiro de configuração da pygeoapi para o seu projeto futuro.
 
 ## Testar
 

@@ -19,7 +19,7 @@ pygeoapi supports all of the above OGC API - Features specification parts (Part 
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html) for more information on supported vector backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html) for more information on supported vector backends
 
 !!! note
 

@@ -20,7 +20,7 @@ com a capacidade de armazenar e recuperar o estado/resultados de 'tarefas'.
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-processes.html) para mais informações sobre publicação de processos na pygeoapi
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-processes.html) para mais informações sobre publicação de processos na pygeoapi
 
 
 ## Publicar código Python como um processo na pygeoapi

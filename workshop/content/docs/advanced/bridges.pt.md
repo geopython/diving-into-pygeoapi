@@ -67,7 +67,7 @@ para avaliar se o novo conjunto de dados foi publicado.
  
 Note estes importantes excertos de configuração sob `providers`:
 
-* Usamos o [Fornecedor OGR](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr) da pygeoapi. 
+* Usamos o [Fornecedor OGR](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#ogr) da pygeoapi. 
 Este é o backend mais versátil da pygeoapi para suportar numerosos formatos. Usar a biblioteca GDAL/OGR (bindings Python) permite à pygeoapi conectar-se a [cerca de 80+ Formatos Vetoriais](https://gdal.org/drivers/vector).
 Podíamos ter usado o Fornecedor `OGR` em vez do Fornecedor `SQLiteGPKG` acima no exercício `osm_places-vec` acima.
 

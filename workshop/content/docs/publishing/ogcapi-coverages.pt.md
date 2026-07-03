@@ -14,7 +14,7 @@ A pygeoapi suporta a especificação de rascunho da OGC API - Coverages, com o [
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-coverages.html) para mais informações sobre os backends raster suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-coverages.html) para mais informações sobre os backends raster suportados.
 
 ## Publicar um conjunto de dados raster
 

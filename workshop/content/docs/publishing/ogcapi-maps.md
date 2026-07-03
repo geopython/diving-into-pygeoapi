@@ -15,7 +15,7 @@ pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
 
 ## Publish a raster dataset
 
@@ -63,7 +63,7 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
 
 !!! note
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) for more information on supported map backends
+    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
 
 ## pygeoapi as a WMS proxy
 

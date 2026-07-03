@@ -67,7 +67,7 @@ to evaluate whether the new dataset has been published.
  
 Note these important configuration slices under `providers`:
 
-* We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#ogr). 
+* We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#ogr). 
 This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
 We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `osm_places-vec` exercise above.
 

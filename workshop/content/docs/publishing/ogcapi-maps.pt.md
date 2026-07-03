@@ -14,7 +14,7 @@ A pygeoapi suporta a especificação da OGC API - Maps, utilizando o [MapServer 
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) para mais informações sobre os backends de mapa suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) para mais informações sobre os backends de mapa suportados.
 
 ## Publicar um conjunto de dados raster
 
@@ -62,7 +62,7 @@ Nesta secção, iremos expor um ficheiro Geopackage disponível na localização
 
 !!! note
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-maps.html) para mais informações sobre os backends de mapa suportados.
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) para mais informações sobre os backends de mapa suportados.
 
 ## A pygeoapi como um proxy WMS
 

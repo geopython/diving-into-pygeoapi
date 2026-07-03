@@ -122,9 +122,9 @@ and `lat` in the CSV file. Notice the `storage_crs` parameter, which indicates t
 
 !!! Tip
 
-    pygeoapi includes [numerous data providers](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) which
+    pygeoapi includes [numerous data providers](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#providers) which
     enable access to a variety of data formats. Via the OGR/GDAL plugin the number of supported formats is almost limitless.
-    Consult the [data provider page](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#providers) how you can set up
+    Consult the [data provider page](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#providers) how you can set up
     a connection to your dataset of choice. You can always copy a relevant example configuration and place it in the datasets section of
     the pygeoapi configuration file for your future project.
 

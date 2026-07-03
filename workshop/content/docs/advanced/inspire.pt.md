@@ -64,7 +64,7 @@ e as Boas Práticas relevantes.
         python3 load_tinydb_records.py <path/to/xml-files> <output.db>
         ```
 
-    Agora configure [TinyDB como fornecedor para OGC API - Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Reinicie o serviço e verifique o resultado. Verifique também a saída XML de alguns dos registos. 
+    Agora configure [TinyDB como fornecedor para OGC API - Records](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-records.html#tinydbcatalogue). Reinicie o serviço e verifique o resultado. Verifique também a saída XML de alguns dos registos. 
 
 
 ## OGC API e os modelos de dados INSPIRE
@@ -89,7 +89,7 @@ em coleções. A pygeoapi também fornece um mecanismo para anunciar os conceito
 
 !!! question "Publicar uma lista de códigos via OGC API"
 
-    Uma lista de códigos de tipos de solo alemã foi disponibilizada em formato CSV em `workshop/exercises/data/bodenart.en.csv`. Use o [fornecedor CSV](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) para publicar este conjunto de dados na pygeoapi. Que URL usaria para referenciar um conceito na lista publicada?
+    Uma lista de códigos de tipos de solo alemã foi disponibilizada em formato CSV em `workshop/exercises/data/bodenart.en.csv`. Use o [fornecedor CSV](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#csv) para publicar este conjunto de dados na pygeoapi. Que URL usaria para referenciar um conceito na lista publicada?
 
 ``` {.yaml linenums="1"}
 SoilTypes:

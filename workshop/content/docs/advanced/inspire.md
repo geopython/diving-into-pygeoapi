@@ -64,7 +64,7 @@ recommendation and the relevant Good Practices.
         python3 load_tinydb_records.py <path/to/xml-files> <output.db>
         ```
 
-    Now configure [TinyDB as a provider for OGC API - Records](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the XML output of some of the records. 
+    Now configure [TinyDB as a provider for OGC API - Records](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-records.html#tinydbcatalogue). Restart the service and verify the result. Verify also the XML output of some of the records. 
 
 
 ## OGC API and the INSPIRE data models
@@ -89,7 +89,7 @@ encoding. In the coincidence that a concept has a geometry property, the codelis
 
 !!! question "Publish a codelist via OGC API"
 
-    A German Soiltype codelist has been made available in CSV format in `workshop/exercises/data/bodenart.en.csv`. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
+    A German Soiltype codelist has been made available in CSV format in `workshop/exercises/data/bodenart.en.csv`. Use the [CSV provider](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#csv) to publish this dataset in pygeoapi. Which URL would you use to reference a concept in the published list?
 
 ``` {.yaml linenums="1"}
 SoilTypes:

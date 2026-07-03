@@ -22,7 +22,7 @@ por examplo, Elasticsearch).
 
 !!! note "Nota"
 
-    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/data-publishing/ogcapi-features.html) 
+    Consulte [a documentação oficial](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html) 
     para mais informações sobre os backends vetoriais suportados.
 
 !!! note "Nota"
