@@ -7,7 +7,7 @@ title: Exercise 4 - Maps of geospatial data via OGC API - Maps
 [OGC API - Maps](https://ogcapi.ogc.org/maps) provides a Web API to access
 any geospatial data as a georeferenced map image.
 
-* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html)
+* [OGC API - Maps](https://docs.ogc.org/is/20-058/20-058.html)
 
 ## pygeoapi support
 
