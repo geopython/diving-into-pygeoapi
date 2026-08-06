@@ -17,7 +17,7 @@ pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
 
-## Publish a raster dataset
+## Publish a vector dataset
 
 In this section we'll be exposing a Geopackage file available at `workshop/exercises/data/airport.gpkg` location using [MapServer MapScript](https://www.mapserver.org/mapscript). This data can be consumed with various clients which are compliant with OGC APIs - Maps. List of few such clients can be found [here](https://github.com/opengeospatial/ogcapi-maps/blob/master/implementations.adoc#clients). Here we can also pass style in *.sld* format. Which can be generated on [Geoserver](https://docs.geoserver.org/stable/en/user/styling/index.html), [QGIS](https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html), etc. 
  
