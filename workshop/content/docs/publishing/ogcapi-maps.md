@@ -9,6 +9,14 @@ any geospatial data as a georeferenced map image.
 
 * [OGC API - Maps](https://docs.ogc.org/is/20-058/20-058.html)
 
+Here are a few things that a client can request from a OGC API - Maps server:
+
+* Request a visual representation of one or more geospatial data layers in different styles;
+* Select by area, time and resolution of interest;
+* Change parameters such as the width, height and coordinate reference systems.
+
+OGC API - Maps is great for *creating custom maps, that could be used for printing or displaying as static images*. OGC API - Maps is **not** great for *providing interactive maps on the web*; there are Standards that are more suitable for that purpose, from the efficiency point of view (see [OGC API - Tiles](./ogcapi-tiles.md))
+
 ## pygeoapi support
 
 pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](https://www.mapserver.org/mapscript) and a WMS facade as core backends.
@@ -66,15 +74,54 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
               table: airport
     ```
 
-!!! note
+After the server has started you can access the collection page here:
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
+http://localhost:5000/collections/airports
+
+And the map here:
+
+http://localhost:5000/collections/airports/map?f=png
+
+![](../assets/images/map_4326.png){ width=50% }
 
 !!! note
 
     The airport data is published as **both** a map and a feature collection through a single endpoint (`/collections/airports`).  How is this made possible in the above configuration?
 
-## pygeoapi as a WMS proxy
+The map comes with the default CRS84 CRS, but you can easily change it with the `crs` parameter:
+
+http://localhost:5000/collections/airports/map?f=png&crs=EPSG:3857
+
+You can also use tweak other parameters, like bounding box (`bbox`), bounding box crs (`bbox-crs`) and `with` & `height`, to create custom maps:
+
+http://localhost:5000/collections/airports/map?f=png&bbox-crs=OGC:CRS84&bbox=-142,42,-52,84
+
+![](../assets/images/map_bbox.png){ width=50% }
+
+http://localhost:5000/collections/airports/map?f=png&width=400&height=400
+
+![](../assets/images/map_square.png){ width=50% }
+
+
+!!! note
+
+    Check-out the [OGC API - Maps Standard](https://docs.ogc.org/is/20-058/20-058.html), for more details about the map parameters. 
+
+!!! note
+
+    OGC API - Maps supports CRS from CURIEs (e.g.: `EPSG:4326`, `CRS84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS84]`) and URIs:
+    
+    <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3857>
+
+    <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3395>
+
+    | ![map](../assets/images/map_4326.png) | ![map](../assets/images/map_3857.png) | ![map](../assets/images/map_3395.png) |
+    |:---:|:---:|:---:|
+    | EPSG:4326 | EPSG:3857 | EPSG:3395 |
+
+    You can read more about the different ways of expressing CRSs on the maps section of the [pygeoapi documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html).
+
+## OPTIONAL: pygeoapi as a WMS proxy
 
 You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WMS as OGC API - Maps](../advanced/bridges.md#publishing-wms-as-ogc-api-maps).
 
@@ -90,8 +137,13 @@ QGIS added support for API's providing rendered image layers via its raster supp
     - Open the `Add raster layer panel`.
     - Select `OGCAPI` for Source type.
     - Add the local endpoint as source `http://localhost:5000/collections/airports`.
-    - Select `PNG` as image format.
+    - Select `MAP` as API.
     - Finally add the layer to the map.
+
+
+    ![](../assets/images/oam1.png){ width=50% }
+
+    ![](../assets/images/oam2.png){ width=50% }
 
 ### OWSLib
 
