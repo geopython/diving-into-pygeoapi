@@ -15,7 +15,9 @@ Here are a few things that a client can request from a OGC API - Maps server:
 * Select by area, time and resolution of interest;
 * Change parameters such as the width, height and coordinate reference systems.
 
-OGC API - Maps is great for *creating custom maps, that could be used for printing or displaying as static images*. OGC API - Maps is **not** great for *providing interactive maps on the web*; there are Standards that are more suitable for that purpose, from the efficiency point of view (see [OGC API - Tiles](./ogcapi-tiles.md))
+!!! note
+
+    While OGC API - Maps is great for providing dynamic maps on the Web, if your data has can be based on a set tiling scheme, and the resulting maps do not need to be dynamically generated, [OGC API - Tiles](./ogcapi-tiles.md) provides a suitable approach to serve efficiently using less server resources.
 
 ## pygeoapi support
 
@@ -92,7 +94,7 @@ The map comes with the default CRS84 CRS, but you can easily change it with the 
 
 http://localhost:5000/collections/airports/map?f=png&crs=EPSG:3857
 
-You can also use tweak other parameters, like bounding box (`bbox`), bounding box crs (`bbox-crs`) and `with` & `height`, to create custom maps:
+You can also adjust other parameters (such as bounding box (`bbox`), bounding box CRS (`bbox-crs`), as well as `width` and `height` to create custom maps:
 
 http://localhost:5000/collections/airports/map?f=png&bbox-crs=OGC:CRS84&bbox=-142,42,-52,84
 
@@ -105,11 +107,11 @@ http://localhost:5000/collections/airports/map?f=png&width=400&height=400
 
 !!! note
 
-    Check-out the [OGC API - Maps Standard](https://docs.ogc.org/is/20-058/20-058.html), for more details about the map parameters. 
+    See the [OGC API - Maps Standard](https://docs.ogc.org/is/20-058/20-058.html) for more details about the map parameters. 
 
 !!! note
 
-    OGC API - Maps supports CRS from CURIEs (e.g.: `EPSG:4326`, `CRS84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS84]`) and URIs:
+    OGC API - Maps supports CRS from Compact URIs (CURIEs, i.e. `EPSG:4326`, `CRS84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS84]`) and URIs:
     
     <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3857>
 

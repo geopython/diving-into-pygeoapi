@@ -29,7 +29,7 @@ pygeoapi supports the core OGC API - Tiles specification, and is able to adverti
 
 !!! note
 
-    By default pygeoapi supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point. For additional TMS, please check the [pygeoapi documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providing-custom-tile-matrix-set-definitions).
+    By default, pygeoapi supports two well known Tile Matrix Sets: `WorldCRS84Quad` and `WebMercatorQuad`. Their definition is published on the [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets) end point. For additional TMS support, please check the [pygeoapi documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providing-custom-tile-matrix-set-definitions).
 
 ## Publish pre-rendered vector tiles
 
@@ -60,7 +60,7 @@ Let's generate the tiles as the first step using tippecanoe:
         ```
  
 !!! note
-    Please note that the tippecanoe tool requires the input file to be in `WGS84`, and it **always** outputs tiles in `WebMercator`.
+    Please note that the tippecanoe tool requires the input file to be in `WGS84`, and **always** outputs tiles in `WebMercator`.
 
 !!! question "Update the pygeoapi configuration"
 
