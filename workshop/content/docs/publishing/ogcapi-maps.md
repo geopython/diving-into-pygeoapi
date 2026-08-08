@@ -7,7 +7,17 @@ title: Exercise 4 - Maps of geospatial data via OGC API - Maps
 [OGC API - Maps](https://ogcapi.ogc.org/maps) provides a Web API to access
 any geospatial data as a georeferenced map image.
 
-* [OGC API - Maps](https://docs.ogc.org/DRAFTS/20-058.html)
+* [OGC API - Maps](https://docs.ogc.org/is/20-058/20-058.html)
+
+Here are a few things that a client can request from a OGC API - Maps server:
+
+* Request a visual representation of one or more geospatial data layers in different styles;
+* Select by area, time and resolution of interest;
+* Change parameters such as the width, height and coordinate reference systems.
+
+!!! note
+
+    While OGC API - Maps is great for providing dynamic maps on the Web, if your data has can be based on a set tiling scheme, and the resulting maps do not need to be dynamically generated, [OGC API - Tiles](./ogcapi-tiles.md) provides a suitable approach to serve efficiently using less server resources.
 
 ## pygeoapi support
 
@@ -17,7 +27,7 @@ pygeoapi supports the OGC API - Maps specification, using [MapServer MapScript](
 
     See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
 
-## Publish a raster dataset
+## Publish a vector dataset
 
 In this section we'll be exposing a Geopackage file available at `workshop/exercises/data/airport.gpkg` location using [MapServer MapScript](https://www.mapserver.org/mapscript). This data can be consumed with various clients which are compliant with OGC APIs - Maps. List of few such clients can be found [here](https://github.com/opengeospatial/ogcapi-maps/blob/master/implementations.adoc#clients). Here we can also pass style in *.sld* format. Which can be generated on [Geoserver](https://docs.geoserver.org/stable/en/user/styling/index.html), [QGIS](https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html), etc. 
  
@@ -66,15 +76,54 @@ In this section we'll be exposing a Geopackage file available at `workshop/exerc
               table: airport
     ```
 
-!!! note
+After the server has started you can access the collection page here:
 
-    See [the official documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html) for more information on supported map backends
+http://localhost:5000/collections/airports
+
+And the map here:
+
+http://localhost:5000/collections/airports/map?f=png
+
+![](../assets/images/map_4326.png){ width=50% }
 
 !!! note
 
     The airport data is published as **both** a map and a feature collection through a single endpoint (`/collections/airports`).  How is this made possible in the above configuration?
 
-## pygeoapi as a WMS proxy
+The map comes with the default CRS84 CRS, but you can easily change it with the `crs` parameter:
+
+http://localhost:5000/collections/airports/map?f=png&crs=EPSG:3857
+
+You can also adjust other parameters (such as bounding box (`bbox`), bounding box CRS (`bbox-crs`), as well as `width` and `height` to create custom maps:
+
+http://localhost:5000/collections/airports/map?f=png&bbox-crs=OGC:CRS84&bbox=-142,42,-52,84
+
+![](../assets/images/map_bbox.png){ width=50% }
+
+http://localhost:5000/collections/airports/map?f=png&width=400&height=400
+
+![](../assets/images/map_square.png){ width=50% }
+
+
+!!! note
+
+    See the [OGC API - Maps Standard](https://docs.ogc.org/is/20-058/20-058.html) for more details about the map parameters. 
+
+!!! note
+
+    OGC API - Maps supports CRS from Compact URIs (CURIEs, i.e. `EPSG:4326`, `CRS84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS84]`) and URIs:
+    
+    <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3857>
+
+    <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3395>
+
+    | ![map](../assets/images/map_4326.png) | ![map](../assets/images/map_3857.png) | ![map](../assets/images/map_3395.png) |
+    |:---:|:---:|:---:|
+    | EPSG:4326 | EPSG:3857 | EPSG:3395 |
+
+    You can read more about the different ways of expressing CRSs on the maps section of the [pygeoapi documentation](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html).
+
+## OPTIONAL: pygeoapi as a WMS proxy
 
 You can check the "pygeoapi as a Bridge to Other Services" section to learn how to [publish WMS as OGC API - Maps](../advanced/bridges.md#publishing-wms-as-ogc-api-maps).
 
@@ -90,8 +139,13 @@ QGIS added support for API's providing rendered image layers via its raster supp
     - Open the `Add raster layer panel`.
     - Select `OGCAPI` for Source type.
     - Add the local endpoint as source `http://localhost:5000/collections/airports`.
-    - Select `PNG` as image format.
+    - Select `MAP` as API.
     - Finally add the layer to the map.
+
+
+    ![](../assets/images/oam1.png){ width=50% }
+
+    ![](../assets/images/oam2.png){ width=50% }
 
 ### OWSLib
 

@@ -82,13 +82,17 @@ functionality to users, as well as software implementation.
 
 pygeoapi implements numerous OGC API standards and draft standards. In addition, it is compliance certified and even a Reference Implementation (RI) for some of them. Compliance certification is important to remove interoperability risks. RI are always compliance certified. From OGC [Compliance Testing Program Policies & Procedures 08-134r11](https://docs.ogc.org/pol/08-134r11.html#toc26):
 
-!!! [Citation](https://docs.ogc.org/pol/08-134r11.html#toc17)
+!!! Citation
 
-    Candidate Products that pass all the tests in a Compliance Test Package, and that OGC has reviewed and certified as having passed those tests, are considered compliant with that Implementation Standard version. 
+    Candidate Products that pass all the tests in a Compliance Test Package, and that OGC has reviewed and certified as having passed those tests, are considered compliant with that Implementation Standard version.
 
-!!! [Citation](https://docs.ogc.org/pol/08-134r11.html#term-reference-implementation-_ri_)
+    Source: <https://docs.ogc.org/pol/08-134r11.html#toc17>
+
+!!! Citation
 
     A Reference Implementation is a fully functional, licensed copy of a tested, branded software that has passes the test for an associated conformance class in a version of an Implementation Standard and that is free and publicly available for testing via a web service or download.
+
+    Source: <https://docs.ogc.org/pol/08-134r11.html#term-reference-implementation-_ri_>
 
 
 | Standard                               | pygeoapi status          | Included in this workshop |
