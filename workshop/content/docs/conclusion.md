@@ -11,12 +11,12 @@ goal is enabling low barrier, simple and flexible data publishing, using the OGC
 
 [![OGC APIs banner](assets/images/OGC_APIs_banner.jpg){ width=40% }](https://ogcapi.ogc.org)
 
-# FOSS4G Europe 2026
+# FOSS4G 2026
 
-For those in attendance at [FOSS4G Europe 2026](https://2026.foss4g.org), please consider attending the following pygeoapi presentations:
+For those in attendance at [FOSS4G 2026](https://2026.foss4g.org), please consider attending the following pygeoapi presentations:
 
-- [pygeoapi project status presentation](https://talks.osgeo.org/foss4g-europe-2026/talk/review/DZVDQHG7ZYFWMBKAYGZUQGY3JDKBGKBR) on Wednesday 01 July at 15h, in Aula Magna
-- "Optimizing resource usage of interoperable geospatial processing infrastructures with Kubernetes" on Wednesday 01 July at 15h30, in Aula Magna
+- [pygeoapi project status presentation](https://talks.osgeo.org/foss4g-2026/talk/8WT3LU) on Tuesday 01 September at 17h, in Room 1
+- [Running pygeoapi Cloud Native at Scale](https://talks.osgeo.org/foss4g-2026/talk/R7GEQB) on Thursday 03 September at 14h, in Room 5
 
 # Contributing
 

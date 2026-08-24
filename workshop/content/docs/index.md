@@ -4,7 +4,7 @@ title: Diving into pygeoapi
 
 # Welcome to the Diving into pygeoapi workshop!
 
-Version: 1.9.0
+Version: 1.10.0
 
 ![pygeoapi logo](assets/images/pygeoapi-logo.png)
 
@@ -15,13 +15,17 @@ Version: 1.9.0
 
 This workshop covers a wide range of topics (install/setup/configuration, publishing, cloud, templating, plugins, etc.). Please see the left hand navigation for the table of contents.
 
-# Your [FOSS4G Europe 2026](https://2026.europe.foss4g.org) workshop team
+# Your [FOSS4G 2026](https://2026.foss4g.org) workshop team
 
 <table>    
     <tr>
         <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
-        <td><a href="https://github.com/justb4"><img width="150" src="https://avatars.githubusercontent.com/u/582630?v=4"/></a></td>
-        <td><a href="https://github.com/pvgenuchten"><img width="150" src="https://avatars.githubusercontent.com/u/299829?v=4"/></a></td>
+        <td><a href="https://github.com/doublebyte1"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://github.com/jorgejesus"><img width="150" src="https://avatars.githubusercontent.com/u/1275400?v=4"/></a></td>
+        <td><a href="https://github.com/PascalLike"><img width="150" src="https://avatars.githubusercontent.com/u/1323093?v=4"/></a></td>
+        <td><a href="https://github.com/webb-ben"><img width="150" src="https://avatars.githubusercontent.com/u/40066515?v=4"/></a></td>
+        <td><a href="https://github.com/ldesousa"><img width="150" src="https://avatars.githubusercontent.com/u/1137878?v=4"/></a></td>
+        <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
     </tr>
 </table>
 
