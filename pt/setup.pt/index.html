@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.53">
+      <meta name="generator" content="zensical-0.0.57">
     
     
       
@@ -40,7 +40,7 @@
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/classic/main.39e53929.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.38807bfb.min.css">
       
       
 
@@ -1442,7 +1442,7 @@ Se não for o caso, existe uma abundância de materiais introdutórios que podem
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">'geopython/pygeoapi:latest'</span><span class="w"> </span>locally
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
@@ -1471,7 +1471,7 @@ Se não for o caso, existe uma abundância de materiais introdutórios que podem
 </div>
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>geopython/pygeoapi:latest
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;geopython/pygeoapi:latest&#39;</span><span class="w"> </span>locally
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">'geopython/pygeoapi:latest'</span><span class="w"> </span>locally
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>geopython/pygeoapi
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>d7bfe07ed847:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>d5d0144a7164:<span class="w"> </span>Already<span class="w"> </span>exists<span class="w"> </span>
@@ -1532,13 +1532,13 @@ Para facilitar o desenvolvimento, vamos substituir a configuração da pygeoapi 
 </div>
 </div>
 <p>Abra o ficheiro no seu editor de texto favorito e altere o título e a descrição da API:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-59">59</a></span>
+<div class="language-yml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-59">59</a></span>
 <span class="normal"><a href="#__codelineno-6-60">60</a></span>
 <span class="normal"><a href="#__codelineno-6-61">61</a></span>
-<span class="normal"><a href="#__codelineno-6-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59"></a>metadata:
-</span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60"></a>    identification:
-</span><span id="__span-6-61"><a id="__codelineno-6-61" name="__codelineno-6-61"></a>        title: A minha primeira execução da pygeoapi
-</span><span id="__span-6-62"><a id="__codelineno-6-62" name="__codelineno-6-62"></a>        description: a pygeoapi fornece uma API para dados geoespaciais
+<span class="normal"><a href="#__codelineno-6-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60"></a><span class="w">    </span><span class="nt">identification</span><span class="p">:</span>
+</span><span id="__span-6-61"><a id="__codelineno-6-61" name="__codelineno-6-61"></a><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A minha primeira execução da pygeoapi</span>
+</span><span id="__span-6-62"><a id="__codelineno-6-62" name="__codelineno-6-62"></a><span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a pygeoapi fornece uma API para dados geoespaciais</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Agora execute o contentor com o ficheiro de configuração substituído:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux/Mac</label><label for="__tabbed_4_2">Windows (PowerShell)</label></div>
@@ -1595,7 +1595,7 @@ Dentro do diretório de dados, pode armazenar dados vetoriais, ficheiros raster 
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">'python:3.10-slim'</span><span class="w"> </span>locally
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
@@ -1608,7 +1608,7 @@ Dentro do diretório de dados, pode armazenar dados vetoriais, ficheiros raster 
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>root@docker-desktop:/#<span class="w"> </span>python3
 </span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">'http://localhost:5000'</span><span class="o">)</span>
 </span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>&gt;&gt;&gt;<span class="w"> </span>w
 </span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
 </span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
@@ -1618,7 +1618,7 @@ Dentro do diretório de dados, pode armazenar dados vetoriais, ficheiros raster 
 </div>
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>owslib<span class="w"> </span>python:3.10-slim<span class="w"> </span>/bin/bash
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;python:3.10-slim&#39;</span><span class="w"> </span>locally
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">'python:3.10-slim'</span><span class="w"> </span>locally
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="m">3</span>.10-slim:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/python
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>5b5fe70539cd:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>f4b0e4004dc0:<span class="w"> </span>Pull<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>
@@ -1631,7 +1631,7 @@ Dentro do diretório de dados, pode armazenar dados vetoriais, ficheiros raster 
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>root@docker-desktop:/#<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>owslib
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>root@docker-desktop:/#<span class="w"> </span>python3
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>owslib.ogcapi.features<span class="w"> </span>import<span class="w"> </span>Features
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">&#39;http://localhost:5000&#39;</span><span class="o">)</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Features<span class="o">(</span><span class="s1">'http://localhost:5000'</span><span class="o">)</span>
 </span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>&gt;&gt;&gt;<span class="w"> </span>w
 </span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>&lt;owslib.ogcapi.features.Features<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>0x7ff493e6f850&gt;
 </span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">conformance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>w.conformance<span class="o">()</span>
@@ -1720,7 +1720,7 @@ Dentro do diretório de dados, pode armazenar dados vetoriais, ficheiros raster 
       <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.69c251d7.min.js"></script>
+      <script src="../assets/javascripts/bundle.49251538.min.js"></script>
       
     
   </body>
