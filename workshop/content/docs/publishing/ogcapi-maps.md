@@ -111,7 +111,7 @@ http://localhost:5000/collections/airports/map?f=png&width=400&height=400
 
 !!! note
 
-    OGC API - Maps supports CRS from Compact URIs (CURIEs, i.e. `EPSG:4326`, `CRS84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS84]`) and URIs:
+    OGC API - Maps supports CRS from Compact URIs (CURIEs, i.e. `EPSG:4326`, `CRS:84`), safe CURIEs (e.g.: `[EPSG:4326]`, `[CRS:84]`) and URIs:
     
     <http://localhost:5000/collections/airports/map?f=png&crs=https://www.opengis.net/def/crs/EPSG/0/3857>
 
