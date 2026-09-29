@@ -1,0 +1,13 @@
+{
+  "units": "degC",
+  "long_name": "2 m air temperature",
+  "model": "GFS",
+  "resolution": "0.5 degree",
+  "cycle": "2023092718Z",
+  "coordinates": "heightAboveGround step valid_time",
+  "_ARRAY_DIMENSIONS": [
+    "time",
+    "lat",
+    "lon"
+  ]
+}
