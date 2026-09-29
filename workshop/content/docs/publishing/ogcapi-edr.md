@@ -25,7 +25,7 @@ and coverage provider plugins.
 
 ## Publish environmental data in pygeoapi
 
-Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOADS data can be found in `workshop/exercises/data/coads_sst.nc`:
+Let's try publishing sample [weather forecast model data](https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast) from NOAA via the EDR xarray plugin. The sample data can be found in `workshop/exercises/data/gfs_tmp2m.zarr`:
 
 
 !!! question "Update the pygeoapi configuration"
@@ -33,42 +33,46 @@ Let's try publishing some ICOADS data via the EDR xarray plugin. The sample ICOA
     Open the pygeoapi configuration file in a text editor. Add a new dataset section as follows:
 
 ``` {.yaml linenums="1"}
-    icoads-sst:
+    noaa-gfs:
         type: collection
-        title: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
-        description: International Comprehensive Ocean-Atmosphere Data Set (ICOADS)
+        title: Global Forecast System (GFS), 2 metre air temperature
+        description: Global Forecast System (GFS), 2 metre air temperature
         keywords:
-            - icoads
-            - sst
+            - gfs
+            - forecast
             - air temperature
         extents:
             spatial:
-                bbox: [-180,-90,180,90]
+                bbox: [-128,23,-65,50]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin: 2000-01-16T06:00:00Z
-                end: 2000-12-16T06:00:00Z
+                begin: 2023-09-27T18:00:00Z
+                end: 2023-09-28T06:00:00Z
         links:
             - type: text/html
               rel: canonical
               title: information
-              href: https://psl.noaa.gov/data/gridded/data.coads.1deg.html
+              href: https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast
               hreflang: en-US
         providers:
             - type: edr
               name: xarray-edr
-              data: /data/coads_sst.nc
+              data: /data/gfs_tmp2m.zarr
+              x_field: lon
+              y_field: lat
+              time_field: time
               format:
-                  name: NetCDF
-                  mimetype: application/x-netcdf
+                  name: zarr
+                  mimetype: application/zip
 ```
 
 Save the configuration and restart Docker Compose. Navigate to <http://localhost:5000/collections> to evaluate whether the new dataset has been published.
 
-At first glance, the `icoads-sst` collection appears as a normal OGC API - Coverages collection. Look a bit closer at the collection description, and notice
-that there is a `parameter_names` key that describes EDR parameter names for the collection queries.
+At first glance, the Global Forecast System (GFS), 2 metre air temperature (`noaa-gfs`) collection appears as a normal OGC API collection. Look a bit closer at the collection description (<http://localhost:5000/collection/noaa-gfs>), and notice the "Data Queries" and "Parameters" sections (add `f=json` to the collection description URL to inspect the additional EDR specific elements such as `data_queries` and `parameter_names` various JSON elements).  The "Parameters" section describes the environmental parameters associated with the collection which can be used as part of a collection query.
 
-Try visualizing the following EDR position query in a web browser: <http://localhost:5000/collections/icoads-sst/position?coords=POINT(174.7645%20-36.8509)>
+Try visualizing the following EDR position query (focused on Fort Lauderdale, USA) in a web browser: <http://localhost:5000/collections/noaa-gfs/position?coords=POINT(-80.1373%2026.1224)>.  Note the interactive graph displaying the time series of 2 metre temperature data.
+
+![](../assets/images/edr-position-query-html.png){ width=100% }
 
 ## Client access
 
@@ -81,26 +85,6 @@ Try visualizing the following EDR position query in a web browser: <http://local
 You can access the plugin through an entry on the plugin menu.
 
 ![](../assets/images/edr-plugin2.png){ width=100% }
-
-The first thing to setup is the server url. Use the url of the Landing Page here: `http://localhost:5000/`
-
-!!! tip "You should also start by defining the folder where you would like the data fetched by the plugin to be downloaded"
-
-![](../assets/images/edr-plugin3.png){ width=100% }
-
-The combo box will be populated with all the collections available on that server. Select the EDR collection: `International Comprehensive Ocean-Atmosphere Data Set (ICOADS)`.
-
-!!! tip "You may safely ignore the warnings displayed here"
-
-![](../assets/images/edr-plugin4.png){ width=100% }
-
-The data query combo box will be populated with the data query types available for this collection; in this case: position and cube. You may select the cube query and then click the button to set the spatial extent of that query. A new dialog will open, displaying multiple options to define the spatial extent. You may choose the `Draw on canvas`, to draw a rectangle in the map view extent.
-
-![](../assets/images/edr-plugin5.png){ width=100% }
-
-You can close this dialog and run the query. The plugin will fetch all the data available that fits into this query and display it as a layer group.
-
-![](../assets/images/edr-plugin6.png){ width=100% }
 
 ### OWSLib - Advanced
 
@@ -135,10 +119,10 @@ You can close this dialog and run the query. The plugin will fetch all the data 
         >>> collections = w.collections()
         >>> len(collections['collections'])
         13
-        >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter_names'].keys()
-        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
+        >>> noaa_gfs = w.collection('noaa-gfs')
+        >>> noaa_gfs['parameter_names'].keys()
+        dict_keys(['t2m'])
+        >>> data = w.query_data('noaa-gfs', 'position', coords='POINT(-80.1373 26.1224)', parameter_names=['t2m'])
         >>> data  # CoverageJSON data
         ```
 
@@ -153,10 +137,10 @@ You can close this dialog and run the query. The plugin will fetch all the data 
         >>> collections = w.collections()
         >>> len(collections['collections'])
         13
-        >>> icoads_sst = w.collection('icoads-sst')
-        >>> icoads_sst['parameter_names'].keys()
-        dict_keys(['SST', 'AIRT', 'UWND', 'VWND'])
-        >>> data = w.query_data('icoads-sst', 'position', coords='POINT(174.7645 -36.8509)', parameter_names=['SST', 'AIRT'])
+        >>> noaa_gfs= w.collection('noaa-gfs')
+        >>> noaa_gfs['parameter_names'].keys()
+        dict_keys(['t2m'])
+        >>> data = w.query_data('noaa-gfs', 'position', coords='POINT(-80.1373 26.1224)', parameter_names=['t2m'])
         >>> data  # CoverageJSON data
         ```
 

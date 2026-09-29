@@ -1,0 +1,7 @@
+{
+  "long_name": "height above the surface",
+  "units": "m",
+  "positive": "up",
+  "standard_name": "height",
+  "_ARRAY_DIMENSIONS": []
+}
