@@ -78,7 +78,7 @@ NOTE: see [issue 217](https://github.com/geopython/diving-into-pygeoapi/issues/2
 Note: Zensical can only serve one language at a time. Example:
  `zensical serve --config-file zensical.pt.toml`
 
-If you want to test the language switcher: build the default English site, build the other language sites and spin up a basic local web server to view the combined output:
+If you want to test the language switcher: build the default English site, build the other language sites and spin up a basic local web server to view the combined output (**exactly by this order!**):
 
  ```
 zensical build --config-file zensical.toml

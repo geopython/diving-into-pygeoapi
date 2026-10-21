@@ -4,7 +4,7 @@ title: Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles
 
 # Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles
 
-A [OGC API - Tiles](https://ogcapi.ogc.org/tiles) fornece uma API Web para disponibilizar tiles (ou mosaicos) de informação geoespacial. São suportadas diferentes formas de informação geoespacial, como tiles de elementos vetoriais ("vector tiles"), coverages, mapas (ou imagens) e, potencialmente, outros tipos de tiles de informação geoespacial. O standard está disponível neste documento:
+A [OGC API - Tiles](https://ogcapi.ogc.org/tiles) fornece uma API Web para disponibilizar tiles (ou mosaicos) de informação geoespacial. São suportadas diferentes formas de informação geoespacial, como tiles de elementos vetoriais ("vector tiles"), coverages, mapas (ou imagens) e, potencialmente, outros tipos de tiles de informação geoespacial. A norma está disponível neste documento:
  
 * [OGC API - Tiles: Parte 1: Core](https://docs.ogc.org/is/20-057/20-057.html)
 
@@ -29,13 +29,13 @@ A pygeoapi suporta a especificação core da OGC API - Tiles e é capaz de anunc
 
 !!! note
 
-    A pygeoapi atualmente suporta dois Tile Matrix Sets muito conhecidos: `WorldCRS84Quad` e `WebMercatorQuad`. A sua definição é publicada no ponto de extremidade [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets).
+    A pygeoapi atualmente suporta dois Tile Matrix Sets muito conhecidos: `WorldCRS84Quad` e `WebMercatorQuad`. A sua definição é publicada no ponto de extremidade [/TileMatrixSets](https://demo.pygeoapi.io/master/TileMatrixSets). Para suporte a TMS adicional, consulte a [documentação da pygeoapi](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providing-custom-tile-matrix-set-definitions).
 
 ## Publicar tiles vetoriais pré-renderizadas
 
 Neste cenário, as tiles devem ser pré-renderizadas antes de serem servidas. O fornecedor `MVT-tippecanoe` permite servir tiles pré-renderizadas pelo [tippecanoe](https://github.com/mapbox/tippecanoe), seja a partir de uma directoria no disco ou de um servidor estático (ex.: bucket S3 ou MinIO).
 
-Para este exercício, irá publicar um conjunto de dados vetoriais dos [limites dos bairros da corporação municipal da grande Hyderabad](https://en.wikipedia.org/wiki/Administrative_divisions_of_Hyderabad), a partir da localização abaixo:
+Para este exercício, irá publicar um conjunto de dados vetoriais dos [limites dos bairros da corporação municipal da grande Hyderabad](https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about), a partir da localização abaixo:
 
 * data: `workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson`
   
@@ -242,7 +242,7 @@ Finalmente, inicie a composição docker, que irá descarregar e ingerir o conju
 
 ### QGIS
 
-O QGIS suporta tiles Vetoriais da OGC API através da [Camada de tiles Vetoriais](https://docs.qgis.org/3.40/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Embora a OGC API - Tiles não seja suportada nativamente, pode personalizar a `ligação genérica` para aceder a eles no QGIS.
+O QGIS suporta tiles Vetoriais da OGC API através da [Camada de tiles Vetoriais](https://docs.qgis.org/3.40/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Embora a OGC API - Tiles não seja suportada nativamente, pode personalizar a `generic connection` para aceder a eles no QGIS.
 
 !!! question "Aceder a tiles Vetoriais da OGC API a partir do QGIS"
 
@@ -250,24 +250,28 @@ O QGIS suporta tiles Vetoriais da OGC API através da [Camada de tiles Vetoriais
 
     - aceda à página da coleção do conjunto de dados de tiles: <http://localhost:5000/collections/hyderabad>
     - navegue para a página de tiles clicando em `tiles`: <http://localhost:5000/collections/hyderabad/tiles>
-    - clique em `Tileset Metadata`: <http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata>
-    - Tome nota do URL template: `http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` e os valores de minZoom e maxZoom
+    - clique em `Tiles metadata`: <http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata>
+    - Tome nota do URL template: `http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` e dos valores de minZoom e maxZoom
 
     Siga estes passos para se ligar a um serviço e aceder a tiles vetoriais:
 
-    - localize o serviço de tiles vetoriais no painel do navegador do lado esquerdo. Note que também pode usar o menu superior e navegar para `Layer > Adicionar Layer > Adicionar Layer de Tiles Vetoriaiss`
+    - localize o serviço de tiles vetoriais no painel do navegador do lado esquerdo. Note que também pode usar o menu superior e navegar para `Layer > Add Layer > Vector Tile Layer`
 
-    - clique com o botão direito para abrir o menu de contexto e escolha `Nova Ligação Genérica`
+    - clique com o botão direito para abrir o menu de contexto e escolha `New Generic connection`
     - preencha os valores necessários. Para URL, use o URL que anotou no passo anterior, substituindo `{tileMatrix}/{tileRow}/{tileCol}` por `{z}/{y}/{x}`.
 
     ![](../assets/images/qgis-vtiles-hyderabad1.png){ width=100% }
 
-    - pressione `OK` para adicionar o serviço. Neste ponto, deverá ver a ligação aparecer. Clique em `Adicionar` para a adicionar ao mapa
+    - pressione `OK` para adicionar o serviço. Neste ponto, deverá ver a ligação aparecer. Clique em `Add` para a adicionar ao mapa
     - Faça zoom para Hyderabad para visualizar o seu conjunto de dados
 
     ![](../assets/images/qgis-vtiles-hyderabad2.png){ width=100% }
 
     ![](../assets/images/qgis-vtiles-hyderabad3.png){ width=100% }
+
+    Note que, com tiles vetoriais, é possível renderizar estilos de acordo com os atributos. Para experimentar, carregue o ficheiro de estilos em `exercises/data/hyderabad/style-vector.qml`.
+
+    ![](../assets/images/vector-tiles-styles.png){ width=100% }
 
 ### LeafletJS
 
@@ -379,4 +383,4 @@ O [OpenLayers](https://openlayers.org) é uma biblioteca JavaScript popular para
 
 # Resumo
 
-Parabéns! Agora é capaz de publicar tiles na pygeoapi. Pode aprender mais sobre este Standard em: <https://tiles.developer.ogc.org/>
+Parabéns! Agora é capaz de publicar tiles na pygeoapi. Pode aprender mais sobre esta norma em: <https://tiles.developer.ogc.org/>

@@ -14,7 +14,7 @@ e integração simplificadas para clientes e utilizadores.
 
 ## Suporte na pygeoapi
 
-A pygeoapi suporta a especificação OGC API - Records, usando Elasticsearch e TinyDB [rasterio](https://rasterio.readthedocs.io) como backends principais.
+A pygeoapi suporta a especificação OGC API - Records, usando o Elasticsearch e o TinyDB como backends principais.
 
 !!! note
 
@@ -66,7 +66,7 @@ Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" d
 
 !!! question "Instalar a OWSLib"
 
-    Se não tiver o Python instalado, considere executar este exercício num container Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    Se não tiver o Python instalado, considere executar este exercício num container Docker. Consulte o [Capítulo de Configuração](../setup.pt.md#usar-o-docker-para-clientes-python).
 
     === "Linux/Mac"
 
@@ -102,7 +102,7 @@ Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" d
 
 Se não tiver o curl instalado, copie o URL acima para o seu navegador web e guarde localmente.
 
-Se não tiver o Python instalado, pode usar o loader utilizando o container Docker da OWSLib. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+Se não tiver o Python instalado, pode usar o loader utilizando o container Docker da OWSLib. Consulte o [Capítulo de Configuração](../setup.pt.md#usar-o-docker-para-clientes-python).
 
 !!! example "Usar o container Docker da OWSLib para carregar metadados"
 
@@ -134,7 +134,7 @@ na coleção.
 !!! tip pygeometa
 
     O [pygeometa](https://geopython.github.io/pygeometa) é um pacote Python para gerar metadados para conjuntos de dados geoespaciais.
-    AOpygeometa permite gerir metadados em ficheiros YAML simples "metadata control files (MCF)", e suporta
+    O pygeometa permite gerir metadados em ficheiros YAML simples "metadata control files (MCF)", e suporta
     importação, exportação, bem como transformações para muitos formatos de metadados geoespaciais. Metadados
     da OGC API - Records podem ser produzidos usando o pygeometa, quer a partir de ficheiros MCF ou por transformação de outros formatos.
 
@@ -157,7 +157,7 @@ na coleção.
 
 ## A pygeoapi como um proxy de CSW
 
-Pode verificar a secção "pygeoapi como uma Ponte para Outros serviços" para aprender como [publicar CSW como OGC API - Records](../advanced/bridges.md#publishing-csw-as-ogc-api-records).
+Pode verificar a secção "pygeoapi como uma Ponte para Outros serviços" para aprender como [publicar CSW como OGC API - Records](../advanced/bridges.pt.md#publicar-csw-como-ogc-api-records).
 
 ## Acesso de cliente
 
@@ -189,7 +189,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
 
 !!! question "Interagir com a OGC API - Records via OWSLib"
 
-    Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o [Capítulo de Configuração](../setup.pt.md#usar-o-docker-para-clientes-python).
 
     === "Linux/Mac"
 

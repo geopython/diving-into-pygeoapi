@@ -224,7 +224,7 @@ E aos itens (features) aqui:
 A pygeoapi também pode funcionar como um serviço de frontend da OGC API - Features para um WFS OGC existente através 
 do fornecedor GDAL/OGR. Esta função de ponte permite-lhe efetivamente publicar um WFS como OGC API - Features.
 
-Isto é expandido numa secção avançada deste workshop: [A pygeoapi como uma Ponte para outros Serviços - secção WFS](../advanced/bridges.md#publishing-wfs-as-ogc-api-features).
+Isto é expandido numa secção avançada deste workshop: [A pygeoapi como uma Ponte para outros Serviços - secção WFS](../advanced/bridges.pt.md#publicar-wfs-como-ogc-api-features).
 
 ## Acesso de lado do cliente
 
@@ -489,7 +489,7 @@ Execute o notebook para explorar um servidor OGC API - Features, usando a owslib
 !!! question "Interagir com a OGC API - Features via OWSLib"
 
     Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Veja o 
-    [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    [Capítulo de Configuração](../setup.pt.md#usar-o-docker-para-clientes-python).
 
     === "Linux/Mac"
 
@@ -566,7 +566,6 @@ Execute o notebook para explorar um servidor OGC API - Features, usando a owslib
         >>> lakes_query['features'][0]['properties']
         {u'scalerank': 0, u'name_alt': None, u'admin': None, u'featureclass': u'Lake', u'id': 0, u'name': u'Lake Baikal'}
         ```
-        </div>
 
 !!! note "Nota"
 

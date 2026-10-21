@@ -59,13 +59,19 @@ Pode ler mais sobre este tópico no [website dos blocos de construção](https:/
 O esforço da OGC API está a evoluir rapidamente. Várias normas OGC API estão em desenvolvimento e serão implementadas na pygeoapi ao longo do tempo:
 
 - [Routes](https://ogcapi.ogc.org/routes) fornece acesso a dados de roteamento
-- [Styles](https://ogcapi.ogc.org/styles) define uma API Web que permite que servidores de mapas, clientes, bem como editores de estilo visual, giram e obtenham estilos
+- [Styles](https://ogcapi.ogc.org/styles) define uma API Web que permite aos servidores de mapas, aos clientes, bem como aos editores de estilo visual, gerir e obter estilos
 - [3D GeoVolumes](https://ogcapi.ogc.org/geovolumes) facilita a descoberta e o acesso eficientes a conteúdo 3D em múltiplos formatos, com base numa perspetiva centrada no espaço
 - [Moving Features](https://ogcapi.ogc.org/movingfeatures) define uma API que fornece acesso a dados que representam elementos que se movem como corpos rígidos
 - [Joins](https://ogcapi.ogc.org/joins) suporta a junção de dados, de múltiplas fontes, com coleções de elementos ou diretamente com outros ficheiros de entrada
 - [Discrete Global Grid System](https://ogcapi.ogc.org/dggs) permite que as aplicações organizem e acedam a dados organizados de acordo com um Discrete Global Grid System (DGGS)
 
 ![Normas OGC API aprovadas e candidatas](assets/images/ogcapis.png)
+
+#### OGC API Roadmap
+
+O [Roadmap de Normas da OGC](https://www.ogc.org/standards/roadmap) destaca os esforços atuais e
+planeados em termos de normas, bem como extensões relacionadas com essas normas. O Roadmap é útil para
+planear nova funcionalidade para os utilizadores, bem como para a implementação em software.
 
 #### OGC APIs suportadas pela pygeoapi
 

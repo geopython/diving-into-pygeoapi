@@ -76,7 +76,7 @@ Podíamos ter usado o Fornecedor `OGR` em vez do Fornecedor `SQLiteGPKG` acima n
  
 O suporte CRS permite efetivamente à pygeoapi *reprojetar* os dados do seu CRS de armazenamento (aqui EPSG:3003)
 de acordo com [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
-A secção Avançada desta workshop [elaborará o suporte CRS da pygeoapi](../advanced/crs.md).
+A secção Avançada desta workshop [elaborará o suporte CRS da pygeoapi](../advanced/crs.pt.md).
 
 
 ## Publicar WMS como OGC API - Maps
@@ -192,7 +192,7 @@ A [norma OGC SensorThings API](https://ogcapi-workshop.ogc.org/api-deep-dive/sen
 
 A ponte SensorThings da pygeoapi permite fazer proxy das entidades SensorThings (por exemplo: `Thing` , `Sensor`, `DataStream`, `ObservedProperty` ) em coleções de funcionalidades.
 
-Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma coleção OGC API - Features, que pode então ser consumida por vários clientes, como [os listados aqui](../publishing/ogcapi-features.md#client-access)
+Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma coleção OGC API - Features, que pode então ser consumida por vários clientes, como [os listados aqui](../publishing/ogcapi-features.pt.md#acesso-de-lado-do-cliente)
 
 !!! question "Atualizar a configuração da pygeoapi"
 
