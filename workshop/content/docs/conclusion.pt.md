@@ -4,19 +4,18 @@ title: Conclusão
 
 # Conclusão
 
-Esperamos que esta workshop vos tenha proporcionado uma visão geral das muitas funcionalidades da pygeoapi. O objetivo do projeto é permitir a publicação de dados utilizando o conjunto de Standards OGC API de forma simples, flexível e com uma barreira baixa de entrada.
+Esperamos que esta workshop vos tenha proporcionado uma visão geral das muitas funcionalidades da pygeoapi. O objetivo do projeto é permitir a publicação de dados utilizando o conjunto de normas OGC API de forma simples, flexível e com uma barreira baixa de entrada.
 
 [![pygeoapi logo](assets/images/pygeoapi-logo.png){ width=40% }](https://pygeoapi.io)
 
 [![OGC APIs banner](assets/images/OGC_APIs_banner.jpg){ width=40% }](https://ogcapi.ogc.org)
 
-# FOSS4G Europe 2025
+# FOSS4G 2026
 
-Para aqueles que estão a participar no [FOSS4G Europe 2025](https://2025.europe.foss4g.org):
+Para aqueles que estão a participar na [FOSS4G 2026](https://2026.foss4g.org), por favor, considerem assistir às seguintes apresentações sobre a pygeoapi:
 
-- venham à apresentação sobre o [estado do projeto pygeoapi](https://talks.osgeo.org/foss4g-europe-2025/talk/EPWGP7) na quarta-feira, 16 de julho às 17:45, na sala EL11 (Geosolutions)
-- ou às outras apresentações relacionadas com pygeoapi:
-- a equipa pygeoapi estará presente no [Community Sprint](https://2025.europe.foss4g.org/schedule/community-sprint/) nos dias 19-20 de julho, no local da conferência, Faculdade de Humanidades e Ciências Sociais (edifício P)
+- [apresentação sobre o estado do projeto pygeoapi](https://talks.osgeo.org/foss4g-2026/talk/8WT3LU) na terça-feira, 1 de setembro às 17:00, na Sala 1
+- [Running pygeoapi Cloud Native at Scale](https://talks.osgeo.org/foss4g-2026/talk/R7GEQB) na quinta-feira, 3 de setembro às 14:00, na Sala 5
 
 # Contribuições
 

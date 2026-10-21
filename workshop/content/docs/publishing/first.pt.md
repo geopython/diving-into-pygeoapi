@@ -18,9 +18,9 @@ Antes de fazer quaisquer alterações, vamos garantir que a configuração inici
 
 Para testar:
 
-!!! question "Testar a configuração do workshop"
+!!! question "Testar a configuração da workshop"
 
-    1. Numa shell de terminal, navegue para a pasta do workshop e digite:
+    1. Numa shell de terminal, navegue para a pasta da workshop e digite:
 
     === "Linux/Mac"
 

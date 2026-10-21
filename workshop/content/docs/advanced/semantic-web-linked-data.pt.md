@@ -23,7 +23,7 @@ A pygeoapi suporta este caso de uso através da incorporação de um snippet JSO
 
 !!! tip
 
-    Consulte mais informações em [Otimização para Motores de Busca](./seo.md)
+    Consulte mais informações em [Otimização para Motores de Busca](./seo.pt.md)
 
 ## Publicar dados espaciais na Web Semântica
 

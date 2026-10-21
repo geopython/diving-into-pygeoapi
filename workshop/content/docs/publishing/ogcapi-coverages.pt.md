@@ -87,7 +87,7 @@ A [OWSLib](https://owslib.readthedocs.io) é uma biblioteca Python para interagi
 
 !!! question "Interagir com a OGC API - Coverages via OWSLib"
 
-    Se não tiver o Python instalado, considere executar este exercício num container de Docker. Consulte o [Capítulo de Configuração](../setup.md#using-docker-for-python-clients).
+    Se não tiver o Python instalado, considere executar este exercício num container de Docker. Consulte o [Capítulo de Configuração](../setup.pt.md#usar-o-docker-para-clientes-python).
 
     === "Linux/Mac"
         ```bash

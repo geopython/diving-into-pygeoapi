@@ -30,7 +30,7 @@ Leia mais na documentação da pygeoapi no [Capítulo CRS](https://docs.pygeoapi
 # Exercício
 
 Adicionar suporte CRS às coleções pygeoapi para o tipo `provider` `feature` é tão simples como
-por exemplo estender a configuração do [Exercício 2](../publishing/ogcapi-features.md) com este fragmento:
+por exemplo estender a configuração do [Exercício 2](../publishing/ogcapi-features.pt.md) com este fragmento:
 
 ```yaml
   crs:
@@ -154,7 +154,6 @@ Podemos até fazer isto na interface Swagger, mas usar o navegador é bastante r
                               [
                                   43.77705757917591,
                                   11.2368990806804
-                              ],
        .
        .
        "crs":[
