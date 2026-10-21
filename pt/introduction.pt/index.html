@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/introduction.pt/">
       
       
+      
         <link rel="prev" href="../index.pt/">
       
       
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#introducao-a-pygeoapi" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -330,10 +328,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacoes-de-referencia" class="md-nav__link">
+  <a href="#instalacoes-existentes" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Instalações de referência
+        Instalações existentes
       </span>
     </span>
   </a>
@@ -421,8 +419,6 @@
     
       
         
-          
-        
       
         
       
@@ -451,9 +447,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../publishing/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -466,14 +461,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
@@ -486,6 +475,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1182,10 +1196,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacoes-de-referencia" class="md-nav__link">
+  <a href="#instalacoes-existentes" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Instalações de referência
+        Instalações existentes
       </span>
     </span>
   </a>
@@ -1215,8 +1229,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/introduction.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1235,68 +1251,58 @@
 
 
 <h1 id="introducao-a-pygeoapi">Introdução à pygeoapi<a class="headerlink" href="#introducao-a-pygeoapi" title="Permanent link">&para;</a></h1>
-<p>A equipa de desenvolvimento da pygeoapi (sim, em minúsculas) tem o prazer de lhe dar as boas-vindas a esta workshop!</p>
-<p>Nesta workshop de meio dia<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, fazemos uma introdução à pygeoapi, e à publicação de dados geoespaciais, fornecendo 
-também recursos e dicas para leitura e referência futuras (ou seja, para onde ir quando não souber!).</p>
-<p>Embora a pygeoapi seja escrita em Python e seja personalizável e extensível (através de <em>plugins</em>) por 
-programadores de Python, não são necessários conhecimentos de Python para instalar, configurar e publicar os seus 
-dados geoespaciais como parte desta workshop. Tudo o que precisa para a workshop é o seu editor de texto favorito 
-e o Docker (forneceremos mais informações na <a href="../setup/">secção de configuração</a>).</p>
+<p>A equipa de desenvolvimento da pygeoapi (sim, escrita em minúsculas) tem o prazer de lhe dar as boas-vindas a esta workshop!</p>
+<p>Nesta workshop de meio dia, fazemos uma introdução à pygeoapi e à publicação de dados, e fornecemos também recursos e dicas para leitura e referência futuras (ou seja, para onde ir quando não souber!).</p>
+<p>Embora a pygeoapi seja escrita em Python e seja personalizável e extensível (através de <em>plugins</em>) por
+programadores de Python, não são necessários conhecimentos de Python para instalar, configurar e publicar os seus
+dados geoespaciais como parte desta workshop. Tudo o que precisa para a workshop é o seu editor de texto favorito
+e o Docker (forneceremos mais informações na <a href="../setup.pt/">secção de configuração</a>).</p>
 <h2 id="leitura-de-base">Leitura de base<a class="headerlink" href="#leitura-de-base" title="Permanent link">&para;</a></h2>
-<p>O <a href="https://pygeoapi.io">website</a> da pygeoapi é o ponto de entrada principal para utilizadores finais e programadores. 
+<p>O <a href="https://pygeoapi.io">website</a> da pygeoapi é o ponto de entrada principal para utilizadores finais e programadores.
 Aí pode encontrar:</p>
 <ul>
-<li><a href="https://docs.pygeoapi.io">Documentação oficial</a></li>
-<li>Várias <a href="https://pygeoapi.io/presentations">apresentações do projeto</a></li>
-<li>P código-fonte no <a href="https://github.com/geopython/pygeoapi">GitHub</a></li>
-<li>As imagens Docker <a href="https://hub.docker.com/r/geopython/pygeoapi">disponíveis no Docker Hub</a></li>
-<li>As versões da pygeoapi no <a href="https://pypi.org/project/pygeoapi">Python Package Index (PyPI)</a></li>
-<li>Dado que a pygeoapi implementa uma série de normas OGC API, também poderá querer ler sobre estas 
-  em <a href="https://ogcapi.ogc.org">ogcapi.ogc.org</a>.</li>
+<li><a href="https://docs.pygeoapi.io">documentação oficial</a></li>
+<li><a href="https://pygeoapi.io/presentations">arquivo de apresentações</a></li>
+<li><a href="https://pygeoapi.io/documentation">documentação</a></li>
+<li>código-fonte no <a href="https://github.com/geopython/pygeoapi">GitHub</a></li>
+<li>imagens Docker <a href="https://hub.docker.com/r/geopython/pygeoapi">disponíveis no Docker Hub</a></li>
+<li>versões da pygeoapi no <a href="https://pypi.org/project/pygeoapi">Python Package Index (PyPI)</a></li>
 </ul>
-<h2 id="instalacoes-de-referencia">Instalações de referência<a class="headerlink" href="#instalacoes-de-referencia" title="Permanent link">&para;</a></h2>
-<p>Várias organizações implementaram a pygeoapi nas suas operações. Para ter uma ideia de como a pygeoapi é usada na 
-prática, consulte a nossa página atualizada de 
-<a href="https://github.com/geopython/pygeoapi/wiki/LiveDeployments">implementações ativas</a>. </p>
-<p>O projeto pygeoapi também mantém uma instalação de demonstração, disponível em:</p>
-<p><a href="https://demo.pygeoapi.io">https://demo.pygeoapi.io</a></p>
-<p>Esta instalação é operada pela equipa de desenvolvimento. Consulte a 
+<p>Dado que a pygeoapi implementa uma série de normas OGC API, também poderá querer ler sobre estas
+em <a href="https://ogcapi.ogc.org">ogcapi.ogc.org</a>.</p>
+<h2 id="instalacoes-existentes">Instalações existentes<a class="headerlink" href="#instalacoes-existentes" title="Permanent link">&para;</a></h2>
+<p>Várias organizações implementaram a pygeoapi nas suas operações. Para ter uma ideia de como a pygeoapi é usada na
+prática, consulte a nossa página atualizada de
+<a href="https://github.com/geopython/pygeoapi/wiki/LiveDeployments">implementações ativas</a>.</p>
+<p>Por omissão, a instalação de demonstração pública da pygeoapi em <a href="https://demo.pygeoapi.io">demo.pygeoapi.io</a> é
+sempre mantida e disponibilizada pela equipa de desenvolvimento. Consulte a
 <a href="https://demo.pygeoapi.io/master">instância principal</a>, que executa sempre a versão mais recente do GitHub.</p>
-<p>Interessado na configuração do próprio site de demonstração? O <a href="https://demo.pygeoapi.io">demo.pygeoapi.io</a> é 
-desenvolvido num <a href="https://github.com/geopython/demo.pygeoapi.io">repositório GitHub</a> utilizando um fluxo de trabalho 
-de disponibilização contínua (CD). Implementações GitOps ainda mais recentes foram desenvolvidas para 
+<p>Interessado na configuração do próprio site de demonstração? A <a href="https://demo.pygeoapi.io">demo.pygeoapi.io</a> é
+desenvolvida num <a href="https://github.com/geopython/demo.pygeoapi.io">repositório GitHub</a> utilizando um fluxo de trabalho
+de disponibilização contínua (CD). Implementações GitOps ainda mais recentes foram desenvolvidas para
 a <a href="https://github.com/Geonovum/ogc-api-testbed">Geonovum</a> e para o <a href="https://github.com/justb4/ogc-api-jrc">Centro Comum de Investigação da Comissão Europeia</a>.</p>
-<p>Os exemplos acima podem servir como ponto de partida para a sua própria configuração e implementação da pygeoapi, 
+<p>Os exemplos acima podem servir como ponto de partida para a sua própria configuração e implementação da pygeoapi,
 por isso, sinta-se à vontade para os estudar e utilizar!</p>
 <h2 id="historia">História<a class="headerlink" href="#historia" title="Permanent link">&para;</a></h2>
-<p>Iniciada em 2018, a pygeoapi surgiu como parte dos esforços iniciais para o desenvolvimento das normas OGC API. 
-As <em>code sprints</em> da OGC API foram fundamentais para o desenvolvimento ágil e para lançar as bases do projeto.</p>
+<p>Iniciada em 2018, a pygeoapi surgiu como parte dos esforços iniciais para o desenvolvimento das normas OGC API.
+Os <em>code sprints</em> da OGC API foram fundamentais para o desenvolvimento ágil e para lançar as bases do projeto.</p>
 <p>Os princípios centrais de design são os seguintes:</p>
 <ul>
 <li>Simplicidade / baixa barreira de entrada</li>
 <li>Sustentabilidade a longo prazo</li>
 <li>Modularidade</li>
 <li>Extensibilidade</li>
-<li>Construção sobre um vasto ecossistema de componentes de Código Aberto e da OSGeo, como GDAL, rasterio, Shapely, 
+<li>Construção sobre um vasto ecossistema de componentes de Código Aberto e da OSGeo, como GDAL, rasterio, Shapely,
   Pandas, Elasticsearch, PostGIS e muitos outros</li>
 </ul>
-<p>O projeto foi iniciado por <a href="https://github.com/tomkralidis">Tom Kralidis</a>. Em poucas semanas, vários programadores 
-talentosos juntaram-se ao projeto, o que levou à formação de uma equipa principal e de 
-um <a href="https://pygeoapi.io/community/psc">Comité de Direção do Projeto (PSC)</a>. As contribuições continuaram também por 
-parte de outros programadores e utilizadores que, de bom grado, forneceram novas funcionalidades, correções de erros 
-e atualizações da documentação. Como resultado, rapidamente emergiu uma comunidade saudável com um interesse comum 
-em código aberto, normas OGC API, baixa barreira de entrada, modularidade e extensibilidade. O resto, como se 
-costuma dizer, é história.</p>
-<p>Em Fevereiro de 2024 foi realizado o primeiro encontro de desenvolvedores da pygeoapi, em Évora</p>
-<p>A pygeoapi é um <a href="https://www.osgeo.org/projects/pygeoapi">Projeto da OSGeo</a> e uma Implementação de Referência da OGC.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>A sessão apresentada na <a href="https://festa2025.softwarelivre.eu/">FSL 2025</a> é uma sessão simplificada de 2h30m.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<p>O projeto foi iniciado por <a href="https://github.com/tomkralidis">Tom Kralidis</a>. Em poucas semanas, vários programadores
+talentosos juntaram-se ao projeto, o que levou à formação de uma equipa principal e de
+um <a href="https://pygeoapi.io/community/psc">Comité de Direção do Projeto (PSC)</a>. As contribuições continuaram também por
+parte de outros programadores e utilizadores que, de bom grado, forneceram novas funcionalidades, correções de erros
+e atualizações da documentação. Como resultado, rapidamente emergiu uma comunidade saudável com um interesse comum
+em código aberto, normas OGC API, baixa barreira de entrada, modularidade e extensibilidade. O resto, como se diz,
+é história.</p>
+<p>A pygeoapi é um <a href="https://www.osgeo.org/projects/pygeoapi">projeto da OSGeo</a> e uma implementação de referência da OGC.</p>
 
 
 
@@ -1353,7 +1359,7 @@ costuma dizer, é história.</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1365,10 +1371,10 @@ costuma dizer, é história.</p>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

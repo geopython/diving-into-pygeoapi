@@ -16,6 +16,7 @@
       
       
       
+      
         <link rel="next" href="../introduction.pt/">
       
       
@@ -27,7 +28,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -38,7 +39,7 @@
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -73,14 +74,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#bem-vinds-a-workshop-mergulhando-na-pygeoapi" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -349,8 +347,6 @@
     
       
         
-          
-        
       
         
       
@@ -379,9 +375,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../publishing/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -394,14 +389,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
@@ -414,6 +403,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1102,8 +1116,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/index.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1122,17 +1138,20 @@
 
 
 <h1 id="bem-vinds-a-workshop-mergulhando-na-pygeoapi">Bem-vind@s à workshop Mergulhando na pygeoapi!<a class="headerlink" href="#bem-vinds-a-workshop-mergulhando-na-pygeoapi" title="Permanent link">&para;</a></h1>
-<p>Versão: 1.6.0</p>
+<p>Versão: 1.10.0</p>
 <p><img alt="pygeoapi logo" src="../assets/images/pygeoapi-logo.png" /></p>
-<p>A <a href="https://pygeoapi.io">pygeoapi</a> é uma implementação em Python de um servidor da suíte de standards <a href="https://ogcapi.ogc.org">OGC API</a>. O projeto surgiu como parte dos esforços da próxima geração da OGC API em 2018 e oferece a capacidade de as organizações implementarem um ponto de acesso (endpoint) RESTful OGC API usando OpenAPI, GeoJSON e HTML. A pygeoapi é de código aberto e disponibilizada sob a licença MIT.</p>
-<p>A <strong>Mergulhando na pygeoapi</strong> é uma workshop de meio dia, desenhada para que os utilizadores se familiarizem com a instalação, configuração, publicação de dados e extensão da pygeoapi. Esta workshop abordará a publicação de dados geoespaciais na Web usando a pygeoapi, em conformidade com a suíte de standards OGC API.</p>
-<p>Esta workshop abrange uma vasta gama de tópicos (instalação/configuração, publicação, cloud, modelos, plugins, etc.). Por favor, consulte o menu de navegação à esquerda para aceder ao índice.</p>
-<h1 id="a-vossa-equipa-da-workshop-da-fsl">A vossa equipa da workshop da <a href="https://festa2025.softwarelivre.eu/">FSL</a><a class="headerlink" href="#a-vossa-equipa-da-workshop-da-fsl" title="Permanent link">&para;</a></h1>
+<p>A <a href="https://pygeoapi.io">pygeoapi</a> é uma implementação em Python de um servidor da suíte de normas <a href="https://ogcapi.ogc.org">OGC API</a>. O projeto surgiu como parte dos esforços da próxima geração da OGC API em 2018 e oferece a capacidade de as organizações implementarem um ponto de acesso (endpoint) RESTful OGC API usando OpenAPI, GeoJSON e HTML. A pygeoapi é de código aberto e disponibilizada sob a licença MIT.</p>
+<p><strong>Mergulhando na pygeoapi</strong> é uma workshop de meio dia, desenhada para que os utilizadores se familiarizem com a instalação, configuração, publicação de dados e extensão da pygeoapi. Esta workshop abordará a publicação de dados geoespaciais na Web usando a pygeoapi, em conformidade com a suíte de normas OGC API.</p>
+<p>Esta workshop abrange uma vasta gama de tópicos (instalação/configuração, publicação, cloud, modelos, plugins, etc.). Consulte o menu de navegação à esquerda para aceder ao índice.</p>
+<h1 id="a-vossa-equipa-da-workshop-da-foss4g-2026">A vossa equipa da workshop da <a href="https://2026.foss4g.org">FOSS4G 2026</a><a class="headerlink" href="#a-vossa-equipa-da-workshop-da-foss4g-2026" title="Permanent link">&para;</a></h1>
 <table>    
     <tr>
-        <td><a href="https://github.com/doublebyte"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
-        <td><a href="https://github.com/ricardogsilva"><img width="150" src="https://avatars.githubusercontent.com/u/732010?v=4"/></a></td>
-        <td><a href="https://codeberg.org/ldesousa"><img width="150" src="https://codeberg.org/avatars/8508bf63cba1d561f24407341653cf925cd7a7b468fcffbb1ce7a8db0e010a30?size=512"/></a></td>
+        <td><a href="https://github.com/tomkralidis"><img width="150" src="https://avatars.githubusercontent.com/u/910430?v=4"/></a></td>
+        <td><a href="https://github.com/doublebyte1"><img width="150" src="https://avatars.githubusercontent.com/u/1038897?v=4"/></a></td>
+        <td><a href="https://github.com/jorgejesus"><img width="150" src="https://avatars.githubusercontent.com/u/1275400?v=4"/></a></td>
+        <td><a href="https://github.com/PascalLike"><img width="150" src="https://avatars.githubusercontent.com/u/1323093?v=4"/></a></td>
+        <td><a href="https://github.com/webb-ben"><img width="150" src="https://avatars.githubusercontent.com/u/40066515?v=4"/></a></td>
+        <td><a href="https://github.com/ldesousa"><img width="150" src="https://avatars.githubusercontent.com/u/1137878?v=4"/></a></td>
         <td><a href="https://github.com/lcalisto"><img width="150" src="https://avatars.githubusercontent.com/u/4139084?v=4"/></a></td>
     </tr>
 </table>
@@ -1198,7 +1217,7 @@
 <p>Todos os bugs, melhorias e problemas podem ser reportados no <a href="https://github.com/geopython/diving-into-pygeoapi/issues">GitHub</a>.</p>
 <p>Como sempre, o suporte principal da pygeoapi e as informações da comunidade podem ser encontrados no <a href="https://pygeoapi.io/community">website</a> da pygeoapi.</p>
 <p>As contribuições são sempre incentivadas e bem-vindas!</p>
-<h2 id="agora-vamos-a-workshop-bora-la">Agora, vamos à workshop. Bora lá!<a class="headerlink" href="#agora-vamos-a-workshop-bora-la" title="Permanent link">&para;</a></h2>
+<h2 id="agora-vamos-a-workshop-vamos-comecar">Agora, vamos à workshop. <a href="../introduction.pt/">Vamos começar!</a><a class="headerlink" href="#agora-vamos-a-workshop-vamos-comecar" title="Permanent link">&para;</a></h2>
 
 
 
@@ -1255,7 +1274,7 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1267,10 +1286,10 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

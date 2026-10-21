@@ -17,6 +17,7 @@
       
       
       
+      
         
           <link rel="alternate" href="/" hreflang="en">
         
@@ -25,7 +26,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -36,7 +37,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -71,14 +72,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercicio-4-mapas-de-dados-geoespaciais-via-ogc-api-maps" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -1080,10 +1078,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicar-um-conjunto-de-dados-raster" class="md-nav__link">
+  <a href="#publicar-um-conjunto-de-dados-vetoriais" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Publicar um conjunto de dados raster
+        Publicar um conjunto de dados vetoriais
       </span>
     </span>
   </a>
@@ -1091,10 +1089,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-pygeoapi-como-um-proxy-wms" class="md-nav__link">
+  <a href="#opcional-pygeoapi-como-um-proxy-wms" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        A pygeoapi como um proxy WMS
+        OPCIONAL: pygeoapi como um proxy WMS
       </span>
     </span>
   </a>
@@ -1152,8 +1150,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/ogcapi-maps.pt.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
@@ -1171,22 +1171,29 @@
   
 
 
-<p>s---
-title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
-<hr />
 <h1 id="exercicio-4-mapas-de-dados-geoespaciais-via-ogc-api-maps">Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps<a class="headerlink" href="#exercicio-4-mapas-de-dados-geoespaciais-via-ogc-api-maps" title="Permanent link">&para;</a></h1>
 <p>A <a href="https://ogcapi.ogc.org/maps">OGC API - Maps</a> fornece uma API Web para aceder a quaisquer dados geoespaciais como uma imagem de mapa georreferenciada.</p>
 <ul>
-<li><a href="https://docs.ogc.org/DRAFTS/20-058.html">OGC API - Maps</a></li>
+<li><a href="https://docs.ogc.org/is/20-058/20-058.html">OGC API - Maps</a></li>
 </ul>
+<p>Aqui estão algumas das coisas que um cliente pode pedir a um servidor da OGC API - Maps:</p>
+<ul>
+<li>Pedir uma representação visual de uma ou mais camadas de dados geoespaciais, em diferentes estilos;</li>
+<li>Selecionar por área, tempo e resolução de interesse;</li>
+<li>Alterar parâmetros, tal como largura, altura e sistemas de referência de coordenadas.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Embora a OGC API - Maps seja ótima para fornecer mapas dinâmicos na Web, se os seus dados se basearem num esquema de mosaicos definido e os mapas resultantes não precisarem de ser gerados dinamicamente, a <a href=".././ogcapi-tiles.pt/">OGC API - Tiles</a> fornece uma abordagem adequada para servir os dados de forma eficiente, utilizando menos recursos do servidor.</p>
+</div>
 <h2 id="suporte-da-pygeoapi">Suporte da pygeoapi<a class="headerlink" href="#suporte-da-pygeoapi" title="Permanent link">&para;</a></h2>
 <p>A pygeoapi suporta a especificação da OGC API - Maps, utilizando o <a href="https://www.mapserver.org/mapscript">MapServer MapScript</a> e uma fachada WMS como backends principais.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Consulte <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html">a documentação oficial</a> para mais informações sobre os backends de mapa suportados.</p>
 </div>
-<h2 id="publicar-um-conjunto-de-dados-raster">Publicar um conjunto de dados raster<a class="headerlink" href="#publicar-um-conjunto-de-dados-raster" title="Permanent link">&para;</a></h2>
-<p>Nesta secção, iremos expor um ficheiro Geopackage disponível na localização <code>workshop/exercises/data/airport.gpkg</code> utilizando o <a href="https://www.mapserver.org/mapscript">MapServer MapScript</a>. Estes dados podem ser consumidos por vários clientes que são compatíveis com a OGC API - Maps. Uma lista de alguns desses clientes pode ser encontrada <a href="https://github.com/opengeospatial/ogcapi-maps/blob/master/implementations.adoc#clients">aqui</a>. Aqui também podemos passar o estilo no formato <em>.sld</em>, que pode ser gerado no <a href="https://docs.geoserver.org/stable/en/user/styling/index.html">Geoserver</a>, <a href="https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html">QGIS</a>, etc.</p>
+<h2 id="publicar-um-conjunto-de-dados-vetoriais">Publicar um conjunto de dados vetoriais<a class="headerlink" href="#publicar-um-conjunto-de-dados-vetoriais" title="Permanent link">&para;</a></h2>
+<p>Nesta secção, iremos expor um ficheiro Geopackage disponível na localização <code>workshop/exercises/data/airport.gpkg</code> utilizando o <a href="https://www.mapserver.org/mapscript">MapServer MapScript</a>. Estes dados podem ser consumidos por vários clientes compatíveis com a OGC API - Maps. Uma lista de alguns desses clientes pode ser encontrada <a href="https://github.com/opengeospatial/ogcapi-maps/blob/master/implementations.adoc#clients">aqui</a>. Aqui também podemos passar o estilo no formato <em>.sld</em>, que pode ser gerado no <a href="https://docs.geoserver.org/stable/en/user/styling/index.html">Geoserver</a>, <a href="https://www.qgistutorials.com/en/docs/3/basic_vector_styling.html">QGIS</a>, etc.</p>
 <div class="admonition question">
 <p class="admonition-title">Interagir com a OGC API - Maps via MapScript</p>
 <p>Abra o ficheiro de configuração da pygeoapi num editor de texto. Encontre a linha <code># START - EXERCISE 4 - Maps</code>.</p>
@@ -1221,7 +1228,12 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
 <span class="normal"><a href="#__codelineno-0-28">28</a></span>
 <span class="normal"><a href="#__codelineno-0-29">29</a></span>
 <span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">airports</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">airports</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airports of the world</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Point data representing airports around the world with various metadata such as name, Code, etc.</span>
@@ -1252,33 +1264,79 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
 </span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span>
 </span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">png</span>
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">              </span><span class="nt">mimetype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image/png</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SQLiteGPKG</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/airport.gpkg</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fid</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">          </span><span class="nt">table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airport</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
+<p>Após o servidor iniciar, pode aceder à página da coleção aqui:</p>
+<p><a href="http://localhost:5000/collections/airports">http://localhost:5000/collections/airports</a></p>
+<p>E ao mapa aqui:</p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png">http://localhost:5000/collections/airports/map?f=png</a></p>
+<p><img alt="" src="../../assets/images/map_4326.png" width="50%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Os dados de aeroportos são publicados <strong>tanto</strong> como mapa como coleção de <em>features</em> através de um único <em>endpoint</em> (<code>/collections/airports</code>). De que forma é isto possível na configuração acima?</p>
+</div>
+<p>O mapa vem com o CRS CRS84 por defeito, mas pode ser facilmente alterado com o parâmetro <code>crs</code>:</p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png&amp;crs=EPSG:3857">http://localhost:5000/collections/airports/map?f=png&amp;crs=EPSG:3857</a></p>
+<p>Também pode ajustar outros parâmetros (tal como a caixa delimitadora (<code>bbox</code>), o CRS da caixa delimitadora (<code>bbox-crs</code>), bem como <code>width</code> e <code>height</code>) para criar mapas personalizados:</p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png&amp;bbox-crs=OGC:CRS84&amp;bbox=-142,42,-52,84">http://localhost:5000/collections/airports/map?f=png&amp;bbox-crs=OGC:CRS84&amp;bbox=-142,42,-52,84</a></p>
+<p><img alt="" src="../../assets/images/map_bbox.png" width="50%" /></p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png&amp;width=400&amp;height=400">http://localhost:5000/collections/airports/map?f=png&amp;width=400&amp;height=400</a></p>
+<p><img alt="" src="../../assets/images/map_square.png" width="50%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consulte a <a href="https://docs.ogc.org/is/20-058/20-058.html">Norma da OGC API - Maps</a> para mais detalhes sobre os parâmetros de mapa.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Consulte <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html">a documentação oficial</a> para mais informações sobre os backends de mapa suportados.</p>
+<p>A OGC API - Maps suporta CRS a partir de URI compactas (CURIEs, i.e. <code>EPSG:4326</code>, <code>CRS:84</code>), CURIEs seguras (ex.: <code>[EPSG:4326]</code>, <code>[CRS:84]</code>) e URI:</p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png&amp;crs=https://www.opengis.net/def/crs/EPSG/0/3857">http://localhost:5000/collections/airports/map?f=png&amp;crs=https://www.opengis.net/def/crs/EPSG/0/3857</a></p>
+<p><a href="http://localhost:5000/collections/airports/map?f=png&amp;crs=https://www.opengis.net/def/crs/EPSG/0/3395">http://localhost:5000/collections/airports/map?f=png&amp;crs=https://www.opengis.net/def/crs/EPSG/0/3395</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="mapa" src="../../assets/images/map_4326.png" /></th>
+<th style="text-align: center;"><img alt="mapa" src="../../assets/images/map_3857.png" /></th>
+<th style="text-align: center;"><img alt="mapa" src="../../assets/images/map_3395.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">EPSG:4326</td>
+<td style="text-align: center;">EPSG:3857</td>
+<td style="text-align: center;">EPSG:3395</td>
+</tr>
+</tbody>
+</table>
+<p>Pode ler mais sobre as diferentes formas de exprimir CRS na secção de mapas da <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-maps.html">documentação da pygeoapi</a>.</p>
 </div>
-<h2 id="a-pygeoapi-como-um-proxy-wms">A pygeoapi como um proxy WMS<a class="headerlink" href="#a-pygeoapi-como-um-proxy-wms" title="Permanent link">&para;</a></h2>
-<p>Pode consultar a secção "A pygeoapi como uma Ponte para Outros Serviços" para aprender a <a href="../../advanced/bridges/#publishing-wms-as-ogc-api-maps">publicar WMS como OGC API - Maps</a>.</p>
+<h2 id="opcional-pygeoapi-como-um-proxy-wms">OPCIONAL: pygeoapi como um proxy WMS<a class="headerlink" href="#opcional-pygeoapi-como-um-proxy-wms" title="Permanent link">&para;</a></h2>
+<p>Pode consultar a secção "A pygeoapi como uma Ponte para Outros Serviços" para aprender a <a href="../../advanced/bridges.pt/#publicar-wms-como-ogc-api-maps">publicar WMS como OGC API - Maps</a>.</p>
 <h2 id="acesso-do-lado-do-cliente">Acesso do lado do cliente<a class="headerlink" href="#acesso-do-lado-do-cliente" title="Permanent link">&para;</a></h2>
 <h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
-<p>O QGIS adicionou suporte para APIs que fornecem layers de imagem renderizadas através do seu suporte raster.</p>
+<p>O QGIS adicionou suporte para APIs que fornecem camadas de imagem renderizadas através do seu suporte raster.</p>
 <div class="admonition question">
 <p class="admonition-title">Adicionar camada da OGC API - Maps ao QGIS</p>
 <ul>
 <li>Instale uma versão recente do QGIS (&gt;3.28).</li>
-<li>Abra o painel <code>Adicionar camada raster</code>.</li>
-<li>Selecione <code>OGCAPI</code> para o tipo de Fonte.</li>
-<li>Adicione o ponto de extremidade local como fonte <code>http://localhost:5000/collections/airports</code>.</li>
-<li>Selecione <code>PNG</code> como formato de imagem.</li>
+<li>Abra o painel <code>Add raster layer</code>.</li>
+<li>Selecione <code>OGCAPI</code> como tipo de fonte.</li>
+<li>Adicione o <em>endpoint</em> local como fonte: <code>http://localhost:5000/collections/airports</code>.</li>
+<li>Selecione <code>MAP</code> como API.</li>
 <li>Finalmente, adicione a camada ao mapa.</li>
 </ul>
+<p><img alt="" src="../../assets/images/oam1.png" width="50%" /></p>
+<p><img alt="" src="../../assets/images/oam2.png" width="50%" /></p>
 </div>
 <h3 id="owslib">OWSLib<a class="headerlink" href="#owslib" title="Permanent link">&para;</a></h3>
 <p>A <a href="https://owslib.readthedocs.io">OWSLib</a> é uma biblioteca Python para interagir com os Serviços Web da OGC e suporta várias OGC APIs, incluindo a OGC API - Maps.</p>
 <div class="admonition question">
 <p class="admonition-title">Interagir com a OGC API - Maps via OWSLib</p>
-<p>Se não tiver Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<p>Se não tiver Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup.pt/#usar-o-docker-para-clientes-python">Capítulo de Configuração</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1291,7 +1349,7 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
 </div>
 </div>
 </div>
-<p>Para executar em Python:</p>
+<p>A seguir, execute em Python:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1327,6 +1385,9 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
 
 
 
+
+  
+  
 
 
 
@@ -1372,7 +1433,7 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1384,10 +1445,10 @@ title: Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</p>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

@@ -15,10 +15,11 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/standards.pt/">
       
       
+      
         <link rel="prev" href="../setup.pt/">
       
       
-        <link rel="next" href="../publishing/">
+        <link rel="next" href="../publishing/index.pt/">
       
       
         
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#visao-geral" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -351,8 +349,6 @@
     
       
         
-          
-        
       
         
       
@@ -381,9 +377,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../publishing/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -396,14 +391,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
@@ -416,6 +405,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing/index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1104,8 +1118,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/standards.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1166,13 +1182,17 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
 <p>O esforço da OGC API está a evoluir rapidamente. Várias normas OGC API estão em desenvolvimento e serão implementadas na pygeoapi ao longo do tempo:</p>
 <ul>
 <li><a href="https://ogcapi.ogc.org/routes">Routes</a> fornece acesso a dados de roteamento</li>
-<li><a href="https://ogcapi.ogc.org/styles">Styles</a> define uma API Web que permite que servidores de mapas, clientes, bem como editores de estilo visual, giram e obtenham estilos</li>
+<li><a href="https://ogcapi.ogc.org/styles">Styles</a> define uma API Web que permite aos servidores de mapas, aos clientes, bem como aos editores de estilo visual, gerir e obter estilos</li>
 <li><a href="https://ogcapi.ogc.org/geovolumes">3D GeoVolumes</a> facilita a descoberta e o acesso eficientes a conteúdo 3D em múltiplos formatos, com base numa perspetiva centrada no espaço</li>
 <li><a href="https://ogcapi.ogc.org/movingfeatures">Moving Features</a> define uma API que fornece acesso a dados que representam elementos que se movem como corpos rígidos</li>
 <li><a href="https://ogcapi.ogc.org/joins">Joins</a> suporta a junção de dados, de múltiplas fontes, com coleções de elementos ou diretamente com outros ficheiros de entrada</li>
 <li><a href="https://ogcapi.ogc.org/dggs">Discrete Global Grid System</a> permite que as aplicações organizem e acedam a dados organizados de acordo com um Discrete Global Grid System (DGGS)</li>
 </ul>
 <p><img alt="Normas OGC API aprovadas e candidatas" src="../assets/images/ogcapis.png" /></p>
+<h4 id="ogc-api-roadmap">OGC API Roadmap<a class="headerlink" href="#ogc-api-roadmap" title="Permanent link">&para;</a></h4>
+<p>O <a href="https://www.ogc.org/standards/roadmap">Roadmap de Normas da OGC</a> destaca os esforços atuais e
+planeados em termos de normas, bem como extensões relacionadas com essas normas. O Roadmap é útil para
+planear nova funcionalidade para os utilizadores, bem como para a implementação em software.</p>
 <h4 id="ogc-apis-suportadas-pela-pygeoapi">OGC APIs suportadas pela pygeoapi<a class="headerlink" href="#ogc-apis-suportadas-pela-pygeoapi" title="Permanent link">&para;</a></h4>
 <p>A pygeoapi implementa várias normas e rascunhos de normas da OGC API. Além disso, é certificada em conformidade e até mesmo uma Implementação de Referência (RI) para algumas delas. A certificação de conformidade é importante para remover os riscos de interoperabilidade. As RI são sempre certificadas em conformidade. Do OGC <a href="https://docs.ogc.org/pol/08-134r11.html#toc26">Compliance Testing Program Policies &amp; Procedures 08-134r11</a>:</p>
 <div class="admonition citation">
@@ -1360,7 +1380,7 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1372,10 +1392,10 @@ A OGC API - Common fornece a seguinte funcionalidade:</p>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

@@ -16,6 +16,11 @@
       
       
       
+        <link rel="prev" href="../../standards.pt/">
+      
+      
+        <link rel="next" href="../first.pt/">
+      
       
         
           <link rel="alternate" href="/" hreflang="en">
@@ -25,18 +30,18 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
-        <title>Publicação de dados - Diving into pygeoapi</title>
+        <title>Publicação de dados, metadados e processos - Diving into pygeoapi</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -71,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#publicacao-de-dados" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Publicação de dados
+              Publicação de dados, metadados e processos
             
           </span>
         </div>
@@ -329,45 +331,44 @@
       
   
   
+    
   
   
+  
     
     
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -380,17 +381,11 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
-          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
             <label class="md-nav__title" for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
               
@@ -400,6 +395,43 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        
+      
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
                 
               
                 
@@ -1088,8 +1120,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/index.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1107,22 +1141,22 @@
   
 
 
-<h1 id="publicacao-de-dados">Publicação de Dados<a class="headerlink" href="#publicacao-de-dados" title="Permanent link">&para;</a></h1>
+<h1 id="publicacao-de-dados-metadados-e-processos">Publicação de dados, metadados e processos<a class="headerlink" href="#publicacao-de-dados-metadados-e-processos" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Certifique-se de que tem a pygeoapi configurada e que consegue executar o serviço com a configuração de defeito em <a href="http://localhost:5000">http://localhost:5000</a>.</p>
 </div>
-<p>Nesta secção, irá aprender a publicar diferentes tipos de dados geoespaciais e metadados através dos seguintes exercícios:</p>
+<p>Nesta secção, irá aprender a publicar diferentes tipos de dados geoespaciais, metadados e processos através dos seguintes exercícios:</p>
 <ul>
-<li><a href="../first/">Exercício 1 - O meu primeiro conjunto de dados</a></li>
-<li><a href="../ogcapi-features/">Exercício 2 - Dados vetoriais via OGC API - Features</a></li>
-<li><a href="../ogcapi-coverages/">Exercício 3 - Dados raster via OGC API - Coverages</a></li>
-<li><a href="../ogcapi-maps/">Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</a></li>
-<li><a href="../ogcapi-tiles/">Exercício 5 - Mosaicos de dados geoespaciais via OGC API - Tiles</a></li>
-<li><a href="../ogcapi-records/">Exercício 6 - Metadados via OGC API - Records</a></li>
-<li><a href="../ogcapi-edr/">Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval</a></li>
-<li><a href="../ogcapi-processes/">Exercício 8 - Funções via OGC API - Processes</a></li>
-<li><a href="../../advanced/bridges/">Exercício 9 - pygeoapi como uma ponte para outros serviços</a></li>
+<li><a href="../first.pt/">Exercício 1 - O meu primeiro conjunto de dados</a></li>
+<li><a href="../ogcapi-features.pt/">Exercício 2 - Dados vetoriais via OGC API - Features</a></li>
+<li><a href="../ogcapi-coverages.pt/">Exercício 3 - Dados raster via OGC API - Coverages</a></li>
+<li><a href="../ogcapi-maps.pt/">Exercício 4 - Mapas de dados geoespaciais via OGC API - Maps</a></li>
+<li><a href="../ogcapi-tiles.pt/">Exercício 5 - Mosaicos de dados geoespaciais via OGC API - Tiles</a></li>
+<li><a href="../ogcapi-records.pt/">Exercício 6 - Metadados via OGC API - Records</a></li>
+<li><a href="../ogcapi-edr.pt/">Exercício 7 - Dados ambientais via OGC API - Environmental Data Retrieval</a></li>
+<li><a href="../ogcapi-processes.pt/">Exercício 8 - Funções via OGC API - Processes</a></li>
+<li><a href="../../advanced/bridges.pt/">Exercício 9 - pygeoapi como uma ponte para outros serviços</a></li>
 </ul>
 
 
@@ -1180,7 +1214,7 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1192,10 +1226,10 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

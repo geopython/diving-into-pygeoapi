@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/advanced/bridges.pt/">
       
       
+      
         <link rel="prev" href="../administration.pt/">
       
       
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercicio-9-pygeoapi-como-ponte-para-outros-servicos" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -339,8 +337,6 @@
     
       
         
-          
-        
       
         
       
@@ -369,9 +365,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../../publishing/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -384,14 +379,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
@@ -404,6 +393,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publishing/index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1239,8 +1253,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/advanced/bridges.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1364,7 +1380,7 @@ Podíamos ter usado o Fornecedor <code>OGR</code> em vez do Fornecedor <code>SQL
 </ul>
 <p>O suporte CRS permite efetivamente à pygeoapi <em>reprojetar</em> os dados do seu CRS de armazenamento (aqui EPSG:3003)
 de acordo com <a href="https://docs.opengeospatial.org/is/18-058r1/18-058r1.html">OGC API - Features - Part 2: Coordinate Reference Systems by Reference</a>.
-A secção Avançada desta workshop <a href="../../advanced/crs/">elaborará o suporte CRS da pygeoapi</a>.</p>
+A secção Avançada desta workshop <a href="../../advanced/crs.pt/">elaborará o suporte CRS da pygeoapi</a>.</p>
 <h2 id="publicar-wms-como-ogc-api-maps">Publicar WMS como OGC API - Maps<a class="headerlink" href="#publicar-wms-como-ogc-api-maps" title="Permanent link">&para;</a></h2>
 <p>Podemos usar o provider/fornecedor WMSFacade da pygeoapi para publicar interfaces OGC Web Map Service (WMS) como OGC API - Maps.</p>
 <p>Vamos configurar uma API sobre um WMS existente no Servidor de Demonstração MapServer:</p>
@@ -1504,7 +1520,7 @@ Encontre a linha <code># START - EXERCISE 8 - CSW Proxy</code>.</p>
 <h2 id="publicar-sensorthings-api-como-ogc-api-features">Publicar SensorThings API como OGC API - Features<a class="headerlink" href="#publicar-sensorthings-api-como-ogc-api-features" title="Permanent link">&para;</a></h2>
 <p>A <a href="https://ogcapi-workshop.ogc.org/api-deep-dive/sensorthings/">norma OGC SensorThings API</a> oferece interfaces RESTful para interconectar dispositivos IoT, dados, de forma aberta e unificada. Embora existam alguns clientes que suportam esta norma, há muito mais que suportam OGC API - Features.</p>
 <p>A ponte SensorThings da pygeoapi permite fazer proxy das entidades SensorThings (por exemplo: <code>Thing</code> , <code>Sensor</code>, <code>DataStream</code>, <code>ObservedProperty</code> ) em coleções de funcionalidades.</p>
-<p>Nesta secção veremos como Publicar um <code>Thing</code> da SensorThings API como uma coleção OGC API - Features, que pode então ser consumida por vários clientes, como <a href="../../publishing/ogcapi-features/#client-access">os listados aqui</a></p>
+<p>Nesta secção veremos como Publicar um <code>Thing</code> da SensorThings API como uma coleção OGC API - Features, que pode então ser consumida por vários clientes, como <a href="../../publishing/ogcapi-features.pt/#acesso-de-lado-do-cliente">os listados aqui</a></p>
 <div class="admonition question">
 <p class="admonition-title">Atualizar a configuração da pygeoapi</p>
 <p>Abra a configuração da pygeoapi num editor de texto. 
@@ -1597,7 +1613,7 @@ Encontre a linha <code># START - EXERCISE 8 - SensorThings Proxy</code>.</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1609,10 +1625,10 @@ Encontre a linha <code># START - EXERCISE 8 - SensorThings Proxy</code>.</p>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

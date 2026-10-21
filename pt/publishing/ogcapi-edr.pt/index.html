@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/publishing/ogcapi-edr.pt/">
       
       
+      
         <link rel="prev" href="../ogcapi-records.pt/">
       
       
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercicio-7-dados-ambientais-via-ogc-api-environmental-data-retrieval" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -341,8 +339,6 @@
     
       
         
-          
-        
       
         
       
@@ -371,9 +367,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -386,14 +381,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
@@ -406,6 +395,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1273,8 +1287,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/ogcapi-edr.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1309,7 +1325,7 @@ de funcionalidades como de cobertura.</p>
 <p>Consulte <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-edr.html">a documentação oficial</a> para mais informações sobre backends EDR suportados</p>
 </div>
 <h2 id="publicar-dados-ambientais-na-pygeoapi">Publicar dados ambientais na pygeoapi<a class="headerlink" href="#publicar-dados-ambientais-na-pygeoapi" title="Permanent link">&para;</a></h2>
-<p>Vamos publicar alguns dados ICOADS através do plugin EDR xarray. Os dados ICOADS do exemplo podem ser encontrados em <code>workshop/exercises/data/coads_sst.nc</code>:</p>
+<p>Vamos tentar publicar dados de exemplo de um <a href="https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast">modelo de previsão meteorológica</a> do NOAA através do plugin EDR xarray. Os dados de exemplo podem ser encontrados em <code>workshop/exercises/data/gfs_tmp2m.zarr</code>:</p>
 <div class="admonition question">
 <p class="admonition-title">Atualizar a configuração da pygeoapi</p>
 <p>Abra o ficheiro de configuração da pygeoapi num editor de texto. Adicione uma nova secção de conjunto de dados da seguinte forma:</p>
@@ -1341,63 +1357,56 @@ de funcionalidades como de cobertura.</p>
 <span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="nt">icoads-sst</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="nt">noaa-gfs</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">International Comprehensive Ocean-Atmosphere Data Set (ICOADS)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">International Comprehensive Ocean-Atmosphere Data Set (ICOADS)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Global Forecast System (GFS), 2 metre air temperature</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Global Forecast System (GFS), 2 metre air temperature</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nt">keywords</span><span class="p">:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">icoads</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sst</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gfs</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forecast</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">air temperature</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="nt">extents</span><span class="p">:</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="nt">spatial</span><span class="p">:</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-180</span><span class="p p-Indicator">,</span><span class="nv">-90</span><span class="p p-Indicator">,</span><span class="nv">180</span><span class="p p-Indicator">,</span><span class="nv">90</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-128</span><span class="p p-Indicator">,</span><span class="nv">23</span><span class="p p-Indicator">,</span><span class="nv">-65</span><span class="p p-Indicator">,</span><span class="nv">50</span><span class="p p-Indicator">]</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="nt">temporal</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">                </span><span class="nt">begin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000-01-16T06:00:00Z</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">                </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2000-12-16T06:00:00Z</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">                </span><span class="nt">begin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2023-09-27T18:00:00Z</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">                </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2023-09-28T06:00:00Z</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">links</span><span class="p">:</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">              </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canonical</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">              </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">information</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">              </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://psl.noaa.gov/data/gridded/data.coads.1deg.html</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">              </span><span class="nt">href</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">              </span><span class="nt">hreflang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-US</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="nt">providers</span><span class="p">:</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edr</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xarray-edr</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/coads_sst.nc</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">              </span><span class="nt">format</span><span class="p">:</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetCDF</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">                  </span><span class="nt">mimetype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application/x-netcdf</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">              </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/gfs_tmp2m.zarr</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">              </span><span class="nt">x_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lon</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">              </span><span class="nt">y_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lat</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">              </span><span class="nt">time_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">              </span><span class="nt">format</span><span class="p">:</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zarr</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">                  </span><span class="nt">mimetype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application/zip</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Guarde a configuração e reinicie o Docker Compose. Navegue para <a href="http://localhost:5000/collections">http://localhost:5000/collections</a> para avaliar se o novo conjunto de dados foi publicado.</p>
-<p>À primeira vista, a coleção <code>icoads-sst</code> aparece como uma coleção normal OGC API - Coverages. Olhe um pouco mais de perto para a descrição da coleção, e note
-que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR para as consultas da coleção.</p>
+<p>À primeira vista, a coleção Global Forecast System (GFS), 2 metre air temperature (<code>noaa-gfs</code>) parece uma coleção OGC API normal. Olhe um pouco mais de perto para a descrição da coleção (<a href="http://localhost:5000/collection/noaa-gfs">http://localhost:5000/collection/noaa-gfs</a>), e note as secções "Data Queries" e "Parameters" (adicione <code>f=json</code> ao URL da descrição da coleção para inspecionar os elementos específicos da EDR, tais como <code>data_queries</code> e <code>parameter_names</code>, entre outros elementos JSON). A secção "Parameters" descreve os parâmetros ambientais associados à coleção, que podem ser usados como parte de uma consulta da coleção.</p>
+<p>Tente visualizar a seguinte consulta de posição da EDR (centrada em Fort Lauderdale, EUA) num navegador web: <a href="http://localhost:5000/collections/noaa-gfs/position?coords=POINT(-80.1373%2026.1224)">http://localhost:5000/collections/noaa-gfs/position?coords=POINT(-80.1373%2026.1224)</a>. Note o gráfico interativo que exibe a série temporal de dados de temperatura a 2 metros.</p>
+<p><img alt="" src="../../assets/images/edr-position-query-html.png" width="100%" /></p>
 <h2 id="acesso-do-lado-do-cliente">Acesso do lado do cliente<a class="headerlink" href="#acesso-do-lado-do-cliente" title="Permanent link">&para;</a></h2>
 <h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
-<p>O <a href="https://qgis.org/">QGIS</a> dá suporte à OGC API - EDR através do <a href="https://plugins.qgis.org/plugins/edr_plugin/">plugin EDR</a>. Pode instalar-lo directamente através do Hub de plugins do QGIS, indo a <code>Plugins-&gt;Gerir e instalar Plugins</code> no menu de topo.</p>
+<p>O <a href="https://qgis.org/">QGIS</a> dá suporte à OGC API - EDR através do <a href="https://plugins.qgis.org/plugins/edr_plugin/">plugin EDR</a>. Pode instalá-lo diretamente através do QGIS Plugin Hub, indo a <code>Plugins-&gt;Manage and Install Plugins</code> no menu de topo.</p>
 <p><img alt="" src="../../assets/images/edr-plugin1.png" width="100%" /></p>
 <p>Pode aceder ao plugin através de uma entrada no menu de plugins.</p>
 <p><img alt="" src="../../assets/images/edr-plugin2.png" width="100%" /></p>
-<p>A primeira coisa a fazer é configurar o url do servidor. Use aqui o url da Landing Page: <code>http://localhost:5000/</code></p>
-<div class="admonition tip">
-<p class="admonition-title">Também deveria comecar por definir a directoria onde gostaria de guardar os dados descarregados pelo plugin</p>
-</div>
-<p><img alt="" src="../../assets/images/edr-plugin3.png" width="100%" /></p>
-<p>A combo box será populada com todas as coleções disponiveis naquele servidor. Seleccione a coleção EDR: <code>International Comprehensive Ocean-Atmosphere Data Set (ICOADS)</code>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Pode ignorar os avisos mostrados aqui!</p>
-</div>
-<p><img alt="" src="../../assets/images/edr-plugin4.png" width="100%" /></p>
-<p>A combo box de query de dados será populada com os tipos de query de dados disponiveis para esta coleção, neste caso: posição e cubo. Pode seleccionar a query do tipo cubo e carregar no botão que permite definir a extensão espacial da query. Um novo diálogo irá abrir, mostrando as diferentes opções para definir a extensão espacial. Pode escolher <code>Desenhar no canvas</code>, para desenhar um rectângulo no extent da map view.</p>
-<p><img alt="" src="../../assets/images/edr-plugin5.png" width="100%" /></p>
-<p>Pode fechar este dialogo e executar a query. O plugin irá descarregar todos os dados disponiveis que se encaixam nesta query e mostrar-los como um grupo de layers.</p>
-<p><img alt="" src="../../assets/images/edr-plugin6.png" width="100%" /></p>
 <h3 id="owslib-avancado">OWSLib - Avançado<a class="headerlink" href="#owslib-avancado" title="Permanent link">&para;</a></h3>
-<p><a href="https://owslib.readthedocs.io">OWSLib</a> é uma biblioteca Python para interagir com Serviços Web OGC e suporta várias OGC APIs incluindo OGC API - Environmental Data Retrieval.</p>
+<p><a href="https://owslib.readthedocs.io">OWSLib</a> é uma biblioteca Python para interagir com Serviços Web OGC e suporta várias OGC APIs, incluindo a OGC API - Environmental Data Retrieval.</p>
 <div class="admonition question">
 <p class="admonition-title">Interagir com OGC API - Environmental Data Retrieval via OWSLib</p>
-<p>Se não tem Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<p>Se não tem Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup.pt/#usar-o-docker-para-clientes-python">Capítulo de Configuração</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1414,18 +1423,19 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux/Mac</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">EnvironmentalDataRetrieval</span><span class="p">(</span><span class="s1">'https://demo.pygeoapi.io/master'</span><span class="p">)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s1">'https://demo.pygeoapi.io/master'</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># documento OpenAPI</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">'collections'</span><span class="p">])</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="mi">13</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">icoads_sst</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">'icoads-sst'</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">icoads_sst</span><span class="p">[</span><span class="s1">'parameter_names'</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">dict_keys</span><span class="p">([</span><span class="s1">'SST'</span><span class="p">,</span> <span class="s1">'AIRT'</span><span class="p">,</span> <span class="s1">'UWND'</span><span class="p">,</span> <span class="s1">'VWND'</span><span class="p">])</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">query_data</span><span class="p">(</span><span class="s1">'icoads-sst'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s1">'POINT(174.7645 -36.8509)'</span><span class="p">,</span> <span class="n">parameter_names</span><span class="o">=</span><span class="p">[</span><span class="s1">'SST'</span><span class="p">,</span> <span class="s1">'AIRT'</span><span class="p">])</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span>  <span class="c1"># dados CoverageJSON</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">owslib.ogcapi.edr</span><span class="w"> </span><span class="kn">import</span>  <span class="n">EnvironmentalDataRetrieval</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">EnvironmentalDataRetrieval</span><span class="p">(</span><span class="s1">'https://demo.pygeoapi.io/master'</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="o">.</span><span class="n">url</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s1">'https://demo.pygeoapi.io/master'</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">api</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">api</span><span class="p">()</span>  <span class="c1"># documento OpenAPI</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">'collections'</span><span class="p">])</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="mi">13</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">noaa_gfs</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">'noaa-gfs'</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">noaa_gfs</span><span class="p">[</span><span class="s1">'parameter_names'</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">dict_keys</span><span class="p">([</span><span class="s1">'t2m'</span><span class="p">])</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">query_data</span><span class="p">(</span><span class="s1">'noaa-gfs'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s1">'POINT(-80.1373 26.1224)'</span><span class="p">,</span> <span class="n">parameter_names</span><span class="o">=</span><span class="p">[</span><span class="s1">'t2m'</span><span class="p">])</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span>  <span class="c1"># dados CoverageJSON</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1437,10 +1447,10 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collections</span><span class="p">()</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">collections</span><span class="p">[</span><span class="s1">'collections'</span><span class="p">])</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="mi">13</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">icoads_sst</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">'icoads-sst'</span><span class="p">)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">icoads_sst</span><span class="p">[</span><span class="s1">'parameter_names'</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">dict_keys</span><span class="p">([</span><span class="s1">'SST'</span><span class="p">,</span> <span class="s1">'AIRT'</span><span class="p">,</span> <span class="s1">'UWND'</span><span class="p">,</span> <span class="s1">'VWND'</span><span class="p">])</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">query_data</span><span class="p">(</span><span class="s1">'icoads-sst'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s1">'POINT(174.7645 -36.8509)'</span><span class="p">,</span> <span class="n">parameter_names</span><span class="o">=</span><span class="p">[</span><span class="s1">'SST'</span><span class="p">,</span> <span class="s1">'AIRT'</span><span class="p">])</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">noaa_gfs</span><span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">collection</span><span class="p">(</span><span class="s1">'noaa-gfs'</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">noaa_gfs</span><span class="p">[</span><span class="s1">'parameter_names'</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">dict_keys</span><span class="p">([</span><span class="s1">'t2m'</span><span class="p">])</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">query_data</span><span class="p">(</span><span class="s1">'noaa-gfs'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s1">'POINT(-80.1373 26.1224)'</span><span class="p">,</span> <span class="n">parameter_names</span><span class="o">=</span><span class="p">[</span><span class="s1">'t2m'</span><span class="p">])</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span>  <span class="c1"># dados CoverageJSON</span>
 </span></code></pre></div>
 </div>
@@ -1509,7 +1519,7 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1521,10 +1531,10 @@ que há uma chave 'parameter_names' que descreve os nomes dos parâmetros EDR pa
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

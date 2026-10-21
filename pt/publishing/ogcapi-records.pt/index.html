@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/publishing/ogcapi-records.pt/">
       
       
+      
         <link rel="prev" href="../ogcapi-tiles.pt/">
       
       
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercicio-6-metadados-via-ogc-api-records" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -341,8 +339,6 @@
     
       
         
-          
-        
       
         
       
@@ -371,9 +367,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -386,14 +381,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
@@ -406,6 +395,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1351,8 +1365,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/ogcapi-records.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1379,7 +1395,7 @@ e consultar metadados na Web:</p>
 <p>A OGC API - Records utiliza a OGC API - Features como bloco de construção, permitindo assim implementação
 e integração simplificadas para clientes e utilizadores.</p>
 <h2 id="suporte-na-pygeoapi">Suporte na pygeoapi<a class="headerlink" href="#suporte-na-pygeoapi" title="Permanent link">&para;</a></h2>
-<p>A pygeoapi suporta a especificação OGC API - Records, usando Elasticsearch e TinyDB <a href="https://rasterio.readthedocs.io">rasterio</a> como backends principais.</p>
+<p>A pygeoapi suporta a especificação OGC API - Records, usando o Elasticsearch e o TinyDB como backends principais.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Consulte <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-records.html">a documentação oficial</a> para mais informações sobre backends de catálogo/metadados suportados</p>
@@ -1446,7 +1462,7 @@ de catálogo <a href="https://tinydb.readthedocs.io/en/latest/index.html">TinyDB
 <p>Por defeito, a pygeoapi suporta e espera o modelo de records e os "queryables" da OGC API - Records. Para formatos de metadados adicionais, pode desenvolver o seu próprio plugin personalizado para a pygeoapi, ou converter os seus metadados para o modelo de records da OGC API - Records antes de os adicionar à pygeoapi.</p>
 <div class="admonition question">
 <p class="admonition-title">Instalar a OWSLib</p>
-<p>Se não tiver o Python instalado, considere executar este exercício num container Docker. Consulte o <a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<p>Se não tiver o Python instalado, considere executar este exercício num container Docker. Consulte o <a href="../../setup.pt/#usar-o-docker-para-clientes-python">Capítulo de Configuração</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1479,7 +1495,7 @@ de catálogo <a href="https://tinydb.readthedocs.io/en/latest/index.html">TinyDB
 </div>
 </div>
 <p>Se não tiver o curl instalado, copie o URL acima para o seu navegador web e guarde localmente.</p>
-<p>Se não tiver o Python instalado, pode usar o loader utilizando o container Docker da OWSLib. Consulte o <a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<p>Se não tiver o Python instalado, pode usar o loader utilizando o container Docker da OWSLib. Consulte o <a href="../../setup.pt/#usar-o-docker-para-clientes-python">Capítulo de Configuração</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Usar o container Docker da OWSLib para carregar metadados</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux/Mac</label><label for="__tabbed_3_2">Windows (PowerShell)</label></div>
@@ -1510,7 +1526,7 @@ na coleção.</p>
 <div class="admonition tip pygeometa">
 <p class="admonition-title">Tip</p>
 <p>O <a href="https://geopython.github.io/pygeometa">pygeometa</a> é um pacote Python para gerar metadados para conjuntos de dados geoespaciais.
-AOpygeometa permite gerir metadados em ficheiros YAML simples "metadata control files (MCF)", e suporta
+O pygeometa permite gerir metadados em ficheiros YAML simples "metadata control files (MCF)", e suporta
 importação, exportação, bem como transformações para muitos formatos de metadados geoespaciais. Metadados
 da OGC API - Records podem ser produzidos usando o pygeometa, quer a partir de ficheiros MCF ou por transformação de outros formatos.</p>
 <p>Instale e execute o pygeometa como abaixo para ter uma ideia dos vários comandos e funcionalidades (além disso,
@@ -1531,7 +1547,7 @@ consulte o <a href="https://geopython.github.io/pygeometa/tutorial">tutorial</a>
 </div>
 </div>
 <h2 id="a-pygeoapi-como-um-proxy-de-csw">A pygeoapi como um proxy de CSW<a class="headerlink" href="#a-pygeoapi-como-um-proxy-de-csw" title="Permanent link">&para;</a></h2>
-<p>Pode verificar a secção "pygeoapi como uma Ponte para Outros serviços" para aprender como <a href="../../advanced/bridges/#publishing-csw-as-ogc-api-records">publicar CSW como OGC API - Records</a>.</p>
+<p>Pode verificar a secção "pygeoapi como uma Ponte para Outros serviços" para aprender como <a href="../../advanced/bridges.pt/#publicar-csw-como-ogc-api-records">publicar CSW como OGC API - Records</a>.</p>
 <h2 id="acesso-de-cliente">Acesso de cliente<a class="headerlink" href="#acesso-de-cliente" title="Permanent link">&para;</a></h2>
 <h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
 <p>O QGIS suporta a OGC API - Records através do <a href="https://docs.qgis.org/latest/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html">plugin MetaSearch</a>. O MetaSearch focava-se originalmente apenas em Catalogue Service for the Web (OGC:CSW), mas foi estendido para a OGC API - Records. O MetaSearch é um plugin padrão no QGIS e não requer instalação adicional.</p>
@@ -1557,7 +1573,7 @@ consulte o <a href="https://geopython.github.io/pygeometa/tutorial">tutorial</a>
 <p>A <a href="https://owslib.readthedocs.io">OWSLib</a> é uma biblioteca Python para interagir com OGC Web Services e suporta várias OGC APIs, incluindo a OGC API - Records.</p>
 <div class="admonition question">
 <p class="admonition-title">Interagir com a OGC API - Records via OWSLib</p>
-<p>Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup/#using-docker-for-python-clients">Capítulo de Configuração</a>.</p>
+<p>Se não tiver o Python instalado, considere executar este exercício num contentor Docker. Consulte o <a href="../../setup.pt/#usar-o-docker-para-clientes-python">Capítulo de Configuração</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux/Mac</label><label for="__tabbed_5_2">Windows (PowerShell)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1684,7 +1700,7 @@ consulte o <a href="https://geopython.github.io/pygeometa/tutorial">tutorial</a>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1696,10 +1712,10 @@ consulte o <a href="https://geopython.github.io/pygeometa/tutorial">tutorial</a>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

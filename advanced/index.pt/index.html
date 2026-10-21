@@ -17,6 +17,7 @@
       
       
       
+      
         
           <link rel="alternate" href="/" hreflang="en">
         
@@ -25,7 +26,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -36,7 +37,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -71,14 +72,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#topicos-avancados" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -1072,8 +1070,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/advanced/index.pt.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
@@ -1095,16 +1095,16 @@
 <p>Nesta secção, discutiremos tópicos mais avançados da pygeoapi focados principalmente
 em estender a pygeoapi através de desenvolvimento personalizado e implementação.</p>
 <ul>
-<li><a href="../i18n/">Suporte multilíngue</a></li>
-<li><a href="../crs/">Suporte CRS</a></li>
-<li><a href="../ui-custom-templates/">Personalização de UI e templating</a></li>
-<li><a href="../downstream-applications/">Usar pygeoapi em aplicações downstream</a></li>
-<li><a href="../seo/">Otimização para motores de busca (SEO)</a></li>
-<li><a href="../security-access-control/">Segurança e controlo de acessos</a></li>
-<li><a href="../semantic-web-linked-data/">Web Semântica e Linked Data</a></li>
-<li><a href="../cloud/">Implementação na cloud</a></li>
-<li><a href="../inspire/">Suporte INSPIRE</a></li>
-<li><a href="../bridges/">pygeoapi como Ponte para Outros Serviços</a></li>
+<li><a href="../i18n.pt/">Suporte multilíngue</a></li>
+<li><a href="../crs.pt/">Suporte CRS</a></li>
+<li><a href="../ui-custom-templates.pt/">Personalização de UI e templating</a></li>
+<li><a href="../downstream-applications.pt/">Usar pygeoapi em aplicações downstream</a></li>
+<li><a href="../seo.pt/">Otimização para motores de busca (SEO)</a></li>
+<li><a href="../security-access-control.pt/">Segurança e controlo de acessos</a></li>
+<li><a href="../semantic-web-linked-data.pt/">Web Semântica e Linked Data</a></li>
+<li><a href="../cloud.pt/">Implementação na cloud</a></li>
+<li><a href="../inspire.pt/">Suporte INSPIRE</a></li>
+<li><a href="../bridges.pt/">pygeoapi como Ponte para Outros Serviços</a></li>
 </ul>
 
 
@@ -1162,7 +1162,7 @@ em estender a pygeoapi através de desenvolvimento personalizado e implementaç�
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1174,10 +1174,10 @@ em estender a pygeoapi através de desenvolvimento personalizado e implementaç�
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

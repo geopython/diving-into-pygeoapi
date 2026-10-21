@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://dive.pygeoapi.io/publishing/ogcapi-tiles.pt/">
       
       
+      
         <link rel="prev" href="../ogcapi-maps.pt/">
       
       
@@ -29,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.66">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -40,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.5da0f285.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
       
       
 
@@ -75,14 +76,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navegação"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercicio-5-tiles-de-dados-geoespaciais-via-ogc-api-tiles" class="md-skip">
-          Ir para o conteúdo
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Ir para o conteúdo
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -341,8 +339,6 @@
     
       
         
-          
-        
       
         
       
@@ -371,9 +367,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -386,14 +381,8 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         
           <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
@@ -406,6 +395,31 @@
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
               
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.pt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Index
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
                 
               
                 
@@ -1317,8 +1331,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
     <a href="https://github.com/geopython/diving-into-pygeoapi/edit/main/workshop/content/docs/publishing/ogcapi-tiles.pt.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
@@ -1337,7 +1353,7 @@
 
 
 <h1 id="exercicio-5-tiles-de-dados-geoespaciais-via-ogc-api-tiles">Exercício 5 - Tiles de dados geoespaciais via OGC API - Tiles<a class="headerlink" href="#exercicio-5-tiles-de-dados-geoespaciais-via-ogc-api-tiles" title="Permanent link">&para;</a></h1>
-<p>A <a href="https://ogcapi.ogc.org/tiles">OGC API - Tiles</a> fornece uma API Web para disponibilizar tiles (ou mosaicos) de informação geoespacial. São suportadas diferentes formas de informação geoespacial, como tiles de elementos vetoriais ("vector tiles"), coverages, mapas (ou imagens) e, potencialmente, outros tipos de tiles de informação geoespacial. O standard está disponível neste documento:</p>
+<p>A <a href="https://ogcapi.ogc.org/tiles">OGC API - Tiles</a> fornece uma API Web para disponibilizar tiles (ou mosaicos) de informação geoespacial. São suportadas diferentes formas de informação geoespacial, como tiles de elementos vetoriais ("vector tiles"), coverages, mapas (ou imagens) e, potencialmente, outros tipos de tiles de informação geoespacial. A norma está disponível neste documento:</p>
 <ul>
 <li><a href="https://docs.ogc.org/is/20-057/20-057.html">OGC API - Tiles: Parte 1: Core</a></li>
 </ul>
@@ -1359,11 +1375,11 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A pygeoapi atualmente suporta dois Tile Matrix Sets muito conhecidos: <code>WorldCRS84Quad</code> e <code>WebMercatorQuad</code>. A sua definição é publicada no ponto de extremidade <a href="https://demo.pygeoapi.io/master/TileMatrixSets">/TileMatrixSets</a>.</p>
+<p>A pygeoapi atualmente suporta dois Tile Matrix Sets muito conhecidos: <code>WorldCRS84Quad</code> e <code>WebMercatorQuad</code>. A sua definição é publicada no ponto de extremidade <a href="https://demo.pygeoapi.io/master/TileMatrixSets">/TileMatrixSets</a>. Para suporte a TMS adicional, consulte a <a href="https://docs.pygeoapi.io/en/latest/publishing/ogcapi-tiles.html#providing-custom-tile-matrix-set-definitions">documentação da pygeoapi</a>.</p>
 </div>
 <h2 id="publicar-tiles-vetoriais-pre-renderizadas">Publicar tiles vetoriais pré-renderizadas<a class="headerlink" href="#publicar-tiles-vetoriais-pre-renderizadas" title="Permanent link">&para;</a></h2>
 <p>Neste cenário, as tiles devem ser pré-renderizadas antes de serem servidas. O fornecedor <code>MVT-tippecanoe</code> permite servir tiles pré-renderizadas pelo <a href="https://github.com/mapbox/tippecanoe">tippecanoe</a>, seja a partir de uma directoria no disco ou de um servidor estático (ex.: bucket S3 ou MinIO).</p>
-<p>Para este exercício, irá publicar um conjunto de dados vetoriais dos <a href="https://en.wikipedia.org/wiki/Administrative_divisions_of_Hyderabad">limites dos bairros da corporação municipal da grande Hyderabad</a>, a partir da localização abaixo:</p>
+<p>Para este exercício, irá publicar um conjunto de dados vetoriais dos <a href="https://livingatlas-dcdev.opendata.arcgis.com/datasets/a090c89d52f1498f96a82e97b8bfb83e_0/about">limites dos bairros da corporação municipal da grande Hyderabad</a>, a partir da localização abaixo:</p>
 <ul>
 <li>data: <code>workshop/exercises/data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson</code></li>
 </ul>
@@ -1623,33 +1639,35 @@
 </div>
 <h2 id="acesso-do-lado-do-cliente">Acesso do lado do cliente<a class="headerlink" href="#acesso-do-lado-do-cliente" title="Permanent link">&para;</a></h2>
 <h3 id="qgis">QGIS<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h3>
-<p>O QGIS suporta tiles Vetoriais da OGC API através da <a href="https://docs.qgis.org/3.40/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html">Camada de tiles Vetoriais</a>. Embora a OGC API - Tiles não seja suportada nativamente, pode personalizar a <code>ligação genérica</code> para aceder a eles no QGIS.</p>
+<p>O QGIS suporta tiles Vetoriais da OGC API através da <a href="https://docs.qgis.org/3.40/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html">Camada de tiles Vetoriais</a>. Embora a OGC API - Tiles não seja suportada nativamente, pode personalizar a <code>generic connection</code> para aceder a eles no QGIS.</p>
 <div class="admonition question">
 <p class="admonition-title">Aceder a tiles Vetoriais da OGC API a partir do QGIS</p>
 <p>Antes de entrar no QGIS, aceda à página de instalação da sua pygeoapi no navegador e siga estes passos.</p>
 <ul>
 <li>aceda à página da coleção do conjunto de dados de tiles: <a href="http://localhost:5000/collections/hyderabad">http://localhost:5000/collections/hyderabad</a></li>
 <li>navegue para a página de tiles clicando em <code>tiles</code>: <a href="http://localhost:5000/collections/hyderabad/tiles">http://localhost:5000/collections/hyderabad/tiles</a></li>
-<li>clique em <code>Tileset Metadata</code>: <a href="http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata">http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata</a></li>
-<li>Tome nota do URL template: <code>http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt</code> e os valores de minZoom e maxZoom</li>
+<li>clique em <code>Tiles metadata</code>: <a href="http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata">http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/metadata</a></li>
+<li>Tome nota do URL template: <code>http://localhost:5000/collections/hyderabad/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt</code> e dos valores de minZoom e maxZoom</li>
 </ul>
 <p>Siga estes passos para se ligar a um serviço e aceder a tiles vetoriais:</p>
 <ul>
 <li>
-<p>localize o serviço de tiles vetoriais no painel do navegador do lado esquerdo. Note que também pode usar o menu superior e navegar para <code>Layer &gt; Adicionar Layer &gt; Adicionar Layer de Tiles Vetoriaiss</code></p>
+<p>localize o serviço de tiles vetoriais no painel do navegador do lado esquerdo. Note que também pode usar o menu superior e navegar para <code>Layer &gt; Add Layer &gt; Vector Tile Layer</code></p>
 </li>
 <li>
-<p>clique com o botão direito para abrir o menu de contexto e escolha <code>Nova Ligação Genérica</code></p>
+<p>clique com o botão direito para abrir o menu de contexto e escolha <code>New Generic connection</code></p>
 </li>
 <li>preencha os valores necessários. Para URL, use o URL que anotou no passo anterior, substituindo <code>{tileMatrix}/{tileRow}/{tileCol}</code> por <code>{z}/{y}/{x}</code>.</li>
 </ul>
 <p><img alt="" src="../../assets/images/qgis-vtiles-hyderabad1.png" width="100%" /></p>
 <ul>
-<li>pressione <code>OK</code> para adicionar o serviço. Neste ponto, deverá ver a ligação aparecer. Clique em <code>Adicionar</code> para a adicionar ao mapa</li>
+<li>pressione <code>OK</code> para adicionar o serviço. Neste ponto, deverá ver a ligação aparecer. Clique em <code>Add</code> para a adicionar ao mapa</li>
 <li>Faça zoom para Hyderabad para visualizar o seu conjunto de dados</li>
 </ul>
 <p><img alt="" src="../../assets/images/qgis-vtiles-hyderabad2.png" width="100%" /></p>
 <p><img alt="" src="../../assets/images/qgis-vtiles-hyderabad3.png" width="100%" /></p>
+<p>Note que, com tiles vetoriais, é possível renderizar estilos de acordo com os atributos. Para experimentar, carregue o ficheiro de estilos em <code>exercises/data/hyderabad/style-vector.qml</code>.</p>
+<p><img alt="" src="../../assets/images/vector-tiles-styles.png" width="100%" /></p>
 </div>
 <h3 id="leafletjs">LeafletJS<a class="headerlink" href="#leafletjs" title="Permanent link">&para;</a></h3>
 <p>O <a href="https://leafletjs.com">LeafletJS</a> é uma biblioteca JavaScript popular para adicionar mapas interativos a websites. O LeafletJS não suporta explicitamente as OGC APIs, no entanto, pode interagir com a OGC API usando diretamente os resultados da API.</p>
@@ -1797,7 +1815,7 @@
 <p>Consulte a <a href="https://openlayers.org/en/latest/examples/ogc-vector-tiles.html">documentação oficial do OpenLayers</a></p>
 </div>
 <h1 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h1>
-<p>Parabéns! Agora é capaz de publicar tiles na pygeoapi. Pode aprender mais sobre este Standard em: <a href="https://tiles.developer.ogc.org/">https://tiles.developer.ogc.org/</a></p>
+<p>Parabéns! Agora é capaz de publicar tiles na pygeoapi. Pode aprender mais sobre esta norma em: <a href="https://tiles.developer.ogc.org/">https://tiles.developer.ogc.org/</a></p>
 
 
 
@@ -1854,7 +1872,7 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -1866,10 +1884,10 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copiado para área de transferência","clipboard.copy":"Copiar para área de transferência","clipboard.error":"Could not copy to clipboard","search.result.more.one":"Mais 1 nesta página","search.result.more.other":"Mais # nesta página","search.result.none":"Nenhum resultado encontrado","search.result.one":"1 resultado encontrado","search.result.other":"# resultados encontrados","search.result.placeholder":"Digite para iniciar a busca","search.result.term.missing":"Ausente","select.version":"Selecione a versão"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>
