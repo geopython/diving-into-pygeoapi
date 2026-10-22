@@ -15,9 +15,9 @@ uma audiência mais ampla. Vamos configurar uma API sobre um WFS existente (corr
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - WFS Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - WFS Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - WFS Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - WFS Proxy`:
 
 
     ``` {.yaml linenums="1"}
@@ -95,9 +95,9 @@ Podemos usar o provider/fornecedor WMSFacade da pygeoapi para publicar interface
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `## START - EXERCISE 8 - WMS Proxy`.
+    Encontre a linha `## START - EXERCISE 9 - WMS Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `## END - EXERCISE 8 - WMS Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `## END - EXERCISE 9 - WMS Proxy`:
 
      Certifique-se de manter a indentação YAML adequada.
 
@@ -149,9 +149,9 @@ Nesta secção veremos como publicar Catalogue Service for the Web (CSW) como OG
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - CSW Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - CSW Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - CSW Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - CSW Proxy`:
 
     ``` {.yaml linenums="1"}
     cite_demo:
@@ -197,9 +197,9 @@ Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma col
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - SensorThings Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - SensorThings Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - SensorThings Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - SensorThings Proxy`:
 
     ``` {.yaml linenums="1"}
     toronto_bikes:
