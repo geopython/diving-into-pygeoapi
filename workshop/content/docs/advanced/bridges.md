@@ -15,9 +15,9 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - WFS Proxy`.
+    Find the line `# START - EXERCISE 9 - WFS Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - WFS Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - WFS Proxy`:
 
 
     ``` {.yaml linenums="1"}
@@ -95,9 +95,9 @@ We can use the pygeoapi's WMSFacade provider to publish OGC Web Map Service (WMS
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `## START - EXERCISE 8 - WMS Proxy`.
+    Find the line `## START - EXERCISE 9 - WMS Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `## END - EXERCISE 8 - WMS Proxy`:
+    Add a new dataset section by uncommenting the lines up to `## END - EXERCISE 9 - WMS Proxy`:
 
      Be sure to keep the proper YAML indentation.
 
@@ -149,9 +149,9 @@ In this section we'll have a look at how to publish Catalogue Service for the We
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - CSW Proxy`.
+    Find the line `# START - EXERCISE 9 - CSW Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - CSW Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - CSW Proxy`:
 
     ``` {.yaml linenums="1"}
     cite_demo:
@@ -197,9 +197,9 @@ In this section we'll have a look at how to Publish a SensorThings API `Thing` a
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - SensorThings Proxy`.
+    Find the line `# START - EXERCISE 9 - SensorThings Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - SensorThings Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - SensorThings Proxy`:
 
     ``` {.yaml linenums="1"}
     toronto_bikes:
