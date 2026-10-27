@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="zensical-0.0.71">
+      <meta name="generator" content="zensical-0.0.73">
     
     
       
@@ -41,7 +41,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.94dd801d.min.css">
       
       
 
@@ -98,9 +98,10 @@
   <img src="../../assets/images/pygeoapi-icon-notrans.png" alt="Diving into pygeoapi">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+    <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -152,9 +153,10 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+        <label class="md-header__button md-icon" for="__search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <span class="md-visually-hidden">Search</span>
         </label>
         <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <button type="button" class="md-search__button">
@@ -1251,8 +1253,8 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
 <div class="admonition question">
 <p class="admonition-title">Update the pygeoapi configuration</p>
 <p>Open the pygeoapi configuration in a text editor. 
-Find the line <code># START - EXERCISE 8 - WFS Proxy</code>.</p>
-<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 8 - WFS Proxy</code>:</p>
+Find the line <code># START - EXERCISE 9 - WFS Proxy</code>.</p>
+<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 9 - WFS Proxy</code>:</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1349,6 +1351,10 @@ We could have used the <code>OGR</code> Provider instead of the <code>SQLiteGPKG
 <p>CRS support effectively allows pygeoapi to <em>reproject</em> the data from its storage CRS (here EPSG:3003)
 according to <a href="https://docs.opengeospatial.org/is/18-058r1/18-058r1.html">OGC API - Features - Part 2: Coordinate Reference Systems by Reference</a>.
 The Advanced section of this workshop will further <a href="../../advanced/crs/">elaborate pygeoapi CRS support</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember that you can use the clients suggested <a href="https://dive.pygeoapi.io/publishing/ogcapi-features/#client-access">here</a> to explore this API.</p>
+</div>
 <h2 id="publishing-wms-as-ogc-api-maps">Publishing WMS as OGC API - Maps<a class="headerlink" href="#publishing-wms-as-ogc-api-maps" title="Permanent link">&para;</a></h2>
 <p>We can use the pygeoapi's WMSFacade provider to publish OGC Web Map Service (WMS) interfaces as OGC API - Maps.</p>
 <p>Let's set up an API on top of an existing WMS on the MapServer Demonstration Server:</p>
@@ -1360,8 +1366,8 @@ The Advanced section of this workshop will further <a href="../../advanced/crs/"
 <div class="admonition question">
 <p class="admonition-title">Update the pygeoapi configuration</p>
 <p>Open the pygeoapi configuration in a text editor. 
-Find the line <code>## START - EXERCISE 8 - WMS Proxy</code>.</p>
-<p>Add a new dataset section by uncommenting the lines up to <code>## END - EXERCISE 8 - WMS Proxy</code>:</p>
+Find the line <code>## START - EXERCISE 9 - WMS Proxy</code>.</p>
+<p>Add a new dataset section by uncommenting the lines up to <code>## END - EXERCISE 9 - WMS Proxy</code>:</p>
 <p>Be sure to keep the proper YAML indentation.</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1427,13 +1433,17 @@ Find the line <code>## START - EXERCISE 8 - WMS Proxy</code>.</p>
 <p class="admonition-title">Tip</p>
 <p>Try with your own bbox and width/height values!</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember that you can use the clients suggested <a href="https://dive.pygeoapi.io/publishing/ogcapi-maps/#client-access">here</a> to explore this API.</p>
+</div>
 <h2 id="publishing-csw-as-ogc-api-records">Publishing CSW as OGC API - Records<a class="headerlink" href="#publishing-csw-as-ogc-api-records" title="Permanent link">&para;</a></h2>
 <p>In this section we'll have a look at how to publish Catalogue Service for the Web (CSW) as OGC API - Records. For that, we will use the <a href="https://demo.pycsw.org/cite/">pycsw OGC CITE demo</a> CSW service.</p>
 <div class="admonition question">
 <p class="admonition-title">Update the pygeoapi configuration</p>
 <p>Open the pygeoapi configuration in a text editor. 
-Find the line <code># START - EXERCISE 8 - CSW Proxy</code>.</p>
-<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 8 - CSW Proxy</code>:</p>
+Find the line <code># START - EXERCISE 9 - CSW Proxy</code>.</p>
+<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 9 - CSW Proxy</code>:</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1483,7 +1493,7 @@ Find the line <code># START - EXERCISE 8 - CSW Proxy</code>.</p>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Remember that you can use the QGIS client suggested <a href="https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access">here</a> to explore this API.</p>
+<p>Remember that you can use the clients suggested <a href="https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access">here</a> to explore this API.</p>
 </div>
 <h2 id="publishing-sensorthings-api-as-ogc-api-features">Publishing SensorThings API as OGC API - Features<a class="headerlink" href="#publishing-sensorthings-api-as-ogc-api-features" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://ogcapi-workshop.ogc.org/api-deep-dive/sensorthings/">OGC SensorThings API standard</a> offers RESTfull interfaces to interconnect IoT devices, data, in an open and unified way. Although there are some clients that support this standard, there are many more that support OGC API - Features.</p>
@@ -1492,8 +1502,8 @@ Find the line <code># START - EXERCISE 8 - CSW Proxy</code>.</p>
 <div class="admonition question">
 <p class="admonition-title">Update the pygeoapi configuration</p>
 <p>Open the pygeoapi configuration in a text editor. 
-Find the line <code># START - EXERCISE 8 - SensorThings Proxy</code>.</p>
-<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 8 - SensorThings Proxy</code>:</p>
+Find the line <code># START - EXERCISE 9 - SensorThings Proxy</code>.</p>
+<p>Add a new dataset section by uncommenting the lines up to <code># END - EXERCISE 9 - SensorThings Proxy</code>:</p>
 <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1508,21 +1518,23 @@ Find the line <code># START - EXERCISE 8 - SensorThings Proxy</code>.</p>
 <span class="normal"><a href="#__codelineno-3-12">12</a></span>
 <span class="normal"><a href="#__codelineno-3-13">13</a></span>
 <span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">toronto_bikes</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">toronto_bikes</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Toronto Bikes SensorThings</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The geographic location with coordinates for the Toronto bike share station</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sediments</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-180</span><span class="p p-Indicator">,</span><span class="nv">-90</span><span class="p p-Indicator">,</span><span class="nv">180</span><span class="p p-Indicator">,</span><span class="nv">90</span><span class="p p-Indicator">]</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SensorThings</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://toronto-bike-snapshot.sensorup.com/v1.0/</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">          </span><span class="nt">entity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Things</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensors</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bikes</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nt">extents</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="nt">spatial</span><span class="p">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">            </span><span class="nt">bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-180</span><span class="p p-Indicator">,</span><span class="nv">-90</span><span class="p p-Indicator">,</span><span class="nv">180</span><span class="p p-Indicator">,</span><span class="nv">90</span><span class="p p-Indicator">]</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SensorThings</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://toronto-bike-snapshot.sensorup.com/v1.0/</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">          </span><span class="nt">entity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Things</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 
@@ -1596,7 +1608,7 @@ Find the line <code># START - EXERCISE 8 - SensorThings Proxy</code>.</p>
       <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","navigation.top","navigation.tracking.prev_next","navigation.tracking.section","navigation.indexes"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      <script src="../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
     
   </body>
