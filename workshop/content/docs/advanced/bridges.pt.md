@@ -4,7 +4,7 @@ title: Exercício 9 - pygeoapi como ponte para outros serviços
 
 # Exercício 9 - pygeoapi como ponte para outros serviços
 
-Nesta secção vamos explorar como a pygeoapi pode ser usada como um interface para re-publicar serviços web com distintas interfaces. Estas pontes podem ajudar [organizações a migrar de OWS para OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration).
+Nesta secção vamos explorar como a pygeoapi pode ser usada como um interface para re-publicar serviços web com distintas interfaces. Estas pontes podem ajudar [organizações a migrar de OWS para OGC API](https://ogcapi-workshop.ogc.org/pt/transition-and-migration.pt/).
 
 ## Publicar WFS como OGC API - Features
 
