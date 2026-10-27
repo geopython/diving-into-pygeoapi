@@ -77,6 +77,9 @@ O suporte CRS permite efetivamente à pygeoapi *reprojetar* os dados do seu CRS 
 de acordo com [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
 A secção Avançada desta workshop [elaborará o suporte CRS da pygeoapi](../advanced/crs.pt.md).
 
+!!! tip
+
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-features.pt/#acesso-de-lado-do-cliente) para explorar esta API.
 
 ## Publicar WMS como OGC API - Maps
 
@@ -141,6 +144,10 @@ Execute os seguintes pedidos no seu navegador web:
 
     Experimente com os seus próprios valores de bbox e largura/altura!
 
+!!! tip
+
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-maps.pt/#acesso-do-lado-do-cliente) para explorar esta API.
+
 ## Publicar CSW como OGC API - Records
 
 Nesta secção veremos como publicar Catalogue Service for the Web (CSW) como OGC API - Records. Para isso, usaremos o serviço CSW [pycsw OGC CITE demo](https://demo.pycsw.org/cite/).
@@ -183,7 +190,7 @@ Pode explorar a coleção de catálogo com proxy usando estes endpoints:
 
 !!! tip
 
-    Lembre-se de que pode usar o cliente QGIS sugerido [aqui](https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access) para explorar esta API.
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-records.pt/#acesso-de-cliente) para explorar esta API.
 
 ## Publicar SensorThings API como OGC API - Features
 
