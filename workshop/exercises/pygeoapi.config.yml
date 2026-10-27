@@ -531,8 +531,8 @@ resources:
 #              title_field: title
 # # END - EXERCISE 9 - CSW Proxy
 
-## START - EXERCISE 9 - SensorThings Proxy
-#    toronto_bikes:
+# # START - EXERCISE 9 - SensorThings Proxy
+#     toronto_bikes:
 #        type: collection
 #        title: Toronto Bikes SensorThings
 #        description: The geographic location with coordinates for the Toronto bike share station
@@ -548,4 +548,4 @@ resources:
 #              name: SensorThings
 #              data: https://toronto-bike-snapshot.sensorup.com/v1.0/
 #              entity: Things
-## END - EXERCISE 9 - SensorThings Proxy
+# # END - EXERCISE 9 - SensorThings Proxy
