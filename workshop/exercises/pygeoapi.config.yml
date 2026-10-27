@@ -478,8 +478,8 @@ resources:
 #              layer: igv.cartografia_5000_amraa:toponimia
 # # END - EXERCISE 9 - WFS Proxy
 
-## START - EXERCISE 9 - WMS Proxy
-#    wms-facade-demo:
+# # START - EXERCISE 9 - WMS Proxy
+#     wms-facade-demo:
 #        type: collection
 #        title: WMS Facade demo
 #        description: WMS Facade demo
@@ -506,10 +506,10 @@ resources:
 #                name: png
 #                mimetype: image/png
 #              storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
-## END - EXERCISE 9 - WMS Proxy
+# # END - EXERCISE 9 - WMS Proxy
 
-## START - EXERCISE 9 - CSW Proxy
-#    cite_demo:
+# # START - EXERCISE 9 - CSW Proxy
+#     cite_demo:
 #        type: collection
 #        title: pycsw OGC CITE demo and Reference Implementation
 #        description: pycsw is an OARec and OGC CSW server implementation written in Python. pycsw fully implements the OGC API - Records and OpenGIS Catalogue Service Implementation Specification (Catalogue Service for the Web). Initial development started in 2010 (more formally announced in 2011). The project is certified OGC Compliant, and is an OGC Reference Implementation. Since 2015, pycsw is an official OSGeo Project. pycsw allows for the publishing and discovery of geospatial metadata via numerous APIs (CSW 2/CSW 3, OpenSearch, OAI-PMH, SRU). Existing repositories of geospatial metadata can also be exposed, providing a standards-based metadata and catalogue component of spatial data infrastructures. pycsw is Open Source, released under an MIT license, and runs on all major platforms (Windows, Linux, Mac OS X)
@@ -529,7 +529,7 @@ resources:
 #              id_field: identifier
 #              time_field: datetime
 #              title_field: title
-## END - EXERCISE 9 - CSW Proxy
+# # END - EXERCISE 9 - CSW Proxy
 
 ## START - EXERCISE 9 - SensorThings Proxy
 #    toronto_bikes:
