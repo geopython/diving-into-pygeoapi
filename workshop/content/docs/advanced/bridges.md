@@ -206,7 +206,8 @@ In this section we'll have a look at how to Publish a SensorThings API `Thing` a
         title: Toronto Bikes SensorThings
         description: The geographic location with coordinates for the Toronto bike share station
         keywords:
-            - sediments
+            - sensors
+            - bikes
         extents:
             spatial:
                 bbox: [-180,-90,180,90]

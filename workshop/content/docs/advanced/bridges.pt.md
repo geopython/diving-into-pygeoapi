@@ -206,7 +206,8 @@ Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma col
         title: Toronto Bikes SensorThings
         description: A localização geográfica com coordenadas para a estação de partilha de bicicletas de Toronto
         keywords:
-            - sedimentos
+            - sensors
+            - bikes
         extents:
             spatial:
                 bbox: [-180,-90,180,90]
