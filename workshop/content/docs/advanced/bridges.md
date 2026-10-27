@@ -10,7 +10,7 @@ In this section we explore how pygeoapi can be used as a facade, or a bridge, to
 
 A powerful use case for pygeoapi is to provide an OGC API - Features interface over existing Web Feature Service (WFS) 
 or ESRI FeatureServer endpoints. In this scenario, you lower the barrier and increase the usability of existing services to 
-a wider audience. Let's set up an API on top of an existing WFS hosted by the city of Florence.
+a wider audience. Let's set up an API on top of an existing WFS hosted by the Nordeste Municipality of Azores.
 
 !!! question "Update the pygeoapi configuration"
 
@@ -21,45 +21,45 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
 
 
     ``` {.yaml linenums="1"}
-    suol_epicentri_storici:
+     toponimia:
         type: collection
-        title: Epicenters of the main historical earthquakes
-        description: Location of the epicenters of the main historical earthquakes in the territory of the Metropolitan City of Florence classified by year and intensity
+        title: 'Cartografia 5000 Amraa: Toponimia'
+        description: Toponomy of São Miguel Island - Azores
         keywords:
-            - earthquakes
+            - cartografia
+            - toponimia
         links:
             - type: text/xml
               rel: canonical
-              title: Epicenters of the main historical earthquakes
-              href: http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?request=getCapabilities&service=WFS&version=2.0.0
-              hreflang: it
+              title: Nordeste Municipality Geoportal
+              href: https://sigweb.cmnordeste.pt/
+              hreflang: en
         extents:
             spatial:
-                bbox: [10.94, 43.52, 11.65, 44.17]
+                bbox: [-25.304390705495628, 37.80673648981517, -25.13806870205929, 37.85526963071003]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
         providers:
             - type: feature
               name: OGR
               data:
-                  source_type: WFS
-                  source: WFS:http://pubblicazioni.cittametropolitana.fi.it/geoserver/territorio/wfs?
-                  source_capabilities:
-                      paging: True
-                  source_options:
-                      OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
-                  gdal_ogr_options:
-                      EMPTY_AS_NULL: NO
-                      GDAL_CACHEMAX: 64
-                      CPL_DEBUG: NO
-              id_field: cpti_id
+                    source_type: WFS
+                    source: WFS:https://sigweb.cmnordeste.pt/geoserver/ows?service=WFS
+                    source_capabilities:
+                        paging: True
+                    source_options:
+                        OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
+                    gdal_ogr_options:
+                        EMPTY_AS_NULL: NO
+                        GDAL_CACHEMAX: 64
+                        CPL_DEBUG: NO
+              id_field: gml_id
               crs:
                 - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/4326
                 - http://www.opengis.net/def/crs/EPSG/0/3857
-                - http://www.opengis.net/def/crs/EPSG/0/3003
-              storage_crs: http://www.opengis.net/def/crs/EPSG/0/3003
-              title_field: d
-              layer: territorio:suol_epicentri_storici
+              storage_crs: http://www.opengis.net/def/crs/EPSG/0/5015
+              title_field: nome
+              layer: igv.cartografia_5000_amraa:toponimia
     ```
 
 Save the file and restart Docker Compose. Navigate to <http://localhost:5000/collections>
@@ -69,12 +69,11 @@ Note these important configuration slices under `providers`:
 
 * We use the pygeoapi [OGR Provider](https://docs.pygeoapi.io/en/latest/publishing/ogcapi-features.html#ogr). 
 This is the most versatile backend of pygeoapi for supporting numerous formats. Using the GDAL/OGR library (Python bindings) allows pygeoapi to connect to [around 80+ Vector Formats](https://gdal.org/drivers/vector).
-We could have used the `OGR` Provider instead of the `SQLiteGPKG` Provider above in the `osm_places-vec` exercise above.
 
 * `storage_crs` denotes the CRS (Coordinate Reference System) in which the dataset is stored (default is CRS84, i.e. 'longitude, latitude') 
 * `crs` is an array of CRSs that can be specified for the Features to be returned (`crs=` parameter), or for their bounding box (`bbox-crs=` parameter). Default is also CRS84.
  
-CRS support effectively allows pygeoapi to *reproject* the data from its storage CRS (here EPSG:3003)
+CRS support effectively allows pygeoapi to *reproject* the data from its storage CRS (here EPSG:5015)
 according to [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
 The Advanced section of this workshop will further [elaborate pygeoapi CRS support](../advanced/crs.md).
 
