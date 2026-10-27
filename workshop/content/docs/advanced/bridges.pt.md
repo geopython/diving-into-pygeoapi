@@ -4,7 +4,7 @@ title: Exercício 9 - pygeoapi como ponte para outros serviços
 
 # Exercício 9 - pygeoapi como ponte para outros serviços
 
-Nesta secção vamos explorar como a pygeoapi pode ser usada como um interface para re-publicar serviços web com distintas interfaces. Estas pontes podem ajudar [organizações a migrar de OWS para OGC API](https://ogcapi-workshop.ogc.org/transition-and-migration).
+Nesta secção vamos explorar como a pygeoapi pode ser usada como um interface para re-publicar serviços web com distintas interfaces. Estas pontes podem ajudar [organizações a migrar de OWS para OGC API](https://ogcapi-workshop.ogc.org/pt/transition-and-migration.pt/).
 
 ## Publicar WFS como OGC API - Features
 
@@ -15,9 +15,9 @@ uma audiência mais ampla. Vamos configurar uma API sobre um WFS existente (corr
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - WFS Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - WFS Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - WFS Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - WFS Proxy`:
 
 
     ``` {.yaml linenums="1"}
@@ -78,6 +78,9 @@ O suporte CRS permite efetivamente à pygeoapi *reprojetar* os dados do seu CRS 
 de acordo com [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
 A secção Avançada desta workshop [elaborará o suporte CRS da pygeoapi](../advanced/crs.pt.md).
 
+!!! tip
+
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-features.pt/#acesso-de-lado-do-cliente) para explorar esta API.
 
 ## Publicar WMS como OGC API - Maps
 
@@ -95,9 +98,9 @@ Podemos usar o provider/fornecedor WMSFacade da pygeoapi para publicar interface
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `## START - EXERCISE 8 - WMS Proxy`.
+    Encontre a linha `## START - EXERCISE 9 - WMS Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `## END - EXERCISE 8 - WMS Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `## END - EXERCISE 9 - WMS Proxy`:
 
      Certifique-se de manter a indentação YAML adequada.
 
@@ -142,6 +145,10 @@ Execute os seguintes pedidos no seu navegador web:
 
     Experimente com os seus próprios valores de bbox e largura/altura!
 
+!!! tip
+
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-maps.pt/#acesso-do-lado-do-cliente) para explorar esta API.
+
 ## Publicar CSW como OGC API - Records
 
 Nesta secção veremos como publicar Catalogue Service for the Web (CSW) como OGC API - Records. Para isso, usaremos o serviço CSW [pycsw OGC CITE demo](https://demo.pycsw.org/cite/).
@@ -149,9 +156,9 @@ Nesta secção veremos como publicar Catalogue Service for the Web (CSW) como OG
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - CSW Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - CSW Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - CSW Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - CSW Proxy`:
 
     ``` {.yaml linenums="1"}
     cite_demo:
@@ -184,7 +191,7 @@ Pode explorar a coleção de catálogo com proxy usando estes endpoints:
 
 !!! tip
 
-    Lembre-se de que pode usar o cliente QGIS sugerido [aqui](https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access) para explorar esta API.
+    Lembre-se de que pode usar os clientes sugeridos [aqui](https://dive.pygeoapi.io/publishing/ogcapi-records.pt/#acesso-de-cliente) para explorar esta API.
 
 ## Publicar SensorThings API como OGC API - Features
 
@@ -197,9 +204,9 @@ Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma col
 !!! question "Atualizar a configuração da pygeoapi"
 
     Abra a configuração da pygeoapi num editor de texto. 
-    Encontre a linha `# START - EXERCISE 8 - SensorThings Proxy`.
+    Encontre a linha `# START - EXERCISE 9 - SensorThings Proxy`.
 
-    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 8 - SensorThings Proxy`:
+    Adicione uma nova secção de conjunto de dados descomentando as linhas até `# END - EXERCISE 9 - SensorThings Proxy`:
 
     ``` {.yaml linenums="1"}
     toronto_bikes:
@@ -207,7 +214,8 @@ Nesta secção veremos como Publicar um `Thing` da SensorThings API como uma col
         title: Toronto Bikes SensorThings
         description: A localização geográfica com coordenadas para a estação de partilha de bicicletas de Toronto
         keywords:
-            - sedimentos
+            - sensors
+            - bikes
         extents:
             spatial:
                 bbox: [-180,-90,180,90]

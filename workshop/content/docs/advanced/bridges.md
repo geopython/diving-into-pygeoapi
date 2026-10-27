@@ -15,9 +15,9 @@ a wider audience. Let's set up an API on top of an existing WFS hosted by the ci
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - WFS Proxy`.
+    Find the line `# START - EXERCISE 9 - WFS Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - WFS Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - WFS Proxy`:
 
 
     ``` {.yaml linenums="1"}
@@ -78,6 +78,9 @@ CRS support effectively allows pygeoapi to *reproject* the data from its storage
 according to [OGC API - Features - Part 2: Coordinate Reference Systems by Reference](https://docs.opengeospatial.org/is/18-058r1/18-058r1.html).
 The Advanced section of this workshop will further [elaborate pygeoapi CRS support](../advanced/crs.md).
 
+!!! tip
+
+    Remember that you can use the clients suggested [here](https://dive.pygeoapi.io/publishing/ogcapi-features/#client-access) to explore this API.
 
 ## Publishing WMS as OGC API - Maps
 
@@ -95,9 +98,9 @@ We can use the pygeoapi's WMSFacade provider to publish OGC Web Map Service (WMS
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `## START - EXERCISE 8 - WMS Proxy`.
+    Find the line `## START - EXERCISE 9 - WMS Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `## END - EXERCISE 8 - WMS Proxy`:
+    Add a new dataset section by uncommenting the lines up to `## END - EXERCISE 9 - WMS Proxy`:
 
      Be sure to keep the proper YAML indentation.
 
@@ -142,6 +145,10 @@ Run the following requests in your web browser:
 
     Try with your own bbox and width/height values!
 
+!!! tip
+
+    Remember that you can use the clients suggested [here](https://dive.pygeoapi.io/publishing/ogcapi-maps/#client-access) to explore this API.
+
 ## Publishing CSW as OGC API - Records
 
 In this section we'll have a look at how to publish Catalogue Service for the Web (CSW) as OGC API - Records. For that, we will use the [pycsw OGC CITE demo](https://demo.pycsw.org/cite/) CSW service.
@@ -149,9 +156,9 @@ In this section we'll have a look at how to publish Catalogue Service for the We
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - CSW Proxy`.
+    Find the line `# START - EXERCISE 9 - CSW Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - CSW Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - CSW Proxy`:
 
     ``` {.yaml linenums="1"}
     cite_demo:
@@ -184,7 +191,7 @@ You can explore the proxied catalogue collection using this endpoints:
 
 !!! tip
 
-    Remember that you can use the QGIS client suggested [here](https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access) to explore this API.
+    Remember that you can use the clients suggested [here](https://dive.pygeoapi.io/publishing/ogcapi-records/#client-access) to explore this API.
 
 ## Publishing SensorThings API as OGC API - Features
 
@@ -197,9 +204,9 @@ In this section we'll have a look at how to Publish a SensorThings API `Thing` a
 !!! question "Update the pygeoapi configuration"
 
     Open the pygeoapi configuration in a text editor. 
-    Find the line `# START - EXERCISE 8 - SensorThings Proxy`.
+    Find the line `# START - EXERCISE 9 - SensorThings Proxy`.
 
-    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 8 - SensorThings Proxy`:
+    Add a new dataset section by uncommenting the lines up to `# END - EXERCISE 9 - SensorThings Proxy`:
 
     ``` {.yaml linenums="1"}
     toronto_bikes:
@@ -207,7 +214,8 @@ In this section we'll have a look at how to Publish a SensorThings API `Thing` a
         title: Toronto Bikes SensorThings
         description: The geographic location with coordinates for the Toronto bike share station
         keywords:
-            - sediments
+            - sensors
+            - bikes
         extents:
             spatial:
                 bbox: [-180,-90,180,90]
